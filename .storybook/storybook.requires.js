@@ -24,6 +24,6 @@ if (parameters) {
 }
 
 const getStories = () => {
-  return [];
+  return [require('../components/Box/Box.stories.tsx')];
 };
 configure(getStories, module, false);
