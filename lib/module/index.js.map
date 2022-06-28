@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "names": [
+    "ThemeProvider"
+  ],
+  "sources": [
+    "index.ts"
+  ],
+  "sourcesContent": [
+    "export { ThemeProvider } from 'styled-components/native';\n"
+  ],
+  "mappings": "AAAA,SAASA,aAAT,QAA8B,0BAA9B"
+}

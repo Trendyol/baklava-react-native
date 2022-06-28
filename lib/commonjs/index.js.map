@@ -1,0 +1,11 @@
+{
+  "version": 3,
+  "names": [],
+  "sources": [
+    "index.ts"
+  ],
+  "sourcesContent": [
+    "export { ThemeProvider } from 'styled-components/native';\n"
+  ],
+  "mappings": ";;;;;;;;;;;;AAAA"
+}
