@@ -9,7 +9,7 @@ const BoxMeta: ComponentMeta<typeof Box> = {
   component: Box,
   argTypes: {},
   args: {
-    backgroundColor: '#00ff00',
+    backgroundColor: 'primaryColor',
     width: 200,
     height: 200,
   },
@@ -23,10 +23,4 @@ export const Basic: BoxStory = args => (
   <ThemeProvider theme={theme}>
     <Box {...args} />
   </ThemeProvider>
-);
-
-export const Temp: BoxStory = args => (
-  <Box padding="xl">
-    <Box {...args} />
-  </Box>
 );

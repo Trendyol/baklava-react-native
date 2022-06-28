@@ -1,13 +1,1 @@
-{
-  "version": 3,
-  "names": [
-    "ThemeProvider"
-  ],
-  "sources": [
-    "index.ts"
-  ],
-  "sourcesContent": [
-    "export { ThemeProvider } from 'styled-components/native';\n"
-  ],
-  "mappings": "AAAA,SAASA,aAAT,QAA8B,0BAA9B"
-}
+{"version":3,"names":["ThemeProvider","default","theme"],"sources":["index.ts"],"sourcesContent":["export { ThemeProvider } from 'styled-components/native';\nexport { default as theme } from './theme';\n"],"mappings":"AAAA,SAASA,aAAT,QAA8B,0BAA9B;AACA,SAASC,OAAO,IAAIC,KAApB,QAAiC,SAAjC"}
