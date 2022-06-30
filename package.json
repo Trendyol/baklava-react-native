@@ -39,6 +39,8 @@
     "@storybook/addon-ondevice-controls": "6.0.1-alpha.3",
     "@storybook/addon-ondevice-notes": "6.0.1-alpha.3",
     "@storybook/react-native": "6.0.1-alpha.3",
+    "@testing-library/jest-native": "4.0.5",
+    "@testing-library/react-native": "10.1.1",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.66.15",
     "@types/react-test-renderer": "^17.0.1",
