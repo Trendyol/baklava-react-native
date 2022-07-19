@@ -1,3 +1,9 @@
+import { variant } from 'styled-system';
+import {
+  ButtonTypeTypes,
+  ButtonVariantTypes,
+} from '../components/Button/types';
+
 export const space = [0, 2, 4, 8, 12, 16, 24, 32, 48, 64];
 
 export const fontSizes = [12, 14, 16, 20, 24, 28, 32];
@@ -12,7 +18,7 @@ export const radii = {
   xlarge: 16,
 };
 
-export const colors = {
+export const colors: { [key: string]: string | string[] } = {
   white: '#ffffff',
   black: '#000000',
   transparent: 'transparent',
@@ -204,6 +210,128 @@ export const textStyle = {
   },
 };
 
+const buttonCommon = {
+  borderRadius: radii.normal,
+};
+
+export const buttonStyles = {
+  height: [32, 40, 48],
+  padding: [8, 12, 14, 16, 24, 32],
+  variant: {
+    primary: {
+      color: colors.white,
+      backgroundColor: colors.primaryColor,
+      ...buttonCommon,
+    },
+    secondary: {
+      color: colors.white,
+      backgroundColor: colors.secondaryColor,
+      ...buttonCommon,
+    },
+    success: {
+      color: colors.white,
+      backgroundColor: colors.successColor,
+      ...buttonCommon,
+    },
+    danger: {
+      color: colors.white,
+      backgroundColor: colors.dangerColor,
+      ...buttonCommon,
+    },
+    passive: {
+      color: colors.contentPassive,
+      backgroundColor: colors.tertiaryColor,
+      ...buttonCommon,
+    },
+  },
+  type: (props: {
+    variant: ButtonVariantTypes;
+    isPressed: boolean;
+    disabled: boolean;
+    type: ButtonTypeTypes;
+    [key: string]: any;
+  }) => {
+    const variantColor =
+      colors[`${props.variant}Color`] ?? colors.primaryBackground;
+    const variantHoverColor =
+      colors[`${props.variant}Hover`] ?? colors.primaryBackground;
+
+    return {
+      contained: {
+        color: props.disabled ? colors.secondaryColor : colors.white,
+        ...(props.type !== 'text'
+          ? {
+              backgroundColor: props.isPressed
+                ? variantHoverColor
+                : variantColor,
+            }
+          : {}),
+        borderWidth: 1,
+        borderColor: variantColor,
+        ...buttonCommon,
+      },
+      outline: {
+        color: props.isPressed ? colors.white : variantColor,
+        backgroundColor: props.disabled
+          ? variantColor
+          : props.isPressed
+          ? variantHoverColor
+          : colors.transparent,
+        borderWidth: 1,
+        borderColor: variantColor,
+        ...buttonCommon,
+      },
+      text: {
+        color: props.isPressed ? variantHoverColor : variantColor,
+        backgroundColor: colors.transparent,
+        borderWidth: 1,
+        borderColor: colors.transparent,
+        textDecorationLine: 'underline',
+        ...buttonCommon,
+      },
+    };
+  },
+  size: (props: { text: string }) => {
+    return {
+      large: {
+        paddingVertical: buttonStyles.padding[2],
+        paddingHorizontal: props.text
+          ? buttonStyles.padding[5]
+          : buttonStyles.padding[2],
+      },
+      medium: {
+        paddingVertical: buttonStyles.padding[1],
+        paddingHorizontal: props.text
+          ? buttonStyles.padding[4]
+          : buttonStyles.padding[1],
+      },
+      small: {
+        paddingVertical: buttonStyles.padding[0],
+        paddingHorizontal: props.text
+          ? buttonStyles.padding[3]
+          : buttonStyles.padding[0],
+      },
+    };
+  },
+};
+
+export const buttonVariant = variant({
+  prop: 'variant',
+  variants: buttonStyles.variant,
+});
+
+export const buttonType = (props: any) =>
+  variant({
+    prop: 'type',
+    variants: buttonStyles.type(props),
+  });
+
+export const buttonSize = (props: any) =>
+  variant({
+    prop: 'size',
+    variants: buttonStyles.size(props),
+  });
+
 export default {
   space,
   fontSizes,
@@ -211,4 +339,5 @@ export default {
   radii,
   colors,
   textStyle,
+  buttonStyles,
 };

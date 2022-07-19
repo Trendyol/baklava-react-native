@@ -1,1 +1,0 @@
-{"version":3,"names":[],"sources":["index.ts"],"sourcesContent":["export { ThemeProvider } from 'styled-components/native';\nexport { default as theme } from './theme';\n"],"mappings":";;;;;;;;;;;;;;;;;;AAAA;;AACA"}
