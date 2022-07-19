@@ -1,4 +1,0 @@
-/**
- * @format
- */
-import 'react-native';
