@@ -15,9 +15,6 @@ describe('Button', () => {
 
     // then
     expect(buttonComponent.props.text).toBe('testtesttest');
-    // expect(buttonComponent.props.variant).toBe('primary');
-    // expect(buttonComponent.props.size).toBe('medium');
-    // expect(buttonComponent.props.type).toBe('contained');
   });
 
   test('should render given variant and color correctly', () => {
@@ -83,5 +80,75 @@ describe('Button', () => {
 
     // then
     expect(onPress).toBeCalledTimes(1);
+  });
+
+  test('should render given default values correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" text="testtesttest" />,
+    );
+    const buttonComponent = getByTestId('button');
+
+    // then
+    expect(buttonComponent.props.variant).toBe('primary');
+    expect(buttonComponent.props.size).toBe('medium');
+    expect(buttonComponent.props.type).toBe('contained');
+  });
+
+  test('should render given disabled correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" text="testtesttest" disabled />,
+    );
+    const buttonComponent = getByTestId('button');
+    const textComponent = getByTestId('button-text');
+
+    // then
+    expect(buttonComponent.props.variant).toBe('passive');
+    expect(textComponent.props.color).toBe(theme.colors.contentPassive);
+  });
+
+  test('should text color remain white on contained and outline type correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Button
+        testID="button"
+        text="testtesttest"
+        type="outline"
+        isPressed={true}
+        testOnly_pressed
+      />,
+    );
+    const textComponent = getByTestId('button-text');
+
+    // then
+    expect(textComponent.props.color).toBe(theme.colors.white);
+  });
+
+  test('should render given underlineText correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Button
+        testID="button"
+        text="testtesttest"
+        variant="passive"
+        type="text"
+      />,
+    );
+    const textComponent = getByTestId('button-text');
+
+    // then
+    expect(textComponent.props.style[1].textDecorationLine).toBe('underline');
+  });
+
+  test('should render given filled correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" text="testtesttest" variant="passive" filled />,
+    );
+    const buttonComponent = getByTestId('button');
+
+    // then
+    expect(buttonComponent.props.alignSelf).toBe('stretch');
   });
 });

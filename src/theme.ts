@@ -10,6 +10,14 @@ export const fontSizes = [12, 14, 16, 20, 24, 28, 32];
 
 export const fontWeights = ['300', '400', '500', '600', '700'];
 
+export const fontNames = [
+  'Rubik-Light',
+  'Rubik-Regular',
+  'Rubik-Medium',
+  'Rubik-SemiBold',
+  'Rubik-Bold',
+];
+
 export const radii = {
   none: 0,
   small: 4,
@@ -67,145 +75,145 @@ export const textStyle = {
   heading1: {
     fontSize: fontSizes[6],
     fontWeight: fontWeights[0],
-    fontFamily: 'Rubik-Light',
+    fontFamily: fontNames[0],
   },
   heading2: {
     fontSize: fontSizes[5],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Light',
+    fontFamily: fontNames[0],
   },
   heading3: {
     fontSize: fontSizes[4],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Light',
+    fontFamily: fontNames[0],
   },
   // Subtitle01
   subtitle01Regular: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Regular',
+    fontFamily: fontNames[1],
   },
   subtitle01Medium: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[2],
-    fontFamily: 'Rubik-Medium',
+    fontFamily: fontNames[2],
   },
   subtitle01Semibold: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[3],
-    fontFamily: 'Rubik-SemiBold',
+    fontFamily: fontNames[3],
   },
   subtitle01Bold: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[4],
-    fontFamily: 'Rubik-Bold',
+    fontFamily: fontNames[4],
   },
   // Subtitle02
   subtitle02Regular: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Regular',
+    fontFamily: fontNames[1],
   },
   subtitle02Medium: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[2],
-    fontFamily: 'Rubik-Medium',
+    fontFamily: fontNames[2],
   },
   subtitle02Semibold: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[3],
-    fontFamily: 'Rubik-SemiBold',
+    fontFamily: fontNames[3],
   },
   subtitle02Bold: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[4],
-    fontFamily: 'Rubik-Bold',
+    fontFamily: fontNames[4],
   },
   // Subtitle03
   subtitle03Regular: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Regular',
+    fontFamily: fontNames[1],
   },
   subtitle03Medium: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[2],
-    fontFamily: 'Rubik-Medium',
+    fontFamily: fontNames[2],
   },
   subtitle03Semibold: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[3],
-    fontFamily: 'Rubik-SemiBold',
+    fontFamily: fontNames[3],
   },
   subtitle03Bold: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[4],
-    fontFamily: 'Rubik-Bold',
+    fontFamily: fontNames[4],
   },
   // Subtitle04
   subtitle04Regular: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Regular',
+    fontFamily: fontNames[1],
   },
   subtitle04Medium: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[2],
-    fontFamily: 'Rubik-Medium',
+    fontFamily: fontNames[2],
   },
   subtitle04Semibold: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[3],
-    fontFamily: 'Rubik-SemiBold',
+    fontFamily: fontNames[3],
   },
   subtitle04Bold: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[4],
-    fontFamily: 'Rubik-Bold',
+    fontFamily: fontNames[4],
   },
   // Body
   bodyText: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Regular',
+    fontFamily: fontNames[1],
   },
   bodyUnderline: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Regular',
+    fontFamily: fontNames[1],
     textDecorationLine: 'underline',
   },
   bodyTextLink: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[2],
-    fontFamily: 'Rubik-Medium',
+    fontFamily: fontNames[2],
     textDecorationLine: 'underline',
   },
   bodyLongText: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Regular',
+    fontFamily: fontNames[1],
   },
   // Caption
   captionText: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Regular',
+    fontFamily: fontNames[1],
   },
   captionMedium: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[2],
-    fontFamily: 'Rubik-Medium',
+    fontFamily: fontNames[2],
   },
   captionLongText: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[1],
-    fontFamily: 'Rubik-Regular',
+    fontFamily: fontNames[1],
   },
   captionTextLink: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[2],
-    fontFamily: 'Rubik-Medium',
+    fontFamily: fontNames[2],
     textDecorationLine: 'underline',
   },
 };
@@ -249,7 +257,6 @@ export const buttonStyles = {
     isPressed: boolean;
     disabled: boolean;
     type: ButtonTypeTypes;
-    [key: string]: any;
   }) => {
     const variantColor =
       colors[`${props.variant}Color`] ?? colors.primaryBackground;
@@ -259,13 +266,7 @@ export const buttonStyles = {
     return {
       contained: {
         color: props.disabled ? colors.secondaryColor : colors.white,
-        ...(props.type !== 'text'
-          ? {
-              backgroundColor: props.isPressed
-                ? variantHoverColor
-                : variantColor,
-            }
-          : {}),
+        backgroundColor: props.isPressed ? variantHoverColor : variantColor,
         borderWidth: 1,
         borderColor: variantColor,
         ...buttonCommon,

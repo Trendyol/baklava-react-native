@@ -53,7 +53,7 @@ const Button = ({
   filled?: boolean;
   [key: string]: any;
 }) => {
-  const { pressableProps, isPressed } = useIsPressed();
+  const { pressableProps, isPressed } = useIsPressed(rest.isPressed);
 
   const buttonTypes = theme.buttonStyles.type({
     variant,
@@ -98,7 +98,8 @@ const Button = ({
           variant={textVariants}
           color={typeColor}
           style={type === 'text' ? styles.underlineText : {}}
-          marginLeft={icon ? 3 : 0}>
+          marginLeft={icon ? 3 : 0}
+          testID="button-text">
           {text}
         </Text>
       ) : null}
@@ -108,9 +109,6 @@ const Button = ({
 
 Button.defaultProps = {
   ...styles.button,
-  variant: 'primary',
-  type: 'contained',
-  size: 'medium',
 };
 
 export default Button;

@@ -1,7 +1,7 @@
 import React from 'react';
 
-export const useIsPressed = () => {
-  const [isPressed, setIsPressed] = React.useState<boolean>(false);
+export const useIsPressed = (state: boolean = false) => {
+  const [isPressed, setIsPressed] = React.useState<boolean>(state);
 
   return {
     pressableProps: {
