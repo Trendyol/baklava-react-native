@@ -58,121 +58,148 @@ export const colors = {
 
 export const textStyle = {
   // Heading
-  headingBig: {
+  heading1: {
     fontSize: fontSizes[6],
     fontWeight: fontWeights[0],
+    fontFamily: 'Rubik-Light',
   },
-  headingMedium: {
+  heading2: {
     fontSize: fontSizes[5],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Light',
   },
-  headingSmall: {
+  heading3: {
     fontSize: fontSizes[4],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Light',
   },
-  // SubtitleXLarge
-  subtitleXLargeRegular: {
+  // Subtitle01
+  subtitle01Regular: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Regular',
   },
-  subtitleXLargeMedium: {
+  subtitle01Medium: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[2],
+    fontFamily: 'Rubik-Medium',
   },
-  subtitleXLargeSemibold: {
+  subtitle01Semibold: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[3],
+    fontFamily: 'Rubik-SemiBold',
   },
-  subtitleXLargeBold: {
+  subtitle01Bold: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[4],
+    fontFamily: 'Rubik-Bold',
   },
-  // SubtitleLarge
-  subtitleLargeRegular: {
+  // Subtitle02
+  subtitle02Regular: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Regular',
   },
-  subtitleLargeMedium: {
+  subtitle02Medium: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[2],
+    fontFamily: 'Rubik-Medium',
   },
-  subtitleLargeSemibold: {
+  subtitle02Semibold: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[3],
+    fontFamily: 'Rubik-SemiBold',
   },
-  subtitleLargeBold: {
+  subtitle02Bold: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[4],
+    fontFamily: 'Rubik-Bold',
   },
-  // SubtitleMedium
-  subtitleMediumRegular: {
+  // Subtitle03
+  subtitle03Regular: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Regular',
   },
-  subtitleMediumMedium: {
+  subtitle03Medium: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[2],
+    fontFamily: 'Rubik-Medium',
   },
-  subtitleMediumSemibold: {
+  subtitle03Semibold: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[3],
+    fontFamily: 'Rubik-SemiBold',
   },
-  subtitleMediumBold: {
+  subtitle03Bold: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[4],
+    fontFamily: 'Rubik-Bold',
   },
-  // SubtitleSmall
-  subtitleSmallRegular: {
+  // Subtitle04
+  subtitle04Regular: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Regular',
   },
-  subtitleSmallMedium: {
+  subtitle04Medium: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[2],
+    fontFamily: 'Rubik-Medium',
   },
-  subtitleSmallSemibold: {
+  subtitle04Semibold: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[3],
+    fontFamily: 'Rubik-SemiBold',
   },
-  subtitleSmallBold: {
+  subtitle04Bold: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[4],
+    fontFamily: 'Rubik-Bold',
   },
   // Body
   bodyText: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Regular',
   },
   bodyUnderline: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Regular',
     textDecorationLine: 'underline',
   },
   bodyTextLink: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[2],
+    fontFamily: 'Rubik-Medium',
     textDecorationLine: 'underline',
   },
   bodyLongText: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Regular',
   },
   // Caption
   captionText: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Regular',
   },
   captionMedium: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[2],
+    fontFamily: 'Rubik-Medium',
   },
   captionLongText: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[1],
+    fontFamily: 'Rubik-Regular',
   },
   captionTextLink: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[2],
+    fontFamily: 'Rubik-Medium',
     textDecorationLine: 'underline',
   },
 };

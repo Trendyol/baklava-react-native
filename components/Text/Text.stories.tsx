@@ -17,78 +17,78 @@ type TextStory = ComponentStory<typeof Text>;
 
 export const Heading: TextStory = () => (
   <ThemeProvider theme={theme}>
-    <Text variant="headingBig" p={3}>
+    <Text variant="heading1" p={3}>
       Heading 1
     </Text>
-    <Text variant="headingMedium" p={3}>
+    <Text variant="heading2" p={3}>
       Heading 2
     </Text>
-    <Text variant="headingSmall" p={3}>
+    <Text variant="heading3" p={3}>
       Heading 3
     </Text>
   </ThemeProvider>
 );
-export const SubtitleXLarge: TextStory = () => (
+export const Subtitle01: TextStory = () => (
   <ThemeProvider theme={theme}>
-    <Text variant="subtitleXLargeRegular" p={3}>
-      Subtitle XLarge / Regular
+    <Text variant="subtitle01Regular" p={3}>
+      Subtitle 01 / Regular
     </Text>
-    <Text variant="subtitleXLargeMedium" p={3}>
-      Subtitle XLarge / Medium
+    <Text variant="subtitle01Medium" p={3}>
+      Subtitle 01 / Medium
     </Text>
-    <Text variant="subtitleXLargeSemibold" p={3}>
-      Subtitle XLarge / Semibold
+    <Text variant="subtitle01Semibold" p={3}>
+      Subtitle 01 / Semibold
     </Text>
-    <Text variant="subtitleXLargeBold" p={3}>
-      Subtitle XLarge / Bold
+    <Text variant="subtitle01Bold" p={3}>
+      Subtitle 01 / Bold
     </Text>
   </ThemeProvider>
 );
-export const SubtitleLarge: TextStory = () => (
+export const Subtitle02: TextStory = () => (
   <ThemeProvider theme={theme}>
-    <Text variant="subtitleLargeRegular" p={3}>
-      Subtitle Large / Regular
+    <Text variant="subtitle02Regular" p={3}>
+      Subtitle 02 / Regular
     </Text>
-    <Text variant="subtitleLargeMedium" p={3}>
-      Subtitle Large / Medium
+    <Text variant="subtitle02Medium" p={3}>
+      Subtitle 02 / Medium
     </Text>
-    <Text variant="subtitleLargeSemibold" p={3}>
-      Subtitle Large / Semibold
+    <Text variant="subtitle02Semibold" p={3}>
+      Subtitle 02 / Semibold
     </Text>
-    <Text variant="subtitleLargeBold" p={3}>
-      Sutitle Large / Bold
+    <Text variant="subtitle02Bold" p={3}>
+      Sutitle 02 / Bold
     </Text>
   </ThemeProvider>
 );
-export const SubtitleMedium: TextStory = () => (
+export const Subtitle03: TextStory = () => (
   <ThemeProvider theme={theme}>
-    <Text variant="subtitleMediumRegular" p={3}>
-      Subtitle Medium / Regular
+    <Text variant="subtitle03Regular" p={3}>
+      Subtitle 03 / Regular
     </Text>
-    <Text variant="subtitleMediumMedium" p={3}>
-      Subtitle Medium / Medium
+    <Text variant="subtitle03Medium" p={3}>
+      Subtitle 03 / Medium
     </Text>
-    <Text variant="subtitleMediumSemibold" p={3}>
-      Subtitle Medium / Semibold
+    <Text variant="subtitle03Semibold" p={3}>
+      Subtitle 03 / Semibold
     </Text>
-    <Text variant="subtitleMediumBold" p={3}>
-      Subtitle Medium / Bold
+    <Text variant="subtitle03Bold" p={3}>
+      Subtitle 03 / Bold
     </Text>
   </ThemeProvider>
 );
-export const SubtitleSmall: TextStory = () => (
+export const Subtitle04: TextStory = () => (
   <ThemeProvider theme={theme}>
-    <Text variant="subtitleSmallRegular" p={3}>
-      Subtitle Small / Regular
+    <Text variant="subtitle04Regular" p={3}>
+      Subtitle 04 / Regular
     </Text>
-    <Text variant="subtitleSmallMedium" p={3}>
-      Subtitle Small / Medium
+    <Text variant="subtitle04Medium" p={3}>
+      Subtitle 04 / Medium
     </Text>
-    <Text variant="subtitleSmallSemibold" p={3}>
-      Subtitle Small / Semibold
+    <Text variant="subtitle04Semibold" p={3}>
+      Subtitle 04 / Semibold
     </Text>
-    <Text variant="subtitleSmallBold" p={3}>
-      Subtitle Small / Bold
+    <Text variant="subtitle04Bold" p={3}>
+      Subtitle 04 / Bold
     </Text>
   </ThemeProvider>
 );

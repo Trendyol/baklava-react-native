@@ -13,32 +13,32 @@ describe('Text', () => {
   });
 
   // Heading
-  test('should render headingBig variant correctly', () => {
+  test('should render heading1 variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="headingBig">
+      <Text testID="text" variant="heading1">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('headingBig');
+    expect(textComponent.props.variant).toBe('heading1');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[6]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[0]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render headingMedium variant correctly', () => {
+  test('should render heading2 variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="headingMedium">
+      <Text testID="text" variant="heading2">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('headingMedium');
+    expect(textComponent.props.variant).toBe('heading2');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[5]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
@@ -46,16 +46,16 @@ describe('Text', () => {
     );
   });
 
-  test('should render headingSmall variant correctly', () => {
+  test('should render heading3 variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="headingSmall">
+      <Text testID="text" variant="heading3">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('headingSmall');
+    expect(textComponent.props.variant).toBe('heading3');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[4]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
@@ -63,65 +63,65 @@ describe('Text', () => {
     );
   });
 
-  // SubtitleXLarge
-  test('should render subtitleXLargeRegular variant correctly', () => {
+  // Subtitle01
+  test('should render subtitle01Regular variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleXLargeRegular">
+      <Text testID="text" variant="subtitle01Regular">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleXLargeRegular');
+    expect(textComponent.props.variant).toBe('subtitle01Regular');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[3]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleXLargeMedium variant correctly', () => {
+  test('should render subtitle01Medium variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleXLargeMedium">
+      <Text testID="text" variant="subtitle01Medium">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleXLargeMedium');
+    expect(textComponent.props.variant).toBe('subtitle01Medium');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[3]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleXLargeSemibold variant correctly', () => {
+  test('should render subtitle01Semibold variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleXLargeSemibold">
+      <Text testID="text" variant="subtitle01Semibold">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleXLargeSemibold');
+    expect(textComponent.props.variant).toBe('subtitle01Semibold');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[3]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[3]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleXLargeBold variant correctly', () => {
+  test('should render subtitle01Bold variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleXLargeBold">
+      <Text testID="text" variant="subtitle01Bold">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleXLargeBold');
+    expect(textComponent.props.variant).toBe('subtitle01Bold');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[3]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[4]);
     expect(textComponent.props.style[0].color).toBe(
@@ -129,65 +129,65 @@ describe('Text', () => {
     );
   });
 
-  // SubtitleLarge
-  test('should render subtitleLargeRegular variant correctly', () => {
+  // Subtitle02
+  test('should render subtitle02Regular variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleLargeRegular">
+      <Text testID="text" variant="subtitle02Regular">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleLargeRegular');
+    expect(textComponent.props.variant).toBe('subtitle02Regular');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[2]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleLargeMedium variant correctly', () => {
+  test('should render subtitle02Medium variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleLargeMedium">
+      <Text testID="text" variant="subtitle02Medium">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleLargeMedium');
+    expect(textComponent.props.variant).toBe('subtitle02Medium');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[2]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleLargeSemibold variant correctly', () => {
+  test('should render subtitle02Semibold variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleLargeSemibold">
+      <Text testID="text" variant="subtitle02Semibold">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleLargeSemibold');
+    expect(textComponent.props.variant).toBe('subtitle02Semibold');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[2]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[3]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleLargeBold variant correctly', () => {
+  test('should render subtitle02Bold variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleLargeBold">
+      <Text testID="text" variant="subtitle02Bold">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleLargeBold');
+    expect(textComponent.props.variant).toBe('subtitle02Bold');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[2]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[4]);
     expect(textComponent.props.style[0].color).toBe(
@@ -195,65 +195,65 @@ describe('Text', () => {
     );
   });
 
-  // SubtitleMedium
-  test('should render subtitleMediumRegular variant correctly', () => {
+  // Subtitle03
+  test('should render subtitle03Regular variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleMediumRegular">
+      <Text testID="text" variant="subtitle03Regular">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleMediumRegular');
+    expect(textComponent.props.variant).toBe('subtitle03Regular');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleMediumMedium variant correctly', () => {
+  test('should render subtitle03Medium variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleMediumMedium">
+      <Text testID="text" variant="subtitle03Medium">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleMediumMedium');
+    expect(textComponent.props.variant).toBe('subtitle03Medium');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleMediumSemibold variant correctly', () => {
+  test('should render subtitle03Semibold variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleMediumSemibold">
+      <Text testID="text" variant="subtitle03Semibold">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleMediumSemibold');
+    expect(textComponent.props.variant).toBe('subtitle03Semibold');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[3]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleMediumBold variant correctly', () => {
+  test('should render subtitle03Bold variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleMediumBold">
+      <Text testID="text" variant="subtitle03Bold">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleMediumBold');
+    expect(textComponent.props.variant).toBe('subtitle03Bold');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[4]);
     expect(textComponent.props.style[0].color).toBe(
@@ -261,65 +261,65 @@ describe('Text', () => {
     );
   });
 
-  // SubtitleSmall
-  test('should render subtitleSmallRegular variant correctly', () => {
+  // Subtitle04
+  test('should render subtitle04Regular variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleSmallRegular">
+      <Text testID="text" variant="subtitle04Regular">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleSmallRegular');
+    expect(textComponent.props.variant).toBe('subtitle04Regular');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleSmallMedium variant correctly', () => {
+  test('should render subtitle04Medium variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleSmallMedium">
+      <Text testID="text" variant="subtitle04Medium">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleSmallMedium');
+    expect(textComponent.props.variant).toBe('subtitle04Medium');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleSmallSemibold variant correctly', () => {
+  test('should render subtitle04Semibold variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleSmallSemibold">
+      <Text testID="text" variant="subtitle04Semibold">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleSmallSemibold');
+    expect(textComponent.props.variant).toBe('subtitle04Semibold');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[3]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
   });
-  test('should render subtitleSmallBold variant correctly', () => {
+  test('should render subtitle04Bold variant correctly', () => {
     // when
     const { getByTestId } = render(
-      <Text testID="text" variant="subtitleSmallBold">
+      <Text testID="text" variant="subtitle04Bold">
         Test Text
       </Text>,
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.variant).toBe('subtitleSmallBold');
+    expect(textComponent.props.variant).toBe('subtitle04Bold');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
     expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[4]);
     expect(textComponent.props.style[0].color).toBe(
