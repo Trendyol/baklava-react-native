@@ -97,7 +97,7 @@ const Button = ({
         <Text
           variant={textVariants}
           color={typeColor}
-          style={type === 'text' ? styles.underlineText : {}}
+          style={type === 'text' && !disabled ? styles.underlineText : {}}
           marginLeft={icon ? 3 : 0}
           testID="button-text">
           {text}
