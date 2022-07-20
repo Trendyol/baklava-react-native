@@ -14,4 +14,8 @@ const Box = styled(View)(
   compose(flexbox, color, size, space, borders, borderRadius),
 );
 
+Box.defaultProps = {
+  testID: 'box',
+};
+
 export default Box;

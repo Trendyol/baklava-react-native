@@ -81,6 +81,10 @@
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/__mocks__/globalMock.js"
+    ],
+    "collectCoverageFrom": [
+      "components/**",
+      "!components/**/*.stories.tsx"
     ]
   },
   "react-native-builder-bob": {
