@@ -11,4 +11,39 @@ describe('Icon/utils', () => {
     // then
     expect(result).toBe('IconName');
   });
+
+  test('should return correctly when no string is entered', () => {
+    // given
+    const iconName = 234;
+
+    // when
+    //@ts-ignore
+    const result = toPascalCase(iconName);
+
+    // then
+    expect(result).toBe('');
+  });
+
+  test('should return correctly when string length is 0', () => {
+    // given
+    const iconName = '';
+
+    // when
+    const result = toPascalCase(iconName);
+
+    // then
+    expect(result).toBe('');
+  });
+
+  test('should return correctly when iconName is not given', () => {
+    // given
+    //const iconName = '';
+
+    // when
+    //@ts-ignore
+    const result = toPascalCase();
+
+    // then
+    expect(result).toBe('');
+  });
 });

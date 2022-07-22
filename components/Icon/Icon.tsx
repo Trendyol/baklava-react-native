@@ -6,7 +6,7 @@ import { toPascalCase } from './utils';
 
 const Icon = ({
   name,
-  color,
+  color = 'contentPrimary',
   size = 'large',
   ...rest
 }: {
