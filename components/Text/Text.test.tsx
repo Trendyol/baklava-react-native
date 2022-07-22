@@ -4,6 +4,14 @@ import { render } from '../../src/testUtils';
 import Text from '../Text/Text';
 
 describe('Text', () => {
+  test('should render text correctly', () => {
+    // when
+    const { toJSON } = render(<Text>testtesttest</Text>);
+
+    // then
+    expect(toJSON()).toMatchSnapshot();
+  });
+
   test('should render given text correctly', () => {
     // when
     const { getByTestId } = render(<Text testID="text">Test Text</Text>);

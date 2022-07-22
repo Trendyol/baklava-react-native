@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render button correctly 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  alignItems="center"
+  alignSelf="flex-start"
+  collapsable={false}
+  flexDirection="row"
+  focusable={true}
+  isPressed={false}
+  justifyContent="center"
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  size="medium"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "flex-start",
+        "backgroundColor": "#F27A1A",
+        "borderColor": "#F27A1A",
+        "borderRadius": 6,
+        "borderWidth": 1,
+        "color": "#ffffff",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "paddingHorizontal": 24,
+        "paddingVertical": 12,
+      },
+    ]
+  }
+  text="testtesttest"
+  type="contained"
+  variant="primary"
+>
+  <Text
+    color="#ffffff"
+    marginLeft={0}
+    style={
+      Array [
+        Object {
+          "color": "#ffffff",
+          "fontFamily": "Rubik-Medium",
+          "fontSize": 14,
+          "fontWeight": "500",
+          "marginLeft": 0,
+        },
+        Object {},
+      ]
+    }
+    testID="button-text"
+    variant="subtitle03Medium"
+  >
+    testtesttest
+  </Text>
+</View>
+`;

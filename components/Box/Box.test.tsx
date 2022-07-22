@@ -6,6 +6,14 @@ import { ReactTestInstance } from 'react-test-renderer';
 import Text from '../Text/Text';
 
 describe('Box', () => {
+  test('should render box correctly', () => {
+    // when
+    const { toJSON } = render(<Box />);
+
+    // then
+    expect(toJSON()).toMatchSnapshot();
+  });
+
   test('should render given box', () => {
     // when
     const { getByTestId } = render(<Box testID="box" bg="primaryColor" />);

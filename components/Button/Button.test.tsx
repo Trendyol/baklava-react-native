@@ -6,6 +6,14 @@ import Check from '../../src/icons/Check';
 import { ReactTestInstance } from 'react-test-renderer';
 
 describe('Button', () => {
+  test('should render button correctly', () => {
+    // when
+    const { toJSON } = render(<Button text="testtesttest" />);
+
+    // then
+    expect(toJSON()).toMatchSnapshot();
+  });
+
   test('should render given text correctly', () => {
     // when
     const { getByTestId } = render(
