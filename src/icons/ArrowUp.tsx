@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
 
-const SvgArrow2 = (props: SvgProps) => (
+const SvgArrowUp = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -13,10 +13,10 @@ const SvgArrow2 = (props: SvgProps) => (
     <Path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M16.64 3.93c.67.67.67 1.756 0 2.425L10.996 12l5.644 5.645a1.714 1.714 0 1 1-2.424 2.424L7.36 13.212a1.714 1.714 0 0 1 0-2.424l6.857-6.857c.67-.67 1.755-.67 2.425 0Z"
+      d="M12 6.857c.455 0 .89.18 1.212.502l6.858 6.857a1.714 1.714 0 0 1-2.425 2.425L12 10.996 6.355 16.64a1.714 1.714 0 1 1-2.424-2.425l6.857-6.857A1.714 1.714 0 0 1 12 6.857Z"
       fill={props?.fill ?? `#273142`}
     />
   </Svg>
 );
 
-export default SvgArrow2;
+export default SvgArrowUp;

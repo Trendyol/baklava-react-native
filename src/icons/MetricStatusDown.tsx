@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Svg, { SvgProps, Circle, Path } from 'react-native-svg';
 
-const SvgMetricStatus1 = (props: SvgProps) => (
+const SvgMetricStatusDown = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -26,4 +26,4 @@ const SvgMetricStatus1 = (props: SvgProps) => (
   </Svg>
 );
 
-export default SvgMetricStatus1;
+export default SvgMetricStatusDown;
