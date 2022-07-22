@@ -18,6 +18,8 @@ export const fontNames = [
   'Rubik-Bold',
 ];
 
+export const iconSizes = [12, 14, 16, 20, 24, 32];
+
 export const radii = {
   none: 0,
   small: 4,
@@ -341,4 +343,5 @@ export default {
   colors,
   textStyle,
   buttonStyles,
+  iconSizes,
 };
