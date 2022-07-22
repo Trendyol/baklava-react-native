@@ -1,26 +1,26 @@
+import { ComponentStory } from '@storybook/react-native';
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react-native';
+import Text from '../Text/Text';
 import Box from './Box';
-import { ThemeProvider } from 'styled-components/native';
-import theme from '../../src/theme';
 
-const BoxMeta: ComponentMeta<typeof Box> = {
+export default {
   title: 'Box',
   component: Box,
-  argTypes: {},
-  args: {
-    backgroundColor: 'primaryColor',
-    width: 200,
-    height: 200,
-  },
 };
-
-export default BoxMeta;
 
 type BoxStory = ComponentStory<typeof Box>;
 
 export const Basic: BoxStory = args => (
-  <ThemeProvider theme={theme}>
+  <>
+    <Text p={3} variant="subtitle01Bold">
+      Box
+    </Text>
     <Box {...args} />
-  </ThemeProvider>
+  </>
 );
+
+Basic.args = {
+  backgroundColor: 'primaryColor',
+  width: 200,
+  height: 200,
+};

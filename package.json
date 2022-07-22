@@ -17,7 +17,7 @@
     "sb-watcher": "sbn-watcher",
     "pod": "cd ios; pod install; cd ..;",
     "prepare": "bob build",
-    "svgr": "svgr ./src/svg-icons -d ./src/icons --icon --native --svg-props 'className=' --typescript --svgo-config svgo.config.js --ignore-existing --no-index --replace-attr-values '#273142={props?.fill ?? `#273142`}'"
+    "svgr": "svgr ./src/svg-icons -d ./src/icons --icon --native --svg-props 'className=' --typescript --svgo-config svgo.config.js --ignore-existing --replace-attr-values '#273142={props?.fill ?? `#273142`}'"
   },
   "dependencies": {
     "@svgr/cli": "^6.2.1",

@@ -2,7 +2,7 @@ import React from 'react';
 import { theme } from '../../src';
 import { fireEvent, render } from '../../src/testUtils';
 import Button from '../Button/Button';
-import CheckIco from '../../src/icons/CheckIco';
+import Check from '../../src/icons/Check';
 import { ReactTestInstance } from 'react-test-renderer';
 
 describe('Button', () => {
@@ -48,7 +48,7 @@ describe('Button', () => {
   test('should render icon correctly', () => {
     // when
     const { getByTestId } = render(
-      <Button testID="button" size="large" text="test" icon={CheckIco} />,
+      <Button testID="button" size="large" text="test" icon={Check} />,
     );
     const buttonIcon = getByTestId('button-icon');
 

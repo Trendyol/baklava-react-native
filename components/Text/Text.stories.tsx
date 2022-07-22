@@ -1,22 +1,44 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
-import { ThemeProvider } from 'styled-components/native';
-import theme from '../../src/theme';
 import Text from '../Text/Text';
+import theme from '../../src/theme';
+
+const variantList = Object.keys(theme.textStyle);
 
 const TextMeta: ComponentMeta<typeof Text> = {
   title: 'Text',
   component: Text,
-  argTypes: {},
-  args: {},
+  argTypes: {
+    variant: {
+      options: variantList,
+      control: { type: 'radios' },
+    },
+  },
+  args: {
+    variant: variantList[0] as string,
+  },
 };
 
 export default TextMeta;
 
 type TextStory = ComponentStory<typeof Text>;
 
+export const Basic: TextStory = args => (
+  <>
+    <Text p={3} variant="subtitle01Bold">
+      Text
+    </Text>
+    <Text variant={args.variant} p={3}>
+      Sample Text
+    </Text>
+  </>
+);
+
 export const Heading: TextStory = () => (
-  <ThemeProvider theme={theme}>
+  <>
+    <Text p={3} variant="subtitle01Bold">
+      Heading
+    </Text>
     <Text variant="heading1" p={3}>
       Heading 1
     </Text>
@@ -26,10 +48,14 @@ export const Heading: TextStory = () => (
     <Text variant="heading3" p={3}>
       Heading 3
     </Text>
-  </ThemeProvider>
+  </>
 );
+
 export const Subtitle01: TextStory = () => (
-  <ThemeProvider theme={theme}>
+  <>
+    <Text p={3} variant="subtitle01Bold">
+      Subtitle
+    </Text>
     <Text variant="subtitle01Regular" p={3}>
       Subtitle 01 / Regular
     </Text>
@@ -42,10 +68,14 @@ export const Subtitle01: TextStory = () => (
     <Text variant="subtitle01Bold" p={3}>
       Subtitle 01 / Bold
     </Text>
-  </ThemeProvider>
+  </>
 );
+
 export const Subtitle02: TextStory = () => (
-  <ThemeProvider theme={theme}>
+  <>
+    <Text p={3} variant="subtitle01Bold">
+      Subtitle
+    </Text>
     <Text variant="subtitle02Regular" p={3}>
       Subtitle 02 / Regular
     </Text>
@@ -58,10 +88,14 @@ export const Subtitle02: TextStory = () => (
     <Text variant="subtitle02Bold" p={3}>
       Sutitle 02 / Bold
     </Text>
-  </ThemeProvider>
+  </>
 );
+
 export const Subtitle03: TextStory = () => (
-  <ThemeProvider theme={theme}>
+  <>
+    <Text p={3} variant="subtitle01Bold">
+      Subtitle
+    </Text>
     <Text variant="subtitle03Regular" p={3}>
       Subtitle 03 / Regular
     </Text>
@@ -74,10 +108,14 @@ export const Subtitle03: TextStory = () => (
     <Text variant="subtitle03Bold" p={3}>
       Subtitle 03 / Bold
     </Text>
-  </ThemeProvider>
+  </>
 );
+
 export const Subtitle04: TextStory = () => (
-  <ThemeProvider theme={theme}>
+  <>
+    <Text p={3} variant="subtitle01Bold">
+      Subtitle
+    </Text>
     <Text variant="subtitle04Regular" p={3}>
       Subtitle 04 / Regular
     </Text>
@@ -90,10 +128,14 @@ export const Subtitle04: TextStory = () => (
     <Text variant="subtitle04Bold" p={3}>
       Subtitle 04 / Bold
     </Text>
-  </ThemeProvider>
+  </>
 );
+
 export const Body: TextStory = () => (
-  <ThemeProvider theme={theme}>
+  <>
+    <Text p={3} variant="subtitle01Bold">
+      Body
+    </Text>
     <Text variant="bodyText" p={3}>
       Body / Text
     </Text>
@@ -106,10 +148,14 @@ export const Body: TextStory = () => (
     <Text variant="bodyLongText" p={3}>
       Body / Long Text
     </Text>
-  </ThemeProvider>
+  </>
 );
+
 export const Caption: TextStory = () => (
-  <ThemeProvider theme={theme}>
+  <>
+    <Text p={3} variant="subtitle01Bold">
+      Caption
+    </Text>
     <Text variant="captionText" p={3}>
       Caption / Text
     </Text>
@@ -122,5 +168,5 @@ export const Caption: TextStory = () => (
     <Text variant="captionTextLink" p={3}>
       Caption / Text Link
     </Text>
-  </ThemeProvider>
+  </>
 );

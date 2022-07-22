@@ -89,7 +89,7 @@ const Button = ({
       {...rest}>
       {icon
         ? React.createElement(icon, {
-            color: typeColor as string,
+            fill: typeColor as string,
             testID: 'button-icon',
           })
         : null}
