@@ -55,6 +55,11 @@ const Button = ({
 }) => {
   const { pressableProps, isPressed } = useIsPressed(rest.isPressed);
 
+  /* istanbul ignore next */
+  const onPressIn = () => pressableProps.onPressIn();
+  /* istanbul ignore next */
+  const onPressOut = () => pressableProps.onPressOut();
+
   const buttonTypes = theme.buttonStyles.type({
     variant,
     type,
@@ -62,17 +67,19 @@ const Button = ({
     disabled,
   });
 
+  const textVariants: string = {
+    large: 'subtitle02Medium',
+    medium: 'subtitle03Medium',
+    small: 'subtitle03Medium',
+  }[size];
+
   const typeColor = disabled
     ? theme.colors.contentPassive
     : isPressed && type !== 'text'
     ? theme.colors.white
     : buttonTypes[type].color;
 
-  const textVariants: string = {
-    large: 'subtitle02Medium',
-    medium: 'subtitle03Medium',
-    small: 'subtitle03Medium',
-  }[size];
+  const textStyle = type === 'text' && !disabled ? styles.underlineText : {};
 
   return (
     <StyledButton
@@ -81,8 +88,8 @@ const Button = ({
       size={size}
       variant={disabled ? 'passive' : variant}
       text={text}
-      onPressIn={() => pressableProps.onPressIn()}
-      onPressOut={() => pressableProps.onPressOut()}
+      onPressIn={onPressIn}
+      onPressOut={onPressOut}
       isPressed={isPressed}
       alignSelf={filled ? 'stretch' : 'flex-start'}
       disabled={disabled}
@@ -97,7 +104,7 @@ const Button = ({
         <Text
           variant={textVariants}
           color={typeColor}
-          style={type === 'text' && !disabled ? styles.underlineText : {}}
+          style={textStyle}
           marginLeft={icon ? 3 : 0}
           testID="button-text">
           {text}
