@@ -3,21 +3,22 @@ import { Text as T } from 'react-native';
 import styled from 'styled-components/native';
 import {
   compose,
-  color,
+  color as styledColor,
   space,
   typography,
   position,
   size,
   fontWeight,
   textStyle,
-  variant,
+  variant as styledVariant,
   fontSize,
 } from 'styled-system';
 import theme from '../../src/theme';
+import { TextVariantTypes } from './types';
 
 const StyledText = styled(T)(
   compose(
-    color,
+    styledColor,
     space,
     typography,
     position,
@@ -25,17 +26,28 @@ const StyledText = styled(T)(
     fontSize,
     fontWeight,
     textStyle,
-    variant({ variants: theme.textStyle }),
+    styledVariant({ variants: theme.textStyle }),
   ),
 );
 
-function Text(props: any) {
-  return <StyledText {...props}>{props.children}</StyledText>;
+function Text({
+  variant = 'bodyText',
+  color = 'contentPrimary',
+  ...rest
+}: {
+  variant?: TextVariantTypes;
+  color?: string;
+  [key: string]: any;
+}) {
+  return (
+    <StyledText
+      //@ts-ignore
+      variant={variant}
+      color={color}
+      {...rest}>
+      {rest.children}
+    </StyledText>
+  );
 }
-
-Text.defaultProps = {
-  variant: 'bodyText',
-  color: 'contentPrimary',
-};
 
 export default Text;

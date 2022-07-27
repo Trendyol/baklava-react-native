@@ -11,6 +11,7 @@ import type {
   ButtonTypeTypes,
   ButtonVariantTypes,
 } from './types';
+import type { TextVariantTypes } from '../Text/types';
 
 const BaseButton = styled(Pressable)`
   ${flexbox}
@@ -67,17 +68,19 @@ const Button = ({
     disabled,
   });
 
-  const textVariants: string = {
+  const textVariants = {
     large: 'subtitle02Medium',
     medium: 'subtitle03Medium',
     small: 'subtitle03Medium',
-  }[size];
+  }[size] as TextVariantTypes;
 
-  const typeColor = disabled
-    ? theme.colors.contentPassive
-    : isPressed && type !== 'text'
-    ? theme.colors.white
-    : buttonTypes[type].color;
+  const typeColor = (
+    disabled
+      ? theme.colors.contentPassive
+      : isPressed && type !== 'text'
+      ? theme.colors.white
+      : buttonTypes[type].color
+  ) as string;
 
   const textStyle = type === 'text' && !disabled ? styles.underlineText : {};
 
@@ -96,7 +99,7 @@ const Button = ({
       {...rest}>
       {icon
         ? React.createElement(icon, {
-            fill: typeColor as string,
+            fill: typeColor,
             testID: 'button-icon',
           })
         : null}

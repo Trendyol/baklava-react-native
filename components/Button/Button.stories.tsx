@@ -134,6 +134,62 @@ export const Types: ButtonStory = args => (
   </>
 );
 
+export const Sizes: ButtonStory = args => (
+  <>
+    <Text p={3} variant="subtitle01Bold">
+      Button Sizes
+    </Text>
+    <Box>
+      <Button
+        {...args}
+        variant="primary"
+        size="large"
+        text="Primary Button"
+        m={3}
+      />
+      <Button
+        {...args}
+        variant="primary"
+        size="medium"
+        text="Primary Button"
+        m={3}
+      />
+      <Button
+        {...args}
+        variant="primary"
+        size="small"
+        text="Primary Button"
+        m={3}
+        mb={6}
+      />
+      <Button
+        {...args}
+        variant="primary"
+        size="large"
+        text="Primary Button"
+        filled={true}
+        m={3}
+      />
+      <Button
+        {...args}
+        variant="primary"
+        size="medium"
+        text="Primary Button"
+        filled={true}
+        m={3}
+      />
+      <Button
+        {...args}
+        variant="primary"
+        size="small"
+        text="Primary Button"
+        filled={true}
+        m={3}
+      />
+    </Box>
+  </>
+);
+
 export const ContainedButtons: ButtonStory = args => (
   <>
     <Text p={3} variant="subtitle01Bold">
@@ -180,7 +236,6 @@ export const ContainedButtons: ButtonStory = args => (
   </>
 );
 
-// Outlined Buttons
 export const OutlinedButtons: ButtonStory = args => (
   <>
     <Text p={3} variant="subtitle01Bold">
@@ -223,7 +278,6 @@ export const OutlinedButtons: ButtonStory = args => (
   </>
 );
 
-// Text Buttons
 export const TextButtons: ButtonStory = args => (
   <>
     <Text p={3} variant="subtitle01Bold">
@@ -275,7 +329,6 @@ export const TextButtons: ButtonStory = args => (
   </>
 );
 
-// Icon Buttons
 export const IconButtons: ButtonStory = args => (
   <>
     <Text p={3} variant="subtitle01Bold">
@@ -350,7 +403,6 @@ export const IconButtons: ButtonStory = args => (
   </>
 );
 
-// Icon Only Buttons
 export const IconOnlyButtons: ButtonStory = args => (
   <>
     <Text p={3} variant="subtitle01Bold">
@@ -367,63 +419,6 @@ export const IconOnlyButtons: ButtonStory = args => (
         size="large"
         icon={InfoIco}
         disabled={true}
-        m={3}
-      />
-    </Box>
-  </>
-);
-
-// Button Sizes
-export const ButtonSizes: ButtonStory = args => (
-  <>
-    <Text p={3} variant="subtitle01Bold">
-      Button Sizes
-    </Text>
-    <Box>
-      <Button
-        {...args}
-        variant="primary"
-        size="large"
-        text="Primary Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="medium"
-        text="Primary Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="small"
-        text="Primary Button"
-        m={3}
-        mb={6}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="large"
-        text="Primary Button"
-        filled={true}
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="medium"
-        text="Primary Button"
-        filled={true}
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="small"
-        text="Primary Button"
-        filled={true}
         m={3}
       />
     </Box>
