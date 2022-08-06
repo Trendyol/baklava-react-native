@@ -1,7 +1,7 @@
+import React from 'react';
 import { View } from 'react-native';
 import styled from 'styled-components/native';
 import {
-  compose,
   flexbox,
   color,
   size,
@@ -10,12 +10,23 @@ import {
   borderRadius,
 } from 'styled-system';
 
-const Box = styled(View)(
-  compose(flexbox, color, size, space, borders, borderRadius),
-);
+const BaseBox = styled(View)`
+  ${flexbox}
+  ${color}
+  ${size}
+  ${space}
+  ${borders}
+  ${borderRadius}
+`;
 
-Box.defaultProps = {
-  testID: 'box',
+const Box = ({
+  testID = 'box',
+  ...rest
+}: {
+  testID?: string;
+  [key: string]: any;
+}) => {
+  return <BaseBox testID={testID} {...rest} />;
 };
 
 export default Box;

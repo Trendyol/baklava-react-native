@@ -76,147 +76,174 @@ export const textStyle = {
   // Heading
   heading1: {
     fontSize: fontSizes[6],
-    fontWeight: fontWeights[0],
-    fontFamily: fontNames[0],
+    fontWeight: fontWeights[1],
+    fontFamily: fontNames[1],
+    lineHeight: '36px',
   },
   heading2: {
     fontSize: fontSizes[5],
     fontWeight: fontWeights[1],
-    fontFamily: fontNames[0],
+    fontFamily: fontNames[1],
+    lineHeight: '32px',
   },
   heading3: {
     fontSize: fontSizes[4],
     fontWeight: fontWeights[1],
-    fontFamily: fontNames[0],
+    fontFamily: fontNames[1],
+    lineHeight: '28px',
   },
   // Subtitle01
   subtitle01Regular: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[1],
     fontFamily: fontNames[1],
+    lineHeight: '24px',
   },
   subtitle01Medium: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[2],
     fontFamily: fontNames[2],
+    lineHeight: '24px',
   },
   subtitle01Semibold: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[3],
     fontFamily: fontNames[3],
+    lineHeight: '24px',
   },
   subtitle01Bold: {
     fontSize: fontSizes[3],
     fontWeight: fontWeights[4],
     fontFamily: fontNames[4],
+    lineHeight: '24px',
   },
   // Subtitle02
   subtitle02Regular: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[1],
     fontFamily: fontNames[1],
+    lineHeight: '20px',
   },
   subtitle02Medium: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[2],
     fontFamily: fontNames[2],
+    lineHeight: '20px',
   },
   subtitle02Semibold: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[3],
     fontFamily: fontNames[3],
+    lineHeight: '20px',
   },
   subtitle02Bold: {
     fontSize: fontSizes[2],
     fontWeight: fontWeights[4],
     fontFamily: fontNames[4],
+    lineHeight: '20px',
   },
   // Subtitle03
   subtitle03Regular: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
     fontFamily: fontNames[1],
+    lineHeight: '16px',
   },
   subtitle03Medium: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[2],
     fontFamily: fontNames[2],
+    lineHeight: '16px',
   },
   subtitle03Semibold: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[3],
     fontFamily: fontNames[3],
+    lineHeight: '16px',
   },
   subtitle03Bold: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[4],
     fontFamily: fontNames[4],
+    lineHeight: '16px',
   },
   // Subtitle04
   subtitle04Regular: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[1],
     fontFamily: fontNames[1],
+    lineHeight: '14px',
   },
   subtitle04Medium: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[2],
     fontFamily: fontNames[2],
+    lineHeight: '14px',
   },
   subtitle04Semibold: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[3],
     fontFamily: fontNames[3],
+    lineHeight: '14px',
   },
   subtitle04Bold: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[4],
     fontFamily: fontNames[4],
+    lineHeight: '14px',
   },
   // Body
   bodyText: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
     fontFamily: fontNames[1],
+    lineHeight: '16px',
   },
   bodyUnderline: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
     fontFamily: fontNames[1],
     textDecorationLine: 'underline',
+    lineHeight: '16px',
   },
   bodyTextLink: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[2],
     fontFamily: fontNames[2],
     textDecorationLine: 'underline',
+    lineHeight: '16px',
   },
   bodyLongText: {
     fontSize: fontSizes[1],
     fontWeight: fontWeights[1],
     fontFamily: fontNames[1],
+    lineHeight: '16px',
   },
   // Caption
   captionText: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[1],
     fontFamily: fontNames[1],
+    lineHeight: '12px',
   },
   captionMedium: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[2],
     fontFamily: fontNames[2],
+    lineHeight: '12px',
   },
   captionLongText: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[1],
     fontFamily: fontNames[1],
+    lineHeight: '12px',
   },
   captionTextLink: {
     fontSize: fontSizes[0],
     fontWeight: fontWeights[2],
     fontFamily: fontNames[2],
     textDecorationLine: 'underline',
+    lineHeight: '12px',
   },
 };
 
@@ -335,6 +362,10 @@ export const buttonSize = (props: any) =>
     variants: buttonStyles.size(props),
   });
 
+export const inputStyle = {
+  height: [32, 40, 48],
+};
+
 export default {
   space,
   fontSizes,
@@ -344,4 +375,5 @@ export default {
   textStyle,
   buttonStyles,
   iconSizes,
+  inputStyle,
 };
