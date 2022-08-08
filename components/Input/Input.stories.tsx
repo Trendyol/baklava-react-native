@@ -30,6 +30,30 @@ export const Basic: InputStory = args => (
     <Text py={3} variant="subtitle01Bold">
       Input
     </Text>
-    <Input {...args} />
+
+    <Input
+      {...args}
+      success={false}
+      error={false}
+      optional={false}
+      description={null}
+      icon={null}
+    />
+
+    <Input
+      {...args}
+      success={false}
+      error={false}
+      optional={true}
+      description={null}
+      icon={null}
+      label={null}
+    />
+
+    <Input {...args} success={false} error={false} icon={null} />
+
+    <Input {...args} error={true} icon="close-fill" />
+
+    <Input {...args} secureTextEntry={true} success={true} />
   </Box>
 );
