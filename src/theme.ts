@@ -370,6 +370,7 @@ export default {
   space,
   fontSizes,
   fontWeights,
+  fontNames,
   radii,
   colors,
   textStyle,

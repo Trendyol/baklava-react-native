@@ -1,35 +1,36 @@
-import React, { forwardRef, useMemo } from 'react';
-import { TextInput } from 'react-native';
+import React, { forwardRef, useEffect } from 'react';
+import { Easing, EasingFunction, TextInput, Pressable } from 'react-native';
 import styled from 'styled-components/native';
-import { color, flexbox, space, borderRadius } from 'styled-system';
+import { color, flexbox, space, borderRadius, position } from 'styled-system';
 import theme from '../../src/theme';
 import Box from '../Box/Box';
-import Text from '../Text/Text';
-import Icon from '../Icon/Icon';
 import { InputSizeTypes } from './types';
 import { IconNameType } from '../Icon/types';
+import { InputIcon } from './InputIcon';
+import { InputLabel } from './InputLabel';
+import { InputHelpText } from './InputHelpText';
+import {
+  useOutlineLabelVisibility,
+  useTogglePasswordVisibility,
+} from './hooks';
 
 const BaseInput = styled(TextInput)`
   ${flexbox}
   ${color}
   ${space}
+  ${position}
   ${borderRadius}
 `;
 
-export interface InputOutlineMethods {
-  focus: () => void;
-  blur: () => void;
-  isFocused: Boolean;
-  clear: () => void;
-}
-
 type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
-  size: InputSizeTypes;
+  size?: InputSizeTypes;
   label?: string | null;
   labelFixed?: boolean;
   placeholder?: string;
-  description?: string | null;
-  optional?: boolean;
+  helpText?: string | null;
+  errorText?: string | null;
+  successText?: string | null;
+  required?: boolean;
   icon?: IconNameType | null;
   success?: boolean;
   error?: boolean;
@@ -37,6 +38,7 @@ type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   onFocus?: (args: any) => void;
   onBlur?: (args: any) => void;
   disabled?: boolean;
+  easing?: EasingFunction;
 };
 
 type TextInputHandles = Pick<
@@ -51,32 +53,37 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       label,
       labelFixed,
       placeholder,
-      description,
+      helpText,
+      errorText,
+      successText,
       icon,
-      success,
-      error,
+      success = false,
+      error = false,
       secureTextEntry = false,
-      optional = false,
+      required = false,
       disabled = false,
       editable = true,
+      easing = Easing.inOut(Easing.ease),
       ...rest
     }: InputProps,
     ref,
   ) => {
+    const [focused, setFocused] = React.useState<boolean>(false);
+    const [errorState, setErrorState] = React.useState<boolean>(false);
+    const [successState, setSuccessState] = React.useState<boolean>(false);
+    const [iconName, setIconName] = React.useState<IconNameType | null>(
+      icon ?? null,
+    );
+    const [variantIconName, setVariantIconName] =
+      React.useState<IconNameType | null>(null);
+
     const isControlled = rest.value !== undefined;
     const validInputValue = isControlled ? rest.value : rest.defaultValue;
-    const [focused, setFocused] = React.useState<boolean>(false);
     const [uncontrolledValue, setUncontrolledValue] = React.useState<
       string | undefined
     >(validInputValue);
-    // Use value from props instead of local state when input is controlled
     const value = isControlled ? rest.value : uncontrolledValue;
     const root = React.useRef<TextInput | undefined | null>();
-
-    const placeholderText = useMemo(
-      () => (!label && optional ? `${placeholder} (Optional)` : placeholder),
-      [label, optional, placeholder],
-    );
 
     const inputHeight: number = {
       small: theme.inputStyle.height[0],
@@ -84,38 +91,85 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       large: theme.inputStyle.height[2],
     }[size];
 
+    const {
+      passwordVisibility,
+      passwordVisibilityIcon,
+      handlePasswordVisibility,
+    } = useTogglePasswordVisibility(secureTextEntry);
+
+    const {
+      startAnimation,
+      stopAnimation,
+      animatedViewProps,
+      animatedTextProps,
+    } = useOutlineLabelVisibility(easing, inputHeight, focused, value);
+
+    useEffect(() => {
+      setErrorState(error);
+      if (!iconName && error) {
+        setVariantIconName('close-fill');
+      }
+    }, [error, iconName]);
+
+    useEffect(() => {
+      setSuccessState(success);
+      if (!iconName && success) {
+        setVariantIconName('check-fill');
+      }
+    }, [success, iconName]);
+
+    useEffect(() => {
+      if (icon) {
+        setVariantIconName(null);
+        setIconName(icon);
+      }
+    }, [icon]);
+
+    const getPlaceholderText = () => {
+      if (!label && !placeholder) {
+        return '';
+      }
+
+      if (!label && placeholder) {
+        if (required) {
+          return `${placeholder}`;
+        } else {
+          return `${placeholder} (Optional)`;
+        }
+      }
+
+      if (label && !placeholder) {
+        return '';
+      }
+
+      if (label && placeholder) {
+        if (labelFixed) {
+          return placeholder;
+        } else {
+          return '';
+        }
+      }
+    };
+    const placeholderText = getPlaceholderText();
+
     const borderColor = focused
       ? 'primaryColor'
-      : success
+      : successState
       ? 'successColor'
-      : error
+      : errorState
       ? 'dangerColor'
       : 'borderColor';
-
-    const labelColor = useMemo(
-      () =>
-        success ? 'successColor' : error ? 'dangerColor' : 'contentSecondary',
-      [success, error],
-    );
-
-    const labelOptionalColor = useMemo(
-      () =>
-        success ? 'successColor' : error ? 'dangerColor' : 'contentTertiary',
-      [success, error],
-    );
-
-    const descriptionColor = useMemo(
-      () =>
-        success ? 'successColor' : error ? 'dangerColor' : 'contentTertiary',
-      [success, error],
-    );
 
     const handleFocus = (args: any) => {
       if (disabled || !editable) {
         return;
       }
+      startAnimation();
 
       setFocused(true);
+      setVariantIconName(null);
+      setErrorState(false);
+      setSuccessState(false);
 
       rest.onFocus?.(args);
     };
@@ -125,7 +179,12 @@ const Input = forwardRef<TextInputHandles, InputProps>(
         return;
       }
 
+      if (!value) {
+        stopAnimation();
+      }
+
       setFocused(false);
+      // Keyboard.dismiss();
       rest.onBlur?.(args);
     };
 
@@ -135,7 +194,6 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       }
 
       if (!isControlled) {
-        // Keep track of value in local state when input is not controlled
         setUncontrolledValue(value);
       }
       rest.onChangeText?.(nextValue);
@@ -152,85 +210,77 @@ const Input = forwardRef<TextInputHandles, InputProps>(
 
     const forceFocus = () => root.current?.focus();
 
+    const handlePressOut = () => {
+      console.log('handlePressOut');
+    };
+
     return (
       <Box py={3}>
-        {label ? (
-          labelFixed ? (
-            <Box flexDirection="row" mb={2}>
-              <Text variant="subtitle04Medium" color={labelColor}>
-                {label}
-              </Text>
-              {optional && (
-                <Text
-                  ml={1}
-                  variant="subtitle04Regular"
-                  color={labelOptionalColor}>
-                  (Optional)
-                </Text>
-              )}
-            </Box>
-          ) : (
-            <Text>animated-label</Text>
-          )
-        ) : null}
-        <Box
-          flexDirection="row"
-          alignItems="center"
-          borderWidth={1}
-          borderRadius="normal"
-          borderColor={borderColor}
-          px={5}>
-          <BaseInput
-            {...rest}
-            flex={1}
-            innerRef={(innerRef: TextInput) => {
-              root.current = innerRef;
-            }}
-            multiline={false}
-            height={inputHeight}
-            // bg="alertBackground"
-            onFocus={handleFocus}
-            forceFocus={forceFocus}
-            onBlur={handleBlur}
-            placeholder={placeholderText}
-            secureTextEntry={secureTextEntry}
-            placeholderTextColor={theme.colors.contentTertiary as string}
-            onChangeText={handleChangeText}
-            value={value}
-          />
-          {secureTextEntry ? (
-            <Box px={3}>
-              <Icon name="eye-off" color="contentTertiary" />
-            </Box>
-          ) : null}
-          {icon ? (
-            <Box pl={3}>
-              <Icon
-                name={icon}
-                size="small"
-                color={
-                  success
-                    ? 'successColor'
-                    : error
-                    ? 'dangerColor'
-                    : 'contentTertiary'
-                }
-              />
-            </Box>
-          ) : null}
-        </Box>
-        {description ? (
-          <Box mt={2} ml={5}>
-            <Text variant="subtitle04Regular" color={descriptionColor}>
-              {description}
-            </Text>
+        <InputLabel
+          label={label}
+          labelFixed={labelFixed}
+          placeholder={placeholderText}
+          required={required}
+          focused={focused}
+          errorState={errorState}
+          successState={successState}
+          animatedViewProps={animatedViewProps}
+          animatedTextProps={animatedTextProps}
+          inputHeight={inputHeight}
+        />
+        <Pressable onPressOut={handlePressOut}>
+          <Box
+            flexDirection="row"
+            alignItems="center"
+            borderWidth={1}
+            borderRadius="normal"
+            borderColor={borderColor}
+            backgroundColor={disabled ? 'tertiaryColor' : 'white'}
+            px={5}
+            zIndex={0}>
+            <BaseInput
+              {...rest}
+              flex={1}
+              innerRef={(innerRef: TextInput) => {
+                root.current = innerRef;
+              }}
+              multiline={false}
+              height={inputHeight}
+              bg="transparent"
+              onFocus={handleFocus}
+              forceFocus={forceFocus}
+              onBlur={handleBlur}
+              placeholder={placeholderText}
+              placeholderTextColor={theme.colors.contentTertiary as string}
+              secureTextEntry={passwordVisibility}
+              onChangeText={handleChangeText}
+              value={value}
+              disabled={disabled}
+              editable={!disabled}
+              style={{ fontFamily: theme.fontNames[1] }}
+            />
+            <InputIcon
+              secureTextEntry={secureTextEntry}
+              iconName={iconName}
+              variantIconName={variantIconName}
+              focused={focused}
+              successState={successState}
+              errorState={errorState}
+              passwordVisibilityIcon={passwordVisibilityIcon}
+              handlePasswordVisibility={handlePasswordVisibility}
+            />
           </Box>
-        ) : null}
+        </Pressable>
+        <InputHelpText
+          helpText={helpText}
+          errorState={errorState}
+          errorText={errorText}
+          successState={successState}
+          successText={successText}
+        />
       </Box>
     );
   },
 );
-
-Input.defaultProps = {};
 
 export default Input;
