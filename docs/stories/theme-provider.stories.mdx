@@ -1,0 +1,59 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+  title="Documentation/Theme Provider"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Theme Provider
+
+### Applying a theme to the whole app
+
+To support custom themes, baklava exports a ThemeProvider component. Wrap the root component with the provider to be able to support themes:
+
+```jsx
+import * as React from 'react';
+import { theme, ThemeProvider } from 'baklava-design-system';
+import App from './src/App';
+
+export default function Main() {
+  return (
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  );
+}
+```
+
+You can also provide a theme prop with a theme object with same properties as the default theme:
+
+```jsx
+import * as React from 'react';
+import { theme as DefaultTheme, ThemeProvider } from 'baklava-design-system';
+import App from './src/App';
+
+const theme = {
+  ...DefaultTheme,
+  colors: {
+    ...DefaultTheme.colors,
+    primaryColor: '#3498db',
+    secondaryColor: '#f1c40f',
+    tertiaryColor: '#a1b2c3',
+  },
+};
+
+export default function Main() {
+  return (
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  );
+}
+```

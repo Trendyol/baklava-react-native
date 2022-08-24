@@ -1,0 +1,68 @@
+---
+sidebar_position: 1
+---
+
+import TextHeading from "../assets/components/text/TextHeading.png";
+import TextSubtitle01 from "../assets/components/text/TextSubtitle01.png";
+import TextSubtitle02 from "../assets/components/text/TextSubtitle02.png";
+import TextSubtitle03 from "../assets/components/text/TextSubtitle03.png";
+import TextSubtitle04 from "../assets/components/text/TextSubtitle04.png";
+import TextBody from "../assets/components/text/TextBody.png";
+import TextCaption from "../assets/components/text/TextCaption.png";
+
+# Text
+
+Text allows the rendering of text and paragraphs within an interface. Shows styles compatible with the passed variant prop and supported by the type system.
+
+<p align="center">
+  <img src={TextHeading} width="300" alt="TextHeading" />
+  <img src={TextSubtitle01} width="300" alt="TextSubtitle01" />
+  <img src={TextSubtitle02} width="300" alt="TextSubtitle02" />
+  <img src={TextSubtitle03} width="300" alt="TextSubtitle03" />
+  <img src={TextSubtitle04} width="300" alt="TextSubtitle04" />
+</p>
+<p align="center">
+  <img src={TextBody} width="300" alt="TextBody" />
+  <img src={TextCaption} width="300" alt="TextCaption" />
+</p>
+
+## Usage
+
+```jsx
+<Text variant="heading2">Baklava Design System</Text>
+```
+
+<br />
+
+## Props
+
+#### variant
+
+Variant defines appropriate text styles for type role and its size. Available variants:
+
+Heading: _`heading1`, `heading2`, `heading3`_ <br />
+Subtitle01: _`subtitle01Regular`, `subtitle01Medium`, `subtitle01Semibold`, `subtitle01Bold`_ <br />
+Subtitle02: _`subtitle02Regular`, `subtitle02Medium`, `subtitle02Semibold`, `subtitle02Bold`_ <br />
+Subtitle03: _`subtitle03Regular`, `subtitle03Medium`, `subtitle03Semibold`, `subtitle03Bold`_ <br />
+Subtitle04: _`subtitle04Regular`, `subtitle04Medium`, `subtitle04Semibold`, `subtitle04Bold`_ <br />
+Body: _`bodyText`, `bodyUnderline`, `bodyTextLink`, `bodyLongText`_ <br />
+Caption: _`captionText`, `captionMedium`, `captionLongText`, `captionTextLink`_ <br />
+
+#### children (required)
+
+Type: `React.ReactNode`
+
+#### theme
+
+Type: `ThemeProp`
+
+#### style
+
+Type: `StyleProp<TextStyle>`
+
+<br />
+Text implements: <>
+  <a href="https://reactnative.dev/docs/text#props" title="title">
+    ...Text props
+  </a>
+</>
