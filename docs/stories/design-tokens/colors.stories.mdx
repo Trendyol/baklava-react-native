@@ -1,0 +1,98 @@
+import { Meta } from '@storybook/addon-docs';
+import { ColorBox, GradientColorBox, EmptyColorBox, styles } from './ColorBox';
+
+<Meta
+  title="Design System/Colors"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Colors
+
+Baklava uses a list of defined color with some default values.
+
+<div style={styles.colorBox} markdown="1">
+  <ColorBox color="#F27A1A" colorText="Primary Color" />
+  <ColorBox color="#EF6114" colorText="Primary Hover" />
+  <ColorBox color="#FEF2E8" colorText="Accent Background" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#273142" colorText="Secondary Color" />
+  <ColorBox color="#0F131A" colorText="Secondary Hover" />
+  <ColorBox color="#FFFFFF" colorText="Secondary Background" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#F1F2F7" colorText="Tertiary Color" />
+  <ColorBox color="#D5D9E1" colorText="Tertiary Hover" />
+  <ColorBox color="#F7F7FA" colorText="Tertiary Background" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#0BC15C" colorText="Success Color" />
+  <ColorBox color="#09A44E" colorText="Success Hover" />
+  <ColorBox color="#E7F9EF" colorText="Success Background" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#FF5043" colorText="Danger Color" />
+  <ColorBox color="#FF3028" colorText="Danger Hover" />
+  <ColorBox color="#FFEEEC" colorText="Alert Background" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#FFB600" colorText="Warning Color" />
+  <ColorBox color="#FF9800" colorText="Warning Hover" />
+  <ColorBox color="#FFF8E6" colorText="Warning Background" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#5794FF" colorText="Alternative Color" />
+  <ColorBox color="#457EFF" colorText="Alternative Hover" />
+  <ColorBox color="#EEF4FF" colorText="Info Background" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#8C4EFF" colorText="Featured Color" />
+  <ColorBox color="#753EFF" colorText="Featured Hover" />
+  <ColorBox color="#F4EDFF" colorText="Featured C. Background" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#273142" colorText="Content Primary" />
+  <ColorBox color="#6E7787" colorText="Content Secondary" />
+  <ColorBox color="#95A1B5" colorText="Content Tertiary" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#AFBBCA" colorText="Content Passive" />
+  <ColorBox color="#F1F2F7" colorText="Primary Background" />
+  <ColorBox color="#D5D9E1" colorText="Border Color" />
+</div>
+
+<div style={styles.colorBox}>
+  <GradientColorBox
+    firstColor="#8C4EFF"
+    secondColor="#5794FF"
+    colorText="Gradient Purple"
+  />
+  <GradientColorBox
+    firstColor="#FFA964"
+    secondColor="#F27A1A"
+    colorText="Gradient Orange"
+  />
+  <EmptyColorBox color="white" colorText="Empty Color" />
+</div>
+
+## Usage
+
+```jsx
+<Box color={'tertiaryHover'} />
+```
