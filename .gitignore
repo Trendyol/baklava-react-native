@@ -64,3 +64,5 @@ coverage/
 
 # generated files by bob
 lib/
+
+/docs/storybook-static/
