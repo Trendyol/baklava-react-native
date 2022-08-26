@@ -1,5 +1,5 @@
 import React, { forwardRef, useEffect } from 'react';
-import { Easing, EasingFunction, TextInput, Pressable } from 'react-native';
+import { Easing, EasingFunction, TextInput } from 'react-native';
 import styled from 'styled-components/native';
 import { color, flexbox, space, borderRadius, position } from 'styled-system';
 import theme from '../../src/theme';
@@ -10,9 +10,12 @@ import { InputIcon } from './InputIcon';
 import { InputLabel } from './InputLabel';
 import { InputHelpText } from './InputHelpText';
 import {
+  useInputRef,
+  useInputValue,
   useOutlineLabelVisibility,
   useTogglePasswordVisibility,
 } from './hooks';
+import { getBorderColor, getPlaceholderText } from './utils';
 
 const BaseInput = styled(TextInput)`
   ${flexbox}
@@ -24,7 +27,7 @@ const BaseInput = styled(TextInput)`
 
 type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   size?: InputSizeTypes;
-  label?: string | null;
+  label?: string | null | undefined;
   labelFixed?: boolean;
   placeholder?: string;
   helpText?: string | null;
@@ -77,13 +80,22 @@ const Input = forwardRef<TextInputHandles, InputProps>(
     const [variantIconName, setVariantIconName] =
       React.useState<IconNameType | null>(null);
 
-    const isControlled = rest.value !== undefined;
-    const validInputValue = isControlled ? rest.value : rest.defaultValue;
-    const [uncontrolledValue, setUncontrolledValue] = React.useState<
-      string | undefined
-    >(validInputValue);
-    const value = isControlled ? rest.value : uncontrolledValue;
-    const root = React.useRef<TextInput | undefined | null>();
+    const innerRef = useInputRef();
+    const { value, isControlled, setUncontrolledValue } = useInputValue({
+      value: rest.value,
+      defaultValue: rest.defaultValue,
+    });
+
+    const placeholderText = getPlaceholderText({
+      label,
+      labelFixed,
+      placeholder,
+      required,
+      value,
+      focused,
+    });
+
+    const borderColor = getBorderColor({ focused, successState, errorState });
 
     const inputHeight: number = {
       small: theme.inputStyle.height[0],
@@ -102,7 +114,18 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       stopAnimation,
       animatedViewProps,
       animatedTextProps,
-    } = useOutlineLabelVisibility(easing, inputHeight, focused, value);
+    } = useOutlineLabelVisibility({
+      easing,
+      inputHeight,
+      focused,
+      value,
+      disabled,
+      helpText,
+      errorText,
+      successText,
+      errorState,
+      successState,
+    });
 
     useEffect(() => {
       setErrorState(error);
@@ -125,42 +148,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       }
     }, [icon]);
 
-    const getPlaceholderText = () => {
-      if (!label && !placeholder) {
-        return '';
-      }
-
-      if (!label && placeholder) {
-        if (required) {
-          return `${placeholder}`;
-        } else {
-          return `${placeholder} (Optional)`;
-        }
-      }
-
-      if (label && !placeholder) {
-        return '';
-      }
-
-      if (label && placeholder) {
-        if (labelFixed) {
-          return placeholder;
-        } else {
-          return '';
-        }
-      }
-    };
-    const placeholderText = getPlaceholderText();
-
-    const borderColor = focused
-      ? 'primaryColor'
-      : successState
-      ? 'successColor'
-      : errorState
-      ? 'dangerColor'
-      : 'borderColor';
-
-    const handleFocus = (args: any) => {
+    const handleFocus = (args: Object) => {
       if (disabled || !editable) {
         return;
       }
@@ -184,7 +172,6 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       }
 
       setFocused(false);
-      // Keyboard.dismiss();
       rest.onBlur?.(args);
     };
 
@@ -194,24 +181,32 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       }
 
       if (!isControlled) {
-        setUncontrolledValue(value);
+        setUncontrolledValue(nextValue);
       }
       rest.onChangeText?.(nextValue);
     };
 
     React.useImperativeHandle(ref, () => ({
-      focus: () => root.current?.focus(),
-      clear: () => root.current?.clear(),
-      setNativeProps: (args: Object) => root.current?.setNativeProps(args),
-      isFocused: () => root.current?.isFocused() || false,
-      blur: () => root.current?.blur(),
-      forceFocus: () => root.current?.focus(),
+      focus: () => innerRef.current?.focus(),
+      clear: () => innerRef.current?.clear(),
+      setNativeProps: (args: Object) => innerRef.current?.setNativeProps(args),
+      isFocused: () => innerRef.current?.isFocused() || false,
+      blur: () => innerRef.current?.blur(),
+      forceFocus: () => innerRef.current?.focus(),
     }));
 
-    const forceFocus = () => root.current?.focus();
+    const forceFocus = () => {
+      if (disabled) {
+        return;
+      }
 
-    const handlePressOut = () => {
-      console.log('handlePressOut');
+      startAnimation();
+
+      setFocused(true);
+      setVariantIconName(null);
+      setErrorState(false);
+      setSuccessState(false);
+      return innerRef.current?.focus();
     };
 
     return (
@@ -222,55 +217,53 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           placeholder={placeholderText}
           required={required}
           focused={focused}
+          forceFocus={forceFocus}
           errorState={errorState}
           successState={successState}
           animatedViewProps={animatedViewProps}
           animatedTextProps={animatedTextProps}
           inputHeight={inputHeight}
         />
-        <Pressable onPressOut={handlePressOut}>
-          <Box
-            flexDirection="row"
-            alignItems="center"
-            borderWidth={1}
-            borderRadius="normal"
-            borderColor={borderColor}
-            backgroundColor={disabled ? 'tertiaryColor' : 'white'}
-            px={5}
-            zIndex={0}>
-            <BaseInput
-              {...rest}
-              flex={1}
-              innerRef={(innerRef: TextInput) => {
-                root.current = innerRef;
-              }}
-              multiline={false}
-              height={inputHeight}
-              bg="transparent"
-              onFocus={handleFocus}
-              forceFocus={forceFocus}
-              onBlur={handleBlur}
-              placeholder={placeholderText}
-              placeholderTextColor={theme.colors.contentTertiary as string}
-              secureTextEntry={passwordVisibility}
-              onChangeText={handleChangeText}
-              value={value}
-              disabled={disabled}
-              editable={!disabled}
-              style={{ fontFamily: theme.fontNames[1] }}
-            />
-            <InputIcon
-              secureTextEntry={secureTextEntry}
-              iconName={iconName}
-              variantIconName={variantIconName}
-              focused={focused}
-              successState={successState}
-              errorState={errorState}
-              passwordVisibilityIcon={passwordVisibilityIcon}
-              handlePasswordVisibility={handlePasswordVisibility}
-            />
-          </Box>
-        </Pressable>
+        <Box
+          flexDirection="row"
+          alignItems="center"
+          borderWidth={1}
+          borderRadius="normal"
+          borderColor={borderColor}
+          backgroundColor={disabled ? 'tertiaryColor' : 'white'}
+          px={5}
+          zIndex={0}>
+          <BaseInput
+            {...rest}
+            //@ts-ignore
+            flex={1}
+            ref={innerRef}
+            multiline={false}
+            height={inputHeight}
+            bg="transparent"
+            onFocus={handleFocus}
+            forceFocus={forceFocus}
+            onBlur={handleBlur}
+            placeholder={placeholderText}
+            placeholderTextColor={theme.colors.contentTertiary as string}
+            secureTextEntry={passwordVisibility}
+            onChangeText={handleChangeText}
+            value={value}
+            disabled={disabled}
+            editable={!disabled}
+            style={{ fontFamily: theme.fontNames[1] }}
+          />
+          <InputIcon
+            secureTextEntry={secureTextEntry}
+            iconName={iconName}
+            variantIconName={variantIconName}
+            focused={focused}
+            successState={successState}
+            errorState={errorState}
+            passwordVisibilityIcon={passwordVisibilityIcon}
+            handlePasswordVisibility={handlePasswordVisibility}
+          />
+        </Box>
         <InputHelpText
           helpText={helpText}
           errorState={errorState}

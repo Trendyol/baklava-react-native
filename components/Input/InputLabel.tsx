@@ -1,8 +1,9 @@
 import React from 'react';
-import { Animated } from 'react-native';
+import { Animated, Pressable } from 'react-native';
 import theme from '../../src/theme';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
+import { getLabelColor } from './utils';
 
 export function InputLabel({
   label,
@@ -10,6 +11,7 @@ export function InputLabel({
   placeholder,
   required,
   focused,
+  forceFocus,
   errorState,
   successState,
   animatedViewProps,
@@ -21,6 +23,7 @@ export function InputLabel({
   placeholder: string | null | undefined;
   required: boolean;
   focused: boolean;
+  forceFocus: () => void;
   errorState: boolean;
   successState: boolean;
   animatedViewProps: Animated.AnimatedProps<any>;
@@ -31,24 +34,22 @@ export function InputLabel({
     return null;
   }
 
-  const contentSecondaryColor = successState
-    ? 'successColor'
-    : errorState
-    ? 'dangerColor'
-    : 'contentSecondary';
+  const contentSecondaryColor = getLabelColor({ errorState, successState });
 
   const RenderFixedLabel = () => {
     return (
-      <Box flexDirection="row" mb={2}>
-        <Text variant="subtitle04Medium" color={contentSecondaryColor}>
-          {label}
-        </Text>
-        {!required ? (
-          <Text ml={1} variant="subtitle04Regular" color="contentTertiary">
-            (Optional)
+      <Pressable onPress={forceFocus}>
+        <Box flexDirection="row" mb={2}>
+          <Text variant="subtitle04Medium" color={contentSecondaryColor}>
+            {label}
           </Text>
-        ) : null}
-      </Box>
+          {!required ? (
+            <Text ml={1} variant="subtitle04Regular" color="contentTertiary">
+              (Optional)
+            </Text>
+          ) : null}
+        </Box>
+      </Pressable>
     );
   };
 
@@ -56,11 +57,14 @@ export function InputLabel({
     return (
       <>
         <Animated.View {...animatedViewProps}>
-          <Box flexDirection="row">
-            <Animated.Text {...animatedTextProps}>
-              {label} {!required ? '(Optional)' : ''}
-            </Animated.Text>
-          </Box>
+          <Pressable onPress={forceFocus}>
+            <Box flexDirection="row" height={inputHeight + 6}>
+              <Animated.Text {...animatedTextProps}>
+                {label}
+                {!required ? ' (Optional)' : ''}
+              </Animated.Text>
+            </Box>
+          </Pressable>
         </Animated.View>
         {focused ? (
           <Box

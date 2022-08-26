@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
+import { getHelpText, getTextColor } from './utils';
 
 export function InputHelpText({
   helpText,
@@ -15,39 +16,25 @@ export function InputHelpText({
   successState: boolean;
   successText: string | null | undefined;
 }): JSX.Element | null {
-  if (!helpText) {
+  if (!helpText && !errorText && !successText) {
     return null;
   }
 
-  const textColor = successState
-    ? 'successColor'
-    : errorState
-    ? 'dangerColor'
-    : 'contentTertiary';
+  const textColor = getTextColor({ errorState, successState });
 
-  let content = helpText;
+  const content = getHelpText({
+    helpText,
+    errorText,
+    successText,
+    errorState,
+    successState,
+  });
 
-  if (successState) {
-    if (successText) {
-      content = successText;
-    } else {
-      content = helpText;
-    }
-  }
-
-  if (errorState) {
-    if (errorText) {
-      content = errorText;
-    } else {
-      content = helpText;
-    }
-  }
-
-  return (
+  return content ? (
     <Box mt={2} ml={5}>
       <Text variant="subtitle04Regular" color={textColor}>
         {content}
       </Text>
     </Box>
-  );
+  ) : null;
 }

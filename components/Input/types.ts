@@ -1,6 +1,9 @@
-import { EasingFunction } from 'react-native';
+import { EasingFunction, TextInput } from 'react-native';
 
-export type InputTypeTypes = 'filter' | 'form' | 'table';
+export type TextInputRefType = TextInput;
+
+export type InputRefType =
+  () => React.MutableRefObject<TextInputRefType | null>;
 
 export type InputSizeTypes = 'small' | 'medium' | 'large';
 

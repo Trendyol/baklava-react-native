@@ -4,24 +4,39 @@ import Text from '../Text/Text';
 import Input from './Input';
 import Box from '../Box/Box';
 import Button from '../Button/Button';
+import { InputSizeTypes } from './types';
+import { iconList } from '../Icon/list';
+
+const sizeList = ['small', 'medium', 'large'];
 
 const InputMeta: ComponentMeta<typeof Input> = {
   title: 'Input',
   component: Input,
   argTypes: {
     onPress: { action: 'pressed the button' },
+    size: {
+      options: sizeList,
+      control: { type: 'radios' },
+    },
+    icon: {
+      options: iconList,
+      control: { type: 'select' },
+    },
   },
   args: {
-    size: 'large',
+    size: sizeList[2] as InputSizeTypes,
     label: 'Label',
     placeholder: 'Placeholder Text',
-    labelFixed: true,
+    labelFixed: false,
     required: true,
+    secureTextEntry: false,
     helpText: 'Help Text',
     error: false,
     success: false,
     disabled: false,
-    icon: 'calendar',
+    errorText: 'Error Text',
+    successText: 'Success Text',
+    icon: 'confetti',
   },
 };
 
@@ -29,7 +44,17 @@ export default InputMeta;
 
 type InputStory = ComponentStory<typeof Input>;
 
-export const Basic: InputStory = args => {
+export const Basic: InputStory = args => (
+  <Box px={3}>
+    <Text py={3} variant="subtitle01Bold">
+      Input
+    </Text>
+
+    <Input {...args} />
+  </Box>
+);
+
+export const Cases: InputStory = args => {
   const [state, setState] = useState(args);
 
   return (

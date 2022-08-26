@@ -1,8 +1,8 @@
 import React from 'react';
 import { Pressable } from 'react-native';
-import Box from '../Box/Box';
 import Icon from '../Icon/Icon';
 import { IconNameType } from '../Icon/types';
+import { getIconColor } from './utils';
 
 export function InputIcon({
   secureTextEntry,
@@ -25,37 +25,27 @@ export function InputIcon({
 }): JSX.Element | null {
   if (secureTextEntry) {
     return (
-      <Box px={3}>
-        <Pressable onPress={handlePasswordVisibility}>
-          <Icon
-            name={passwordVisibilityIcon}
-            size="small"
-            color="contentTertiary"
-          />
-        </Pressable>
-      </Box>
+      <Pressable onPress={handlePasswordVisibility}>
+        <Icon
+          name={passwordVisibilityIcon}
+          size="small"
+          color="contentTertiary"
+        />
+      </Pressable>
     );
   }
 
-  const iconColor = focused
-    ? 'primaryColor'
-    : successState
-    ? 'successColor'
-    : errorState
-    ? 'dangerColor'
-    : 'contentTertiary';
+  const iconColor = getIconColor({ focused, errorState, successState });
 
   if (!iconName && !variantIconName) {
     return null;
   }
 
   return (
-    <Box pl={3}>
-      <Icon
-        name={(variantIconName as IconNameType) ?? iconName}
-        size="small"
-        color={iconColor}
-      />
-    </Box>
+    <Icon
+      name={(variantIconName as IconNameType) ?? iconName}
+      size="small"
+      color={iconColor}
+    />
   );
 }
