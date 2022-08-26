@@ -51,6 +51,7 @@
     "@types/styled-system": "5.1.12",
     "@typescript-eslint/eslint-plugin": "^5.7.0",
     "@typescript-eslint/parser": "^5.7.0",
+    "@welldone-software/why-did-you-render": "^7.0.1",
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.5",
     "eslint": "^7.14.0",
