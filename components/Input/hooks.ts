@@ -1,12 +1,8 @@
-import { useRef, useState } from 'react';
+import { useCallback, useMemo, useRef, useState } from 'react';
 import { Animated, EasingFunction } from 'react-native';
 import { theme } from '../../src';
 import { IconNameType } from '../Icon/types';
-import {
-  InputRefType,
-  CommonAnimatedPropsTypes,
-  LabelStylePropTypes,
-} from './types';
+import { InputRefType, CommonAnimatedPropsTypes } from './types';
 import { getHelpText } from './utils';
 
 export const useInputRef: InputRefType = () => useRef(null);
@@ -34,20 +30,22 @@ export const useInputValue = ({
 export const useTogglePasswordVisibility = (secureTextEntry: boolean) => {
   const [passwordVisibility, setPasswordVisibility] = useState(secureTextEntry);
   const [passwordVisibilityIcon, setPasswordVisibilityIcon] =
-    useState<IconNameType>('eye-off');
+    useState<IconNameType>('eye-on');
 
-  const handlePasswordVisibility = () => {
-    if (passwordVisibilityIcon === 'eye-on') {
-      setPasswordVisibilityIcon('eye-off');
-      setPasswordVisibility(!passwordVisibility);
-    } else if (passwordVisibilityIcon === 'eye-off') {
-      setPasswordVisibilityIcon('eye-on');
-      setPasswordVisibility(!passwordVisibility);
-    }
-  };
+  const handlePasswordVisibility = useCallback(() => {
+    setPasswordVisibility(prev => {
+      if (prev) {
+        setPasswordVisibilityIcon('eye-off');
+      } else {
+        setPasswordVisibilityIcon('eye-on');
+      }
+      return !prev;
+    });
+  }, []);
 
   return {
     passwordVisibility,
+    setPasswordVisibility,
     passwordVisibilityIcon,
     handlePasswordVisibility,
   };
@@ -136,21 +134,6 @@ export const useOutlineLabelVisibility = ({
     ]).start();
   };
 
-  const LabelStyle = ({
-    isFocused,
-    initialTopValue: topValue,
-    activeLabelColor,
-    passiveLabelColor,
-  }: LabelStylePropTypes) => ({
-    fontFamily: theme.fontNames[1],
-    color: isFocused ? activeLabelColor : passiveLabelColor,
-    backgroundColor: disabled ? 'transparent' : 'white',
-    height: lineHeightRef,
-    paddingLeft: theme.space[2],
-    paddingRight: theme.space[2],
-    top: topValue - 4,
-  });
-
   let viewHeight = inputHeight + 6;
   const helpTextContent = getHelpText({
     helpText,
@@ -164,30 +147,35 @@ export const useOutlineLabelVisibility = ({
     viewHeight = inputHeight + 24;
   }
 
-  const animatedViewProps = {
-    style: {
-      position: 'absolute',
-      bottom: labelPositionRef,
-      left: theme.space[4],
-      zIndex: 2,
-      height: viewHeight,
-    },
-  };
+  const animatedViewProps = useMemo(() => {
+    return {
+      style: {
+        position: 'absolute',
+        bottom: labelPositionRef,
+        left: theme.space[4],
+        zIndex: 2,
+        height: viewHeight,
+      },
+    };
+  }, [labelPositionRef, viewHeight]);
 
-  const animatedTextProps = {
-    style: [
-      LabelStyle({
-        isFocused: focused,
-        initialTopValue,
-        activeLabelColor: theme.colors.contentSecondary as string,
-        passiveLabelColor: theme.colors.contentTertiary as string,
-      }),
-      {
+  const animatedTextProps = useMemo(() => {
+    return {
+      style: {
+        fontFamily: theme.fontNames[1],
+        color: focused
+          ? theme.colors.contentSecondary
+          : theme.colors.contentTertiary,
+        backgroundColor: disabled ? 'transparent' : 'white',
+        height: lineHeightRef,
+        paddingLeft: theme.space[2],
+        paddingRight: theme.space[2],
+        top: initialTopValue - 4,
         fontSize: fontSizeRef,
         lineHeight: lineHeightRef,
       },
-    ],
-  };
+    };
+  }, [disabled, focused, fontSizeRef, initialTopValue, lineHeightRef]);
 
   return {
     startAnimation,

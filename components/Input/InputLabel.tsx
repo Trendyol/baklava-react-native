@@ -1,44 +1,42 @@
 import React from 'react';
-import { Animated, Pressable } from 'react-native';
+import { Animated } from 'react-native';
 import theme from '../../src/theme';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
 import { getLabelColor } from './utils';
 
-export function InputLabel({
-  label,
-  labelFixed,
-  placeholder,
-  required,
-  focused,
-  forceFocus,
-  errorState,
-  successState,
-  animatedViewProps,
-  animatedTextProps,
-  inputHeight,
-}: {
-  label: string | null | undefined;
-  labelFixed: boolean | undefined;
-  placeholder: string | null | undefined;
-  required: boolean;
-  focused: boolean;
-  forceFocus: () => void;
-  errorState: boolean;
-  successState: boolean;
-  animatedViewProps: Animated.AnimatedProps<any>;
-  animatedTextProps: Animated.AnimatedProps<any>;
-  inputHeight: number;
-}) {
-  if (!label) {
-    return null;
-  }
+export const InputLabel = React.memo(
+  ({
+    label,
+    labelFixed,
+    placeholder,
+    required,
+    focused,
+    errorState,
+    successState,
+    animatedViewProps,
+    animatedTextProps,
+    inputHeight,
+  }: {
+    label?: string | null;
+    labelFixed?: boolean;
+    placeholder?: string | null;
+    required: boolean;
+    focused: boolean;
+    errorState: boolean;
+    successState: boolean;
+    animatedViewProps: Animated.AnimatedProps<any>;
+    animatedTextProps: Animated.AnimatedProps<any>;
+    inputHeight: number;
+  }) => {
+    if (!label) {
+      return null;
+    }
 
-  const contentSecondaryColor = getLabelColor({ errorState, successState });
+    const contentSecondaryColor = getLabelColor({ errorState, successState });
 
-  const RenderFixedLabel = () => {
-    return (
-      <Pressable onPress={forceFocus}>
+    const RenderFixedLabel = () => {
+      return (
         <Box flexDirection="row" mb={2}>
           <Text variant="subtitle04Medium" color={contentSecondaryColor}>
             {label}
@@ -49,37 +47,38 @@ export function InputLabel({
             </Text>
           ) : null}
         </Box>
-      </Pressable>
-    );
-  };
+      );
+    };
 
-  const RenderOutlinedLabel = () => {
-    return (
-      <>
-        <Animated.View {...animatedViewProps}>
-          <Pressable onPress={forceFocus}>
+    const RenderOutlinedLabel = () => {
+      return (
+        <>
+          <Animated.View {...animatedViewProps} pointerEvents="none">
             <Box flexDirection="row" height={inputHeight + 6}>
               <Animated.Text {...animatedTextProps}>
                 {label}
                 {!required ? ' (Optional)' : ''}
               </Animated.Text>
             </Box>
-          </Pressable>
-        </Animated.View>
-        {focused ? (
-          <Box
-            position="absolute"
-            zIndex={1}
-            top={inputHeight / 2 + 1}
-            left={theme.space[5]}>
-            <Text variant="subtitle03Regular" color="contentTertiary" pl="1px">
-              {placeholder}
-            </Text>
-          </Box>
-        ) : null}
-      </>
-    );
-  };
+          </Animated.View>
+          {focused ? (
+            <Box
+              position="absolute"
+              zIndex={1}
+              top={inputHeight / 2 + 1}
+              left={theme.space[5]}>
+              <Text
+                variant="subtitle03Regular"
+                color="contentTertiary"
+                pl="1px">
+                {placeholder}
+              </Text>
+            </Box>
+          ) : null}
+        </>
+      );
+    };
 
-  return labelFixed ? <RenderFixedLabel /> : <RenderOutlinedLabel />;
-}
+    return labelFixed ? <RenderFixedLabel /> : <RenderOutlinedLabel />;
+  },
+);

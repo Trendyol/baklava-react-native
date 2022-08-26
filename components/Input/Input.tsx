@@ -27,7 +27,7 @@ const BaseInput = styled(TextInput)`
 
 type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   size?: InputSizeTypes;
-  label?: string | null | undefined;
+  label?: string | null;
   labelFixed?: boolean;
   placeholder?: string;
   helpText?: string | null;
@@ -74,9 +74,6 @@ const Input = forwardRef<TextInputHandles, InputProps>(
     const [focused, setFocused] = React.useState<boolean>(false);
     const [errorState, setErrorState] = React.useState<boolean>(false);
     const [successState, setSuccessState] = React.useState<boolean>(false);
-    const [iconName, setIconName] = React.useState<IconNameType | null>(
-      icon ?? null,
-    );
     const [variantIconName, setVariantIconName] =
       React.useState<IconNameType | null>(null);
 
@@ -105,9 +102,14 @@ const Input = forwardRef<TextInputHandles, InputProps>(
 
     const {
       passwordVisibility,
+      setPasswordVisibility,
       passwordVisibilityIcon,
       handlePasswordVisibility,
     } = useTogglePasswordVisibility(secureTextEntry);
+
+    useEffect(() => {
+      setPasswordVisibility(secureTextEntry);
+    }, [secureTextEntry, setPasswordVisibility]);
 
     const {
       startAnimation,
@@ -129,24 +131,16 @@ const Input = forwardRef<TextInputHandles, InputProps>(
 
     useEffect(() => {
       setErrorState(error);
-      if (!iconName && error) {
-        setVariantIconName('close-fill');
-      }
-    }, [error, iconName]);
-
-    useEffect(() => {
       setSuccessState(success);
-      if (!iconName && success) {
-        setVariantIconName('check-fill');
-      }
-    }, [success, iconName]);
 
-    useEffect(() => {
       if (icon) {
         setVariantIconName(null);
-        setIconName(icon);
+      } else if (error) {
+        setVariantIconName('close-fill');
+      } else if (success) {
+        setVariantIconName('check-fill');
       }
-    }, [icon]);
+    }, [error, success, icon]);
 
     const handleFocus = (args: Object) => {
       if (disabled || !editable) {
@@ -192,22 +186,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       setNativeProps: (args: Object) => innerRef.current?.setNativeProps(args),
       isFocused: () => innerRef.current?.isFocused() || false,
       blur: () => innerRef.current?.blur(),
-      forceFocus: () => innerRef.current?.focus(),
     }));
-
-    const forceFocus = () => {
-      if (disabled) {
-        return;
-      }
-
-      startAnimation();
-
-      setFocused(true);
-      setVariantIconName(null);
-      setErrorState(false);
-      setSuccessState(false);
-      return innerRef.current?.focus();
-    };
 
     return (
       <Box py={3}>
@@ -217,7 +196,6 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           placeholder={placeholderText}
           required={required}
           focused={focused}
-          forceFocus={forceFocus}
           errorState={errorState}
           successState={successState}
           animatedViewProps={animatedViewProps}
@@ -242,7 +220,6 @@ const Input = forwardRef<TextInputHandles, InputProps>(
             height={inputHeight}
             bg="transparent"
             onFocus={handleFocus}
-            forceFocus={forceFocus}
             onBlur={handleBlur}
             placeholder={placeholderText}
             placeholderTextColor={theme.colors.contentTertiary as string}
@@ -255,7 +232,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           />
           <InputIcon
             secureTextEntry={secureTextEntry}
-            iconName={iconName}
+            icon={icon}
             variantIconName={variantIconName}
             focused={focused}
             successState={successState}

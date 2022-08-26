@@ -12,10 +12,3 @@ export type CommonAnimatedPropsTypes = {
   useNativeDriver: boolean;
   easing: EasingFunction;
 };
-
-export type LabelStylePropTypes = {
-  isFocused: boolean;
-  initialTopValue: number;
-  activeLabelColor: string;
-  passiveLabelColor: string;
-};
