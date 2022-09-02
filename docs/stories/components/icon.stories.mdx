@@ -1,0 +1,81 @@
+import { Meta } from '@storybook/addon-docs';
+import IconColors from '../assets/icon/IconColors.png';
+import IconSizes from '../assets/icon/IconSizes.png';
+import IconList1 from '../assets/icon/IconList1.png';
+import IconList2 from '../assets/icon/IconList2.png';
+import IconList3 from '../assets/icon/IconList3.png';
+import IconList4 from '../assets/icon/IconList4.png';
+import IconList5 from '../assets/icon/IconList5.png';
+import IconList6 from '../assets/icon/IconList6.png';
+import IconList7 from '../assets/icon/IconList7.png';
+import IconList8 from '../assets/icon/IconList8.png';
+import IconList9 from '../assets/icon/IconList9.png';
+import IconList10 from '../assets/icon/IconList10.png';
+
+<Meta
+  title="Components/Icon"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Icon
+
+Icon component is used to show some decorative icons.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={IconColors} width="300" alt="IconColors" />
+  <img src={IconSizes} width="300" alt="IconSizes" />
+</div>
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={IconList1} width="300" alt="IconList1" />
+  <img src={IconList2} width="300" alt="IconList2" />
+  <img src={IconList3} width="300" alt="IconList3" />
+  <img src={IconList4} width="300" alt="IconList4" />
+  <img src={IconList5} width="300" alt="IconList5" />
+  <img src={IconList6} width="300" alt="IconList6" />
+  <img src={IconList7} width="300" alt="IconList7" />
+  <img src={IconList8} width="300" alt="IconList8" />
+  <img src={IconList9} width="300" alt="IconList9" />
+  <img src={IconList10} width="300" alt="IconList10" />
+</div>
+
+## Usage
+
+```jsx
+<Icon name="confetti" color="primaryColor" size="xlarge" />
+```
+
+<br />
+
+## Props
+
+#### name
+
+Icon names are in the list, fixed and cannot be used outside the list.
+
+#### size
+
+The size of the icon.
+
+`xlarge`,
+`large`,
+`medium`,
+`small`
+`xsmall`
+`2xsmall`

@@ -1,0 +1,88 @@
+import { Meta } from '@storybook/addon-docs';
+import ButtonVariants from '../assets/button/ButtonVariants.png';
+import ButtonTypes from '../assets/button/ButtonTypes.png';
+import ContainedButtons from '../assets/button/ContainedButtons.png';
+import OutlinedButtons from '../assets/button/OutlinedButtons.png';
+import TextButtons from '../assets/button/TextButtons.png';
+import IconButtons from '../assets/button/IconButtons.png';
+import IconOnlyButtons from '../assets/button/IconOnlyButtons.png';
+import ButtonSizes from '../assets/button/ButtonSizes.png';
+
+<Meta
+  title="Components/Button"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Button
+
+A button is component that the user can press to trigger an action.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={ButtonVariants} width="300" alt="ButtonVariants" />
+  <img src={ButtonTypes} width="300" alt="ButtonTypes" />
+  <img src={ButtonSizes} width="300" alt="ButtonSizes" />
+  <img src={ContainedButtons} width="300" alt="ContainedButtons" />
+  <img src={OutlinedButtons} width="300" alt="OutlinedButtons" />
+  <img src={TextButtons} width="300" alt="TextButtons" />
+  <img src={IconButtons} width="300" alt="IconButtons" />
+  <img src={IconOnlyButtons} width="300" alt="IconOnlyButtons" />
+</div>
+
+## Usage
+
+```jsx
+<Button variant="primary" type="outline" size="large" text="Primary Button" />
+```
+
+<br />
+
+## Props
+
+#### variant
+
+The variant of the button style to use.
+
+`primary`,
+`secondary`,
+`success`,
+`danger`,
+`passive`
+
+#### type
+
+The type of the button. To adjust the styling to give it desired emphasis.
+
+`contained`,
+`outline`,
+`text`
+
+#### size
+
+The size of the button.
+
+`large`,
+`medium`,
+`small`
+
+#### style
+
+Type: `StyleProp<PressableStyle>`
+
+<br />
+Button implements: <>
+  <a href="https://reactnative.dev/docs/pressable#props" title="title">
+    ...Pressable props
+  </a>
+</>

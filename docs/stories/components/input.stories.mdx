@@ -1,0 +1,103 @@
+import { Meta } from '@storybook/addon-docs';
+import InputSizes from '../assets/input/InputSizes.png';
+import InputCases from '../assets/input/InputCases.png';
+
+<Meta
+  title="Components/Input"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Input
+
+The Input component allows a user to provide input in a text field.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={InputSizes} width="300" alt="InputSizes" />
+  <img src={InputCases} width="300" alt="InputCases" />
+</div>
+
+## Usage
+
+```jsx
+<Input size="large" placeholder="Large" />
+```
+
+## Props
+
+#### size
+
+The size of the button.
+`large`,
+`medium`,
+`small`
+
+#### label
+
+The text or component to use for the floating label.
+
+#### labelFixed
+
+Boolean value that checks if the label is fixed.
+
+#### placeholder
+
+The string that will be rendered before text input has been entered.
+
+#### helpText
+
+Helper text providing information for the input.
+
+#### errorText
+
+Helper text showing the error in the input.
+
+#### successText
+
+Helper text showing the success in the input.
+
+#### icon
+
+The icon shown in the input.
+
+#### success
+
+Boolean value indicating the success status.
+
+#### error
+
+Boolean value indicating the error status.
+
+#### secureTextEntry
+
+If true, the text input obscures the text entered so that sensitive text like passwords stay secure. The default value is false.
+
+#### required
+
+Boolean value that controls whether the field is required.
+
+#### disabled
+
+If true, user won't be able to interact with the component.
+
+#### style
+
+Type: `StyleProp<TextInputStyle>`
+
+<br />
+Input implements: <>
+  <a href="https://reactnative.dev/docs/textinput#props" title="title">
+    ...TextInput props
+  </a>
+</>

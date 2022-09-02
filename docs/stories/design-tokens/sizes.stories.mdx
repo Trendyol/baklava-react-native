@@ -1,0 +1,117 @@
+import { Meta } from '@storybook/addon-docs';
+import {
+  SizeLine,
+  Header as SizeLineHeader,
+  styles as sizeLineStyle,
+} from './SizeLine';
+import {
+  FontSize,
+  FontWeight,
+  Header as FontHeader,
+  styles as fontStyle,
+} from './Font';
+import { Radius, styles as radiusStyle } from './Radius';
+
+<Meta
+  title="Design System/Sizes"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Sizes
+
+Baklava uses a list of defined size for customizing the global spacing, font sizes, font weights, radius
+
+## Space
+
+```jsx
+const space = [0, 2, 4, 8, 12, 16, 24, 32, 48, 64];
+```
+
+<div style={sizeLineStyle.sizeLineContainer}>
+  <SizeLineHeader />
+  <SizeLine value="0" pixels="0" />
+  <SizeLine value="1" pixels="2" />
+  <SizeLine value="2" pixels="4" />
+  <SizeLine value="3" pixels="8" />
+  <SizeLine value="4" pixels="12" />
+  <SizeLine value="5" pixels="16" />
+  <SizeLine value="6" pixels="24" />
+  <SizeLine value="7" pixels="32" />
+  <SizeLine value="8" pixels="48" />
+  <SizeLine value="9" pixels="64" />
+</div>
+
+### Usage
+
+```jsx
+<Box />
+```
+
+## Font Sizes and Weights
+
+```jsx
+export const fontSizes = [12, 14, 16, 20, 24, 28, 32];
+export const fontWeights = ['300', '400', '500', '600', '700'];
+```
+
+<div style={fontStyle.fontContainer}>
+<div style={fontStyle.fontSubContainer}>
+  <FontHeader text="Font Size" />
+  <FontSize fontSize={12} />
+  <FontSize fontSize={14} />
+  <FontSize fontSize={16} />
+  <FontSize fontSize={20} />
+  <FontSize fontSize={24} />
+  <FontSize fontSize={28} />
+  <FontSize fontSize={32} />
+</div>
+
+<div style={fontStyle.fontSubContainer}>
+  <FontHeader text="Font Weight" />
+  <FontWeight fontWeight="300" />
+  <FontWeight fontWeight="400" />
+  <FontWeight fontWeight="500"/>
+  <FontWeight fontWeight="600" />
+  <FontWeight fontWeight="700" />
+</div>
+</div>
+
+### Usage
+
+```jsx
+<Text fontSize={fontSizes[3]} fontWeight={fontWeight[1]} />
+```
+
+## Radius
+
+```jsx
+export const radii = {
+  none: 0,
+  small: 4,
+  normal: 6,
+  large: 8,
+  xlarge: 16,
+};
+```
+
+<div style={fontStyle.fontSubContainer}>
+  <FontHeader text="Radius" />
+  <Radius radius={0} value="none" />
+  <Radius radius={4} value="small" />
+  <Radius radius={6} value="normal" />
+  <Radius radius={8} value="large" />
+  <Radius radius={16} value="xlarge" />
+</div>
+
+### Usage
+
+```jsx
+<Box borderRadius="small" />
+```
