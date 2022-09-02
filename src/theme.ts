@@ -28,7 +28,7 @@ export const radii = {
   xlarge: 16,
 };
 
-export const colors: { [key: string]: string | string[] } = {
+export const colors: { [key: string]: string } = {
   white: '#ffffff',
   black: '#000000',
   transparent: 'transparent',
@@ -67,9 +67,6 @@ export const colors: { [key: string]: string | string[] } = {
   contentSecondary: '#6E7787',
   contentTertiary: '#95A1B5',
   contentPassive: '#AFBBCA',
-  // Gradient
-  gradientPurple: ['#8C4EFF', '#5794FF'],
-  gradientOrange: ['#FFA964', '#F27A1A'],
 };
 
 export const textStyle = {

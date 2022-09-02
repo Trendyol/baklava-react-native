@@ -12,6 +12,7 @@
     "start": "react-native start",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:watch:cov": "jest --watch --coverage",
     "test:cov": "jest --coverage",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prestart": "sbn-get-stories",

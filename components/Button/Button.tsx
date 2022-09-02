@@ -74,13 +74,11 @@ const Button = ({
     small: 'subtitle03Medium',
   }[size] as TextVariantTypes;
 
-  const typeColor = (
-    disabled
-      ? theme.colors.contentPassive
-      : isPressed && type !== 'text'
-      ? theme.colors.white
-      : buttonTypes[type].color
-  ) as string;
+  const typeColor = disabled
+    ? theme.colors.contentPassive
+    : isPressed && type !== 'text'
+    ? theme.colors.white
+    : buttonTypes[type].color;
 
   const textStyle = type === 'text' && !disabled ? styles.underlineText : {};
 

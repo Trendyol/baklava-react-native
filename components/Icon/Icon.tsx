@@ -8,11 +8,13 @@ const Icon = ({
   name,
   color = 'contentPrimary',
   size = 'large',
+  testID = 'icon',
   ...rest
 }: {
   name: IconNameType;
   size?: IconSizeType;
   color?: string;
+  testID?: string;
 }) => {
   if (!name) {
     return null;
@@ -29,17 +31,19 @@ const Icon = ({
     xlarge: theme.iconSizes[5],
   }[size];
 
-  const iconColor = (theme.colors[`${color}`] as string) ?? color;
+  const iconColor = theme.colors[`${color}`] ?? color;
 
   const TheIcon = icons[iconName as keyof typeof icons];
 
   return (
-    <TheIcon {...rest} fill={iconColor} width={iconSize} height={iconSize} />
+    <TheIcon
+      {...rest}
+      fill={iconColor}
+      width={iconSize}
+      height={iconSize}
+      testID={testID}
+    />
   );
-};
-
-Icon.defaultProps = {
-  testID: 'icon',
 };
 
 export default Icon;

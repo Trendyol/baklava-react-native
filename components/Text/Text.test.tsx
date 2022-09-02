@@ -32,7 +32,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.variant).toBe('heading1');
     expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[6]);
-    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[0]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
