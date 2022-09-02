@@ -8,7 +8,7 @@ export const decorators = [
   withBackgrounds,
   Story => (
     <ThemeProvider theme={theme}>
-      <ScrollView>
+      <ScrollView style={{ backgroundColor: 'white' }}>
         <Story />
       </ScrollView>
     </ThemeProvider>

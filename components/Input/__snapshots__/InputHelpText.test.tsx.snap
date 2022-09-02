@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Help Text should render help text correctly 1`] = `
+<View
+  ml={5}
+  mt={2}
+  style={
+    Array [
+      Object {
+        "marginLeft": 16,
+        "marginTop": 4,
+      },
+    ]
+  }
+  testID="box"
+>
+  <Text
+    color="contentTertiary"
+    style={
+      Array [
+        Object {
+          "color": "#95A1B5",
+          "fontFamily": "Rubik-Regular",
+          "fontSize": 12,
+          "fontWeight": "400",
+          "lineHeight": 14,
+        },
+      ]
+    }
+    variant="subtitle04Regular"
+  >
+    help text
+  </Text>
+</View>
+`;
+
+exports[`Input Help Text should render null when not has help text 1`] = `null`;
+
+exports[`Input Help Text should render null when not has help text, error text and success text 1`] = `null`;
