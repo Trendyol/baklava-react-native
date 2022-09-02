@@ -26,7 +26,9 @@ export const InputIcon = React.memo(
   }): JSX.Element | null => {
     if (secureTextEntry) {
       return (
-        <Pressable onPress={handlePasswordVisibility}>
+        <Pressable
+          testID="password-visibility-button"
+          onPress={handlePasswordVisibility}>
           <Icon
             name={passwordVisibilityIcon}
             size="small"

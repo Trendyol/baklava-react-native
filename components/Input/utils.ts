@@ -6,29 +6,13 @@ export const getPlaceholderText = ({
   value,
   focused,
 }: {
-  label: string | null | undefined;
-  labelFixed: boolean | undefined;
-  placeholder: string | null | undefined;
+  label?: string | null;
+  labelFixed?: boolean;
+  placeholder?: string | null;
   required: boolean;
-  value: string | undefined;
+  value?: string;
   focused: boolean;
 }) => {
-  if (!label && !placeholder) {
-    return '';
-  }
-
-  if (!label && placeholder) {
-    if (required) {
-      return `${placeholder}`;
-    } else {
-      return `${placeholder} (Optional)`;
-    }
-  }
-
-  if (label && !placeholder) {
-    return '';
-  }
-
   if (label && placeholder) {
     if (labelFixed) {
       return placeholder;
@@ -44,6 +28,20 @@ export const getPlaceholderText = ({
       return placeholder;
     }
   }
+
+  if (!label && placeholder) {
+    if (required) {
+      return placeholder;
+    } else {
+      return `${placeholder} (Optional)`;
+    }
+  }
+
+  if (label && !placeholder) {
+    return '';
+  }
+
+  return '';
 };
 
 export const getHelpText = ({
@@ -53,9 +51,9 @@ export const getHelpText = ({
   errorState,
   successState,
 }: {
-  helpText: string | null | undefined;
-  errorText: string | null | undefined;
-  successText: string | null | undefined;
+  helpText?: string | null;
+  errorText?: string | null;
+  successText?: string | null;
   errorState: boolean;
   successState: boolean;
 }): string | null | undefined => {

@@ -3,6 +3,7 @@ import { Animated } from 'react-native';
 import theme from '../../src/theme';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
+import { AnimatedTextPropsType, AnimatedViewPropsType } from './types';
 import { getLabelColor } from './utils';
 
 export const InputLabel = React.memo(
@@ -25,8 +26,8 @@ export const InputLabel = React.memo(
     focused: boolean;
     errorState: boolean;
     successState: boolean;
-    animatedViewProps: Animated.AnimatedProps<any>;
-    animatedTextProps: Animated.AnimatedProps<any>;
+    animatedViewProps: AnimatedViewPropsType;
+    animatedTextProps: AnimatedTextPropsType;
     inputHeight: number;
   }) => {
     if (!label) {
@@ -70,6 +71,7 @@ export const InputLabel = React.memo(
               <Text
                 variant="subtitle03Regular"
                 color="contentTertiary"
+                testID="input-label-placeholder"
                 pl="1px">
                 {placeholder}
               </Text>

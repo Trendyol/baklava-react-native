@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Label should render fixed label correctly 1`] = `
+<View
+  flexDirection="row"
+  mb={2}
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 4,
+      },
+    ]
+  }
+  testID="box"
+>
+  <Text
+    color="contentSecondary"
+    style={
+      Array [
+        Object {
+          "color": "#6E7787",
+          "fontFamily": "Rubik-Medium",
+          "fontSize": 12,
+          "fontWeight": "500",
+          "lineHeight": 14,
+        },
+      ]
+    }
+    variant="subtitle04Medium"
+  >
+    Label
+  </Text>
+</View>
+`;
+
+exports[`Input Label should render fixed label with optional correctly 1`] = `
+<View
+  flexDirection="row"
+  mb={2}
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 4,
+      },
+    ]
+  }
+  testID="box"
+>
+  <Text
+    color="contentSecondary"
+    style={
+      Array [
+        Object {
+          "color": "#6E7787",
+          "fontFamily": "Rubik-Medium",
+          "fontSize": 12,
+          "fontWeight": "500",
+          "lineHeight": 14,
+        },
+      ]
+    }
+    variant="subtitle04Medium"
+  >
+    Label
+  </Text>
+  <Text
+    color="contentTertiary"
+    ml={1}
+    style={
+      Array [
+        Object {
+          "color": "#95A1B5",
+          "fontFamily": "Rubik-Regular",
+          "fontSize": 12,
+          "fontWeight": "400",
+          "lineHeight": 14,
+          "marginLeft": 2,
+        },
+      ]
+    }
+    variant="subtitle04Regular"
+  >
+    (Optional)
+  </Text>
+</View>
+`;
+
+exports[`Input Label should render null when not has a label 1`] = `null`;
+
+exports[`Input Label should render outlined label correctly 1`] = `
+<View
+  collapsable={false}
+  pointerEvents="none"
+  style={Object {}}
+>
+  <View
+    flexDirection="row"
+    height={54}
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+      ]
+    }
+    testID="box"
+  >
+    <Text
+      collapsable={false}
+      style={Object {}}
+    >
+      Label
+      
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Input Label should render outlined label with optional correctly 1`] = `
+<View
+  collapsable={false}
+  pointerEvents="none"
+  style={Object {}}
+>
+  <View
+    flexDirection="row"
+    height={54}
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+        },
+      ]
+    }
+    testID="box"
+  >
+    <Text
+      collapsable={false}
+      style={Object {}}
+    >
+      Label
+       (Optional)
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Input Label should render outlined label with placeholder when focused is true 1`] = `
+Array [
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={Object {}}
+  >
+    <View
+      flexDirection="row"
+      height={54}
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+        ]
+      }
+      testID="box"
+    >
+      <Text
+        collapsable={false}
+        style={Object {}}
+      >
+        Label
+         (Optional)
+      </Text>
+    </View>
+  </View>,
+  <View
+    left={16}
+    position="absolute"
+    style={
+      Array [
+        Object {},
+      ]
+    }
+    testID="box"
+    top={25}
+    zIndex={1}
+  >
+    <Text
+      color="contentTertiary"
+      pl="1px"
+      style={
+        Array [
+          Object {
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "fontWeight": "400",
+            "lineHeight": 16,
+            "paddingLeft": 1,
+          },
+        ]
+      }
+      testID="input-label-placeholder"
+      variant="subtitle03Regular"
+    >
+      Placeholder
+    </Text>
+  </View>,
+]
+`;

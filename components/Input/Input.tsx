@@ -42,9 +42,10 @@ type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   onBlur?: (args: any) => void;
   disabled?: boolean;
   easing?: EasingFunction;
+  testID?: string;
 };
 
-type TextInputHandles = Pick<
+export type TextInputHandles = Pick<
   TextInput,
   'focus' | 'clear' | 'blur' | 'isFocused' | 'setNativeProps'
 >;
@@ -67,6 +68,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       disabled = false,
       editable = true,
       easing = Easing.inOut(Easing.ease),
+      testID = 'input',
       ...rest
     }: InputProps,
     ref,
@@ -157,7 +159,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
     };
 
     const handleBlur = (args: Object) => {
-      if (!editable) {
+      if (disabled || !editable) {
         return;
       }
 
@@ -170,7 +172,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
     };
 
     const handleChangeText = (nextValue: string) => {
-      if (!editable || disabled) {
+      if (disabled || !editable) {
         return;
       }
 
@@ -210,7 +212,9 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           borderColor={borderColor}
           backgroundColor={disabled ? 'tertiaryColor' : 'white'}
           px={5}
-          zIndex={0}>
+          zIndex={0}
+          accessibilityLabel={`${testID}-box`}
+          testID={`${testID}-box`}>
           <BaseInput
             {...rest}
             //@ts-ignore
@@ -222,12 +226,14 @@ const Input = forwardRef<TextInputHandles, InputProps>(
             onFocus={handleFocus}
             onBlur={handleBlur}
             placeholder={placeholderText}
-            placeholderTextColor={theme.colors.contentTertiary as string}
+            placeholderTextColor={theme.colors.contentTertiary}
             secureTextEntry={passwordVisibility}
             onChangeText={handleChangeText}
             value={value}
             disabled={disabled}
             editable={!disabled}
+            accessibilityLabel={testID}
+            testID={testID}
             style={{ fontFamily: theme.fontNames[1] }}
           />
           <InputIcon

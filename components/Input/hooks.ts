@@ -2,7 +2,12 @@ import { useCallback, useMemo, useRef, useState } from 'react';
 import { Animated, EasingFunction } from 'react-native';
 import { theme } from '../../src';
 import { IconNameType } from '../Icon/types';
-import { InputRefType, CommonAnimatedPropsTypes } from './types';
+import {
+  InputRefType,
+  CommonAnimatedPropsTypes,
+  AnimatedViewPropsType,
+  AnimatedTextPropsType,
+} from './types';
 import { getHelpText } from './utils';
 
 export const useInputRef: InputRefType = () => useRef(null);
@@ -11,8 +16,8 @@ export const useInputValue = ({
   value,
   defaultValue,
 }: {
-  value: string | undefined;
-  defaultValue: string | undefined;
+  value?: string;
+  defaultValue?: string;
 }) => {
   const isControlled = value !== undefined;
   const validInputValue = isControlled ? value : defaultValue;
@@ -66,11 +71,11 @@ export const useOutlineLabelVisibility = ({
   easing: EasingFunction;
   inputHeight: number;
   focused: boolean;
-  value: string | undefined;
+  value?: string;
   disabled: boolean;
-  helpText: string | null | undefined;
-  errorText: string | null | undefined;
-  successText: string | null | undefined;
+  helpText?: string | null;
+  errorText?: string | null;
+  successText?: string | null;
   errorState: boolean;
   successState: boolean;
 }) => {
@@ -100,6 +105,7 @@ export const useOutlineLabelVisibility = ({
     new Animated.Value(value ? theme.fontSizes[1] : theme.fontSizes[2]),
   ).current;
 
+  /* istanbul ignore next */
   const startAnimation = () => {
     Animated.parallel([
       Animated.timing(labelPositionRef, {
@@ -117,6 +123,7 @@ export const useOutlineLabelVisibility = ({
     ]).start();
   };
 
+  /* istanbul ignore next */
   const stopAnimation = () => {
     Animated.parallel([
       Animated.timing(labelPositionRef, {
@@ -147,7 +154,7 @@ export const useOutlineLabelVisibility = ({
     viewHeight = inputHeight + 24;
   }
 
-  const animatedViewProps = useMemo(() => {
+  const animatedViewProps: AnimatedViewPropsType = useMemo(() => {
     return {
       style: {
         position: 'absolute',
@@ -159,7 +166,7 @@ export const useOutlineLabelVisibility = ({
     };
   }, [labelPositionRef, viewHeight]);
 
-  const animatedTextProps = useMemo(() => {
+  const animatedTextProps: AnimatedTextPropsType = useMemo(() => {
     return {
       style: {
         fontFamily: theme.fontNames[1],
