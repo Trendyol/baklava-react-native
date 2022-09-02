@@ -14,18 +14,21 @@
     "test:watch": "jest --watch",
     "test:watch:cov": "jest --watch --coverage",
     "test:cov": "jest --coverage",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "npm-run-all -s lint:*",
+    "lint:eslint": "eslint -c .eslintrc.js --ext .ts,.tsx",
+    "lint:tsc": "tsc --noEmit",
+    "lint:prettier": "prettier --check src/",
     "prestart": "sbn-get-stories",
     "sb-watcher": "sbn-watcher",
     "pod": "cd ios; pod install; cd ..;",
     "prepare": "bob build",
-    "svgr": "svgr ./src/svg-icons -d ./src/icons --icon --native --svg-props 'className=' --typescript --svgo-config svgo.config.js --ignore-existing --replace-attr-values '#273142={props?.fill ?? `#273142`}'"
+    "svgr": "svgr ./src/svg-icons -d ./src/icons --icon --native --typescript --svgo-config svgo.config.js --ignore-existing --replace-attr-values '#273142={props?.fill ?? `#273142`}'",
+    "postinstall": "patch-package"
   },
   "dependencies": {
-    "@svgr/cli": "^6.2.1",
     "react": "17.0.2",
     "react-native": "0.67.4",
-    "react-native-svg": "^12.3.0",
+    "react-native-svg": "12.4.4",
     "styled-components": "5.3.0",
     "styled-system": "5.1.5"
   },
@@ -43,6 +46,7 @@
     "@storybook/addon-ondevice-controls": "6.0.1-alpha.3",
     "@storybook/addon-ondevice-notes": "6.0.1-alpha.3",
     "@storybook/react-native": "6.0.1-alpha.3",
+    "@svgr/cli": "6.3.1",
     "@testing-library/jest-native": "4.0.5",
     "@testing-library/react-native": "10.1.1",
     "@types/jest": "^26.0.23",
@@ -56,8 +60,16 @@
     "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.5",
     "eslint": "^7.14.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-storybook": "0.6.4",
+    "husky": "8.0.1",
     "jest": "^26.6.3",
+    "lint-staged": "13.0.3",
     "metro-react-native-babel-preset": "^0.66.2",
+    "npm-run-all": "4.1.5",
+    "patch-package": "6.4.7",
+    "prettier": "2.7.1",
     "react-dom": "^17.0.2",
     "react-native-builder-bob": "^0.18.3",
     "react-test-renderer": "17.0.2",
@@ -97,7 +109,13 @@
     "output": "lib",
     "targets": [
       "commonjs",
-      "module"
+      "module",
+      [
+        "typescript",
+        {
+          "project": "tsconfig.json"
+        }
+      ]
     ],
     "files": [
       "lib/",

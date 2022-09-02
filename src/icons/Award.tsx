@@ -8,7 +8,6 @@ const SvgAward = (props: SvgProps) => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className=""
     {...props}>
     <Path
       d="M13.5 17h-3v5H9a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2h-1.5v-5Z"

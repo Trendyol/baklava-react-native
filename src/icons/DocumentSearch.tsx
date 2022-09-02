@@ -8,7 +8,6 @@ const SvgDocumentSearch = (props: SvgProps) => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className=""
     {...props}>
     <Path
       d="m23.754 22.571-2.832-2.823a6.662 6.662 0 1 0-1.174 1.174l2.823 2.832a.834.834 0 0 0 1.365-.271.834.834 0 0 0-.182-.912Z"

@@ -8,7 +8,6 @@ const SvgLoading = (props: SvgProps) => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className=""
     {...props}>
     <Path
       opacity={0.3}

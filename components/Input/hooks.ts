@@ -89,7 +89,7 @@ export const useOutlineLabelVisibility = ({
   const labelFontSize: number = theme.fontSizes[1];
   const labelLineHeightValue: number = theme.fontSizes[2];
   const initialTopValue: number = (inputHeight - labelLineHeightValue + 2) / 2;
-  const labelPositionEmptyValue: number = 0;
+  const labelPositionEmptyValue = 0;
   const labelPositionFillValue: number =
     labelLineHeightValue / 2 + initialTopValue - 2;
 

@@ -8,7 +8,6 @@ const SvgConfetti = (props: SvgProps) => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className=""
     {...props}>
     <Path
       d="M5.962 7.374a1.508 1.508 0 0 1 2.133-2.132l10.663 10.663a1.508 1.508 0 0 1-2.132 2.133L5.962 7.374Z"

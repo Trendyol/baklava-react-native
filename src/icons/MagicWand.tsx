@@ -8,7 +8,6 @@ const SvgMagicWand = (props: SvgProps) => (
     viewBox="0 0 25 25"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className=""
     {...props}>
     <Path
       fillRule="evenodd"

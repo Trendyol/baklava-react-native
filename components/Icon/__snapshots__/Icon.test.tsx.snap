@@ -5,7 +5,6 @@ exports[`Icon should render icon correctly 1`] = `
   align="xMidYMid"
   bbHeight={24}
   bbWidth={24}
-  className=""
   fill="#273142"
   focusable={false}
   height={24}

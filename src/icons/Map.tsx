@@ -8,7 +8,6 @@ const SvgMap = (props: SvgProps) => (
     viewBox="0 0 24 25"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className=""
     {...props}>
     <Path
       d="M12 0a7 7 0 1 0 0 14.001A7 7 0 0 0 12 0Zm1.634 8.633-4.9 1.634 1.633-4.9 4.9-1.634-1.633 4.9Z"

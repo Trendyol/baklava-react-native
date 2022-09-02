@@ -8,7 +8,6 @@ const SvgProfileCheck = (props: SvgProps) => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className=""
     {...props}>
     <Path
       d="M10.5 12c3.331 0 6-2.67 6-6s-2.669-6-6-6c-3.33 0-6 2.67-6 6s2.67 6 6 6Z"

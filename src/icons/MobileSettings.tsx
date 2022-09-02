@@ -8,7 +8,6 @@ const SvgMobileSettings = (props: SvgProps) => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className=""
     {...props}>
     <Path
       d="M1 3a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v5.021A2.886 2.886 0 0 0 16.66 8h-1.385a2.9 2.9 0 0 0-.775.106V3.5a1 1 0 0 0-1-1h-9a1 1 0 0 0-1 1v17a1 1 0 0 0 1 1h3.961a2.85 2.85 0 0 0 .755 1.307l.977.978a2.9 2.9 0 0 0 .242.215H4a3 3 0 0 1-3-3V3Z"

@@ -6,7 +6,7 @@ import { iconList } from './list';
 
 describe('Icon', () => {
   beforeEach(() => {
-    jest.spyOn(console, 'warn').mockImplementation(() => {});
+    jest.spyOn(console, 'warn').mockImplementation(() => ({}));
   });
 
   test('should render icon correctly', () => {

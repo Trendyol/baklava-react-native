@@ -1,0 +1,13 @@
+diff --git a/node_modules/@testing-library/react-native/build/render.d.ts b/node_modules/@testing-library/react-native/build/render.d.ts
+index b7263db..765e81a 100644
+--- a/node_modules/@testing-library/react-native/build/render.d.ts
++++ b/node_modules/@testing-library/react-native/build/render.d.ts
+@@ -129,7 +129,7 @@ export default function render<T>(component: React.ReactElement<T>, { wrapper: W
+     findByText: import("./queries/makeQueries").FindByQuery<import("./matches").TextMatch, import("./queries/text").TextMatchOptions>;
+     findAllByText: import("./queries/makeQueries").FindAllByQuery<import("./matches").TextMatch, import("./queries/text").TextMatchOptions>;
+ };
+-interface DebugFunction {
++export interface DebugFunction {
+     (message?: string): void;
+     shallow: (message?: string) => void;
+ }

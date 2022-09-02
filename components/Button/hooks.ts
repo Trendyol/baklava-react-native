@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const useIsPressed = (state: boolean = false) => {
+export const useIsPressed = (state = false) => {
   const [isPressed, setIsPressed] = React.useState<boolean>(state);
 
   return {

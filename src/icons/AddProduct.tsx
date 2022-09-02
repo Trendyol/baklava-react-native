@@ -8,7 +8,6 @@ const SvgAddProduct = (props: SvgProps) => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className=""
     {...props}>
     <Path
       d="M13 7h11l-2.763-5.372A3 3 0 0 0 18.57 0H13v7ZM11 7V0H5.43a3 3 0 0 0-2.667 1.628L0 7h11ZM0 9h24v3.288A8.5 8.5 0 0 0 12.288 24H3a3 3 0 0 1-3-3V9Z"

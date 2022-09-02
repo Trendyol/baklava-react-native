@@ -1,5 +1,11 @@
 import React, { forwardRef, useEffect } from 'react';
-import { Easing, EasingFunction, TextInput } from 'react-native';
+import {
+  Easing,
+  EasingFunction,
+  NativeSyntheticEvent,
+  TextInput,
+  TextInputFocusEventData,
+} from 'react-native';
 import styled from 'styled-components/native';
 import { color, flexbox, space, borderRadius, position } from 'styled-system';
 import theme from '../../src/theme';
@@ -144,7 +150,9 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       }
     }, [error, success, icon]);
 
-    const handleFocus = (args: Object) => {
+    const handleFocus = (
+      args: NativeSyntheticEvent<TextInputFocusEventData>,
+    ) => {
       if (disabled || !editable) {
         return;
       }
@@ -158,7 +166,9 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       rest.onFocus?.(args);
     };
 
-    const handleBlur = (args: Object) => {
+    const handleBlur = (
+      args: NativeSyntheticEvent<TextInputFocusEventData>,
+    ) => {
       if (disabled || !editable) {
         return;
       }
@@ -185,7 +195,8 @@ const Input = forwardRef<TextInputHandles, InputProps>(
     React.useImperativeHandle(ref, () => ({
       focus: () => innerRef.current?.focus(),
       clear: () => innerRef.current?.clear(),
-      setNativeProps: (args: Object) => innerRef.current?.setNativeProps(args),
+      setNativeProps: (args: Record<string, unknown>) =>
+        innerRef.current?.setNativeProps(args),
       isFocused: () => innerRef.current?.isFocused() || false,
       blur: () => innerRef.current?.blur(),
     }));

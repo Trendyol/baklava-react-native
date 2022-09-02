@@ -8,7 +8,6 @@ const SvgShare = (props: SvgProps) => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className=""
     {...props}>
     <Path
       d="M19 12v9H5v-9h1a1.5 1.5 0 0 0 0-3H5a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3h-1a1.5 1.5 0 0 0 0 3h1Z"
