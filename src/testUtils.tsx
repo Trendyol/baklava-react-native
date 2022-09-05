@@ -13,7 +13,7 @@ const AllProviders = ({ children }: { children?: React.ReactNode }) => (
 );
 
 const customRender = (ui: React.ReactElement, options?: RenderOptions) =>
-  render(ui, { wrapper: AllProviders, ...options });
+  render(ui, { wrapper: AllProviders, ...options }) as any;
 
 export * from '@testing-library/react-native';
 
