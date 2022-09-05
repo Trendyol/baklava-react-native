@@ -2,7 +2,6 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import Button from './Button';
 import Box from '../Box/Box';
-import InfoIco from '../../src/icons/Info';
 import Text from '../Text/Text';
 import { ButtonSizeTypes, ButtonTypeTypes, ButtonVariantTypes } from './types';
 
