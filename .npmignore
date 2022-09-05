@@ -5,3 +5,8 @@ docs/
 *.mdx
 *.test.ts
 *.test.tsx
+ios/
+android/
+src/svg-icons/
+coverage/
+__mocks__/

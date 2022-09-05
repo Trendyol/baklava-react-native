@@ -38,13 +38,9 @@
     "sb-watcher": "sbn-watcher",
     "pod": "cd ios; pod install; cd ..;",
     "prepare": "bob build && husky install",
-    "svgr": "svgr ./src/svg-icons -d ./src/icons --icon --native --typescript --svgo-config svgo.config.js --ignore-existing --replace-attr-values '#273142={props?.fill ?? `#273142`}'",
-    "postinstall": "patch-package"
+    "svgr": "svgr ./src/svg-icons -d ./src/icons --icon --native --typescript --svgo-config svgo.config.js --ignore-existing --replace-attr-values '#273142={props?.fill ?? `#273142`}'"
   },
   "dependencies": {
-    "react": "17.0.2",
-    "react-native": "0.67.4",
-    "react-native-svg": "12.4.4",
     "styled-components": "5.3.0",
     "styled-system": "5.1.5"
   },
@@ -93,12 +89,19 @@
     "lint-staged": "13.0.3",
     "metro-react-native-babel-preset": "^0.66.2",
     "npm-run-all": "4.1.5",
-    "patch-package": "6.4.7",
     "prettier": "2.7.1",
+    "react": "17.0.2",
     "react-dom": "^17.0.2",
+    "react-native": "0.67.4",
+    "react-native-svg": "13.1.0",
     "react-native-builder-bob": "^0.18.3",
     "react-test-renderer": "17.0.2",
     "typescript": "^4.4.4"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-svg": "*"
   },
   "resolutions": {
     "@types/react": "^17"
