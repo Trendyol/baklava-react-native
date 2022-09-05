@@ -18,6 +18,7 @@
     "lint:eslint": "eslint -c .eslintrc.js --ext .ts,.tsx",
     "lint:tsc": "tsc --noEmit",
     "lint:prettier": "prettier --check src/",
+    "format": "eslint -c .eslintrc.js --fix && prettier --write .",
     "build-storybook-docs": "build-storybook -c docs/.storybook --docs",
     "deploy-storybook": "storybook-to-ghpages --ci --source-branch=main --host-token-env-variable=GITHUB_TOKEN",
     "prestart": "sbn-get-stories",

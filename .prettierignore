@@ -1,0 +1,9 @@
+lib/
+storybook-static/
+react-native-svg.d.ts
+*.md
+.history/
+package-lock.json
+docs/
+*.stories.mdx
+.github/
