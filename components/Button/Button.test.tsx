@@ -2,7 +2,6 @@ import React from 'react';
 import { theme } from '../../src';
 import { fireEvent, render } from '../../src/testUtils';
 import Button from '../Button/Button';
-import Check from '../../src/icons/Check';
 import { ReactTestInstance } from 'react-test-renderer';
 
 describe('Button', () => {
@@ -56,7 +55,7 @@ describe('Button', () => {
   test('should render icon correctly', () => {
     // when
     const { getByTestId } = render(
-      <Button testID="button" size="large" text="test" icon={Check} />,
+      <Button testID="button" size="large" text="test" icon="check" />,
     );
     const buttonIcon = getByTestId('button-icon');
 
