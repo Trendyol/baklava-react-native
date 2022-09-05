@@ -30,7 +30,7 @@ const BaseInput = styled(TextInput)`
   ${position}
   ${borderRadius}
 `;
-
+// @ts-ignore
 type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   size?: InputSizeTypes;
   label?: string | null;
@@ -49,6 +49,10 @@ type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
   disabled?: boolean;
   easing?: EasingFunction;
   testID?: string;
+  editable?: boolean;
+  value?: string;
+  defaultValue?: string;
+  onChangeText?: (text: string) => void;
 };
 
 export type TextInputHandles = Pick<
