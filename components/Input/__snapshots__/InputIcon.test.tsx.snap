@@ -18,8 +18,8 @@ exports[`Input Icon should render eye icon when secureTextEntry true 1`] = `
 >
   <RNSVGSvgView
     align="xMidYMid"
-    bbHeight={16}
-    bbWidth={16}
+    bbHeight="16"
+    bbWidth="16"
     fill="#95A1B5"
     focusable={false}
     height={16}
@@ -46,7 +46,12 @@ exports[`Input Icon should render eye icon when secureTextEntry true 1`] = `
     xmlns="http://www.w3.org/2000/svg"
   >
     <RNSVGGroup
-      fill={4287996341}
+      fill={
+        Object {
+          "type": 0,
+          "value": 4287996341,
+        }
+      }
       propList={
         Array [
           "fill",
@@ -55,7 +60,12 @@ exports[`Input Icon should render eye icon when secureTextEntry true 1`] = `
     >
       <RNSVGPath
         d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"
-        fill={4287996341}
+        fill={
+          Object {
+            "type": 0,
+            "value": 4287996341,
+          }
+        }
         propList={
           Array [
             "fill",
@@ -65,7 +75,12 @@ exports[`Input Icon should render eye icon when secureTextEntry true 1`] = `
       <RNSVGPath
         clipRule={0}
         d="M12 20c4.905 0 8.593-2.94 11.574-6.754a2.036 2.036 0 0 0 0-2.492C20.593 6.94 16.904 4 12 4 7.095 4 3.407 6.94.426 10.754a2.036 2.036 0 0 0 0 2.492C3.407 17.06 7.096 20 12 20Zm-5-8a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
-        fill={4287996341}
+        fill={
+          Object {
+            "type": 0,
+            "value": 4287996341,
+          }
+        }
         fillRule={0}
         propList={
           Array [
@@ -82,8 +97,8 @@ exports[`Input Icon should render eye icon when secureTextEntry true 1`] = `
 exports[`Input Icon should render icon correctly 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
-  bbHeight={16}
-  bbWidth={16}
+  bbHeight="16"
+  bbWidth="16"
   fill="#95A1B5"
   focusable={false}
   height={16}
@@ -110,7 +125,12 @@ exports[`Input Icon should render icon correctly 1`] = `
   xmlns="http://www.w3.org/2000/svg"
 >
   <RNSVGGroup
-    fill={4287996341}
+    fill={
+      Object {
+        "type": 0,
+        "value": 4287996341,
+      }
+    }
     propList={
       Array [
         "fill",
@@ -119,7 +139,12 @@ exports[`Input Icon should render icon correctly 1`] = `
   >
     <RNSVGPath
       d="M12 0a12 12 0 1 0 0 24 12 12 0 0 0 0-24Zm0 19.2a1.2 1.2 0 1 1 0-2.401 1.2 1.2 0 0 1 0 2.401Zm1.2-6.192V14.4a1.2 1.2 0 1 1-2.4 0V12a1.2 1.2 0 0 1 1.2-1.2A1.8 1.8 0 1 0 10.2 9a1.2 1.2 0 1 1-2.4 0 4.2 4.2 0 1 1 5.4 4.008Z"
-      fill={4287996341}
+      fill={
+        Object {
+          "type": 0,
+          "value": 4287996341,
+        }
+      }
       propList={
         Array [
           "fill",
