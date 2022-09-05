@@ -13,6 +13,10 @@
     "name": "Trendyol Tech",
     "url": "https://github.com/Trendyol"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trendyol/baklava-react-native.git"
+  },
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
@@ -27,6 +31,7 @@
     "lint:tsc": "tsc --noEmit",
     "lint:prettier": "prettier --check src/",
     "format": "eslint -c .eslintrc.js --fix && prettier --write .",
+    "commit": "commit",
     "build-storybook-docs": "build-storybook -c docs/.storybook --docs",
     "build": "bob build",
     "prestart": "sbn-get-stories",
@@ -46,6 +51,9 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
+    "@commitlint/cli": "17.1.2",
+    "@commitlint/config-conventional": "17.1.0",
+    "@commitlint/prompt-cli": "17.1.2",
     "@react-native-async-storage/async-storage": "1.17.7",
     "@react-native-community/datetimepicker": "3.5.2",
     "@react-native-community/eslint-config": "^2.0.0",
