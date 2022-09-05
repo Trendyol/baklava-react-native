@@ -12,11 +12,11 @@ React native implementation of the design system is created as native components
   <img width="250" alt="TextHeading" src="https://user-images.githubusercontent.com/63308712/180721549-b39ff0e3-e583-4dbe-b762-1b0abeb29cd1.png">
 </div>
 
-<br> 
+<br>
 
 ## Getting Started
 
-Refer to the [getting started guide](http://seller.pages.trendyol.com/mobile-core/docs/baklava-design-system/docs/intro) for instructions.
+Refer to the [getting started guide](https://trendyol.github.io/baklava-react-native/?path=/docs/documentation-welcome--page) for instructions.
 
 ### Run it locally
 
@@ -50,4 +50,4 @@ Refer to the [getting started guide](http://seller.pages.trendyol.com/mobile-cor
 
 ## Documentation
 
-Check the components and their usage in our [documentation](http://seller.pages.trendyol.com/mobile-core/docs/baklava-design-system/docs/theme-provider).
+Check the components and their usage in our [documentation](https://trendyol.github.io/baklava-react-native/?path=/docs/documentation-theme-provider--page).
