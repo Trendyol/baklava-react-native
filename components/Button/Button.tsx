@@ -2,7 +2,6 @@ import React from 'react';
 import { Pressable, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 import { flexbox, color, space } from 'styled-system';
-import { SvgProps } from 'react-native-svg';
 import Text from '../Text/Text';
 import theme, { buttonSize, buttonType } from '../../src/theme';
 import { useIsPressed } from './hooks';
@@ -12,6 +11,8 @@ import type {
   ButtonVariantTypes,
 } from './types';
 import type { TextVariantTypes } from '../Text/types';
+import { IconNameType } from '../Icon/types';
+import Icon from '../Icon/Icon';
 
 const BaseButton = styled(Pressable)`
   ${flexbox}
@@ -48,7 +49,7 @@ const Button = ({
   variant?: ButtonVariantTypes;
   type?: ButtonTypeTypes;
   size?: ButtonSizeTypes;
-  icon?: (props: SvgProps) => JSX.Element;
+  icon?: IconNameType | null;
   text?: string;
   disabled?: boolean;
   filled?: boolean;
@@ -95,12 +96,9 @@ const Button = ({
       alignSelf={filled ? 'stretch' : 'flex-start'}
       disabled={disabled}
       {...rest}>
-      {icon
-        ? React.createElement(icon, {
-            fill: typeColor,
-            testID: 'button-icon',
-          })
-        : null}
+      {icon ? (
+        <Icon name={icon} size="small" color={typeColor} testID="button-icon" />
+      ) : null}
       {text ? (
         <Text
           variant={textVariants}

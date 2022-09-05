@@ -337,21 +337,15 @@ export const IconButtons: ButtonStory = args => (
     {/* @ts-ignore */}
     <Box flexDirection="row" justifyContent="space-around">
       <Box>
-        <Button {...args} variant="primary" text="Save" icon={InfoIco} m={3} />
-        <Button
-          {...args}
-          variant="secondary"
-          text="Save"
-          icon={InfoIco}
-          m={3}
-        />
-        <Button {...args} variant="success" text="Save" icon={InfoIco} m={3} />
-        <Button {...args} variant="danger" text="Save" icon={InfoIco} m={3} />
+        <Button {...args} variant="primary" text="Save" icon="info" m={3} />
+        <Button {...args} variant="secondary" text="Save" icon="info" m={3} />
+        <Button {...args} variant="success" text="Save" icon="info" m={3} />
+        <Button {...args} variant="danger" text="Save" icon="info" m={3} />
         <Button
           {...args}
           variant="passive"
           text="Save"
-          icon={InfoIco}
+          icon="info"
           disabled={true}
           m={3}
         />
@@ -362,7 +356,7 @@ export const IconButtons: ButtonStory = args => (
           variant="primary"
           text="Save"
           type="text"
-          icon={InfoIco}
+          icon="info"
           m={3}
         />
         <Button
@@ -370,7 +364,7 @@ export const IconButtons: ButtonStory = args => (
           variant="secondary"
           text="Save"
           type="text"
-          icon={InfoIco}
+          icon="info"
           m={3}
         />
         <Button
@@ -378,7 +372,7 @@ export const IconButtons: ButtonStory = args => (
           variant="success"
           text="Save"
           type="text"
-          icon={InfoIco}
+          icon="info"
           m={3}
         />
         <Button
@@ -386,7 +380,7 @@ export const IconButtons: ButtonStory = args => (
           variant="danger"
           text="Save"
           type="text"
-          icon={InfoIco}
+          icon="info"
           m={3}
         />
         <Button
@@ -394,7 +388,7 @@ export const IconButtons: ButtonStory = args => (
           variant="passive"
           text="Save"
           type="text"
-          icon={InfoIco}
+          icon="info"
           disabled={true}
           m={3}
         />
@@ -409,15 +403,15 @@ export const IconOnlyButtons: ButtonStory = args => (
       Icon Only Buttons
     </Text>
     <Box>
-      <Button {...args} variant="primary" size="large" icon={InfoIco} m={3} />
-      <Button {...args} variant="secondary" size="large" icon={InfoIco} m={3} />
-      <Button {...args} variant="success" size="large" icon={InfoIco} m={3} />
-      <Button {...args} variant="danger" size="large" icon={InfoIco} m={3} />
+      <Button {...args} variant="primary" size="large" icon="info" m={3} />
+      <Button {...args} variant="secondary" size="large" icon="info" m={3} />
+      <Button {...args} variant="success" size="large" icon="info" m={3} />
+      <Button {...args} variant="danger" size="large" icon="info" m={3} />
       <Button
         {...args}
         variant="passive"
         size="large"
-        icon={InfoIco}
+        icon="info"
         disabled={true}
         m={3}
       />
