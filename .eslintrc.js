@@ -13,5 +13,11 @@ module.exports = {
       plugins: ['@typescript-eslint'],
     },
   ],
-  ignorePatterns: ['lib/**', 'storybook-static/**', 'node_modules/**'],
+  ignorePatterns: [
+    'lib/**',
+    'storybook-static/**',
+    'ios/**',
+    'android/**',
+    'node_modules/**',
+  ],
 };

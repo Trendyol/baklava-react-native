@@ -4,3 +4,6 @@ lib/*
 .history/
 storybook-static/
 .github/
+ios/
+android/
+coverage/

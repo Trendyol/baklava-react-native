@@ -7,3 +7,6 @@ package-lock.json
 docs/
 *.stories.mdx
 .github/
+ios/
+android/
+coverage/
