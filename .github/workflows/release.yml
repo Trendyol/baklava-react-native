@@ -30,5 +30,5 @@ jobs:
       - name: Publish
         run: npx semantic-release
         env:
-          TRENDYOL_JS_NPM_TOKEN: ${{ secrets.TRENDYOL_JS_NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.TRENDYOL_JS_NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
