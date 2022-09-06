@@ -1,9 +1,4 @@
-export type ButtonVariantTypes =
-  | 'primary'
-  | 'secondary'
-  | 'success'
-  | 'danger'
-  | 'passive';
+export type ButtonVariantTypes = 'primary' | 'secondary' | 'success' | 'danger';
 
 export type ButtonTypeTypes = 'contained' | 'outline' | 'text';
 

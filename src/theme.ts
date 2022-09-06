@@ -28,7 +28,7 @@ export const radii = {
   xlarge: 16,
 };
 
-export const colors: { [key: string]: string } = {
+export const colors = {
   white: '#ffffff',
   black: '#000000',
   transparent: 'transparent',
@@ -272,11 +272,6 @@ export const buttonStyles = {
       backgroundColor: colors.dangerColor,
       ...buttonCommon,
     },
-    passive: {
-      color: colors.contentPassive,
-      backgroundColor: colors.tertiaryColor,
-      ...buttonCommon,
-    },
   },
   type: (props: {
     variant: ButtonVariantTypes;
@@ -284,15 +279,20 @@ export const buttonStyles = {
     disabled: boolean;
     type: ButtonTypeTypes;
   }) => {
-    const variantColor =
-      colors[`${props.variant}Color`] ?? colors.primaryBackground;
+    const variantColor = props.disabled
+      ? colors.tertiaryColor
+      : colors[`${props.variant}Color`] ?? colors.primaryBackground;
     const variantHoverColor =
       colors[`${props.variant}Hover`] ?? colors.primaryBackground;
 
     return {
       contained: {
         color: props.disabled ? colors.secondaryColor : colors.white,
-        backgroundColor: props.isPressed ? variantHoverColor : variantColor,
+        backgroundColor: props.disabled
+          ? colors.tertiaryColor
+          : props.isPressed
+          ? variantHoverColor
+          : variantColor,
         borderWidth: 1,
         borderColor: variantColor,
         ...buttonCommon,

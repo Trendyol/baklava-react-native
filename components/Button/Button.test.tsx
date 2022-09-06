@@ -111,7 +111,7 @@ describe('Button', () => {
     const textComponent = getByTestId('button-text');
 
     // then
-    expect(buttonComponent.props.variant).toBe('passive');
+    expect(buttonComponent.props.accessibilityState.disabled).toBeTruthy();
     expect(textComponent.props.color).toBe(theme.colors.contentPassive);
   });
 
@@ -135,12 +135,7 @@ describe('Button', () => {
   test('should render given underlineText correctly', () => {
     // when
     const { getByTestId } = render(
-      <Button
-        testID="button"
-        text="testtesttest"
-        variant="passive"
-        type="text"
-      />,
+      <Button testID="button" text="testtesttest" type="text" />,
     );
     const textComponent = getByTestId('button-text');
 
@@ -148,10 +143,23 @@ describe('Button', () => {
     expect(textComponent.props.style[1].textDecorationLine).toBe('underline');
   });
 
+  test('should render underline when button disabled', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" text="testtesttest" disabled type="text" />,
+    );
+    const textComponent = getByTestId('button-text');
+
+    // then
+    expect(textComponent.props.style[1].textDecorationLine).not.toBe(
+      'underline',
+    );
+  });
+
   test('should render given filled correctly', () => {
     // when
     const { getByTestId } = render(
-      <Button testID="button" text="testtesttest" variant="passive" filled />,
+      <Button testID="button" text="testtesttest" disabled filled />,
     );
     const buttonComponent = getByTestId('button');
 

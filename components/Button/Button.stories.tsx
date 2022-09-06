@@ -5,7 +5,7 @@ import Box from '../Box/Box';
 import Text from '../Text/Text';
 import { ButtonSizeTypes, ButtonTypeTypes, ButtonVariantTypes } from './types';
 
-const variantList = ['primary', 'secondary', 'success', 'danger', 'passive'];
+const variantList = ['primary', 'secondary', 'success', 'danger'];
 const typeList = ['contained', 'outline', 'text'];
 const sizeList = ['small', 'medium', 'large'];
 
@@ -30,7 +30,8 @@ const ButtonMeta: ComponentMeta<typeof Button> = {
   args: {
     variant: variantList[0] as ButtonVariantTypes,
     type: typeList[0] as ButtonTypeTypes,
-    size: sizeList[1] as ButtonSizeTypes,
+    size: sizeList[2] as ButtonSizeTypes,
+    disabled: false,
   },
 };
 
@@ -48,7 +49,11 @@ export const Basic: ButtonStory = args => (
       variant={args.variant}
       type={args.type}
       size={args.size}
-      text={`${args.variant} ${args.type} ${args.size} button`}
+      text={
+        args.disabled
+          ? `disabled ${args.type} ${args.size} button`
+          : `${args.variant} ${args.type} ${args.size} button`
+      }
       m={3}
     />
   </>
@@ -88,14 +93,6 @@ export const Variants: ButtonStory = args => (
         text="Danger Button"
         m={3}
       />
-      <Button
-        {...args}
-        variant="passive"
-        size="large"
-        text="Passive Button"
-        disabled={true}
-        m={3}
-      />
     </Box>
   </>
 );
@@ -127,6 +124,21 @@ export const Types: ButtonStory = args => (
         size="large"
         type="text"
         text="Text Button"
+        m={3}
+      />
+      <Button
+        {...args}
+        disabled
+        size="large"
+        text="Disabled Contained Button"
+        m={3}
+      />
+      <Button
+        {...args}
+        disabled
+        size="large"
+        type="text"
+        text="Disabled Text Button"
         m={3}
       />
     </Box>
@@ -223,14 +235,6 @@ export const ContainedButtons: ButtonStory = args => (
         text="Danger Button"
         m={3}
       />
-      <Button
-        {...args}
-        variant="passive"
-        size="large"
-        text="Passive Button"
-        disabled={true}
-        m={3}
-      />
     </Box>
   </>
 );
@@ -315,15 +319,6 @@ export const TextButtons: ButtonStory = args => (
         text="Danger Button"
         m={3}
       />
-      <Button
-        {...args}
-        variant="passive"
-        size="large"
-        type="text"
-        text="Passive Button"
-        disabled={true}
-        m={3}
-      />
     </Box>
   </>
 );
@@ -340,14 +335,6 @@ export const IconButtons: ButtonStory = args => (
         <Button {...args} variant="secondary" text="Save" icon="info" m={3} />
         <Button {...args} variant="success" text="Save" icon="info" m={3} />
         <Button {...args} variant="danger" text="Save" icon="info" m={3} />
-        <Button
-          {...args}
-          variant="passive"
-          text="Save"
-          icon="info"
-          disabled={true}
-          m={3}
-        />
       </Box>
       <Box>
         <Button
@@ -382,15 +369,6 @@ export const IconButtons: ButtonStory = args => (
           icon="info"
           m={3}
         />
-        <Button
-          {...args}
-          variant="passive"
-          text="Save"
-          type="text"
-          icon="info"
-          disabled={true}
-          m={3}
-        />
       </Box>
     </Box>
   </>
@@ -406,14 +384,6 @@ export const IconOnlyButtons: ButtonStory = args => (
       <Button {...args} variant="secondary" size="large" icon="info" m={3} />
       <Button {...args} variant="success" size="large" icon="info" m={3} />
       <Button {...args} variant="danger" size="large" icon="info" m={3} />
-      <Button
-        {...args}
-        variant="passive"
-        size="large"
-        icon="info"
-        disabled={true}
-        m={3}
-      />
     </Box>
   </>
 );

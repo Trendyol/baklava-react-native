@@ -88,7 +88,7 @@ const Button = ({
       //@ts-ignore
       type={type}
       size={size}
-      variant={disabled ? 'passive' : variant}
+      variant={variant}
       text={text}
       onPressIn={onPressIn}
       onPressOut={onPressOut}
