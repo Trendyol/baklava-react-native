@@ -1,0 +1,19 @@
+name: 'Verify and Release'
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  verify:
+    uses: ./.github/workflows/verify.yml
+    secrets: inherit
+  publish:
+    uses: ./.github/workflows/publish-docs.yml
+    needs: verify
+    secrets: inherit
+  release:
+    uses: ./.github/workflows/release.yml
+    needs: verify
+    secrets: inherit

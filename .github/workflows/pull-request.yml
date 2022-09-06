@@ -1,0 +1,14 @@
+name: Verify and Preview
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  pull-requests: read
+
+jobs:
+  verify:
+    uses: ./.github/workflows/verify.yml
+    secrets: inherit
