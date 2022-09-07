@@ -47,16 +47,15 @@ exports[`Button should render button correctly 1`] = `
   variant="primary"
 >
   <Text
-    color="#ffffff"
+    color="white"
     marginLeft={0}
     style={
       Array [
         Object {
           "color": "#ffffff",
-          "fontFamily": "Rubik-Medium",
+          "fontFamily": "System",
           "fontSize": 14,
           "fontWeight": "500",
-          "lineHeight": 16,
           "marginLeft": 0,
         },
         Object {},

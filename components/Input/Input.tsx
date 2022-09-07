@@ -6,9 +6,9 @@ import {
   TextInput,
   TextInputFocusEventData,
 } from 'react-native';
-import styled from 'styled-components/native';
+import styled, { useTheme } from 'styled-components/native';
 import { color, flexbox, space, borderRadius, position } from 'styled-system';
-import theme from '../../src/theme';
+import { Theme } from '../../src/theme';
 import Box from '../Box/Box';
 import { InputSizeTypes } from './types';
 import { IconNameType } from '../Icon/types';
@@ -89,6 +89,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
     const [variantIconName, setVariantIconName] =
       React.useState<IconNameType | null>(null);
 
+    const theme = useTheme() as Theme;
     const innerRef = useInputRef();
     const { value, isControlled, setUncontrolledValue } = useInputValue({
       value: rest.value,
@@ -129,6 +130,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       animatedViewProps,
       animatedTextProps,
     } = useOutlineLabelVisibility({
+      theme,
       easing,
       inputHeight,
       focused,
@@ -210,9 +212,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
         <InputLabel
           label={label}
           labelFixed={labelFixed}
-          placeholder={placeholderText}
           required={required}
-          focused={focused}
           errorState={errorState}
           successState={successState}
           animatedViewProps={animatedViewProps}
@@ -249,7 +249,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
             editable={!disabled}
             accessibilityLabel={testID}
             testID={testID}
-            style={{ fontFamily: theme.fontNames[1] }}
+            style={{ fontFamily: theme.fonts[1] }}
           />
           <InputIcon
             secureTextEntry={secureTextEntry}

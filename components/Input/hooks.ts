@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
 import { Animated, EasingFunction } from 'react-native';
-import theme from '../../src/theme';
+import { Theme } from '../../src/theme';
 import { IconNameType } from '../Icon/types';
 import {
   InputRefType,
@@ -57,6 +57,7 @@ export const useTogglePasswordVisibility = (secureTextEntry: boolean) => {
 };
 
 export const useOutlineLabelVisibility = ({
+  theme,
   easing,
   inputHeight,
   focused,
@@ -68,6 +69,7 @@ export const useOutlineLabelVisibility = ({
   errorState,
   successState,
 }: {
+  theme: Theme;
   easing: EasingFunction;
   inputHeight: number;
   focused: boolean;
@@ -164,12 +166,12 @@ export const useOutlineLabelVisibility = ({
         height: viewHeight,
       },
     };
-  }, [labelPositionRef, viewHeight]);
+  }, [labelPositionRef, theme.space, viewHeight]);
 
   const animatedTextProps: AnimatedTextPropsType = useMemo(() => {
     return {
       style: {
-        fontFamily: theme.fontNames[1],
+        fontFamily: theme.fonts[1],
         color: focused
           ? theme.colors.contentSecondary
           : theme.colors.contentTertiary,
@@ -182,7 +184,17 @@ export const useOutlineLabelVisibility = ({
         lineHeight: lineHeightRef,
       },
     };
-  }, [disabled, focused, fontSizeRef, initialTopValue, lineHeightRef]);
+  }, [
+    disabled,
+    focused,
+    fontSizeRef,
+    initialTopValue,
+    lineHeightRef,
+    theme.colors.contentSecondary,
+    theme.colors.contentTertiary,
+    theme.fonts,
+    theme.space,
+  ]);
 
   return {
     startAnimation,

@@ -20,10 +20,9 @@ exports[`Input Help Text should render help text correctly 1`] = `
       Array [
         Object {
           "color": "#95A1B5",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "System",
           "fontSize": 12,
           "fontWeight": "400",
-          "lineHeight": 14,
         },
       ]
     }

@@ -1,4 +1,5 @@
 import { Animated, Easing } from 'react-native';
+import { theme } from '../../src';
 import { act, renderHook } from '../../src/testUtils';
 import {
   useInputRef,
@@ -84,6 +85,7 @@ describe('Input Hooks', () => {
     // when
     const { result } = renderHook(() =>
       useOutlineLabelVisibility({
+        theme,
         easing: Easing.inOut(Easing.ease),
         inputHeight: 48,
         focused: false,
@@ -111,7 +113,7 @@ describe('Input Hooks', () => {
       style: {
         backgroundColor: 'white',
         color: '#95A1B5',
-        fontFamily: 'Rubik-Regular',
+        fontFamily: 'System',
         fontSize: new Animated.Value(12),
         height: new Animated.Value(14),
         lineHeight: new Animated.Value(14),
@@ -126,6 +128,7 @@ describe('Input Hooks', () => {
     // when
     const { result } = renderHook(() =>
       useOutlineLabelVisibility({
+        theme,
         easing: Easing.inOut(Easing.ease),
         inputHeight: 48,
         focused: true,
@@ -153,7 +156,7 @@ describe('Input Hooks', () => {
       style: {
         backgroundColor: 'transparent',
         color: '#6E7787',
-        fontFamily: 'Rubik-Regular',
+        fontFamily: 'System',
         fontSize: new Animated.Value(12),
         height: new Animated.Value(14),
         lineHeight: new Animated.Value(14),
@@ -168,6 +171,7 @@ describe('Input Hooks', () => {
     // when
     const { result } = renderHook(() =>
       useOutlineLabelVisibility({
+        theme,
         easing: Easing.inOut(Easing.ease),
         inputHeight: 48,
         focused: true,
@@ -195,7 +199,7 @@ describe('Input Hooks', () => {
       style: {
         backgroundColor: 'transparent',
         color: '#6E7787',
-        fontFamily: 'Rubik-Regular',
+        fontFamily: 'System',
         fontSize: new Animated.Value(12),
         height: new Animated.Value(14),
         lineHeight: new Animated.Value(14),
@@ -210,6 +214,7 @@ describe('Input Hooks', () => {
     // when
     const { result } = renderHook(() =>
       useOutlineLabelVisibility({
+        theme,
         easing: Easing.inOut(Easing.ease),
         inputHeight: 48,
         focused: false,
@@ -236,7 +241,7 @@ describe('Input Hooks', () => {
       style: {
         backgroundColor: 'white',
         color: '#95A1B5',
-        fontFamily: 'Rubik-Regular',
+        fontFamily: 'System',
         fontSize: new Animated.Value(14),
         height: new Animated.Value(16),
         lineHeight: new Animated.Value(16),

@@ -3,7 +3,7 @@ import { Pressable, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 import { flexbox, color, space } from 'styled-system';
 import Text from '../Text/Text';
-import theme, { buttonSize, buttonType } from '../../src/theme';
+import theme from '../../src/theme';
 import { useIsPressed } from './hooks';
 import type {
   ButtonSizeTypes,
@@ -21,8 +21,8 @@ const BaseButton = styled(Pressable)`
 `;
 
 const StyledButton = styled(BaseButton)`
-  ${buttonSize}
-  ${buttonType}
+  ${theme.buttonSize}
+  ${theme.buttonType}
 `;
 
 const styles = StyleSheet.create({

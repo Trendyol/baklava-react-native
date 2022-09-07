@@ -49,7 +49,7 @@ describe('Button', () => {
     // then
     const textComponent = buttonComponent.children[0] as ReactTestInstance;
     expect(textComponent.props.variant).toBe('subtitle02Medium');
-    expect(textComponent.props.color).toBe(theme.colors.white);
+    expect(textComponent.props.color).toBe('white');
   });
 
   test('should render icon correctly', () => {

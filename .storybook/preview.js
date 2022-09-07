@@ -1,8 +1,18 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds';
-import { ThemeProvider } from 'styled-components/native';
-import { theme } from '../src';
+import { theme as defaultTheme, ThemeProvider } from '../src';
+
+const theme = {
+  ...defaultTheme,
+  fonts: [
+    'Rubik-Light',
+    'Rubik-Regular',
+    'Rubik-Medium',
+    'Rubik-SemiBold',
+    'Rubik-Bold',
+  ],
+};
 
 export const decorators = [
   withBackgrounds,
@@ -14,6 +24,7 @@ export const decorators = [
     </ThemeProvider>
   ),
 ];
+
 export const parameters = {
   backgrounds: [
     { name: 'plain', value: 'white', default: true },

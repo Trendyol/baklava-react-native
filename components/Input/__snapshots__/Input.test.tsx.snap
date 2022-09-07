@@ -44,7 +44,7 @@ exports[`Input should render disabled input correctly 1`] = `
           Object {
             "backgroundColor": "transparent",
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
@@ -108,7 +108,7 @@ exports[`Input should render disabled input correctly 1`] = `
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }
@@ -162,7 +162,7 @@ exports[`Input should render input correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
@@ -226,7 +226,7 @@ exports[`Input should render input correctly 1`] = `
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }
@@ -280,7 +280,7 @@ exports[`Input should render input with error state and error text correctly 1`]
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
@@ -344,7 +344,7 @@ exports[`Input should render input with error state and error text correctly 1`]
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }
@@ -431,10 +431,9 @@ exports[`Input should render input with error state and error text correctly 1`]
         Array [
           Object {
             "color": "#FF5043",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 12,
             "fontWeight": "400",
-            "lineHeight": 14,
           },
         ]
       }
@@ -490,7 +489,7 @@ exports[`Input should render input with error state correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
@@ -554,7 +553,7 @@ exports[`Input should render input with error state correctly 1`] = `
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }
@@ -669,7 +668,7 @@ exports[`Input should render input with help text correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
@@ -733,7 +732,7 @@ exports[`Input should render input with help text correctly 1`] = `
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }
@@ -759,10 +758,9 @@ exports[`Input should render input with help text correctly 1`] = `
         Array [
           Object {
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 12,
             "fontWeight": "400",
-            "lineHeight": 14,
           },
         ]
       }
@@ -818,7 +816,7 @@ exports[`Input should render input with icon correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
@@ -882,7 +880,7 @@ exports[`Input should render input with icon correctly 1`] = `
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }
@@ -1025,7 +1023,7 @@ exports[`Input should render input with medium size correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
@@ -1089,7 +1087,7 @@ exports[`Input should render input with medium size correctly 1`] = `
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }
@@ -1143,7 +1141,7 @@ exports[`Input should render input with small size correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
@@ -1207,7 +1205,7 @@ exports[`Input should render input with small size correctly 1`] = `
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }
@@ -1261,7 +1259,7 @@ exports[`Input should render input with success state and success text correctly
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
@@ -1325,7 +1323,7 @@ exports[`Input should render input with success state and success text correctly
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }
@@ -1412,10 +1410,9 @@ exports[`Input should render input with success state and success text correctly
         Array [
           Object {
             "color": "#0BC15C",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 12,
             "fontWeight": "400",
-            "lineHeight": 14,
           },
         ]
       }
@@ -1471,7 +1468,7 @@ exports[`Input should render input with success state correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
@@ -1535,7 +1532,7 @@ exports[`Input should render input with success state correctly 1`] = `
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }
@@ -1638,10 +1635,9 @@ exports[`Input should render label fixed input correctly 1`] = `
         Array [
           Object {
             "color": "#6E7787",
-            "fontFamily": "Rubik-Medium",
+            "fontFamily": "System",
             "fontSize": 12,
             "fontWeight": "500",
-            "lineHeight": 14,
           },
         ]
       }
@@ -1656,10 +1652,9 @@ exports[`Input should render label fixed input correctly 1`] = `
         Array [
           Object {
             "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
             "fontSize": 12,
             "fontWeight": "400",
-            "lineHeight": 14,
             "marginLeft": 2,
           },
         ]
@@ -1718,7 +1713,7 @@ exports[`Input should render label fixed input correctly 1`] = `
             "flexShrink": 1,
           },
           Object {
-            "fontFamily": "Rubik-Regular",
+            "fontFamily": "System",
           },
         ]
       }

@@ -1,6 +1,7 @@
 import React from 'react';
+import { useTheme } from 'styled-components/native';
 import * as icons from '../../src/icons';
-import theme from '../../src/theme';
+import { Theme } from '../../src/theme';
 import { IconNameType, IconSizeType } from './types';
 import { toPascalCase } from './utils';
 
@@ -13,9 +14,11 @@ const Icon = ({
 }: {
   name: IconNameType;
   size?: IconSizeType;
-  color?: string;
+  color?: keyof Theme['colors'] | string;
   testID?: string;
 }) => {
+  const theme = useTheme() as Theme;
+
   if (!name) {
     return null;
   }
@@ -31,7 +34,7 @@ const Icon = ({
     xlarge: theme.iconSizes[5],
   }[size];
 
-  const iconColor = theme.colors[`${color}`] ?? color;
+  const iconColor = theme.colors[`${color as keyof Theme['colors']}`] ?? color;
 
   const TheIcon = icons[iconName as keyof typeof icons];
 

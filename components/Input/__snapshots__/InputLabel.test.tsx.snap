@@ -20,10 +20,9 @@ exports[`Input Label should render fixed label correctly 1`] = `
       Array [
         Object {
           "color": "#6E7787",
-          "fontFamily": "Rubik-Medium",
+          "fontFamily": "System",
           "fontSize": 12,
           "fontWeight": "500",
-          "lineHeight": 14,
         },
       ]
     }
@@ -54,10 +53,9 @@ exports[`Input Label should render fixed label with optional correctly 1`] = `
       Array [
         Object {
           "color": "#6E7787",
-          "fontFamily": "Rubik-Medium",
+          "fontFamily": "System",
           "fontSize": 12,
           "fontWeight": "500",
-          "lineHeight": 14,
         },
       ]
     }
@@ -72,10 +70,9 @@ exports[`Input Label should render fixed label with optional correctly 1`] = `
       Array [
         Object {
           "color": "#95A1B5",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "System",
           "fontSize": 12,
           "fontWeight": "400",
-          "lineHeight": 14,
           "marginLeft": 2,
         },
       ]
@@ -148,65 +145,30 @@ exports[`Input Label should render outlined label with optional correctly 1`] = 
 `;
 
 exports[`Input Label should render outlined label with placeholder when focused is true 1`] = `
-Array [
+<View
+  collapsable={false}
+  pointerEvents="none"
+  style={Object {}}
+>
   <View
-    collapsable={false}
-    pointerEvents="none"
-    style={Object {}}
-  >
-    <View
-      flexDirection="row"
-      height={54}
-      style={
-        Array [
-          Object {
-            "flexDirection": "row",
-          },
-        ]
-      }
-      testID="box"
-    >
-      <Text
-        collapsable={false}
-        style={Object {}}
-      >
-        Label
-         (Optional)
-      </Text>
-    </View>
-  </View>,
-  <View
-    left={16}
-    position="absolute"
+    flexDirection="row"
+    height={54}
     style={
       Array [
-        Object {},
+        Object {
+          "flexDirection": "row",
+        },
       ]
     }
     testID="box"
-    top={25}
-    zIndex={1}
   >
     <Text
-      color="contentTertiary"
-      pl="1px"
-      style={
-        Array [
-          Object {
-            "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
-            "fontSize": 14,
-            "fontWeight": "400",
-            "lineHeight": 16,
-            "paddingLeft": 1,
-          },
-        ]
-      }
-      testID="input-label-placeholder"
-      variant="subtitle03Regular"
+      collapsable={false}
+      style={Object {}}
     >
-      Placeholder
+      Label
+       (Optional)
     </Text>
-  </View>,
-]
+  </View>
+</View>
 `;
