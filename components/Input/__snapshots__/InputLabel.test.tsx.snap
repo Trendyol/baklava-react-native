@@ -143,32 +143,3 @@ exports[`Input Label should render outlined label with optional correctly 1`] = 
   </View>
 </View>
 `;
-
-exports[`Input Label should render outlined label with placeholder when focused is true 1`] = `
-<View
-  collapsable={false}
-  pointerEvents="none"
-  style={Object {}}
->
-  <View
-    flexDirection="row"
-    height={54}
-    style={
-      Array [
-        Object {
-          "flexDirection": "row",
-        },
-      ]
-    }
-    testID="box"
-  >
-    <Text
-      collapsable={false}
-      style={Object {}}
-    >
-      Label
-       (Optional)
-    </Text>
-  </View>
-</View>
-`;
