@@ -6,9 +6,7 @@ import { AnimatedViewPropsType, AnimatedTextPropsType } from './types';
 describe('Input Label', () => {
   let label: string | null;
   let labelFixed: boolean;
-  let placeholder: string;
   let required: boolean;
-  let focused: boolean;
   let errorState: boolean;
   let successState: boolean;
   let animatedViewProps: AnimatedViewPropsType;
@@ -18,9 +16,7 @@ describe('Input Label', () => {
   beforeEach(() => {
     label = 'Label';
     labelFixed = false;
-    placeholder = 'Placeholder';
     required = true;
-    focused = false;
     errorState = false;
     successState = false;
     animatedViewProps = {};
@@ -37,9 +33,7 @@ describe('Input Label', () => {
       <InputLabel
         label={label}
         labelFixed={labelFixed}
-        placeholder={placeholder}
         required={required}
-        focused={focused}
         errorState={errorState}
         successState={successState}
         animatedViewProps={animatedViewProps}
@@ -58,9 +52,7 @@ describe('Input Label', () => {
       <InputLabel
         label={label}
         labelFixed={labelFixed}
-        placeholder={placeholder}
         required={required}
-        focused={focused}
         errorState={errorState}
         successState={successState}
         animatedViewProps={animatedViewProps}
@@ -82,34 +74,7 @@ describe('Input Label', () => {
       <InputLabel
         label={label}
         labelFixed={labelFixed}
-        placeholder={placeholder}
         required={required}
-        focused={focused}
-        errorState={errorState}
-        successState={successState}
-        animatedViewProps={animatedViewProps}
-        animatedTextProps={animatedTextProps}
-        inputHeight={inputHeight}
-      />,
-    );
-
-    // then
-    expect(toJSON()).toMatchSnapshot();
-  });
-
-  test('should render outlined label with placeholder when focused is true', () => {
-    // given
-    required = false;
-    focused = true;
-
-    // when
-    const { toJSON } = render(
-      <InputLabel
-        label={label}
-        labelFixed={labelFixed}
-        placeholder={placeholder}
-        required={required}
-        focused={focused}
         errorState={errorState}
         successState={successState}
         animatedViewProps={animatedViewProps}
@@ -131,9 +96,7 @@ describe('Input Label', () => {
       <InputLabel
         label={label}
         labelFixed={labelFixed}
-        placeholder={placeholder}
         required={required}
-        focused={focused}
         errorState={errorState}
         successState={successState}
         animatedViewProps={animatedViewProps}
@@ -156,9 +119,7 @@ describe('Input Label', () => {
       <InputLabel
         label={label}
         labelFixed={labelFixed}
-        placeholder={placeholder}
         required={required}
-        focused={focused}
         errorState={errorState}
         successState={successState}
         animatedViewProps={animatedViewProps}
