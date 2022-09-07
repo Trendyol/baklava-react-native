@@ -2,7 +2,8 @@
   "*.{ts,tsx}": [
     "eslint --rule 'no-console: error' --fix",
     "prettier --write src/",
-    "prettier --write components/"
+    "prettier --write components/",
+    "bob build"
   ],
   "*.{json,md}": [
     "prettier --write"
