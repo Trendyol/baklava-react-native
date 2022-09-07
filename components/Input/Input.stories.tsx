@@ -60,7 +60,7 @@ export const Cases: InputStory = args => {
   return (
     <Box px={3}>
       <Text py={3} variant="subtitle01Bold">
-        Input
+        Input Cases
       </Text>
 
       <Input

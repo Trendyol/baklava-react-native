@@ -1,0 +1,108 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+  title="Documentation/Getting Started"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+
+# Getting Started
+
+<br/>
+<br/>
+
+## Installation
+
+Open a Terminal in your project's folder and run:
+
+```bash
+npm install @trendyol/baklava-react-native
+```
+
+You also need to install react-native-svg.
+
+```bash
+npm install react-native-svg
+```
+
+For expo users you need to install react-native-svg with:
+
+```bash
+npx expo install react-native-svg@12.3.0
+```
+
+## Usage
+
+To support custom themes, baklava exports a ThemeProvider component. Wrap the root component with the provider to be able to support themes:
+
+```jsx
+import * as React from 'react';
+import { theme, ThemeProvider } from '@trendyol/baklava-react-native';
+import App from './src/App';
+
+export default function Main() {
+  return (
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  );
+}
+```
+
+## Customization
+
+You can also provide a theme prop with a theme object with same properties as the default theme:
+
+```jsx
+import * as React from 'react';
+import { theme as defaultTheme, ThemeProvider } from '@trendyol/baklava-react-native';
+import App from './src/App';
+
+const theme = {
+  ...defaultTheme,
+  fonts: [
+    'Inter-Light',
+    'Inter-Regular',
+    'Inter-Medium',
+    'Inter-SemiBold',
+    'Inter-Bold',
+  ],
+};
+
+export default function Main() {
+  return (
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  );
+}
+```
+
+### Run it locally
+
+1. Clone the project
+
+```bash
+git clone https://github.com/Trendyol/baklava-react-native.git
+```
+
+2. Install dependencies
+
+```bash
+cd baklava-react-native
+
+npm install
+```
+
+3. Run the cross-platform app
+
+```bash
+`npm run ios` or `npm run android`
+```
