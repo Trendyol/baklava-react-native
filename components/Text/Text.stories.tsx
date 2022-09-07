@@ -38,7 +38,7 @@ export const Basic: TextStory = args => (
 export const Heading: TextStory = () => (
   <>
     <Text p={3} variant="subtitle01Bold">
-      Heading
+      Text Heading
     </Text>
     <Text variant="heading1" p={3}>
       Heading 1
@@ -55,7 +55,7 @@ export const Heading: TextStory = () => (
 export const Subtitle01: TextStory = () => (
   <>
     <Text p={3} variant="subtitle01Bold">
-      Subtitle
+      Text Subtitle 01
     </Text>
     <Text variant="subtitle01Regular" p={3}>
       Subtitle 01 / Regular
@@ -75,7 +75,7 @@ export const Subtitle01: TextStory = () => (
 export const Subtitle02: TextStory = () => (
   <>
     <Text p={3} variant="subtitle01Bold">
-      Subtitle
+      Text Subtitle 02
     </Text>
     <Text variant="subtitle02Regular" p={3}>
       Subtitle 02 / Regular
@@ -95,7 +95,7 @@ export const Subtitle02: TextStory = () => (
 export const Subtitle03: TextStory = () => (
   <>
     <Text p={3} variant="subtitle01Bold">
-      Subtitle
+      Text Subtitle 03
     </Text>
     <Text variant="subtitle03Regular" p={3}>
       Subtitle 03 / Regular
@@ -115,7 +115,7 @@ export const Subtitle03: TextStory = () => (
 export const Subtitle04: TextStory = () => (
   <>
     <Text p={3} variant="subtitle01Bold">
-      Subtitle
+      Text Subtitle 04
     </Text>
     <Text variant="subtitle04Regular" p={3}>
       Subtitle 04 / Regular
@@ -135,7 +135,7 @@ export const Subtitle04: TextStory = () => (
 export const Body: TextStory = () => (
   <>
     <Text p={3} variant="subtitle01Bold">
-      Body
+      Text Body
     </Text>
     <Text variant="bodyText" p={3}>
       Body / Text
@@ -155,7 +155,7 @@ export const Body: TextStory = () => (
 export const Caption: TextStory = () => (
   <>
     <Text p={3} variant="subtitle01Bold">
-      Caption
+      Text Caption
     </Text>
     <Text variant="captionText" p={3}>
       Caption / Text
