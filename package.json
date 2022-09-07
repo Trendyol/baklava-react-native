@@ -1,5 +1,5 @@
 {
-  "name": "@trendyol-js/baklava-react-native",
+  "name": "@trendyol/baklava-react-native",
   "version": "0.0.0-dev",
   "description": "Trendyol Baklava Design System for React Native",
   "main": "lib/commonjs/index.js",
@@ -32,6 +32,7 @@
     "lint:prettier": "prettier --check src/",
     "format": "eslint -c .eslintrc.js --fix && prettier --write .",
     "commit": "commit",
+    "storybook": "start-storybook -c docs/.storybook -p 6006",
     "build-storybook-docs": "build-storybook -c docs/.storybook --docs",
     "build": "bob build",
     "prestart": "sbn-get-stories",
