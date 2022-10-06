@@ -56,6 +56,7 @@ export const iconList = [
   'eye-off',
   'eye-on',
   'facebook',
+  'feedback',
   'filter',
   'finance-accounting',
   'fire',

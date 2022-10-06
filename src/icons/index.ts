@@ -55,6 +55,7 @@ export { default as ExternalShare } from './ExternalShare';
 export { default as EyeOff } from './EyeOff';
 export { default as EyeOn } from './EyeOn';
 export { default as Facebook } from './Facebook';
+export { default as Feedback } from './Feedback';
 export { default as Filter } from './Filter';
 export { default as FinanceAccounting } from './FinanceAccounting';
 export { default as Fire } from './Fire';
