@@ -1,4 +1,4 @@
-import { act, renderHook } from '../../src/testUtils';
+import { act, renderHook } from '../../testUtils';
 import { useIsPressed } from './hooks';
 
 describe('Button Hooks', () => {

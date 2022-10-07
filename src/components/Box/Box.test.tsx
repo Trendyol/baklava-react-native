@@ -1,6 +1,6 @@
 import React from 'react';
-import { theme } from '../../src';
-import { render } from '../../src/testUtils';
+import theme from '../../theme';
+import { render } from '../../testUtils';
 import Box from '../Box/Box';
 import { ReactTestInstance } from 'react-test-renderer';
 import Text from '../Text/Text';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../src/testUtils';
+import { render } from '../../testUtils';
 import { InputLabel } from './InputLabel';
 import { AnimatedViewPropsType, AnimatedTextPropsType } from './types';
 

@@ -14,7 +14,7 @@ import {
   variant as styledVariant,
   fontSize,
 } from 'styled-system';
-import theme from '../../src/theme';
+import theme from '../../theme';
 import { TextVariantTypes } from './types';
 
 const StyledText = styled(T)(

@@ -2,7 +2,7 @@ import { variant } from 'styled-system';
 import {
   ButtonTypeTypes,
   ButtonVariantTypes,
-} from '../../components/Button/types';
+} from '../components/Button/types';
 
 // TODO: Unitless shorthands https://github.com/styled-components/css-to-react-native/issues/40
 export const textStyle = {

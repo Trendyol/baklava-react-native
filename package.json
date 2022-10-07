@@ -130,10 +130,10 @@
       "<rootDir>/__mocks__/globalMock.js"
     ],
     "collectCoverageFrom": [
-      "components/**",
-      "!components/**/*.stories.tsx",
-      "!components/**/types.ts",
-      "!components/**/__snapshots__/**"
+      "src/components/**",
+      "!src/components/**/*.stories.tsx",
+      "!src/components/**/types.ts",
+      "!src/components/**/__snapshots__/**"
     ]
   },
   "react-native-builder-bob": {
@@ -151,8 +151,7 @@
     ],
     "files": [
       "lib/",
-      "src/",
-      "components/"
+      "src/"
     ]
   }
 }

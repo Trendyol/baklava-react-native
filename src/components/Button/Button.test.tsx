@@ -1,6 +1,6 @@
 import React from 'react';
-import { theme } from '../../src';
-import { fireEvent, render } from '../../src/testUtils';
+import theme from '../../theme';
+import { fireEvent, render } from '../../testUtils';
 import Button from '../Button/Button';
 import { ReactTestInstance } from 'react-test-renderer';
 

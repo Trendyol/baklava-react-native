@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import Text from '../Text/Text';
-import theme from '../../src/theme';
+import theme from '../../theme';
 import { TextVariantTypes } from './types';
 
 const variantList = Object.keys(theme.textStyle) as TextVariantTypes[];

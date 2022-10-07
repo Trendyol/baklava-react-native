@@ -25,11 +25,11 @@ if (parameters) {
 
 const getStories = () => {
   return [
-    require('../components/Box/Box.stories.tsx'),
-    require('../components/Button/Button.stories.tsx'),
-    require('../components/Icon/Icon.stories.tsx'),
-    require('../components/Input/Input.stories.tsx'),
-    require('../components/Text/Text.stories.tsx'),
+    require('../src/components/Box/Box.stories.tsx'),
+    require('../src/components/Button/Button.stories.tsx'),
+    require('../src/components/Icon/Icon.stories.tsx'),
+    require('../src/components/Input/Input.stories.tsx'),
+    require('../src/components/Text/Text.stories.tsx'),
   ];
 };
 configure(getStories, module, false);

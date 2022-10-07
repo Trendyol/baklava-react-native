@@ -3,7 +3,7 @@ import { Pressable, StyleSheet } from 'react-native';
 import styled from 'styled-components/native';
 import { flexbox, color, space } from 'styled-system';
 import Text from '../Text/Text';
-import theme from '../../src/theme';
+import theme from '../../theme';
 import { useIsPressed } from './hooks';
 import type {
   ButtonSizeTypes,

@@ -1,6 +1,6 @@
 import React from 'react';
-import { theme } from '../../src';
-import { render } from '../../src/testUtils';
+import theme from '../../theme';
+import { render } from '../../testUtils';
 import Icon from '../Icon/Icon';
 import { iconList } from './list';
 

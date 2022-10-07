@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render } from '../../src/testUtils';
+import { fireEvent, render } from '../../testUtils';
 import { IconNameType } from '../Icon/types';
 import { InputIcon } from './InputIcon';
 
