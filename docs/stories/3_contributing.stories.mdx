@@ -41,13 +41,16 @@ We implemented several linters and static code checkers to be sure if every new 
 
 ### %100 Code coverage with unit tests
 
-We expect to cover every line of code we wrote in our unit tests. If you change something in code please be sure that you are covering those changes inside related test file. To do that you can run `npm test` command and check `coverage` folder for detailed report. This command is automatically executed in every commits and if coverage is under %100 your PR checks will fail.
+We expect to cover every line of code we wrote in our unit tests. If you change something in code please be sure that you are covering those changes inside related test file. To do that you can run `npm run test` command and check `coverage` folder for detailed report. This command is automatically executed in every commits and if coverage is under %100 your PR checks will fail.
 
 ### Commit rules
 
 Baklava React Native library has an automated release flow and our release version and release notes are automatically generated from git commit messages. So commit messages are very important to release changes properly. We have a specific guideline about committing rules, please refer it.
 
+### Design review
+
+Design reviews are done by designers involved in project. If the changes are intentional, they will be approved and once PR merged, new designs will be new references for upcoming PRs. If there is no visual changes this step will pass automatically and there will be no need a review from a designer.
+
 ### Enough approvals to merge
 
 Every PR should be reviewed and approved at least one of the core contributors. Please add needed information to PR description to help making review process quicker and easier.
-
