@@ -13,7 +13,7 @@ A clear and concise description of what the bug is.
 Steps to reproduce the behavior:
 
 1. Go to '...'
-2. Click on '....'
+2. Press on '....'
 3. Scroll down to '....'
 4. See error
 
@@ -25,9 +25,16 @@ If applicable, add screenshots to help explain your problem.
 
 **Smartphone (please complete the following information):**
 
-- Device: [e.g. iPhone6]
-- OS: [e.g. iOS8.1]
-- Version [e.g. 22]
+- Device: [e.g. iPhone14]
+- OS: [e.g. iOS16.1]
+- Version [e.g. 1.2.2]]
 
 **Additional context**
 Add any other context about the problem here.
+
+- React Native Info (run `npx react-native info` in your terminal and paste it here):
+
+```bash
+# Paste your react native info here
+
+```

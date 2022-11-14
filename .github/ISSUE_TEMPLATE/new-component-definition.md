@@ -14,7 +14,7 @@ assignees: ''
 
 General usage example:
 
-```html
+```jsx
 <Component>Example</Component>
 ```
 
