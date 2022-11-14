@@ -2,7 +2,7 @@
 name: New Component Definition
 about: Use this template to define implementation details of a new component
 title: '{name} Component'
-labels: baklava-ds, enhancement
+labels: baklava-ds, component
 assignees: ''
 ---
 
