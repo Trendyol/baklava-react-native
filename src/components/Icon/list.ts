@@ -152,6 +152,7 @@ export const iconList = [
   'shopping-bag-return',
   'shopping-bag',
   'sorting',
+  'sound-off',
   'sound-on',
   'star',
   'stop-fill',

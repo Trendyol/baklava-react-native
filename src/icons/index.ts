@@ -151,6 +151,7 @@ export { default as ShoppingBagDiscount } from './ShoppingBagDiscount';
 export { default as ShoppingBagReturn } from './ShoppingBagReturn';
 export { default as ShoppingBag } from './ShoppingBag';
 export { default as Sorting } from './Sorting';
+export { default as SoundOff } from './SoundOff';
 export { default as SoundOn } from './SoundOn';
 export { default as Star } from './Star';
 export { default as StopFill } from './StopFill';
