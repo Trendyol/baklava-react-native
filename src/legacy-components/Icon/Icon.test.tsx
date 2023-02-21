@@ -1,7 +1,7 @@
 import React from 'react';
-import theme from '../../theme';
-import { render } from '../../testUtils';
-import Icon from '../Icon/Icon';
+import theme from '../../legacy-theme';
+import { render } from '../../legacy-test-utils';
+import Icon from './Icon';
 import { iconList } from './list';
 
 describe('Icon', () => {

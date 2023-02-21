@@ -1,6 +1,6 @@
 import { Animated, Easing } from 'react-native';
-import theme from '../../theme';
-import { act, renderHook } from '../../testUtils';
+import theme from '../../legacy-theme';
+import { act, renderHook } from '../../legacy-test-utils';
 import {
   useInputRef,
   useInputValue,

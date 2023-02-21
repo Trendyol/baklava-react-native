@@ -1,8 +1,8 @@
 import React from 'react';
-import { ReactTestInstance } from 'react-test-renderer';
-import theme from '../../theme';
-import { render } from '../../test-utils';
+import theme from '../../legacy-theme';
+import { render } from '../../legacy-test-utils';
 import Box from './Box';
+import { ReactTestInstance } from 'react-test-renderer';
 import Text from '../Text/Text';
 
 describe('Box', () => {
@@ -16,10 +16,7 @@ describe('Box', () => {
 
   test('should render given box', () => {
     // when
-    const { getByTestId } = render(
-      <Box testID="box" backgroundColor="primaryColor" />,
-    );
-
+    const { getByTestId } = render(<Box testID="box" bg="primaryColor" />);
     const boxComponent = getByTestId('box');
 
     // then
@@ -31,10 +28,10 @@ describe('Box', () => {
   test('should render given box children ', () => {
     // when
     const { getByTestId } = render(
-      <Box testID="box" backgroundColor="primaryColor">
+      <Box testID="box" bg="primaryColor">
         <Text>testtest</Text>
       </Box>,
-    );
+    ); // ?
     const boxComponent = getByTestId('box');
 
     // then

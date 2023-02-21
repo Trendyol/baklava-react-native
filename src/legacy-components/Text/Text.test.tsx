@@ -1,6 +1,6 @@
 import React from 'react';
-import theme from '../../theme';
-import { render } from '../../test-utils';
+import theme from '../../legacy-theme';
+import { render } from '../../legacy-test-utils';
 import Text from './Text';
 
 describe('Text', () => {
@@ -30,8 +30,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(32);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('heading1');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[6]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -45,8 +46,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(28);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('heading2');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[5]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -61,9 +63,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-
-    expect(textComponent.props.style[0].fontSize).toBe(24);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('heading3');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[4]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -79,8 +81,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(20);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('subtitle01Regular');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[3]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -94,8 +97,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(20);
-    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.variant).toBe('subtitle01Medium');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[3]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -109,8 +113,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(20);
-    expect(textComponent.props.style[0].fontWeight).toBe('600');
+    expect(textComponent.props.variant).toBe('subtitle01Semibold');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[3]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[3]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -124,8 +129,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(20);
-    expect(textComponent.props.style[0].fontWeight).toBe('700');
+    expect(textComponent.props.variant).toBe('subtitle01Bold');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[3]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[4]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -141,8 +147,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(16);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('subtitle02Regular');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[2]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -156,8 +163,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(16);
-    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.variant).toBe('subtitle02Medium');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[2]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -171,8 +179,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(16);
-    expect(textComponent.props.style[0].fontWeight).toBe('600');
+    expect(textComponent.props.variant).toBe('subtitle02Semibold');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[2]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[3]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -186,8 +195,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(16);
-    expect(textComponent.props.style[0].fontWeight).toBe('700');
+    expect(textComponent.props.variant).toBe('subtitle02Bold');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[2]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[4]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -203,8 +213,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(14);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('subtitle03Regular');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -218,8 +229,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(14);
-    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.variant).toBe('subtitle03Medium');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -233,8 +245,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(14);
-    expect(textComponent.props.style[0].fontWeight).toBe('600');
+    expect(textComponent.props.variant).toBe('subtitle03Semibold');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[3]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -248,8 +261,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(14);
-    expect(textComponent.props.style[0].fontWeight).toBe('700');
+    expect(textComponent.props.variant).toBe('subtitle03Bold');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[4]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -265,8 +279,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(12);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('subtitle04Regular');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -280,8 +295,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(12);
-    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.variant).toBe('subtitle04Medium');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -295,8 +311,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(12);
-    expect(textComponent.props.style[0].fontWeight).toBe('600');
+    expect(textComponent.props.variant).toBe('subtitle04Semibold');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[3]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -310,8 +327,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(12);
-    expect(textComponent.props.style[0].fontWeight).toBe('700');
+    expect(textComponent.props.variant).toBe('subtitle04Bold');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[4]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -327,8 +345,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(14);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('bodyText');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -342,8 +361,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(14);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('bodyUnderline');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].textDecorationLine).toBe('underline');
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
@@ -358,8 +378,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(14);
-    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.variant).toBe('bodyTextLink');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].textDecorationLine).toBe('underline');
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
@@ -374,8 +395,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(14);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('bodyLongText');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[1]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -391,8 +413,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(12);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('captionText');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -406,8 +429,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(12);
-    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.variant).toBe('captionMedium');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -421,8 +445,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(12);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.variant).toBe('captionLongText');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[1]);
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,
     );
@@ -436,8 +461,9 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(12);
-    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.variant).toBe('captionTextLink');
+    expect(textComponent.props.style[0].fontSize).toBe(theme.fontSizes[0]);
+    expect(textComponent.props.style[0].fontWeight).toBe(theme.fontWeights[2]);
     expect(textComponent.props.style[0].textDecorationLine).toBe('underline');
     expect(textComponent.props.style[0].color).toBe(
       theme.colors.contentPrimary,

@@ -2,17 +2,18 @@
 
 exports[`Text should render text correctly 1`] = `
 <Text
+  color="contentPrimary"
   style={
     Array [
       Object {
         "color": "#273142",
-        "fontFamily": "Rubik-Regular",
+        "fontFamily": "System",
         "fontSize": 14,
         "fontWeight": "400",
-        "lineHeight": 16,
       },
     ]
   }
+  variant="bodyText"
 >
   testtesttest
 </Text>

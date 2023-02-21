@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import styled, { useTheme } from 'styled-components/native';
 import { color, flexbox, space, borderRadius, position } from 'styled-system';
-import { Theme } from '../../theme';
+import { Theme } from '../../legacy-theme';
 import Box from '../Box/Box';
 import { InputSizeTypes } from './types';
 import { IconNameType } from '../Icon/types';

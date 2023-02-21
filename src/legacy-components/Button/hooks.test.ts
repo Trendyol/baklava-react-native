@@ -1,4 +1,4 @@
-import { act, renderHook } from '../../testUtils';
+import { act, renderHook } from '../../legacy-test-utils';
 import { useIsPressed } from './hooks';
 
 describe('Button Hooks', () => {

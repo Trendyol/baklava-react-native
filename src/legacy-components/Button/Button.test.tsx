@@ -1,7 +1,7 @@
 import React from 'react';
-import theme from '../../theme';
-import { fireEvent, render } from '../../testUtils';
-import Button from '../Button/Button';
+import theme from '../../legacy-theme';
+import { fireEvent, render } from '../../legacy-test-utils';
+import Button from './Button';
 import { ReactTestInstance } from 'react-test-renderer';
 
 describe('Button', () => {

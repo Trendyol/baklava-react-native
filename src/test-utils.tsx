@@ -1,7 +1,15 @@
 import * as React from 'react';
 import { render } from '@testing-library/react-native';
-import { ThemeProvider } from 'styled-components/native';
+import { ThemeProvider } from '@shopify/restyle';
 import theme from './theme';
+
+theme.fonts = {
+  light: 'Rubik-Light',
+  regular: 'Rubik-Regular',
+  medium: 'Rubik-Medium',
+  semiBold: 'Rubik-SemiBold',
+  bold: 'Rubik-Bold',
+};
 
 export interface RenderOptions {
   wrapper?: React.ComponentType<any>;

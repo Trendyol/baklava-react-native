@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from 'styled-components/native';
 import * as icons from '../../icons';
-import { Theme } from '../../theme';
+import { Theme } from '../../legacy-theme';
 import { IconNameType, IconSizeType } from './types';
 import { toPascalCase } from './utils';
 

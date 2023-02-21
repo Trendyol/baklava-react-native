@@ -1,6 +1,6 @@
 import { useCallback, useMemo, useRef, useState } from 'react';
 import { Animated, EasingFunction } from 'react-native';
-import { Theme } from '../../theme';
+import { Theme } from '../../legacy-theme';
 import { IconNameType } from '../Icon/types';
 import {
   InputRefType,

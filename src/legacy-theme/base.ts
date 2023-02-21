@@ -2,11 +2,34 @@ export const space = [0, 2, 4, 8, 12, 16, 24, 32, 48, 64];
 
 export const fonts = ['System', 'System', 'System', 'System', 'System'];
 
-export const fontSizes = [12, 14, 16, 20, 24, 28, 32];
+export const fontSizes = [
+  12, // 0
+  14, // 1
+  16, // 2
+  20, // 3
+  24, // 4
+  28, // 5
+  32, // 6
+];
 
-export const fontWeights = ['300', '400', '500', '600', '700'];
+export const fontWeights = [
+  '300', // 0
+  '400', // 1
+  '500', // 2
+  '600', // 3
+  '700', // 4
+];
 
-export const lineHeights = [12, 14, 16, 20, 24, 28, 32, 36];
+export const lineHeights = [
+  12, // 0
+  14, // 1
+  16, // 2
+  20, // 3
+  24, // 4
+  28, // 5
+  32, // 6
+  36, // 7
+];
 
 export const radii = {
   none: 0,

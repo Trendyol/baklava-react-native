@@ -1,6 +1,6 @@
 import React from 'react';
 import { act } from 'react-test-renderer';
-import { fireEvent, render } from '../../testUtils';
+import { fireEvent, render } from '../../legacy-test-utils';
 import Input, { TextInputHandles } from './Input';
 
 describe('Input', () => {

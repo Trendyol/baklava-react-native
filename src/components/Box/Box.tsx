@@ -1,32 +1,6 @@
-import React from 'react';
-import { View } from 'react-native';
-import styled from 'styled-components/native';
-import {
-  flexbox,
-  color,
-  size,
-  space,
-  borders,
-  borderRadius,
-} from 'styled-system';
+import { createBox } from '@shopify/restyle';
+import { Theme } from '../../theme';
 
-const BaseBox = styled(View)`
-  ${flexbox}
-  ${color}
-  ${size}
-  ${space}
-  ${borders}
-  ${borderRadius}
-`;
-
-const Box = ({
-  testID = 'box',
-  ...rest
-}: {
-  testID?: string;
-  [key: string]: any;
-}) => {
-  return <BaseBox testID={testID} {...rest} />;
-};
+const Box = createBox<Theme>();
 
 export default Box;
