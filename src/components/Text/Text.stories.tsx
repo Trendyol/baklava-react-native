@@ -2,9 +2,8 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import Text from './Text';
 import theme from '../../theme';
-import { TextVariantTypes } from './types';
 
-const variantList = Object.keys(theme.textVariants) as TextVariantTypes[];
+const variantList = Object.keys(theme.textVariants);
 
 const TextMeta: ComponentMeta<typeof Text> = {
   title: 'Text',
@@ -16,7 +15,7 @@ const TextMeta: ComponentMeta<typeof Text> = {
     },
   },
   args: {
-    variant: variantList[0] as TextVariantTypes,
+    variant: variantList[0] as any,
   },
 };
 

@@ -1,4 +1,4 @@
-import { createTheme } from '@shopify/restyle';
+import { createTheme } from '@ergenekonyigit/restyle';
 
 const theme = createTheme({
   colors: {

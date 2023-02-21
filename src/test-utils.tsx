@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { render } from '@testing-library/react-native';
-import { ThemeProvider } from '@shopify/restyle';
+import { ThemeProvider } from '@ergenekonyigit/restyle';
 import theme from './theme';
 
 theme.fonts = {

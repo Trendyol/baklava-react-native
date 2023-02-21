@@ -1,4 +1,4 @@
-export { ThemeProvider } from '@shopify/restyle';
+export { ThemeProvider } from '@ergenekonyigit/restyle';
 export { default as theme } from './theme';
 
 export { default as Box } from './legacy-components/Box/Box';
