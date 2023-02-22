@@ -1,8 +1,8 @@
 export { ThemeProvider } from '@ergenekonyigit/restyle';
 export { default as theme } from './theme';
 
-export { default as Box } from './legacy-components/Box/Box';
-export { default as Text } from './legacy-components/Text/Text';
+export { default as Box } from './components/Box/Box';
+export { default as Text } from './components/Text/Text';
 
 // Legacy
 export { ThemeProvider as LegacyThemeProvider } from 'styled-components/native';
