@@ -26,9 +26,7 @@ if (parameters) {
 const getStories = () => {
   return [
     require('../src/components/Box/Box.stories.tsx'),
-    // require('../src/legacy-components/Button/Button.stories.tsx'),
-    // require('../src/legacy-components/Icon/Icon.stories.tsx'),
-    // require('../src/legacy-components/Input/Input.stories.tsx'),
+    require('../src/components/Icon/Icon.stories.tsx'),
     require('../src/components/Text/Text.stories.tsx'),
   ];
 };

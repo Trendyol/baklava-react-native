@@ -42,7 +42,7 @@
     "svgr": "svgr ./src/svg-icons -d ./src/icons --icon --native --typescript --svgo-config svgo.config.js --ignore-existing --replace-attr-values '#273142={props?.fill ?? `#273142`}'"
   },
   "dependencies": {
-    "@ergenekonyigit/restyle": "2.3.0-2b63637.0",
+    "@ergenekonyigit/restyle": "2.4.0-1ec4a08.3",
     "@shopify/restyle": "2.3.0",
     "styled-components": "5.3.0",
     "styled-system": "5.1.5"

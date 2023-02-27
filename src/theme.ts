@@ -65,10 +65,6 @@ const theme = createTheme({
     l: 8,
     xl: 16,
   },
-  breakpoints: {
-    phone: 0,
-    tablet: 768,
-  },
   fonts: {
     light: 'System',
     regular: 'System',
@@ -256,6 +252,14 @@ const theme = createTheme({
       lineHeight: 12,
       textDecorationLine: 'underline',
     },
+  },
+  iconSizeVariants: {
+    '2xs': 12,
+    xs: 14,
+    s: 16,
+    m: 20,
+    l: 24,
+    xl: 32,
   },
 });
 
