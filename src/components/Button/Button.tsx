@@ -96,23 +96,40 @@ const Button = ({
   /* istanbul ignore next */
   const onPressOut = () => pressableProps.onPressOut();
 
-  const buttonHorizontalPadding = label
-    ? ({
-        s: 'm',
-        m: 'xl',
-        l: '2xl',
-      }[size] as SpacingProps<Theme>['paddingHorizontal'])
-    : ({
-        s: '2xs',
-        m: 'xs',
-        l: 's',
-      }[size] as SpacingProps<Theme>['paddingHorizontal']);
+  const buttonHorizontalPadding: SpacingProps<Theme>['paddingHorizontal'] =
+    label
+      ? (
+          {
+            s: 'm',
+            m: 'xl',
+            l: '2xl',
+          } as Readonly<
+            Record<
+              keyof Omit<Theme['buttonSizeVariants'], 'defaults'>,
+              keyof Theme['spacing']
+            >
+          >
+        )[size]
+      : (
+          {
+            s: '2xs',
+            m: 'xs',
+            l: 's',
+          } as Readonly<
+            Record<
+              keyof Omit<Theme['buttonSizeVariants'], 'defaults'>,
+              keyof Theme['spacing']
+            >
+          >
+        )[size];
 
-  const textVariant = {
-    s: 'subtitle03Medium',
-    m: 'subtitle03Medium',
-    l: 'subtitle02Medium',
-  }[size] as TextVariants;
+  const textVariant: TextVariants = (
+    {
+      s: 'subtitle03Medium',
+      m: 'subtitle03Medium',
+      l: 'subtitle02Medium',
+    } as const
+  )[size];
 
   const variantColors = variantColorSelector({
     variant,
@@ -136,6 +153,7 @@ const Button = ({
       <ButtonContainer
         size={size}
         kind={kind}
+        // @ts-ignore
         variant={variant}
         paddingHorizontal={buttonHorizontalPadding}
         flexDirection="row"
