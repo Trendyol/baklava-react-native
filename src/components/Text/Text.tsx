@@ -1,6 +1,8 @@
-import { createText } from '@ergenekonyigit/restyle';
+import { createText, TextProps } from '@ergenekonyigit/restyle';
 import { Theme } from '../../theme';
 
 const Text = createText<Theme>();
+
+export type TextVariants = TextProps<Theme>['variant'];
 
 export default Text;

@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render button correctly 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Array [
+      Object {},
+    ]
+  }
+>
+  <View
+    color="white"
+    style={
+      Array [
+        Object {},
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#F27A1A",
+            "borderColor": "#F27A1A",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "center",
+            "paddingHorizontal": 24,
+            "paddingVertical": 12,
+          },
+        ],
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "Rubik-Medium",
+            "fontSize": 14,
+            "fontWeight": "500",
+            "lineHeight": 16,
+            "marginLeft": 0,
+          },
+        ]
+      }
+      testID="button-text"
+    >
+      testtesttest
+    </Text>
+  </View>
+</View>
+`;

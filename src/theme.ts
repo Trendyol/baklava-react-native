@@ -1,45 +1,53 @@
 import { createTheme } from '@ergenekonyigit/restyle';
 
+const colors = {
+  white: '#FFFFFF',
+  black: '#000000',
+  transparent: 'transparent',
+  // Color
+  primaryColor: '#F27A1A',
+  secondaryColor: '#273142',
+  tertiaryColor: '#F1F2F7',
+  successColor: '#0BC15C',
+  dangerColor: '#FF5043',
+  warningColor: '#FFB600',
+  alternativeColor: '#5794FF',
+  featuredColor: '#8C4EFF',
+  // Hover
+  primaryHover: '#EF6114',
+  secondaryHover: '#0F131A',
+  tertiaryHover: '#D5D9E1',
+  successHover: '#09A44E',
+  dangerHover: '#FF3028',
+  warningHover: '#FF9800',
+  alternativeHover: '#457EFF',
+  featuredHover: '#753EFF',
+  // Background
+  primaryBackground: '#F1F2F7',
+  accentBackground: '#FEF2E8',
+  secondaryBackground: '#FFFFFF',
+  tertiaryBackground: '#F7F7FA',
+  successBackground: '#E7F9EF',
+  alertBackground: '#FFEEEC',
+  warningBackground: '#FFF8E6',
+  infoBackground: '#EEF4FF',
+  featuredCBackground: '#F4EDFF',
+  // Border Color
+  borderColor: '#D5D9E1',
+  // Content
+  contentPrimary: '#273142',
+  contentSecondary: '#6E7787',
+  contentTertiary: '#95A1B5',
+  contentPassive: '#AFBBCA',
+};
+
 const theme = createTheme({
   colors: {
-    white: '#ffffff',
-    black: '#000000',
-    transparent: 'transparent',
-    // Color
-    primaryColor: '#F27A1A',
-    secondaryColor: '#273142',
-    tertiaryColor: '#F1F2F7',
-    successColor: '#0BC15C',
-    dangerColor: '#FF5043',
-    warningColor: '#FFB600',
-    alternativeColor: '#5794FF',
-    featuredColor: '#8C4EFF',
-    // Hover
-    primaryHover: '#EF6114',
-    secondaryHover: '#0F131A',
-    tertiaryHover: '#D5D9E1',
-    successHover: '#09A44E',
-    dangerHover: '#FF3028',
-    warningHover: '#FF9800',
-    alternativeHover: '#457EFF',
-    featuredHover: '#753EFF',
-    // Background
-    primaryBackground: '#F1F2F7',
-    accentBackground: '#FEF2E8',
-    secondaryBackground: '#FFFFFF',
-    tertiaryBackground: '#F7F7FA',
-    successBackground: '#E7F9EF',
-    alertBackground: '#FFEEEC',
-    warningBackground: '#FFF8E6',
-    infoBackground: '#EEF4FF',
-    featuredCBackground: '#F4EDFF',
-    // Border Color
-    borderColor: '#D5D9E1',
-    // Content
-    contentPrimary: '#273142',
-    contentSecondary: '#6E7787',
-    contentTertiary: '#95A1B5',
-    contentPassive: '#AFBBCA',
+    ...colors,
+    defaultColor: colors.primaryColor,
+    defaultHover: colors.primaryHover,
+    neutralColor: colors.secondaryColor,
+    neutralHover: colors.secondaryHover,
   },
   spacing: {
     none: 0,
@@ -260,6 +268,50 @@ const theme = createTheme({
     m: 20,
     l: 24,
     xl: 32,
+  },
+  buttonSizeVariants: {
+    defaults: {
+      height: 40,
+      paddingVertical: 'xs',
+    },
+    s: {
+      height: 32,
+      paddingVertical: '2xs',
+    },
+    m: {
+      height: 40,
+      paddingVertical: 'xs',
+    },
+    l: {
+      height: 48,
+      paddingVertical: 's',
+    },
+  },
+  buttonKindVariants: {
+    defaults: {
+      backgroundColor: 'primaryColor',
+    },
+    default: {
+      backgroundColor: 'primaryColor',
+    },
+    neutral: {
+      backgroundColor: 'secondaryColor',
+    },
+    success: {
+      backgroundColor: 'successColor',
+    },
+    danger: {
+      backgroundColor: 'dangerColor',
+    },
+  },
+  buttonVariants: {
+    defaults: {
+      borderWidth: 1,
+      borderRadius: 'm',
+    },
+    primary: {},
+    secondary: {},
+    tertiary: {},
   },
 });
 
