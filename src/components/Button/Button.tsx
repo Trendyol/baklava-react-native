@@ -144,6 +144,28 @@ const Button = ({
     ? 'white'
     : variantColors.color;
 
+  const iconView = React.useMemo(() => {
+    if (!icon) {
+      return null;
+    }
+    return <Icon name={icon} size="s" color={typeColor} testID="button-icon" />;
+  }, [icon, typeColor]);
+
+  const labelView = React.useMemo(() => {
+    if (!label) {
+      return null;
+    }
+    return (
+      <Text
+        variant={textVariant}
+        color={typeColor}
+        marginLeft={icon ? '2xs' : 'none'}
+        testID="button-text">
+        {label}
+      </Text>
+    );
+  }, [icon, label, textVariant, typeColor]);
+
   return (
     <PressableContainer
       onPressIn={onPressIn}
@@ -161,18 +183,8 @@ const Button = ({
         justifyContent="center"
         alignSelf={filled ? 'stretch' : 'flex-start'}
         {...variantColors}>
-        {icon ? (
-          <Icon name={icon} size="s" color={typeColor} testID="button-icon" />
-        ) : null}
-        {label ? (
-          <Text
-            variant={textVariant}
-            color={typeColor}
-            marginLeft={icon ? '2xs' : 'none'}
-            testID="button-text">
-            {label}
-          </Text>
-        ) : null}
+        {iconView}
+        {labelView}
       </ButtonContainer>
     </PressableContainer>
   );
