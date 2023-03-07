@@ -313,6 +313,18 @@ const theme = createTheme({
     secondary: {},
     tertiary: {},
   },
+  inputSizeVariants: {
+    defaults: {},
+    small: {
+      height: 32,
+    },
+    medium: {
+      height: 40,
+    },
+    large: {
+      height: 48,
+    },
+  },
 });
 
 export type Theme = typeof theme;

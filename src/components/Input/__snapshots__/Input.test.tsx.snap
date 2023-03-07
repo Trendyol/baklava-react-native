@@ -1,0 +1,1501 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input should render disabled input correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 54,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 54,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 13,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F1F2F7",
+          "borderColor": "#D5D9E1",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={true}
+      editable={false}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+  </View>
+</View>
+`;
+
+exports[`Input should render input correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 54,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 54,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 13,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#D5D9E1",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+  </View>
+</View>
+`;
+
+exports[`Input should render input with error state and error text correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 72,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 54,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 13,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FF5043",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="16"
+      bbWidth="16"
+      fill="#FF5043"
+      focusable={false}
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      testID="input-icon"
+      vbHeight={24}
+      vbWidth={24}
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          Object {
+            "type": 0,
+            "value": 4294922307,
+          }
+        }
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0ZM7.293 7.293a1 1 0 0 1 1.414 0L12 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414L13.414 12l3.293 3.293a1 1 0 0 1-1.414 1.414L12 13.414l-3.293 3.293a1 1 0 0 1-1.414-1.414L10.586 12 7.293 8.707a1 1 0 0 1 0-1.414Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4294922307,
+            }
+          }
+          fillRule={0}
+          propList={
+            Array [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginLeft": 16,
+          "marginTop": 4,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#FF5043",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 12,
+            "fontWeight": "400",
+            "lineHeight": 14,
+          },
+        ]
+      }
+    >
+      errorText
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Input should render input with error state correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 54,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 54,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 13,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FF5043",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="16"
+      bbWidth="16"
+      fill="#FF5043"
+      focusable={false}
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      testID="input-icon"
+      vbHeight={24}
+      vbWidth={24}
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          Object {
+            "type": 0,
+            "value": 4294922307,
+          }
+        }
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0ZM7.293 7.293a1 1 0 0 1 1.414 0L12 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414L13.414 12l3.293 3.293a1 1 0 0 1-1.414 1.414L12 13.414l-3.293 3.293a1 1 0 0 1-1.414-1.414L10.586 12 7.293 8.707a1 1 0 0 1 0-1.414Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4294922307,
+            }
+          }
+          fillRule={0}
+          propList={
+            Array [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`Input should render input with help text correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 72,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 54,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 13,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#D5D9E1",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginLeft": 16,
+          "marginTop": 4,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 12,
+            "fontWeight": "400",
+            "lineHeight": 14,
+          },
+        ]
+      }
+    >
+      helpText
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Input should render input with icon correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 54,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 54,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 13,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#D5D9E1",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="16"
+      bbWidth="16"
+      fill="#95A1B5"
+      focusable={false}
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      testID="input-icon"
+      vbHeight={24}
+      vbWidth={24}
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          Object {
+            "type": 0,
+            "value": 4287996341,
+          }
+        }
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          d="M5.962 7.374a1.508 1.508 0 0 1 2.133-2.132l10.663 10.663a1.508 1.508 0 0 1-2.132 2.133L5.962 7.374Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4287996341,
+            }
+          }
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+        />
+        <RNSVGPath
+          d="m7.029 6.308 10.663 10.663-14.628 6.827a2.153 2.153 0 0 1-2.862-2.861L7.029 6.307ZM9.364.14a.27.27 0 0 1 .472 0l.678 1.24a.269.269 0 0 0 .107.106l1.239.678a.27.27 0 0 1 0 .472l-1.24.678a.269.269 0 0 0-.106.107L9.836 4.66a.27.27 0 0 1-.472 0l-.678-1.24a.27.27 0 0 0-.107-.106L7.34 2.636a.27.27 0 0 1 0-.472l1.24-.678a.27.27 0 0 0 .106-.107L9.364.14ZM21.364 10.94a.27.27 0 0 1 .472 0l.678 1.24a.269.269 0 0 0 .107.106l1.239.678a.27.27 0 0 1 0 .472l-1.24.678a.269.269 0 0 0-.106.107l-.678 1.239a.27.27 0 0 1-.472 0l-.678-1.24a.269.269 0 0 0-.107-.106l-1.239-.678a.27.27 0 0 1 0-.472l1.24-.678a.269.269 0 0 0 .106-.107l.678-1.239ZM20.164.14a.27.27 0 0 1 .472 0l.678 1.24a.269.269 0 0 0 .107.106l1.239.678a.27.27 0 0 1 0 .472l-1.24.678a.269.269 0 0 0-.106.107l-.678 1.239a.27.27 0 0 1-.472 0l-.678-1.24a.269.269 0 0 0-.107-.106l-1.239-.678a.27.27 0 0 1 0-.472l1.24-.678a.269.269 0 0 0 .106-.107L20.164.14Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4287996341,
+            }
+          }
+          propList={
+            Array [
+              "fill",
+            ]
+          }
+        />
+        <RNSVGPath
+          clipRule={0}
+          d="M14.4 2.4a1.2 1.2 0 0 1 1.2 1.2c0 4.152-1.722 7.019-2.752 8.049a1.2 1.2 0 1 1-1.697-1.698c.57-.57 2.049-2.823 2.049-6.351a1.2 1.2 0 0 1 1.2-1.2ZM24 7.2A1.2 1.2 0 0 0 22.8 6c-3.384 0-5.474 1.377-6.849 2.751a1.2 1.2 0 1 0 1.697 1.697C18.674 9.423 20.184 8.4 22.8 8.4A1.2 1.2 0 0 0 24 7.2Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4287996341,
+            }
+          }
+          fillRule={0}
+          propList={
+            Array [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`Input should render input with medium size correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 46,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 46,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 9,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#D5D9E1",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 40,
+          },
+        ]
+      }
+      testID="input"
+    />
+  </View>
+</View>
+`;
+
+exports[`Input should render input with small size correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 38,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 38,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 5,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#D5D9E1",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 32,
+          },
+        ]
+      }
+      testID="input"
+    />
+  </View>
+</View>
+`;
+
+exports[`Input should render input with success state and success text correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 72,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 54,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 13,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#0BC15C",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="16"
+      bbWidth="16"
+      fill="#0BC15C"
+      focusable={false}
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      testID="input-icon"
+      vbHeight={24}
+      vbWidth={24}
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          Object {
+            "type": 0,
+            "value": 4278960476,
+          }
+        }
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12s5.373 12 12 12 12-5.373 12-12Zm-7.272-1.815a1 1 0 0 0-1.456-1.37l-4.92 5.226-1.624-1.726a1 1 0 0 0-1.456 1.37l2.353 2.5a1 1 0 0 0 1.456 0l5.647-6Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4278960476,
+            }
+          }
+          fillRule={0}
+          propList={
+            Array [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "marginLeft": 16,
+          "marginTop": 4,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#0BC15C",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 12,
+            "fontWeight": "400",
+            "lineHeight": 14,
+          },
+        ]
+      }
+    >
+      successText
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Input should render input with success state correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 54,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 54,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "white",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 13,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#0BC15C",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="16"
+      bbWidth="16"
+      fill="#0BC15C"
+      focusable={false}
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      testID="input-icon"
+      vbHeight={24}
+      vbWidth={24}
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          Object {
+            "type": 0,
+            "value": 4278960476,
+          }
+        }
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12s5.373 12 12 12 12-5.373 12-12Zm-7.272-1.815a1 1 0 0 0-1.456-1.37l-4.92 5.226-1.624-1.726a1 1 0 0 0-1.456 1.37l2.353 2.5a1 1 0 0 0 1.456 0l5.647-6Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4278960476,
+            }
+          }
+          fillRule={0}
+          propList={
+            Array [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`Input should render label fixed input correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginBottom": 4,
+        },
+      ]
+    }
+    testID="fixed-label-box"
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#6E7787",
+            "fontFamily": "Rubik-Medium",
+            "fontSize": 12,
+            "fontWeight": "500",
+            "lineHeight": 14,
+          },
+        ]
+      }
+      testID="fixed-label"
+    >
+      label
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 12,
+            "fontWeight": "400",
+            "lineHeight": 14,
+            "marginLeft": 2,
+          },
+        ]
+      }
+      testID="optional-fixed-label"
+    >
+      (Optional)
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#D5D9E1",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="placeholder"
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+  </View>
+</View>
+`;
