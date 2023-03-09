@@ -1,6 +1,6 @@
 import { Animated, Easing } from 'react-native';
 import theme from '../../theme';
-import { act, renderHook } from '../../legacy-test-utils';
+import { act, renderHook } from '../../test-utils';
 import {
   useInputRef,
   useInputValue,
@@ -113,7 +113,7 @@ describe('Input Hooks', () => {
       style: {
         backgroundColor: 'white',
         color: '#95A1B5',
-        fontFamily: 'System',
+        fontFamily: 'Rubik-Regular',
         fontSize: new Animated.Value(12),
         height: new Animated.Value(14),
         lineHeight: new Animated.Value(14),
@@ -156,7 +156,7 @@ describe('Input Hooks', () => {
       style: {
         backgroundColor: 'transparent',
         color: '#6E7787',
-        fontFamily: 'System',
+        fontFamily: 'Rubik-Regular',
         fontSize: new Animated.Value(12),
         height: new Animated.Value(14),
         lineHeight: new Animated.Value(14),
@@ -199,7 +199,7 @@ describe('Input Hooks', () => {
       style: {
         backgroundColor: 'transparent',
         color: '#6E7787',
-        fontFamily: 'System',
+        fontFamily: 'Rubik-Regular',
         fontSize: new Animated.Value(12),
         height: new Animated.Value(14),
         lineHeight: new Animated.Value(14),
@@ -241,7 +241,7 @@ describe('Input Hooks', () => {
       style: {
         backgroundColor: 'white',
         color: '#95A1B5',
-        fontFamily: 'System',
+        fontFamily: 'Rubik-Regular',
         fontSize: new Animated.Value(14),
         height: new Animated.Value(16),
         lineHeight: new Animated.Value(16),
