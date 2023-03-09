@@ -1,9 +1,10 @@
-import React, { FocusEventHandler, forwardRef, useEffect } from 'react';
+import React, { forwardRef, useEffect } from 'react';
 import {
   Easing,
   EasingFunction,
   NativeSyntheticEvent,
   TextInput,
+  TextInputProps,
   TextInputFocusEventData,
 } from 'react-native';
 import theme, { Theme } from '../../theme';
@@ -31,7 +32,7 @@ import {
 } from '@ergenekonyigit/restyle';
 
 type InputProps = React.ComponentProps<typeof Box> &
-  React.ComponentProps<typeof TextInput> & {
+  TextInputProps & {
     label?: string | null;
     labelFixed?: boolean;
     placeholder?: string;
@@ -43,14 +44,8 @@ type InputProps = React.ComponentProps<typeof Box> &
     success?: boolean;
     error?: boolean;
     secureTextEntry?: boolean;
-    onFocus?: (
-      args: FocusEventHandler<HTMLInputElement> &
-        NativeSyntheticEvent<TextInputFocusEventData>,
-    ) => void;
-    onBlur?: (
-      args: FocusEventHandler<HTMLInputElement> &
-        NativeSyntheticEvent<TextInputFocusEventData>,
-    ) => void;
+    onFocus?: (e: NativeSyntheticEvent<TextInputFocusEventData>) => void;
+    onBlur?: (e: NativeSyntheticEvent<TextInputFocusEventData>) => void;
     disabled?: boolean;
     easing?: EasingFunction;
     testID?: string;
@@ -175,10 +170,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       }
     }, [error, success, icon]);
 
-    const handleFocus = (
-      args: FocusEventHandler<HTMLInputElement> &
-        NativeSyntheticEvent<TextInputFocusEventData>,
-    ) => {
+    const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
       if (disabled || !editable) {
         return;
       }
@@ -189,13 +181,10 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       setErrorState(false);
       setSuccessState(false);
 
-      rest.onFocus?.(args);
+      rest.onFocus?.(e);
     };
 
-    const handleBlur = (
-      args: FocusEventHandler<HTMLInputElement> &
-        NativeSyntheticEvent<TextInputFocusEventData>,
-    ) => {
+    const handleBlur = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
       if (disabled || !editable) {
         return;
       }
@@ -205,7 +194,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       }
 
       setFocused(false);
-      rest.onBlur?.(args);
+      rest.onBlur?.(e);
     };
 
     const handleChangeText = (nextValue: string) => {
@@ -248,7 +237,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           borderColor={borderColor}
           backgroundColor={disabled ? 'tertiaryColor' : 'white'}
           px="m"
-          zIndex={0}
+          zIndex="layer_0"
           accessibilityLabel={`${testID}-box`}
           testID={`${testID}-box`}>
           <BaseInput

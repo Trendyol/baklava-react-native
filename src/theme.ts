@@ -65,6 +65,12 @@ const theme = createTheme({
     '5xl': 64,
     '6xl': 80,
   },
+  zIndices: {
+    layer_0: 0,
+    layer_1: 1,
+    layer_2: 2,
+    layer_3: 3,
+  },
   borderRadii: {
     none: 0,
     xs: 2,
