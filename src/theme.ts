@@ -91,6 +91,7 @@ const theme = createTheme({
     m: 6,
     l: 8,
     xl: 16,
+    full: 999,
   },
   fonts: {
     light: 'System',
@@ -102,9 +103,7 @@ const theme = createTheme({
   textVariants: {
     defaults: {
       fontSize: 14,
-      fontWeight: '400',
       fontFamily: 'regular',
-      lineHeight: 16,
       color: 'contentPrimary',
     },
     // Heading
