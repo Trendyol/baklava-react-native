@@ -366,6 +366,7 @@ exports[`Input should render input with error state and error text correctly 1`]
     }
   >
     <Text
+      accessible={false}
       style={
         Array [
           Object {
@@ -651,6 +652,7 @@ exports[`Input should render input with help text correctly 1`] = `
     }
   >
     <Text
+      accessible={false}
       style={
         Array [
           Object {
@@ -1223,6 +1225,7 @@ exports[`Input should render input with success state and success text correctly
     }
   >
     <Text
+      accessible={false}
       style={
         Array [
           Object {
@@ -1423,6 +1426,7 @@ exports[`Input should render label fixed input correctly 1`] = `
     testID="fixed-label-box"
   >
     <Text
+      accessible={true}
       style={
         Array [
           Object {
@@ -1439,6 +1443,7 @@ exports[`Input should render label fixed input correctly 1`] = `
       label
     </Text>
     <Text
+      accessible={true}
       style={
         Array [
           Object {

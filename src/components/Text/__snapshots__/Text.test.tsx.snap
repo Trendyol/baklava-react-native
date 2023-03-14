@@ -2,6 +2,7 @@
 
 exports[`Text should render text correctly 1`] = `
 <Text
+  accessible={false}
   style={
     Array [
       Object {

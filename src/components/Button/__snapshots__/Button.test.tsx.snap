@@ -49,6 +49,7 @@ exports[`Button should render button correctly 1`] = `
     }
   >
     <Text
+      accessible={true}
       style={
         Array [
           Object {
