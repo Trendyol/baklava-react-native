@@ -12,12 +12,11 @@ const Icon = ({
   size = 'l',
   testID = 'icon',
   ...rest
-}: {
+}: ViewProps & {
   name: IconNameType;
   size?: VariantProps<Theme, 'iconSizeVariants'>['variant'];
   color?: VariantProps<Theme, 'colors'>['variant'] | string;
   testID?: string;
-  rest?: ViewProps;
 }) => {
   const theme = useTheme<Theme>();
 
