@@ -65,15 +65,12 @@ import * as React from 'react';
 import { theme as defaultTheme, ThemeProvider } from '@trendyol/baklava-react-native';
 import App from './src/App';
 
-const theme = {
-  ...defaultTheme,
-  fonts: [
-    'Inter-Light',
-    'Inter-Regular',
-    'Inter-Medium',
-    'Inter-SemiBold',
-    'Inter-Bold',
-  ],
+theme.fonts = {
+    'light': 'Inter-Light',
+    'regular': 'Inter-Regular',
+    'medium': 'Inter-Medium',
+    'semiBold': 'Inter-SemiBold',
+    'bold': 'Inter-Bold'
 };
 
 export default function Main() {
