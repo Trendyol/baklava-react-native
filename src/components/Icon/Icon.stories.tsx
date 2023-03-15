@@ -6,6 +6,8 @@ import Box from '../Box/Box';
 import Text from '../Text/Text';
 import { IconNameType } from './types';
 
+const sizeList = ['2xs', 'xs', 's', 'm', 'l', 'xl'];
+
 const IconMeta: ComponentMeta<typeof Icon> = {
   title: 'Icon',
   component: Icon,
@@ -14,10 +16,15 @@ const IconMeta: ComponentMeta<typeof Icon> = {
       options: iconList,
       control: { type: 'select' },
     },
+    size: {
+      options: sizeList,
+      control: { type: 'radios' },
+    },
   },
   args: {
     name: 'confetti',
     color: 'contentPrimary',
+    size: 'l',
   },
 };
 
@@ -27,45 +34,45 @@ type IconStory = ComponentStory<typeof Icon>;
 
 export const Basic: IconStory = args => (
   <>
-    <Text p={3} variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle01Bold">
       Icon
     </Text>
-    <Box flexDirection="row" p={3} alignItems="center">
-      <Icon name={args.name} color={args.color} size="xlarge" />
-      <Text pl="3">{args.name}</Text>
+    <Box flexDirection="row" p="2xs" alignItems="center">
+      <Icon name={args.name} color={args.color} size={args.size} />
+      <Text pl="2xs">{args.name}</Text>
     </Box>
   </>
 );
 
 export const IconSizes: IconStory = args => (
   <>
-    <Text p={3} variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle01Bold">
       Icon Sizes
     </Text>
-    <Box p={3} alignSelf="flex-start">
-      <Box flexDirection="row" p={3} alignItems="center">
-        <Icon name={args.name} color={args.color} size="xlarge" />
-        <Text pl="3">xlarge</Text>
+    <Box p="2xs" alignSelf="flex-start">
+      <Box flexDirection="row" p="2xs" alignItems="center">
+        <Icon name={args.name} color={args.color} size="xl" />
+        <Text pl="2xs">xl</Text>
       </Box>
-      <Box flexDirection="row" p={3} alignItems="center">
-        <Icon name={args.name} color={args.color} size="large" />
-        <Text pl="3">large</Text>
+      <Box flexDirection="row" p="2xs" alignItems="center">
+        <Icon name={args.name} color={args.color} size="l" />
+        <Text pl="2xs">l</Text>
       </Box>
-      <Box flexDirection="row" p={3} alignItems="center">
-        <Icon name={args.name} color={args.color} size="medium" />
-        <Text pl="3">medium</Text>
+      <Box flexDirection="row" p="2xs" alignItems="center">
+        <Icon name={args.name} color={args.color} size="m" />
+        <Text pl="2xs">m</Text>
       </Box>
-      <Box flexDirection="row" p={3} alignItems="center">
-        <Icon name={args.name} color={args.color} size="small" />
-        <Text pl="3">small</Text>
+      <Box flexDirection="row" p="2xs" alignItems="center">
+        <Icon name={args.name} color={args.color} size="s" />
+        <Text pl="2xs">s</Text>
       </Box>
-      <Box flexDirection="row" p={3} alignItems="center">
-        <Icon name={args.name} color={args.color} size="xsmall" />
-        <Text pl="3">xsmall</Text>
+      <Box flexDirection="row" p="2xs" alignItems="center">
+        <Icon name={args.name} color={args.color} size="xs" />
+        <Text pl="2xs">xs</Text>
       </Box>
-      <Box flexDirection="row" p={3} alignItems="center">
-        <Icon name={args.name} color={args.color} size="2xsmall" />
-        <Text pl="3">2xsmall</Text>
+      <Box flexDirection="row" p="2xs" alignItems="center">
+        <Icon name={args.name} color={args.color} size="2xs" />
+        <Text pl="2xs">2xs</Text>
       </Box>
     </Box>
   </>
@@ -73,21 +80,21 @@ export const IconSizes: IconStory = args => (
 
 export const IconColors: IconStory = args => (
   <>
-    <Text p={3} variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle01Bold">
       Icon Colors
     </Text>
-    <Box alignSelf="flex-start" p={3}>
-      <Box flexDirection="row" p={3} alignItems="center">
+    <Box alignSelf="flex-start" p="2xs">
+      <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color="contentPrimary" />
-        <Text pl="3">contentPrimary</Text>
+        <Text pl="2xs">contentPrimary</Text>
       </Box>
-      <Box flexDirection="row" p={3} alignItems="center">
+      <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color="red" />
-        <Text pl="3">red</Text>
+        <Text pl="2xs">red</Text>
       </Box>
-      <Box flexDirection="row" p={3} alignItems="center">
-        <Icon name={args.name} color="#90fa" />
-        <Text pl="3">#90fa</Text>
+      <Box flexDirection="row" p="2xs" alignItems="center">
+        <Icon name={args.name} color="#fcba03" />
+        <Text pl="2xs">#fcba03</Text>
       </Box>
     </Box>
   </>
@@ -95,14 +102,14 @@ export const IconColors: IconStory = args => (
 
 export const IconList: IconStory = args => (
   <>
-    <Text p={3} variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle01Bold">
       Icon List
     </Text>
-    <Box p={3} alignSelf="flex-start">
+    <Box p="2xs" alignSelf="flex-start">
       {iconList.map((iconName: IconNameType) => (
-        <Box key={iconName} flexDirection="row" p={3} alignItems="center">
+        <Box key={iconName} flexDirection="row" p="2xs" alignItems="center">
           <Icon name={iconName} color={args.color} />
-          <Text pl="3">{iconName}</Text>
+          <Text pl="2xs">{iconName}</Text>
         </Box>
       ))}
     </Box>

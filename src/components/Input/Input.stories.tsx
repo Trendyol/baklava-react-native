@@ -4,7 +4,6 @@ import Text from '../Text/Text';
 import Input from './Input';
 import Box from '../Box/Box';
 import Button from '../Button/Button';
-import { InputSizeTypes } from './types';
 import { iconList } from '../Icon/list';
 
 const sizeList = ['small', 'medium', 'large'];
@@ -24,7 +23,7 @@ const InputMeta: ComponentMeta<typeof Input> = {
     },
   },
   args: {
-    size: sizeList[2] as InputSizeTypes,
+    size: 'large',
     label: 'Label',
     placeholder: 'Placeholder Text',
     labelFixed: false,
@@ -45,8 +44,8 @@ export default InputMeta;
 type InputStory = ComponentStory<typeof Input>;
 
 export const Basic: InputStory = args => (
-  <Box px={3}>
-    <Text py={3} variant="subtitle01Bold">
+  <Box px={'2xs'}>
+    <Text py={'2xs'} variant="subtitle01Bold">
       Input
     </Text>
 
@@ -58,8 +57,8 @@ export const Cases: InputStory = args => {
   const [state, setState] = useState(args);
 
   return (
-    <Box px={3}>
-      <Text py={3} variant="subtitle01Bold">
+    <Box px={'2xs'}>
+      <Text py={'2xs'} variant="subtitle01Bold">
         Input Cases
       </Text>
 
@@ -112,24 +111,24 @@ export const Cases: InputStory = args => {
       />
       <Input {...state} />
 
-      <Box flexDirection="row" mb={5}>
+      <Box flexDirection="row" mb="m">
         <Button
           flex={1}
-          variant="danger"
-          type="outline"
-          size="small"
+          kind="danger"
+          variant="secondary"
+          size="s"
           onPress={() =>
             setState({ ...state, error: true, errorText: null, success: false })
           }
-          text="Toggle Error"
+          label="Toggle Error"
           filled={true}
-          mr={3}
+          mr="2xs"
         />
         <Button
           flex={1}
-          size="small"
-          variant="success"
-          type="outline"
+          size="s"
+          kind="success"
+          variant="secondary"
           onPress={() =>
             setState({
               ...state,
@@ -138,18 +137,18 @@ export const Cases: InputStory = args => {
               error: false,
             })
           }
-          text="Toggle Success"
+          label="Toggle Success"
           filled={true}
-          ml={3}
+          ml="2xs"
         />
       </Box>
 
       <Box flexDirection="row">
         <Button
           flex={1}
-          variant="danger"
-          type="outline"
-          size="small"
+          size="s"
+          kind="danger"
+          variant="secondary"
           onPress={() =>
             setState({
               ...state,
@@ -158,15 +157,16 @@ export const Cases: InputStory = args => {
               success: false,
             })
           }
-          text="Error with Text"
+          label="Error with Text"
           filled={true}
-          mr={3}
+          mr="2xs"
         />
+
         <Button
           flex={1}
-          size="small"
-          variant="success"
-          type="outline"
+          size="s"
+          kind="success"
+          variant="secondary"
           onPress={() =>
             setState({
               ...state,
@@ -175,9 +175,9 @@ export const Cases: InputStory = args => {
               error: false,
             })
           }
-          text="Success with Text"
+          label="Success with Text"
           filled={true}
-          ml={3}
+          ml="2xs"
         />
       </Box>
     </Box>
@@ -185,17 +185,17 @@ export const Cases: InputStory = args => {
 };
 
 export const Sizes: InputStory = () => (
-  <Box px={3}>
-    <Text py={3} variant="subtitle01Bold">
+  <Box px={'2xs'}>
+    <Text py={'2xs'} variant="subtitle01Bold">
       Input Sizes
     </Text>
-    <Box py={4}>
+    <Box py={'xs'}>
       <Input size="large" label="Label" placeholder="Large" />
       <Input size="large" label="Label" placeholder="Large" labelFixed={true} />
       <Input size="large" placeholder="Large" />
     </Box>
 
-    <Box py={4}>
+    <Box py={'xs'}>
       <Input size="medium" label="Label" placeholder="Medium" />
       <Input
         size="medium"
@@ -206,7 +206,7 @@ export const Sizes: InputStory = () => (
       <Input size="medium" placeholder="Medium" />
     </Box>
 
-    <Box py={4}>
+    <Box py={'xs'}>
       <Input size="small" label="Label" placeholder="Small" />
       <Input size="small" label="Label" placeholder="Small" labelFixed={true} />
       <Input size="small" placeholder="Small" />

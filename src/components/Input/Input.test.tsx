@@ -1,6 +1,7 @@
 import React from 'react';
 import { act } from 'react-test-renderer';
-import { fireEvent, render } from '../../testUtils';
+import { fireEvent, render } from '../../test-utils';
+import theme from '../../theme';
 import Input, { TextInputHandles } from './Input';
 
 describe('Input', () => {
@@ -103,7 +104,9 @@ describe('Input', () => {
     const { getByTestId } = render(<Input label="label" />);
 
     // then
-    expect(getByTestId('input-box').props.borderColor).toBe('borderColor');
+    expect(getByTestId('input-box').props.style[0].borderColor).toBe(
+      theme.colors.borderColor,
+    );
 
     // when
     act(() => {
@@ -111,7 +114,9 @@ describe('Input', () => {
     });
 
     // then
-    expect(getByTestId('input-box').props.borderColor).toBe('primaryColor');
+    expect(getByTestId('input-box').props.style[0].borderColor).toBe(
+      theme.colors.primaryColor,
+    );
   });
 
   test('should not focus and blur input when input is disabled', () => {
@@ -119,7 +124,9 @@ describe('Input', () => {
     const { getByTestId } = render(<Input label="label" disabled />);
 
     // then
-    expect(getByTestId('input-box').props.borderColor).toBe('borderColor');
+    expect(getByTestId('input-box').props.style[0].borderColor).toBe(
+      theme.colors.borderColor,
+    );
 
     // when
     act(() => {
@@ -129,7 +136,9 @@ describe('Input', () => {
     });
 
     // then
-    expect(getByTestId('input-box').props.borderColor).toBe('borderColor');
+    expect(getByTestId('input-box').props.style[0].borderColor).toBe(
+      theme.colors.borderColor,
+    );
   });
 
   test('should blur input without value correctly', () => {
@@ -137,7 +146,9 @@ describe('Input', () => {
     const { getByTestId } = render(<Input label="label" />);
 
     // then
-    expect(getByTestId('input-box').props.borderColor).toBe('borderColor');
+    expect(getByTestId('input-box').props.style[0].borderColor).toBe(
+      theme.colors.borderColor,
+    );
 
     // when
     act(() => {
@@ -147,7 +158,9 @@ describe('Input', () => {
     });
 
     // then
-    expect(getByTestId('input-box').props.borderColor).toBe('borderColor');
+    expect(getByTestId('input-box').props.style[0].borderColor).toBe(
+      theme.colors.borderColor,
+    );
   });
 
   test('should blur input with value correctly', () => {
@@ -155,7 +168,9 @@ describe('Input', () => {
     const { getByTestId } = render(<Input label="label" value="value" />);
 
     // then
-    expect(getByTestId('input-box').props.borderColor).toBe('borderColor');
+    expect(getByTestId('input-box').props.style[0].borderColor).toBe(
+      theme.colors.borderColor,
+    );
 
     // when
     act(() => {
@@ -165,7 +180,9 @@ describe('Input', () => {
     });
 
     // then
-    expect(getByTestId('input-box').props.borderColor).toBe('borderColor');
+    expect(getByTestId('input-box').props.style[0].borderColor).toBe(
+      theme.colors.borderColor,
+    );
   });
 
   test('should change text of input without value', () => {

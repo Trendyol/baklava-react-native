@@ -1,5 +1,9 @@
-export type ButtonVariantTypes = 'primary' | 'secondary' | 'success' | 'danger';
+export type ButtonVariantVariantTypes = 'primary' | 'secondary' | 'tertiary';
 
-export type ButtonTypeTypes = 'contained' | 'outline' | 'text';
+export type ButtonKindVariantTypes =
+  | 'default'
+  | 'neutral'
+  | 'success'
+  | 'danger';
 
-export type ButtonSizeTypes = 'small' | 'medium' | 'large';
+export type ButtonSizeVariantTypes = 's' | 'm' | 'l';

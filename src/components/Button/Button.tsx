@@ -1,60 +1,94 @@
 import React from 'react';
-import { Pressable, StyleSheet } from 'react-native';
-import styled from 'styled-components/native';
-import { flexbox, color, space } from 'styled-system';
-import Text from '../Text/Text';
-import theme from '../../theme';
+import { Pressable } from 'react-native';
+import {
+  backgroundColor,
+  border,
+  createRestyleComponent,
+  createVariant,
+  layout,
+  LayoutProps,
+  spacing,
+  spacingShorthand,
+  SpacingProps,
+  SpacingShorthandProps,
+  VariantProps,
+} from '@ergenekonyigit/restyle';
+import Text, { TextVariants } from '../Text/Text';
 import { useIsPressed } from './hooks';
-import type {
-  ButtonSizeTypes,
-  ButtonTypeTypes,
-  ButtonVariantTypes,
-} from './types';
-import type { TextVariantTypes } from '../Text/types';
 import { IconNameType } from '../Icon/types';
 import Icon from '../Icon/Icon';
+import { Theme } from '../../theme';
+import Box from '../Box/Box';
+import { variantColorSelector } from './utils';
 
-const BaseButton = styled(Pressable)`
-  ${flexbox}
-  ${color}
-  ${space}
-`;
+type ButtonProps = React.ComponentProps<typeof Box> &
+  React.ComponentProps<typeof Pressable> & {
+    children?: React.ReactNode;
+    onPress?: () => void;
+    label?: string;
+    icon?: IconNameType | null;
+    disabled?: boolean;
+    isPressed?: boolean;
+    filled?: boolean;
+    size?: VariantProps<Theme, 'buttonSizeVariants'>['variant'];
+    kind?: VariantProps<Theme, 'buttonKindVariants'>['variant'];
+    variant?: VariantProps<Theme, 'buttonVariants'>['variant'];
+  };
 
-const StyledButton = styled(BaseButton)`
-  ${theme.buttonSize}
-  ${theme.buttonType}
-`;
-
-const styles = StyleSheet.create({
-  button: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  underlineText: {
-    textDecorationLine: 'underline',
-  },
+const sizeVariant = createVariant<Theme, 'buttonSizeVariants', 'size'>({
+  property: 'size',
+  themeKey: 'buttonSizeVariants',
 });
 
+const kindVariant = createVariant<Theme, 'buttonKindVariants', 'kind'>({
+  property: 'kind',
+  themeKey: 'buttonKindVariants',
+});
+
+const variantVariant = createVariant<Theme, 'buttonVariants', 'variant'>({
+  property: 'variant',
+  themeKey: 'buttonVariants',
+});
+
+const ButtonContainer = createRestyleComponent<
+  ButtonProps &
+    VariantProps<Theme, 'buttonSizeVariants'> &
+    VariantProps<Theme, 'buttonKindVariants'> &
+    VariantProps<Theme, 'buttonVariants'>,
+  Theme
+>(
+  [
+    layout,
+    spacing,
+    border,
+    backgroundColor,
+    sizeVariant,
+    kindVariant,
+    variantVariant,
+  ],
+  Box,
+);
+
+type PressableProps = React.ComponentProps<typeof Pressable> &
+  LayoutProps<Theme> &
+  SpacingProps<Theme> &
+  SpacingShorthandProps<Theme>;
+
+const PressableContainer = createRestyleComponent<PressableProps, Theme>(
+  [layout, spacing, spacingShorthand],
+  Pressable,
+);
+
 const Button = ({
-  type = 'contained',
-  size = 'medium',
+  size = 'm',
+  kind = 'default',
   variant = 'primary',
   icon,
-  text,
+  label,
   disabled = false,
   filled = false,
   ...rest
-}: {
-  variant?: ButtonVariantTypes;
-  type?: ButtonTypeTypes;
-  size?: ButtonSizeTypes;
-  icon?: IconNameType | null;
-  text?: string;
-  disabled?: boolean;
-  filled?: boolean;
-  [key: string]: any;
-}) => {
+}: ButtonProps) => {
   const { pressableProps, isPressed } = useIsPressed(rest.isPressed);
 
   /* istanbul ignore next */
@@ -62,59 +96,98 @@ const Button = ({
   /* istanbul ignore next */
   const onPressOut = () => pressableProps.onPressOut();
 
-  const buttonTypes = theme.buttonStyles.type({
+  const buttonHorizontalPadding: SpacingProps<Theme>['paddingHorizontal'] =
+    label
+      ? (
+          {
+            s: 'm',
+            m: 'xl',
+            l: '2xl',
+          } as Readonly<
+            Record<
+              keyof Omit<Theme['buttonSizeVariants'], 'defaults'>,
+              keyof Theme['spacing']
+            >
+          >
+        )[size]
+      : (
+          {
+            s: '2xs',
+            m: 'xs',
+            l: 's',
+          } as Readonly<
+            Record<
+              keyof Omit<Theme['buttonSizeVariants'], 'defaults'>,
+              keyof Theme['spacing']
+            >
+          >
+        )[size];
+
+  const textVariant: TextVariants = (
+    {
+      s: 'subtitle03Medium',
+      m: 'subtitle03Medium',
+      l: 'subtitle02Medium',
+    } as const
+  )[size];
+
+  const variantColors = variantColorSelector({
     variant,
-    type,
+    kind,
     isPressed,
     disabled,
   });
 
-  const textVariants = {
-    large: 'subtitle02Medium',
-    medium: 'subtitle03Medium',
-    small: 'subtitle03Medium',
-  }[size] as TextVariantTypes;
-
   const typeColor = disabled
-    ? theme.colors.contentPassive
-    : isPressed && type !== 'text'
-    ? theme.colors.white
-    : buttonTypes[type].color;
+    ? 'contentPassive'
+    : isPressed && variant !== 'tertiary'
+    ? 'white'
+    : variantColors.color;
 
-  const textStyle = type === 'text' && !disabled ? styles.underlineText : {};
+  const iconView = React.useMemo(() => {
+    if (!icon) {
+      return null;
+    }
+    return <Icon name={icon} size="s" color={typeColor} testID="button-icon" />;
+  }, [icon, typeColor]);
+
+  const labelView = React.useMemo(() => {
+    if (!label) {
+      return null;
+    }
+    return (
+      <Text
+        variant={textVariant}
+        color={typeColor}
+        marginLeft={icon ? '2xs' : 'none'}
+        testID="button-text">
+        {label}
+      </Text>
+    );
+  }, [icon, label, textVariant, typeColor]);
 
   return (
-    <StyledButton
-      //@ts-ignore
-      type={type}
-      size={size}
-      variant={variant}
-      text={text}
+    <PressableContainer
       onPressIn={onPressIn}
       onPressOut={onPressOut}
-      isPressed={isPressed}
-      alignSelf={filled ? 'stretch' : 'flex-start'}
       disabled={disabled}
       {...rest}>
-      {icon ? (
-        <Icon name={icon} size="small" color={typeColor} testID="button-icon" />
-      ) : null}
-      {text ? (
-        <Text
-          variant={textVariants}
-          color={typeColor}
-          style={textStyle}
-          marginLeft={icon ? 3 : 0}
-          testID="button-text">
-          {text}
-        </Text>
-      ) : null}
-    </StyledButton>
+      <ButtonContainer
+        size={size}
+        kind={kind}
+        // @ts-ignore
+        variant={variant}
+        paddingHorizontal={buttonHorizontalPadding}
+        flexDirection="row"
+        alignItems="center"
+        justifyContent="center"
+        alignSelf={filled ? 'stretch' : 'flex-start'}
+        {...variantColors}>
+        {iconView}
+        {labelView}
+      </ButtonContainer>
+    </PressableContainer>
   );
-};
-
-Button.defaultProps = {
-  ...styles.button,
 };
 
 export default Button;

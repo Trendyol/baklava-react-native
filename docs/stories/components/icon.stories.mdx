@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs';
-import IconColors from '../assets/icon/IconColors.png';
 import IconSizes from '../assets/icon/IconSizes.png';
+import IconColors from '../assets/icon/IconColors.png';
 import IconList1 from '../assets/icon/IconList1.png';
 import IconList2 from '../assets/icon/IconList2.png';
 import IconList3 from '../assets/icon/IconList3.png';
@@ -34,8 +34,8 @@ Icon component is used to show some decorative icons.
     flexWrap: 'wrap',
     justifyContent: 'center',
   }}>
-  <img src={IconColors} width="250" alt="IconColors" />
   <img src={IconSizes} width="250" alt="IconSizes" />
+  <img src={IconColors} width="250" alt="IconColors" />
   <img src={IconList1} width="250" alt="IconList1" />
   <img src={IconList2} width="250" alt="IconList2" />
   <img src={IconList3} width="250" alt="IconList3" />
@@ -54,7 +54,7 @@ Icon component is used to show some decorative icons.
 ## Usage
 
 ```jsx
-<Icon name="confetti" color="primaryColor" size="xlarge" />
+<Icon name="confetti" color="primaryColor" size="xl" />
 ```
 
 <br />
@@ -69,9 +69,9 @@ Icon names are in the list, fixed and cannot be used outside the list.
 
 The size of the icon.
 
-`xlarge`,
-`large`,
-`medium`,
-`small`
-`xsmall`
-`2xsmall`
+`xl`,
+`l`,
+`m`,
+`s`
+`xs`
+`2xs`

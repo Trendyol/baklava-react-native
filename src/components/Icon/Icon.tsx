@@ -1,42 +1,34 @@
 import React from 'react';
-import { useTheme } from 'styled-components/native';
+import { useTheme, VariantProps } from '@ergenekonyigit/restyle';
 import * as icons from '../../icons';
 import { Theme } from '../../theme';
-import { IconNameType, IconSizeType } from './types';
+import { IconNameType } from './types';
 import { toPascalCase } from './utils';
+import { ViewProps } from 'react-native';
 
 const Icon = ({
   name,
   color = 'contentPrimary',
-  size = 'large',
+  size = 'l',
   testID = 'icon',
   ...rest
-}: {
+}: ViewProps & {
   name: IconNameType;
-  size?: IconSizeType;
-  color?: keyof Theme['colors'] | string;
+  size?: VariantProps<Theme, 'iconSizeVariants'>['variant'];
+  color?: VariantProps<Theme, 'colors'>['variant'] | string;
   testID?: string;
 }) => {
-  const theme = useTheme() as Theme;
+  const theme = useTheme<Theme>();
 
   if (!name) {
     return null;
   }
 
-  const iconName = toPascalCase(name);
-
-  const iconSize = {
-    '2xsmall': theme.iconSizes[0],
-    xsmall: theme.iconSizes[1],
-    small: theme.iconSizes[2],
-    medium: theme.iconSizes[3],
-    large: theme.iconSizes[4],
-    xlarge: theme.iconSizes[5],
-  }[size];
-
   const iconColor = theme.colors[`${color as keyof Theme['colors']}`] ?? color;
 
-  const TheIcon = icons[iconName as keyof typeof icons];
+  const iconSize = theme.iconSizeVariants[size];
+
+  const TheIcon = icons[toPascalCase(name) as keyof typeof icons];
 
   return (
     <TheIcon

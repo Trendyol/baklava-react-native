@@ -2,7 +2,7 @@
 
 Baklava is a design system provided by <a href="https://github.com/trendyol" target="_blank">Trendyol</a> to create a consistent UI/UX for app users.
 
-It is built on top of React Native, allowing you to develop apps for Android and iOS. Our target is providing a UI library that has neatly designed and developed for providing best possible user experience for the users of applications that uses Baklava DS.
+It is built on top of React Native and Restyle, allowing you to develop apps for Android and iOS. Our target is providing a UI library that has neatly designed and developed for providing best possible user experience for the users of applications that uses Baklava DS.
 
 <br/>
 

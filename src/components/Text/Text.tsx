@@ -1,55 +1,59 @@
-import React from 'react';
-import { Text as T } from 'react-native';
-import styled from 'styled-components/native';
 import {
-  compose,
-  color as styledColor,
-  space,
+  composeRestyleFunctions,
+  TextProps,
+  useRestyle,
+  color,
+  createVariant,
+  opacity,
+  spacing,
+  spacingShorthand,
+  textShadow,
   typography,
-  position,
-  size,
-  fontFamily,
-  fontWeight,
-  textStyle,
-  variant as styledVariant,
-  fontSize,
-} from 'styled-system';
-import theme from '../../theme';
-import { TextVariantTypes } from './types';
+  visible,
+} from '@ergenekonyigit/restyle';
+import React from 'react';
+import { TextProps as RNTextProps, Text as RNText } from 'react-native';
+import { Theme } from '../../theme';
 
-const StyledText = styled(T)(
-  compose(
-    styledColor,
-    space,
-    typography,
-    position,
-    size,
-    fontSize,
-    fontWeight,
-    fontFamily,
-    textStyle,
-    styledVariant({ variants: theme.textStyle }),
-  ),
-);
+export type TextVariants = TextProps<Theme>['variant'];
 
-function Text({
-  variant = 'bodyText',
-  color = 'contentPrimary',
-  ...rest
-}: {
-  variant?: TextVariantTypes;
-  color?: string;
-  [key: string]: any;
-}) {
-  return (
-    <StyledText
-      //@ts-ignore
-      variant={variant}
-      color={color}
-      {...rest}>
-      {rest.children}
-    </StyledText>
-  );
-}
+type RestyleProps = TextProps<Theme>;
+
+const restyleFunctions = composeRestyleFunctions<Theme, RestyleProps>([
+  color,
+  opacity,
+  visible,
+  typography,
+  spacing,
+  spacingShorthand,
+  textShadow,
+  createVariant({ themeKey: 'textVariants' }),
+]);
+
+type Props = RNTextProps & RestyleProps;
+
+const Text = ({ testID, accessibilityLabel, accessible, ...rest }: Props) => {
+  const props = useRestyle(restyleFunctions, rest);
+
+  const testProps = React.useMemo(() => {
+    const result: RNTextProps = {
+      accessible: false,
+      accessibilityLabel: undefined,
+      testID: undefined,
+    };
+
+    if (!(testID || accessibilityLabel)) {
+      return result;
+    }
+
+    result.accessible = accessible ?? true;
+    result.accessibilityLabel = accessibilityLabel;
+    result.testID = testID ?? accessibilityLabel;
+
+    return result;
+  }, [testID, accessibilityLabel, accessible]);
+
+  return <RNText {...props} {...testProps} />;
+};
 
 export default Text;

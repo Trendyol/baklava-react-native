@@ -31,7 +31,8 @@ Baklava uses a list of defined size for customizing the global spacing, font siz
 ## Space
 
 ```jsx
-const space = [0, 2, 4, 8, 12, 16, 24, 32, 48, 64];
+const spacing = [-80, -64, -48, -40, -32, -24, -20 -16, -14, -12, -8, -4, -2, 
+                 0, 2, 4, 8, 12, 14, 16, 20, 24, 32, 40, 48, 64, 80];
 ```
 
 <div style={sizeLineStyle.sizeLineContainer}>
@@ -41,25 +42,32 @@ const space = [0, 2, 4, 8, 12, 16, 24, 32, 48, 64];
   <SizeLine value="2" pixels="4" />
   <SizeLine value="3" pixels="8" />
   <SizeLine value="4" pixels="12" />
-  <SizeLine value="5" pixels="16" />
-  <SizeLine value="6" pixels="24" />
-  <SizeLine value="7" pixels="32" />
-  <SizeLine value="8" pixels="48" />
-  <SizeLine value="9" pixels="64" />
+  <SizeLine value="5" pixels="14" />
+  <SizeLine value="6" pixels="16" />
+  <SizeLine value="7" pixels="20" />
+  <SizeLine value="8" pixels="24" />
+  <SizeLine value="9" pixels="32" />
+  <SizeLine value="10" pixels="40" />
+  <SizeLine value="11" pixels="48" />
+  <SizeLine value="12" pixels="64" />
+  <SizeLine value="13" pixels="80" />
 </div>
+
+<br/>
 
 ### Usage
 
 ```jsx
-<Box p={4} />
+<Box p="2xs" />
 ```
+
+<br/>
 
 ## Font Sizes and Weights
 
 ```jsx
 export const fontSizes = [12, 14, 16, 20, 24, 28, 32];
-export const fontWeights = ['300', '400', '500', '600', '700'];
-export const lineHeights = [12, 14, 16, 20, 24, 28, 32, 36];
+export const fontWeights = ['100', '200', '300', '400', '500', '600', '700', '800', '900', bold, normal];
 ```
 
 <div style={fontStyle.fontContainer}>
@@ -76,43 +84,55 @@ export const lineHeights = [12, 14, 16, 20, 24, 28, 32, 36];
 
 <div style={fontStyle.fontSubContainer}>
   <FontHeader text="Font Weight" />
+  <FontWeight fontWeight="100" />
+  <FontWeight fontWeight="200" />
   <FontWeight fontWeight="300" />
   <FontWeight fontWeight="400" />
   <FontWeight fontWeight="500"/>
   <FontWeight fontWeight="600" />
   <FontWeight fontWeight="700" />
+  <FontWeight fontWeight="800" />
+  <FontWeight fontWeight="900" />
+  <FontWeight fontWeight="bold" />
+  <FontWeight fontWeight="normal" />
 </div>
 </div>
 
 ### Usage
 
 ```jsx
-<Text fontSize={3} fontWeight={1} />
+<Text fontSize={16} fontWeight="400" />
 ```
+
+<br/>
 
 ## Radius
 
 ```jsx
-export const radii = {
+export const borderRadii = {
   none: 0,
-  small: 4,
-  normal: 6,
-  large: 8,
-  xlarge: 16,
+  xs: 2,
+  s: 4,
+  m: 6,
+  l: 8,
+  xl: 16,
+  full: 999,
 };
 ```
 
 <div style={fontStyle.fontSubContainer}>
   <FontHeader text="Radius" />
   <Radius radius={0} value="none" />
-  <Radius radius={4} value="small" />
-  <Radius radius={6} value="normal" />
-  <Radius radius={8} value="large" />
-  <Radius radius={16} value="xlarge" />
+  <Radius radius={2} value="xs" />
+  <Radius radius={4} value="s" />
+  <Radius radius={6} value="m" />
+  <Radius radius={8} value="l" />
+  <Radius radius={16} value="xl" />
+  <Radius radius={999} value="full" />
 </div>
 
 ### Usage
 
 ```jsx
-<Box borderRadius="small" />
+<Box borderRadius="s" />
 ```

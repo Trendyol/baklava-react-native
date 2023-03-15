@@ -8,13 +8,8 @@ exports[`Button should render button correctly 1`] = `
     }
   }
   accessible={true}
-  alignItems="center"
-  alignSelf="flex-start"
   collapsable={false}
-  flexDirection="row"
   focusable={true}
-  isPressed={false}
-  justifyContent="center"
   onBlur={[Function]}
   onClick={[Function]}
   onFocus={[Function]}
@@ -24,47 +19,53 @@ exports[`Button should render button correctly 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  size="medium"
   style={
     Array [
-      Object {
-        "alignItems": "center",
-        "alignSelf": "flex-start",
-        "backgroundColor": "#F27A1A",
-        "borderColor": "#F27A1A",
-        "borderRadius": 6,
-        "borderWidth": 1,
-        "color": "#ffffff",
-        "flexDirection": "row",
-        "justifyContent": "center",
-        "paddingHorizontal": 24,
-        "paddingVertical": 12,
-      },
+      Object {},
     ]
   }
-  text="testtesttest"
-  type="contained"
-  variant="primary"
 >
-  <Text
+  <View
     color="white"
-    marginLeft={0}
     style={
       Array [
-        Object {
-          "color": "#ffffff",
-          "fontFamily": "System",
-          "fontSize": 14,
-          "fontWeight": "500",
-          "marginLeft": 0,
-        },
         Object {},
+        Array [
+          Object {
+            "alignItems": "center",
+            "alignSelf": "flex-start",
+            "backgroundColor": "#F27A1A",
+            "borderColor": "#F27A1A",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "height": 40,
+            "justifyContent": "center",
+            "paddingHorizontal": 24,
+            "paddingVertical": 12,
+          },
+        ],
       ]
     }
-    testID="button-text"
-    variant="subtitle03Medium"
   >
-    testtesttest
-  </Text>
+    <Text
+      accessible={true}
+      style={
+        Array [
+          Object {
+            "color": "#FFFFFF",
+            "fontFamily": "Rubik-Medium",
+            "fontSize": 14,
+            "fontWeight": "500",
+            "lineHeight": 16,
+            "marginLeft": 0,
+          },
+        ]
+      }
+      testID="button-text"
+    >
+      testtesttest
+    </Text>
+  </View>
 </View>
 `;

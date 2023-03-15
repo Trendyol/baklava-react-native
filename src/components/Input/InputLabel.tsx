@@ -33,12 +33,19 @@ export const InputLabel = React.memo(
 
     const RenderFixedLabel = () => {
       return (
-        <Box flexDirection="row" mb={2}>
-          <Text variant="subtitle04Medium" color={contentSecondaryColor}>
+        <Box flexDirection="row" mb="3xs" testID="fixed-label-box">
+          <Text
+            variant="subtitle04Medium"
+            color={contentSecondaryColor}
+            testID="fixed-label">
             {label}
           </Text>
           {!required ? (
-            <Text ml={1} variant="subtitle04Regular" color="contentTertiary">
+            <Text
+              testID="optional-fixed-label"
+              ml="4xs"
+              variant="subtitle04Regular"
+              color="contentTertiary">
               (Optional)
             </Text>
           ) : null}
@@ -50,7 +57,10 @@ export const InputLabel = React.memo(
       return (
         <>
           <Animated.View {...animatedViewProps} pointerEvents="none">
-            <Box flexDirection="row" height={inputHeight + 6}>
+            <Box
+              flexDirection="row"
+              height={inputHeight + 6}
+              testID="outlined-label-box">
               <Animated.Text {...animatedTextProps}>
                 {label}
                 {!required ? ' (Optional)' : ''}

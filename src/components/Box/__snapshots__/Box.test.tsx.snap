@@ -7,6 +7,5 @@ exports[`Box should render box correctly 1`] = `
       Object {},
     ]
   }
-  testID="box"
 />
 `;

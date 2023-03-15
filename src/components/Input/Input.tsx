@@ -4,13 +4,11 @@ import {
   EasingFunction,
   NativeSyntheticEvent,
   TextInput,
+  TextInputProps,
   TextInputFocusEventData,
 } from 'react-native';
-import styled, { useTheme } from 'styled-components/native';
-import { color, flexbox, space, borderRadius, position } from 'styled-system';
-import { Theme } from '../../theme';
+import theme, { Theme } from '../../theme';
 import Box from '../Box/Box';
-import { InputSizeTypes } from './types';
 import { IconNameType } from '../Icon/types';
 import { InputIcon } from './InputIcon';
 import { InputLabel } from './InputLabel';
@@ -22,38 +20,51 @@ import {
   useTogglePasswordVisibility,
 } from './hooks';
 import { getBorderColor, getPlaceholderText } from './utils';
+import {
+  backgroundColor,
+  border,
+  createRestyleComponent,
+  createVariant,
+  layout,
+  position,
+  spacing,
+  VariantProps,
+} from '@ergenekonyigit/restyle';
 
-const BaseInput = styled(TextInput)`
-  ${flexbox}
-  ${color}
-  ${space}
-  ${position}
-  ${borderRadius}
-`;
-// @ts-ignore
-type InputProps = React.ComponentPropsWithRef<typeof TextInput> & {
-  size?: InputSizeTypes;
-  label?: string | null;
-  labelFixed?: boolean;
-  placeholder?: string;
-  helpText?: string | null;
-  errorText?: string | null;
-  successText?: string | null;
-  required?: boolean;
-  icon?: IconNameType | null;
-  success?: boolean;
-  error?: boolean;
-  secureTextEntry?: boolean;
-  onFocus?: (args: any) => void;
-  onBlur?: (args: any) => void;
-  disabled?: boolean;
-  easing?: EasingFunction;
-  testID?: string;
-  editable?: boolean;
-  value?: string;
-  defaultValue?: string;
-  onChangeText?: (text: string) => void;
-};
+type InputProps = React.ComponentProps<typeof Box> &
+  TextInputProps & {
+    label?: string | null;
+    labelFixed?: boolean;
+    placeholder?: string;
+    helpText?: string | null;
+    errorText?: string | null;
+    successText?: string | null;
+    required?: boolean;
+    icon?: IconNameType | null;
+    success?: boolean;
+    error?: boolean;
+    secureTextEntry?: boolean;
+    onFocus?: (e: NativeSyntheticEvent<TextInputFocusEventData>) => void;
+    onBlur?: (e: NativeSyntheticEvent<TextInputFocusEventData>) => void;
+    disabled?: boolean;
+    easing?: EasingFunction;
+    testID?: string;
+    editable?: boolean;
+    value?: string;
+    defaultValue?: string;
+    onChangeText?: (text: string) => void;
+    size?: VariantProps<Theme, 'inputSizeVariants'>['variant'];
+  };
+
+const sizeVariant = createVariant<Theme, 'inputSizeVariants', 'size'>({
+  property: 'size',
+  themeKey: 'inputSizeVariants',
+});
+
+const BaseInput = createRestyleComponent<
+  InputProps & VariantProps<Theme, 'inputSizeVariants'>,
+  Theme
+>([layout, spacing, border, backgroundColor, position, sizeVariant], TextInput);
 
 export type TextInputHandles = Pick<
   TextInput,
@@ -89,7 +100,6 @@ const Input = forwardRef<TextInputHandles, InputProps>(
     const [variantIconName, setVariantIconName] =
       React.useState<IconNameType | null>(null);
 
-    const theme = useTheme() as Theme;
     const innerRef = useInputRef();
     const { value, isControlled, setUncontrolledValue } = useInputValue({
       value: rest.value,
@@ -105,12 +115,16 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       focused,
     });
 
-    const borderColor = getBorderColor({ focused, successState, errorState });
+    const borderColor = getBorderColor({
+      focused,
+      successState,
+      errorState,
+    });
 
     const inputHeight: number = {
-      small: theme.inputStyle.height[0],
-      medium: theme.inputStyle.height[1],
-      large: theme.inputStyle.height[2],
+      small: theme.inputSizeVariants.small.height,
+      medium: theme.inputSizeVariants.medium.height,
+      large: theme.inputSizeVariants.large.height,
     }[size];
 
     const {
@@ -156,9 +170,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       }
     }, [error, success, icon]);
 
-    const handleFocus = (
-      args: NativeSyntheticEvent<TextInputFocusEventData>,
-    ) => {
+    const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
       if (disabled || !editable) {
         return;
       }
@@ -169,12 +181,10 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       setErrorState(false);
       setSuccessState(false);
 
-      rest.onFocus?.(args);
+      rest.onFocus?.(e);
     };
 
-    const handleBlur = (
-      args: NativeSyntheticEvent<TextInputFocusEventData>,
-    ) => {
+    const handleBlur = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
       if (disabled || !editable) {
         return;
       }
@@ -184,7 +194,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       }
 
       setFocused(false);
-      rest.onBlur?.(args);
+      rest.onBlur?.(e);
     };
 
     const handleChangeText = (nextValue: string) => {
@@ -208,7 +218,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
     }));
 
     return (
-      <Box py={3}>
+      <Box py={'2xs'}>
         <InputLabel
           label={label}
           labelFixed={labelFixed}
@@ -223,16 +233,15 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           flexDirection="row"
           alignItems="center"
           borderWidth={1}
-          borderRadius="normal"
+          borderRadius={'m'}
           borderColor={borderColor}
           backgroundColor={disabled ? 'tertiaryColor' : 'white'}
-          px={5}
-          zIndex={0}
+          px="m"
+          zIndex="layer_0"
           accessibilityLabel={`${testID}-box`}
           testID={`${testID}-box`}>
           <BaseInput
             {...rest}
-            //@ts-ignore
             flex={1}
             ref={innerRef}
             multiline={false}
@@ -249,7 +258,6 @@ const Input = forwardRef<TextInputHandles, InputProps>(
             editable={!disabled}
             accessibilityLabel={testID}
             testID={testID}
-            style={{ fontFamily: theme.fonts[1] }}
           />
           <InputIcon
             secureTextEntry={secureTextEntry}

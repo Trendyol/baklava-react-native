@@ -88,8 +88,9 @@ export const useOutlineLabelVisibility = ({
     easing,
   };
 
-  const labelFontSize: number = theme.fontSizes[1];
-  const labelLineHeightValue: number = theme.fontSizes[2];
+  const labelFontSize: number = theme.textVariants.defaults.fontSize;
+  const labelLineHeightValue: number =
+    theme.textVariants.subtitle02Regular.fontSize;
   const initialTopValue: number = (inputHeight - labelLineHeightValue + 2) / 2;
   const labelPositionEmptyValue = 0;
   const labelPositionFillValue: number =
@@ -101,10 +102,18 @@ export const useOutlineLabelVisibility = ({
     ),
   ).current;
   const fontSizeRef = useRef(
-    new Animated.Value(value ? theme.fontSizes[0] : theme.fontSizes[1]),
+    new Animated.Value(
+      value
+        ? theme.textVariants.subtitle04Regular.fontSize
+        : theme.textVariants.defaults.fontSize,
+    ),
   ).current;
   const lineHeightRef = useRef(
-    new Animated.Value(value ? theme.fontSizes[1] : theme.fontSizes[2]),
+    new Animated.Value(
+      value
+        ? theme.textVariants.defaults.fontSize
+        : theme.textVariants.subtitle02Regular.fontSize,
+    ),
   ).current;
 
   /* istanbul ignore next */
@@ -161,25 +170,25 @@ export const useOutlineLabelVisibility = ({
       style: {
         position: 'absolute',
         bottom: labelPositionRef,
-        left: theme.space[4],
+        left: theme.spacing.xs,
         zIndex: 2,
         height: viewHeight,
       },
     };
-  }, [labelPositionRef, theme.space, viewHeight]);
+  }, [labelPositionRef, theme.spacing, viewHeight]);
 
   const animatedTextProps: AnimatedTextPropsType = useMemo(() => {
     return {
       style: {
-        fontFamily: theme.fonts[1],
+        fontFamily: theme.fonts.regular,
         color: focused
           ? theme.colors.contentSecondary
           : theme.colors.contentTertiary,
         backgroundColor: disabled ? 'transparent' : 'white',
         height: lineHeightRef,
-        paddingLeft: theme.space[2],
-        paddingRight: theme.space[2],
-        top: initialTopValue - 4,
+        paddingLeft: theme.spacing['3xs'],
+        paddingRight: theme.spacing['3xs'],
+        top: initialTopValue - (focused ? 4 : 1),
         fontSize: fontSizeRef,
         lineHeight: lineHeightRef,
       },
@@ -193,7 +202,7 @@ export const useOutlineLabelVisibility = ({
     theme.colors.contentSecondary,
     theme.colors.contentTertiary,
     theme.fonts,
-    theme.space,
+    theme.spacing,
   ]);
 
   return {

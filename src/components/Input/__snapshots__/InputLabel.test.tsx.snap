@@ -2,8 +2,6 @@
 
 exports[`Input Label should render fixed label correctly 1`] = `
 <View
-  flexDirection="row"
-  mb={2}
   style={
     Array [
       Object {
@@ -12,21 +10,22 @@ exports[`Input Label should render fixed label correctly 1`] = `
       },
     ]
   }
-  testID="box"
+  testID="fixed-label-box"
 >
   <Text
-    color="contentSecondary"
+    accessible={true}
     style={
       Array [
         Object {
           "color": "#6E7787",
-          "fontFamily": "System",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 12,
           "fontWeight": "500",
+          "lineHeight": 14,
         },
       ]
     }
-    variant="subtitle04Medium"
+    testID="fixed-label"
   >
     Label
   </Text>
@@ -35,8 +34,6 @@ exports[`Input Label should render fixed label correctly 1`] = `
 
 exports[`Input Label should render fixed label with optional correctly 1`] = `
 <View
-  flexDirection="row"
-  mb={2}
   style={
     Array [
       Object {
@@ -45,39 +42,40 @@ exports[`Input Label should render fixed label with optional correctly 1`] = `
       },
     ]
   }
-  testID="box"
+  testID="fixed-label-box"
 >
   <Text
-    color="contentSecondary"
+    accessible={true}
     style={
       Array [
         Object {
           "color": "#6E7787",
-          "fontFamily": "System",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 12,
           "fontWeight": "500",
+          "lineHeight": 14,
         },
       ]
     }
-    variant="subtitle04Medium"
+    testID="fixed-label"
   >
     Label
   </Text>
   <Text
-    color="contentTertiary"
-    ml={1}
+    accessible={true}
     style={
       Array [
         Object {
           "color": "#95A1B5",
-          "fontFamily": "System",
+          "fontFamily": "Rubik-Regular",
           "fontSize": 12,
           "fontWeight": "400",
+          "lineHeight": 14,
           "marginLeft": 2,
         },
       ]
     }
-    variant="subtitle04Regular"
+    testID="optional-fixed-label"
   >
     (Optional)
   </Text>
@@ -93,16 +91,15 @@ exports[`Input Label should render outlined label correctly 1`] = `
   style={Object {}}
 >
   <View
-    flexDirection="row"
-    height={54}
     style={
       Array [
         Object {
           "flexDirection": "row",
+          "height": 54,
         },
       ]
     }
-    testID="box"
+    testID="outlined-label-box"
   >
     <Text
       collapsable={false}
@@ -122,16 +119,15 @@ exports[`Input Label should render outlined label with optional correctly 1`] = 
   style={Object {}}
 >
   <View
-    flexDirection="row"
-    height={54}
     style={
       Array [
         Object {
           "flexDirection": "row",
+          "height": 54,
         },
       ]
     }
-    testID="box"
+    testID="outlined-label-box"
   >
     <Text
       collapsable={false}

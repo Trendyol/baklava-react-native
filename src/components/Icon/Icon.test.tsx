@@ -1,7 +1,7 @@
 import React from 'react';
 import theme from '../../theme';
-import { render } from '../../testUtils';
-import Icon from '../Icon/Icon';
+import { render } from '../../test-utils';
+import Icon from './Icon';
 import { iconList } from './list';
 
 describe('Icon', () => {
@@ -23,20 +23,20 @@ describe('Icon', () => {
     const iconComponent = getByTestId('icon');
 
     // then
-    expect(iconComponent.props.width).toBe(theme.iconSizes[4]);
-    expect(iconComponent.props.height).toBe(theme.iconSizes[4]);
+    expect(iconComponent.props.width).toBe(theme.iconSizeVariants.l);
+    expect(iconComponent.props.height).toBe(theme.iconSizeVariants.l);
   });
 
   test('should render given size correctly', () => {
     // when
     const { getByTestId } = render(
-      <Icon testID="icon" name="confetti" size="2xsmall" />,
+      <Icon testID="icon" name="confetti" size="2xs" />,
     );
     const iconComponent = getByTestId('icon');
 
     // then
-    expect(iconComponent.props.width).toBe(theme.iconSizes[0]);
-    expect(iconComponent.props.height).toBe(theme.iconSizes[0]);
+    expect(iconComponent.props.width).toBe(theme.iconSizeVariants['2xs']);
+    expect(iconComponent.props.height).toBe(theme.iconSizeVariants['2xs']);
   });
 
   test('should render default color correctly', () => {

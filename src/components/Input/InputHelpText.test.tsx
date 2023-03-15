@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '../../testUtils';
+import { render } from '../../test-utils';
 import { InputHelpText } from './InputHelpText';
 
 describe('Input Help Text', () => {

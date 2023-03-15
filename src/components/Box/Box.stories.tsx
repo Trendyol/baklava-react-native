@@ -12,7 +12,7 @@ type BoxStory = ComponentStory<typeof Box>;
 
 export const Basic: BoxStory = args => (
   <>
-    <Text p={3} variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle01Bold">
       Box
     </Text>
     <Box {...args} />

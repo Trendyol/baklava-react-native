@@ -3,11 +3,15 @@ import { ComponentStory, ComponentMeta } from '@storybook/react-native';
 import Button from './Button';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
-import { ButtonSizeTypes, ButtonTypeTypes, ButtonVariantTypes } from './types';
+import {
+  ButtonSizeVariantTypes,
+  ButtonKindVariantTypes,
+  ButtonVariantVariantTypes,
+} from './types';
 
-const variantList = ['primary', 'secondary', 'success', 'danger'];
-const typeList = ['contained', 'outline', 'text'];
-const sizeList = ['small', 'medium', 'large'];
+const variantList = ['primary', 'secondary', 'tertiary'];
+const kindList = ['default', 'neutral', 'success', 'danger'];
+const sizeList = ['s', 'm', 'l'];
 
 const ButtonMeta: ComponentMeta<typeof Button> = {
   title: 'Button',
@@ -18,8 +22,8 @@ const ButtonMeta: ComponentMeta<typeof Button> = {
       options: variantList,
       control: { type: 'radios' },
     },
-    type: {
-      options: typeList,
+    kind: {
+      options: kindList,
       control: { type: 'radios' },
     },
     size: {
@@ -28,10 +32,11 @@ const ButtonMeta: ComponentMeta<typeof Button> = {
     },
   },
   args: {
-    variant: variantList[0] as ButtonVariantTypes,
-    type: typeList[0] as ButtonTypeTypes,
-    size: sizeList[2] as ButtonSizeTypes,
+    size: sizeList[1] as ButtonSizeVariantTypes,
+    kind: kindList[0] as ButtonKindVariantTypes,
+    variant: variantList[0] as ButtonVariantVariantTypes,
     disabled: false,
+    filled: false,
   },
 };
 
@@ -41,349 +46,311 @@ type ButtonStory = ComponentStory<typeof Button>;
 
 export const Basic: ButtonStory = args => (
   <>
-    <Text p={3} variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle01Bold">
       Button
     </Text>
     <Button
       {...args}
-      variant={args.variant}
-      type={args.type}
       size={args.size}
-      text={
+      kind={args.kind}
+      variant={args.variant}
+      filled={args.filled}
+      icon="confetti"
+      label={
         args.disabled
-          ? `disabled ${args.type} ${args.size} button`
-          : `${args.variant} ${args.type} ${args.size} button`
+          ? `disabled ${args.kind} ${args.size} button`
+          : `${args.variant} ${args.kind} ${args.size} button`
       }
-      m={3}
+      m="2xs"
     />
   </>
 );
 
-export const Variants: ButtonStory = args => (
+export const ButtonVariants: ButtonStory = () => (
   <>
-    <Text p={3} variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle01Bold">
       Button Variants
     </Text>
     <Box>
+      <Button variant="primary" label="Primary Button" m="2xs" />
+      <Button variant="secondary" label="Secondary Button" m="2xs" />
+      <Button variant="tertiary" label="Tertiary Button" m="2xs" />
+    </Box>
+  </>
+);
+
+export const PrimaryButtons: ButtonStory = () => (
+  <>
+    <Text p="2xs" variant="subtitle01Bold">
+      Primary Buttons
+    </Text>
+    <Box>
+      <Button label="Primary Button" m="2xs" />
+      <Button kind="neutral" label="Primary Button" m="2xs" />
+      <Button kind="success" label="Primary Button" m="2xs" />
+      <Button kind="danger" label="Primary Button" m="2xs" />
+    </Box>
+  </>
+);
+
+export const SecondaryButtons: ButtonStory = () => (
+  <>
+    <Text p="2xs" variant="subtitle01Bold">
+      Secondary Buttons
+    </Text>
+    <Box>
+      <Button variant="secondary" label="Secondary Button" m="2xs" />
       <Button
-        {...args}
-        variant="primary"
-        size="large"
-        text="Primary Button"
-        m={3}
-      />
-      <Button
-        {...args}
         variant="secondary"
-        size="large"
-        text="Secondary Button"
-        m={3}
+        kind="neutral"
+        label="Secondary Button"
+        m="2xs"
       />
       <Button
-        {...args}
-        variant="success"
-        size="large"
-        text="Success Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="danger"
-        size="large"
-        text="Danger Button"
-        m={3}
-      />
-    </Box>
-  </>
-);
-
-export const Types: ButtonStory = args => (
-  <>
-    <Text p={3} variant="subtitle01Bold">
-      Button Types
-    </Text>
-    <Box>
-      <Button
-        {...args}
-        variant="primary"
-        size="large"
-        text="Contained Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="large"
-        type="outline"
-        text="Outlined Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="large"
-        type="text"
-        text="Text Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        disabled
-        size="large"
-        text="Disabled Contained Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        disabled
-        size="large"
-        type="text"
-        text="Disabled Text Button"
-        m={3}
-      />
-    </Box>
-  </>
-);
-
-export const Sizes: ButtonStory = args => (
-  <>
-    <Text p={3} variant="subtitle01Bold">
-      Button Sizes
-    </Text>
-    <Box>
-      <Button
-        {...args}
-        variant="primary"
-        size="large"
-        text="Primary Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="medium"
-        text="Primary Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="small"
-        text="Primary Button"
-        m={3}
-        mb={6}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="large"
-        text="Primary Button"
-        filled={true}
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="medium"
-        text="Primary Button"
-        filled={true}
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="primary"
-        size="small"
-        text="Primary Button"
-        filled={true}
-        m={3}
-      />
-    </Box>
-  </>
-);
-
-export const ContainedButtons: ButtonStory = args => (
-  <>
-    <Text p={3} variant="subtitle01Bold">
-      Contained Buttons
-    </Text>
-    <Box>
-      <Button
-        {...args}
-        variant="primary"
-        size="large"
-        text="Primary Button"
-        m={3}
-      />
-      <Button
-        {...args}
         variant="secondary"
-        size="large"
-        text="Secondary Button"
-        m={3}
+        kind="success"
+        label="Secondary Button"
+        m="2xs"
       />
       <Button
-        {...args}
-        variant="success"
-        size="large"
-        text="Success Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="danger"
-        size="large"
-        text="Danger Button"
-        m={3}
+        variant="secondary"
+        kind="danger"
+        label="Secondary Button"
+        m="2xs"
       />
     </Box>
   </>
 );
 
-export const OutlinedButtons: ButtonStory = args => (
+export const TertiaryButtons: ButtonStory = () => (
   <>
-    <Text p={3} variant="subtitle01Bold">
-      Outlined Buttons
+    <Text p="2xs" variant="subtitle01Bold">
+      Tertiary Buttons
     </Text>
     <Box>
+      <Button variant="tertiary" label="Tertiary Button" m="2xs" />
       <Button
-        {...args}
-        variant="primary"
-        size="large"
-        type="outline"
-        text="Primary Button"
-        m={3}
+        variant="tertiary"
+        kind="neutral"
+        label="Tertiary Button"
+        m="2xs"
       />
       <Button
-        {...args}
-        variant="secondary"
-        size="large"
-        type="outline"
-        text="Secondary Button"
-        m={3}
+        variant="tertiary"
+        kind="success"
+        label="Tertiary Button"
+        m="2xs"
       />
       <Button
-        {...args}
-        variant="success"
-        size="large"
-        type="outline"
-        text="Success Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="danger"
-        size="large"
-        type="outline"
-        text="Danger Button"
-        m={3}
+        variant="tertiary"
+        kind="danger"
+        label="Tertiary Button"
+        m="2xs"
       />
     </Box>
   </>
 );
 
-export const TextButtons: ButtonStory = args => (
+export const IconButtons: ButtonStory = () => (
   <>
-    <Text p={3} variant="subtitle01Bold">
-      Text Buttons
-    </Text>
-    <Box>
-      <Button
-        {...args}
-        variant="primary"
-        size="large"
-        type="text"
-        text="Primary Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="secondary"
-        size="large"
-        type="text"
-        text="Secondary Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="success"
-        size="large"
-        type="text"
-        text="Success Button"
-        m={3}
-      />
-      <Button
-        {...args}
-        variant="danger"
-        size="large"
-        type="text"
-        text="Danger Button"
-        m={3}
-      />
-    </Box>
-  </>
-);
-
-export const IconButtons: ButtonStory = args => (
-  <>
-    <Text p={3} variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle01Bold">
       Icon Buttons
     </Text>
-    {/* @ts-ignore */}
     <Box flexDirection="row" justifyContent="space-around">
       <Box>
-        <Button {...args} variant="primary" text="Save" icon="info" m={3} />
-        <Button {...args} variant="secondary" text="Save" icon="info" m={3} />
-        <Button {...args} variant="success" text="Save" icon="info" m={3} />
-        <Button {...args} variant="danger" text="Save" icon="info" m={3} />
+        <Button label="Save" icon="info" m="2xs" />
+        <Button kind="neutral" label="Save" icon="info" m="2xs" />
+        <Button kind="success" label="Save" icon="info" m="2xs" />
+        <Button kind="danger" label="Save" icon="info" m="2xs" />
       </Box>
       <Box>
+        <Button variant="tertiary" label="Save" icon="info" m="2xs" />
         <Button
-          {...args}
-          variant="primary"
-          text="Save"
-          type="text"
+          variant="tertiary"
+          kind="neutral"
+          label="Save"
           icon="info"
-          m={3}
+          m="2xs"
         />
         <Button
-          {...args}
-          variant="secondary"
-          text="Save"
-          type="text"
+          variant="tertiary"
+          kind="success"
+          label="Save"
           icon="info"
-          m={3}
+          m="2xs"
         />
         <Button
-          {...args}
-          variant="success"
-          text="Save"
-          type="text"
+          variant="tertiary"
+          kind="danger"
+          label="Save"
           icon="info"
-          m={3}
-        />
-        <Button
-          {...args}
-          variant="danger"
-          text="Save"
-          type="text"
-          icon="info"
-          m={3}
+          m="2xs"
         />
       </Box>
     </Box>
   </>
 );
 
-export const IconOnlyButtons: ButtonStory = args => (
+export const IconOnlyButtons: ButtonStory = () => (
   <>
-    <Text p={3} variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle01Bold">
       Icon Only Buttons
     </Text>
     <Box>
-      <Button {...args} variant="primary" size="large" icon="info" m={3} />
-      <Button {...args} variant="secondary" size="large" icon="info" m={3} />
-      <Button {...args} variant="success" size="large" icon="info" m={3} />
-      <Button {...args} variant="danger" size="large" icon="info" m={3} />
+      <Button icon="info" m="2xs" />
+      <Button kind="neutral" icon="info" m="2xs" />
+      <Button kind="success" icon="info" m="2xs" />
+      <Button kind="danger" icon="info" m="2xs" />
+    </Box>
+  </>
+);
+
+export const Sizes: ButtonStory = () => (
+  <>
+    <Text p="2xs" variant="subtitle01Bold">
+      Button Sizes
+    </Text>
+    <Box>
+      <Button size="l" icon="info" label="Primary Button" m="2xs" />
+      <Button size="m" icon="info" label="Primary Button" m="2xs" />
+      <Button size="s" icon="info" label="Primary Button" m="2xs" mb="2xl" />
+      <Button
+        size="l"
+        icon="info"
+        label="Primary Button"
+        filled={true}
+        m="2xs"
+      />
+      <Button
+        size="m"
+        icon="info"
+        label="Primary Button"
+        filled={true}
+        m="2xs"
+      />
+      <Button
+        size="s"
+        icon="info"
+        label="Primary Button"
+        filled={true}
+        m="2xs"
+      />
+    </Box>
+  </>
+);
+
+export const DisabledButtons: ButtonStory = () => (
+  <>
+    <Text p="2xs" variant="subtitle01Bold">
+      Disabled Buttons
+    </Text>
+    <Box mt="xl">
+      <Text p="2xs" variant="captionMedium">
+        Primary & Secondary Variants
+      </Text>
+      <Button size="l" disabled={true} label="Passive Button" m="2xs" />
+      <Button size="m" disabled={true} label="Passive Button" m="2xs" />
+      <Button
+        size="s"
+        disabled={true}
+        label="Passive Button"
+        m="2xs"
+        mb="2xl"
+      />
+      <Text p="2xs" variant="captionMedium">
+        Tertiary Variant
+      </Text>
+      <Button
+        size="l"
+        variant="tertiary"
+        disabled={true}
+        label="Passive Button"
+        m="2xs"
+      />
+      <Button
+        size="m"
+        variant="tertiary"
+        disabled={true}
+        label="Passive Button"
+        m="2xs"
+      />
+      <Button
+        size="s"
+        variant="tertiary"
+        disabled={true}
+        label="Passive Button"
+        m="2xs"
+      />
+    </Box>
+  </>
+);
+
+export const PressedStates: ButtonStory = () => (
+  <>
+    <Text p="2xs" variant="subtitle01Bold">
+      Pressed States
+    </Text>
+    <Box mt="xl">
+      <Text p="2xs" variant="captionMedium">
+        Primary & Secondary Variants
+      </Text>
+      <Button isPressed={true} label="Save" icon="info" m="2xs" />
+      <Button
+        isPressed={true}
+        kind="neutral"
+        label="Save"
+        icon="info"
+        m="2xs"
+      />
+      <Button
+        isPressed={true}
+        kind="success"
+        label="Save"
+        icon="info"
+        m="2xs"
+      />
+      <Button
+        isPressed={true}
+        kind="danger"
+        label="Save"
+        icon="info"
+        m="2xs"
+        mb="2xl"
+      />
+      <Text p="2xs" variant="captionMedium">
+        Tertiary Variant
+      </Text>
+      <Button
+        variant="tertiary"
+        isPressed={true}
+        label="Save"
+        icon="info"
+        m="2xs"
+      />
+      <Button
+        variant="tertiary"
+        isPressed={true}
+        kind="neutral"
+        label="Save"
+        icon="info"
+        m="2xs"
+      />
+      <Button
+        variant="tertiary"
+        isPressed={true}
+        kind="success"
+        label="Save"
+        icon="info"
+        m="2xs"
+      />
+      <Button
+        variant="tertiary"
+        isPressed={true}
+        kind="danger"
+        label="Save"
+        icon="info"
+        m="2xs"
+      />
     </Box>
   </>
 );

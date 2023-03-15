@@ -2,16 +2,13 @@
 
 exports[`Input should render disabled input correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
     collapsable={false}
@@ -27,16 +24,15 @@ exports[`Input should render disabled input correctly 1`] = `
     }
   >
     <View
-      flexDirection="row"
-      height={54}
       style={
         Array [
           Object {
             "flexDirection": "row",
+            "height": 54,
           },
         ]
       }
-      testID="box"
+      testID="outlined-label-box"
     >
       <Text
         collapsable={false}
@@ -44,13 +40,13 @@ exports[`Input should render disabled input correctly 1`] = `
           Object {
             "backgroundColor": "transparent",
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 13,
+            "top": 16,
           }
         }
       >
@@ -61,13 +57,6 @@ exports[`Input should render disabled input correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="tertiaryColor"
-    borderColor="borderColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
@@ -77,21 +66,18 @@ exports[`Input should render disabled input correctly 1`] = `
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={true}
       editable={false}
-      flex={1}
-      height={48}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -102,13 +88,8 @@ exports[`Input should render disabled input correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 48,
           },
         ]
       }
@@ -120,16 +101,13 @@ exports[`Input should render disabled input correctly 1`] = `
 
 exports[`Input should render input correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
     collapsable={false}
@@ -145,16 +123,15 @@ exports[`Input should render input correctly 1`] = `
     }
   >
     <View
-      flexDirection="row"
-      height={54}
       style={
         Array [
           Object {
             "flexDirection": "row",
+            "height": 54,
           },
         ]
       }
-      testID="box"
+      testID="outlined-label-box"
     >
       <Text
         collapsable={false}
@@ -162,13 +139,13 @@ exports[`Input should render input correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 13,
+            "top": 16,
           }
         }
       >
@@ -179,37 +156,27 @@ exports[`Input should render input correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="white"
-    borderColor="borderColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FFFFFF",
           "borderColor": "#D5D9E1",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
-      flex={1}
-      height={48}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -220,13 +187,8 @@ exports[`Input should render input correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 48,
           },
         ]
       }
@@ -238,16 +200,13 @@ exports[`Input should render input correctly 1`] = `
 
 exports[`Input should render input with error state and error text correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
     collapsable={false}
@@ -263,16 +222,15 @@ exports[`Input should render input with error state and error text correctly 1`]
     }
   >
     <View
-      flexDirection="row"
-      height={54}
       style={
         Array [
           Object {
             "flexDirection": "row",
+            "height": 54,
           },
         ]
       }
-      testID="box"
+      testID="outlined-label-box"
     >
       <Text
         collapsable={false}
@@ -280,13 +238,13 @@ exports[`Input should render input with error state and error text correctly 1`]
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 13,
+            "top": 16,
           }
         }
       >
@@ -297,37 +255,27 @@ exports[`Input should render input with error state and error text correctly 1`]
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="white"
-    borderColor="dangerColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FFFFFF",
           "borderColor": "#FF5043",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
-      flex={1}
-      height={48}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -338,13 +286,8 @@ exports[`Input should render input with error state and error text correctly 1`]
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 48,
           },
         ]
       }
@@ -373,7 +316,7 @@ exports[`Input should render input with error state and error text correctly 1`]
           },
         ]
       }
-      testID="icon"
+      testID="input-icon"
       vbHeight={24}
       vbWidth={24}
       width={16}
@@ -413,8 +356,6 @@ exports[`Input should render input with error state and error text correctly 1`]
     </RNSVGSvgView>
   </View>
   <View
-    ml={5}
-    mt={2}
     style={
       Array [
         Object {
@@ -423,21 +364,20 @@ exports[`Input should render input with error state and error text correctly 1`]
         },
       ]
     }
-    testID="box"
   >
     <Text
-      color="dangerColor"
+      accessible={false}
       style={
         Array [
           Object {
             "color": "#FF5043",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 12,
             "fontWeight": "400",
+            "lineHeight": 14,
           },
         ]
       }
-      variant="subtitle04Regular"
     >
       errorText
     </Text>
@@ -447,16 +387,13 @@ exports[`Input should render input with error state and error text correctly 1`]
 
 exports[`Input should render input with error state correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
     collapsable={false}
@@ -472,16 +409,15 @@ exports[`Input should render input with error state correctly 1`] = `
     }
   >
     <View
-      flexDirection="row"
-      height={54}
       style={
         Array [
           Object {
             "flexDirection": "row",
+            "height": 54,
           },
         ]
       }
-      testID="box"
+      testID="outlined-label-box"
     >
       <Text
         collapsable={false}
@@ -489,13 +425,13 @@ exports[`Input should render input with error state correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 13,
+            "top": 16,
           }
         }
       >
@@ -506,37 +442,27 @@ exports[`Input should render input with error state correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="white"
-    borderColor="dangerColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FFFFFF",
           "borderColor": "#FF5043",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
-      flex={1}
-      height={48}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -547,13 +473,8 @@ exports[`Input should render input with error state correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 48,
           },
         ]
       }
@@ -582,7 +503,7 @@ exports[`Input should render input with error state correctly 1`] = `
           },
         ]
       }
-      testID="icon"
+      testID="input-icon"
       vbHeight={24}
       vbWidth={24}
       width={16}
@@ -626,16 +547,13 @@ exports[`Input should render input with error state correctly 1`] = `
 
 exports[`Input should render input with help text correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
     collapsable={false}
@@ -651,16 +569,15 @@ exports[`Input should render input with help text correctly 1`] = `
     }
   >
     <View
-      flexDirection="row"
-      height={54}
       style={
         Array [
           Object {
             "flexDirection": "row",
+            "height": 54,
           },
         ]
       }
-      testID="box"
+      testID="outlined-label-box"
     >
       <Text
         collapsable={false}
@@ -668,13 +585,13 @@ exports[`Input should render input with help text correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 13,
+            "top": 16,
           }
         }
       >
@@ -685,37 +602,27 @@ exports[`Input should render input with help text correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="white"
-    borderColor="borderColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FFFFFF",
           "borderColor": "#D5D9E1",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
-      flex={1}
-      height={48}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -726,13 +633,8 @@ exports[`Input should render input with help text correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 48,
           },
         ]
       }
@@ -740,8 +642,6 @@ exports[`Input should render input with help text correctly 1`] = `
     />
   </View>
   <View
-    ml={5}
-    mt={2}
     style={
       Array [
         Object {
@@ -750,21 +650,20 @@ exports[`Input should render input with help text correctly 1`] = `
         },
       ]
     }
-    testID="box"
   >
     <Text
-      color="contentTertiary"
+      accessible={false}
       style={
         Array [
           Object {
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 12,
             "fontWeight": "400",
+            "lineHeight": 14,
           },
         ]
       }
-      variant="subtitle04Regular"
     >
       helpText
     </Text>
@@ -774,16 +673,13 @@ exports[`Input should render input with help text correctly 1`] = `
 
 exports[`Input should render input with icon correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
     collapsable={false}
@@ -799,16 +695,15 @@ exports[`Input should render input with icon correctly 1`] = `
     }
   >
     <View
-      flexDirection="row"
-      height={54}
       style={
         Array [
           Object {
             "flexDirection": "row",
+            "height": 54,
           },
         ]
       }
-      testID="box"
+      testID="outlined-label-box"
     >
       <Text
         collapsable={false}
@@ -816,13 +711,13 @@ exports[`Input should render input with icon correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 13,
+            "top": 16,
           }
         }
       >
@@ -833,37 +728,27 @@ exports[`Input should render input with icon correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="white"
-    borderColor="borderColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FFFFFF",
           "borderColor": "#D5D9E1",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
-      flex={1}
-      height={48}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -874,13 +759,8 @@ exports[`Input should render input with icon correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 48,
           },
         ]
       }
@@ -909,7 +789,7 @@ exports[`Input should render input with icon correctly 1`] = `
           },
         ]
       }
-      testID="icon"
+      testID="input-icon"
       vbHeight={24}
       vbWidth={24}
       width={16}
@@ -981,16 +861,13 @@ exports[`Input should render input with icon correctly 1`] = `
 
 exports[`Input should render input with medium size correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
     collapsable={false}
@@ -1006,16 +883,15 @@ exports[`Input should render input with medium size correctly 1`] = `
     }
   >
     <View
-      flexDirection="row"
-      height={46}
       style={
         Array [
           Object {
             "flexDirection": "row",
+            "height": 46,
           },
         ]
       }
-      testID="box"
+      testID="outlined-label-box"
     >
       <Text
         collapsable={false}
@@ -1023,13 +899,13 @@ exports[`Input should render input with medium size correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 9,
+            "top": 12,
           }
         }
       >
@@ -1040,37 +916,27 @@ exports[`Input should render input with medium size correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="white"
-    borderColor="borderColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FFFFFF",
           "borderColor": "#D5D9E1",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
-      flex={1}
-      height={40}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -1081,13 +947,8 @@ exports[`Input should render input with medium size correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 40,
           },
         ]
       }
@@ -1099,16 +960,13 @@ exports[`Input should render input with medium size correctly 1`] = `
 
 exports[`Input should render input with small size correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
     collapsable={false}
@@ -1124,16 +982,15 @@ exports[`Input should render input with small size correctly 1`] = `
     }
   >
     <View
-      flexDirection="row"
-      height={38}
       style={
         Array [
           Object {
             "flexDirection": "row",
+            "height": 38,
           },
         ]
       }
-      testID="box"
+      testID="outlined-label-box"
     >
       <Text
         collapsable={false}
@@ -1141,13 +998,13 @@ exports[`Input should render input with small size correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 5,
+            "top": 8,
           }
         }
       >
@@ -1158,37 +1015,27 @@ exports[`Input should render input with small size correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="white"
-    borderColor="borderColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FFFFFF",
           "borderColor": "#D5D9E1",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
-      flex={1}
-      height={32}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -1199,13 +1046,8 @@ exports[`Input should render input with small size correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 32,
           },
         ]
       }
@@ -1217,16 +1059,13 @@ exports[`Input should render input with small size correctly 1`] = `
 
 exports[`Input should render input with success state and success text correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
     collapsable={false}
@@ -1242,16 +1081,15 @@ exports[`Input should render input with success state and success text correctly
     }
   >
     <View
-      flexDirection="row"
-      height={54}
       style={
         Array [
           Object {
             "flexDirection": "row",
+            "height": 54,
           },
         ]
       }
-      testID="box"
+      testID="outlined-label-box"
     >
       <Text
         collapsable={false}
@@ -1259,13 +1097,13 @@ exports[`Input should render input with success state and success text correctly
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 13,
+            "top": 16,
           }
         }
       >
@@ -1276,37 +1114,27 @@ exports[`Input should render input with success state and success text correctly
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="white"
-    borderColor="successColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FFFFFF",
           "borderColor": "#0BC15C",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
-      flex={1}
-      height={48}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -1317,13 +1145,8 @@ exports[`Input should render input with success state and success text correctly
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 48,
           },
         ]
       }
@@ -1352,7 +1175,7 @@ exports[`Input should render input with success state and success text correctly
           },
         ]
       }
-      testID="icon"
+      testID="input-icon"
       vbHeight={24}
       vbWidth={24}
       width={16}
@@ -1392,8 +1215,6 @@ exports[`Input should render input with success state and success text correctly
     </RNSVGSvgView>
   </View>
   <View
-    ml={5}
-    mt={2}
     style={
       Array [
         Object {
@@ -1402,21 +1223,20 @@ exports[`Input should render input with success state and success text correctly
         },
       ]
     }
-    testID="box"
   >
     <Text
-      color="successColor"
+      accessible={false}
       style={
         Array [
           Object {
             "color": "#0BC15C",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 12,
             "fontWeight": "400",
+            "lineHeight": 14,
           },
         ]
       }
-      variant="subtitle04Regular"
     >
       successText
     </Text>
@@ -1426,16 +1246,13 @@ exports[`Input should render input with success state and success text correctly
 
 exports[`Input should render input with success state correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
     collapsable={false}
@@ -1451,16 +1268,15 @@ exports[`Input should render input with success state correctly 1`] = `
     }
   >
     <View
-      flexDirection="row"
-      height={54}
       style={
         Array [
           Object {
             "flexDirection": "row",
+            "height": 54,
           },
         ]
       }
-      testID="box"
+      testID="outlined-label-box"
     >
       <Text
         collapsable={false}
@@ -1468,13 +1284,13 @@ exports[`Input should render input with success state correctly 1`] = `
           Object {
             "backgroundColor": "white",
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 14,
             "height": 16,
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 13,
+            "top": 16,
           }
         }
       >
@@ -1485,37 +1301,27 @@ exports[`Input should render input with success state correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="white"
-    borderColor="successColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FFFFFF",
           "borderColor": "#0BC15C",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
-      flex={1}
-      height={48}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -1526,13 +1332,8 @@ exports[`Input should render input with success state correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 48,
           },
         ]
       }
@@ -1561,7 +1362,7 @@ exports[`Input should render input with success state correctly 1`] = `
           },
         ]
       }
-      testID="icon"
+      testID="input-icon"
       vbHeight={24}
       vbWidth={24}
       width={16}
@@ -1605,20 +1406,15 @@ exports[`Input should render input with success state correctly 1`] = `
 
 exports[`Input should render label fixed input correctly 1`] = `
 <View
-  py={3}
   style={
     Array [
       Object {
-        "paddingBottom": 8,
-        "paddingTop": 8,
+        "paddingVertical": 8,
       },
     ]
   }
-  testID="box"
 >
   <View
-    flexDirection="row"
-    mb={2}
     style={
       Array [
         Object {
@@ -1627,76 +1423,67 @@ exports[`Input should render label fixed input correctly 1`] = `
         },
       ]
     }
-    testID="box"
+    testID="fixed-label-box"
   >
     <Text
-      color="contentSecondary"
+      accessible={true}
       style={
         Array [
           Object {
             "color": "#6E7787",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Medium",
             "fontSize": 12,
             "fontWeight": "500",
+            "lineHeight": 14,
           },
         ]
       }
-      variant="subtitle04Medium"
+      testID="fixed-label"
     >
       label
     </Text>
     <Text
-      color="contentTertiary"
-      ml={1}
+      accessible={true}
       style={
         Array [
           Object {
             "color": "#95A1B5",
-            "fontFamily": "System",
+            "fontFamily": "Rubik-Regular",
             "fontSize": 12,
             "fontWeight": "400",
+            "lineHeight": 14,
             "marginLeft": 2,
           },
         ]
       }
-      variant="subtitle04Regular"
+      testID="optional-fixed-label"
     >
       (Optional)
     </Text>
   </View>
   <View
     accessibilityLabel="input-box"
-    alignItems="center"
-    backgroundColor="white"
-    borderColor="borderColor"
-    borderRadius="normal"
-    borderWidth={1}
-    flexDirection="row"
-    px={5}
     style={
       Array [
         Object {
           "alignItems": "center",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#FFFFFF",
           "borderColor": "#D5D9E1",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
-          "paddingLeft": 16,
-          "paddingRight": 16,
+          "paddingHorizontal": 16,
+          "zIndex": 0,
         },
       ]
     }
     testID="input-box"
-    zIndex={0}
   >
     <TextInput
       accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
-      flex={1}
-      height={48}
       multiline={false}
       onBlur={[Function]}
       onChangeText={[Function]}
@@ -1707,13 +1494,8 @@ exports[`Input should render label fixed input correctly 1`] = `
       style={
         Array [
           Object {
-            "backgroundColor": "transparent",
-            "flexBasis": 0,
-            "flexGrow": 1,
-            "flexShrink": 1,
-          },
-          Object {
-            "fontFamily": "System",
+            "flex": 1,
+            "height": 48,
           },
         ]
       }

@@ -31,14 +31,19 @@ export const InputIcon = React.memo(
           onPress={handlePasswordVisibility}>
           <Icon
             name={passwordVisibilityIcon}
-            size="small"
+            size="s"
             color="contentTertiary"
+            testID="secure-input-icon"
           />
         </Pressable>
       );
     }
 
-    const iconColor = getIconColor({ focused, errorState, successState });
+    const iconColor = getIconColor({
+      focused,
+      errorState,
+      successState,
+    });
 
     if (!icon && !variantIconName) {
       return null;
@@ -47,8 +52,9 @@ export const InputIcon = React.memo(
     return (
       <Icon
         name={(variantIconName as IconNameType) ?? icon}
-        size="small"
+        size="s"
         color={iconColor}
+        testID="input-icon"
       />
     );
   },
