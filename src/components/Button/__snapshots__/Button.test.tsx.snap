@@ -42,7 +42,6 @@ exports[`Button should render button correctly 1`] = `
             "height": 40,
             "justifyContent": "center",
             "paddingHorizontal": 24,
-            "paddingVertical": 12,
           },
         ],
       ]

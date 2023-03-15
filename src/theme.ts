@@ -290,19 +290,15 @@ const theme = createTheme({
   buttonSizeVariants: {
     defaults: {
       height: 40,
-      paddingVertical: 'xs',
     },
     s: {
       height: 32,
-      paddingVertical: '2xs',
     },
     m: {
       height: 40,
-      paddingVertical: 'xs',
     },
     l: {
       height: 48,
-      paddingVertical: 's',
     },
   },
   buttonKindVariants: {
