@@ -188,7 +188,7 @@ export const useOutlineLabelVisibility = ({
         height: lineHeightRef,
         paddingLeft: theme.spacing['3xs'],
         paddingRight: theme.spacing['3xs'],
-        top: initialTopValue - 4,
+        top: initialTopValue - (focused ? 4 : 1),
         fontSize: fontSizeRef,
         lineHeight: lineHeightRef,
       },
