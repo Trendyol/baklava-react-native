@@ -25,6 +25,7 @@ exports[`Icon should render icon correctly 1`] = `
     ]
   }
   testID="icon"
+  title="academy"
   vbHeight={24}
   vbWidth={24}
   width={24}
