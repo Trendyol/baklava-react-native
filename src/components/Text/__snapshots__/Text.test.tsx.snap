@@ -2,7 +2,8 @@
 
 exports[`Text should render text correctly 1`] = `
 <Text
-  accessible={false}
+  accessibilityLabel="text"
+  accessible={true}
   style={
     Array [
       Object {
@@ -12,6 +13,7 @@ exports[`Text should render text correctly 1`] = `
       },
     ]
   }
+  testID="text"
 >
   testtesttest
 </Text>
