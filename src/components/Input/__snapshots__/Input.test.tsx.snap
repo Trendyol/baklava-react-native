@@ -317,6 +317,7 @@ exports[`Input should render input with error state and error text correctly 1`]
         ]
       }
       testID="input-icon"
+      title="close-fill"
       vbHeight={24}
       vbWidth={24}
       width={16}
@@ -504,6 +505,7 @@ exports[`Input should render input with error state correctly 1`] = `
         ]
       }
       testID="input-icon"
+      title="close-fill"
       vbHeight={24}
       vbWidth={24}
       width={16}
@@ -790,6 +792,7 @@ exports[`Input should render input with icon correctly 1`] = `
         ]
       }
       testID="input-icon"
+      title="confetti"
       vbHeight={24}
       vbWidth={24}
       width={16}
@@ -1176,6 +1179,7 @@ exports[`Input should render input with success state and success text correctly
         ]
       }
       testID="input-icon"
+      title="check-fill"
       vbHeight={24}
       vbWidth={24}
       width={16}
@@ -1363,6 +1367,7 @@ exports[`Input should render input with success state correctly 1`] = `
         ]
       }
       testID="input-icon"
+      title="check-fill"
       vbHeight={24}
       vbWidth={24}
       width={16}

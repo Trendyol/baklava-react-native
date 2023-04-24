@@ -1,0 +1,100 @@
+import { Meta, ArgsTable } from '@storybook/addon-docs';
+import Alert from '../assets/alert/Alert.png';
+import AlertVariants from '../assets/alert/AlertVariants.png';
+
+<Meta
+  title="Components/Alert"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Alert
+
+Alert component displays an informational message to users with additional features if desired.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={Alert} width="250" alt="Alert" />
+  <img src={AlertVariants} width="250" alt="AlertVariants" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<Alert caption="caption" description="description" closable={true}>
+  <Button label="Action Button" />
+</Alert>
+```
+
+<br />
+
+## Props
+
+#### variant
+
+Type: `string`
+
+The variant of the alert style to use.
+
+`info`,
+`warning`,
+`success`,
+`danger`,
+
+#### closable
+
+Type: `boolean`
+
+Displays a close button.
+
+#### caption
+
+Type: `string`
+
+Alert caption.
+
+#### description
+
+Type: `string`
+
+Alert description.
+
+#### closed
+
+Type: `boolean`
+
+Alert description
+
+#### onClose
+
+Type: `() => void`
+
+Callback fired when the component requests to be closed.
+
+#### children
+
+Type: `React.ReactNode`
+
+#### style
+
+Type: `StyleProp<ViewStyle>`
+
+<br />
+Alert implements: <>
+  <a href="https://reactnative.dev/docs/view#props" title="title">
+    ...View props
+  </a>
+</>

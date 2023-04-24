@@ -40,6 +40,7 @@ exports[`Input Icon should render eye icon when secureTextEntry true 1`] = `
       ]
     }
     testID="secure-input-icon"
+    title="eye-on"
     vbHeight={24}
     vbWidth={24}
     width={16}
@@ -119,6 +120,7 @@ exports[`Input Icon should render icon correctly 1`] = `
     ]
   }
   testID="input-icon"
+  title="help"
   vbHeight={24}
   vbWidth={24}
   width={16}

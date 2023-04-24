@@ -6,7 +6,9 @@ import Text from './Text';
 describe('Text', () => {
   test('should render text correctly', () => {
     // when
-    const { toJSON } = render(<Text>testtesttest</Text>);
+    const { toJSON } = render(
+      <Text accessibilityLabel="text">testtesttest</Text>,
+    );
 
     // then
     expect(toJSON()).toMatchSnapshot();

@@ -31,7 +31,7 @@ const colors = {
   alertBackground: '#FFEEEC',
   warningBackground: '#FFF8E6',
   infoBackground: '#EEF4FF',
-  featuredCBackground: '#F4EDFF',
+  featuredBackground: '#F4EDFF',
   // Border Color
   borderColor: '#D5D9E1',
   // Content
@@ -337,6 +337,30 @@ const theme = createTheme({
     },
     large: {
       height: 48,
+    },
+  },
+  alertVariants: {
+    defaults: {
+      borderWidth: 1,
+      borderRadius: 'l',
+      backgroundColor: 'accentBackground',
+      borderColor: 'primaryColor',
+    },
+    info: {
+      backgroundColor: 'accentBackground',
+      borderColor: 'primaryColor',
+    },
+    warning: {
+      backgroundColor: 'warningBackground',
+      borderColor: 'warningColor',
+    },
+    success: {
+      backgroundColor: 'successBackground',
+      borderColor: 'successColor',
+    },
+    danger: {
+      backgroundColor: 'alertBackground',
+      borderColor: 'dangerColor',
     },
   },
 });

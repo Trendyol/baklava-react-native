@@ -33,6 +33,7 @@ const Icon = ({
   return (
     <TheIcon
       {...rest}
+      title={name}
       fill={iconColor}
       width={iconSize}
       height={iconSize}
