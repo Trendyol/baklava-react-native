@@ -44,8 +44,8 @@ export default InputMeta;
 type InputStory = ComponentStory<typeof Input>;
 
 export const Basic: InputStory = args => (
-  <Box px="2xs">
-    <Text py="2xs" variant="subtitle01Bold">
+  <Box px={'2xs'}>
+    <Text py={'2xs'} variant="subtitle01Bold">
       Input
     </Text>
 
@@ -57,8 +57,8 @@ export const Cases: InputStory = args => {
   const [state, setState] = useState(args);
 
   return (
-    <Box px="2xs">
-      <Text py="2xs" variant="subtitle01Bold">
+    <Box px={'2xs'}>
+      <Text py={'2xs'} variant="subtitle01Bold">
         Input Cases
       </Text>
 
@@ -185,8 +185,8 @@ export const Cases: InputStory = args => {
 };
 
 export const Sizes: InputStory = () => (
-  <Box px="2xs">
-    <Text py="2xs" variant="subtitle01Bold">
+  <Box px={'2xs'}>
+    <Text py={'2xs'} variant="subtitle01Bold">
       Input Sizes
     </Text>
     <Box py={'xs'}>
