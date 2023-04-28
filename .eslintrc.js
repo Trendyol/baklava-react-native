@@ -19,5 +19,6 @@ module.exports = {
     'ios/**',
     'android/**',
     'node_modules/**',
+    'example/**',
   ],
 };

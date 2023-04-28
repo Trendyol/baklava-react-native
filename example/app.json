@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "baklava-react-native-example",
+    "slug": "baklava-react-native-example"
+  }
+}
