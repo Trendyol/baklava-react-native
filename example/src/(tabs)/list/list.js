@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
   renderItem: {
     flexDirection: 'row',
     flex: 1,
-    borderBottomColor: '#E3E3E3',
+    borderBottomColor: '#F4F4F4',
     borderBottomWidth: 1,
     paddingVertical: 16,
     marginHorizontal: 16,

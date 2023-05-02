@@ -8,18 +8,30 @@ export default () => {
         <Text p="2xs" variant="subtitle01Bold">
           Button Variants
         </Text>
-        <Button variant="primary" label="Primary Button" m="2xs" />
-        <Button variant="secondary" label="Secondary Button" m="2xs" />
-        <Button variant="tertiary" label="Tertiary Button" m="2xs" />
+        <Box flexDirection="row">
+          <Button variant="primary" label="Primary Button" m="2xs" />
+        </Box>
+        <Box flexDirection="row">
+          <Button variant="secondary" label="Secondary Button" m="2xs" />
+        </Box>
+        <Box flexDirection="row">
+          <Button variant="tertiary" label="Tertiary Button" m="2xs" />
+        </Box>
       </Box>
       <Box pb="m">
         <Text p="2xs" variant="subtitle01Bold">
           Primary Buttons
         </Text>
-        <Box>
+        <Box flexDirection="row">
           <Button label="Primary Button" m="2xs" />
+        </Box>
+        <Box flexDirection="row">
           <Button kind="neutral" label="Primary Button" m="2xs" />
+        </Box>
+        <Box flexDirection="row">
           <Button kind="success" label="Primary Button" m="2xs" />
+        </Box>
+        <Box flexDirection="row">
           <Button kind="danger" label="Primary Button" m="2xs" />
         </Box>
       </Box>
@@ -27,20 +39,26 @@ export default () => {
         <Text p="2xs" variant="subtitle01Bold">
           Secondary Buttons
         </Text>
-        <Box>
+        <Box flexDirection="row">
           <Button variant="secondary" label="Secondary Button" m="2xs" />
+        </Box>
+        <Box flexDirection="row">
           <Button
             variant="secondary"
             kind="neutral"
             label="Secondary Button"
             m="2xs"
           />
+        </Box>
+        <Box flexDirection="row">
           <Button
             variant="secondary"
             kind="success"
             label="Secondary Button"
             m="2xs"
           />
+        </Box>
+        <Box flexDirection="row">
           <Button
             variant="secondary"
             kind="danger"
@@ -54,20 +72,26 @@ export default () => {
         <Text p="2xs" variant="subtitle01Bold">
           Tertiary Buttons
         </Text>
-        <Box>
+        <Box flexDirection="row">
           <Button variant="tertiary" label="Tertiary Button" m="2xs" />
+        </Box>
+        <Box flexDirection="row">
           <Button
             variant="tertiary"
             kind="neutral"
             label="Tertiary Button"
             m="2xs"
           />
+        </Box>
+        <Box flexDirection="row">
           <Button
             variant="tertiary"
             kind="success"
             label="Tertiary Button"
             m="2xs"
           />
+        </Box>
+        <Box flexDirection="row">
           <Button
             variant="tertiary"
             kind="danger"
@@ -120,10 +144,18 @@ export default () => {
           Icon Only Buttons
         </Text>
         <Box>
-          <Button icon="info" m="2xs" />
-          <Button kind="neutral" icon="info" m="2xs" />
-          <Button kind="success" icon="info" m="2xs" />
-          <Button kind="danger" icon="info" m="2xs" />
+          <Box flexDirection="row">
+            <Button icon="info" m="2xs" />
+          </Box>
+          <Box flexDirection="row">
+            <Button kind="neutral" icon="info" m="2xs" />
+          </Box>
+          <Box flexDirection="row">
+            <Button kind="success" icon="info" m="2xs" />
+          </Box>
+          <Box flexDirection="row">
+            <Button kind="danger" icon="info" m="2xs" />
+          </Box>
         </Box>
       </Box>
 
@@ -131,9 +163,14 @@ export default () => {
         <Text p="2xs" variant="subtitle01Bold">
           Button Sizes
         </Text>
-        <Box>
+
+        <Box flexDirection="row">
           <Button size="l" icon="info" label="Primary Button" m="2xs" />
+        </Box>
+        <Box flexDirection="row">
           <Button size="m" icon="info" label="Primary Button" m="2xs" />
+        </Box>
+        <Box flexDirection="row">
           <Button
             size="s"
             icon="info"
@@ -141,28 +178,29 @@ export default () => {
             m="2xs"
             mb="2xl"
           />
-          <Button
-            size="l"
-            icon="info"
-            label="Primary Button"
-            filled={true}
-            m="2xs"
-          />
-          <Button
-            size="m"
-            icon="info"
-            label="Primary Button"
-            filled={true}
-            m="2xs"
-          />
-          <Button
-            size="s"
-            icon="info"
-            label="Primary Button"
-            filled={true}
-            m="2xs"
-          />
         </Box>
+
+        <Button
+          size="l"
+          icon="info"
+          label="Primary Button"
+          filled={true}
+          m="2xs"
+        />
+        <Button
+          size="m"
+          icon="info"
+          label="Primary Button"
+          filled={true}
+          m="2xs"
+        />
+        <Button
+          size="s"
+          icon="info"
+          label="Primary Button"
+          filled={true}
+          m="2xs"
+        />
       </Box>
 
       <Box pb="m">
