@@ -119,7 +119,7 @@ describe('Input Hooks', () => {
         lineHeight: new Animated.Value(14),
         paddingLeft: 4,
         paddingRight: 4,
-        top: 16,
+        top: 13,
       },
     });
   });
@@ -247,7 +247,7 @@ describe('Input Hooks', () => {
         lineHeight: new Animated.Value(16),
         paddingLeft: 4,
         paddingRight: 4,
-        top: 16,
+        top: 13,
       },
     });
   });

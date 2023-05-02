@@ -46,7 +46,7 @@ exports[`Input should render disabled input correctly 1`] = `
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 16,
+            "top": 13,
           }
         }
       >
@@ -145,7 +145,7 @@ exports[`Input should render input correctly 1`] = `
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 16,
+            "top": 13,
           }
         }
       >
@@ -244,7 +244,7 @@ exports[`Input should render input with error state and error text correctly 1`]
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 16,
+            "top": 13,
           }
         }
       >
@@ -432,7 +432,7 @@ exports[`Input should render input with error state correctly 1`] = `
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 16,
+            "top": 13,
           }
         }
       >
@@ -593,7 +593,7 @@ exports[`Input should render input with help text correctly 1`] = `
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 16,
+            "top": 13,
           }
         }
       >
@@ -719,7 +719,7 @@ exports[`Input should render input with icon correctly 1`] = `
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 16,
+            "top": 13,
           }
         }
       >
@@ -908,7 +908,7 @@ exports[`Input should render input with medium size correctly 1`] = `
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 12,
+            "top": 9,
           }
         }
       >
@@ -1007,7 +1007,7 @@ exports[`Input should render input with small size correctly 1`] = `
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 8,
+            "top": 5,
           }
         }
       >
@@ -1106,7 +1106,7 @@ exports[`Input should render input with success state and success text correctly
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 16,
+            "top": 13,
           }
         }
       >
@@ -1294,7 +1294,7 @@ exports[`Input should render input with success state correctly 1`] = `
             "lineHeight": 16,
             "paddingLeft": 4,
             "paddingRight": 4,
-            "top": 16,
+            "top": 13,
           }
         }
       >
