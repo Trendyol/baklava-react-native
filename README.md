@@ -60,6 +60,12 @@ npm install
 `npm run ios` or `npm run android`
 ```
 
+## Example App
+
+An examples application has been created on expo snack to try baklava-react-native without installing it.
+
+baklava-react-native can be tested by downloading the <a href="https://expo.dev/client" target="_blank">Expo Go</a> application and scanning the qr from ios/android devices -> [baklava-react-native-example](https://snack.expo.dev/@ergenekonyigit/baklava-react-native-example)
+
 ## Documentation
 
 Check the components and their usage in our [documentation](https://trendyol.github.io/baklava-react-native).
