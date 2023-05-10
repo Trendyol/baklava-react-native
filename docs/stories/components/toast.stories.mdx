@@ -1,0 +1,117 @@
+import { Meta, ArgsTable } from '@storybook/addon-docs';
+import ToastDefault from '../assets/toast/default.png';
+import ToastDefaultWithAction from '../assets/toast/default_with_action.png';
+import ToastDefaultWithKeyboard from '../assets/toast/default_with_keyboard.png';
+import ToastDefaultWithActionAndKeyboard from '../assets/toast/default_with_action_and_keyboard.png';
+
+import ToastSuccess from '../assets/toast/success.png';
+import ToastSuccessWithAction from '../assets/toast/success_with_action.png';
+
+import ToastError from '../assets/toast/error.png';
+import ToastErrorWithAction from '../assets/toast/error_with_action.png';
+
+import ToastWarning from '../assets/toast/warning.png';
+import ToastWarningWithAction from '../assets/toast/warning_with_action.png';
+
+<Meta
+  title="Components/Toast"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Toast
+
+Toast component displays a brief informational message to users with additional features if desired.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={ToastDefault} width="250" alt="ToastDefault" />
+  <img src={ToastDefaultWithAction} width="250" alt="ToastDefaultWithAction" />
+  <img src={ToastDefaultWithKeyboard} width="250" alt="ToastDefaultWithKeyboard" />
+  <img src={ToastDefaultWithActionAndKeyboard} width="250" alt="ToastDefaultWithActionAndKeyboard" />
+  <img src={ToastSuccess} width="250" alt="ToastSuccess" />
+  <img src={ToastSuccessWithAction} width="250" alt="ToastSuccessWithAction" />
+  <img src={ToastError} width="250" alt="ToastError" />
+  <img src={ToastErrorWithAction} width="250" alt="ToastErrorWithAction" />
+  <img src={ToastWarning} width="250" alt="ToastWarning" />
+  <img src={ToastWarningWithAction} width="250" alt="ToastWarningWithAction" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+Add it to your app's root view so that all views can be overridden.
+```jsx
+// ...
+import { theme, ThemeProvider, Toast } from '@trendyol/baklava-react-native';
+// ...
+
+<ThemeProvider theme={theme}>
+  <SafeAreaProvider>
+    {/* other components or providers. ex: <App/> */}
+    <Toast ignoreKeyboard extraPaddingBottom={40}/>
+  </SafeAreaProvider>
+</ThemeProvider>
+
+// ...
+```
+
+<br />
+
+## Props
+
+#### variant
+
+Type: `string`
+
+The variant of the toast style to use.
+
+`default`,
+`success`,
+`error`,
+`warning`,
+
+#### ignoreKeyboard
+
+Type: `boolean`
+
+It is used to position according to the visibility of the keyboard.
+
+#### extraPaddingBottom
+
+Type: `number`
+
+It is used to position according to components such as bottom tabbar.
+
+
+## Methods
+
+#### show
+```jsx
+// without action
+Toast.show({
+  text: 'Lorem ipsum dolor sit amet',
+})
+```
+
+```jsx
+// with action
+Toast.show({
+  variant: 'error',
+  action: () => { /* do something */},
+  actionText: 'Action',
+  duration: TostDurations.LONG,
+  text: 'Lorem ipsum dolor sit amet.',
+})
+```
