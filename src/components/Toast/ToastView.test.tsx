@@ -1,11 +1,9 @@
 // @ts-ignore
 import { toHaveStyle } from '@testing-library/jest-native';
 import React from 'react';
-import { cleanup, fireEvent, render } from '../../test-utils';
+import { cleanup, fireEvent, mockPanResponder, render } from '../../test-utils';
 import ToastView, { ToastViewRef } from './ToastView';
 import { ToastData } from './types';
-
-import { mockPanResponder } from './PanResponder.helper';
 
 describe('ToastView', () => {
   expect.extend({ toHaveStyle });

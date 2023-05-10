@@ -1,6 +1,11 @@
-import * as React from 'react';
-import { render } from '@testing-library/react-native';
 import { ThemeProvider } from '@ergenekonyigit/restyle';
+import { render } from '@testing-library/react-native';
+import * as React from 'react';
+import {
+  GestureResponderHandlers,
+  PanResponder,
+  PanResponderCallbacks,
+} from 'react-native';
 import theme from './theme';
 
 theme.fonts = {
@@ -23,6 +28,27 @@ const AllProviders = ({ children }: { children?: React.ReactNode }) => (
 const customRender = (ui: React.ReactElement, options?: RenderOptions) =>
   render(ui, { wrapper: AllProviders, ...options }) as any;
 
-export * from '@testing-library/react-native';
+const mockPanResponder = () => {
+  jest
+    .spyOn(PanResponder, 'create')
+    .mockImplementation(
+      ({
+        onStartShouldSetPanResponderCapture,
+        onMoveShouldSetPanResponder,
+        onPanResponderGrant,
+        onPanResponderMove,
+        onPanResponderRelease,
+      }: PanResponderCallbacks) => ({
+        panHandlers: {
+          onStartShouldSetResponderCapture: onStartShouldSetPanResponderCapture,
+          onMoveShouldSetResponder: onMoveShouldSetPanResponder,
+          onResponderGrant: onPanResponderGrant,
+          onResponderMove: onPanResponderMove,
+          onResponderRelease: onPanResponderRelease,
+        } as GestureResponderHandlers,
+      }),
+    );
+};
 
-export { customRender as render };
+export * from '@testing-library/react-native';
+export { customRender as render, mockPanResponder };
