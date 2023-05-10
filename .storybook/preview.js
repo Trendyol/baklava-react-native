@@ -1,7 +1,8 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds';
-import { theme, ThemeProvider } from '../src';
+import { theme, ThemeProvider, Toast } from '../src';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 theme.fonts = {
   light: 'Rubik-Light',
@@ -15,9 +16,12 @@ export const decorators = [
   withBackgrounds,
   Story => (
     <ThemeProvider theme={theme}>
-      <ScrollView style={{ backgroundColor: 'white' }}>
-        <Story />
-      </ScrollView>
+      <SafeAreaProvider>
+        <ScrollView style={{ backgroundColor: 'white' }}>
+          <Story />
+        </ScrollView>
+        <Toast ignoreKeyboard extraPaddingBottom={16} />
+      </SafeAreaProvider>
     </ThemeProvider>
   ),
 ];
@@ -29,7 +33,13 @@ export const parameters = {
   ],
   options: {
     storySort: {
-      order: ['Box', 'Button', ['Button Variants', 'Button Types'], 'Text'],
+      order: [
+        'Box',
+        'Button',
+        ['Button Variants', 'Button Types'],
+        'Text',
+        'Toast',
+      ],
       // locales: 'en-US',
     },
   },

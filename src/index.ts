@@ -7,3 +7,4 @@ export { default as Button } from './components/Button/Button';
 export { default as Icon } from './components/Icon/Icon';
 export { default as Text } from './components/Text/Text';
 export { default as Input } from './components/Input/Input';
+export { default as Toast } from './components/Toast/Toast';
