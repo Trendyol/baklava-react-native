@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToastView should render toast correctly 1`] = `
+<View
+  accessibilityLabel="toast-container"
+  collapsable={false}
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FEF2E8",
+      "borderColor": "#F27A1A",
+      "borderRadius": 6,
+      "borderWidth": 1,
+      "elevation": 5,
+      "flexDirection": "row",
+      "minHeight": 40,
+      "paddingHorizontal": 12,
+      "paddingVertical": 8,
+      "shadowColor": "#000000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 0,
+      },
+      "shadowOpacity": 0.25,
+      "shadowRadius": 10,
+      "transform": Array [
+        Object {
+          "translateY": 667,
+        },
+      ],
+    }
+  }
+  testID="toast-container"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "shadowRadius": 30,
+        },
+      ]
+    }
+  >
+    <Text
+      accessibilityLabel="toast-text"
+      accessible={true}
+      style={
+        Array [
+          Object {
+            "color": "#273142",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "fontWeight": "400",
+            "lineHeight": 16,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="toast-text"
+    >
+      lorem ipsum dolor sit amet.
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`ToastView should render toast with action correctly 1`] = `
+<View
+  accessibilityLabel="toast-container"
+  collapsable={false}
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#FEF2E8",
+      "borderColor": "#F27A1A",
+      "borderRadius": 6,
+      "borderWidth": 1,
+      "elevation": 5,
+      "flexDirection": "row",
+      "minHeight": 40,
+      "paddingHorizontal": 12,
+      "paddingVertical": 8,
+      "shadowColor": "#000000",
+      "shadowOffset": Object {
+        "height": 5,
+        "width": 0,
+      },
+      "shadowOpacity": 0.25,
+      "shadowRadius": 10,
+      "transform": Array [
+        Object {
+          "translateY": 667,
+        },
+      ],
+    }
+  }
+  testID="toast-container"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+          "shadowRadius": 30,
+        },
+      ]
+    }
+  >
+    <Text
+      accessibilityLabel="toast-text"
+      accessible={true}
+      style={
+        Array [
+          Object {
+            "color": "#273142",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "fontWeight": "400",
+            "lineHeight": 16,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="toast-text"
+    >
+      lorem ipsum dolor sit amet.
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="toast-action"
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+    testID="toast-action"
+  >
+    <Text
+      accessibilityLabel="toast-action-text"
+      accessible={true}
+      style={
+        Array [
+          Object {
+            "color": "#273142",
+            "fontFamily": "Rubik-Medium",
+            "fontSize": 14,
+            "fontWeight": "500",
+            "lineHeight": 16,
+            "padding": 8,
+          },
+        ]
+      }
+      testID="toast-action-text"
+    >
+      Tamam
+    </Text>
+  </View>
+</View>
+`;
