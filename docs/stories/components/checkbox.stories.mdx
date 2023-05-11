@@ -1,0 +1,75 @@
+import { Meta } from '@storybook/addon-docs';
+import Checkbox from '../assets/checkbox/checkboxCases.png';
+
+<Meta
+  title="Components/Checkbox"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Checkbox
+
+Checkboxes allow users to select one or more items from a set.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={Checkbox} width="250" alt="Checkbox" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<Checkbox disable={false} checked={true} indeterminate={true} label="lorem ipsum" />
+```
+
+<br />
+
+## Props
+
+### checked
+
+Type: `boolean`
+
+Use selected state when the item is selected.
+
+### indeterminate
+
+Type: `boolean`
+
+Use the indeterminate state when the checkbox contains a sublist of selections, some of which are selected, and some unselected.
+
+### label
+
+Type: `string`
+
+The label defines a caption for an text.
+
+### disabled
+
+Type: `boolean`
+
+If true, user won't be able to interact with the component.
+
+#### style
+
+Type: `StyleProp<TouchableOpacityStyle>`
+
+<br />
+Checkbox implements: <>
+  <a href="https://reactnative.dev/docs/touchableopacity#props" title="title">
+    ...TouchableOpacity props
+  </a>
+</>
