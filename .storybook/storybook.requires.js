@@ -25,9 +25,10 @@ if (parameters) {
 
 const getStories = () => {
   return [
-    require('../src/components/Box/Box.stories.tsx'),
     require('../src/components/Alert/Alert.stories.tsx'),
+    require('../src/components/Box/Box.stories.tsx'),
     require('../src/components/Button/Button.stories.tsx'),
+    require('../src/components/Checkbox/Checkbox.stories.tsx'),
     require('../src/components/Icon/Icon.stories.tsx'),
     require('../src/components/Input/Input.stories.tsx'),
     require('../src/components/Text/Text.stories.tsx'),

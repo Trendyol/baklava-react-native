@@ -1,0 +1,652 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should render Checkbox correctly when checked is false 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#D5D9E1",
+            "borderRadius": 2,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="tickbox"
+  />
+</View>
+`;
+
+exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F27A1A",
+            "borderColor": "#F27A1A",
+            "borderRadius": 2,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="tickbox"
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="10"
+      bbWidth="10"
+      fill="#FFFFFF"
+      focusable={false}
+      height={10}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+      testID="check-icon"
+      title="check"
+      vbHeight={24}
+      vbWidth={24}
+      width={10}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          Object {
+            "type": 0,
+            "value": 4294967295,
+          }
+        }
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4294967295,
+            }
+          }
+          fillRule={0}
+          propList={
+            Array [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`Checkbox should render Checkbox correctly when checked is true, indeterminate is false 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F27A1A",
+            "borderColor": "#F27A1A",
+            "borderRadius": 2,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="tickbox"
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="10"
+      bbWidth="10"
+      fill="#FFFFFF"
+      focusable={false}
+      height={10}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+      testID="check-icon"
+      title="check"
+      vbHeight={24}
+      vbWidth={24}
+      width={10}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          Object {
+            "type": 0,
+            "value": 4294967295,
+          }
+        }
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4294967295,
+            }
+          }
+          fillRule={0}
+          propList={
+            Array [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`Checkbox should render Checkbox correctly when checked is true, indeterminate is true 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": false,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F27A1A",
+            "borderColor": "#F27A1A",
+            "borderRadius": 2,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="tickbox"
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="8"
+      bbWidth="8"
+      fill="#FFFFFF"
+      focusable={false}
+      height={8}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 8,
+            "width": 8,
+          },
+        ]
+      }
+      testID="minus-icon"
+      title="minus"
+      vbHeight={24}
+      vbWidth={24}
+      width={8}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          Object {
+            "type": 0,
+            "value": 4294967295,
+          }
+        }
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M0 12a2 2 0 0 1 2-2h20a2 2 0 1 1 0 4H2a2 2 0 0 1-2-2Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4294967295,
+            }
+          }
+          fillRule={0}
+          propList={
+            Array [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`Checkbox should render Checkbox correctly when disable, checked and indeterminate is true 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F1F2F7",
+            "borderColor": "#F1F2F7",
+            "borderRadius": 2,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="tickbox"
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="8"
+      bbWidth="8"
+      fill="#95A1B5"
+      focusable={false}
+      height={8}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 8,
+            "width": 8,
+          },
+        ]
+      }
+      testID="minus-icon"
+      title="minus"
+      vbHeight={24}
+      vbWidth={24}
+      width={8}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          Object {
+            "type": 0,
+            "value": 4287996341,
+          }
+        }
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M0 12a2 2 0 0 1 2-2h20a2 2 0 1 1 0 4H2a2 2 0 0 1-2-2Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4287996341,
+            }
+          }
+          fillRule={0}
+          propList={
+            Array [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`Checkbox should render Checkbox correctly when disable, checked is false 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F1F2F7",
+            "borderColor": "#D5D9E1",
+            "borderRadius": 2,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="tickbox"
+  />
+</View>
+`;
+
+exports[`Checkbox should render Checkbox correctly when disable, checked is true 1`] = `
+<View
+  accessibilityState={
+    Object {
+      "disabled": true,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F1F2F7",
+            "borderColor": "#F1F2F7",
+            "borderRadius": 2,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="tickbox"
+  >
+    <RNSVGSvgView
+      align="xMidYMid"
+      bbHeight="10"
+      bbWidth="10"
+      fill="#95A1B5"
+      focusable={false}
+      height={10}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          Object {
+            "flex": 0,
+            "height": 10,
+            "width": 10,
+          },
+        ]
+      }
+      testID="check-icon"
+      title="check"
+      vbHeight={24}
+      vbWidth={24}
+      width={10}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          Object {
+            "type": 0,
+            "value": 4287996341,
+          }
+        }
+        propList={
+          Array [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
+          fill={
+            Object {
+              "type": 0,
+              "value": 4287996341,
+            }
+          }
+          fillRule={0}
+          propList={
+            Array [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;

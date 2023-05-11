@@ -34,9 +34,11 @@ export const parameters = {
   options: {
     storySort: {
       order: [
+        'Alert',
         'Box',
         'Button',
         ['Button Variants', 'Button Types'],
+        'Checkbox',
         'Text',
         'Toast',
       ],

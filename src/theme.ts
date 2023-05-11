@@ -280,6 +280,8 @@ const theme = createTheme({
     },
   },
   iconSizeVariants: {
+    '4xs': 8,
+    '3xs': 10,
     '2xs': 12,
     xs: 14,
     s: 16,
@@ -400,6 +402,33 @@ const theme = createTheme({
     warning: {
       backgroundColor: 'warningBackground',
       borderColor: 'warningColor',
+    },
+  },
+  checkboxVariants: {
+    defaults: {
+      borderWidth: 1,
+      borderRadius: 'xs',
+      backgroundColor: 'white',
+      borderColor: 'borderColor',
+      height: 16,
+      width: 16,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    unchecked: {
+      backgroundColor: 'white',
+      borderColor: 'borderColor',
+    },
+    checked: {
+      backgroundColor: 'primaryColor',
+      borderColor: 'primaryColor',
+    },
+    disabledChecked: {
+      backgroundColor: 'primaryBackground',
+      borderColor: 'primaryBackground',
+    },
+    disabledUnchecked: {
+      backgroundColor: 'primaryBackground',
     },
   },
 });
