@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Radius = ({ radius, value }) => (
+export const BorderRadius = ({ radius, value }) => (
   <>
     <div style={styles.container}>
       <div style={styles.radiusText}>{value}</div>
@@ -31,8 +31,8 @@ export const styles = {
     alignItems: "center",
   },
   box: {
-    width: "75px",
-    height: "50px",
+    width: "80px",
+    height: "80px",
     backgroundColor: "#F27A1A",
     margin: "10px",
   },

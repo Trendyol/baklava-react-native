@@ -90,7 +90,6 @@ const theme = createTheme({
     s: 4,
     m: 6,
     l: 8,
-    xl: 16,
     full: 999,
   },
   fonts: {

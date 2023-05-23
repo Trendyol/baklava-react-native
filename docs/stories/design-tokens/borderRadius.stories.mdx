@@ -1,0 +1,51 @@
+import { Meta } from '@storybook/addon-docs';
+import {
+  Header as FontHeader,
+  styles as fontStyle,
+} from './Font';
+import { BorderRadius, styles as radiusStyle } from './BorderRadius';
+
+<Meta
+  title="Design System/Border Radius"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Border Radius
+
+The border-radius property defines the radius of the element's corners.
+
+```jsx
+export const borderRadii = {
+  none: 0,
+  xs: 2,
+  s: 4,
+  m: 6,
+  l: 8,
+  pill: 999,
+};
+```
+
+<div style={fontStyle.fontSubContainer}>
+  <FontHeader text="BorderRadius" />
+  <BorderRadius radius={0} value="none" />
+  <BorderRadius radius={2} value="xs" />
+  <BorderRadius radius={4} value="s" />
+  <BorderRadius radius={6} value="m" />
+  <BorderRadius radius={8} value="l" />
+  <BorderRadius radius={999} value="pill" />
+</div>
+
+<br/><br/>
+
+### Usage
+
+```jsx
+<Box borderRadius="s" />
+```

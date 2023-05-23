@@ -3,7 +3,7 @@ import React from "react";
 export const Header = () => (
   <>
     <div style={styles.container}>
-      <div style={styles.headerText}>Value</div>
+      <div style={styles.headerText}>Variable</div>
       <div style={styles.headerText}>Pixels</div>
       <div style={styles.headerText}>Representation</div>
     </div>
@@ -11,10 +11,10 @@ export const Header = () => (
   </>
 );
 
-export const SizeLine = ({ value, pixels }) => (
+export const SizeLine = ({ variable, pixels }) => (
   <>
     <div style={styles.container}>
-      <div style={styles.lineText}>{value}</div>
+      <div style={styles.lineText}>{variable}</div>
       <div style={styles.lineText}>{pixels}</div>
       <div style={styles.coloredBoxContainer}>
         <div style={{ ...styles.coloredBox, width: `${pixels}px` }} />

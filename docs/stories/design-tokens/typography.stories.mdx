@@ -1,0 +1,66 @@
+import { Meta } from '@storybook/addon-docs';
+import {
+  FontSize,
+  FontWeight,
+  Header as FontHeader,
+  styles as fontStyle,
+} from './Font';
+
+<Meta
+  title="Design System/Typography"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Typography
+
+Typography creates purposeful texture, guiding users to read and understand the hierarchy of information.
+
+<br/>
+
+## Font Sizes and Weights
+
+```jsx
+export const fontSizes = [12, 14, 16, 20, 24, 28, 32];
+export const fontWeights = ['100', '200', '300', '400', '500', '600', '700', '800', '900', bold, normal];
+```
+
+<div style={fontStyle.fontContainer}>
+<div style={fontStyle.fontSubContainer}>
+  <FontHeader text="Font Size" />
+  <FontSize fontSize={12} />
+  <FontSize fontSize={14} />
+  <FontSize fontSize={16} />
+  <FontSize fontSize={20} />
+  <FontSize fontSize={24} />
+  <FontSize fontSize={28} />
+  <FontSize fontSize={32} />
+</div>
+
+<div style={fontStyle.fontSubContainer}>
+  <FontHeader text="Font Weight" />
+  <FontWeight fontWeight="100" />
+  <FontWeight fontWeight="200" />
+  <FontWeight fontWeight="300" />
+  <FontWeight fontWeight="400" />
+  <FontWeight fontWeight="500"/>
+  <FontWeight fontWeight="600" />
+  <FontWeight fontWeight="700" />
+  <FontWeight fontWeight="800" />
+  <FontWeight fontWeight="900" />
+  <FontWeight fontWeight="bold" />
+  <FontWeight fontWeight="normal" />
+</div>
+</div>
+
+### Usage
+
+```jsx
+<Text fontSize={16} fontWeight="400" />
+```

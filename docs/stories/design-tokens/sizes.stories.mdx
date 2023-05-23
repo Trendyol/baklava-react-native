@@ -4,16 +4,9 @@ import {
   Header as SizeLineHeader,
   styles as sizeLineStyle,
 } from './SizeLine';
-import {
-  FontSize,
-  FontWeight,
-  Header as FontHeader,
-  styles as fontStyle,
-} from './Font';
-import { Radius, styles as radiusStyle } from './Radius';
 
 <Meta
-  title="Design System/Sizes"
+  title="Design System/Size & Spacing"
   parameters={{
     viewMode: 'docs',
     previewTabs: {
@@ -24,11 +17,31 @@ import { Radius, styles as radiusStyle } from './Radius';
   }}
 />
 
-# Sizes
+# Size & Spacing
 
-Baklava uses a list of defined size for customizing the global spacing, font sizes, font weights, radius
+Using the right sizes will create consistency and hierarchy.
 
-## Space
+<div style={sizeLineStyle.sizeLineContainer}>
+  <SizeLineHeader />
+  <SizeLine variable="none" pixels="0" />
+  <SizeLine variable="4xs" pixels="2" />
+  <SizeLine variable="3xs" pixels="4" />
+  <SizeLine variable="2xs" pixels="8" />
+  <SizeLine variable="xs" pixels="12" />
+  <SizeLine variable="s" pixels="14" />
+  <SizeLine variable="m" pixels="16" />
+  <SizeLine variable="l" pixels="20" />
+  <SizeLine variable="xl" pixels="24" />
+  <SizeLine variable="2xl" pixels="32" />
+  <SizeLine variable="3xl" pixels="40" />
+  <SizeLine variable="4xl" pixels="48" />
+  <SizeLine variable="5xl" pixels="64" />
+  <SizeLine variable="6xl" pixels="80" />
+</div>
+
+<br/><br/>
+
+### Space
 
 ```jsx
 spacing: {
@@ -62,104 +75,10 @@ spacing: {
 }
 ```
 
-<div style={sizeLineStyle.sizeLineContainer}>
-  <SizeLineHeader />
-  <SizeLine value="0" pixels="0" />
-  <SizeLine value="1" pixels="2" />
-  <SizeLine value="2" pixels="4" />
-  <SizeLine value="3" pixels="8" />
-  <SizeLine value="4" pixels="12" />
-  <SizeLine value="5" pixels="14" />
-  <SizeLine value="6" pixels="16" />
-  <SizeLine value="7" pixels="20" />
-  <SizeLine value="8" pixels="24" />
-  <SizeLine value="9" pixels="32" />
-  <SizeLine value="10" pixels="40" />
-  <SizeLine value="11" pixels="48" />
-  <SizeLine value="12" pixels="64" />
-  <SizeLine value="13" pixels="80" />
-</div>
-
 <br/>
 
 ### Usage
 
 ```jsx
 <Box p="2xs" />
-```
-
-<br/>
-
-## Font Sizes and Weights
-
-```jsx
-export const fontSizes = [12, 14, 16, 20, 24, 28, 32];
-export const fontWeights = ['100', '200', '300', '400', '500', '600', '700', '800', '900', bold, normal];
-```
-
-<div style={fontStyle.fontContainer}>
-<div style={fontStyle.fontSubContainer}>
-  <FontHeader text="Font Size" />
-  <FontSize fontSize={12} />
-  <FontSize fontSize={14} />
-  <FontSize fontSize={16} />
-  <FontSize fontSize={20} />
-  <FontSize fontSize={24} />
-  <FontSize fontSize={28} />
-  <FontSize fontSize={32} />
-</div>
-
-<div style={fontStyle.fontSubContainer}>
-  <FontHeader text="Font Weight" />
-  <FontWeight fontWeight="100" />
-  <FontWeight fontWeight="200" />
-  <FontWeight fontWeight="300" />
-  <FontWeight fontWeight="400" />
-  <FontWeight fontWeight="500"/>
-  <FontWeight fontWeight="600" />
-  <FontWeight fontWeight="700" />
-  <FontWeight fontWeight="800" />
-  <FontWeight fontWeight="900" />
-  <FontWeight fontWeight="bold" />
-  <FontWeight fontWeight="normal" />
-</div>
-</div>
-
-### Usage
-
-```jsx
-<Text fontSize={16} fontWeight="400" />
-```
-
-<br/>
-
-## Radius
-
-```jsx
-export const borderRadii = {
-  none: 0,
-  xs: 2,
-  s: 4,
-  m: 6,
-  l: 8,
-  xl: 16,
-  full: 999,
-};
-```
-
-<div style={fontStyle.fontSubContainer}>
-  <FontHeader text="Radius" />
-  <Radius radius={0} value="none" />
-  <Radius radius={2} value="xs" />
-  <Radius radius={4} value="s" />
-  <Radius radius={6} value="m" />
-  <Radius radius={8} value="l" />
-  <Radius radius={16} value="xl" />
-  <Radius radius={999} value="full" />
-</div>
-
-### Usage
-
-```jsx
-<Box borderRadius="s" />
 ```
