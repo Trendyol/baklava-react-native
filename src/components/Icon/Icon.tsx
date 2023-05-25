@@ -8,7 +8,7 @@ import { ViewProps } from 'react-native';
 
 const Icon = ({
   name,
-  color = 'contentPrimary',
+  color = 'neutralDarker',
   size = 'l',
   testID = 'icon',
   ...rest

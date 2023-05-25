@@ -105,7 +105,7 @@ describe('Input', () => {
 
     // then
     expect(getByTestId('input-box').props.style[0].borderColor).toBe(
-      theme.colors.borderColor,
+      theme.colors.neutralLighter,
     );
 
     // when
@@ -115,7 +115,7 @@ describe('Input', () => {
 
     // then
     expect(getByTestId('input-box').props.style[0].borderColor).toBe(
-      theme.colors.primaryColor,
+      theme.colors.primaryKey,
     );
   });
 
@@ -125,7 +125,7 @@ describe('Input', () => {
 
     // then
     expect(getByTestId('input-box').props.style[0].borderColor).toBe(
-      theme.colors.borderColor,
+      theme.colors.neutralLighter,
     );
 
     // when
@@ -137,7 +137,7 @@ describe('Input', () => {
 
     // then
     expect(getByTestId('input-box').props.style[0].borderColor).toBe(
-      theme.colors.borderColor,
+      theme.colors.neutralLighter,
     );
   });
 
@@ -147,7 +147,7 @@ describe('Input', () => {
 
     // then
     expect(getByTestId('input-box').props.style[0].borderColor).toBe(
-      theme.colors.borderColor,
+      theme.colors.neutralLighter,
     );
 
     // when
@@ -159,7 +159,7 @@ describe('Input', () => {
 
     // then
     expect(getByTestId('input-box').props.style[0].borderColor).toBe(
-      theme.colors.borderColor,
+      theme.colors.neutralLighter,
     );
   });
 
@@ -169,7 +169,7 @@ describe('Input', () => {
 
     // then
     expect(getByTestId('input-box').props.style[0].borderColor).toBe(
-      theme.colors.borderColor,
+      theme.colors.neutralLighter,
     );
 
     // when
@@ -181,7 +181,7 @@ describe('Input', () => {
 
     // then
     expect(getByTestId('input-box').props.style[0].borderColor).toBe(
-      theme.colors.borderColor,
+      theme.colors.neutralLighter,
     );
   });
 

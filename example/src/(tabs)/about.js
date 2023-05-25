@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 
 export default function Home() {
   return (
-    <ScrollView style={{ backgroundColor: 'white' }}>
+    <ScrollView style={{ backgroundColor: theme.colors.neutralFull }}>
       <SafeAreaView>
         <Box mt="5xl" flexDirection="row" justifyContent="center">
           <Image

@@ -45,7 +45,7 @@ export const InputLabel = React.memo(
               testID="optional-fixed-label"
               ml="4xs"
               variant="subtitle04Regular"
-              color="contentTertiary">
+              color="neutralLight">
               (Optional)
             </Text>
           ) : null}

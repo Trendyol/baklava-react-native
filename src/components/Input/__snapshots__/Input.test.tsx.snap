@@ -62,7 +62,7 @@ exports[`Input should render disabled input correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#F1F2F7",
-          "borderColor": "#D5D9E1",
+          "borderColor": "#AFBBCA",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
@@ -137,7 +137,7 @@ exports[`Input should render input correctly 1`] = `
         collapsable={false}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#FFFFFF",
             "color": "#95A1B5",
             "fontFamily": "Rubik-Regular",
             "fontSize": 14,
@@ -161,7 +161,7 @@ exports[`Input should render input correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
-          "borderColor": "#D5D9E1",
+          "borderColor": "#AFBBCA",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
@@ -236,7 +236,7 @@ exports[`Input should render input with error state and error text correctly 1`]
         collapsable={false}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#FFFFFF",
             "color": "#95A1B5",
             "fontFamily": "Rubik-Regular",
             "fontSize": 14,
@@ -424,7 +424,7 @@ exports[`Input should render input with error state correctly 1`] = `
         collapsable={false}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#FFFFFF",
             "color": "#95A1B5",
             "fontFamily": "Rubik-Regular",
             "fontSize": 14,
@@ -585,7 +585,7 @@ exports[`Input should render input with help text correctly 1`] = `
         collapsable={false}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#FFFFFF",
             "color": "#95A1B5",
             "fontFamily": "Rubik-Regular",
             "fontSize": 14,
@@ -609,7 +609,7 @@ exports[`Input should render input with help text correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
-          "borderColor": "#D5D9E1",
+          "borderColor": "#AFBBCA",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
@@ -711,7 +711,7 @@ exports[`Input should render input with icon correctly 1`] = `
         collapsable={false}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#FFFFFF",
             "color": "#95A1B5",
             "fontFamily": "Rubik-Regular",
             "fontSize": 14,
@@ -735,7 +735,7 @@ exports[`Input should render input with icon correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
-          "borderColor": "#D5D9E1",
+          "borderColor": "#AFBBCA",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
@@ -900,7 +900,7 @@ exports[`Input should render input with medium size correctly 1`] = `
         collapsable={false}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#FFFFFF",
             "color": "#95A1B5",
             "fontFamily": "Rubik-Regular",
             "fontSize": 14,
@@ -924,7 +924,7 @@ exports[`Input should render input with medium size correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
-          "borderColor": "#D5D9E1",
+          "borderColor": "#AFBBCA",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
@@ -999,7 +999,7 @@ exports[`Input should render input with small size correctly 1`] = `
         collapsable={false}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#FFFFFF",
             "color": "#95A1B5",
             "fontFamily": "Rubik-Regular",
             "fontSize": 14,
@@ -1023,7 +1023,7 @@ exports[`Input should render input with small size correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
-          "borderColor": "#D5D9E1",
+          "borderColor": "#AFBBCA",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",
@@ -1098,7 +1098,7 @@ exports[`Input should render input with success state and success text correctly
         collapsable={false}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#FFFFFF",
             "color": "#95A1B5",
             "fontFamily": "Rubik-Regular",
             "fontSize": 14,
@@ -1286,7 +1286,7 @@ exports[`Input should render input with success state correctly 1`] = `
         collapsable={false}
         style={
           Object {
-            "backgroundColor": "white",
+            "backgroundColor": "#FFFFFF",
             "color": "#95A1B5",
             "fontFamily": "Rubik-Regular",
             "fontSize": 14,
@@ -1473,7 +1473,7 @@ exports[`Input should render label fixed input correctly 1`] = `
         Object {
           "alignItems": "center",
           "backgroundColor": "#FFFFFF",
-          "borderColor": "#D5D9E1",
+          "borderColor": "#AFBBCA",
           "borderRadius": 6,
           "borderWidth": 1,
           "flexDirection": "row",

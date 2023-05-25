@@ -51,12 +51,12 @@ describe('Icon', () => {
   test('should render given color correctly', () => {
     // when
     const { getByTestId } = render(
-      <Icon testID="icon" name="confetti" color="successColor" />,
+      <Icon testID="icon" name="confetti" color="successKey" />,
     );
     const iconComponent = getByTestId('icon');
 
     // then
-    expect(iconComponent.props.fill).toBe(theme.colors.successColor);
+    expect(iconComponent.props.fill).toBe(theme.colors.successKey);
   });
 
   test('should render invalid color correctly', () => {
@@ -67,7 +67,7 @@ describe('Icon', () => {
     const iconComponent = getByTestId('icon');
 
     // then
-    expect(iconComponent.props.fill).not.toBe(theme.colors.contentPrimary);
+    expect(iconComponent.props.fill).not.toBe(theme.colors.neutralDarker);
     expect(iconComponent.props.fill).not.toBe('#273142');
   });
 

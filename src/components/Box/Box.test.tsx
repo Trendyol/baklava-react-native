@@ -17,21 +17,21 @@ describe('Box', () => {
   test('should render given box', () => {
     // when
     const { getByTestId } = render(
-      <Box testID="box" backgroundColor="primaryColor" />,
+      <Box testID="box" backgroundColor="primaryKey" />,
     );
 
     const boxComponent = getByTestId('box');
 
     // then
     expect(boxComponent.props.style[0].backgroundColor).toBe(
-      theme.colors.primaryColor,
+      theme.colors.primaryKey,
     );
   });
 
   test('should render given box children ', () => {
     // when
     const { getByTestId } = render(
-      <Box testID="box" backgroundColor="primaryColor">
+      <Box testID="box" backgroundColor="primaryKey">
         <Text>testtest</Text>
       </Box>,
     );

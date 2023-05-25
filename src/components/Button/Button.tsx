@@ -139,9 +139,9 @@ const Button = ({
   });
 
   const typeColor = disabled
-    ? 'contentPassive'
+    ? 'neutralLighter'
     : isPressed && variant !== 'tertiary'
-    ? 'white'
+    ? 'neutralFull'
     : variantColors.color;
 
   const iconView = React.useMemo(() => {

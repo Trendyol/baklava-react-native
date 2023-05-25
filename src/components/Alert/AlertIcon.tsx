@@ -27,10 +27,10 @@ export const AlertIcon = React.memo(
 
     const iconColor = React.useMemo(() => {
       return {
-        info: 'primaryColor',
-        warning: 'warningColor',
-        success: 'successColor',
-        danger: 'dangerColor',
+        info: 'primaryKey',
+        warning: 'warningKey',
+        success: 'successKey',
+        danger: 'dangerKey',
       }[variant];
     }, [variant]);
 

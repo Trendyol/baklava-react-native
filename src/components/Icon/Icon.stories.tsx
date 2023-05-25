@@ -23,7 +23,7 @@ const IconMeta: ComponentMeta<typeof Icon> = {
   },
   args: {
     name: 'confetti',
-    color: 'contentPrimary',
+    color: 'neutralDarker',
     size: 'l',
   },
 };
@@ -85,8 +85,8 @@ export const IconColors: IconStory = args => (
     </Text>
     <Box alignSelf="flex-start" p="2xs">
       <Box flexDirection="row" p="2xs" alignItems="center">
-        <Icon name={args.name} color="contentPrimary" />
-        <Text pl="2xs">contentPrimary</Text>
+        <Icon name={args.name} color="neutralDarker" />
+        <Text pl="2xs">neutralDarker</Text>
       </Box>
       <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color="red" />

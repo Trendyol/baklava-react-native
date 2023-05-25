@@ -38,7 +38,7 @@ describe('Alert', () => {
 
     // then
     expect(alertComponent.props.style[1][0].backgroundColor).toBe(
-      theme.colors.successBackground,
+      theme.colors.successContrast,
     );
   });
 

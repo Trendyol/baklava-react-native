@@ -83,11 +83,7 @@ export const getLabelColor = ({
   successState: boolean;
   errorState: boolean;
 }) => {
-  return successState
-    ? 'successColor'
-    : errorState
-    ? 'dangerColor'
-    : 'contentSecondary';
+  return successState ? 'successKey' : errorState ? 'dangerKey' : 'neutralDark';
 };
 
 export const getTextColor = ({
@@ -98,10 +94,10 @@ export const getTextColor = ({
   errorState: boolean;
 }) => {
   return successState
-    ? 'successColor'
+    ? 'successKey'
     : errorState
-    ? 'dangerColor'
-    : 'contentTertiary';
+    ? 'dangerKey'
+    : 'neutralLight';
 };
 
 export const getBorderColor = ({
@@ -114,12 +110,12 @@ export const getBorderColor = ({
   errorState: boolean;
 }) => {
   return focused
-    ? 'primaryColor'
+    ? 'primaryKey'
     : successState
-    ? 'successColor'
+    ? 'successKey'
     : errorState
-    ? 'dangerColor'
-    : 'borderColor';
+    ? 'dangerKey'
+    : 'neutralLighter';
 };
 
 export const getIconColor = ({
@@ -132,10 +128,10 @@ export const getIconColor = ({
   errorState: boolean;
 }) => {
   return focused
-    ? 'primaryColor'
+    ? 'primaryKey'
     : successState
-    ? 'successColor'
+    ? 'successKey'
     : errorState
-    ? 'dangerColor'
-    : 'contentTertiary';
+    ? 'dangerKey'
+    : 'neutralLight';
 };

@@ -111,7 +111,7 @@ describe('Input Hooks', () => {
     });
     expect(result.current.animatedTextProps).toEqual({
       style: {
-        backgroundColor: 'white',
+        backgroundColor: theme.colors.neutralFull,
         color: '#95A1B5',
         fontFamily: 'Rubik-Regular',
         fontSize: new Animated.Value(12),
@@ -239,7 +239,7 @@ describe('Input Hooks', () => {
     });
     expect(result.current.animatedTextProps).toEqual({
       style: {
-        backgroundColor: 'white',
+        backgroundColor: theme.colors.neutralFull,
         color: '#95A1B5',
         fontFamily: 'Rubik-Regular',
         fontSize: new Animated.Value(14),

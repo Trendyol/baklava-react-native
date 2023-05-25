@@ -1,10 +1,38 @@
 import { createTheme } from '@ergenekonyigit/restyle';
 
 const colors = {
+  // Main Colors
+  // Primary
+  primaryKey: '#F27A1A',
+  primaryHighlight: '#EF6114',
+  primaryContrast: '#FEF2E8',
+  // Success
+  successKey: '#0BC15C',
+  successHighlight: '#09A44E',
+  successContrast: '#E7F9EF',
+  // Danger
+  dangerKey: '#FF5043',
+  dangerHighlight: '#FF3028',
+  dangerContrast: '#FFEEEC',
+  // Warning
+  warningKey: '#FFB600',
+  warningHighlight: '#FF9800',
+  warningContrast: '#FFF8E6',
+  // Neutral
+  neutralNone: '#000000',
+  neutralDarkest: '#0F131A',
+  neutralDarker: '#273142',
+  neutralDark: '#6E7787',
+  neutralLight: '#95A1B5',
+  neutralLighter: '#AFBBCA',
+  neutralLightest: '#F1F2F7',
+  neutralFull: '#FFFFFF',
+
+  // Will Be Deprecated
+  // Color
   white: '#FFFFFF',
   black: '#000000',
   transparent: 'transparent',
-  // Color
   primaryColor: '#F27A1A',
   secondaryColor: '#273142',
   tertiaryColor: '#F1F2F7',
@@ -408,7 +436,7 @@ const theme = createTheme({
       borderWidth: 1,
       borderRadius: 'xs',
       backgroundColor: 'white',
-      borderColor: 'borderColor',
+      borderColor: 'neutralLighter',
       height: 16,
       width: 16,
       justifyContent: 'center',
@@ -416,7 +444,7 @@ const theme = createTheme({
     },
     unchecked: {
       backgroundColor: 'white',
-      borderColor: 'borderColor',
+      borderColor: 'neutralLighter',
     },
     checked: {
       backgroundColor: 'primaryColor',

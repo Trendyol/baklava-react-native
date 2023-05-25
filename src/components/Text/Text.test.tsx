@@ -34,9 +34,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(32);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render heading2 variant correctly', () => {
     // when
@@ -49,9 +47,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(28);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
 
   test('should render heading3 variant correctly', () => {
@@ -66,9 +62,7 @@ describe('Text', () => {
 
     expect(textComponent.props.style[0].fontSize).toBe(24);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
 
   // Subtitle01
@@ -83,9 +77,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(20);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle01Medium variant correctly', () => {
     // when
@@ -98,9 +90,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(20);
     expect(textComponent.props.style[0].fontWeight).toBe('500');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle01Semibold variant correctly', () => {
     // when
@@ -113,9 +103,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(20);
     expect(textComponent.props.style[0].fontWeight).toBe('600');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle01Bold variant correctly', () => {
     // when
@@ -128,9 +116,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(20);
     expect(textComponent.props.style[0].fontWeight).toBe('700');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
 
   // Subtitle02
@@ -145,9 +131,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(16);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle02Medium variant correctly', () => {
     // when
@@ -160,9 +144,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(16);
     expect(textComponent.props.style[0].fontWeight).toBe('500');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle02Semibold variant correctly', () => {
     // when
@@ -175,9 +157,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(16);
     expect(textComponent.props.style[0].fontWeight).toBe('600');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle02Bold variant correctly', () => {
     // when
@@ -190,9 +170,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(16);
     expect(textComponent.props.style[0].fontWeight).toBe('700');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
 
   // Subtitle03
@@ -207,9 +185,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(14);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle03Medium variant correctly', () => {
     // when
@@ -222,9 +198,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(14);
     expect(textComponent.props.style[0].fontWeight).toBe('500');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle03Semibold variant correctly', () => {
     // when
@@ -237,9 +211,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(14);
     expect(textComponent.props.style[0].fontWeight).toBe('600');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle03Bold variant correctly', () => {
     // when
@@ -252,9 +224,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(14);
     expect(textComponent.props.style[0].fontWeight).toBe('700');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
 
   // Subtitle04
@@ -269,9 +239,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(12);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle04Medium variant correctly', () => {
     // when
@@ -284,9 +252,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(12);
     expect(textComponent.props.style[0].fontWeight).toBe('500');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle04Semibold variant correctly', () => {
     // when
@@ -299,9 +265,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(12);
     expect(textComponent.props.style[0].fontWeight).toBe('600');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render subtitle04Bold variant correctly', () => {
     // when
@@ -314,9 +278,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(12);
     expect(textComponent.props.style[0].fontWeight).toBe('700');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
 
   // Body
@@ -331,9 +293,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(14);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render bodyUnderline variant correctly', () => {
     // when
@@ -347,9 +307,7 @@ describe('Text', () => {
     expect(textComponent.props.style[0].fontSize).toBe(14);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
     expect(textComponent.props.style[0].textDecorationLine).toBe('underline');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render bodyTextLink variant correctly', () => {
     // when
@@ -363,9 +321,7 @@ describe('Text', () => {
     expect(textComponent.props.style[0].fontSize).toBe(14);
     expect(textComponent.props.style[0].fontWeight).toBe('500');
     expect(textComponent.props.style[0].textDecorationLine).toBe('underline');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render bodyLongText variant correctly', () => {
     // when
@@ -378,9 +334,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(14);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
 
   // Caption
@@ -395,9 +349,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(12);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render captionMedium variant correctly', () => {
     // when
@@ -410,9 +362,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(12);
     expect(textComponent.props.style[0].fontWeight).toBe('500');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render captionLongText variant correctly', () => {
     // when
@@ -425,9 +375,7 @@ describe('Text', () => {
     // then
     expect(textComponent.props.style[0].fontSize).toBe(12);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render captionTextLink variant correctly', () => {
     // when
@@ -441,9 +389,7 @@ describe('Text', () => {
     expect(textComponent.props.style[0].fontSize).toBe(12);
     expect(textComponent.props.style[0].fontWeight).toBe('500');
     expect(textComponent.props.style[0].textDecorationLine).toBe('underline');
-    expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   //
 });

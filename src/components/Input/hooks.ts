@@ -181,10 +181,8 @@ export const useOutlineLabelVisibility = ({
     return {
       style: {
         fontFamily: theme.fonts.regular,
-        color: focused
-          ? theme.colors.contentSecondary
-          : theme.colors.contentTertiary,
-        backgroundColor: disabled ? 'transparent' : 'white',
+        color: focused ? theme.colors.neutralDark : theme.colors.neutralLight,
+        backgroundColor: disabled ? 'transparent' : theme.colors.neutralFull,
         height: lineHeightRef,
         paddingLeft: theme.spacing['3xs'],
         paddingRight: theme.spacing['3xs'],
@@ -199,8 +197,9 @@ export const useOutlineLabelVisibility = ({
     fontSizeRef,
     initialTopValue,
     lineHeightRef,
-    theme.colors.contentSecondary,
-    theme.colors.contentTertiary,
+    theme.colors.neutralDark,
+    theme.colors.neutralFull,
+    theme.colors.neutralLight,
     theme.fonts,
     theme.spacing,
   ]);

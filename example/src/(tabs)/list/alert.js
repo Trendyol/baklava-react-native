@@ -15,7 +15,7 @@ export default () => {
   const [state, setState] = useState(args);
 
   return (
-    <ScrollView style={{ backgroundColor: 'white' }}>
+    <ScrollView style={{ backgroundColor: theme.colors.neutralFull }}>
       <Box pb="m">
         <Text p="2xs" variant="subtitle01Bold">
           Alert

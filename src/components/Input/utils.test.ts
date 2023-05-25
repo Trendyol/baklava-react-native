@@ -325,7 +325,7 @@ describe('Input Utils', () => {
   });
 
   describe('getLabelColor', () => {
-    test('should return contentSecondary when errorState and successState false', () => {
+    test('should return neutralDark when errorState and successState false', () => {
       // given
       const errorState = false;
       const successState = false;
@@ -337,10 +337,10 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('contentSecondary');
+      expect(result).toBe('neutralDark');
     });
 
-    test('should return dangerColor when focused, successState false and errorState true', () => {
+    test('should return dangerKey when focused, successState false and errorState true', () => {
       // given
       const errorState = true;
       const successState = false;
@@ -352,10 +352,10 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('dangerColor');
+      expect(result).toBe('dangerKey');
     });
 
-    test('should return successColor when focused, errorState false and successState true', () => {
+    test('should return successKey when focused, errorState false and successState true', () => {
       // given
       const errorState = false;
       const successState = true;
@@ -367,12 +367,12 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('successColor');
+      expect(result).toBe('successKey');
     });
   });
 
   describe('getTextColor', () => {
-    test('should return contentTertiary when errorState and successState false', () => {
+    test('should return neutralLight when errorState and successState false', () => {
       // given
       const errorState = false;
       const successState = false;
@@ -384,10 +384,10 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('contentTertiary');
+      expect(result).toBe('neutralLight');
     });
 
-    test('should return dangerColor when focused, successState false and errorState true', () => {
+    test('should return dangerKey when focused, successState false and errorState true', () => {
       // given
       const errorState = true;
       const successState = false;
@@ -399,10 +399,10 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('dangerColor');
+      expect(result).toBe('dangerKey');
     });
 
-    test('should return successColor when focused, errorState false and successState true', () => {
+    test('should return successKey when focused, errorState false and successState true', () => {
       // given
       const errorState = false;
       const successState = true;
@@ -414,7 +414,7 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('successColor');
+      expect(result).toBe('successKey');
     });
   });
 
@@ -433,10 +433,10 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('borderColor');
+      expect(result).toBe('neutralLighter');
     });
 
-    test('should return dangerColor when focused, successState false and errorState true', () => {
+    test('should return dangerKey when focused, successState false and errorState true', () => {
       // given
       const focused = false;
       const errorState = true;
@@ -450,10 +450,10 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('dangerColor');
+      expect(result).toBe('dangerKey');
     });
 
-    test('should return successColor when focused, errorState false and successState true', () => {
+    test('should return successKey when focused, errorState false and successState true', () => {
       // given
       const focused = false;
       const errorState = false;
@@ -467,10 +467,10 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('successColor');
+      expect(result).toBe('successKey');
     });
 
-    test('should return primaryColor when focused true', () => {
+    test('should return primaryKey when focused true', () => {
       // given
       const focused = true;
       const errorState = false;
@@ -484,12 +484,12 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('primaryColor');
+      expect(result).toBe('primaryKey');
     });
   });
 
   describe('getIconColor', () => {
-    test('should return contentTertiary when focused, errorState and successState false', () => {
+    test('should return neutralLight when focused, errorState and successState false', () => {
       // given
       const focused = false;
       const errorState = false;
@@ -503,10 +503,10 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('contentTertiary');
+      expect(result).toBe('neutralLight');
     });
 
-    test('should return dangerColor when focused, successState false and errorState true', () => {
+    test('should return dangerKey when focused, successState false and errorState true', () => {
       // given
       const focused = false;
       const errorState = true;
@@ -520,10 +520,10 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('dangerColor');
+      expect(result).toBe('dangerKey');
     });
 
-    test('should return successColor when focused, errorState false and successState true', () => {
+    test('should return successKey when focused, errorState false and successState true', () => {
       // given
       const focused = false;
       const errorState = false;
@@ -537,10 +537,10 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('successColor');
+      expect(result).toBe('successKey');
     });
 
-    test('should return primaryColor when focused true', () => {
+    test('should return primaryKey when focused true', () => {
       // given
       const focused = true;
       const errorState = false;
@@ -554,7 +554,7 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('primaryColor');
+      expect(result).toBe('primaryKey');
     });
   });
 });

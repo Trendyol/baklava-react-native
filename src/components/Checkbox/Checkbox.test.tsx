@@ -14,10 +14,10 @@ describe('Checkbox', () => {
     // then
     expect(toJSON()).toMatchSnapshot();
     expect(checkboxComponent.props.style[1][0].borderColor).toBe(
-      theme.colors.borderColor,
+      theme.colors.neutralLighter,
     );
     expect(checkboxComponent.props.style[1][0].backgroundColor).toBe(
-      theme.colors.white,
+      theme.colors.neutralFull,
     );
   });
 
@@ -29,10 +29,10 @@ describe('Checkbox', () => {
     // then
     expect(toJSON()).toMatchSnapshot();
     expect(checkboxComponent.props.style[1][0].borderColor).toBe(
-      theme.colors.primaryColor,
+      theme.colors.primaryKey,
     );
     expect(checkboxComponent.props.style[1][0].backgroundColor).toBe(
-      theme.colors.primaryColor,
+      theme.colors.primaryKey,
     );
   });
 
@@ -46,10 +46,10 @@ describe('Checkbox', () => {
     // then
     expect(toJSON()).toMatchSnapshot();
     expect(checkboxComponent.props.style[1][0].borderColor).toBe(
-      theme.colors.primaryColor,
+      theme.colors.primaryKey,
     );
     expect(checkboxComponent.props.style[1][0].backgroundColor).toBe(
-      theme.colors.primaryColor,
+      theme.colors.primaryKey,
     );
   });
 
@@ -123,7 +123,7 @@ describe('Checkbox', () => {
     // then
     expect(onPress).not.toBeCalled();
     expect(checkboxLabelComponent.props.style[0].color).toBe(
-      theme.colors.contentPassive,
+      theme.colors.neutralLighter,
     );
   });
 
@@ -167,7 +167,7 @@ describe('Checkbox', () => {
 
     // then
     expect(checkboxLabel).toBeTruthy();
-    expect(checkboxLabel.props.style[0].color).toBe(theme.colors.primaryColor);
+    expect(checkboxLabel.props.style[0].color).toBe(theme.colors.primaryKey);
   });
 
   test('should render with label correctly when unchecked', () => {
@@ -179,9 +179,7 @@ describe('Checkbox', () => {
 
     // then
     expect(checkboxLabel).toBeTruthy();
-    expect(checkboxLabel.props.style[0].color).toBe(
-      theme.colors.contentPrimary,
-    );
+    expect(checkboxLabel.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
 
   test('should render without label correctly', () => {

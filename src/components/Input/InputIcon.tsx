@@ -32,7 +32,7 @@ export const InputIcon = React.memo(
           <Icon
             name={passwordVisibilityIcon}
             size="s"
-            color="contentTertiary"
+            color="neutralLight"
             testID="secure-input-icon"
           />
         </Pressable>

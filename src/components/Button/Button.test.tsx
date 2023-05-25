@@ -110,7 +110,7 @@ describe('Button', () => {
     // then
     expect(buttonComponent.props.accessibilityState.disabled).toBeTruthy();
     expect(textComponent.props.style[0].color).toBe(
-      theme.colors.contentPassive,
+      theme.colors.neutralLighter,
     );
   });
 
@@ -128,7 +128,7 @@ describe('Button', () => {
     const textComponent = getByTestId('button-text');
 
     // then
-    expect(textComponent.props.style[0].color).toBe(theme.colors.white);
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralFull);
   });
 
   test('should render given filled correctly', () => {

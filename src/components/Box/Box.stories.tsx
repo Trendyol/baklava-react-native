@@ -20,7 +20,7 @@ export const Basic: BoxStory = args => (
 );
 
 Basic.args = {
-  backgroundColor: 'primaryColor',
+  backgroundColor: 'primaryKey',
   width: 200,
   height: 200,
 };

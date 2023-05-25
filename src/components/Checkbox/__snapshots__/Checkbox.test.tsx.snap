@@ -33,7 +33,7 @@ exports[`Checkbox should render Checkbox correctly when checked is false 1`] = `
           Object {
             "alignItems": "center",
             "backgroundColor": "#FFFFFF",
-            "borderColor": "#D5D9E1",
+            "borderColor": "#AFBBCA",
             "borderRadius": 2,
             "borderWidth": 1,
             "height": 16,
@@ -525,7 +525,7 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is fals
           Object {
             "alignItems": "center",
             "backgroundColor": "#F1F2F7",
-            "borderColor": "#D5D9E1",
+            "borderColor": "#AFBBCA",
             "borderRadius": 2,
             "borderWidth": 1,
             "height": 16,

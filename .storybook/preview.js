@@ -17,7 +17,7 @@ export const decorators = [
   Story => (
     <ThemeProvider theme={theme}>
       <SafeAreaProvider>
-        <ScrollView style={{ backgroundColor: 'white' }}>
+        <ScrollView style={{ backgroundColor: theme.colors.neutralFull }}>
           <Story />
         </ScrollView>
         <Toast ignoreKeyboard extraPaddingBottom={16} />
@@ -28,7 +28,7 @@ export const decorators = [
 
 export const parameters = {
   backgrounds: [
-    { name: 'plain', value: 'white', default: true },
+    { name: 'plain', value: theme.colors.neutralFull, default: true },
     { name: 'warm', value: '#f1f2f7' },
   ],
   options: {

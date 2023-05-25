@@ -58,7 +58,7 @@ const Checkbox = ({
         <Icon
           size="4xs"
           name="minus"
-          color={disabled ? 'contentTertiary' : 'white'}
+          color={disabled ? 'neutralLight' : 'neutralFull'}
           testID="minus-icon"
         />
       );
@@ -67,7 +67,7 @@ const Checkbox = ({
       <Icon
         size="3xs"
         name="check"
-        color={disabled ? 'contentTertiary' : 'white'}
+        color={disabled ? 'neutralLight' : 'neutralFull'}
         testID="check-icon"
       />
     );
@@ -99,10 +99,10 @@ const Checkbox = ({
           marginLeft="2xs"
           color={
             disabled
-              ? 'contentPassive'
+              ? 'neutralLighter'
               : checked
-              ? 'primaryColor'
-              : 'contentPrimary'
+              ? 'primaryKey'
+              : 'neutralDarker'
           }>
           {label}
         </Text>

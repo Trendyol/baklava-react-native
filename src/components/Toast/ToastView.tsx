@@ -142,7 +142,7 @@ const ToastView = React.forwardRef<ToastViewRef, ToastViewProps>(
           accessibilityLabel="toast-action">
           <Text
             variant="subtitle03Medium"
-            color="contentPrimary"
+            color="neutralDarker"
             testID="toast-action-text"
             accessibilityLabel="toast-action-text"
             p="2xs">
@@ -164,7 +164,7 @@ const ToastView = React.forwardRef<ToastViewRef, ToastViewProps>(
         <Box flex={1} shadowRadius={30}>
           <Text
             variant="bodyText"
-            color="contentPrimary"
+            color="neutralDarker"
             testID="toast-text"
             accessibilityLabel="toast-text"
             textAlign="left">

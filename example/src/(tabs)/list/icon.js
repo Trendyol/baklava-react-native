@@ -183,7 +183,7 @@ export const iconList = [
 
 export default () => {
   return (
-    <ScrollView style={{ backgroundColor: 'white' }}>
+    <ScrollView style={{ backgroundColor: theme.colors.neutralFull }}>
       <Box pb="m">
         <Text p="2xs" variant="subtitle01Bold">
           Icon Sizes
