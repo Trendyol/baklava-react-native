@@ -32,7 +32,8 @@ describe('Text', () => {
     );
     const textComponent = getByTestId('text');
     // then
-    expect(textComponent.props.style[0].fontSize).toBe(32);
+    expect(textComponent.props.style[0].fontSize).toBe(30);
+    expect(textComponent.props.style[0].lineHeight).toBe(36);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
     expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
@@ -46,6 +47,7 @@ describe('Text', () => {
     const textComponent = getByTestId('text');
     // then
     expect(textComponent.props.style[0].fontSize).toBe(28);
+    expect(textComponent.props.style[0].lineHeight).toBe(32);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
     expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
@@ -61,6 +63,7 @@ describe('Text', () => {
     // then
 
     expect(textComponent.props.style[0].fontSize).toBe(24);
+    expect(textComponent.props.style[0].lineHeight).toBe(28);
     expect(textComponent.props.style[0].fontWeight).toBe('400');
     expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
@@ -109,6 +112,60 @@ describe('Text', () => {
     // when
     const { getByTestId } = render(
       <Text testID="text" variant="subtitle01Bold">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(20);
+    expect(textComponent.props.style[0].fontWeight).toBe('700');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+
+  // Subtitle1
+  test('should render subtitle1Regular variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle1Regular">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(20);
+    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle1Medium variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle1Medium">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(20);
+    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle1Semibold variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle1Semibold">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(20);
+    expect(textComponent.props.style[0].fontWeight).toBe('600');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle1Bold variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle1Bold">
         Test Text
       </Text>,
     );
@@ -173,6 +230,60 @@ describe('Text', () => {
     expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
 
+  // Subtitle2
+  test('should render subtitle2Regular variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle2Regular">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(16);
+    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle2Medium variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle2Medium">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(16);
+    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle2Semibold variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle2Semibold">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(16);
+    expect(textComponent.props.style[0].fontWeight).toBe('600');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle2Bold variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle2Bold">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(16);
+    expect(textComponent.props.style[0].fontWeight).toBe('700');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+
   // Subtitle03
   test('should render subtitle03Regular variant correctly', () => {
     // when
@@ -217,6 +328,60 @@ describe('Text', () => {
     // when
     const { getByTestId } = render(
       <Text testID="text" variant="subtitle03Bold">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(14);
+    expect(textComponent.props.style[0].fontWeight).toBe('700');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+
+  // Subtitle3
+  test('should render subtitle3Regular variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle3Regular">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(14);
+    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle3Medium variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle3Medium">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(14);
+    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle3Semibold variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle3Semibold">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(14);
+    expect(textComponent.props.style[0].fontWeight).toBe('600');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle3Bold variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle3Bold">
         Test Text
       </Text>,
     );
@@ -281,6 +446,60 @@ describe('Text', () => {
     expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
 
+  // Subtitle4
+  test('should render subtitle4Regular variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle4Regular">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(12);
+    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle4Medium variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle4Medium">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(12);
+    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle4Semibold variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle4Semibold">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(12);
+    expect(textComponent.props.style[0].fontWeight).toBe('600');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+  test('should render subtitle4Bold variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="subtitle4Bold">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(12);
+    expect(textComponent.props.style[0].fontWeight).toBe('700');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+
   // Body
   test('should render bodyText variant correctly', () => {
     // when
@@ -295,6 +514,52 @@ describe('Text', () => {
     expect(textComponent.props.style[0].fontWeight).toBe('400');
     expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
+
+  test('should render body1 variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="body1">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(16);
+    expect(textComponent.props.style[0].lineHeight).toBe(18);
+    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+
+  test('should render body2 variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="body2">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(14);
+    expect(textComponent.props.style[0].lineHeight).toBe(16);
+    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+
+  test('should render body3 variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="body3">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(12);
+    expect(textComponent.props.style[0].lineHeight).toBe(14);
+    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
+
   test('should render bodyUnderline variant correctly', () => {
     // when
     const { getByTestId } = render(
@@ -338,6 +603,20 @@ describe('Text', () => {
   });
 
   // Caption
+  test('should render caption variant correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" variant="caption">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].fontSize).toBe(12);
+    expect(textComponent.props.style[0].lineHeight).toBe(14);
+    expect(textComponent.props.style[0].fontWeight).toBe('500');
+    expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
+  });
   test('should render captionText variant correctly', () => {
     // when
     const { getByTestId } = render(
@@ -348,7 +627,8 @@ describe('Text', () => {
     const textComponent = getByTestId('text');
     // then
     expect(textComponent.props.style[0].fontSize).toBe(12);
-    expect(textComponent.props.style[0].fontWeight).toBe('400');
+    expect(textComponent.props.style[0].lineHeight).toBe(14);
+    expect(textComponent.props.style[0].fontWeight).toBe('500');
     expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
   test('should render captionMedium variant correctly', () => {

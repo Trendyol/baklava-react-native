@@ -135,7 +135,7 @@ const theme = createTheme({
     },
     // Heading
     heading1: {
-      fontSize: 32,
+      fontSize: 30,
       fontWeight: '400',
       fontFamily: 'regular',
       lineHeight: 36,
@@ -152,113 +152,281 @@ const theme = createTheme({
       fontFamily: 'regular',
       lineHeight: 28,
     },
-    // Subtitle01
+    // Subtitle1
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle01Regular: {
       fontSize: 20,
       fontWeight: '400',
       fontFamily: 'regular',
       lineHeight: 24,
     },
+    subtitle1Regular: {
+      fontSize: 20,
+      fontWeight: '400',
+      fontFamily: 'regular',
+      lineHeight: 24,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle01Medium: {
       fontSize: 20,
       fontWeight: '500',
       fontFamily: 'medium',
       lineHeight: 24,
     },
+    subtitle1Medium: {
+      fontSize: 20,
+      fontWeight: '500',
+      fontFamily: 'medium',
+      lineHeight: 24,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle01Semibold: {
       fontSize: 20,
       fontWeight: '600',
       fontFamily: 'semiBold',
       lineHeight: 24,
     },
+    subtitle1Semibold: {
+      fontSize: 20,
+      fontWeight: '600',
+      fontFamily: 'semiBold',
+      lineHeight: 24,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle01Bold: {
       fontSize: 20,
       fontWeight: '700',
       fontFamily: 'bold',
       lineHeight: 24,
     },
-    // Subtitle02
+    subtitle1Bold: {
+      fontSize: 20,
+      fontWeight: '700',
+      fontFamily: 'bold',
+      lineHeight: 24,
+    },
+    // Subtitle1
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle02Regular: {
       fontSize: 16,
       fontWeight: '400',
       fontFamily: 'regular',
       lineHeight: 20,
     },
+    subtitle2Regular: {
+      fontSize: 16,
+      fontWeight: '400',
+      fontFamily: 'regular',
+      lineHeight: 20,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle02Medium: {
       fontSize: 16,
       fontWeight: '500',
       fontFamily: 'medium',
       lineHeight: 20,
     },
+    subtitle2Medium: {
+      fontSize: 16,
+      fontWeight: '500',
+      fontFamily: 'medium',
+      lineHeight: 20,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle02Semibold: {
       fontSize: 16,
       fontWeight: '600',
       fontFamily: 'semiBold',
       lineHeight: 20,
     },
+    subtitle2Semibold: {
+      fontSize: 16,
+      fontWeight: '600',
+      fontFamily: 'semiBold',
+      lineHeight: 20,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle02Bold: {
       fontSize: 16,
       fontWeight: '700',
       fontFamily: 'bold',
       lineHeight: 20,
     },
-    // Subtitle03
+    subtitle2Bold: {
+      fontSize: 16,
+      fontWeight: '700',
+      fontFamily: 'bold',
+      lineHeight: 20,
+    },
+    // Subtitle3
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle03Regular: {
       fontSize: 14,
       fontWeight: '400',
       fontFamily: 'regular',
       lineHeight: 16,
     },
+    subtitle3Regular: {
+      fontSize: 14,
+      fontWeight: '400',
+      fontFamily: 'regular',
+      lineHeight: 16,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle03Medium: {
       fontSize: 14,
       fontWeight: '500',
       fontFamily: 'medium',
       lineHeight: 16,
     },
+    subtitle3Medium: {
+      fontSize: 14,
+      fontWeight: '500',
+      fontFamily: 'medium',
+      lineHeight: 16,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle03Semibold: {
       fontSize: 14,
       fontWeight: '600',
       fontFamily: 'semiBold',
       lineHeight: 16,
     },
+    subtitle3Semibold: {
+      fontSize: 14,
+      fontWeight: '600',
+      fontFamily: 'semiBold',
+      lineHeight: 16,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle03Bold: {
       fontSize: 14,
       fontWeight: '700',
       fontFamily: 'bold',
       lineHeight: 16,
     },
-    // Subtitle04
+    subtitle3Bold: {
+      fontSize: 14,
+      fontWeight: '700',
+      fontFamily: 'bold',
+      lineHeight: 16,
+    },
+    // Subtitle4
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle04Regular: {
       fontSize: 12,
       fontWeight: '400',
       fontFamily: 'regular',
       lineHeight: 14,
     },
+    subtitle4Regular: {
+      fontSize: 12,
+      fontWeight: '400',
+      fontFamily: 'regular',
+      lineHeight: 14,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle04Medium: {
       fontSize: 12,
       fontWeight: '500',
       fontFamily: 'medium',
       lineHeight: 14,
     },
+    subtitle4Medium: {
+      fontSize: 12,
+      fontWeight: '500',
+      fontFamily: 'medium',
+      lineHeight: 14,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle04Semibold: {
       fontSize: 12,
       fontWeight: '600',
       fontFamily: 'semiBold',
       lineHeight: 14,
     },
+    subtitle4Semibold: {
+      fontSize: 12,
+      fontWeight: '600',
+      fontFamily: 'semiBold',
+      lineHeight: 14,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     subtitle04Bold: {
       fontSize: 12,
       fontWeight: '700',
       fontFamily: 'bold',
       lineHeight: 14,
     },
+    subtitle4Bold: {
+      fontSize: 12,
+      fontWeight: '700',
+      fontFamily: 'bold',
+      lineHeight: 14,
+    },
     // Body
+    /**
+     * @deprecated This variant name will be removed
+     */
     bodyText: {
       fontSize: 14,
       fontWeight: '400',
       fontFamily: 'regular',
       lineHeight: 16,
     },
+    body1: {
+      fontSize: 16,
+      fontWeight: '400',
+      fontFamily: 'regular',
+      lineHeight: 18,
+    },
+    body2: {
+      fontSize: 14,
+      fontWeight: '400',
+      fontFamily: 'regular',
+      lineHeight: 16,
+    },
+    body3: {
+      fontSize: 12,
+      fontWeight: '400',
+      fontFamily: 'regular',
+      lineHeight: 14,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     bodyUnderline: {
       fontSize: 14,
       fontWeight: '400',
@@ -266,6 +434,9 @@ const theme = createTheme({
       lineHeight: 16,
       textDecorationLine: 'underline',
     },
+    /**
+     * @deprecated This variant name will be removed
+     */
     bodyTextLink: {
       fontSize: 14,
       fontWeight: '500',
@@ -273,6 +444,9 @@ const theme = createTheme({
       lineHeight: 16,
       textDecorationLine: 'underline',
     },
+    /**
+     * @deprecated This variant name will be removed
+     */
     bodyLongText: {
       fontSize: 14,
       fontWeight: '400',
@@ -280,24 +454,42 @@ const theme = createTheme({
       lineHeight: 16,
     },
     // Caption
+    caption: {
+      fontSize: 12,
+      fontWeight: '500',
+      fontFamily: 'regular',
+      lineHeight: 14,
+    },
+    /**
+     * @deprecated This variant name will be removed
+     */
     captionText: {
       fontSize: 12,
-      fontWeight: '400',
+      fontWeight: '500',
       fontFamily: 'regular',
-      lineHeight: 12,
+      lineHeight: 14,
     },
+    /**
+     * @deprecated This variant name will be removed
+     */
     captionMedium: {
       fontSize: 12,
       fontWeight: '500',
       fontFamily: 'medium',
       lineHeight: 12,
     },
+    /**
+     * @deprecated This variant name will be removed
+     */
     captionLongText: {
       fontSize: 12,
       fontWeight: '400',
       fontFamily: 'regular',
       lineHeight: 12,
     },
+    /**
+     * @deprecated This variant name will be removed
+     */
     captionTextLink: {
       fontSize: 12,
       fontWeight: '500',

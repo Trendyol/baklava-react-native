@@ -25,7 +25,7 @@ type TextStory = ComponentStory<typeof Text>;
 
 export const Basic: TextStory = args => (
   <>
-    <Text p="2xs" variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle1Bold">
       Text
     </Text>
     <Text variant={args.variant} p="2xs">
@@ -36,7 +36,7 @@ export const Basic: TextStory = args => (
 
 export const Heading: TextStory = () => (
   <>
-    <Text p="2xs" variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle1Bold">
       Text Heading
     </Text>
     <Text variant="heading1" p="2xs">
@@ -51,95 +51,101 @@ export const Heading: TextStory = () => (
   </>
 );
 
-export const Subtitle01: TextStory = () => (
+export const Subtitle1: TextStory = () => (
   <>
-    <Text p="2xs" variant="subtitle01Bold">
-      Text Subtitle 01
+    <Text p="2xs" variant="subtitle1Bold">
+      Text Subtitle 1
     </Text>
-    <Text variant="subtitle01Regular" p="2xs">
-      Subtitle 01 / Regular
+    <Text variant="subtitle1Regular" p="2xs">
+      Subtitle 1 / Regular
     </Text>
-    <Text variant="subtitle01Medium" p="2xs">
-      Subtitle 01 / Medium
+    <Text variant="subtitle1Medium" p="2xs">
+      Subtitle 1 / Medium
     </Text>
-    <Text variant="subtitle01Semibold" p="2xs">
-      Subtitle 01 / Semibold
+    <Text variant="subtitle1Semibold" p="2xs">
+      Subtitle 1 / Semibold
     </Text>
-    <Text variant="subtitle01Bold" p="2xs">
-      Subtitle 01 / Bold
+    <Text variant="subtitle1Bold" p="2xs">
+      Subtitle 1 / Bold
     </Text>
   </>
 );
 
-export const Subtitle02: TextStory = () => (
+export const Subtitle2: TextStory = () => (
   <>
-    <Text p="2xs" variant="subtitle01Bold">
-      Text Subtitle 02
+    <Text p="2xs" variant="subtitle1Bold">
+      Text Subtitle 2
     </Text>
-    <Text variant="subtitle02Regular" p="2xs">
-      Subtitle 02 / Regular
+    <Text variant="subtitle2Regular" p="2xs">
+      Subtitle 2 / Regular
     </Text>
-    <Text variant="subtitle02Medium" p="2xs">
-      Subtitle 02 / Medium
+    <Text variant="subtitle2Medium" p="2xs">
+      Subtitle 2 / Medium
     </Text>
-    <Text variant="subtitle02Semibold" p="2xs">
-      Subtitle 02 / Semibold
+    <Text variant="subtitle2Semibold" p="2xs">
+      Subtitle 2 / Semibold
     </Text>
-    <Text variant="subtitle02Bold" p="2xs">
-      Sutitle 02 / Bold
+    <Text variant="subtitle2Bold" p="2xs">
+      Sutitle 2 / Bold
     </Text>
   </>
 );
 
-export const Subtitle03: TextStory = () => (
+export const Subtitle3: TextStory = () => (
   <>
-    <Text p="2xs" variant="subtitle01Bold">
-      Text Subtitle 03
+    <Text p="2xs" variant="subtitle1Bold">
+      Text Subtitle 3
     </Text>
-    <Text variant="subtitle03Regular" p="2xs">
-      Subtitle 03 / Regular
+    <Text variant="subtitle3Regular" p="2xs">
+      Subtitle 3 / Regular
     </Text>
-    <Text variant="subtitle03Medium" p="2xs">
-      Subtitle 03 / Medium
+    <Text variant="subtitle3Medium" p="2xs">
+      Subtitle 3 / Medium
     </Text>
-    <Text variant="subtitle03Semibold" p="2xs">
-      Subtitle 03 / Semibold
+    <Text variant="subtitle3Semibold" p="2xs">
+      Subtitle 3 / Semibold
     </Text>
-    <Text variant="subtitle03Bold" p="2xs">
-      Subtitle 03 / Bold
+    <Text variant="subtitle3Bold" p="2xs">
+      Subtitle 3 / Bold
     </Text>
   </>
 );
 
-export const Subtitle04: TextStory = () => (
+export const Subtitle4: TextStory = () => (
   <>
-    <Text p="2xs" variant="subtitle01Bold">
-      Text Subtitle 04
+    <Text p="2xs" variant="subtitle1Bold">
+      Text Subtitle 4
     </Text>
-    <Text variant="subtitle04Regular" p="2xs">
-      Subtitle 04 / Regular
+    <Text variant="subtitle4Regular" p="2xs">
+      Subtitle 4 / Regular
     </Text>
-    <Text variant="subtitle04Medium" p="2xs">
-      Subtitle 04 / Medium
+    <Text variant="subtitle4Medium" p="2xs">
+      Subtitle 4 / Medium
     </Text>
-    <Text variant="subtitle04Semibold" p="2xs">
-      Subtitle 04 / Semibold
+    <Text variant="subtitle4Semibold" p="2xs">
+      Subtitle 4 / Semibold
     </Text>
-    <Text variant="subtitle04Bold" p="2xs">
-      Subtitle 04 / Bold
+    <Text variant="subtitle4Bold" p="2xs">
+      Subtitle 4 / Bold
     </Text>
   </>
 );
 
 export const Body: TextStory = () => (
   <>
-    <Text p="2xs" variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle1Bold">
       Text Body
     </Text>
-    <Text variant="bodyText" p="2xs">
-      Body / Text
+    <Text variant="body1" p="2xs">
+      Body 1
     </Text>
-    <Text variant="bodyUnderline" p="2xs">
+    <Text variant="body2" p="2xs">
+      Body 2
+    </Text>
+    <Text variant="body3" p="2xs">
+      Body 3
+    </Text>
+    {/* <Text variant="bodyUnderline" p="2xs">
       Body / Underline
     </Text>
     <Text variant="bodyTextLink" p="2xs">
@@ -147,26 +153,17 @@ export const Body: TextStory = () => (
     </Text>
     <Text variant="bodyLongText" p="2xs">
       Body / Long Text
-    </Text>
+    </Text> */}
   </>
 );
 
 export const Caption: TextStory = () => (
   <>
-    <Text p="2xs" variant="subtitle01Bold">
+    <Text p="2xs" variant="subtitle1Bold">
       Text Caption
     </Text>
     <Text variant="captionText" p="2xs">
       Caption / Text
-    </Text>
-    <Text variant="captionMedium" p="2xs">
-      Caption / Medium
-    </Text>
-    <Text variant="captionLongText" p="2xs">
-      Caption / Long Text
-    </Text>
-    <Text variant="captionTextLink" p="2xs">
-      Caption / Text Link
     </Text>
   </>
 );

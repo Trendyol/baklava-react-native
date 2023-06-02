@@ -90,7 +90,7 @@ export const useOutlineLabelVisibility = ({
 
   const labelFontSize: number = theme.textVariants.defaults.fontSize;
   const labelLineHeightValue: number =
-    theme.textVariants.subtitle02Regular.fontSize;
+    theme.textVariants.subtitle2Regular.fontSize;
   const initialTopValue: number = (inputHeight - labelLineHeightValue + 2) / 2;
   const labelPositionEmptyValue = 0;
   const labelPositionFillValue: number =
@@ -104,7 +104,7 @@ export const useOutlineLabelVisibility = ({
   const fontSizeRef = useRef(
     new Animated.Value(
       value
-        ? theme.textVariants.subtitle04Regular.fontSize
+        ? theme.textVariants.subtitle4Regular.fontSize
         : theme.textVariants.defaults.fontSize,
     ),
   ).current;
@@ -112,7 +112,7 @@ export const useOutlineLabelVisibility = ({
     new Animated.Value(
       value
         ? theme.textVariants.defaults.fontSize
-        : theme.textVariants.subtitle02Regular.fontSize,
+        : theme.textVariants.subtitle2Regular.fontSize,
     ),
   ).current;
 
