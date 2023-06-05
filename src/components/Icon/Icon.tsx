@@ -4,7 +4,7 @@ import * as icons from '../../icons';
 import { Theme } from '../../theme';
 import { IconNameType } from './types';
 import { toPascalCase } from './utils';
-import { ViewProps } from 'react-native';
+import { ColorValue, ViewProps } from 'react-native';
 
 const Icon = ({
   name,
@@ -15,7 +15,7 @@ const Icon = ({
 }: ViewProps & {
   name: IconNameType;
   size?: VariantProps<Theme, 'iconSizeVariants'>['variant'];
-  color?: VariantProps<Theme, 'colors'>['variant'] | string;
+  color?: VariantProps<Theme, 'colors'>['variant'] | ColorValue;
   testID?: string;
 }) => {
   const theme = useTheme<Theme>();
