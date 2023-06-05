@@ -86,7 +86,7 @@ export const Subtitle2: TextStory = () => (
       Subtitle 2 / Semibold
     </Text>
     <Text variant="subtitle2Bold" p="2xs">
-      Sutitle 2 / Bold
+      Subtitle 2 / Bold
     </Text>
   </>
 );
