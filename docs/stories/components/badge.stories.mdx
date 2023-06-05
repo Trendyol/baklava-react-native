@@ -1,0 +1,85 @@
+import { Meta, ArgsTable } from '@storybook/addon-docs';
+import BadgeVariantsBg from '../assets/badge/BadgeVariantsBg.png';
+import BadgeVariants from '../assets/badge/BadgeVariants.png';
+import BadgeCases from '../assets/badge/BadgeCases.png';
+import BadgeSizes from '../assets/badge/BadgeSizes.png';
+
+<Meta
+  title="Components/Badge"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Badge
+
+Badge component can be used for highlighting a status or labeling an item.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={BadgeVariantsBg} width="250" alt="BadgeVariantsBg" />
+  <img src={BadgeVariants} width="250" alt="BadgeVariants" />
+  <img src={BadgeCases} width="250" alt="BadgeCases" />
+  <img src={BadgeSizes} width="250" alt="BadgeSizes" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+  <Badge variant="success" text="Badge Component" />
+```
+
+## Props
+
+#### variant
+
+Type: `string`
+
+The variant of the badge style to use.
+
+`default`,
+`neutral`,
+`success`,
+`warning`,
+`danger`
+
+#### text
+
+Type: `string`
+
+Badge text.
+
+#### icon
+
+Type: `string`
+
+Badge icon.
+
+#### transparent
+
+Type: `boolean`
+
+Badge without backgroundColor.
+
+#### style
+
+Type: `StyleProp<ViewStyle>`
+
+<br />
+Badge implements: <>
+  <a href="https://reactnative.dev/docs/view#props" title="title">
+    ...View props
+  </a>
+</>

@@ -35,6 +35,7 @@ export const parameters = {
     storySort: {
       order: [
         'Alert',
+        'Badge',
         'Box',
         'Button',
         ['Button Variants', 'Button Types'],

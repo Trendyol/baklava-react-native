@@ -650,6 +650,62 @@ const theme = createTheme({
       backgroundColor: 'primaryBackground',
     },
   },
+  badgeVariants: {
+    defaults: {
+      backgroundColor: 'primaryContrast',
+      color: 'primaryKey',
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      left: 0,
+      right: 0,
+    },
+    default: {
+      backgroundColor: 'primaryContrast',
+      color: 'primaryKey',
+    },
+    neutral: {
+      backgroundColor: 'neutralLightest',
+      color: 'neutralDarker',
+    },
+    success: {
+      backgroundColor: 'successContrast',
+      color: 'successKey',
+    },
+    warning: {
+      backgroundColor: 'warningContrast',
+      color: 'warningKey',
+    },
+    danger: {
+      backgroundColor: 'dangerContrast',
+      color: 'dangerKey',
+    },
+    transparent: {
+      color: 'primaryKey',
+    },
+  },
+  badgeSizeVariants: {
+    defaults: {
+      paddingHorizontal: '3xs',
+      paddingVertical: '3xs',
+      fontSize: 12,
+    },
+    small: {
+      paddingHorizontal: '3xs',
+      paddingVertical: '4xs',
+      fontSize: 10,
+    },
+    medium: {
+      paddingHorizontal: '3xs',
+      paddingVertical: '3xs',
+      fontSize: 12,
+    },
+    large: {
+      paddingHorizontal: '2xs',
+      paddingVertical: '2xs',
+      fontSize: 14,
+    },
+  },
 });
 
 export type Theme = typeof theme;

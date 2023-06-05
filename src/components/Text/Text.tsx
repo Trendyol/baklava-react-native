@@ -1,6 +1,6 @@
 import {
   composeRestyleFunctions,
-  TextProps,
+  TextProps as RestyleTextProps,
   useRestyle,
   color,
   createVariant,
@@ -15,9 +15,9 @@ import React from 'react';
 import { TextProps as RNTextProps, Text as RNText } from 'react-native';
 import { Theme } from '../../theme';
 
-export type TextVariants = TextProps<Theme>['variant'];
+export type TextVariants = RestyleTextProps<Theme>['variant'];
 
-type RestyleProps = TextProps<Theme>;
+type RestyleProps = RestyleTextProps<Theme>;
 
 const restyleFunctions = composeRestyleFunctions<Theme, RestyleProps>([
   color,
@@ -30,9 +30,14 @@ const restyleFunctions = composeRestyleFunctions<Theme, RestyleProps>([
   createVariant({ themeKey: 'textVariants' }),
 ]);
 
-type Props = RNTextProps & RestyleProps;
+export type TextProps = RNTextProps & RestyleProps;
 
-const Text = ({ testID, accessibilityLabel, accessible, ...rest }: Props) => {
+const Text = ({
+  testID,
+  accessibilityLabel,
+  accessible,
+  ...rest
+}: TextProps) => {
   const props = useRestyle(restyleFunctions, rest);
 
   const testProps = React.useMemo(() => {
