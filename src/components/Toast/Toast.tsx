@@ -35,17 +35,24 @@ const Toast: ToastType = React.memo(
           duration: params.duration ?? TostDurations.SHORT,
           action: params.action!,
           actionText: params.actionText!,
+          bottomOffset: params.bottomOffset ?? 0,
         });
       };
     }, []);
 
     const paddingBottom = React.useMemo(() => {
       if (ignoreKeyboard || !isKeyboardVisible) {
-        return { paddingBottom: insets.bottom * 3 + extraMarginBottom };
+        return {
+          paddingBottom:
+            insets.bottom * 3 + extraMarginBottom + data?.bottomOffset!,
+        };
       }
       return {
         paddingBottom:
-          theme.spacing['2xs'] + keyboardHeight + extraMarginBottom,
+          theme.spacing['2xs'] +
+          keyboardHeight +
+          extraMarginBottom +
+          data?.bottomOffset!,
       };
     }, [
       ignoreKeyboard,
@@ -53,6 +60,7 @@ const Toast: ToastType = React.memo(
       insets.bottom,
       isKeyboardVisible,
       keyboardHeight,
+      data?.bottomOffset,
     ]);
 
     const toastView = React.useMemo(() => {

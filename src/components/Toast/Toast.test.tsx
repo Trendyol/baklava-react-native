@@ -5,6 +5,7 @@ import { cleanup, render } from '../../test-utils';
 import { useKeyboard } from './hooks';
 import Toast from './Toast';
 import theme from '../../theme';
+import { ToastData } from './types';
 
 jest.mock('react-native-safe-area-context', () => {
   const inset = { top: 0, right: 0, bottom: 0, left: 0 };
@@ -93,6 +94,37 @@ describe('Toast', () => {
     expect(toastWrapper).toBeTruthy();
     expect(toastWrapper).toHaveStyle({
       paddingBottom: theme.spacing['2xs'] + 150 + 10,
+    });
+  });
+
+  test('should render correct bottom offset with offset 40', () => {
+    const dataWithBottomOffSet: ToastData = {
+      variant: 'warning',
+      text: 'lorem ipsum dolor sit amet.',
+      action: jest.fn(),
+      actionText: 'Tamam',
+      bottomOffset: 40,
+    };
+
+    // @ts-ignore
+    useKeyboard.mockImplementation(() => ({
+      keyboardHeight: 150,
+      isKeyboardVisible: true,
+    }));
+
+    // when
+    const { getByTestId } = render(
+      <Toast ignoreKeyboard extraPaddingBottom={10} />,
+    );
+
+    Toast.show(dataWithBottomOffSet);
+
+    const toastWrapper = getByTestId('toast-wrapper');
+
+    // then
+    expect(toastWrapper).toBeTruthy();
+    expect(toastWrapper).toHaveStyle({
+      paddingBottom: 10 + 40,
     });
   });
 
