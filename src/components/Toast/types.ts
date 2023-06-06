@@ -22,6 +22,11 @@ export interface BaseToastData {
    * @default 7000
    */
   duration?: number;
+  /**
+   * offset from the bottom of the screen (in px)
+   *
+   */
+  bottomOffset?: number;
 }
 
 export interface ToastDataWithoutAction extends BaseToastData {
