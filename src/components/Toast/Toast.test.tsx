@@ -96,6 +96,36 @@ describe('Toast', () => {
     });
   });
 
+  test('should render correct bottom offset with offset 40', () => {
+    const dataWithBottomOffSet: ToastData = {
+      variant: 'warning',
+      text: 'lorem ipsum dolor sit amet.',
+      action: jest.fn(),
+      actionText: 'Tamam',
+      bottomOffset: 40,
+    };
+
+    useKeyboard.mockImplementation(() => ({
+      keyboardHeight: 150,
+      isKeyboardVisible: true,
+    }));
+
+    // when
+    const { getByTestId } = render(
+      <Toast ignoreKeyboard extraPaddingBottom={10} />,
+    );
+
+    Toast.show(dataWithBottomOffSet);
+
+    const toastWrapper = getByTestId('toast-wrapper');
+
+    // then
+    expect(toastWrapper).toBeTruthy();
+    expect(toastWrapper).toHaveStyle({
+      paddingBottom: 10 + 40,
+    });
+  });
+
   test('should hide toast', () => {
     jest.useFakeTimers();
     // when
