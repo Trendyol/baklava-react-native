@@ -68,4 +68,4 @@ baklava-react-native can be tested by downloading the <a href="https://expo.dev/
 
 ## Documentation
 
-Check the components and their usage in our [documentation](https://trendyol.github.io/baklava-react-native)
+Check the components and their usage in our [documentation](https://trendyol.github.io/baklava-react-native).
