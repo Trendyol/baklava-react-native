@@ -5,6 +5,7 @@ import { cleanup, render } from '../../test-utils';
 import { useKeyboard } from './hooks';
 import Toast from './Toast';
 import theme from '../../theme';
+import { ToastData } from './types';
 
 jest.mock('react-native-safe-area-context', () => {
   const inset = { top: 0, right: 0, bottom: 0, left: 0 };
@@ -105,6 +106,7 @@ describe('Toast', () => {
       bottomOffset: 40,
     };
 
+    // @ts-ignore
     useKeyboard.mockImplementation(() => ({
       keyboardHeight: 150,
       isKeyboardVisible: true,
