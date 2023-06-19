@@ -42,6 +42,7 @@ export const parameters = {
         'Checkbox',
         'Text',
         'Toast',
+        'Switch',
       ],
       // locales: 'en-US',
     },
