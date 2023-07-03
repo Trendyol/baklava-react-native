@@ -23,7 +23,7 @@ export const Basic: SwitchStory = () => (
     <Text p="2xs" variant="subtitle01Bold">
       Switch
     </Text>
-    <Switch onChange={_ => {}} />
+    <Switch onValueChange={_ => {}} />
   </>
 );
 
@@ -32,7 +32,7 @@ export const SwitchWithLabel: SwitchStory = args => (
     <Text p="2xs" variant="subtitle01Bold">
       Switch
     </Text>
-    <Switch onChange={_ => {}} label={args.label} disabled={false} />
+    <Switch onValueChange={_ => {}} label={args.label} disabled={false} />
   </>
 );
 
@@ -41,8 +41,8 @@ export const DisabledSwitch: SwitchStory = () => (
     <Text p="2xs" variant="subtitle01Bold">
       Switch
     </Text>
-    <Switch onChange={_ => {}} disabled={true} />
-    <Switch onChange={_ => {}} disabled={true} checked={true} />
+    <Switch onValueChange={_ => {}} disabled={true} />
+    <Switch onValueChange={_ => {}} disabled={true} value={true} />
   </>
 );
 
@@ -52,11 +52,9 @@ export const Customization: SwitchStory = () => (
       Switch
     </Text>
     <Switch
-      onChange={_ => {}}
-      customization={{
-        colorOn: theme.colors.successKey,
-        colorOff: theme.colors.dangerKey,
-      }}
+      onValueChange={_ => {}}
+      onColor={theme.colors.successKey}
+      offColor={theme.colors.dangerKey}
     />
   </>
 );
