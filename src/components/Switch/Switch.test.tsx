@@ -7,7 +7,7 @@ describe('Switch', () => {
   test('should render switch correctly', () => {
     // when
     const { toJSON } = render(
-      <Switch onChange={() => {}} accessibilityLabel={'switch'} />,
+      <Switch onValueChange={() => {}} accessibilityLabel={'switch'} />,
     );
 
     // then
@@ -17,53 +17,61 @@ describe('Switch', () => {
   test('should render disabled switch correctly', () => {
     // when
     const { getByTestId } = render(
-      <Switch onChange={() => {}} testID="switch" disabled={true} />,
+      <Switch onValueChange={() => {}} testID="switch" disabled={true} />,
     );
     const switchComponent = getByTestId('switch');
 
     // then
-    expect(switchComponent.props.disabled).toBe(true);
+    expect(switchComponent.props.style[0].opacity).toBe(0.5);
   });
 
   test('should render disabled switch with value true correctly', () => {
     // when
     const { getByTestId } = render(
       <Switch
-        onChange={() => {}}
+        onValueChange={() => {}}
         testID="switch"
-        checked={true}
+        value={true}
         disabled={true}
       />,
     );
     const switchComponent = getByTestId('switch');
+    const switchOuterView = getByTestId('switch-outer-view');
 
     // then
-    expect(switchComponent.props.disabled).toBe(true);
-    expect(switchComponent.props.value).toBe(true);
+    expect(switchComponent.props.style[0].opacity).toBe(0.5);
+    expect(switchOuterView._fiber.pendingProps.backgroundColor).toBe(
+      'rgba(242, 122, 26, 1)',
+    );
   });
 
   test('should render disabled switch with value false correctly', () => {
     // when
     const { getByTestId } = render(
       <Switch
-        onChange={() => {}}
+        onValueChange={() => {}}
         testID="switch"
-        checked={false}
+        value={false}
         disabled={true}
+        onColor={undefined}
+        offColor={undefined}
       />,
     );
     const switchComponent = getByTestId('switch');
+    const switchOuterView = getByTestId('switch-outer-view');
 
     // then
-    expect(switchComponent.props.disabled).toBe(true);
-    expect(switchComponent.props.value).toBe(false);
+    expect(switchOuterView._fiber.pendingProps.backgroundColor).toBe(
+      'rgba(213, 217, 225, 1)',
+    );
+    expect(switchComponent.props.style[0].opacity).toBe(0.5);
   });
 
   test('should render given switch label correctly', () => {
     // when
     const { getByTestId } = render(
       <Switch
-        onChange={() => {}}
+        onValueChange={() => {}}
         testID={'switch'}
         label={'test switch label'}
       />,
@@ -78,19 +86,18 @@ describe('Switch', () => {
     // when
     const { getByTestId } = render(
       <Switch
-        onChange={() => {}}
+        onValueChange={() => {}}
         testID={'switch'}
         label={'test switch label'}
-        customization={{
-          colorOn: Theme.colors.successColor,
-          colorOff: Theme.colors.dangerColor,
-        }}
+        onColor={Theme.colors.successColor}
+        offColor={Theme.colors.dangerColor}
       />,
     );
-    const switchComponent = getByTestId('switch');
+    const switchOuterView = getByTestId('switch-outer-view');
 
     //then
-    expect(switchComponent.props.onTintColor).toBe(Theme.colors.successColor);
-    expect(switchComponent.props.tintColor).toBe(Theme.colors.dangerColor);
+    expect(switchOuterView._fiber.pendingProps.backgroundColor).toBe(
+      'rgba(255, 80, 67, 1)',
+    );
   });
 });
