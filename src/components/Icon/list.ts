@@ -155,6 +155,7 @@ export const iconList = [
   'sound-off',
   'sound-on',
   'star',
+  'star-fill',
   'stop-fill',
   'stop',
   'store-performance',

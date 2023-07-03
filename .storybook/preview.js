@@ -40,6 +40,8 @@ export const parameters = {
         'Button',
         ['Button Variants', 'Button Types'],
         'Checkbox',
+        'Icon',
+        'Input',
         'Text',
         'Toast',
         'Switch',

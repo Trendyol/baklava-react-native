@@ -153,6 +153,7 @@ export { default as ShoppingBag } from './ShoppingBag';
 export { default as Sorting } from './Sorting';
 export { default as SoundOff } from './SoundOff';
 export { default as SoundOn } from './SoundOn';
+export { default as StarFill } from './StarFill';
 export { default as Star } from './Star';
 export { default as StopFill } from './StopFill';
 export { default as Stop } from './Stop';
