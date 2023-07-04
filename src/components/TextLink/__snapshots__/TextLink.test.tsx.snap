@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextLink should render textLink correctly 1`] = `
+<Text
+  accessibilityLabel="text"
+  accessible={true}
+  style={
+    Array [
+      Object {
+        "color": "#273142",
+        "fontFamily": "Rubik-Regular",
+        "fontSize": 14,
+        "fontWeight": "400",
+        "lineHeight": 16,
+        "textDecorationLine": "underline",
+      },
+    ]
+  }
+  testID="button-text"
+>
+  test
+</Text>
+`;
