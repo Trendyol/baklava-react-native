@@ -21,8 +21,8 @@ describe('Button/utils', () => {
 
     // then
     expect(result).toEqual({
-      backgroundColor: 'defaultColor',
-      borderColor: 'defaultColor',
+      backgroundColor: 'primaryKey',
+      borderColor: 'primaryKey',
       color: 'white',
     });
   });
@@ -36,9 +36,9 @@ describe('Button/utils', () => {
 
     // then
     expect(result).toEqual({
-      backgroundColor: 'tertiaryColor',
-      borderColor: 'tertiaryColor',
-      color: 'secondaryColor',
+      backgroundColor: 'neutralLightest',
+      borderColor: 'neutralLightest',
+      color: 'neutralDarker',
     });
   });
 
@@ -51,8 +51,8 @@ describe('Button/utils', () => {
 
     // then
     expect(result).toEqual({
-      backgroundColor: 'defaultHover',
-      borderColor: 'defaultHover',
+      backgroundColor: 'primaryHighlight',
+      borderColor: 'primaryHighlight',
       color: 'white',
     });
   });
@@ -63,8 +63,8 @@ describe('Button/utils', () => {
 
     // then
     expect(result).toEqual({
-      backgroundColor: 'defaultColor',
-      borderColor: 'defaultColor',
+      backgroundColor: 'primaryKey',
+      borderColor: 'primaryKey',
       color: 'white',
     });
   });
@@ -78,8 +78,8 @@ describe('Button/utils', () => {
 
     // then
     expect(result).toEqual({
-      backgroundColor: 'dangerColor',
-      borderColor: 'dangerColor',
+      backgroundColor: 'dangerKey',
+      borderColor: 'dangerKey',
       color: 'white',
     });
   });
