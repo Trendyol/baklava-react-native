@@ -48,6 +48,7 @@ export type SwitchProps = RNSwitchProps & {
   disabled?: boolean;
   onColor?: string;
   offColor?: string;
+  containerStyle?: StyleProp<ViewStyle>;
 };
 
 const Switch = ({
@@ -60,12 +61,15 @@ const Switch = ({
   testID,
   accessibilityLabel,
   accessible,
+  containerStyle,
 }: SwitchProps) => {
   const [isEnabled, setIsEnabled] = useState(value ? value : false);
   const animatedCirclePosition = useRef(
     new Animated.Value(isEnabled ? 1 : 0),
   ).current;
-  const animatedSwitchWidth = useRef(new Animated.Value(27)).current;
+  const animatedSwitchWidth = useRef(
+    new Animated.Value(theme.spacing.l),
+  ).current;
   const animatedSwitchMarginRight = useRef(new Animated.Value(0)).current;
 
   const onSwitchPressIn = () => {
@@ -77,7 +81,7 @@ const Switch = ({
     }).start();
 
     Animated.timing(animatedSwitchWidth, {
-      toValue: 33,
+      toValue: theme.spacing.xl,
       duration: 200,
       easing: Easing.sin,
       useNativeDriver: false,
@@ -86,7 +90,7 @@ const Switch = ({
 
   const onSwitchPressOut = () => {
     Animated.timing(animatedSwitchWidth, {
-      toValue: 27,
+      toValue: theme.spacing.l,
       duration: 130,
       easing: Easing.out(Easing.exp),
       useNativeDriver: false,
@@ -133,9 +137,12 @@ const Switch = ({
   }, [testID, accessibilityLabel, accessible]);
 
   return (
-    <SwitchContainer flexDirection="row">
+    <SwitchContainer
+      flexDirection="row"
+      alignItems="center"
+      style={containerStyle}>
       {label && (
-        <Text p="2xs" testID={'switch-label'}>
+        <Text variant="subtitle2Medium" p="2xs" testID="switch-label">
           {label}
         </Text>
       )}
@@ -147,25 +154,25 @@ const Switch = ({
         onPress={() => handleValueChange(isEnabled)}
         {...testProps}>
         <AnimatedView
-          width={50}
-          height={30}
-          justifyContent={'center'}
-          borderRadius={'full'}
-          testID={'switch-outer-view'}
+          width={theme.spacing['4xl']}
+          height={theme.spacing.xl}
+          justifyContent="center"
+          borderRadius="full"
+          testID="switch-outer-view"
           //@ts-ignore
           backgroundColor={animatedCirclePosition.interpolate({
             inputRange: [0, 1],
             outputRange: [
-              offColor ? offColor : theme.colors.borderColor,
-              onColor ? onColor : theme.colors.primaryColor,
+              offColor ? offColor : theme.colors.neutralLighter,
+              onColor ? onColor : theme.colors.primaryKey,
             ],
           })}>
           <AnimatedView
-            backgroundColor={'white'}
-            height={27}
-            marginStart={'4xs'}
-            borderRadius={'full'}
-            testID={'switch-inner-view'}
+            backgroundColor="white"
+            height={theme.spacing.l}
+            marginStart="4xs"
+            borderRadius="full"
+            testID="switch-inner-view"
             //@ts-ignore
             width={animatedSwitchWidth}
             //@ts-ignore
@@ -174,7 +181,7 @@ const Switch = ({
                 {
                   translateX: animatedCirclePosition.interpolate({
                     inputRange: [0, 1],
-                    outputRange: [0, 19],
+                    outputRange: [0, theme.spacing.xl],
                   }),
                 },
                 {
