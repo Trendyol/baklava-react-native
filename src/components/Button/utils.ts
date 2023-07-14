@@ -16,9 +16,9 @@ export const variantColorSelector = ({
 }) => {
   if (disabled) {
     return {
-      color: 'secondaryColor',
-      backgroundColor: 'tertiaryColor',
-      borderColor: 'tertiaryColor',
+      color: 'neutralDarker',
+      backgroundColor: 'neutralLightest',
+      borderColor: 'neutralLightest',
     } as {
       color: ColorVariantProps;
       backgroundColor: ColorVariantProps;
@@ -26,25 +26,36 @@ export const variantColorSelector = ({
     };
   }
 
-  const kindColor = `${kind}Color`;
-  const kindHoverColor = `${kind}Hover`;
+  const kindColor = {
+    default: 'primaryKey',
+    neutral: 'neutralDarker',
+    success: 'successKey',
+    danger: 'dangerKey',
+  }[kind];
+
+  const kindHighlightColor = {
+    default: 'primaryHighlight',
+    neutral: 'neutralDarkest',
+    success: 'successHighlight',
+    danger: 'dangerHighlight',
+  }[kind];
 
   let variants = isPressed
     ? {
         primary: {
           color: 'white',
-          backgroundColor: kindHoverColor,
-          borderColor: kindHoverColor,
+          backgroundColor: kindHighlightColor,
+          borderColor: kindHighlightColor,
         },
         secondary: {
           color: 'white',
-          backgroundColor: kindHoverColor,
-          borderColor: kindHoverColor,
+          backgroundColor: kindHighlightColor,
+          borderColor: kindHighlightColor,
         },
         tertiary: {
-          color: kindHoverColor,
-          backgroundColor: 'tertiaryColor',
-          borderColor: 'tertiaryColor',
+          color: kindHighlightColor,
+          backgroundColor: 'neutralLightest',
+          borderColor: 'neutralLightest',
         },
       }
     : {

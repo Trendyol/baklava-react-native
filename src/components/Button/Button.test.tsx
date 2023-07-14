@@ -32,7 +32,7 @@ describe('Button', () => {
     // then
     expect(buttonComponent.props.kind).toBe('success');
     expect(buttonComponent.props.color).toBe('white');
-    expect(buttonComponent.props.backgroundColor).toBe('successColor');
+    expect(buttonComponent.props.backgroundColor).toBe('successKey');
   });
 
   test('should render given font correctly', () => {

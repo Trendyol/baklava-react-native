@@ -524,19 +524,19 @@ const theme = createTheme({
   },
   buttonKindVariants: {
     defaults: {
-      backgroundColor: 'primaryColor',
+      backgroundColor: 'primaryKey',
     },
     default: {
-      backgroundColor: 'primaryColor',
+      backgroundColor: 'primaryKey',
     },
     neutral: {
-      backgroundColor: 'secondaryColor',
+      backgroundColor: 'neutralDarker',
     },
     success: {
-      backgroundColor: 'successColor',
+      backgroundColor: 'successKey',
     },
     danger: {
-      backgroundColor: 'dangerColor',
+      backgroundColor: 'dangerKey',
     },
   },
   buttonVariants: {

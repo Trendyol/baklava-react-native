@@ -1,0 +1,99 @@
+import { Meta } from '@storybook/addon-docs';
+import TextLinkHeading from '../assets/textlink/TextLinkHeading.png';
+import TextLinkSubtitle1 from '../assets/textlink/TextLinkSubtitle1.png';
+import TextLinkSubtitle2 from '../assets/textlink/TextLinkSubtitle2.png';
+import TextLinkSubtitle3 from '../assets/textlink/TextLinkSubtitle3.png';
+import TextLinkSubtitle4 from '../assets/textlink/TextLinkSubtitle4.png';
+import TextLinkBody from '../assets/textlink/TextLinkBody.png';
+import TextLinkCaption from '../assets/textlink/TextLinkCaption.png';
+
+<Meta
+  title="Components/TextLink"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# TextLink
+
+Text link is a navigational element that takes a user to another URL, an element within a page, or a file.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={TextLinkHeading} width="250" alt="TextLinkHeading" />
+  <img src={TextLinkSubtitle1} width="250" alt="TextLinkSubtitle1" />
+  <img src={TextLinkSubtitle2} width="250" alt="TextLinkSubtitle2" />
+  <img src={TextLinkSubtitle3} width="250" alt="TextLinkSubtitle3" />
+  <img src={TextLinkSubtitle4} width="250" alt="TextLinkSubtitle4" />
+  <img src={TextLinkBody} width="250" alt="TextLinkBody" />
+  <img src={TextLinkCaption} width="250" alt="TextLinkCaption" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+const [isPressed, setIsPressed] = useState(false)
+// ...
+<TextLink 
+  variant="subtitle3Medium" 
+  onPress={() => setIsPressed(true)} 
+  isPressed={isPressed}
+>
+  Example
+</TextLink>
+```
+
+<br />
+
+## Props
+
+#### variant
+
+Variant defines appropriate text styles for type role and its size. Available variants:
+
+Heading: _`heading1`, `heading2`, `heading3`_ <br />
+Subtitle1: _`subtitle1Regular`, `subtitle1Medium`, `subtitle1Semibold`, `subtitle1Bold`_ <br />
+Subtitle2: _`subtitle2Regular`, `subtitle2Medium`, `subtitle2Semibold`, `subtitle2Bold`_ <br />
+Subtitle3: _`subtitle3Regular`, `subtitle3Medium`, `subtitle3Semibold`, `subtitle3Bold`_ <br />
+Subtitle4: _`subtitle4Regular`, `subtitle4Medium`, `subtitle4Semibold`, `subtitle4Bold`_ <br />
+Body: _`body1`, `body2`, `body3`_ <br />
+Caption: _`caption`_ <br />
+
+#### children (required)
+
+Type: `React.ReactNode`
+
+#### isPressed
+
+Type: `boolean`
+
+#### onPress
+
+Type: `function`
+
+#### theme
+
+Type: `ThemeProp`
+
+#### style
+
+Type: `StyleProp<TextStyle>`
+
+<br />
+Text implements: <>
+  <a href="https://reactnative.dev/docs/text#props" title="title">
+    ...Text props
+  </a>
+</>
