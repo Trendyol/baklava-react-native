@@ -62,7 +62,7 @@ describe('Switch', () => {
 
     // then
     expect(switchOuterView._fiber.pendingProps.backgroundColor).toBe(
-      'rgba(213, 217, 225, 1)',
+      'rgba(175, 187, 202, 1)',
     );
     expect(switchComponent.props.style[0].opacity).toBe(0.5);
   });
