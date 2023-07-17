@@ -9,4 +9,5 @@ export { default as Checkbox } from './components/Checkbox/Checkbox';
 export { default as Icon } from './components/Icon/Icon';
 export { default as Input } from './components/Input/Input';
 export { default as Text } from './components/Text/Text';
+export { default as TextLink } from './components/TextLink/TextLink';
 export { default as Toast } from './components/Toast/Toast';
