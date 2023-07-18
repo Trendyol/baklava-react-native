@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch should render switch correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+      ],
+    ]
+  }
+>
+  <View
+    accessibilityLabel="switch"
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "opacity": 1,
+        },
+      ]
+    }
+    testID="switch"
+  >
+    <View
+      backgroundColor="rgba(175, 187, 202, 1)"
+      collapsable={false}
+      style={
+        Object {
+          "borderRadius": 999,
+          "height": 24,
+          "justifyContent": "center",
+          "width": 48,
+        }
+      }
+      testID="switch-outer-view"
+    >
+      <View
+        backgroundColor="white"
+        collapsable={false}
+        style={
+          Object {
+            "borderRadius": 999,
+            "height": 20,
+            "marginStart": 2,
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+              Object {
+                "translateX": 0,
+              },
+            ],
+            "width": 20,
+          }
+        }
+        testID="switch-inner-view"
+      />
+    </View>
+  </View>
+</View>
+`;
