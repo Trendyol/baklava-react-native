@@ -28,12 +28,11 @@ const getStories=() => {
 		require("../src/components/Button/Button.stories.tsx"), 
 		require("../src/components/Checkbox/Checkbox.stories.tsx"), 
 		require("../src/components/Icon/Icon.stories.tsx"), 
-		require("../src/components/Input/Input.stories.tsx"), 
+		require("../src/components/Input/Input.stories.tsx"),
+    require('../src/components/Switch/Switch.stories.tsx'),
 		require("../src/components/Text/Text.stories.tsx"), 
 		require("../src/components/TextLink/TextLink.stories.tsx"), 
 		require("../src/components/Toast/Toast.stories.tsx")
 	];
 }
 configure(getStories, module, false)
-
-  

@@ -44,6 +44,7 @@ export const parameters = {
         'Input',
         'Text',
         'Toast',
+        'Switch',
       ],
       // locales: 'en-US',
     },
