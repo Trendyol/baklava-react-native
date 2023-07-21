@@ -52,6 +52,8 @@ git clone https://github.com/Trendyol/baklava-react-native.git
 cd baklava-react-native
 
 npm install
+
+npm run pod
 ```
 
 3. Run the cross-platform app
