@@ -80,7 +80,7 @@ const Badge = ({
       <Box testID="badgeIconBox" pl="3xs" py="3xs" pr={!text ? '3xs' : 'none'}>
         <Icon
           testID="badgeIcon"
-          size="s"
+          size="xs"
           name={iconName}
           color={color ?? theme.badgeVariants[variant].color}
         />

@@ -134,8 +134,10 @@ describe('Badge', () => {
     expect(toJSON()).toMatchSnapshot();
     expect(badgeComponent.props.title).toBe('alert');
     expect(badgeComponent.props.fill).toBe(theme.colors.neutralDarker);
-    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.s);
-    expect(badgeComponent.props.style[1].height).toBe(theme.iconSizeVariants.s);
+    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.xs);
+    expect(badgeComponent.props.style[1].height).toBe(
+      theme.iconSizeVariants.xs,
+    );
   });
 
   test('should render badgeIcon correctly when success', () => {
@@ -149,8 +151,10 @@ describe('Badge', () => {
     expect(toJSON()).toMatchSnapshot();
     expect(badgeComponent.props.title).toBe('check-fill');
     expect(badgeComponent.props.fill).toBe(theme.colors.successKey);
-    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.s);
-    expect(badgeComponent.props.style[1].height).toBe(theme.iconSizeVariants.s);
+    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.xs);
+    expect(badgeComponent.props.style[1].height).toBe(
+      theme.iconSizeVariants.xs,
+    );
   });
 
   test('should render badgeIcon correctly when warning', () => {
@@ -164,8 +168,10 @@ describe('Badge', () => {
     expect(toJSON()).toMatchSnapshot();
     expect(badgeComponent.props.title).toBe('warning');
     expect(badgeComponent.props.fill).toBe(theme.colors.warningKey);
-    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.s);
-    expect(badgeComponent.props.style[1].height).toBe(theme.iconSizeVariants.s);
+    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.xs);
+    expect(badgeComponent.props.style[1].height).toBe(
+      theme.iconSizeVariants.xs,
+    );
   });
 
   test('should render badgeIcon correctly when danger', () => {
@@ -179,8 +185,10 @@ describe('Badge', () => {
     expect(toJSON()).toMatchSnapshot();
     expect(badgeComponent.props.title).toBe('close-fill');
     expect(badgeComponent.props.fill).toBe(theme.colors.dangerKey);
-    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.s);
-    expect(badgeComponent.props.style[1].height).toBe(theme.iconSizeVariants.s);
+    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.xs);
+    expect(badgeComponent.props.style[1].height).toBe(
+      theme.iconSizeVariants.xs,
+    );
   });
 
   test('should render badge correctly when custom badge', () => {
@@ -233,8 +241,10 @@ describe('Badge', () => {
     expect(toJSON()).toMatchSnapshot();
     expect(badgeComponent.props.title).toBe('confetti');
     expect(badgeComponent.props.fill).toBe('blue');
-    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.s);
-    expect(badgeComponent.props.style[1].height).toBe(theme.iconSizeVariants.s);
+    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.xs);
+    expect(badgeComponent.props.style[1].height).toBe(
+      theme.iconSizeVariants.xs,
+    );
   });
 
   test('should render correctly only icon badge', () => {
@@ -249,8 +259,10 @@ describe('Badge', () => {
     expect(badgeComponent.props.title).toBe('confetti');
     expect(badgeComponent.props.fill).toBe('purple');
     expect(badgeComponent.props.style[0].backgroundColor).toBe('transparent');
-    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.s);
-    expect(badgeComponent.props.style[1].height).toBe(theme.iconSizeVariants.s);
+    expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.xs);
+    expect(badgeComponent.props.style[1].height).toBe(
+      theme.iconSizeVariants.xs,
+    );
   });
 
   test('should render correctly only text badge', () => {

@@ -306,11 +306,11 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="blue"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -322,8 +322,8 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -331,7 +331,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
       title="confetti"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -475,11 +475,11 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#FF5043"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -491,8 +491,8 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -500,7 +500,7 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
       title="close-fill"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -613,11 +613,11 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#273142"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -629,8 +629,8 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -638,7 +638,7 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
       title="alert"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -751,11 +751,11 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#0BC15C"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -767,8 +767,8 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -776,7 +776,7 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
       title="check-fill"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -889,11 +889,11 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#FFB600"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -905,8 +905,8 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -914,7 +914,7 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
       title="warning"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -1027,11 +1027,11 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="blue"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -1043,8 +1043,8 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -1052,7 +1052,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
       title="close-fill"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -1168,11 +1168,11 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#FF5043"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -1184,8 +1184,8 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -1193,7 +1193,7 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
       title="fire"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -1306,11 +1306,11 @@ exports[`Badge should render badgeText correctly when default 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#F27A1A"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -1322,8 +1322,8 @@ exports[`Badge should render badgeText correctly when default 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -1331,7 +1331,7 @@ exports[`Badge should render badgeText correctly when default 1`] = `
       title="fire"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -1444,11 +1444,11 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#273142"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -1460,8 +1460,8 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -1469,7 +1469,7 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
       title="fire"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -1582,11 +1582,11 @@ exports[`Badge should render badgeText correctly when success 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#0BC15C"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -1598,8 +1598,8 @@ exports[`Badge should render badgeText correctly when success 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -1607,7 +1607,7 @@ exports[`Badge should render badgeText correctly when success 1`] = `
       title="fire"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -1720,11 +1720,11 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#FFB600"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -1736,8 +1736,8 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -1745,7 +1745,7 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
       title="fire"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -1839,11 +1839,11 @@ exports[`Badge should render correctly only icon badge 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="purple"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -1855,8 +1855,8 @@ exports[`Badge should render correctly only icon badge 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -1864,7 +1864,7 @@ exports[`Badge should render correctly only icon badge 1`] = `
       title="confetti"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -1982,11 +1982,11 @@ exports[`Badge should render correctly only text badge 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#FFB600"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -1998,8 +1998,8 @@ exports[`Badge should render correctly only text badge 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -2007,7 +2007,7 @@ exports[`Badge should render correctly only text badge 1`] = `
       title="warning"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -2120,11 +2120,11 @@ exports[`Badge should render fontSize correctly when large 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#FFB600"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -2136,8 +2136,8 @@ exports[`Badge should render fontSize correctly when large 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -2145,7 +2145,7 @@ exports[`Badge should render fontSize correctly when large 1`] = `
       title="warning"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -2258,11 +2258,11 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#FFB600"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -2274,8 +2274,8 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -2283,7 +2283,7 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
       title="warning"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
@@ -2396,11 +2396,11 @@ exports[`Badge should render fontSize correctly when small 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="16"
-      bbWidth="16"
+      bbHeight="14"
+      bbWidth="14"
       fill="#FFB600"
       focusable={false}
-      height={16}
+      height={14}
       meetOrSlice={0}
       minX={0}
       minY={0}
@@ -2412,8 +2412,8 @@ exports[`Badge should render fontSize correctly when small 1`] = `
           },
           Object {
             "flex": 0,
-            "height": 16,
-            "width": 16,
+            "height": 14,
+            "width": 14,
           },
         ]
       }
@@ -2421,7 +2421,7 @@ exports[`Badge should render fontSize correctly when small 1`] = `
       title="warning"
       vbHeight={24}
       vbWidth={24}
-      width={16}
+      width={14}
       xmlns="http://www.w3.org/2000/svg"
     >
       <RNSVGGroup
