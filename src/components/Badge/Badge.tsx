@@ -9,7 +9,7 @@ import theme, { Theme } from '../../theme';
 import Box from '../Box/Box';
 import Icon from '../Icon/Icon';
 import Text, { TextProps } from '../Text/Text';
-import { ColorValue, Platform } from 'react-native';
+import { ColorValue } from 'react-native';
 
 type ThemeColor = VariantProps<Theme, 'colors'>['variant'];
 
@@ -114,7 +114,8 @@ const Badge = ({
           testID="badgeText"
           color={theme.badgeVariants[variant].color as ThemeColor}
           size={size}
-          fontWeight={Platform.OS == 'ios' ? '500' : 'bold'}
+          fontWeight="500"
+          fontFamily="medium"
           style={textStyle}>
           {text}
         </BadgeText>

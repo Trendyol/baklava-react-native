@@ -43,7 +43,7 @@ exports[`Badge should render Badge correctly  1`] = `
       Array [
         Object {
           "color": "#F27A1A",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -106,7 +106,7 @@ exports[`Badge should render badge correctly when custom badge 1`] = `
       Array [
         Object {
           "color": "#F27A1A",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -172,7 +172,7 @@ exports[`Badge should render badge correctly when default 1`] = `
       Array [
         Object {
           "color": "#F27A1A",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -235,7 +235,7 @@ exports[`Badge should render badgeBackground correctly when default 1`] = `
       Array [
         Object {
           "color": "#F27A1A",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -401,7 +401,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
       Array [
         Object {
           "color": "#FF5043",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -542,7 +542,7 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
       Array [
         Object {
           "color": "#FF5043",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -680,7 +680,7 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
       Array [
         Object {
           "color": "#273142",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -818,7 +818,7 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
       Array [
         Object {
           "color": "#0BC15C",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -956,7 +956,7 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
       Array [
         Object {
           "color": "#FFB600",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -1094,7 +1094,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
       Array [
         Object {
           "color": "#FF5043",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -1235,7 +1235,7 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
       Array [
         Object {
           "color": "#FF5043",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -1373,7 +1373,7 @@ exports[`Badge should render badgeText correctly when default 1`] = `
       Array [
         Object {
           "color": "#F27A1A",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -1511,7 +1511,7 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
       Array [
         Object {
           "color": "#273142",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -1649,7 +1649,7 @@ exports[`Badge should render badgeText correctly when success 1`] = `
       Array [
         Object {
           "color": "#0BC15C",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -1787,7 +1787,7 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
       Array [
         Object {
           "color": "#FFB600",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -2049,7 +2049,7 @@ exports[`Badge should render correctly only text badge 1`] = `
       Array [
         Object {
           "color": "#FFB600",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -2187,7 +2187,7 @@ exports[`Badge should render fontSize correctly when large 1`] = `
       Array [
         Object {
           "color": "#FFB600",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -2325,7 +2325,7 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
       Array [
         Object {
           "color": "#FFB600",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
@@ -2463,7 +2463,7 @@ exports[`Badge should render fontSize correctly when small 1`] = `
       Array [
         Object {
           "color": "#FFB600",
-          "fontFamily": "Rubik-Regular",
+          "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
