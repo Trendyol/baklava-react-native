@@ -1,7 +1,8 @@
 import React from 'react';
 import Switch from './Switch';
-import { render } from '../../test-utils';
+import { fireEvent, render } from '../../test-utils';
 import Theme from '../../theme';
+import { Animated } from 'react-native';
 
 describe('Switch', () => {
   test('should render switch correctly', () => {
@@ -99,5 +100,238 @@ describe('Switch', () => {
     expect(switchOuterView._fiber.pendingProps.backgroundColor).toBe(
       'rgba(255, 80, 67, 1)',
     );
+  });
+
+  test('should trigger switch when pressed', () => {
+    // given
+    const onPress = jest.fn();
+
+    // when
+    const { getByTestId } = render(
+      <Switch testID="switch" onValueChange={onPress} />,
+    );
+    const switchComponent = getByTestId('switch');
+    fireEvent.press(switchComponent);
+
+    // then
+    expect(onPress).toBeCalled();
+  });
+
+  test('should trigger the animation and call Animated.timing with correct parameters when pressIn', () => {
+    // given
+    const onStartAnimationMock = jest.fn();
+
+    //@ts-ignore
+    Animated.timing = jest.fn((value, config) => {
+      return {
+        start: jest.fn(callback => {
+          value.setValue(config.toValue);
+          callback && callback({ finished: true });
+        }),
+      };
+    });
+
+    // when
+    const { getByTestId } = render(
+      <Switch onValueChange={onStartAnimationMock} testID="switch" />,
+    );
+    const switchComponent = getByTestId('switch');
+    fireEvent(switchComponent, 'pressIn');
+
+    // then
+    expect(Animated.timing).toHaveBeenNthCalledWith(1, expect.anything(), {
+      toValue: 0,
+      duration: 130,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(Animated.timing).toHaveBeenNthCalledWith(2, expect.anything(), {
+      toValue: 0,
+      duration: 90,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(Animated.timing).toHaveBeenNthCalledWith(3, expect.anything(), {
+      toValue: -1,
+      duration: 200,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(Animated.timing).toHaveBeenNthCalledWith(4, expect.anything(), {
+      toValue: 24,
+      duration: 200,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(onStartAnimationMock).toHaveBeenCalledTimes(1);
+  });
+
+  test('should trigger the animation and call Animated.timing with correct parameters when pressIn and value is true', () => {
+    // given
+    const onStartAnimationMock = jest.fn();
+
+    //@ts-ignore
+    Animated.timing = jest.fn((value, config) => {
+      return {
+        start: jest.fn(callback => {
+          value.setValue(config.toValue);
+          callback && callback({ finished: true });
+        }),
+      };
+    });
+
+    // when
+    const { getByTestId } = render(
+      <Switch
+        onValueChange={onStartAnimationMock}
+        testID="switch"
+        value={true}
+      />,
+    );
+    const switchComponent = getByTestId('switch');
+    fireEvent(switchComponent, 'pressIn');
+
+    // then
+    expect(Animated.timing).toHaveBeenNthCalledWith(1, expect.anything(), {
+      toValue: 1,
+      duration: 130,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(Animated.timing).toHaveBeenNthCalledWith(2, expect.anything(), {
+      toValue: 0,
+      duration: 90,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(Animated.timing).toHaveBeenNthCalledWith(3, expect.anything(), {
+      toValue: 1,
+      duration: 200,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(Animated.timing).toHaveBeenNthCalledWith(4, expect.anything(), {
+      toValue: 24,
+      duration: 200,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(onStartAnimationMock).toHaveBeenCalledTimes(1);
+  });
+
+  test('should trigger the animation and call Animated.timing with correct parameters when pressOut', () => {
+    // given
+    const onStartAnimationMock = jest.fn();
+
+    //@ts-ignore
+    Animated.timing = jest.fn((value, config) => {
+      return {
+        start: jest.fn(callback => {
+          value.setValue(config.toValue);
+          callback && callback({ finished: true });
+        }),
+      };
+    });
+
+    // when
+    const { getByTestId } = render(
+      <Switch onValueChange={onStartAnimationMock} testID="switch" />,
+    );
+    const switchComponent = getByTestId('switch');
+    fireEvent(switchComponent, 'pressOut');
+
+    // then
+    expect(Animated.timing).toHaveBeenNthCalledWith(1, expect.anything(), {
+      toValue: 0,
+      duration: 130,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(Animated.timing).toHaveBeenNthCalledWith(2, expect.anything(), {
+      toValue: 0,
+      duration: 90,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(Animated.timing).toHaveBeenNthCalledWith(3, expect.anything(), {
+      toValue: 20,
+      duration: 130,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(onStartAnimationMock).toHaveBeenCalledTimes(1);
+  });
+
+  test('should trigger the animation and call Animated.timing with correct parameters when pressOut and value is true', () => {
+    // given
+    const onStartAnimationMock = jest.fn();
+
+    //@ts-ignore
+    Animated.timing = jest.fn((value, config) => {
+      return {
+        start: jest.fn(callback => {
+          value.setValue(config.toValue);
+          callback && callback({ finished: true });
+        }),
+      };
+    });
+
+    // when
+    const { getByTestId } = render(
+      <Switch
+        onValueChange={onStartAnimationMock}
+        testID="switch"
+        value={true}
+      />,
+    );
+    const switchComponent = getByTestId('switch');
+    fireEvent(switchComponent, 'pressOut');
+
+    // then
+    expect(Animated.timing).toHaveBeenNthCalledWith(1, expect.anything(), {
+      toValue: 1,
+      duration: 130,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(Animated.timing).toHaveBeenNthCalledWith(2, expect.anything(), {
+      toValue: 0,
+      duration: 90,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(Animated.timing).toHaveBeenNthCalledWith(3, expect.anything(), {
+      toValue: 20,
+      duration: 130,
+      useNativeDriver: false,
+      easing: expect.anything(),
+    });
+
+    expect(onStartAnimationMock).toHaveBeenCalledTimes(1);
+  });
+
+  test('should render correctly when testID is not present', () => {
+    // when
+    const { getByTestId } = render(
+      <Switch onValueChange={() => {}} label={'test switch label'} />,
+    );
+    const switchComponent = getByTestId('switch-outer-view');
+
+    // then
+    expect(switchComponent.props.accessibilityLabel).toBeUndefined();
+    expect(switchComponent.props.accessible).toBeUndefined();
   });
 });

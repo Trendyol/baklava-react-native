@@ -97,26 +97,33 @@ const Switch = ({
     }).start();
   };
 
-  const handleValueChange = (previousState: boolean) => {
-    setIsEnabled(!previousState);
-    if (onValueChange) {
-      onValueChange(!previousState);
-    }
+  const handleValueChange = React.useCallback(
+    (nextState: boolean) => {
+      setIsEnabled(nextState);
+      if (onValueChange) {
+        onValueChange(nextState);
+      }
 
-    Animated.timing(animatedCirclePosition, {
-      toValue: isEnabled ? 0 : 1,
-      duration: 130,
-      easing: Easing.out(Easing.exp),
-      useNativeDriver: false,
-    }).start();
+      Animated.timing(animatedCirclePosition, {
+        toValue: nextState ? 1 : 0,
+        duration: 130,
+        easing: Easing.out(Easing.exp),
+        useNativeDriver: false,
+      }).start();
 
-    Animated.timing(animatedSwitchMarginRight, {
-      toValue: 0,
-      duration: 90,
-      easing: Easing.out(Easing.exp),
-      useNativeDriver: false,
-    }).start();
-  };
+      Animated.timing(animatedSwitchMarginRight, {
+        toValue: 0,
+        duration: 90,
+        easing: Easing.out(Easing.exp),
+        useNativeDriver: false,
+      }).start();
+    },
+    [animatedCirclePosition, animatedSwitchMarginRight, onValueChange],
+  );
+
+  React.useEffect(() => {
+    handleValueChange(!!value);
+  }, [value, handleValueChange]);
 
   const testProps = React.useMemo(() => {
     const result: RNSwitchProps = {
@@ -151,7 +158,7 @@ const Switch = ({
         disabled={disabled}
         onPressOut={() => onSwitchPressOut()}
         onPressIn={() => onSwitchPressIn()}
-        onPress={() => handleValueChange(isEnabled)}
+        onPress={() => handleValueChange(!isEnabled)}
         {...testProps}>
         <AnimatedView
           width={theme.spacing['4xl']}
