@@ -47,6 +47,22 @@ describe('Input', () => {
     expect(toJSON()).toMatchSnapshot();
   });
 
+  test('should render input with leadingText correctly', () => {
+    // when
+    const { toJSON } = render(<Input label="label" leadingText="%" />);
+
+    // then
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  test('should render input with trailingText correctly', () => {
+    // when
+    const { toJSON } = render(<Input label="label" trailingText="₺" />);
+
+    // then
+    expect(toJSON()).toMatchSnapshot();
+  });
+
   test('should render input with error state correctly', () => {
     // when
     const { toJSON } = render(<Input label="label" error />);

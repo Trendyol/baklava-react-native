@@ -862,6 +862,133 @@ exports[`Input should render input with icon correctly 1`] = `
 </View>
 `;
 
+exports[`Input should render input with leadingText correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 54,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 54,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 13,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#AFBBCA",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "marginRight": 8,
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityLabel="input-leading-text"
+        accessible={true}
+        style={
+          Array [
+            Object {
+              "color": "#6E7787",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+            },
+          ]
+        }
+        testID="input-leading-text"
+      >
+        %
+      </Text>
+    </View>
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+  </View>
+</View>
+`;
+
 exports[`Input should render input with medium size correctly 1`] = `
 <View
   style={
@@ -1405,6 +1532,133 @@ exports[`Input should render input with success state correctly 1`] = `
         />
       </RNSVGGroup>
     </RNSVGSvgView>
+  </View>
+</View>
+`;
+
+exports[`Input should render input with trailingText correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 54,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "height": 54,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 13,
+          }
+        }
+      >
+        label
+         (Optional)
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="input-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#AFBBCA",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="input-box"
+  >
+    <TextInput
+      accessibilityLabel="input"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={false}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      secureTextEntry={false}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 48,
+          },
+        ]
+      }
+      testID="input"
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "marginHorizontal": 16,
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityLabel="input-trailing-text"
+        accessible={true}
+        style={
+          Array [
+            Object {
+              "color": "#6E7787",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+            },
+          ]
+        }
+        testID="input-trailing-text"
+      >
+        ₺
+      </Text>
+    </View>
   </View>
 </View>
 `;

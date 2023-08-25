@@ -36,6 +36,8 @@ const InputMeta: ComponentMeta<typeof Input> = {
     errorText: 'Error Text',
     successText: 'Success Text',
     icon: 'confetti',
+    leadingText: '',
+    trailingText: '',
   },
 };
 

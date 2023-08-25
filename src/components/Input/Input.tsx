@@ -30,6 +30,7 @@ import {
   spacing,
   VariantProps,
 } from '@ergenekonyigit/restyle';
+import Text from '../Text/Text';
 
 type InputProps = React.ComponentProps<typeof Box> &
   TextInputProps & {
@@ -52,6 +53,8 @@ type InputProps = React.ComponentProps<typeof Box> &
     editable?: boolean;
     value?: string;
     defaultValue?: string;
+    leadingText?: string;
+    trailingText?: string;
     onChangeText?: (text: string) => void;
     size?: VariantProps<Theme, 'inputSizeVariants'>['variant'];
   };
@@ -90,6 +93,8 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       editable = true,
       easing = Easing.inOut(Easing.ease),
       testID = 'input',
+      leadingText,
+      trailingText,
       ...rest
     }: InputProps,
     ref,
@@ -240,6 +245,16 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           zIndex="layer_0"
           accessibilityLabel={`${testID}-box`}
           testID={`${testID}-box`}>
+          {leadingText ? (
+            <Box mr="2xs">
+              <Text
+                color="neutralDark"
+                variant="subtitle3Medium"
+                accessibilityLabel="input-leading-text">
+                {leadingText}
+              </Text>
+            </Box>
+          ) : null}
           <BaseInput
             {...rest}
             flex={1}
@@ -259,6 +274,16 @@ const Input = forwardRef<TextInputHandles, InputProps>(
             accessibilityLabel={testID}
             testID={testID}
           />
+          {trailingText ? (
+            <Box mx="m">
+              <Text
+                color="neutralDark"
+                variant="subtitle3Medium"
+                accessibilityLabel="input-trailing-text">
+                {trailingText}
+              </Text>
+            </Box>
+          ) : null}
           <InputIcon
             secureTextEntry={secureTextEntry}
             icon={icon}
