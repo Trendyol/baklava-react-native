@@ -245,11 +245,11 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           zIndex="layer_0"
           accessibilityLabel={`${testID}-box`}
           testID={`${testID}-box`}>
-          {leadingText ? (
+          {leadingText && !disabled ? (
             <Box mr="2xs">
               <Text
                 color="neutralDark"
-                variant="subtitle3Medium"
+                variant="subtitle2Medium"
                 accessibilityLabel="input-leading-text">
                 {leadingText}
               </Text>
@@ -275,10 +275,10 @@ const Input = forwardRef<TextInputHandles, InputProps>(
             testID={testID}
           />
           {trailingText ? (
-            <Box mx="m">
+            <Box ml="m" mr={icon ? 'm' : 'none'}>
               <Text
                 color="neutralDark"
-                variant="subtitle3Medium"
+                variant="subtitle2Medium"
                 accessibilityLabel="input-trailing-text">
                 {trailingText}
               </Text>

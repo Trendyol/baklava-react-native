@@ -952,9 +952,9 @@ exports[`Input should render input with leadingText correctly 1`] = `
             Object {
               "color": "#6E7787",
               "fontFamily": "Rubik-Medium",
-              "fontSize": 14,
+              "fontSize": 16,
               "fontWeight": "500",
-              "lineHeight": 16,
+              "lineHeight": 20,
             },
           ]
         }
@@ -1635,7 +1635,8 @@ exports[`Input should render input with trailingText correctly 1`] = `
       style={
         Array [
           Object {
-            "marginHorizontal": 16,
+            "marginLeft": 16,
+            "marginRight": 0,
           },
         ]
       }
@@ -1648,9 +1649,9 @@ exports[`Input should render input with trailingText correctly 1`] = `
             Object {
               "color": "#6E7787",
               "fontFamily": "Rubik-Medium",
-              "fontSize": 14,
+              "fontSize": 16,
               "fontWeight": "500",
-              "lineHeight": 16,
+              "lineHeight": 20,
             },
           ]
         }
