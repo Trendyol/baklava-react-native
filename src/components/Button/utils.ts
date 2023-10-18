@@ -57,6 +57,9 @@ export const variantColorSelector = ({
           backgroundColor: 'neutralLightest',
           borderColor: 'neutralLightest',
         },
+        transparent: {
+          backgroundColor: 'transparentHighlight',
+        },
       }
     : {
         primary: {
@@ -73,6 +76,9 @@ export const variantColorSelector = ({
           color: kindColor,
           backgroundColor: 'transparent',
           borderColor: 'transparent',
+        },
+        transparent: {
+          backgroundColor: 'transparent',
         },
       };
 

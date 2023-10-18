@@ -21,7 +21,9 @@ exports[`Button should render button correctly 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     Array [
-      Object {},
+      Object {
+        "alignSelf": "baseline",
+      },
     ]
   }
 >

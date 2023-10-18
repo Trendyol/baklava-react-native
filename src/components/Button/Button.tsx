@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable } from 'react-native';
+import { ColorValue, Pressable } from 'react-native';
 import {
   backgroundColor,
   border,
@@ -26,6 +26,7 @@ type ButtonProps = React.ComponentProps<typeof Box> &
     children?: React.ReactNode;
     onPress?: () => void;
     label?: string;
+    tintColor?: ColorValue;
     icon?: IconNameType | null;
     disabled?: boolean;
     isPressed?: boolean;
@@ -85,6 +86,7 @@ const Button = ({
   variant = 'primary',
   icon,
   label,
+  tintColor,
   disabled = false,
   filled = false,
   ...rest
@@ -148,8 +150,13 @@ const Button = ({
     if (!icon) {
       return null;
     }
+    if (variant === 'transparent') {
+      return (
+        <Icon name={icon} size="s" color={tintColor} testID="button-icon" />
+      );
+    }
     return <Icon name={icon} size="s" color={typeColor} testID="button-icon" />;
-  }, [icon, typeColor]);
+  }, [icon, typeColor, tintColor, variant]);
 
   const labelView = React.useMemo(() => {
     if (!label) {
@@ -171,6 +178,7 @@ const Button = ({
       onPressIn={onPressIn}
       onPressOut={onPressOut}
       disabled={disabled}
+      alignSelf="baseline"
       {...rest}>
       <ButtonContainer
         size={size}

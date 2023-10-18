@@ -27,6 +27,8 @@ const colors = {
   neutralLighter: '#AFBBCA',
   neutralLightest: '#F1F2F7',
   neutralFull: '#FFFFFF',
+  // Transparent
+  transparentHighlight: '#00000010',
 
   // Will Be Deprecated
   // Color
@@ -547,6 +549,10 @@ const theme = createTheme({
     primary: {},
     secondary: {},
     tertiary: {},
+    transparent: {
+      backgroundColor: 'transparent',
+      borderWidth: 0,
+    },
   },
   inputSizeVariants: {
     defaults: {},

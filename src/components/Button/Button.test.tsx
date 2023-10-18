@@ -71,6 +71,47 @@ describe('Button', () => {
     expect(buttonIcon).not.toBeTruthy();
   });
 
+  test('should render icon variant is transparent', () => {
+    // when
+    const { getByTestId } = render(
+      <Button
+        testID="button"
+        variant="transparent"
+        size="l"
+        label="test"
+        icon="check"
+      />,
+    );
+    const buttonIcon = getByTestId('button-icon');
+
+    // then
+    expect(buttonIcon).toBeTruthy();
+    expect(buttonIcon.props.style[0].backgroundColor).toBe(
+      theme.colors.transparent,
+    );
+  });
+
+  test('should render icon variant is transparent when clicked', () => {
+    // when
+    const { getByTestId } = render(
+      <Button
+        testID="button"
+        variant="transparent"
+        size="l"
+        label="test"
+        icon="check"
+      />,
+    );
+    const buttonIcon = getByTestId('button');
+    fireEvent(buttonIcon, 'pressIn');
+
+    // then
+    expect(buttonIcon).toBeTruthy();
+    expect(buttonIcon.props.children[0].props.backgroundColor).toBe(
+      'transparentHighlight',
+    );
+  });
+
   test('should press button', () => {
     // given
     const onPress = jest.fn();
