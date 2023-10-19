@@ -178,7 +178,6 @@ const Button = ({
       onPressIn={onPressIn}
       onPressOut={onPressOut}
       disabled={disabled}
-      alignSelf="baseline"
       {...rest}>
       <ButtonContainer
         size={size}
