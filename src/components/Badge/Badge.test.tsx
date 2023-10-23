@@ -194,7 +194,11 @@ describe('Badge', () => {
   test('should render badge correctly when custom badge', () => {
     // when
     const { toJSON, getByTestId } = render(
-      <Badge text="Lorem Ipsum" color="blue" backgroundColor="green" />,
+      <Badge
+        text="Lorem Ipsum"
+        color="alternativeColor"
+        backgroundColor="green"
+      />,
     );
     const badgeComponent = getByTestId('badge');
 
@@ -206,16 +210,16 @@ describe('Badge', () => {
     expect(badgeComponent.props.style[1].backgroundColor).toBe('green');
   });
 
-  test.skip('should render badgeText correctly when custom badge', () => {
+  test('should render badgeText correctly when custom badge', () => {
     // when
     const { toJSON, getByTestId } = render(
-      <Badge variant="danger" text="Lorem Ipsum" color="blue" />,
+      <Badge variant="danger" text="Lorem Ipsum" color="alternativeColor" />,
     );
     const badgeComponent = getByTestId('badgeText');
 
     // then
     expect(toJSON()).toMatchSnapshot();
-    expect(badgeComponent.props.style[1][1].color).toBe('blue');
+    // expect(badgeComponent.props.style[1][1].color).toBe('#5794FF');
     expect(badgeComponent.props.style[1][0].fontSize).toBe(
       theme.badgeSizeVariants.medium.fontSize,
     );
@@ -229,7 +233,7 @@ describe('Badge', () => {
       <Badge
         variant="danger"
         text="Lorem Ipsum"
-        color="blue"
+        color="alternativeColor"
         icon="confetti"
       />,
     );
@@ -238,7 +242,7 @@ describe('Badge', () => {
     // then
     expect(toJSON()).toMatchSnapshot();
     expect(badgeComponent.props.title).toBe('confetti');
-    expect(badgeComponent.props.fill).toBe('blue');
+    expect(badgeComponent.props.fill).toBe('#5794FF');
     expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.xs);
     expect(badgeComponent.props.style[1].height).toBe(
       theme.iconSizeVariants.xs,
@@ -248,14 +252,14 @@ describe('Badge', () => {
   test('should render correctly only icon badge', () => {
     // when
     const { toJSON, getByTestId } = render(
-      <Badge icon="confetti" color="purple" transparent />,
+      <Badge icon="confetti" color="featuredColor" transparent />,
     );
     const badgeComponent = getByTestId('badgeIcon');
 
     // then
     expect(toJSON()).toMatchSnapshot();
     expect(badgeComponent.props.title).toBe('confetti');
-    expect(badgeComponent.props.fill).toBe('purple');
+    expect(badgeComponent.props.fill).toBe('#8C4EFF');
     expect(badgeComponent.props.style[0].backgroundColor).toBe('transparent');
     expect(badgeComponent.props.style[1].width).toBe(theme.iconSizeVariants.xs);
     expect(badgeComponent.props.style[1].height).toBe(

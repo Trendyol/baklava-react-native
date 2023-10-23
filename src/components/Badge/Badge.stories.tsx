@@ -124,16 +124,16 @@ export const Cases: BadgeStory = () => {
           <Badge icon="hamburger" transparent />
         </Box>
         <Box pr="2xs">
-          <Badge icon="flash" color="purple" transparent />
+          <Badge icon="flash" color="featuredColor" transparent />
         </Box>
         <Box pr="2xs">
-          <Badge icon="motorcycle" color="green" transparent />
+          <Badge icon="motorcycle" color="successColor" transparent />
         </Box>
         <Box pr="2xs">
           <Badge icon="vacation-mode" transparent />
         </Box>
         <Box pr="2xs">
-          <Badge icon="stop" color="red" transparent />
+          <Badge icon="stop" color="dangerColor" transparent />
         </Box>
       </Box>
     </>

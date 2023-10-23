@@ -105,7 +105,7 @@ exports[`Badge should render badge correctly when custom badge 1`] = `
     style={
       Array [
         Object {
-          "color": "#F27A1A",
+          "color": "#5794FF",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
@@ -305,7 +305,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
       align="xMidYMid"
       bbHeight="14"
       bbWidth="14"
-      fill="blue"
+      fill="#5794FF"
       focusable={false}
       height={14}
       meetOrSlice={0}
@@ -335,7 +335,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
         fill={
           Object {
             "type": 0,
-            "value": 4278190335,
+            "value": 4283929855,
           }
         }
         propList={
@@ -349,7 +349,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
           fill={
             Object {
               "type": 0,
-              "value": 4278190335,
+              "value": 4283929855,
             }
           }
           propList={
@@ -363,7 +363,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
           fill={
             Object {
               "type": 0,
-              "value": 4278190335,
+              "value": 4283929855,
             }
           }
           propList={
@@ -378,7 +378,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
           fill={
             Object {
               "type": 0,
-              "value": 4278190335,
+              "value": 4283929855,
             }
           }
           fillRule={0}
@@ -397,7 +397,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
     style={
       Array [
         Object {
-          "color": "#FF5043",
+          "color": "#5794FF",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
@@ -1023,7 +1023,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
       align="xMidYMid"
       bbHeight="14"
       bbWidth="14"
-      fill="blue"
+      fill="#5794FF"
       focusable={false}
       height={14}
       meetOrSlice={0}
@@ -1053,7 +1053,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
         fill={
           Object {
             "type": 0,
-            "value": 4278190335,
+            "value": 4283929855,
           }
         }
         propList={
@@ -1068,7 +1068,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
           fill={
             Object {
               "type": 0,
-              "value": 4278190335,
+              "value": 4283929855,
             }
           }
           fillRule={0}
@@ -1087,7 +1087,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
     style={
       Array [
         Object {
-          "color": "#FF5043",
+          "color": "#5794FF",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
@@ -1832,7 +1832,7 @@ exports[`Badge should render correctly only icon badge 1`] = `
       align="xMidYMid"
       bbHeight="14"
       bbWidth="14"
-      fill="purple"
+      fill="#8C4EFF"
       focusable={false}
       height={14}
       meetOrSlice={0}
@@ -1862,7 +1862,7 @@ exports[`Badge should render correctly only icon badge 1`] = `
         fill={
           Object {
             "type": 0,
-            "value": 4286578816,
+            "value": 4287385343,
           }
         }
         propList={
@@ -1876,7 +1876,7 @@ exports[`Badge should render correctly only icon badge 1`] = `
           fill={
             Object {
               "type": 0,
-              "value": 4286578816,
+              "value": 4287385343,
             }
           }
           propList={
@@ -1890,7 +1890,7 @@ exports[`Badge should render correctly only icon badge 1`] = `
           fill={
             Object {
               "type": 0,
-              "value": 4286578816,
+              "value": 4287385343,
             }
           }
           propList={
@@ -1905,7 +1905,7 @@ exports[`Badge should render correctly only icon badge 1`] = `
           fill={
             Object {
               "type": 0,
-              "value": 4286578816,
+              "value": 4287385343,
             }
           }
           fillRule={0}
