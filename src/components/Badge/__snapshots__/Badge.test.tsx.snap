@@ -116,9 +116,6 @@ exports[`Badge should render badge correctly when custom badge 1`] = `
             "paddingHorizontal": 4,
             "paddingVertical": 4,
           },
-          Object {
-            "color": "blue",
-          },
         ],
       ]
     }
@@ -410,9 +407,6 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
-          },
-          Object {
-            "color": "blue",
           },
         ],
       ]
@@ -1103,9 +1097,6 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
-          },
-          Object {
-            "color": "blue",
           },
         ],
       ]

@@ -9,14 +9,13 @@ import theme, { Theme } from '../../theme';
 import Box from '../Box/Box';
 import Icon from '../Icon/Icon';
 import Text, { TextProps } from '../Text/Text';
-import { ColorValue } from 'react-native';
 
 type ThemeColor = VariantProps<Theme, 'colors'>['variant'];
 
 type BadgeProps = {
   variant?: VariantProps<Theme, 'badgeVariants'>['variant'];
   icon?: IconNameType | null;
-  color?: ColorValue;
+  color?: ThemeColor;
   backgroundColor?: string;
   text?: string;
   size?: VariantProps<Theme, 'badgeSizeVariants'>['variant'];
@@ -88,13 +87,17 @@ const Badge = ({
     );
   }, [icon, color, variant, text]);
 
-  const textStyle = React.useMemo(() => {
-    if (!color) {
-      return undefined;
-    } else {
-      return { color };
-    }
-  }, [color]);
+  const bgColor =
+    theme.colors[`${backgroundColor as keyof Theme['colors']}`] ??
+    backgroundColor;
+
+  let textColor;
+
+  if (theme.colors[color as keyof Theme['colors']]) {
+    textColor = color;
+  } else {
+    textColor = theme.badgeVariants[variant].color;
+  }
 
   return (
     <Box
@@ -104,7 +107,7 @@ const Badge = ({
       alignSelf="flex-start"
       flexDirection="row"
       alignItems="center"
-      style={{ backgroundColor }}>
+      style={{ backgroundColor: bgColor }}>
       {!transparent && (
         <BadgeBackground testID="badgeBackground" variant={variant} />
       )}
@@ -112,11 +115,10 @@ const Badge = ({
       {text && (
         <BadgeText
           testID="badgeText"
-          color={theme.badgeVariants[variant].color as ThemeColor}
+          color={textColor as ThemeColor}
           size={size}
           fontWeight="500"
-          fontFamily="medium"
-          style={textStyle}>
+          fontFamily="medium">
           {text}
         </BadgeText>
       )}

@@ -84,11 +84,21 @@ export const Cases: BadgeStory = () => {
       </Box>
 
       <Box px="m" py="2xs">
-        <Badge text="Lorem Ipsum" backgroundColor="pink" />
+        <Badge
+          text="Lorem Ipsum"
+          transparent
+          color="featuredColor"
+          backgroundColor="featuredBackground"
+        />
       </Box>
 
       <Box px="m" py="2xs">
-        <Badge text="Lorem Ipsum" icon="gift" color="blue" transparent />
+        <Badge
+          text="Lorem Ipsum"
+          icon="gift"
+          color="alternativeColor"
+          transparent
+        />
       </Box>
 
       <Box px="m" py="2xs" flexDirection="row">

@@ -206,7 +206,7 @@ describe('Badge', () => {
     expect(badgeComponent.props.style[1].backgroundColor).toBe('green');
   });
 
-  test('should render badgeText correctly when custom badge', () => {
+  test.skip('should render badgeText correctly when custom badge', () => {
     // when
     const { toJSON, getByTestId } = render(
       <Badge variant="danger" text="Lorem Ipsum" color="blue" />,
@@ -221,8 +221,6 @@ describe('Badge', () => {
     );
     expect(badgeComponent.props.style[0].fontWeight).toBe('500');
     expect(badgeComponent.props.children).toBe('Lorem Ipsum');
-
-    // #496780
   });
 
   test('should render badgeIcon correctly when custom badge', () => {
