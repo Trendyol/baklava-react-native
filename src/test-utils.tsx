@@ -26,7 +26,7 @@ const AllProviders = ({ children }: { children?: React.ReactNode }) => (
 );
 
 const customRender = (ui: React.ReactElement, options?: RenderOptions) =>
-  render(ui, { wrapper: AllProviders, ...options }) as any;
+  render(ui, { wrapper: AllProviders, ...options });
 
 const mockPanResponder = () => {
   jest

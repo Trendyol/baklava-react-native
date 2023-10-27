@@ -1,0 +1,68 @@
+import { Meta } from '@storybook/addon-docs';
+import SpinnerSizes from '../assets/spinner/SpinnerSizes.png';
+import SpinnerColors from '../assets/spinner/SpinnerColors.png';
+
+<Meta
+  title="Components/Spinner"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Spinner
+
+Spinner component is used to show loading.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={SpinnerSizes} width="250" alt="SpinnerSizes" />
+  <img src={SpinnerColors} width="250" alt="SpinnerColors" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<Spinner color="primaryColor" size="xl" />
+```
+
+<br />
+
+## Props
+
+#### size
+
+The size of the spinner.
+Default value is `m`
+
+`2xl`,
+`xl`,
+`l`,
+`m`,
+`s`,
+`xs`,
+`2xs`
+
+#### color
+
+The color of the spinner.
+Default value is `primaryKey`. It can be <a href="/docs/design-system-colors--page" title="title">theme color key</a> or <a href="https://reactnative.dev/docs/colors#named-colors" title="title">ColorValue</a>
+  
+ex: 
+`neutralDarker`,
+`red`,
+`maroon`,
+`#EBEF95`,
+`#BEADFA`
+
