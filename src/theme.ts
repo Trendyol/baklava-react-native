@@ -712,6 +712,15 @@ const theme = createTheme({
       fontSize: 14,
     },
   },
+  spinnerSizeVariants: {
+    '2xs': 14,
+    xs: 16,
+    s: 20,
+    m: 24,
+    l: 32,
+    xl: 40,
+    '2xl': 48,
+  },
 });
 
 export type Theme = typeof theme;
