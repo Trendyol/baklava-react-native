@@ -18,6 +18,14 @@ const colors = {
   warningKey: '#FFB600',
   warningHighlight: '#FF9800',
   warningContrast: '#FFF8E6',
+  // Info
+  infoKey: '#5794FF',
+  infoHighlight: '#457EFF',
+  infoContrast: '#EEF4FF',
+  // Featured
+  featuredKey: '#8C4EFF',
+  featuredHighlight: '#753EFF',
+  featuredContrast: '#F4EDFF',
   // Neutral
   neutralNone: '#000000',
   neutralDarkest: '#0F131A',

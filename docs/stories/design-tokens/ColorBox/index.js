@@ -6,38 +6,25 @@ export const ColorBox = ({ colorText, color }) => (
       style={{
         ...styles.coloredBox,
         backgroundColor: color,
-      }}
-    />
-    <div style={styles.colorTextContainer}>
-      <div style={styles.colorNameText}>{colorText}</div>
-      <div style={styles.colorText}>{color}</div>
-    </div>
-  </div>
-);
-
-export const GradientColorBox = ({ colorText, firstColor, secondColor }) => (
-  <div style={styles.colorBoxContainer}>
-    <div
-      style={{
-        ...styles.gradientColoredBox,
-        background: `linear-gradient(135deg, ${firstColor} 0%, ${secondColor} 100%)`,
-      }}
-    />
-    <div style={styles.gradientColorNameContainer}>
-      <div style={styles.gradientColorNameText}>{colorText}</div>
-      <div style={styles.gradientColorText}>
-        {firstColor} - {secondColor}
+      }}>
+      <div style={styles.colorTextContainer}>
+        <div
+          style={
+            color == '#000000' || color == '#0F131A' || color == '#273142'
+              ? styles.colorNameTextWhite
+              : styles.colorNameText
+          }>
+          {colorText}
+        </div>
+        <div
+          style={
+            color == '#000000' || color == '#0F131A' || color == '#273142'
+              ? styles.colorTextWhite
+              : styles.colorText
+          }>
+          {color}
+        </div>
       </div>
-    </div>
-  </div>
-);
-
-export const EmptyColorBox = ({ colorText, color }) => (
-  <div style={styles.colorBoxContainer}>
-    <div style={styles.emptyColoredBox} />
-    <div style={styles.colorTextContainer}>
-      <div style={styles.emptyColorNameText}>{colorText}</div>
-      <div style={styles.emptyColorText}>{color}</div>
     </div>
   </div>
 );
@@ -50,50 +37,42 @@ export const styles = {
     marginTop: "30px",
     marginBottom: "30px",
   },
-  colorBoxContainer: { display: "flex", maxWidth: "150px" },
+  colorBoxContainer: {
+    display: 'flex',
+    maxWidth: '150px',
+    marginRight: '60px'
+  },
   coloredBox: {
-    minHeight: "50px",
-    minWidth: "100px",
-    borderRadius: "10px",
-    outline: "1px solid #D5D9E1",
+    minHeight: '50px',
+    minWidth: '100px',
+    borderRadius: '10px',
+    outline: '1px solid #D5D9E1',
+    width: '140px',
   },
-  colorTextContainer: { paddingLeft: "1rem" },
-  colorNameText: { fontWeight: "bold", fontSize: "14px", fontFamily: "Arial" },
-  colorText: { fontFamily: "Helvetica", fontSize: "12px" },
-  emptyColoredBox: {
-    minHeight: "50px",
-    minWidth: "100px",
+  colorTextContainer: {
+    flexDirection: 'row',
+    paddingLeft: '0.5rem',
+    paddingTop: '1rem',
+    paddingBottom: '1rem',
   },
-  emptyColorNameText: {
+  colorNameText: { 
+    fontWeight: 'bold', 
+    fontSize: '14px', 
+    fontFamily: 'Arial' 
+  },
+  colorText: { 
+    fontFamily: 'Helvetica', 
+    fontSize: '12px' 
+  },
+  colorNameTextWhite: {
     fontWeight: "bold",
     fontSize: "14px",
     fontFamily: "Arial",
-    color: "#FFFFFF",
+    color: "white",
   },
-  emptyColorText: {
+  colorTextWhite: {
     fontFamily: "Helvetica",
     fontSize: "12px",
-    color: "#FFFFFF",
-  },
-  gradientColoredBox: {
-    minHeight: "50px",
-    minWidth: "100px",
-    borderRadius: "10px",
-    outline: "1px solid #D5D9E1",
-  },
-  gradientColorNameContainer: {
-    paddingLeft: "1rem",
-    minWidth: "100px",
-    minHeight: "50px",
-  },
-  gradientColorNameText: {
-    fontWeight: "bold",
-    fontSize: "14px",
-    fontFamily: "Arial",
-  },
-  gradientColorText: {
-    fontFamily: "Helvetica",
-    fontSize: "12px",
-    width: "150px",
+    color: "white",
   },
 };
