@@ -1,0 +1,67 @@
+import { Meta } from '@storybook/addon-docs';
+import ImageCases from '../assets/image/ImageCases.png';
+
+<Meta
+  title="Components/Image"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Image
+
+An image is a graphic representation of something or someone.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={ImageCases} width="250" alt="ImageCases" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<Image
+  source={{
+    uri: 'https://example.com/your-image.png',
+  }}
+/>
+```
+
+<br />
+
+## Props
+
+#### bordered
+
+It's gray border of image
+
+#### width
+
+Image width
+
+#### height
+
+Image height
+
+#### style
+
+Type: `StyleProp<ImageStyle>`
+
+<br />
+Image implements: <>
+  <a href="https://reactnative.dev/docs/image#props" title="title">
+    ...Image props
+  </a>
+</>

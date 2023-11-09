@@ -41,6 +41,7 @@ export const parameters = {
         ['Button Variants', 'Button Types'],
         'Checkbox',
         'Icon',
+        'Image',
         'Input',
         'Text',
         'Toast',
