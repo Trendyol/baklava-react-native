@@ -121,10 +121,6 @@ const Switch = ({
     [animatedCirclePosition, animatedSwitchMarginRight, onValueChange],
   );
 
-  React.useEffect(() => {
-    handleValueChange(!!value);
-  }, [value, handleValueChange]);
-
   const testProps = React.useMemo(() => {
     const result: RNSwitchProps = {
       accessible: false,
@@ -156,8 +152,8 @@ const Switch = ({
       <RestyledPressable
         opacity={disabled ? 0.5 : 1}
         disabled={disabled}
-        onPressOut={() => onSwitchPressOut()}
-        onPressIn={() => onSwitchPressIn()}
+        onPressOut={onSwitchPressOut}
+        onPressIn={onSwitchPressIn}
         onPress={() => handleValueChange(!isEnabled)}
         {...testProps}>
         <AnimatedView

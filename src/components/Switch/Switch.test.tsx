@@ -140,34 +140,18 @@ describe('Switch', () => {
 
     // then
     expect(Animated.timing).toHaveBeenNthCalledWith(1, expect.anything(), {
-      toValue: 0,
-      duration: 130,
-      useNativeDriver: false,
-      easing: expect.anything(),
-    });
-
-    expect(Animated.timing).toHaveBeenNthCalledWith(2, expect.anything(), {
-      toValue: 0,
-      duration: 90,
-      useNativeDriver: false,
-      easing: expect.anything(),
-    });
-
-    expect(Animated.timing).toHaveBeenNthCalledWith(3, expect.anything(), {
       toValue: -1,
       duration: 200,
       useNativeDriver: false,
       easing: expect.anything(),
     });
 
-    expect(Animated.timing).toHaveBeenNthCalledWith(4, expect.anything(), {
+    expect(Animated.timing).toHaveBeenNthCalledWith(2, expect.anything(), {
       toValue: 24,
       duration: 200,
       useNativeDriver: false,
       easing: expect.anything(),
     });
-
-    expect(onStartAnimationMock).toHaveBeenCalledTimes(1);
   });
 
   test('should trigger the animation and call Animated.timing with correct parameters when pressIn and value is true', () => {
@@ -198,33 +182,17 @@ describe('Switch', () => {
     // then
     expect(Animated.timing).toHaveBeenNthCalledWith(1, expect.anything(), {
       toValue: 1,
-      duration: 130,
+      duration: 200,
       useNativeDriver: false,
       easing: expect.anything(),
     });
 
     expect(Animated.timing).toHaveBeenNthCalledWith(2, expect.anything(), {
-      toValue: 0,
-      duration: 90,
-      useNativeDriver: false,
-      easing: expect.anything(),
-    });
-
-    expect(Animated.timing).toHaveBeenNthCalledWith(3, expect.anything(), {
-      toValue: 1,
-      duration: 200,
-      useNativeDriver: false,
-      easing: expect.anything(),
-    });
-
-    expect(Animated.timing).toHaveBeenNthCalledWith(4, expect.anything(), {
       toValue: 24,
       duration: 200,
       useNativeDriver: false,
       easing: expect.anything(),
     });
-
-    expect(onStartAnimationMock).toHaveBeenCalledTimes(1);
   });
 
   test('should trigger the animation and call Animated.timing with correct parameters when pressOut', () => {
@@ -250,27 +218,11 @@ describe('Switch', () => {
 
     // then
     expect(Animated.timing).toHaveBeenNthCalledWith(1, expect.anything(), {
-      toValue: 0,
-      duration: 130,
-      useNativeDriver: false,
-      easing: expect.anything(),
-    });
-
-    expect(Animated.timing).toHaveBeenNthCalledWith(2, expect.anything(), {
-      toValue: 0,
-      duration: 90,
-      useNativeDriver: false,
-      easing: expect.anything(),
-    });
-
-    expect(Animated.timing).toHaveBeenNthCalledWith(3, expect.anything(), {
       toValue: 20,
       duration: 130,
       useNativeDriver: false,
       easing: expect.anything(),
     });
-
-    expect(onStartAnimationMock).toHaveBeenCalledTimes(1);
   });
 
   test('should trigger the animation and call Animated.timing with correct parameters when pressOut and value is true', () => {
@@ -300,27 +252,11 @@ describe('Switch', () => {
 
     // then
     expect(Animated.timing).toHaveBeenNthCalledWith(1, expect.anything(), {
-      toValue: 1,
-      duration: 130,
-      useNativeDriver: false,
-      easing: expect.anything(),
-    });
-
-    expect(Animated.timing).toHaveBeenNthCalledWith(2, expect.anything(), {
-      toValue: 0,
-      duration: 90,
-      useNativeDriver: false,
-      easing: expect.anything(),
-    });
-
-    expect(Animated.timing).toHaveBeenNthCalledWith(3, expect.anything(), {
       toValue: 20,
       duration: 130,
       useNativeDriver: false,
       easing: expect.anything(),
     });
-
-    expect(onStartAnimationMock).toHaveBeenCalledTimes(1);
   });
 
   test('should render correctly when testID is not present', () => {
