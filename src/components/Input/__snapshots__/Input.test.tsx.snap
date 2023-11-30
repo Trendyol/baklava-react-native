@@ -1686,6 +1686,7 @@ exports[`Input should render label fixed input correctly 1`] = `
     testID="fixed-label-box"
   >
     <Text
+      accessibilityLabel="fixed-label"
       accessible={true}
       style={
         Array [
@@ -1703,6 +1704,7 @@ exports[`Input should render label fixed input correctly 1`] = `
       label
     </Text>
     <Text
+      accessibilityLabel="optional-fixed-label"
       accessible={true}
       style={
         Array [

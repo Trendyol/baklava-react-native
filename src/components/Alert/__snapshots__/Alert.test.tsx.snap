@@ -109,6 +109,7 @@ exports[`Alert should render alert correctly 1`] = `
       }
     >
       <Text
+        accessibilityLabel="alert-caption"
         accessible={true}
         style={
           Array [
@@ -127,6 +128,7 @@ exports[`Alert should render alert correctly 1`] = `
         caption
       </Text>
       <Text
+        accessibilityLabel="alert-description"
         accessible={true}
         style={
           Array [

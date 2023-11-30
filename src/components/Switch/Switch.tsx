@@ -133,7 +133,7 @@ const Switch = ({
     }
 
     result.accessible = accessible ?? true;
-    result.accessibilityLabel = accessibilityLabel;
+    result.accessibilityLabel = accessibilityLabel ?? testID;
     result.testID = testID ?? accessibilityLabel;
 
     return result;
@@ -145,7 +145,11 @@ const Switch = ({
       alignItems="center"
       style={containerStyle}>
       {label && (
-        <Text variant="subtitle2Medium" p="2xs" testID="switch-label">
+        <Text
+          variant="subtitle2Medium"
+          p="2xs"
+          testID="switch-label"
+          accessibilityLabel="switch-label">
           {label}
         </Text>
       )}
@@ -162,6 +166,7 @@ const Switch = ({
           justifyContent="center"
           borderRadius="full"
           testID="switch-outer-view"
+          accessibilityLabel="switch-outer-view"
           //@ts-ignore
           backgroundColor={animatedCirclePosition.interpolate({
             inputRange: [0, 1],
@@ -176,6 +181,7 @@ const Switch = ({
             marginStart="4xs"
             borderRadius="full"
             testID="switch-inner-view"
+            accessibilityLabel="switch-inner-view"
             //@ts-ignore
             width={animatedSwitchWidth}
             //@ts-ignore

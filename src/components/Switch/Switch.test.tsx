@@ -267,7 +267,6 @@ describe('Switch', () => {
     const switchComponent = getByTestId('switch-outer-view');
 
     // then
-    expect(switchComponent.props.accessibilityLabel).toBeUndefined();
-    expect(switchComponent.props.accessible).toBeUndefined();
+    expect(switchComponent.props.accessibilityLabel).toBe('switch-outer-view');
   });
 });

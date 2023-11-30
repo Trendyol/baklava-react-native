@@ -56,7 +56,7 @@ const Spinner = ({
     }
 
     result.accessible = accessible ?? true;
-    result.accessibilityLabel = accessibilityLabel;
+    result.accessibilityLabel = accessibilityLabel ?? testID;
     result.testID = testID ?? accessibilityLabel;
 
     return result;
