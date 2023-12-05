@@ -11,6 +11,9 @@ exports[`Image should render Image correctly 1`] = `
         "height": 72,
         "width": 48,
       },
+      Object {
+        "borderRadius": 0,
+      },
     ]
   }
   testID="image-box"
@@ -24,6 +27,7 @@ exports[`Image should render Image correctly 1`] = `
     }
     style={
       Object {
+        "borderRadius": 0,
         "height": 70,
         "width": 46,
       }

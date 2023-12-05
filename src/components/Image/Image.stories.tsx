@@ -49,6 +49,7 @@ export const Cases: ImageStory = () => {
           source={{
             uri: 'https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/44/e5/9c/44e59caf-c7f4-90c0-fac6-2b22d3a66a5a/AppIcon-1x_U007emarketing-0-10-0-sRGB-85-220.png/1200x600wa.png',
           }}
+          borderRadius={12}
         />
       </Box>
       <Box px="m" py="2xs">
