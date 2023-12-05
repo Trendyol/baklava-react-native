@@ -37,7 +37,7 @@ const Image = ({
         style={{
           height: bordered ? height - 2 : height,
           width: bordered ? width - 2 : width,
-          borderRadius,
+          borderRadius: borderRadius ? borderRadius - 1 : borderRadius,
           ...style,
         }}
         source={source}
