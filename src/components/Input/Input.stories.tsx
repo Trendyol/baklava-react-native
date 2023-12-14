@@ -12,7 +12,6 @@ const InputMeta: ComponentMeta<typeof Input> = {
   title: 'Input',
   component: Input,
   argTypes: {
-    onPress: { action: 'pressed the button' },
     size: {
       options: sizeList,
       control: { type: 'radios' },
