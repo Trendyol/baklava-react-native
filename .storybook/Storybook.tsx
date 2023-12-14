@@ -4,7 +4,7 @@ import { getStorybookUI } from '@storybook/react-native';
 import './storybook.requires';
 
 const StorybookUIRoot = getStorybookUI({
-  asyncStorage: AsyncStorage,
+  // asyncStorage: AsyncStorage,
 });
 
 export default StorybookUIRoot;

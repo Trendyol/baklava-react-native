@@ -1,8 +1,8 @@
+import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds';
 import React from 'react';
 import { ScrollView } from 'react-native';
-import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds';
-import { theme, ThemeProvider, Toast } from '../src';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { PortalProvider, ThemeProvider, Toast, theme } from '../src';
 
 theme.fonts = {
   light: 'Rubik-Light',
@@ -16,12 +16,14 @@ export const decorators = [
   withBackgrounds,
   Story => (
     <ThemeProvider theme={theme}>
-      <SafeAreaProvider>
-        <ScrollView style={{ backgroundColor: theme.colors.neutralFull }}>
-          <Story />
-        </ScrollView>
-        <Toast ignoreKeyboard extraPaddingBottom={16} />
-      </SafeAreaProvider>
+      <PortalProvider>
+        <SafeAreaProvider>
+          <ScrollView style={{ backgroundColor: theme.colors.neutralFull }}>
+            <Story />
+          </ScrollView>
+          <Toast ignoreKeyboard extraPaddingBottom={16} />
+        </SafeAreaProvider>
+      </PortalProvider>
     </ThemeProvider>
   ),
 ];
@@ -46,6 +48,7 @@ export const parameters = {
         'Text',
         'Toast',
         'Switch',
+        'Modal',
       ],
       // locales: 'en-US',
     },

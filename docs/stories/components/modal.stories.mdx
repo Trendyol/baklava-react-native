@@ -1,0 +1,137 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+  title="Components/Modal"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Modal
+
+Modals inform users about a task and can contain critical information, require decisions, or involve multiple tasks.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'flex-start',
+  }}>
+  Screenshots will be added.
+</div>
+
+<br/>
+<br/>
+
+## Provider
+Developed using Portal for easy use of Component. 
+There is no direct portal solution in React Native as <a href="https://legacy.reactjs.org/docs/portals.html" title="title">React Portal</a>.
+We use the https://github.com/gorhom/react-native-portal.
+
+Make sure to add `PortalProvider` in your root view.
+
+```jsx
+import * as React from 'react';
+import { theme, ThemeProvider, PortalProvider } from '@trendyol/baklava-react-native';
+import App from './src/App';
+
+export default function Main() {
+  return (
+    <ThemeProvider theme={theme}>
+      <PortalProvider>
+        <App />
+      </PortalProvider>
+    </ThemeProvider>
+  );
+}
+```
+
+
+## Usage
+
+```jsx
+<Modal
+  modalKey="example-modal"
+  visible={isVisible}
+  closable={true}
+  title="Lorem ipsum dolor"
+  duration={200}
+  justifyContent="center"
+  wrongPressThresholdMs={1000}
+  closeButtonAction={() => setVisible(false)}
+  actionButtonProps={{
+    label: 'Primary Action',
+    onPress: () => {},
+  }}
+  secondActionButtonProps={{
+    label: 'Secondary Action',
+    onPress: () => {},
+  }}>
+  <Text>
+    ...
+  </Text>
+</Modal>
+```
+
+<br />
+
+## Props
+
+#### modalKey
+
+If you want to open multiple modals, you must assign different keys.
+
+Type: `string`
+
+### visible (required)
+
+Type: `boolean`, Default value: `false`
+
+### closable 
+
+Type: `boolean`, Default value : `true` 
+
+### title 
+
+Type: `string` 
+
+### duration 
+
+It is the duration of the fade in effect of the overlay. It is in microseconds.
+
+Type: `number`, Default value: `200`
+
+### justifyContent
+
+Type: `center`, `flex-start` , `flex-end`, 
+
+Default value: `center`
+
+### wrongPressThresholdMs 
+
+It is to prevent close due to wrong clicks. It is in microseconds.
+
+Type: `number`, Default value: `1000`
+
+### closeButtonAction 
+
+Type: `Function` 
+
+### actionButtonProps 
+
+Type: <a href="/docs/components-button--page" title="title">ButtonProps</a> 
+
+### secondActionButtonProps 
+
+Type: <a href="/docs/components-button--page" title="title">ButtonProps</a> 
+
+
+
+#### children (required)
+
+Type: `React.ReactNode`

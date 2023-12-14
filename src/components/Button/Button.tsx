@@ -21,7 +21,7 @@ import { Theme } from '../../theme';
 import Box from '../Box/Box';
 import { variantColorSelector } from './utils';
 
-type ButtonProps = React.ComponentProps<typeof Box> &
+export type ButtonProps = React.ComponentProps<typeof Box> &
   React.ComponentProps<typeof Pressable> & {
     children?: React.ReactNode;
     onPress?: () => void;

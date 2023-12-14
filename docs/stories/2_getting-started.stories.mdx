@@ -41,16 +41,19 @@ npx expo install react-native-svg@12.3.0
 ## Usage
 
 To support custom themes, baklava exports a ThemeProvider component. Wrap the root component with the provider to be able to support themes:
+`PortalProvider` is for the `Modal`. Please review the <a href="/docs/components-modal--page" title="title">Modal</a>.
 
 ```jsx
 import * as React from 'react';
-import { theme, ThemeProvider } from '@trendyol/baklava-react-native';
+import { theme, ThemeProvider, PortalProvider } from '@trendyol/baklava-react-native';
 import App from './src/App';
 
 export default function Main() {
   return (
     <ThemeProvider theme={theme}>
-      <App />
+      <PortalProvider>
+        <App />
+      </PortalProvider>
     </ThemeProvider>
   );
 }
@@ -62,7 +65,7 @@ You can also provide a theme prop with a theme object with same properties as th
 
 ```jsx
 import * as React from 'react';
-import { theme as defaultTheme, ThemeProvider } from '@trendyol/baklava-react-native';
+import { theme as defaultTheme, ThemeProvider, PortalProvider } from '@trendyol/baklava-react-native';
 import App from './src/App';
 
 theme.fonts = {
@@ -76,7 +79,9 @@ theme.fonts = {
 export default function Main() {
   return (
     <ThemeProvider theme={theme}>
-      <App />
+      <PortalProvider>
+        <App />
+      </PortalProvider>
     </ThemeProvider>
   );
 }

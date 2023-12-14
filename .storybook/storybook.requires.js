@@ -38,6 +38,7 @@ const getStories = () => {
     require('../src/components/TextLink/TextLink.stories.tsx'),
     require('../src/components/Toast/Toast.stories.tsx'),
     require('../src/components/Spinner/Spinner.stories.tsx'),
+    require('../src/components/Modal/Modal.stories.tsx'),
   ];
 };
 configure(getStories, module, false);

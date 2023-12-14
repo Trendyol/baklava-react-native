@@ -7,6 +7,7 @@ import {
   PanResponderCallbacks,
 } from 'react-native';
 import theme from './theme';
+import { PortalProvider } from '.';
 
 theme.fonts = {
   light: 'Rubik-Light',
@@ -22,7 +23,9 @@ export interface RenderOptions {
 }
 
 const AllProviders = ({ children }: { children?: React.ReactNode }) => (
-  <ThemeProvider theme={theme}>{children}</ThemeProvider>
+  <ThemeProvider theme={theme}>
+    <PortalProvider>{children}</PortalProvider>
+  </ThemeProvider>
 );
 
 const customRender = (ui: React.ReactElement, options?: RenderOptions) =>
