@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea Label should render fixed label correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 4,
+      },
+    ]
+  }
+  testID="fixed-label-box"
+>
+  <Text
+    accessibilityLabel="fixed-label"
+    accessible={true}
+    style={
+      Array [
+        Object {
+          "color": "#6E7787",
+          "fontFamily": "Rubik-Medium",
+          "fontSize": 12,
+          "fontWeight": "500",
+          "lineHeight": 14,
+        },
+      ]
+    }
+    testID="fixed-label"
+  >
+    Label
+  </Text>
+</View>
+`;
+
+exports[`TextArea Label should render fixed label with optional correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "marginBottom": 4,
+      },
+    ]
+  }
+  testID="fixed-label-box"
+>
+  <Text
+    accessibilityLabel="fixed-label"
+    accessible={true}
+    style={
+      Array [
+        Object {
+          "color": "#6E7787",
+          "fontFamily": "Rubik-Medium",
+          "fontSize": 12,
+          "fontWeight": "500",
+          "lineHeight": 14,
+        },
+      ]
+    }
+    testID="fixed-label"
+  >
+    Label
+  </Text>
+</View>
+`;
+
+exports[`TextArea Label should render null when not has a label 1`] = `null`;
+
+exports[`TextArea Label should render outlined label correctly 1`] = `
+<View
+  collapsable={false}
+  pointerEvents="none"
+  style={Object {}}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "paddingLeft": 16,
+        },
+      ]
+    }
+    testID="outlined-label-box"
+  >
+    <Text
+      collapsable={false}
+      style={Object {}}
+    >
+      Label
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`TextArea Label should render outlined label with optional correctly 1`] = `
+<View
+  collapsable={false}
+  pointerEvents="none"
+  style={Object {}}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "paddingLeft": 16,
+        },
+      ]
+    }
+    testID="outlined-label-box"
+  >
+    <Text
+      collapsable={false}
+      style={Object {}}
+    >
+      Label
+    </Text>
+  </View>
+</View>
+`;

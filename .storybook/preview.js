@@ -46,6 +46,7 @@ export const parameters = {
         'Image',
         'Input',
         'Text',
+        'TextArea',
         'Toast',
         'Switch',
         'Modal',

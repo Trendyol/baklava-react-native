@@ -729,6 +729,18 @@ const theme = createTheme({
     xl: 40,
     '2xl': 48,
   },
+  textAreaSizeVariants: {
+    defaults: {},
+    small: {
+      height: 80,
+    },
+    medium: {
+      height: 88,
+    },
+    large: {
+      height: 104,
+    },
+  },
 });
 
 export type Theme = typeof theme;

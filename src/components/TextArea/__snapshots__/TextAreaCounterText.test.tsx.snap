@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea Counter Text should render counter text correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginLeft": 16,
+        "marginTop": 4,
+      },
+    ]
+  }
+>
+  <Text
+    accessible={false}
+    style={
+      Array [
+        Object {
+          "color": "#95A1B5",
+          "fontFamily": "Rubik-Regular",
+          "fontSize": 12,
+          "fontWeight": "400",
+          "lineHeight": 14,
+        },
+      ]
+    }
+  >
+    0/200
+  </Text>
+</View>
+`;
+
+exports[`TextArea Counter Text should render null when not has error text 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginLeft": 16,
+        "marginTop": 4,
+      },
+    ]
+  }
+>
+  <Text
+    accessible={false}
+    style={
+      Array [
+        Object {
+          "color": "#95A1B5",
+          "fontFamily": "Rubik-Regular",
+          "fontSize": 12,
+          "fontWeight": "400",
+          "lineHeight": 14,
+        },
+      ]
+    }
+  >
+    0/200
+  </Text>
+</View>
+`;

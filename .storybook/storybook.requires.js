@@ -35,6 +35,7 @@ const getStories = () => {
     require('../src/components/Input/Input.stories.tsx'),
     require('../src/components/Switch/Switch.stories.tsx'),
     require('../src/components/Text/Text.stories.tsx'),
+    require('../src/components/TextArea/TextArea.stories.tsx'),
     require('../src/components/TextLink/TextLink.stories.tsx'),
     require('../src/components/Toast/Toast.stories.tsx'),
     require('../src/components/Spinner/Spinner.stories.tsx'),

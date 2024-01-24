@@ -13,6 +13,7 @@ export { default as Modal } from './components/Modal/Modal';
 export { default as Spinner } from './components/Spinner/Spinner';
 export { default as Switch } from './components/Switch/Switch';
 export { default as Text } from './components/Text/Text';
+export { default as TextArea } from './components/TextArea/TextArea';
 export { default as TextLink } from './components/TextLink/TextLink';
 export { default as Toast } from './components/Toast/Toast';
 

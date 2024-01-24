@@ -1,0 +1,1454 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextArea should render TextArea correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 94,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "paddingLeft": 16,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 8,
+          }
+        }
+      >
+        label
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="textArea-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#AFBBCA",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="textArea-box"
+  >
+    <TextInput
+      accessibilityLabel="textArea"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 88,
+            "paddingTop": 12,
+          },
+        ]
+      }
+      testID="textArea"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-start",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-end",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginLeft": 16,
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#95A1B5",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          0/200
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TextArea should render TextArea with error state and error text correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 112,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "paddingLeft": 16,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "red",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 8,
+          }
+        }
+      >
+        label
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="textArea-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FF5043",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="textArea-box"
+  >
+    <TextInput
+      accessibilityLabel="textArea"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 88,
+            "paddingTop": 12,
+          },
+        ]
+      }
+      testID="textArea"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-start",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#FF5043",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          errorText
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-end",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginLeft": 16,
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#FF5043",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          0/200
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TextArea should render TextArea with error state correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 94,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "paddingLeft": 16,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "red",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 8,
+          }
+        }
+      >
+        label
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="textArea-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#FF5043",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="textArea-box"
+  >
+    <TextInput
+      accessibilityLabel="textArea"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 88,
+            "paddingTop": 12,
+          },
+        ]
+      }
+      testID="textArea"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-start",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-end",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginLeft": 16,
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#FF5043",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          0/200
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TextArea should render TextArea with help text correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 112,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "paddingLeft": 16,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 8,
+          }
+        }
+      >
+        label
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="textArea-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#AFBBCA",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="textArea-box"
+  >
+    <TextInput
+      accessibilityLabel="textArea"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 88,
+            "paddingTop": 12,
+          },
+        ]
+      }
+      testID="textArea"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-start",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#95A1B5",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          helpText
+        </Text>
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-end",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginLeft": 16,
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#95A1B5",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          0/200
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TextArea should render TextArea with large size correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 110,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "paddingLeft": 16,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 8,
+          }
+        }
+      >
+        label
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="textArea-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#AFBBCA",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="textArea-box"
+  >
+    <TextInput
+      accessibilityLabel="textArea"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 104,
+            "paddingTop": 16,
+          },
+        ]
+      }
+      testID="textArea"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-start",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-end",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginLeft": 16,
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#95A1B5",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          0/200
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TextArea should render TextArea with medium size correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 94,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "paddingLeft": 16,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 8,
+          }
+        }
+      >
+        label
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="textArea-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#AFBBCA",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="textArea-box"
+  >
+    <TextInput
+      accessibilityLabel="textArea"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 88,
+            "paddingTop": 12,
+          },
+        ]
+      }
+      testID="textArea"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-start",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-end",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginLeft": 16,
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#95A1B5",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          0/200
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TextArea should render TextArea with small size correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 86,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "paddingLeft": 16,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "#FFFFFF",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 8,
+          }
+        }
+      >
+        label
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="textArea-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#AFBBCA",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="textArea-box"
+  >
+    <TextInput
+      accessibilityLabel="textArea"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 80,
+            "paddingTop": 8,
+          },
+        ]
+      }
+      testID="textArea"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-start",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-end",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginLeft": 16,
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#95A1B5",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          0/200
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TextArea should render disabled TextArea correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      Object {
+        "bottom": 0,
+        "height": 94,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "paddingLeft": 16,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 8,
+          }
+        }
+      >
+        label
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="textArea-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#F1F2F7",
+          "borderColor": "#AFBBCA",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="textArea-box"
+  >
+    <TextInput
+      accessibilityLabel="textArea"
+      bg="transparent"
+      disabled={true}
+      editable={false}
+      multiline={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder=""
+      placeholderTextColor="#95A1B5"
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 88,
+            "paddingTop": 12,
+          },
+        ]
+      }
+      testID="textArea"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-start",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-end",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginLeft": 16,
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#95A1B5",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          0/200
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TextArea should render label fixed TextArea correctly 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "paddingHorizontal": 16,
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "marginBottom": 4,
+        },
+      ]
+    }
+    testID="fixed-label-box"
+  >
+    <Text
+      accessibilityLabel="fixed-label"
+      accessible={true}
+      style={
+        Array [
+          Object {
+            "color": "#6E7787",
+            "fontFamily": "Rubik-Medium",
+            "fontSize": 12,
+            "fontWeight": "500",
+            "lineHeight": 14,
+          },
+        ]
+      }
+      testID="fixed-label"
+    >
+      label
+    </Text>
+  </View>
+  <View
+    accessibilityLabel="textArea-box"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "borderColor": "#AFBBCA",
+          "borderRadius": 6,
+          "borderWidth": 1,
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+          "paddingHorizontal": 16,
+          "zIndex": 0,
+        },
+      ]
+    }
+    testID="textArea-box"
+  >
+    <TextInput
+      accessibilityLabel="textArea"
+      bg="transparent"
+      disabled={false}
+      editable={true}
+      multiline={true}
+      onBlur={[Function]}
+      onChangeText={[Function]}
+      onFocus={[Function]}
+      placeholder="placeholder"
+      placeholderTextColor="#95A1B5"
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "height": 88,
+            "paddingTop": 12,
+          },
+        ]
+      }
+      testID="textArea"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-start",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "justifyContent": "flex-end",
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "marginLeft": 16,
+              "marginTop": 4,
+            },
+          ]
+        }
+      >
+        <Text
+          accessible={false}
+          style={
+            Array [
+              Object {
+                "color": "#95A1B5",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 12,
+                "fontWeight": "400",
+                "lineHeight": 14,
+              },
+            ]
+          }
+        >
+          0/200
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;
