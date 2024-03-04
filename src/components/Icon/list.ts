@@ -10,6 +10,7 @@ export const iconList = [
   'arrow-down',
   'arrow-left',
   'arrow-right',
+  'arrow-right-up',
   'arrow-up',
   'attach',
   'automatic-pricing',

@@ -8,6 +8,7 @@ export { default as Announcement } from './Announcement';
 export { default as Archive } from './Archive';
 export { default as ArrowDown } from './ArrowDown';
 export { default as ArrowLeft } from './ArrowLeft';
+export { default as ArrowRightUp } from './ArrowRightUp';
 export { default as ArrowRight } from './ArrowRight';
 export { default as ArrowUp } from './ArrowUp';
 export { default as Attach } from './Attach';
