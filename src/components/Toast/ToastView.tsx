@@ -8,7 +8,7 @@ import {
   useWindowDimensions,
 } from 'react-native';
 import Text from '../Text/Text';
-import { TostDurations } from './types';
+import { ToastDurations } from './types';
 import { capitalizeFirstLetter, getFirstNChar, pausableTimer } from './utils';
 import Box from '../Box/Box';
 import {
@@ -47,7 +47,7 @@ const ToastView = React.forwardRef<ToastViewRef, ToastViewProps>(
     {
       variant = 'default',
       text,
-      duration = TostDurations.SHORT,
+      duration = ToastDurations.SHORT,
       onDisappared,
       action,
       actionText,

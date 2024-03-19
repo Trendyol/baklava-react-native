@@ -4,7 +4,7 @@ import Button from '../Button/Button';
 import Text from '../Text/Text';
 import Toast from './Toast';
 import ToastView from './ToastView';
-import { ToastVariants, TostDurations } from './types';
+import { ToastVariants, ToastDurations } from './types';
 import Input from '../Input/Input';
 import Box from '../Box/Box';
 
@@ -96,7 +96,7 @@ export const WithAction: ToastStory = () => {
           Toast.show({
             variant: ToastVariants.DEFAULT,
             text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            duration: TostDurations.SHORT,
+            duration: ToastDurations.SHORT,
             action: close => {
               close();
             },
@@ -114,7 +114,7 @@ export const WithAction: ToastStory = () => {
           Toast.show({
             variant: ToastVariants.SUCCESS,
             text: 'This is a SUCCESS toast with action',
-            duration: TostDurations.SHORT,
+            duration: ToastDurations.SHORT,
             action: close => {
               close();
             },
@@ -132,7 +132,7 @@ export const WithAction: ToastStory = () => {
           Toast.show({
             variant: ToastVariants.ERROR,
             text: 'This is an ERROR toast with action',
-            duration: TostDurations.SHORT,
+            duration: ToastDurations.SHORT,
             action: close => {
               close();
             },
@@ -149,7 +149,7 @@ export const WithAction: ToastStory = () => {
           Toast.show({
             variant: ToastVariants.WARNING,
             text: 'This is a WARNING toast with action',
-            duration: TostDurations.SHORT,
+            duration: ToastDurations.SHORT,
             action: close => {
               close();
             },

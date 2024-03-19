@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from '../Box/Box';
 import ToastView from './ToastView';
-import { ShowMethodParams, ToastDataWithId, TostDurations } from './types';
+import { ShowMethodParams, ToastDataWithId, ToastDurations } from './types';
 import { uuid } from './utils';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKeyboard } from './hooks';
@@ -32,7 +32,7 @@ const Toast: ToastType = React.memo(
           id: uuid(16),
           variant: params.variant,
           text: params.text,
-          duration: params.duration ?? TostDurations.SHORT,
+          duration: params.duration ?? ToastDurations.SHORT,
           action: params.action!,
           actionText: params.actionText!,
           bottomOffset: params.bottomOffset ?? 0,

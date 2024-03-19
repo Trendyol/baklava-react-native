@@ -17,5 +17,8 @@ export { default as TextArea } from './components/TextArea/TextArea';
 export { default as TextLink } from './components/TextLink/TextLink';
 export { default as Toast } from './components/Toast/Toast';
 
+// types
+export { ToastDurations } from './components/Toast/types';
+
 // 3rd party
 export { Portal, PortalHost, PortalProvider, usePortal } from '@gorhom/portal';

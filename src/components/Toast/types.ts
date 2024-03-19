@@ -50,7 +50,12 @@ export const TostDurations = {
   LONG: 10000,
 } as const;
 
-export type DurationTypes = typeof TostDurations;
+export const ToastDurations = {
+  SHORT: 7000,
+  LONG: 10000,
+} as const;
+
+export type DurationTypes = typeof ToastDurations;
 export type Duration = DurationTypes[keyof DurationTypes];
 
 export const ToastVariants = {
