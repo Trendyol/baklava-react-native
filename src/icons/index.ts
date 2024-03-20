@@ -111,6 +111,8 @@ export { default as MobileFilled } from './MobileFilled';
 export { default as MobileSettings } from './MobileSettings';
 export { default as MobileStroke } from './MobileStroke';
 export { default as MoneyTransfer } from './MoneyTransfer';
+export { default as MoreHorizontal } from './MoreHorizontal';
+export { default as MoreVertical } from './MoreVertical';
 export { default as MotorcycleCheck } from './MotorcycleCheck';
 export { default as Motorcycle } from './Motorcycle';
 export { default as MyOffers } from './MyOffers';
