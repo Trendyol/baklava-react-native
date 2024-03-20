@@ -112,6 +112,8 @@ export const iconList = [
   'mobile-settings',
   'mobile-stroke',
   'money-transfer',
+  'more-horizontal',
+  'more-vertical',
   'motorcycle-check',
   'motorcycle',
   'my-offers',
