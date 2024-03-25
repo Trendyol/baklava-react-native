@@ -90,39 +90,43 @@ export const useOutlineLabelVisibility = ({
   ).current;
 
   /* istanbul ignore next */
-  const startAnimation = () => {
-    Animated.parallel([
-      Animated.timing(labelPositionRef, {
-        toValue: labelPositionFillValue,
-        ...commonAnimatedProps,
-      }),
-      Animated.timing(fontSizeRef, {
-        toValue: labelFontSize - 2,
-        ...commonAnimatedProps,
-      }),
-      Animated.timing(lineHeightRef, {
-        toValue: labelLineHeightValue - 2,
-        ...commonAnimatedProps,
-      }),
-    ]).start();
+  const startAnimation = async () => {
+    return new Promise(res => {
+      Animated.parallel([
+        Animated.timing(labelPositionRef, {
+          toValue: labelPositionFillValue,
+          ...commonAnimatedProps,
+        }),
+        Animated.timing(fontSizeRef, {
+          toValue: labelFontSize - 2,
+          ...commonAnimatedProps,
+        }),
+        Animated.timing(lineHeightRef, {
+          toValue: labelLineHeightValue - 2,
+          ...commonAnimatedProps,
+        }),
+      ]).start(res);
+    });
   };
 
   /* istanbul ignore next */
-  const stopAnimation = () => {
-    Animated.parallel([
-      Animated.timing(labelPositionRef, {
-        toValue: labelPositionEmptyValue,
-        ...commonAnimatedProps,
-      }),
-      Animated.timing(fontSizeRef, {
-        toValue: labelFontSize,
-        ...commonAnimatedProps,
-      }),
-      Animated.timing(lineHeightRef, {
-        toValue: labelLineHeightValue,
-        ...commonAnimatedProps,
-      }),
-    ]).start();
+  const stopAnimation = async () => {
+    return new Promise(res => {
+      Animated.parallel([
+        Animated.timing(labelPositionRef, {
+          toValue: labelPositionEmptyValue,
+          ...commonAnimatedProps,
+        }),
+        Animated.timing(fontSizeRef, {
+          toValue: labelFontSize,
+          ...commonAnimatedProps,
+        }),
+        Animated.timing(lineHeightRef, {
+          toValue: labelLineHeightValue,
+          ...commonAnimatedProps,
+        }),
+      ]).start(res);
+    });
   };
 
   let viewHeight = textAreaHeight + 6;

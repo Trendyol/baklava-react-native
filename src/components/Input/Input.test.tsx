@@ -1,6 +1,6 @@
 import React from 'react';
 import { act } from 'react-test-renderer';
-import { fireEvent, render } from '../../test-utils';
+import { fireEvent, render, waitFor } from '../../test-utils';
 import theme from '../../theme';
 import Input, { TextInputHandles } from './Input';
 
@@ -115,7 +115,7 @@ describe('Input', () => {
     expect(toJSON()).toMatchSnapshot();
   });
 
-  test('should focus input correctly', () => {
+  test('should focus input correctly', async () => {
     // when
     const { getByTestId } = render(<Input label="label" />);
 
@@ -125,14 +125,14 @@ describe('Input', () => {
     );
 
     // when
-    act(() => {
-      fireEvent(getByTestId('input'), 'onFocus');
-    });
+    fireEvent(getByTestId('input'), 'onFocus');
 
     // then
-    expect(getByTestId('input-box').props.style[0].borderColor).toBe(
-      theme.colors.primaryKey,
-    );
+    await waitFor(() => {
+      expect(getByTestId('input-box').props.style[0].borderColor).toBe(
+        theme.colors.primaryKey,
+      );
+    });
   });
 
   test('should not focus and blur input when input is disabled', () => {
