@@ -102,6 +102,7 @@ export { default as MealBag } from './MealBag';
 export { default as MealOrderBack } from './MealOrderBack';
 export { default as MealOrderCancel } from './MealOrderCancel';
 export { default as MealOrderReturn } from './MealOrderReturn';
+export { default as Menu } from './Menu';
 export { default as Message } from './Message';
 export { default as MetricStatusDown } from './MetricStatusDown';
 export { default as MetricStatusUp } from './MetricStatusUp';
