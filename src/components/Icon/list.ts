@@ -103,6 +103,7 @@ export const iconList = [
   'meal-order-back',
   'meal-order-cancel',
   'meal-order-return',
+  'menu',
   'message',
   'metric-status-down',
   'metric-status-up',
