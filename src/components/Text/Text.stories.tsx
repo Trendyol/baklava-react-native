@@ -11,7 +11,7 @@ const TextMeta: ComponentMeta<typeof Text> = {
   argTypes: {
     variant: {
       options: variantList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
   },
   args: {

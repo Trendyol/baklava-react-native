@@ -13,7 +13,7 @@ const TextAreaMeta: ComponentMeta<typeof TextArea> = {
   argTypes: {
     size: {
       options: sizeList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
   },
   args: {

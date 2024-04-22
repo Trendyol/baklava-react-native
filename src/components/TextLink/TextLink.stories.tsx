@@ -12,7 +12,7 @@ const TextLinkMeta: ComponentMeta<typeof TextLink> = {
   argTypes: {
     variant: {
       options: variantList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
   },
   args: {

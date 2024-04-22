@@ -20,15 +20,15 @@ const ButtonMeta: ComponentMeta<typeof Button> = {
     onPress: { action: 'pressed the button' },
     variant: {
       options: variantList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
     kind: {
       options: kindList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
     size: {
       options: sizeList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
   },
   args: {
