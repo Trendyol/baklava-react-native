@@ -1,5 +1,6 @@
 import {
   backgroundColor,
+  backgroundColorShorthand,
   opacity,
   visible,
   layout,
@@ -20,14 +21,15 @@ type RestyleProps = RestyleBoxProps<Theme>;
 
 const restyleFunctions = composeRestyleFunctions<Theme, RestyleProps>([
   backgroundColor,
+  backgroundColorShorthand,
   opacity,
   visible,
   layout,
   spacing,
+  spacingShorthand,
   border,
   shadow,
   position,
-  spacingShorthand,
 ]);
 
 export type BoxProps = RNViewProps & RestyleProps;

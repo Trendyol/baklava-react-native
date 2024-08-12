@@ -44,10 +44,10 @@ exports[`Modal should render Modal when visible true with children 1`] = `
   <View
     accessibilityLabel="modal"
     accessible={true}
-    bg="white"
     style={
       Array [
         Object {
+          "backgroundColor": "#FFFFFF",
           "borderRadius": 8,
           "padding": 16,
         },
@@ -276,10 +276,10 @@ exports[`Modal should render Modal without header 1`] = `
   <View
     accessibilityLabel="modal"
     accessible={true}
-    bg="white"
     style={
       Array [
         Object {
+          "backgroundColor": "#FFFFFF",
           "borderRadius": 8,
           "padding": 16,
         },
