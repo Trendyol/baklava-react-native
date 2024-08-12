@@ -2,6 +2,7 @@
 
 exports[`Alert should render alert correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {},
@@ -17,6 +18,7 @@ exports[`Alert should render alert correctly 1`] = `
   }
 >
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -28,6 +30,7 @@ exports[`Alert should render alert correctly 1`] = `
     }
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -100,6 +103,7 @@ exports[`Alert should render alert correctly 1`] = `
       </RNSVGSvgView>
     </View>
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -145,6 +149,7 @@ exports[`Alert should render alert correctly 1`] = `
       </Text>
     </View>
     <View
+      accessible={false}
       style={
         Array [
           Object {},

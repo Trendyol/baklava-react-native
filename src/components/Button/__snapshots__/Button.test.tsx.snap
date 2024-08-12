@@ -26,6 +26,7 @@ exports[`Button should render button correctly 1`] = `
   }
 >
   <View
+    accessible={false}
     color="white"
     style={
       Array [

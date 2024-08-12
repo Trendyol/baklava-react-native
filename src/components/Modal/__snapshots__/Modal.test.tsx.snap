@@ -7,6 +7,7 @@ exports[`Modal should not render Modal when visible true without children 1`] = 
 exports[`Modal should render Modal when visible true with children 1`] = `
 <View
   accessibilityLabel="modal-wrapper"
+  accessible={true}
   style={
     Array [
       Object {
@@ -43,10 +44,10 @@ exports[`Modal should render Modal when visible true with children 1`] = `
   <View
     accessibilityLabel="modal"
     accessible={true}
+    bg="white"
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
           "borderRadius": 8,
           "padding": 16,
         },
@@ -59,6 +60,7 @@ exports[`Modal should render Modal when visible true with children 1`] = `
   >
     <View
       accessibilityLabel="modal-header"
+      accessible={true}
       style={
         Array [
           Object {
@@ -72,6 +74,7 @@ exports[`Modal should render Modal when visible true with children 1`] = `
       testID="modal-header"
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -128,6 +131,7 @@ exports[`Modal should render Modal when visible true with children 1`] = `
         testID="modal-close"
       >
         <View
+          accessible={false}
           style={
             Array [
               Object {
@@ -235,6 +239,7 @@ exports[`Modal should render Modal when visible true with children 1`] = `
 exports[`Modal should render Modal without header 1`] = `
 <View
   accessibilityLabel="modal-wrapper"
+  accessible={true}
   style={
     Array [
       Object {
@@ -271,10 +276,10 @@ exports[`Modal should render Modal without header 1`] = `
   <View
     accessibilityLabel="modal"
     accessible={true}
+    bg="white"
     style={
       Array [
         Object {
-          "backgroundColor": "#FFFFFF",
           "borderRadius": 8,
           "padding": 16,
         },

@@ -26,6 +26,8 @@ exports[`Checkbox should render Checkbox correctly when checked is false 1`] = `
   }
 >
   <View
+    accessibilityLabel="tickbox"
+    accessible={true}
     style={
       Array [
         Object {},
@@ -74,6 +76,8 @@ exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
   }
 >
   <View
+    accessibilityLabel="tickbox"
+    accessible={true}
     style={
       Array [
         Object {},
@@ -185,6 +189,8 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
   }
 >
   <View
+    accessibilityLabel="tickbox"
+    accessible={true}
     style={
       Array [
         Object {},
@@ -296,6 +302,8 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
   }
 >
   <View
+    accessibilityLabel="tickbox"
+    accessible={true}
     style={
       Array [
         Object {},
@@ -407,6 +415,8 @@ exports[`Checkbox should render Checkbox correctly when disable, checked and ind
   }
 >
   <View
+    accessibilityLabel="tickbox"
+    accessible={true}
     style={
       Array [
         Object {},
@@ -518,6 +528,8 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is fals
   }
 >
   <View
+    accessibilityLabel="tickbox"
+    accessible={true}
     style={
       Array [
         Object {},
@@ -566,6 +578,8 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is true
   }
 >
   <View
+    accessibilityLabel="tickbox"
+    accessible={true}
     style={
       Array [
         Object {},
