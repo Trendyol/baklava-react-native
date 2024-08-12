@@ -3,6 +3,7 @@
 exports[`Image should render Image correctly 1`] = `
 <View
   accessibilityLabel="image-box"
+  accessible={true}
   style={
     Array [
       Object {

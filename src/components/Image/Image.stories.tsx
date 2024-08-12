@@ -7,9 +7,7 @@ import Image from './Image';
 const ImageMeta: ComponentMeta<typeof Image> = {
   title: 'Image',
   component: Image,
-  argTypes: {
-    onPress: { action: 'pressed the button' },
-  },
+  argTypes: {},
   args: {
     width: 48,
     height: 72,
