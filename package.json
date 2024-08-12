@@ -113,7 +113,7 @@
     "@types/react": "^17"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=20"
   },
   "jest": {
     "preset": "react-native",
