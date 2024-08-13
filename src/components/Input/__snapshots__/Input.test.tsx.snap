@@ -2,6 +2,7 @@
 
 exports[`Input should render disabled input correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -24,6 +25,8 @@ exports[`Input should render disabled input correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -57,6 +60,7 @@ exports[`Input should render disabled input correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -101,6 +105,7 @@ exports[`Input should render disabled input correctly 1`] = `
 
 exports[`Input should render input correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -123,6 +128,8 @@ exports[`Input should render input correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -156,6 +163,7 @@ exports[`Input should render input correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -200,6 +208,7 @@ exports[`Input should render input correctly 1`] = `
 
 exports[`Input should render input with error state and error text correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -222,6 +231,8 @@ exports[`Input should render input with error state and error text correctly 1`]
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -255,6 +266,7 @@ exports[`Input should render input with error state and error text correctly 1`]
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -357,6 +369,7 @@ exports[`Input should render input with error state and error text correctly 1`]
     </RNSVGSvgView>
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -388,6 +401,7 @@ exports[`Input should render input with error state and error text correctly 1`]
 
 exports[`Input should render input with error state correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -410,6 +424,8 @@ exports[`Input should render input with error state correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -443,6 +459,7 @@ exports[`Input should render input with error state correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -549,6 +566,7 @@ exports[`Input should render input with error state correctly 1`] = `
 
 exports[`Input should render input with help text correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -571,6 +589,8 @@ exports[`Input should render input with help text correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -604,6 +624,7 @@ exports[`Input should render input with help text correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -644,6 +665,7 @@ exports[`Input should render input with help text correctly 1`] = `
     />
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -675,6 +697,7 @@ exports[`Input should render input with help text correctly 1`] = `
 
 exports[`Input should render input with icon correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -697,6 +720,8 @@ exports[`Input should render input with icon correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -730,6 +755,7 @@ exports[`Input should render input with icon correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -864,6 +890,7 @@ exports[`Input should render input with icon correctly 1`] = `
 
 exports[`Input should render input with leadingText correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -886,6 +913,8 @@ exports[`Input should render input with leadingText correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -919,6 +948,7 @@ exports[`Input should render input with leadingText correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -936,6 +966,7 @@ exports[`Input should render input with leadingText correctly 1`] = `
     testID="input-box"
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -991,6 +1022,7 @@ exports[`Input should render input with leadingText correctly 1`] = `
 
 exports[`Input should render input with medium size correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -1013,6 +1045,8 @@ exports[`Input should render input with medium size correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -1046,6 +1080,7 @@ exports[`Input should render input with medium size correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -1090,6 +1125,7 @@ exports[`Input should render input with medium size correctly 1`] = `
 
 exports[`Input should render input with small size correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -1112,6 +1148,8 @@ exports[`Input should render input with small size correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -1145,6 +1183,7 @@ exports[`Input should render input with small size correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -1189,6 +1228,7 @@ exports[`Input should render input with small size correctly 1`] = `
 
 exports[`Input should render input with success state and success text correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -1211,6 +1251,8 @@ exports[`Input should render input with success state and success text correctly
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -1244,6 +1286,7 @@ exports[`Input should render input with success state and success text correctly
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -1346,6 +1389,7 @@ exports[`Input should render input with success state and success text correctly
     </RNSVGSvgView>
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -1377,6 +1421,7 @@ exports[`Input should render input with success state and success text correctly
 
 exports[`Input should render input with success state correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -1399,6 +1444,8 @@ exports[`Input should render input with success state correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -1432,6 +1479,7 @@ exports[`Input should render input with success state correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -1538,6 +1586,7 @@ exports[`Input should render input with success state correctly 1`] = `
 
 exports[`Input should render input with trailingText correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -1560,6 +1609,8 @@ exports[`Input should render input with trailingText correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -1593,6 +1644,7 @@ exports[`Input should render input with trailingText correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -1632,6 +1684,7 @@ exports[`Input should render input with trailingText correctly 1`] = `
       testID="input"
     />
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -1666,6 +1719,7 @@ exports[`Input should render input with trailingText correctly 1`] = `
 
 exports[`Input should render label fixed input correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -1675,6 +1729,8 @@ exports[`Input should render label fixed input correctly 1`] = `
   }
 >
   <View
+    accessibilityLabel="fixed-label-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -1725,6 +1781,7 @@ exports[`Input should render label fixed input correctly 1`] = `
   </View>
   <View
     accessibilityLabel="input-box"
+    accessible={true}
     style={
       Array [
         Object {

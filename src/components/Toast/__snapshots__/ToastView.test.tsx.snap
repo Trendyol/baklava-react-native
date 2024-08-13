@@ -46,6 +46,7 @@ exports[`ToastView should render toast correctly 1`] = `
   testID="toast-container"
 >
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -124,6 +125,7 @@ exports[`ToastView should render toast with action correctly 1`] = `
   testID="toast-container"
 >
   <View
+    accessible={false}
     style={
       Array [
         Object {
