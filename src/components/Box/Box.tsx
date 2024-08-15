@@ -34,28 +34,33 @@ const restyleFunctions = composeRestyleFunctions<Theme, RestyleProps>([
 
 export type BoxProps = RNViewProps & RestyleProps;
 
-const Box = ({ testID, accessibilityLabel, accessible, ...rest }: BoxProps) => {
-  const props = useRestyle(restyleFunctions, rest);
+const Box = React.forwardRef(
+  (
+    { testID, accessibilityLabel, accessible, ...rest }: BoxProps,
+    ref: React.ForwardedRef<RNView>,
+  ) => {
+    const props = useRestyle(restyleFunctions, rest);
 
-  const testProps = React.useMemo(() => {
-    const result: RNViewProps = {
-      accessible: false,
-      accessibilityLabel: undefined,
-      testID: undefined,
-    };
+    const testProps = React.useMemo(() => {
+      const result: RNViewProps = {
+        accessible: false,
+        accessibilityLabel: undefined,
+        testID: undefined,
+      };
 
-    if (!(testID || accessibilityLabel)) {
+      if (!(testID || accessibilityLabel)) {
+        return result;
+      }
+
+      result.accessible = accessible ?? true;
+      result.accessibilityLabel = accessibilityLabel ?? testID;
+      result.testID = testID ?? accessibilityLabel;
+
       return result;
-    }
+    }, [testID, accessibilityLabel, accessible]);
 
-    result.accessible = accessible ?? true;
-    result.accessibilityLabel = accessibilityLabel ?? testID;
-    result.testID = testID ?? accessibilityLabel;
-
-    return result;
-  }, [testID, accessibilityLabel, accessible]);
-
-  return <RNView {...props} {...testProps} />;
-};
+    return <RNView {...props} {...testProps} ref={ref} />;
+  },
+);
 
 export default Box;
