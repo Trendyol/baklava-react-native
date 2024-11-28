@@ -175,6 +175,7 @@ export const iconList = [
   'store',
   'suitcase',
   'support',
+  'take-away',
   'ticket',
   'truck',
   'turn-back',
