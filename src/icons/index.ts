@@ -174,6 +174,7 @@ export { default as StorePerformance } from './StorePerformance';
 export { default as Store } from './Store';
 export { default as Suitcase } from './Suitcase';
 export { default as Support } from './Support';
+export { default as TakeAway } from './TakeAway';
 export { default as Ticket } from './Ticket';
 export { default as Truck } from './Truck';
 export { default as TurnBack } from './TurnBack';
