@@ -85,7 +85,7 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
     ref,
   ) => {
     const [focused, setFocused] = React.useState<boolean>(false);
-    const [errorState, setErrorState] = React.useState<boolean>(false);
+    const [errorState, setErrorState] = React.useState<boolean>(error);
     const [length, setLength] = React.useState<number>(0);
 
     const innerRef = useInputRef();
@@ -131,13 +131,7 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
       errorState,
     });
 
-    useEffect(() => {
-      setErrorState(error);
-    }, [error]);
-
-    const handleFocus = async (
-      e: NativeSyntheticEvent<TextInputFocusEventData>,
-    ) => {
+    const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
       if (disabled || !editable) {
         return;
       }
