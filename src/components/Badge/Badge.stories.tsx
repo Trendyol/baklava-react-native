@@ -14,7 +14,7 @@ const BadgeMeta: ComponentMeta<typeof Badge> = {
   argTypes: {
     variant: {
       options: variantList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
     icon: {
       options: iconList,
@@ -22,7 +22,7 @@ const BadgeMeta: ComponentMeta<typeof Badge> = {
     },
     size: {
       options: sizeList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
   },
   args: {

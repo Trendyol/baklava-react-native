@@ -175,11 +175,13 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       }
     }, [error, success, icon]);
 
-    const handleFocus = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
+    const handleFocus = async (
+      e: NativeSyntheticEvent<TextInputFocusEventData>,
+    ) => {
       if (disabled || !editable) {
         return;
       }
-      startAnimation();
+      await startAnimation();
 
       setFocused(true);
       setVariantIconName(null);
@@ -189,13 +191,15 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       rest.onFocus?.(e);
     };
 
-    const handleBlur = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
+    const handleBlur = async (
+      e: NativeSyntheticEvent<TextInputFocusEventData>,
+    ) => {
       if (disabled || !editable) {
         return;
       }
 
       if (!value) {
-        stopAnimation();
+        await stopAnimation();
       }
 
       setFocused(false);

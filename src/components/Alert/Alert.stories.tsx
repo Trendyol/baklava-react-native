@@ -15,7 +15,7 @@ const AlertMeta: ComponentMeta<typeof Alert> = {
   argTypes: {
     variant: {
       options: variantList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
   },
   args: {

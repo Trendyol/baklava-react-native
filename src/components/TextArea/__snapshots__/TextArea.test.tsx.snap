@@ -2,6 +2,7 @@
 
 exports[`TextArea should render TextArea correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -25,6 +26,8 @@ exports[`TextArea should render TextArea correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -57,6 +60,7 @@ exports[`TextArea should render TextArea correctly 1`] = `
   </View>
   <View
     accessibilityLabel="textArea-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -98,6 +102,7 @@ exports[`TextArea should render TextArea correctly 1`] = `
     />
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -108,6 +113,7 @@ exports[`TextArea should render TextArea correctly 1`] = `
     }
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -117,6 +123,7 @@ exports[`TextArea should render TextArea correctly 1`] = `
       }
     />
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -126,6 +133,7 @@ exports[`TextArea should render TextArea correctly 1`] = `
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -159,6 +167,7 @@ exports[`TextArea should render TextArea correctly 1`] = `
 
 exports[`TextArea should render TextArea with error state and error text correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -182,6 +191,8 @@ exports[`TextArea should render TextArea with error state and error text correct
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -214,6 +225,7 @@ exports[`TextArea should render TextArea with error state and error text correct
   </View>
   <View
     accessibilityLabel="textArea-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -255,6 +267,7 @@ exports[`TextArea should render TextArea with error state and error text correct
     />
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -265,6 +278,7 @@ exports[`TextArea should render TextArea with error state and error text correct
     }
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -274,6 +288,7 @@ exports[`TextArea should render TextArea with error state and error text correct
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -301,6 +316,7 @@ exports[`TextArea should render TextArea with error state and error text correct
       </View>
     </View>
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -310,6 +326,7 @@ exports[`TextArea should render TextArea with error state and error text correct
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -343,6 +360,7 @@ exports[`TextArea should render TextArea with error state and error text correct
 
 exports[`TextArea should render TextArea with error state correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -366,6 +384,8 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -398,6 +418,7 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
   </View>
   <View
     accessibilityLabel="textArea-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -439,6 +460,7 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
     />
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -449,6 +471,7 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
     }
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -458,6 +481,7 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
       }
     />
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -467,6 +491,7 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -500,6 +525,7 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
 
 exports[`TextArea should render TextArea with help text correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -523,6 +549,8 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -555,6 +583,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
   </View>
   <View
     accessibilityLabel="textArea-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -596,6 +625,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
     />
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -606,6 +636,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
     }
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -615,6 +646,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -642,6 +674,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
       </View>
     </View>
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -651,6 +684,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -684,6 +718,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
 
 exports[`TextArea should render TextArea with large size correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -707,6 +742,8 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -739,6 +776,7 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
   </View>
   <View
     accessibilityLabel="textArea-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -780,6 +818,7 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
     />
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -790,6 +829,7 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
     }
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -799,6 +839,7 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
       }
     />
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -808,6 +849,7 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -841,6 +883,7 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
 
 exports[`TextArea should render TextArea with medium size correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -864,6 +907,8 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -896,6 +941,7 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
   </View>
   <View
     accessibilityLabel="textArea-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -937,6 +983,7 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
     />
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -947,6 +994,7 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
     }
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -956,6 +1004,7 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
       }
     />
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -965,6 +1014,7 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -998,6 +1048,7 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
 
 exports[`TextArea should render TextArea with small size correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -1021,6 +1072,8 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -1053,6 +1106,7 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
   </View>
   <View
     accessibilityLabel="textArea-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -1094,6 +1148,7 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
     />
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -1104,6 +1159,7 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
     }
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -1113,6 +1169,7 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
       }
     />
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -1122,6 +1179,7 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -1155,6 +1213,7 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
 
 exports[`TextArea should render disabled TextArea correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -1178,6 +1237,8 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
     }
   >
     <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
       style={
         Array [
           Object {
@@ -1210,6 +1271,7 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
   </View>
   <View
     accessibilityLabel="textArea-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -1251,6 +1313,7 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
     />
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -1261,6 +1324,7 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
     }
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -1270,6 +1334,7 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
       }
     />
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -1279,6 +1344,7 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {
@@ -1312,6 +1378,7 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
 
 exports[`TextArea should render label fixed TextArea correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -1322,6 +1389,8 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
   }
 >
   <View
+    accessibilityLabel="fixed-label-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -1353,6 +1422,7 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
   </View>
   <View
     accessibilityLabel="textArea-box"
+    accessible={true}
     style={
       Array [
         Object {
@@ -1394,6 +1464,7 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
     />
   </View>
   <View
+    accessible={false}
     style={
       Array [
         Object {
@@ -1404,6 +1475,7 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
     }
   >
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -1413,6 +1485,7 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
       }
     />
     <View
+      accessible={false}
       style={
         Array [
           Object {
@@ -1422,6 +1495,7 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
       }
     >
       <View
+        accessible={false}
         style={
           Array [
             Object {

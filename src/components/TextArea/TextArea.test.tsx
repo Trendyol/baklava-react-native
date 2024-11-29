@@ -1,6 +1,6 @@
 import React from 'react';
 import { act } from 'react-test-renderer';
-import { fireEvent, render } from '../../test-utils';
+import { fireEvent, render, waitFor } from '../../test-utils';
 import theme from '../../theme';
 import TextArea, { TextInputHandles } from './TextArea';
 
@@ -81,7 +81,7 @@ describe('TextArea', () => {
     expect(toJSON()).toMatchSnapshot();
   });
 
-  test('should focus TextArea correctly', () => {
+  test('should focus TextArea correctly', async () => {
     // when
     const { getByTestId } = render(<TextArea label="label" />);
 
@@ -91,14 +91,14 @@ describe('TextArea', () => {
     );
 
     // when
-    act(() => {
-      fireEvent(getByTestId('textArea'), 'onFocus');
-    });
+    fireEvent(getByTestId('textArea'), 'onFocus');
 
     // then
-    expect(getByTestId('textArea-box').props.style[0].borderColor).toBe(
-      theme.colors.primaryKey,
-    );
+    await waitFor(() => {
+      expect(getByTestId('textArea-box').props.style[0].borderColor).toBe(
+        theme.colors.primaryKey,
+      );
+    });
   });
 
   test('should not focus and blur TextArea when TextArea is disabled', () => {

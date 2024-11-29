@@ -91,5 +91,5 @@ export const getBorderColor = ({
   focused: boolean;
   errorState: boolean;
 }) => {
-  return focused ? 'primaryKey' : errorState ? 'dangerKey' : 'neutralLighter';
+  return errorState ? 'dangerKey' : focused ? 'primaryKey' : 'neutralLighter';
 };

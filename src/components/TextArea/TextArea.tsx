@@ -135,7 +135,7 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
       if (disabled || !editable) {
         return;
       }
-      startAnimation();
+      await startAnimation();
 
       setFocused(true);
       setErrorState(false);
@@ -143,13 +143,15 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
       rest.onFocus?.(e);
     };
 
-    const handleBlur = (e: NativeSyntheticEvent<TextInputFocusEventData>) => {
+    const handleBlur = async (
+      e: NativeSyntheticEvent<TextInputFocusEventData>,
+    ) => {
       if (disabled || !editable) {
         return;
       }
 
       if (!value) {
-        stopAnimation();
+        await stopAnimation();
       }
 
       setFocused(false);

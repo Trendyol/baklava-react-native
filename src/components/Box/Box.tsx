@@ -1,6 +1,66 @@
-import { createBox } from '@ergenekonyigit/restyle';
+import {
+  backgroundColor,
+  backgroundColorShorthand,
+  opacity,
+  visible,
+  layout,
+  spacing,
+  border,
+  shadow,
+  position,
+  useRestyle,
+  spacingShorthand,
+  composeRestyleFunctions,
+  BoxProps as RestyleBoxProps,
+} from '@ergenekonyigit/restyle';
+import React from 'react';
+import { ViewProps as RNViewProps, View as RNView } from 'react-native';
 import { Theme } from '../../theme';
 
-const Box = createBox<Theme>();
+type RestyleProps = RestyleBoxProps<Theme>;
+
+const restyleFunctions = composeRestyleFunctions<Theme, RestyleProps>([
+  backgroundColor,
+  backgroundColorShorthand,
+  opacity,
+  visible,
+  layout,
+  spacing,
+  spacingShorthand,
+  border,
+  shadow,
+  position,
+]);
+
+export type BoxProps = RNViewProps & RestyleProps;
+
+const Box = React.forwardRef(
+  (
+    { testID, accessibilityLabel, accessible, ...rest }: BoxProps,
+    ref: React.ForwardedRef<RNView>,
+  ) => {
+    const props = useRestyle(restyleFunctions, rest);
+
+    const testProps = React.useMemo(() => {
+      const result: RNViewProps = {
+        accessible: false,
+        accessibilityLabel: undefined,
+        testID: undefined,
+      };
+
+      if (!(testID || accessibilityLabel)) {
+        return result;
+      }
+
+      result.accessible = accessible ?? true;
+      result.accessibilityLabel = accessibilityLabel ?? testID;
+      result.testID = testID ?? accessibilityLabel;
+
+      return result;
+    }, [testID, accessibilityLabel, accessible]);
+
+    return <RNView {...props} {...testProps} ref={ref} />;
+  },
+);
 
 export default Box;

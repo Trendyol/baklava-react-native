@@ -2,6 +2,7 @@
 
 exports[`TextArea Counter Text should render counter text correctly 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {
@@ -32,6 +33,7 @@ exports[`TextArea Counter Text should render counter text correctly 1`] = `
 
 exports[`TextArea Counter Text should render null when not has error text 1`] = `
 <View
+  accessible={false}
   style={
     Array [
       Object {

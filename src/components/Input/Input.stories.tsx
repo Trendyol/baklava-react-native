@@ -14,7 +14,7 @@ const InputMeta: ComponentMeta<typeof Input> = {
   argTypes: {
     size: {
       options: sizeList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
     icon: {
       options: iconList,

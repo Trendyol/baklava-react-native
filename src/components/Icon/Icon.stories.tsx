@@ -18,7 +18,7 @@ const IconMeta: ComponentMeta<typeof Icon> = {
     },
     size: {
       options: sizeList,
-      control: { type: 'radios' },
+      control: { type: 'radio' },
     },
   },
   args: {

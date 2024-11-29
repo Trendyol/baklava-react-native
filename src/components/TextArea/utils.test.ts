@@ -317,7 +317,7 @@ describe('TextArea Utils', () => {
       expect(result).toBe('dangerKey');
     });
 
-    test('should return primaryKey when focused true', () => {
+    test('should return primaryKey when focused true and no error', () => {
       // given
       const focused = true;
       const errorState = false;
