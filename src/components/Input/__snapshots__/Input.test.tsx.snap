@@ -54,7 +54,7 @@ exports[`Input should render disabled input correctly 1`] = `
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -157,7 +157,7 @@ exports[`Input should render input correctly 1`] = `
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -260,7 +260,7 @@ exports[`Input should render input with error state and error text correctly 1`]
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -453,7 +453,7 @@ exports[`Input should render input with error state correctly 1`] = `
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -618,7 +618,7 @@ exports[`Input should render input with help text correctly 1`] = `
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -749,7 +749,7 @@ exports[`Input should render input with icon correctly 1`] = `
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -942,7 +942,7 @@ exports[`Input should render input with leadingText correctly 1`] = `
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -1074,7 +1074,7 @@ exports[`Input should render input with medium size correctly 1`] = `
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -1177,7 +1177,7 @@ exports[`Input should render input with small size correctly 1`] = `
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -1280,7 +1280,7 @@ exports[`Input should render input with success state and success text correctly
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -1473,7 +1473,7 @@ exports[`Input should render input with success state correctly 1`] = `
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -1638,7 +1638,7 @@ exports[`Input should render input with trailingText correctly 1`] = `
         }
       >
         label
-         (Optional)
+        
       </Text>
     </View>
   </View>
@@ -1758,25 +1758,6 @@ exports[`Input should render label fixed input correctly 1`] = `
       testID="fixed-label"
     >
       label
-    </Text>
-    <Text
-      accessibilityLabel="optional-fixed-label"
-      accessible={true}
-      style={
-        Array [
-          Object {
-            "color": "#95A1B5",
-            "fontFamily": "Rubik-Regular",
-            "fontSize": 12,
-            "fontWeight": "400",
-            "lineHeight": 14,
-            "marginLeft": 2,
-          },
-        ]
-      }
-      testID="optional-fixed-label"
-    >
-      (Optional)
     </Text>
   </View>
   <View

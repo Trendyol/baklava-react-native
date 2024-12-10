@@ -10,6 +10,7 @@ export const InputLabel = React.memo(
     label,
     labelFixed,
     required,
+    requiredText,
     errorState,
     successState,
     animatedViewProps,
@@ -18,7 +19,8 @@ export const InputLabel = React.memo(
   }: {
     label?: string | null;
     labelFixed?: boolean;
-    required: boolean;
+    required?: boolean;
+    requiredText?: boolean;
     errorState: boolean;
     successState: boolean;
     animatedViewProps: AnimatedViewPropsType;
@@ -40,7 +42,7 @@ export const InputLabel = React.memo(
             testID="fixed-label">
             {label}
           </Text>
-          {!required ? (
+          {!required && requiredText ? (
             <Text
               testID="optional-fixed-label"
               ml="4xs"
@@ -63,7 +65,7 @@ export const InputLabel = React.memo(
               testID="outlined-label-box">
               <Animated.Text {...animatedTextProps}>
                 {label}
-                {!required ? ' (Optional)' : ''}
+                {!required && requiredText ? ' (Optional)' : ''}
               </Animated.Text>
             </Box>
           </Animated.View>
