@@ -7,6 +7,7 @@ describe('Input Label', () => {
   let label: string | null;
   let labelFixed: boolean;
   let required: boolean;
+  let requiredText: boolean;
   let errorState: boolean;
   let successState: boolean;
   let animatedViewProps: AnimatedViewPropsType;
@@ -16,7 +17,8 @@ describe('Input Label', () => {
   beforeEach(() => {
     label = 'Label';
     labelFixed = false;
-    required = true;
+    required = false;
+    requiredText = false;
     errorState = false;
     successState = false;
     animatedViewProps = {};
@@ -53,6 +55,7 @@ describe('Input Label', () => {
         label={label}
         labelFixed={labelFixed}
         required={required}
+        requiredText={requiredText}
         errorState={errorState}
         successState={successState}
         animatedViewProps={animatedViewProps}
@@ -75,6 +78,7 @@ describe('Input Label', () => {
         label={label}
         labelFixed={labelFixed}
         required={required}
+        requiredText={requiredText}
         errorState={errorState}
         successState={successState}
         animatedViewProps={animatedViewProps}
@@ -97,6 +101,7 @@ describe('Input Label', () => {
         label={label}
         labelFixed={labelFixed}
         required={required}
+        requiredText={requiredText}
         errorState={errorState}
         successState={successState}
         animatedViewProps={animatedViewProps}
@@ -120,6 +125,7 @@ describe('Input Label', () => {
         label={label}
         labelFixed={labelFixed}
         required={required}
+        requiredText={requiredText}
         errorState={errorState}
         successState={successState}
         animatedViewProps={animatedViewProps}
