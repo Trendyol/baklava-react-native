@@ -35,6 +35,7 @@ import Text from '../Text/Text';
 type InputProps = React.ComponentProps<typeof Box> &
   TextInputProps & {
     label?: string | null;
+    subLabel?: string | null;
     labelFixed?: boolean;
     placeholder?: string;
     helpText?: string | null;
@@ -80,6 +81,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
     {
       size = 'large',
       label,
+      subLabel,
       labelFixed,
       placeholder,
       helpText,
@@ -115,6 +117,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
 
     const placeholderText = getPlaceholderText({
       label,
+      subLabel,
       labelFixed,
       placeholder,
       required,
@@ -232,6 +235,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       <Box py={'2xs'}>
         <InputLabel
           label={label}
+          subLabel={` ${subLabel}`}
           labelFixed={labelFixed}
           required={required}
           requiredText={requiredText}

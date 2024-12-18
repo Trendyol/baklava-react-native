@@ -58,6 +58,7 @@ describe('Input Utils', () => {
     test('should return placeholder optional when label null, has placeholder and required false', () => {
       // given
       const label = null;
+      const subLabel = null;
       const labelFixed = false;
       const placeholder = 'placeholder';
       const required = false;
@@ -67,6 +68,7 @@ describe('Input Utils', () => {
       // when
       const result = getPlaceholderText({
         label,
+        subLabel,
         labelFixed,
         placeholder,
         required,
@@ -75,7 +77,7 @@ describe('Input Utils', () => {
       });
 
       // then
-      expect(result).toBe('placeholder (Optional)');
+      expect(result).toBe(`placeholder ${subLabel}`);
     });
 
     test('should return empty text when placeholder null and has label', () => {
