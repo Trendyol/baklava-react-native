@@ -45,11 +45,6 @@ export type ToastDataWithId = (ToastDataWithoutAction | ToastDataWithAction) & {
 };
 export type ShowMethodParams = ToastDataWithoutAction | ToastDataWithAction;
 
-export const TostDurations = {
-  SHORT: 7000,
-  LONG: 10000,
-} as const;
-
 export const ToastDurations = {
   SHORT: 7000,
   LONG: 10000,

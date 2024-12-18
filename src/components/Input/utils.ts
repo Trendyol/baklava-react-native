@@ -1,5 +1,6 @@
 export const getPlaceholderText = ({
   label,
+  subLabel,
   labelFixed,
   placeholder,
   required,
@@ -7,6 +8,7 @@ export const getPlaceholderText = ({
   focused,
 }: {
   label?: string | null;
+  subLabel?: string | null;
   labelFixed?: boolean;
   placeholder?: string | null;
   required: boolean;
@@ -33,7 +35,7 @@ export const getPlaceholderText = ({
     if (required) {
       return placeholder;
     } else {
-      return `${placeholder} (Optional)`;
+      return `${placeholder} ${subLabel}`;
     }
   }
 

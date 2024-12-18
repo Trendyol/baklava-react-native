@@ -24,6 +24,7 @@ const InputMeta: ComponentMeta<typeof Input> = {
   args: {
     size: 'large',
     label: 'Label',
+    subLabel: '',
     placeholder: 'Placeholder Text',
     labelFixed: false,
     required: false,
@@ -86,6 +87,7 @@ export const Cases: InputStory = args => {
 
       <Input
         {...args}
+        subLabel={'(Optional)'}
         labelFixed={true}
         icon={null}
         requiredText={true}
@@ -94,6 +96,7 @@ export const Cases: InputStory = args => {
       />
       <Input
         {...args}
+        subLabel={'(Optional)'}
         icon={null}
         requiredText={true}
         size="large"

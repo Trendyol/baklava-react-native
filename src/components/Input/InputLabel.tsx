@@ -8,6 +8,7 @@ import { getLabelColor } from './utils';
 export const InputLabel = React.memo(
   ({
     label,
+    subLabel,
     labelFixed,
     required,
     requiredText,
@@ -18,6 +19,7 @@ export const InputLabel = React.memo(
     inputHeight,
   }: {
     label?: string | null;
+    subLabel?: string | null;
     labelFixed?: boolean;
     required?: boolean;
     requiredText?: boolean;
@@ -48,7 +50,7 @@ export const InputLabel = React.memo(
               ml="4xs"
               variant="subtitle04Regular"
               color="neutralLight">
-              (Optional)
+              {subLabel}
             </Text>
           ) : null}
         </Box>
@@ -65,7 +67,7 @@ export const InputLabel = React.memo(
               testID="outlined-label-box">
               <Animated.Text {...animatedTextProps}>
                 {label}
-                {!required && requiredText ? ' (Optional)' : ''}
+                {subLabel ?? ''}
               </Animated.Text>
             </Box>
           </Animated.View>
