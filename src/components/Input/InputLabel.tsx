@@ -1,17 +1,17 @@
 import React from 'react';
-import { Animated } from 'react-native';
+import { Animated, I18nManager } from 'react-native';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
 import { AnimatedTextPropsType, AnimatedViewPropsType } from './types';
 import { getLabelColor } from './utils';
+
+const isRTL = I18nManager.isRTL;
 
 export const InputLabel = React.memo(
   ({
     label,
     subLabel,
     labelFixed,
-    required,
-    requiredText,
     errorState,
     successState,
     animatedViewProps,
@@ -21,8 +21,6 @@ export const InputLabel = React.memo(
     label?: string | null;
     subLabel?: string | null;
     labelFixed?: boolean;
-    required?: boolean;
-    requiredText?: boolean;
     errorState: boolean;
     successState: boolean;
     animatedViewProps: AnimatedViewPropsType;
@@ -44,9 +42,9 @@ export const InputLabel = React.memo(
             testID="fixed-label">
             {label}
           </Text>
-          {!required && requiredText ? (
+          {subLabel ? (
             <Text
-              testID="optional-fixed-label"
+              testID="subLabel"
               ml="4xs"
               variant="subtitle04Regular"
               color="neutralLight">
@@ -66,8 +64,9 @@ export const InputLabel = React.memo(
               height={inputHeight + 6}
               testID="outlined-label-box">
               <Animated.Text {...animatedTextProps}>
-                {label}
-                {subLabel ?? ''}
+                {isRTL
+                  ? `${subLabel ?? ''}${label}`
+                  : `${label}${subLabel ?? ''}`}
               </Animated.Text>
             </Box>
           </Animated.View>

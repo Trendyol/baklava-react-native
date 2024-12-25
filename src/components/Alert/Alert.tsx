@@ -1,5 +1,5 @@
 import React from 'react';
-import { Pressable, StyleSheet } from 'react-native';
+import { Pressable, StyleSheet, I18nManager } from 'react-native';
 import {
   VariantProps,
   createRestyleComponent,
@@ -34,6 +34,8 @@ const AlertContainer = createRestyleComponent<
   Theme
 >([variantVariant], Box);
 
+const isRTL = I18nManager.isRTL;
+
 const Alert = ({
   variant = 'info',
   icon,
@@ -57,13 +59,21 @@ const Alert = ({
         </Box>
         <Box flex={1}>
           {caption ? (
-            <Text variant="subtitle03Medium" pb="2xs" testID="alert-caption">
+            <Text
+              variant="subtitle03Medium"
+              pb="2xs"
+              testID="alert-caption"
+              textAlign={isRTL ? 'left' : 'right'}>
               {caption}
             </Text>
           ) : null}
 
           {description ? (
-            <Text testID="alert-description">{description}</Text>
+            <Text
+              testID="alert-description"
+              textAlign={isRTL ? 'left' : 'right'}>
+              {description}
+            </Text>
           ) : null}
 
           {children ? (

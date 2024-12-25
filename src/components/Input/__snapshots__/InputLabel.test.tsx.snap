@@ -96,7 +96,6 @@ exports[`Input Label should render outlined label correctly 1`] = `
       style={Object {}}
     >
       Label
-      
     </Text>
   </View>
 </View>
@@ -126,7 +125,6 @@ exports[`Input Label should render outlined label with optional correctly 1`] = 
       style={Object {}}
     >
       Label
-      
     </Text>
   </View>
 </View>

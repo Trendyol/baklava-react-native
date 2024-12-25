@@ -124,6 +124,7 @@ exports[`Alert should render alert correctly 1`] = `
               "fontWeight": "500",
               "lineHeight": 16,
               "paddingBottom": 8,
+              "textAlign": "right",
             },
           ]
         }
@@ -140,6 +141,7 @@ exports[`Alert should render alert correctly 1`] = `
               "color": "#273142",
               "fontFamily": "Rubik-Regular",
               "fontSize": 14,
+              "textAlign": "right",
             },
           ]
         }

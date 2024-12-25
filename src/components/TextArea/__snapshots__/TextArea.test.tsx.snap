@@ -99,6 +99,7 @@ exports[`TextArea should render TextArea correctly 1`] = `
         ]
       }
       testID="textArea"
+      textAlign="left"
     />
   </View>
   <View
@@ -264,6 +265,7 @@ exports[`TextArea should render TextArea with error state and error text correct
         ]
       }
       testID="textArea"
+      textAlign="left"
     />
   </View>
   <View
@@ -457,6 +459,7 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
         ]
       }
       testID="textArea"
+      textAlign="left"
     />
   </View>
   <View
@@ -622,6 +625,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
         ]
       }
       testID="textArea"
+      textAlign="left"
     />
   </View>
   <View
@@ -815,6 +819,7 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
         ]
       }
       testID="textArea"
+      textAlign="left"
     />
   </View>
   <View
@@ -980,6 +985,7 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
         ]
       }
       testID="textArea"
+      textAlign="left"
     />
   </View>
   <View
@@ -1145,6 +1151,7 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
         ]
       }
       testID="textArea"
+      textAlign="left"
     />
   </View>
   <View
@@ -1310,6 +1317,7 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
         ]
       }
       testID="textArea"
+      textAlign="left"
     />
   </View>
   <View
@@ -1461,6 +1469,7 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
         ]
       }
       testID="textArea"
+      textAlign="left"
     />
   </View>
   <View

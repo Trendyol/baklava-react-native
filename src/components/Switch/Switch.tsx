@@ -13,6 +13,7 @@ import {
   Pressable,
   StyleProp,
   ViewStyle,
+  I18nManager,
 } from 'react-native';
 import theme, { Theme } from '../../theme';
 import Text from '../Text/Text';
@@ -139,6 +140,8 @@ const Switch = ({
     return result;
   }, [testID, accessibilityLabel, accessible]);
 
+  const isRTL = I18nManager.isRTL;
+
   return (
     <SwitchContainer
       flexDirection="row"
@@ -161,9 +164,11 @@ const Switch = ({
         onPress={() => handleValueChange(!isEnabled)}
         {...testProps}>
         <AnimatedView
+          flexDirection={isRTL ? 'row-reverse' : 'row'}
           width={theme.spacing['4xl']}
           height={theme.spacing.xl}
-          justifyContent="center"
+          paddingHorizontal="4xs"
+          alignItems="center"
           borderRadius="full"
           testID="switch-outer-view"
           accessibilityLabel="switch-outer-view"
@@ -178,7 +183,6 @@ const Switch = ({
           <AnimatedView
             backgroundColor="white"
             height={theme.spacing.l}
-            marginStart="4xs"
             borderRadius="full"
             testID="switch-inner-view"
             accessibilityLabel="switch-inner-view"
@@ -190,7 +194,9 @@ const Switch = ({
                 {
                   translateX: animatedCirclePosition.interpolate({
                     inputRange: [0, 1],
-                    outputRange: [0, theme.spacing.xl],
+                    outputRange: I18nManager.isRTL
+                      ? [theme.spacing.xl, 0]
+                      : [0, theme.spacing.xl],
                   }),
                 },
                 {
