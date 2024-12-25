@@ -14,7 +14,6 @@ describe('Input Utils', () => {
       const label = null;
       const labelFixed = false;
       const placeholder = null;
-      const required = false;
       const focused = false;
       const value = '';
 
@@ -23,7 +22,6 @@ describe('Input Utils', () => {
         label,
         labelFixed,
         placeholder,
-        required,
         value,
         focused,
       });
@@ -32,12 +30,11 @@ describe('Input Utils', () => {
       expect(result).toBe('');
     });
 
-    test('should return placeholder when label null and has placeholder and required', () => {
+    test('should return placeholder when label null and has placeholder', () => {
       // given
       const label = null;
       const labelFixed = false;
       const placeholder = 'placeholder';
-      const required = true;
       const focused = false;
       const value = '';
 
@@ -46,7 +43,6 @@ describe('Input Utils', () => {
         label,
         labelFixed,
         placeholder,
-        required,
         value,
         focused,
       });
@@ -55,37 +51,11 @@ describe('Input Utils', () => {
       expect(result).toBe('placeholder');
     });
 
-    test('should return placeholder optional when label null, has placeholder and required false', () => {
-      // given
-      const label = null;
-      const subLabel = null;
-      const labelFixed = false;
-      const placeholder = 'placeholder';
-      const required = false;
-      const focused = false;
-      const value = '';
-
-      // when
-      const result = getPlaceholderText({
-        label,
-        subLabel,
-        labelFixed,
-        placeholder,
-        required,
-        value,
-        focused,
-      });
-
-      // then
-      expect(result).toBe(`placeholder ${subLabel}`);
-    });
-
     test('should return empty text when placeholder null and has label', () => {
       // given
       const label = 'label';
       const labelFixed = false;
       const placeholder = null;
-      const required = false;
       const focused = false;
       const value = '';
 
@@ -94,7 +64,6 @@ describe('Input Utils', () => {
         label,
         labelFixed,
         placeholder,
-        required,
         value,
         focused,
       });
@@ -108,7 +77,6 @@ describe('Input Utils', () => {
       const label = 'label';
       const labelFixed = true;
       const placeholder = 'placeholder';
-      const required = false;
       const focused = false;
       const value = '';
 
@@ -117,7 +85,6 @@ describe('Input Utils', () => {
         label,
         labelFixed,
         placeholder,
-        required,
         value,
         focused,
       });
@@ -131,7 +98,6 @@ describe('Input Utils', () => {
       const label = 'label';
       const labelFixed = false;
       const placeholder = 'placeholder';
-      const required = false;
       const focused = false;
       const value = '';
 
@@ -140,7 +106,6 @@ describe('Input Utils', () => {
         label,
         labelFixed,
         placeholder,
-        required,
         value,
         focused,
       });
@@ -154,7 +119,6 @@ describe('Input Utils', () => {
       const label = 'label';
       const labelFixed = false;
       const placeholder = 'placeholder';
-      const required = false;
       const focused = true;
       const value = 'value';
 
@@ -163,7 +127,6 @@ describe('Input Utils', () => {
         label,
         labelFixed,
         placeholder,
-        required,
         value,
         focused,
       });
@@ -177,7 +140,6 @@ describe('Input Utils', () => {
       const label = 'label';
       const labelFixed = false;
       const placeholder = 'placeholder';
-      const required = false;
       const focused = false;
       const value = 'value';
 
@@ -186,7 +148,6 @@ describe('Input Utils', () => {
         label,
         labelFixed,
         placeholder,
-        required,
         value,
         focused,
       });
@@ -200,7 +161,6 @@ describe('Input Utils', () => {
       const label = 'label';
       const labelFixed = false;
       const placeholder = 'placeholder';
-      const required = false;
       const focused = true;
       const value = '';
 
@@ -209,7 +169,6 @@ describe('Input Utils', () => {
         label,
         labelFixed,
         placeholder,
-        required,
         value,
         focused,
       });

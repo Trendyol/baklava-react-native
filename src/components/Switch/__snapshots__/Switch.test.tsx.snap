@@ -44,9 +44,11 @@ exports[`Switch should render switch correctly 1`] = `
       collapsable={false}
       style={
         Object {
+          "alignItems": "center",
           "borderRadius": 999,
+          "flexDirection": "row",
           "height": 24,
-          "justifyContent": "center",
+          "paddingHorizontal": 2,
           "width": 48,
         }
       }
@@ -60,7 +62,6 @@ exports[`Switch should render switch correctly 1`] = `
           Object {
             "borderRadius": 999,
             "height": 20,
-            "marginStart": 2,
             "transform": Array [
               Object {
                 "translateX": 0,

@@ -6,6 +6,7 @@ import {
   TextInput,
   TextInputProps,
   TextInputFocusEventData,
+  I18nManager,
 } from 'react-native';
 import theme, { Theme } from '../../theme';
 import Box from '../Box/Box';
@@ -24,6 +25,8 @@ import {
   spacing,
   VariantProps,
 } from '@ergenekonyigit/restyle';
+
+const isRTL = I18nManager.isRTL;
 
 type TextAreaProps = React.ComponentProps<typeof Box> &
   TextInputProps & {
@@ -237,6 +240,7 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
             editable={!disabled}
             accessibilityLabel={testID}
             testID={testID}
+            textAlign={isRTL ? 'right' : 'left'}
           />
         </Box>
 

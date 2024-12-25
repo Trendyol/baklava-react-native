@@ -5,6 +5,7 @@ import {
   ScrollView,
   StyleSheet,
   TouchableOpacity,
+  I18nManager,
 } from 'react-native';
 import theme from '../../theme';
 import Box from '../Box/Box';
@@ -31,6 +32,8 @@ export type ModalProps = A11yProps &
     justifyContent?: 'flex-start' | 'flex-end' | 'center';
     wrongPressThresholdMs?: number;
   }>;
+
+const isRTL = I18nManager.isRTL;
 
 const Modal = ({
   visible,
@@ -96,7 +99,8 @@ const Modal = ({
           <Text
             variant="subtitle2Medium"
             testID={`${testProps.testID}-title`}
-            numberOfLines={2}>
+            numberOfLines={2}
+            textAlign={isRTL ? 'left' : 'right'}>
             {title}
           </Text>
         </Box>

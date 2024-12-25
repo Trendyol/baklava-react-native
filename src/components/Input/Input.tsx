@@ -6,6 +6,7 @@ import {
   TextInput,
   TextInputProps,
   TextInputFocusEventData,
+  I18nManager,
 } from 'react-native';
 import theme, { Theme } from '../../theme';
 import Box from '../Box/Box';
@@ -35,7 +36,7 @@ import Text from '../Text/Text';
 type InputProps = React.ComponentProps<typeof Box> &
   TextInputProps & {
     label?: string | null;
-    subLabel?: string | null;
+    subLabel?: string;
     labelFixed?: boolean;
     placeholder?: string;
     helpText?: string | null;
@@ -76,12 +77,14 @@ export type TextInputHandles = Pick<
   'focus' | 'clear' | 'blur' | 'isFocused' | 'setNativeProps'
 >;
 
+const isRTL = I18nManager.isRTL;
+
 const Input = forwardRef<TextInputHandles, InputProps>(
   (
     {
       size = 'large',
       label,
-      subLabel,
+      subLabel = '',
       labelFixed,
       placeholder,
       helpText,
@@ -120,7 +123,6 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       subLabel,
       labelFixed,
       placeholder,
-      required,
       value,
       focused,
     });
@@ -235,10 +237,8 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       <Box py={'2xs'}>
         <InputLabel
           label={label}
-          subLabel={` ${subLabel}`}
+          subLabel={` ${subLabel} `}
           labelFixed={labelFixed}
-          required={required}
-          requiredText={requiredText}
           errorState={errorState}
           successState={successState}
           animatedViewProps={animatedViewProps}
@@ -284,6 +284,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
             editable={!disabled}
             accessibilityLabel={testID}
             testID={testID}
+            textAlign={isRTL ? 'right' : 'left'}
           />
           {trailingText ? (
             <Box ml="m" mr={icon ? 'm' : 'none'}>
