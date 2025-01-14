@@ -5,14 +5,14 @@ exports[`Image should render Image correctly 1`] = `
   accessibilityLabel="image-box"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "borderColor": "#AFBBCA",
         "borderWidth": 1,
         "height": 72,
         "width": 48,
       },
-      Object {
+      {
         "borderRadius": 0,
       },
     ]
@@ -22,12 +22,12 @@ exports[`Image should render Image correctly 1`] = `
   <Image
     accessibilityLabel="image"
     source={
-      Object {
+      {
         "uri": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/44/e5/9c/44e59caf-c7f4-90c0-fac6-2b22d3a66a5a/AppIcon-1x_U007emarketing-0-10-0-sRGB-85-220.png/1200x600wa.png",
       }
     }
     style={
-      Object {
+      {
         "borderRadius": 0,
         "height": 70,
         "width": 46,

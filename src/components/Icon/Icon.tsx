@@ -33,6 +33,7 @@ const Icon = ({
   return (
     <TheIcon
       {...rest}
+      hitSlop={rest.hitSlop || undefined}
       title={name}
       fill={iconColor}
       width={iconSize}

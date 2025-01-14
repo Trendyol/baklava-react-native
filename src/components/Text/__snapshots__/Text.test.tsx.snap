@@ -5,8 +5,8 @@ exports[`Text should render text correctly 1`] = `
   accessibilityLabel="text"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "color": "#273142",
         "fontFamily": "Rubik-Regular",
         "fontSize": 14,

@@ -3,8 +3,8 @@
 exports[`AlertIcon should render alert icon correctly 1`] = `
 <RNSVGSvgView
   align="xMidYMid"
-  bbHeight="16"
-  bbWidth="16"
+  bbHeight={16}
+  bbWidth={16}
   fill="#F27A1A"
   focusable={false}
   height={16}
@@ -12,12 +12,12 @@ exports[`AlertIcon should render alert icon correctly 1`] = `
   minX={0}
   minY={0}
   style={
-    Array [
-      Object {
+    [
+      {
         "backgroundColor": "transparent",
         "borderWidth": 0,
       },
-      Object {
+      {
         "flex": 0,
         "height": 16,
         "width": 16,
@@ -33,13 +33,13 @@ exports[`AlertIcon should render alert icon correctly 1`] = `
 >
   <RNSVGGroup
     fill={
-      Object {
+      {
+        "payload": 4294081050,
         "type": 0,
-        "value": 4294081050,
       }
     }
     propList={
-      Array [
+      [
         "fill",
       ]
     }
@@ -48,14 +48,14 @@ exports[`AlertIcon should render alert icon correctly 1`] = `
       clipRule={0}
       d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0Zm-1.5 11.5a1.5 1.5 0 0 1 3 0v5a1.5 1.5 0 0 1-3 0v-5ZM12 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
       fill={
-        Object {
+        {
+          "payload": 4294081050,
           "type": 0,
-          "value": 4294081050,
         }
       }
       fillRule={0}
       propList={
-        Array [
+        [
           "fill",
           "fillRule",
         ]

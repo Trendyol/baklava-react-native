@@ -3,8 +3,20 @@
 exports[`Checkbox should render Checkbox correctly when checked is false 1`] = `
 <View
   accessibilityState={
-    Object {
+    {
+      "busy": undefined,
+      "checked": undefined,
       "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
     }
   }
   accessible={true}
@@ -18,7 +30,7 @@ exports[`Checkbox should render Checkbox correctly when checked is false 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignSelf": "flex-start",
       "flexDirection": "row",
       "opacity": 1,
@@ -29,10 +41,10 @@ exports[`Checkbox should render Checkbox correctly when checked is false 1`] = `
     accessibilityLabel="tickbox"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "alignItems": "center",
             "backgroundColor": "#FFFFFF",
             "borderColor": "#AFBBCA",
@@ -53,8 +65,20 @@ exports[`Checkbox should render Checkbox correctly when checked is false 1`] = `
 exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
 <View
   accessibilityState={
-    Object {
+    {
+      "busy": undefined,
+      "checked": undefined,
       "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
     }
   }
   accessible={true}
@@ -68,7 +92,7 @@ exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignSelf": "flex-start",
       "flexDirection": "row",
       "opacity": 1,
@@ -79,10 +103,10 @@ exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
     accessibilityLabel="tickbox"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "alignItems": "center",
             "backgroundColor": "#F27A1A",
             "borderColor": "#F27A1A",
@@ -99,8 +123,8 @@ exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="10"
-      bbWidth="10"
+      bbHeight={10}
+      bbWidth={10}
       fill="#FFFFFF"
       focusable={false}
       height={10}
@@ -108,12 +132,12 @@ exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 10,
             "width": 10,
@@ -129,13 +153,13 @@ exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294967295,
             "type": 0,
-            "value": 4294967295,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -144,14 +168,14 @@ exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
           clipRule={0}
           d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
           fill={
-            Object {
+            {
+              "payload": 4294967295,
               "type": 0,
-              "value": 4294967295,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -166,8 +190,20 @@ exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
 exports[`Checkbox should render Checkbox correctly when checked is true, indeterminate is false 1`] = `
 <View
   accessibilityState={
-    Object {
+    {
+      "busy": undefined,
+      "checked": undefined,
       "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
     }
   }
   accessible={true}
@@ -181,7 +217,7 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignSelf": "flex-start",
       "flexDirection": "row",
       "opacity": 1,
@@ -192,10 +228,10 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
     accessibilityLabel="tickbox"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "alignItems": "center",
             "backgroundColor": "#F27A1A",
             "borderColor": "#F27A1A",
@@ -212,8 +248,8 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="10"
-      bbWidth="10"
+      bbHeight={10}
+      bbWidth={10}
       fill="#FFFFFF"
       focusable={false}
       height={10}
@@ -221,12 +257,12 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 10,
             "width": 10,
@@ -242,13 +278,13 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294967295,
             "type": 0,
-            "value": 4294967295,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -257,14 +293,14 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
           clipRule={0}
           d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
           fill={
-            Object {
+            {
+              "payload": 4294967295,
               "type": 0,
-              "value": 4294967295,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -279,8 +315,20 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
 exports[`Checkbox should render Checkbox correctly when checked is true, indeterminate is true 1`] = `
 <View
   accessibilityState={
-    Object {
+    {
+      "busy": undefined,
+      "checked": undefined,
       "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
     }
   }
   accessible={true}
@@ -294,7 +342,7 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignSelf": "flex-start",
       "flexDirection": "row",
       "opacity": 1,
@@ -305,10 +353,10 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
     accessibilityLabel="tickbox"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "alignItems": "center",
             "backgroundColor": "#F27A1A",
             "borderColor": "#F27A1A",
@@ -325,8 +373,8 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="8"
-      bbWidth="8"
+      bbHeight={8}
+      bbWidth={8}
       fill="#FFFFFF"
       focusable={false}
       height={8}
@@ -334,12 +382,12 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 8,
             "width": 8,
@@ -355,13 +403,13 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294967295,
             "type": 0,
-            "value": 4294967295,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -370,14 +418,14 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
           clipRule={0}
           d="M0 12a2 2 0 0 1 2-2h20a2 2 0 1 1 0 4H2a2 2 0 0 1-2-2Z"
           fill={
-            Object {
+            {
+              "payload": 4294967295,
               "type": 0,
-              "value": 4294967295,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -392,8 +440,20 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
 exports[`Checkbox should render Checkbox correctly when disable, checked and indeterminate is true 1`] = `
 <View
   accessibilityState={
-    Object {
+    {
+      "busy": undefined,
+      "checked": undefined,
       "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
     }
   }
   accessible={true}
@@ -407,7 +467,7 @@ exports[`Checkbox should render Checkbox correctly when disable, checked and ind
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignSelf": "flex-start",
       "flexDirection": "row",
       "opacity": 1,
@@ -418,10 +478,10 @@ exports[`Checkbox should render Checkbox correctly when disable, checked and ind
     accessibilityLabel="tickbox"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "alignItems": "center",
             "backgroundColor": "#F1F2F7",
             "borderColor": "#F1F2F7",
@@ -438,8 +498,8 @@ exports[`Checkbox should render Checkbox correctly when disable, checked and ind
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="8"
-      bbWidth="8"
+      bbHeight={8}
+      bbWidth={8}
       fill="#95A1B5"
       focusable={false}
       height={8}
@@ -447,12 +507,12 @@ exports[`Checkbox should render Checkbox correctly when disable, checked and ind
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 8,
             "width": 8,
@@ -468,13 +528,13 @@ exports[`Checkbox should render Checkbox correctly when disable, checked and ind
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4287996341,
             "type": 0,
-            "value": 4287996341,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -483,14 +543,14 @@ exports[`Checkbox should render Checkbox correctly when disable, checked and ind
           clipRule={0}
           d="M0 12a2 2 0 0 1 2-2h20a2 2 0 1 1 0 4H2a2 2 0 0 1-2-2Z"
           fill={
-            Object {
+            {
+              "payload": 4287996341,
               "type": 0,
-              "value": 4287996341,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -505,8 +565,20 @@ exports[`Checkbox should render Checkbox correctly when disable, checked and ind
 exports[`Checkbox should render Checkbox correctly when disable, checked is false 1`] = `
 <View
   accessibilityState={
-    Object {
+    {
+      "busy": undefined,
+      "checked": undefined,
       "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
     }
   }
   accessible={true}
@@ -520,7 +592,7 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is fals
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignSelf": "flex-start",
       "flexDirection": "row",
       "opacity": 1,
@@ -531,10 +603,10 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is fals
     accessibilityLabel="tickbox"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "alignItems": "center",
             "backgroundColor": "#F1F2F7",
             "borderColor": "#AFBBCA",
@@ -555,8 +627,20 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is fals
 exports[`Checkbox should render Checkbox correctly when disable, checked is true 1`] = `
 <View
   accessibilityState={
-    Object {
+    {
+      "busy": undefined,
+      "checked": undefined,
       "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
     }
   }
   accessible={true}
@@ -570,7 +654,7 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is true
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Object {
+    {
       "alignSelf": "flex-start",
       "flexDirection": "row",
       "opacity": 1,
@@ -581,10 +665,10 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is true
     accessibilityLabel="tickbox"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "alignItems": "center",
             "backgroundColor": "#F1F2F7",
             "borderColor": "#F1F2F7",
@@ -601,8 +685,8 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is true
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="10"
-      bbWidth="10"
+      bbHeight={10}
+      bbWidth={10}
       fill="#95A1B5"
       focusable={false}
       height={10}
@@ -610,12 +694,12 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is true
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 10,
             "width": 10,
@@ -631,13 +715,13 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is true
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4287996341,
             "type": 0,
-            "value": 4287996341,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -646,14 +730,14 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is true
           clipRule={0}
           d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
           fill={
-            Object {
+            {
+              "payload": 4287996341,
               "type": 0,
-              "value": 4287996341,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]

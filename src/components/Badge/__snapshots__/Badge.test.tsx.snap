@@ -5,15 +5,15 @@ exports[`Badge should render Badge correctly  1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -24,10 +24,10 @@ exports[`Badge should render Badge correctly  1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FEF2E8",
             "bottom": 0,
             "color": "#F27A1A",
@@ -45,15 +45,15 @@ exports[`Badge should render Badge correctly  1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#F27A1A",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -73,15 +73,15 @@ exports[`Badge should render badge correctly when custom badge 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": "green",
       },
     ]
@@ -92,10 +92,10 @@ exports[`Badge should render badge correctly when custom badge 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FEF2E8",
             "bottom": 0,
             "color": "#F27A1A",
@@ -113,15 +113,15 @@ exports[`Badge should render badge correctly when custom badge 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#5794FF",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -141,15 +141,15 @@ exports[`Badge should render badge correctly when default 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -160,10 +160,10 @@ exports[`Badge should render badge correctly when default 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FEF2E8",
             "bottom": 0,
             "color": "#F27A1A",
@@ -181,15 +181,15 @@ exports[`Badge should render badge correctly when default 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#F27A1A",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -209,15 +209,15 @@ exports[`Badge should render badgeBackground correctly when default 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -228,10 +228,10 @@ exports[`Badge should render badgeBackground correctly when default 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FEF2E8",
             "bottom": 0,
             "color": "#F27A1A",
@@ -249,15 +249,15 @@ exports[`Badge should render badgeBackground correctly when default 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#F27A1A",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -277,15 +277,15 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -296,10 +296,10 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FFEEEC",
             "bottom": 0,
             "color": "#FF5043",
@@ -317,8 +317,8 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -329,8 +329,8 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#5794FF"
       focusable={false}
       height={14}
@@ -338,12 +338,12 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -359,13 +359,13 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4283929855,
             "type": 0,
-            "value": 4283929855,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -373,13 +373,13 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
         <RNSVGPath
           d="M5.962 7.374a1.508 1.508 0 0 1 2.133-2.132l10.663 10.663a1.508 1.508 0 0 1-2.132 2.133L5.962 7.374Z"
           fill={
-            Object {
+            {
+              "payload": 4283929855,
               "type": 0,
-              "value": 4283929855,
             }
           }
           propList={
-            Array [
+            [
               "fill",
             ]
           }
@@ -387,13 +387,13 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
         <RNSVGPath
           d="m7.029 6.308 10.663 10.663-14.628 6.827a2.153 2.153 0 0 1-2.862-2.861L7.029 6.307ZM9.364.14a.27.27 0 0 1 .472 0l.678 1.24a.269.269 0 0 0 .107.106l1.239.678a.27.27 0 0 1 0 .472l-1.24.678a.269.269 0 0 0-.106.107L9.836 4.66a.27.27 0 0 1-.472 0l-.678-1.24a.27.27 0 0 0-.107-.106L7.34 2.636a.27.27 0 0 1 0-.472l1.24-.678a.27.27 0 0 0 .106-.107L9.364.14ZM21.364 10.94a.27.27 0 0 1 .472 0l.678 1.24a.269.269 0 0 0 .107.106l1.239.678a.27.27 0 0 1 0 .472l-1.24.678a.269.269 0 0 0-.106.107l-.678 1.239a.27.27 0 0 1-.472 0l-.678-1.24a.269.269 0 0 0-.107-.106l-1.239-.678a.27.27 0 0 1 0-.472l1.24-.678a.269.269 0 0 0 .106-.107l.678-1.239ZM20.164.14a.27.27 0 0 1 .472 0l.678 1.24a.269.269 0 0 0 .107.106l1.239.678a.27.27 0 0 1 0 .472l-1.24.678a.269.269 0 0 0-.106.107l-.678 1.239a.27.27 0 0 1-.472 0l-.678-1.24a.269.269 0 0 0-.107-.106l-1.239-.678a.27.27 0 0 1 0-.472l1.24-.678a.269.269 0 0 0 .106-.107L20.164.14Z"
           fill={
-            Object {
+            {
+              "payload": 4283929855,
               "type": 0,
-              "value": 4283929855,
             }
           }
           propList={
-            Array [
+            [
               "fill",
             ]
           }
@@ -402,14 +402,14 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
           clipRule={0}
           d="M14.4 2.4a1.2 1.2 0 0 1 1.2 1.2c0 4.152-1.722 7.019-2.752 8.049a1.2 1.2 0 1 1-1.697-1.698c.57-.57 2.049-2.823 2.049-6.351a1.2 1.2 0 0 1 1.2-1.2ZM24 7.2A1.2 1.2 0 0 0 22.8 6c-3.384 0-5.474 1.377-6.849 2.751a1.2 1.2 0 1 0 1.697 1.697C18.674 9.423 20.184 8.4 22.8 8.4A1.2 1.2 0 0 0 24 7.2Z"
           fill={
-            Object {
+            {
+              "payload": 4283929855,
               "type": 0,
-              "value": 4283929855,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -422,15 +422,15 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#5794FF",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -450,15 +450,15 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -469,10 +469,10 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FFEEEC",
             "bottom": 0,
             "color": "#FF5043",
@@ -490,8 +490,8 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -502,8 +502,8 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#FF5043"
       focusable={false}
       height={14}
@@ -511,12 +511,12 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -532,13 +532,13 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294922307,
             "type": 0,
-            "value": 4294922307,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -547,14 +547,14 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
           clipRule={0}
           d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0ZM7.293 7.293a1 1 0 0 1 1.414 0L12 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414L13.414 12l3.293 3.293a1 1 0 0 1-1.414 1.414L12 13.414l-3.293 3.293a1 1 0 0 1-1.414-1.414L10.586 12 7.293 8.707a1 1 0 0 1 0-1.414Z"
           fill={
-            Object {
+            {
+              "payload": 4294922307,
               "type": 0,
-              "value": 4294922307,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -567,15 +567,15 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#FF5043",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -595,15 +595,15 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -614,10 +614,10 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#F1F2F7",
             "bottom": 0,
             "color": "#273142",
@@ -635,8 +635,8 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -647,8 +647,8 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#273142"
       focusable={false}
       height={14}
@@ -656,12 +656,12 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -677,13 +677,13 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4280758594,
             "type": 0,
-            "value": 4280758594,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -692,14 +692,14 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
           clipRule={0}
           d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0Zm-1.53 7.067A1 1 0 0 1 11.468 6h1.065a1 1 0 0 1 .997 1.067l-.4 6a1 1 0 0 1-.998.933h-.264a1 1 0 0 1-.998-.933l-.4-6ZM12 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
           fill={
-            Object {
+            {
+              "payload": 4280758594,
               "type": 0,
-              "value": 4280758594,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -712,15 +712,15 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#273142",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -740,15 +740,15 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -759,10 +759,10 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#E7F9EF",
             "bottom": 0,
             "color": "#0BC15C",
@@ -780,8 +780,8 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -792,8 +792,8 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#0BC15C"
       focusable={false}
       height={14}
@@ -801,12 +801,12 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -822,13 +822,13 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4278960476,
             "type": 0,
-            "value": 4278960476,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -837,14 +837,14 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
           clipRule={0}
           d="M24 12c0-6.627-5.373-12-12-12S0 5.373 0 12s5.373 12 12 12 12-5.373 12-12Zm-7.272-1.815a1 1 0 0 0-1.456-1.37l-4.92 5.226-1.624-1.726a1 1 0 0 0-1.456 1.37l2.353 2.5a1 1 0 0 0 1.456 0l5.647-6Z"
           fill={
-            Object {
+            {
+              "payload": 4278960476,
               "type": 0,
-              "value": 4278960476,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -857,15 +857,15 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#0BC15C",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -885,15 +885,15 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -904,10 +904,10 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FFF8E6",
             "bottom": 0,
             "color": "#FFB600",
@@ -925,8 +925,8 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -937,8 +937,8 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#FFB600"
       focusable={false}
       height={14}
@@ -946,12 +946,12 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -967,13 +967,13 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294948352,
             "type": 0,
-            "value": 4294948352,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -982,14 +982,14 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
           clipRule={0}
           d="M14.643 2.544c-1.157-2.059-4.13-2.059-5.286 0L.391 18.506C-.74 20.518.719 23 3.033 23h17.934c2.314 0 3.773-2.482 2.643-4.494L14.643 2.544ZM12 7a1.5 1.5 0 0 0-1.5 1.5v5a1.5 1.5 0 0 0 3 0v-5A1.5 1.5 0 0 0 12 7Zm0 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
           fill={
-            Object {
+            {
+              "payload": 4294948352,
               "type": 0,
-              "value": 4294948352,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -1002,15 +1002,15 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#FFB600",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -1030,15 +1030,15 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -1049,10 +1049,10 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FFEEEC",
             "bottom": 0,
             "color": "#FF5043",
@@ -1070,8 +1070,8 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -1082,8 +1082,8 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#5794FF"
       focusable={false}
       height={14}
@@ -1091,12 +1091,12 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -1112,13 +1112,13 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4283929855,
             "type": 0,
-            "value": 4283929855,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -1127,14 +1127,14 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
           clipRule={0}
           d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0ZM7.293 7.293a1 1 0 0 1 1.414 0L12 10.586l3.293-3.293a1 1 0 1 1 1.414 1.414L13.414 12l3.293 3.293a1 1 0 0 1-1.414 1.414L12 13.414l-3.293 3.293a1 1 0 0 1-1.414-1.414L10.586 12 7.293 8.707a1 1 0 0 1 0-1.414Z"
           fill={
-            Object {
+            {
+              "payload": 4283929855,
               "type": 0,
-              "value": 4283929855,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -1147,15 +1147,15 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#5794FF",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -1175,15 +1175,15 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -1194,10 +1194,10 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FFEEEC",
             "bottom": 0,
             "color": "#FF5043",
@@ -1215,8 +1215,8 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -1227,8 +1227,8 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#FF5043"
       focusable={false}
       height={14}
@@ -1236,12 +1236,12 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -1257,13 +1257,13 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294922307,
             "type": 0,
-            "value": 4294922307,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -1272,14 +1272,14 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
           clipRule={0}
           d="M15.513 20.657c-.953.875-2.214 1.351-3.554 1.343h-.002c-1.338-.011-2.591-.508-3.528-1.397-1.928-1.827-1.902-4.78.058-6.58l3.09-2.844a.697.697 0 0 1 .479-.179c.178.001.35.067.474.186l3.041 2.889c1.928 1.828 1.902 4.78-.058 6.582ZM13.046.393c-.56-.522-1.495-.522-2.076-.02a1.274 1.274 0 0 0-.453 1.05c.013.187.013.37.013.568 0 3.41-.943 5.425-1.463 5.924-.222-.221-.624-.803-.963-1.99-.132-.465-.528-.829-1.037-.954a1.578 1.578 0 0 0-1.425.35L4.199 6.644c-4.27 3.956-4.264 10.402.011 14.363 2.073 1.928 4.835 2.99 7.778 2.992H12c2.947 0 5.715-1.061 7.794-2.99 4.28-3.963 4.273-10.409-.012-14.362L13.046.394Z"
           fill={
-            Object {
+            {
+              "payload": 4294922307,
               "type": 0,
-              "value": 4294922307,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -1292,15 +1292,15 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#FF5043",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -1320,15 +1320,15 @@ exports[`Badge should render badgeText correctly when default 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -1339,10 +1339,10 @@ exports[`Badge should render badgeText correctly when default 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FEF2E8",
             "bottom": 0,
             "color": "#F27A1A",
@@ -1360,8 +1360,8 @@ exports[`Badge should render badgeText correctly when default 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -1372,8 +1372,8 @@ exports[`Badge should render badgeText correctly when default 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#F27A1A"
       focusable={false}
       height={14}
@@ -1381,12 +1381,12 @@ exports[`Badge should render badgeText correctly when default 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -1402,13 +1402,13 @@ exports[`Badge should render badgeText correctly when default 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294081050,
             "type": 0,
-            "value": 4294081050,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -1417,14 +1417,14 @@ exports[`Badge should render badgeText correctly when default 1`] = `
           clipRule={0}
           d="M15.513 20.657c-.953.875-2.214 1.351-3.554 1.343h-.002c-1.338-.011-2.591-.508-3.528-1.397-1.928-1.827-1.902-4.78.058-6.58l3.09-2.844a.697.697 0 0 1 .479-.179c.178.001.35.067.474.186l3.041 2.889c1.928 1.828 1.902 4.78-.058 6.582ZM13.046.393c-.56-.522-1.495-.522-2.076-.02a1.274 1.274 0 0 0-.453 1.05c.013.187.013.37.013.568 0 3.41-.943 5.425-1.463 5.924-.222-.221-.624-.803-.963-1.99-.132-.465-.528-.829-1.037-.954a1.578 1.578 0 0 0-1.425.35L4.199 6.644c-4.27 3.956-4.264 10.402.011 14.363 2.073 1.928 4.835 2.99 7.778 2.992H12c2.947 0 5.715-1.061 7.794-2.99 4.28-3.963 4.273-10.409-.012-14.362L13.046.394Z"
           fill={
-            Object {
+            {
+              "payload": 4294081050,
               "type": 0,
-              "value": 4294081050,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -1437,15 +1437,15 @@ exports[`Badge should render badgeText correctly when default 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#F27A1A",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -1465,15 +1465,15 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -1484,10 +1484,10 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#F1F2F7",
             "bottom": 0,
             "color": "#273142",
@@ -1505,8 +1505,8 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -1517,8 +1517,8 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#273142"
       focusable={false}
       height={14}
@@ -1526,12 +1526,12 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -1547,13 +1547,13 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4280758594,
             "type": 0,
-            "value": 4280758594,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -1562,14 +1562,14 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
           clipRule={0}
           d="M15.513 20.657c-.953.875-2.214 1.351-3.554 1.343h-.002c-1.338-.011-2.591-.508-3.528-1.397-1.928-1.827-1.902-4.78.058-6.58l3.09-2.844a.697.697 0 0 1 .479-.179c.178.001.35.067.474.186l3.041 2.889c1.928 1.828 1.902 4.78-.058 6.582ZM13.046.393c-.56-.522-1.495-.522-2.076-.02a1.274 1.274 0 0 0-.453 1.05c.013.187.013.37.013.568 0 3.41-.943 5.425-1.463 5.924-.222-.221-.624-.803-.963-1.99-.132-.465-.528-.829-1.037-.954a1.578 1.578 0 0 0-1.425.35L4.199 6.644c-4.27 3.956-4.264 10.402.011 14.363 2.073 1.928 4.835 2.99 7.778 2.992H12c2.947 0 5.715-1.061 7.794-2.99 4.28-3.963 4.273-10.409-.012-14.362L13.046.394Z"
           fill={
-            Object {
+            {
+              "payload": 4280758594,
               "type": 0,
-              "value": 4280758594,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -1582,15 +1582,15 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#273142",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -1610,15 +1610,15 @@ exports[`Badge should render badgeText correctly when success 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -1629,10 +1629,10 @@ exports[`Badge should render badgeText correctly when success 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#E7F9EF",
             "bottom": 0,
             "color": "#0BC15C",
@@ -1650,8 +1650,8 @@ exports[`Badge should render badgeText correctly when success 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -1662,8 +1662,8 @@ exports[`Badge should render badgeText correctly when success 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#0BC15C"
       focusable={false}
       height={14}
@@ -1671,12 +1671,12 @@ exports[`Badge should render badgeText correctly when success 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -1692,13 +1692,13 @@ exports[`Badge should render badgeText correctly when success 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4278960476,
             "type": 0,
-            "value": 4278960476,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -1707,14 +1707,14 @@ exports[`Badge should render badgeText correctly when success 1`] = `
           clipRule={0}
           d="M15.513 20.657c-.953.875-2.214 1.351-3.554 1.343h-.002c-1.338-.011-2.591-.508-3.528-1.397-1.928-1.827-1.902-4.78.058-6.58l3.09-2.844a.697.697 0 0 1 .479-.179c.178.001.35.067.474.186l3.041 2.889c1.928 1.828 1.902 4.78-.058 6.582ZM13.046.393c-.56-.522-1.495-.522-2.076-.02a1.274 1.274 0 0 0-.453 1.05c.013.187.013.37.013.568 0 3.41-.943 5.425-1.463 5.924-.222-.221-.624-.803-.963-1.99-.132-.465-.528-.829-1.037-.954a1.578 1.578 0 0 0-1.425.35L4.199 6.644c-4.27 3.956-4.264 10.402.011 14.363 2.073 1.928 4.835 2.99 7.778 2.992H12c2.947 0 5.715-1.061 7.794-2.99 4.28-3.963 4.273-10.409-.012-14.362L13.046.394Z"
           fill={
-            Object {
+            {
+              "payload": 4278960476,
               "type": 0,
-              "value": 4278960476,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -1727,15 +1727,15 @@ exports[`Badge should render badgeText correctly when success 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#0BC15C",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -1755,15 +1755,15 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -1774,10 +1774,10 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FFF8E6",
             "bottom": 0,
             "color": "#FFB600",
@@ -1795,8 +1795,8 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -1807,8 +1807,8 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#FFB600"
       focusable={false}
       height={14}
@@ -1816,12 +1816,12 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -1837,13 +1837,13 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294948352,
             "type": 0,
-            "value": 4294948352,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -1852,14 +1852,14 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
           clipRule={0}
           d="M15.513 20.657c-.953.875-2.214 1.351-3.554 1.343h-.002c-1.338-.011-2.591-.508-3.528-1.397-1.928-1.827-1.902-4.78.058-6.58l3.09-2.844a.697.697 0 0 1 .479-.179c.178.001.35.067.474.186l3.041 2.889c1.928 1.828 1.902 4.78-.058 6.582ZM13.046.393c-.56-.522-1.495-.522-2.076-.02a1.274 1.274 0 0 0-.453 1.05c.013.187.013.37.013.568 0 3.41-.943 5.425-1.463 5.924-.222-.221-.624-.803-.963-1.99-.132-.465-.528-.829-1.037-.954a1.578 1.578 0 0 0-1.425.35L4.199 6.644c-4.27 3.956-4.264 10.402.011 14.363 2.073 1.928 4.835 2.99 7.778 2.992H12c2.947 0 5.715-1.061 7.794-2.99 4.28-3.963 4.273-10.409-.012-14.362L13.046.394Z"
           fill={
-            Object {
+            {
+              "payload": 4294948352,
               "type": 0,
-              "value": 4294948352,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -1872,15 +1872,15 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#FFB600",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -1900,15 +1900,15 @@ exports[`Badge should render correctly only icon badge 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -1919,8 +1919,8 @@ exports[`Badge should render correctly only icon badge 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 4,
           "paddingVertical": 4,
@@ -1931,8 +1931,8 @@ exports[`Badge should render correctly only icon badge 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#8C4EFF"
       focusable={false}
       height={14}
@@ -1940,12 +1940,12 @@ exports[`Badge should render correctly only icon badge 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -1961,13 +1961,13 @@ exports[`Badge should render correctly only icon badge 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4287385343,
             "type": 0,
-            "value": 4287385343,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -1975,13 +1975,13 @@ exports[`Badge should render correctly only icon badge 1`] = `
         <RNSVGPath
           d="M5.962 7.374a1.508 1.508 0 0 1 2.133-2.132l10.663 10.663a1.508 1.508 0 0 1-2.132 2.133L5.962 7.374Z"
           fill={
-            Object {
+            {
+              "payload": 4287385343,
               "type": 0,
-              "value": 4287385343,
             }
           }
           propList={
-            Array [
+            [
               "fill",
             ]
           }
@@ -1989,13 +1989,13 @@ exports[`Badge should render correctly only icon badge 1`] = `
         <RNSVGPath
           d="m7.029 6.308 10.663 10.663-14.628 6.827a2.153 2.153 0 0 1-2.862-2.861L7.029 6.307ZM9.364.14a.27.27 0 0 1 .472 0l.678 1.24a.269.269 0 0 0 .107.106l1.239.678a.27.27 0 0 1 0 .472l-1.24.678a.269.269 0 0 0-.106.107L9.836 4.66a.27.27 0 0 1-.472 0l-.678-1.24a.27.27 0 0 0-.107-.106L7.34 2.636a.27.27 0 0 1 0-.472l1.24-.678a.27.27 0 0 0 .106-.107L9.364.14ZM21.364 10.94a.27.27 0 0 1 .472 0l.678 1.24a.269.269 0 0 0 .107.106l1.239.678a.27.27 0 0 1 0 .472l-1.24.678a.269.269 0 0 0-.106.107l-.678 1.239a.27.27 0 0 1-.472 0l-.678-1.24a.269.269 0 0 0-.107-.106l-1.239-.678a.27.27 0 0 1 0-.472l1.24-.678a.269.269 0 0 0 .106-.107l.678-1.239ZM20.164.14a.27.27 0 0 1 .472 0l.678 1.24a.269.269 0 0 0 .107.106l1.239.678a.27.27 0 0 1 0 .472l-1.24.678a.269.269 0 0 0-.106.107l-.678 1.239a.27.27 0 0 1-.472 0l-.678-1.24a.269.269 0 0 0-.107-.106l-1.239-.678a.27.27 0 0 1 0-.472l1.24-.678a.269.269 0 0 0 .106-.107L20.164.14Z"
           fill={
-            Object {
+            {
+              "payload": 4287385343,
               "type": 0,
-              "value": 4287385343,
             }
           }
           propList={
-            Array [
+            [
               "fill",
             ]
           }
@@ -2004,14 +2004,14 @@ exports[`Badge should render correctly only icon badge 1`] = `
           clipRule={0}
           d="M14.4 2.4a1.2 1.2 0 0 1 1.2 1.2c0 4.152-1.722 7.019-2.752 8.049a1.2 1.2 0 1 1-1.697-1.698c.57-.57 2.049-2.823 2.049-6.351a1.2 1.2 0 0 1 1.2-1.2ZM24 7.2A1.2 1.2 0 0 0 22.8 6c-3.384 0-5.474 1.377-6.849 2.751a1.2 1.2 0 1 0 1.697 1.697C18.674 9.423 20.184 8.4 22.8 8.4A1.2 1.2 0 0 0 24 7.2Z"
           fill={
-            Object {
+            {
+              "payload": 4287385343,
               "type": 0,
-              "value": 4287385343,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -2028,15 +2028,15 @@ exports[`Badge should render correctly only text badge 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -2047,10 +2047,10 @@ exports[`Badge should render correctly only text badge 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FFF8E6",
             "bottom": 0,
             "color": "#FFB600",
@@ -2068,8 +2068,8 @@ exports[`Badge should render correctly only text badge 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -2080,8 +2080,8 @@ exports[`Badge should render correctly only text badge 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#FFB600"
       focusable={false}
       height={14}
@@ -2089,12 +2089,12 @@ exports[`Badge should render correctly only text badge 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -2110,13 +2110,13 @@ exports[`Badge should render correctly only text badge 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294948352,
             "type": 0,
-            "value": 4294948352,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -2125,14 +2125,14 @@ exports[`Badge should render correctly only text badge 1`] = `
           clipRule={0}
           d="M14.643 2.544c-1.157-2.059-4.13-2.059-5.286 0L.391 18.506C-.74 20.518.719 23 3.033 23h17.934c2.314 0 3.773-2.482 2.643-4.494L14.643 2.544ZM12 7a1.5 1.5 0 0 0-1.5 1.5v5a1.5 1.5 0 0 0 3 0v-5A1.5 1.5 0 0 0 12 7Zm0 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
           fill={
-            Object {
+            {
+              "payload": 4294948352,
               "type": 0,
-              "value": 4294948352,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -2145,15 +2145,15 @@ exports[`Badge should render correctly only text badge 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#FFB600",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -2173,15 +2173,15 @@ exports[`Badge should render fontSize correctly when large 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -2192,10 +2192,10 @@ exports[`Badge should render fontSize correctly when large 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FFF8E6",
             "bottom": 0,
             "color": "#FFB600",
@@ -2213,8 +2213,8 @@ exports[`Badge should render fontSize correctly when large 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -2225,8 +2225,8 @@ exports[`Badge should render fontSize correctly when large 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#FFB600"
       focusable={false}
       height={14}
@@ -2234,12 +2234,12 @@ exports[`Badge should render fontSize correctly when large 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -2255,13 +2255,13 @@ exports[`Badge should render fontSize correctly when large 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294948352,
             "type": 0,
-            "value": 4294948352,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -2270,14 +2270,14 @@ exports[`Badge should render fontSize correctly when large 1`] = `
           clipRule={0}
           d="M14.643 2.544c-1.157-2.059-4.13-2.059-5.286 0L.391 18.506C-.74 20.518.719 23 3.033 23h17.934c2.314 0 3.773-2.482 2.643-4.494L14.643 2.544ZM12 7a1.5 1.5 0 0 0-1.5 1.5v5a1.5 1.5 0 0 0 3 0v-5A1.5 1.5 0 0 0 12 7Zm0 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
           fill={
-            Object {
+            {
+              "payload": 4294948352,
               "type": 0,
-              "value": 4294948352,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -2290,15 +2290,15 @@ exports[`Badge should render fontSize correctly when large 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#FFB600",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 14,
             "paddingHorizontal": 8,
             "paddingVertical": 8,
@@ -2318,15 +2318,15 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -2337,10 +2337,10 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FFF8E6",
             "bottom": 0,
             "color": "#FFB600",
@@ -2358,8 +2358,8 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -2370,8 +2370,8 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#FFB600"
       focusable={false}
       height={14}
@@ -2379,12 +2379,12 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -2400,13 +2400,13 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294948352,
             "type": 0,
-            "value": 4294948352,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -2415,14 +2415,14 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
           clipRule={0}
           d="M14.643 2.544c-1.157-2.059-4.13-2.059-5.286 0L.391 18.506C-.74 20.518.719 23 3.033 23h17.934c2.314 0 3.773-2.482 2.643-4.494L14.643 2.544ZM12 7a1.5 1.5 0 0 0-1.5 1.5v5a1.5 1.5 0 0 0 3 0v-5A1.5 1.5 0 0 0 12 7Zm0 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
           fill={
-            Object {
+            {
+              "payload": 4294948352,
               "type": 0,
-              "value": 4294948352,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -2435,15 +2435,15 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#FFB600",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 12,
             "paddingHorizontal": 4,
             "paddingVertical": 4,
@@ -2463,15 +2463,15 @@ exports[`Badge should render fontSize correctly when small 1`] = `
   accessibilityLabel="badge"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "alignItems": "center",
         "alignSelf": "flex-start",
         "borderRadius": 2,
         "flexDirection": "row",
         "justifyContent": "center",
       },
-      Object {
+      {
         "backgroundColor": undefined,
       },
     ]
@@ -2482,10 +2482,10 @@ exports[`Badge should render fontSize correctly when small 1`] = `
     accessibilityLabel="badgeBackground"
     accessible={true}
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "backgroundColor": "#FFF8E6",
             "bottom": 0,
             "color": "#FFB600",
@@ -2503,8 +2503,8 @@ exports[`Badge should render fontSize correctly when small 1`] = `
     accessibilityLabel="badgeIconBox"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "paddingLeft": 4,
           "paddingRight": 0,
           "paddingVertical": 4,
@@ -2515,8 +2515,8 @@ exports[`Badge should render fontSize correctly when small 1`] = `
   >
     <RNSVGSvgView
       align="xMidYMid"
-      bbHeight="14"
-      bbWidth="14"
+      bbHeight={14}
+      bbWidth={14}
       fill="#FFB600"
       focusable={false}
       height={14}
@@ -2524,12 +2524,12 @@ exports[`Badge should render fontSize correctly when small 1`] = `
       minX={0}
       minY={0}
       style={
-        Array [
-          Object {
+        [
+          {
             "backgroundColor": "transparent",
             "borderWidth": 0,
           },
-          Object {
+          {
             "flex": 0,
             "height": 14,
             "width": 14,
@@ -2545,13 +2545,13 @@ exports[`Badge should render fontSize correctly when small 1`] = `
     >
       <RNSVGGroup
         fill={
-          Object {
+          {
+            "payload": 4294948352,
             "type": 0,
-            "value": 4294948352,
           }
         }
         propList={
-          Array [
+          [
             "fill",
           ]
         }
@@ -2560,14 +2560,14 @@ exports[`Badge should render fontSize correctly when small 1`] = `
           clipRule={0}
           d="M14.643 2.544c-1.157-2.059-4.13-2.059-5.286 0L.391 18.506C-.74 20.518.719 23 3.033 23h17.934c2.314 0 3.773-2.482 2.643-4.494L14.643 2.544ZM12 7a1.5 1.5 0 0 0-1.5 1.5v5a1.5 1.5 0 0 0 3 0v-5A1.5 1.5 0 0 0 12 7Zm0 9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
           fill={
-            Object {
+            {
+              "payload": 4294948352,
               "type": 0,
-              "value": 4294948352,
             }
           }
           fillRule={0}
           propList={
-            Array [
+            [
               "fill",
               "fillRule",
             ]
@@ -2580,15 +2580,15 @@ exports[`Badge should render fontSize correctly when small 1`] = `
     accessibilityLabel="badgeText"
     accessible={true}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#FFB600",
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
         },
-        Array [
-          Object {
+        [
+          {
             "fontSize": 10,
             "paddingHorizontal": 4,
             "paddingVertical": 2,

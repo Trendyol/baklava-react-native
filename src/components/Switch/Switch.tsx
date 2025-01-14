@@ -172,14 +172,15 @@ const Switch = ({
           borderRadius="full"
           testID="switch-outer-view"
           accessibilityLabel="switch-outer-view"
-          //@ts-ignore
+          // @ts-ignore
           backgroundColor={animatedCirclePosition.interpolate({
             inputRange: [0, 1],
             outputRange: [
-              offColor ? offColor : theme.colors.neutralLighter,
-              onColor ? onColor : theme.colors.primaryKey,
+              offColor ?? theme.colors.neutralLighter,
+              onColor ?? theme.colors.primaryKey,
             ],
           })}>
+          {/* @ts-ignore  */}
           <AnimatedView
             backgroundColor="white"
             height={theme.spacing.l}

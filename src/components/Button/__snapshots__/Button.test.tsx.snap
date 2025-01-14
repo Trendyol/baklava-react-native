@@ -3,8 +3,20 @@
 exports[`Button should render button correctly 1`] = `
 <View
   accessibilityState={
-    Object {
+    {
+      "busy": undefined,
+      "checked": undefined,
       "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
     }
   }
   accessible={true}
@@ -20,8 +32,8 @@ exports[`Button should render button correctly 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   style={
-    Array [
-      Object {},
+    [
+      {},
     ]
   }
 >
@@ -29,10 +41,10 @@ exports[`Button should render button correctly 1`] = `
     accessible={false}
     color="white"
     style={
-      Array [
-        Object {},
-        Array [
-          Object {
+      [
+        {},
+        [
+          {
             "alignItems": "center",
             "alignSelf": "flex-start",
             "backgroundColor": "#F27A1A",
@@ -52,8 +64,8 @@ exports[`Button should render button correctly 1`] = `
       accessibilityLabel="button-text"
       accessible={true}
       style={
-        Array [
-          Object {
+        [
+          {
             "color": "#FFFFFF",
             "fontFamily": "Rubik-Medium",
             "fontSize": 14,

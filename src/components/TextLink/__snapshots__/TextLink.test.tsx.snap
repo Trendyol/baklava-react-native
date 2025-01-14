@@ -5,8 +5,8 @@ exports[`TextLink should render textLink correctly 1`] = `
   accessibilityLabel="text"
   accessible={true}
   style={
-    Array [
-      Object {
+    [
+      {
         "color": "#273142",
         "fontFamily": "Rubik-Regular",
         "fontSize": 14,

@@ -26,6 +26,7 @@ describe('test useKeyboard hook', () => {
     expect(result.current.isKeyboardVisible).toBe(false);
     expect(result.current.keyboardHeight).toBe(0);
     act(() => {
+      // @ts-ignore
       RCTDeviceEventEmitter.emit('keyboardDidShow', {
         endCoordinates: {
           height: 425,
@@ -41,6 +42,7 @@ describe('test useKeyboard hook', () => {
     expect(result.current.isKeyboardVisible).toBe(false);
     expect(result.current.keyboardHeight).toBe(0);
     act(() => {
+      // @ts-ignore
       RCTDeviceEventEmitter.emit('keyboardDidShow', {
         endCoordinates: {
           height: 425,
@@ -50,6 +52,7 @@ describe('test useKeyboard hook', () => {
     expect(result.current.isKeyboardVisible).toBe(true);
     expect(result.current.keyboardHeight).toBe(425);
     act(() => {
+      // @ts-ignore
       RCTDeviceEventEmitter.emit('keyboardDidHide');
     });
     expect(result.current.isKeyboardVisible).toBe(false);

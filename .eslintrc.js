@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  extends: ['@react-native-community', 'eslint:recommended'],
+  extends: ['@react-native', 'eslint:recommended'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -19,5 +19,6 @@ module.exports = {
     'ios/**',
     'android/**',
     'node_modules/**',
+    'coverage/**',
   ],
 };

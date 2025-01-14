@@ -4,10 +4,10 @@ exports[`Switch should render switch correctly 1`] = `
 <View
   accessible={false}
   style={
-    Array [
-      Object {},
-      Array [
-        Object {
+    [
+      {},
+      [
+        {
           "alignItems": "center",
           "flexDirection": "row",
         },
@@ -17,6 +17,23 @@ exports[`Switch should render switch correctly 1`] = `
 >
   <View
     accessibilityLabel="switch"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -30,8 +47,8 @@ exports[`Switch should render switch correctly 1`] = `
     onResponderTerminationRequest={[Function]}
     onStartShouldSetResponder={[Function]}
     style={
-      Array [
-        Object {
+      [
+        {
           "opacity": 1,
         },
       ]
@@ -43,7 +60,7 @@ exports[`Switch should render switch correctly 1`] = `
       backgroundColor="rgba(175, 187, 202, 1)"
       collapsable={false}
       style={
-        Object {
+        {
           "alignItems": "center",
           "borderRadius": 999,
           "flexDirection": "row",
@@ -59,14 +76,14 @@ exports[`Switch should render switch correctly 1`] = `
         backgroundColor="white"
         collapsable={false}
         style={
-          Object {
+          {
             "borderRadius": 999,
             "height": 20,
-            "transform": Array [
-              Object {
+            "transform": [
+              {
                 "translateX": 0,
               },
-              Object {
+              {
                 "translateX": 0,
               },
             ],

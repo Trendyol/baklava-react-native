@@ -4,8 +4,8 @@ exports[`TextArea Help Text should render help text correctly 1`] = `
 <View
   accessible={false}
   style={
-    Array [
-      Object {
+    [
+      {
         "marginTop": 4,
       },
     ]
@@ -14,8 +14,8 @@ exports[`TextArea Help Text should render help text correctly 1`] = `
   <Text
     accessible={false}
     style={
-      Array [
-        Object {
+      [
+        {
           "color": "#95A1B5",
           "fontFamily": "Rubik-Regular",
           "fontSize": 12,

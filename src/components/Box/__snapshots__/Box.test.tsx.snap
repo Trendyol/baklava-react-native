@@ -4,8 +4,8 @@ exports[`Box should render box correctly 1`] = `
 <View
   accessible={false}
   style={
-    Array [
-      Object {},
+    [
+      {},
     ]
   }
 />

@@ -4,8 +4,8 @@ exports[`Spinner should render Spinner correctly 1`] = `
 <RNSVGSvgView
   accessible={false}
   align="xMidYMid"
-  bbHeight="24"
-  bbWidth="24"
+  bbHeight={24}
+  bbWidth={24}
   collapsable={false}
   fill="#FFFFFF"
   focusable={false}
@@ -14,22 +14,29 @@ exports[`Spinner should render Spinner correctly 1`] = `
   minX={0}
   minY={0}
   style={
-    Array [
-      Object {
+    [
+      {
         "backgroundColor": "transparent",
         "borderWidth": 0,
       },
-      Object {
-        "transform": Array [
-          Object {
+      {
+        "transform": [
+          {
             "rotate": "0deg",
           },
         ],
       },
-      Object {
+      {
         "flex": 0,
         "height": 24,
         "width": 24,
+      },
+    ]
+  }
+  transform={
+    [
+      {
+        "rotate": "0deg",
       },
     ]
   }
@@ -40,23 +47,13 @@ exports[`Spinner should render Spinner correctly 1`] = `
 >
   <RNSVGGroup
     fill={
-      Object {
+      {
+        "payload": 4294967295,
         "type": 0,
-        "value": 4294967295,
       }
     }
-    matrix={
-      Array [
-        1,
-        0,
-        0,
-        1,
-        0,
-        0,
-      ]
-    }
     propList={
-      Array [
+      [
         "fill",
       ]
     }
@@ -64,14 +61,14 @@ exports[`Spinner should render Spinner correctly 1`] = `
     <RNSVGPath
       d="M48 24c0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0s24 10.745 24 24zM7.2 24c0 9.278 7.522 16.8 16.8 16.8S40.8 33.278 40.8 24 33.278 7.2 24 7.2 7.2 14.722 7.2 24z"
       fill={
-        Object {
+        {
+          "payload": 4294081050,
           "type": 0,
-          "value": 4294081050,
         }
       }
       opacity={0.3}
       propList={
-        Array [
+        [
           "fill",
         ]
       }
@@ -79,13 +76,13 @@ exports[`Spinner should render Spinner correctly 1`] = `
     <RNSVGPath
       d="M44.4 24c1.988 0 3.628-1.62 3.33-3.587A23.999 23.999 0 0027.587.27C25.62-.028 24 1.612 24 3.6s1.63 3.561 3.573 3.984a16.8 16.8 0 0112.843 12.843C40.839 22.37 42.412 24 44.4 24z"
       fill={
-        Object {
+        {
+          "payload": 4294081050,
           "type": 0,
-          "value": 4294081050,
         }
       }
       propList={
-        Array [
+        [
           "fill",
         ]
       }
