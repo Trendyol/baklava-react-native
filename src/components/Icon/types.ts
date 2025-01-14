@@ -1,3 +1,3 @@
 import { iconList } from './list';
 
-export type IconNameType = typeof iconList[number];
+export type IconNameType = (typeof iconList)[number];
