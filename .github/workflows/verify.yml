@@ -21,7 +21,7 @@ jobs:
       - name: Run tests
         run: npm run test
       - name: Create coverage artifact
-        uses: actions/upload-artifact@master
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-output
           path: coverage/

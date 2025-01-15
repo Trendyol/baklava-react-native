@@ -36,7 +36,7 @@ jobs:
       - name: Run build docs
         run: NODE_OPTIONS=--openssl-legacy-provider npm run build-storybook-docs
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: './storybook-static'
       - name: Deploy to GitHub Pages
