@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '../Box/Box';
 import ToastView from './ToastView';
 import { ShowMethodParams, ToastDataWithId, ToastDurations } from './types';
-import { uuid } from './utils';
+import { uuid } from '../../utils/uuid';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { useKeyboard } from './hooks';
 import theme from '../../theme';

@@ -27,7 +27,8 @@ describe('Button', () => {
   test('should render given kind and color correctly', () => {
     // when
     const { getByTestId } = render(<Button testID="button" kind="success" />);
-    const buttonComponent = getByTestId('button').children[0];
+    const buttonComponent = getByTestId('button')
+      .children[0] as ReactTestInstance;
 
     // then
     expect(buttonComponent.props.kind).toBe('success');
@@ -40,7 +41,8 @@ describe('Button', () => {
     const { getByTestId } = render(
       <Button testID="button" size="l" label="test" />,
     );
-    const buttonComponent = getByTestId('button').children[0];
+    const buttonComponent = getByTestId('button')
+      .children[0] as ReactTestInstance;
 
     // then
     const textComponent = buttonComponent.props
@@ -132,7 +134,8 @@ describe('Button', () => {
     const { getByTestId } = render(
       <Button testID="button" label="testtesttest" />,
     );
-    const buttonComponent = getByTestId('button').children[0];
+    const buttonComponent = getByTestId('button')
+      .children[0] as ReactTestInstance;
 
     // then
     expect(buttonComponent.props.variant).toBe('primary');
@@ -182,7 +185,8 @@ describe('Button', () => {
         filled={true}
       />,
     );
-    const buttonComponent = getByTestId('button').children[0];
+    const buttonComponent = getByTestId('button')
+      .children[0] as ReactTestInstance;
 
     // then
     expect(buttonComponent.props.alignSelf).toBe('stretch');

@@ -1,9 +1,4 @@
-import {
-  capitalizeFirstLetter,
-  getFirstNChar,
-  pausableTimer,
-  uuid,
-} from './utils';
+import { capitalizeFirstLetter, getFirstNChar, pausableTimer } from './utils';
 
 describe('Toast Utils', () => {
   describe('capitalizeFirstLetter', () => {
@@ -138,19 +133,6 @@ describe('Toast Utils', () => {
 
       // then
       expect(mockCallback).not.toBeCalled();
-    });
-  });
-
-  describe('uuid', () => {
-    test('Should return a N-character string', () => {
-      // given
-      const n = 1 + Math.floor(Math.random() * 32);
-
-      // when
-      const result = uuid(n);
-
-      // then
-      expect(result.length).toBe(n);
     });
   });
 });

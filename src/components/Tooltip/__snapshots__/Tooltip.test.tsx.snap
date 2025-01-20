@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip should render bottom correctly 1`] = `
+<View
+  accessibilityLabel="tooltip-trigger-test"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "opacity": 1,
+    }
+  }
+  testID="tooltip-trigger-test"
+>
+  <View
+    accessibilityLabel="tooltip-child-wrapper-test"
+    accessible={true}
+    onLayout={[Function]}
+    style={
+      [
+        {},
+      ]
+    }
+    testID="tooltip-child-wrapper-test"
+  >
+    <Text
+      accessible={false}
+      style={
+        [
+          {
+            "color": "#273142",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+          },
+        ]
+      }
+    >
+      trigger text
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Tooltip should render top correctly 1`] = `
+<View
+  accessibilityLabel="tooltip-trigger-test"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "opacity": 1,
+    }
+  }
+  testID="tooltip-trigger-test"
+>
+  <View
+    accessibilityLabel="tooltip-child-wrapper-test"
+    accessible={true}
+    onLayout={[Function]}
+    style={
+      [
+        {},
+      ]
+    }
+    testID="tooltip-child-wrapper-test"
+  >
+    <Text
+      accessible={false}
+      style={
+        [
+          {
+            "color": "#273142",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+          },
+        ]
+      }
+    >
+      trigger text
+    </Text>
+  </View>
+</View>
+`;

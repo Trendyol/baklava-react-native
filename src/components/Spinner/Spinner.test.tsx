@@ -3,6 +3,7 @@ import { Animated } from 'react-native';
 import { render } from '../../test-utils';
 import theme from '../../theme';
 import Spinner from './Spinner';
+import { ReactTestInstance } from 'react-test-renderer';
 
 describe('Spinner', () => {
   test('should render Spinner correctly', () => {
@@ -19,16 +20,15 @@ describe('Spinner', () => {
       <Spinner testID="spinner" color="successKey" />,
     );
 
-    const spinnerComponent = getByTestId('spinner');
+    const spinnerComponent = getByTestId('spinner')
+      .children[0] as ReactTestInstance;
 
     // then
-    expect(spinnerComponent.children[0].props.children[0].props.fill).toBe(
+    expect(spinnerComponent.props.children[0].props.fill).toBe(
       theme.colors.successKey,
     );
-    expect(spinnerComponent.children[0].props.children[0].props.opacity).toBe(
-      0.3,
-    );
-    expect(spinnerComponent.children[0].props.children[1].props.fill).toBe(
+    expect(spinnerComponent.props.children[0].props.opacity).toBe(0.3);
+    expect(spinnerComponent.props.children[1].props.fill).toBe(
       theme.colors.successKey,
     );
   });
@@ -37,18 +37,13 @@ describe('Spinner', () => {
     // when
     const { getByTestId } = render(<Spinner testID="spinner" color="pink" />);
 
-    const spinnerComponent = getByTestId('spinner');
+    const spinnerComponent = getByTestId('spinner')
+      .children[0] as ReactTestInstance;
 
     // then
-    expect(spinnerComponent.children[0].props.children[0].props.fill).toBe(
-      'pink',
-    );
-    expect(spinnerComponent.children[0].props.children[0].props.opacity).toBe(
-      0.3,
-    );
-    expect(spinnerComponent.children[0].props.children[1].props.fill).toBe(
-      'pink',
-    );
+    expect(spinnerComponent.props.children[0].props.fill).toBe('pink');
+    expect(spinnerComponent.props.children[0].props.opacity).toBe(0.3);
+    expect(spinnerComponent.props.children[1].props.fill).toBe('pink');
   });
 
   test('should render hex color', () => {
@@ -57,18 +52,13 @@ describe('Spinner', () => {
       <Spinner testID="spinner" color="#5C8984" />,
     );
 
-    const spinnerComponent = getByTestId('spinner');
+    const spinnerComponent = getByTestId('spinner')
+      .children[0] as ReactTestInstance;
 
     // then
-    expect(spinnerComponent.children[0].props.children[0].props.fill).toBe(
-      '#5C8984',
-    );
-    expect(spinnerComponent.children[0].props.children[0].props.opacity).toBe(
-      0.3,
-    );
-    expect(spinnerComponent.children[0].props.children[1].props.fill).toBe(
-      '#5C8984',
-    );
+    expect(spinnerComponent.props.children[0].props.fill).toBe('#5C8984');
+    expect(spinnerComponent.props.children[0].props.opacity).toBe(0.3);
+    expect(spinnerComponent.props.children[1].props.fill).toBe('#5C8984');
   });
 
   test('should start spin animation', () => {

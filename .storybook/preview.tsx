@@ -2,7 +2,14 @@ import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds';
 import React from 'react';
 import { ScrollView } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { PortalProvider, ThemeProvider, Toast, theme } from '../src';
+import { Parameters, Story } from '@storybook/react-native';
+import {
+  PortalProvider,
+  ThemeProvider,
+  TooltipProvider,
+  Toast,
+  theme,
+} from '../src';
 
 theme.fonts = {
   light: 'Rubik-Light',
@@ -14,25 +21,28 @@ theme.fonts = {
 
 export const decorators = [
   withBackgrounds,
-  Story => (
+  (Story: Story) => (
     <ThemeProvider theme={theme}>
-      <PortalProvider>
-        <SafeAreaProvider>
-          <ScrollView style={{ backgroundColor: theme.colors.neutralFull }}>
-            <Story />
-          </ScrollView>
-          <Toast ignoreKeyboard extraPaddingBottom={16} />
-        </SafeAreaProvider>
-      </PortalProvider>
+      <TooltipProvider>
+        <PortalProvider>
+          <SafeAreaProvider>
+            <ScrollView style={{ backgroundColor: theme.colors.neutralFull }}>
+              <Story />
+            </ScrollView>
+            <Toast ignoreKeyboard extraPaddingBottom={16} />
+          </SafeAreaProvider>
+        </PortalProvider>
+      </TooltipProvider>
     </ThemeProvider>
   ),
 ];
 
-export const parameters = {
+export const parameters: Parameters = {
   backgrounds: [
     { name: 'plain', value: theme.colors.neutralFull, default: true },
     { name: 'warm', value: '#f1f2f7' },
   ],
+  layout: 'fullscreen',
   options: {
     storySort: {
       order: [
@@ -48,6 +58,7 @@ export const parameters = {
         'Text',
         'TextArea',
         'Toast',
+        'Tooltip',
         'Switch',
         'Modal',
       ],
