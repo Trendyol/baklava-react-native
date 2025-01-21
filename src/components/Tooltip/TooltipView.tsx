@@ -1,5 +1,5 @@
 import React from 'react';
-import { TouchableOpacity, View } from 'react-native';
+import { I18nManager, TouchableOpacity, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { deviceHeight, deviceWidth } from '../../utils/dimentions';
 import Box from '../Box/Box';
@@ -7,6 +7,8 @@ import Icon from '../Icon/Icon';
 import Text from '../Text/Text';
 import { calculatePosition, PIN_SIZE } from './calculatePosition';
 import { useTooltipContext } from './TooltipContext';
+
+const isRTL = I18nManager.isRTL;
 
 const TooltipView = () => {
   const tooltipRef = React.useRef<View>(null);
@@ -41,6 +43,7 @@ const TooltipView = () => {
         ...data,
         position,
       },
+      isRTL,
       overlayViewport,
     );
   }, [data, overlayViewport, position]);
@@ -97,7 +100,11 @@ const TooltipView = () => {
           accessibilityHint={position}>
           <Box flexDirection="row">
             <Box flex={1} padding="m">
-              <Text color="neutralFull" testID={`tooltip-content-${data.id}`}>
+              <Text
+                color="neutralFull"
+                variant="body2"
+                testID={`tooltip-content-${data.id}`}
+                textAlign={'left'}>
                 {data.content}
               </Text>
             </Box>
@@ -107,7 +114,7 @@ const TooltipView = () => {
                 testID={`tooltip-close-${data.id}`}
                 accessibilityLabel={`tooltip-close-${data.id}`}>
                 <Box padding="m">
-                  <Icon name="close" size="s" color="neutralFull" />
+                  <Icon name="close" size="xs" color="neutralFull" />
                 </Box>
               </TouchableOpacity>
             </Box>
