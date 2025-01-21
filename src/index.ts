@@ -24,6 +24,7 @@ export {
 
 // types
 export { ToastDurations } from './components/Toast/types';
+export type { TooltipRef } from './components/Tooltip/types';
 
 // 3rd party
 export { Portal, PortalHost, PortalProvider, usePortal } from '@gorhom/portal';
