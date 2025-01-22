@@ -21,7 +21,9 @@ describe('calculatePosition', () => {
       content: 'lorem ipsum dolor',
       color: 'infoKey',
       onClose: () => null,
+      onError: () => null,
       triggerRef: createRef(),
+      children: undefined,
     };
     const mockOverlayViewport: Viewport = {
       x: 0,
@@ -78,8 +80,11 @@ describe('calculatePosition', () => {
       id: 'test',
       content: 'lorem ipsum dolor',
       color: 'infoKey',
+      highlight: false,
       onClose: () => null,
+      onError: () => null,
       triggerRef: createRef(),
+      children: undefined,
     };
     const mockOverlayViewport: Viewport = {
       x: 0,
