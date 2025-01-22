@@ -143,6 +143,21 @@ export const Overlay: TooltipStory = () => {
       </Box>
       <Box p="m" flexDirection="row" alignItems="center">
         <Tooltip
+          id="test3"
+          overlay
+          hole
+          highlight
+          position="bottom"
+          content="text Lorem ipsum dolor sit amet consectetur. Sagittis viverra id hendrerit nunc ultrices volutpat. Scelerisque tincidunt cras mattis.">
+          <Box bg="primaryColor" padding="s" borderRadius="m">
+            <Text color="white" variant="subtitle2Medium">
+              overlay + hole + highlight
+            </Text>
+          </Box>
+        </Tooltip>
+      </Box>
+      <Box p="m" flexDirection="row" alignItems="center">
+        <Tooltip
           id="test4"
           overlay
           hole
@@ -152,6 +167,22 @@ export const Overlay: TooltipStory = () => {
           <Box bg="primaryColor" padding="s" borderRadius="m">
             <Text color="white" variant="subtitle2Medium">
               overlay + hole + extra padding
+            </Text>
+          </Box>
+        </Tooltip>
+      </Box>
+      <Box p="m" flexDirection="row" alignItems="center">
+        <Tooltip
+          id="test4"
+          overlay
+          hole
+          highlight
+          holePadding={10}
+          position="bottom"
+          content="text Lorem ipsum dolor sit amet consectetur. Sagittis viverra id hendrerit nunc ultrices volutpat. Scelerisque tincidunt cras mattis.">
+          <Box bg="primaryColor" padding="s" borderRadius="m">
+            <Text color="white" variant="subtitle2Medium">
+              overlay + hole + highlight + extra padding
             </Text>
           </Box>
         </Tooltip>

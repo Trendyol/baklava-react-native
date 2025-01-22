@@ -4,6 +4,7 @@ import Svg, { Defs, G, Mask, Rect } from 'react-native-svg';
 import Box from '../Box/Box';
 import TooltipView from './TooltipView';
 import { Viewport, TooltipContextType, TooltipData } from './types';
+import theme from '../../theme';
 
 export const TooltipContext = createContext<TooltipContextType | undefined>(
   undefined,
@@ -80,12 +81,13 @@ export const TooltipProvider: React.FC<{ children: ReactNode }> = ({
       return null;
     }
 
+    const { id, overlay, hole, highlight } = activeTooltip;
     return (
       <>
         <TouchableWithoutFeedback
           onPress={removeActiveTooltip}
-          accessibilityLabel={`tooltip-overlay-wrapper-${activeTooltip.id}`}
-          testID={`tooltip-overlay-wrapper-${activeTooltip.id}`}>
+          accessibilityLabel={`tooltip-overlay-wrapper-${id}`}
+          testID={`tooltip-overlay-wrapper-${id}`}>
           <Box
             position="absolute"
             flex={1}
@@ -93,7 +95,7 @@ export const TooltipProvider: React.FC<{ children: ReactNode }> = ({
             width={'100%'}
             onLayout={onLayout}
             ref={overlayRef}>
-            {activeTooltip.highlight ? (
+            {overlay && hole && highlight ? (
               <Box
                 testID={`tooltip-highlight-${activeTooltip.id}`}
                 bg="white"
@@ -115,16 +117,16 @@ export const TooltipProvider: React.FC<{ children: ReactNode }> = ({
               </Box>
             ) : null}
             <Svg height="100%" width="100%" pointerEvents="none">
-              {activeTooltip.overlay ? (
+              {overlay ? (
                 <G>
                   <Defs>
                     <Mask id="clip">
                       <Rect fill="#ffffff" width="100%" height="100%" />
                       {/* hole */}
-                      {viewport && activeTooltip.hole ? (
+                      {viewport && hole ? (
                         <Rect
-                          accessibilityLabel={`tooltip-hole-${activeTooltip.id}`}
-                          testID={`tooltip-hole-${activeTooltip.id}`}
+                          accessibilityLabel={`tooltip-hole-${id}`}
+                          testID={`tooltip-hole-${id}`}
                           fill="#000"
                           ry={6}
                           rx={6}
@@ -150,16 +152,16 @@ export const TooltipProvider: React.FC<{ children: ReactNode }> = ({
                     </Mask>
                   </Defs>
                   <Rect
-                    accessibilityLabel={`tooltip-overlay-${activeTooltip.id}`}
-                    testID={`tooltip-overlay-${activeTooltip.id}`}
+                    accessibilityLabel={`tooltip-overlay-${id}`}
+                    testID={`tooltip-overlay-${id}`}
                     width={Dimensions.get('screen').width}
                     height={Dimensions.get('screen').height}
                     clipRule={'evenodd'}
                     fillRule={'nonzero'}
                     vectorEffect="inherit"
-                    fill="#273142"
+                    fill={theme.colors.neutralDarker}
                     fillOpacity=".7"
-                    mask={activeTooltip.hole ? 'url(#clip)' : undefined}
+                    mask={hole ? 'url(#clip)' : undefined}
                   />
                 </G>
               ) : undefined}
