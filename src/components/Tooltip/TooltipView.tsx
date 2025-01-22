@@ -13,16 +13,12 @@ const isRTL = I18nManager.isRTL;
 const TooltipView = () => {
   const tooltipRef = React.useRef<View>(null);
   const { top, bottom } = useSafeAreaInsets();
-  const {
-    hide: hideTooltip,
-    overlayViewport,
-    activeTooltip: data,
-  } = useTooltipContext();
-  const [position, setPosition] = React.useState(data.position);
+  const { hide, overlayViewport, activeTooltip } = useTooltipContext();
+  const [position, setPosition] = React.useState(activeTooltip!.position);
 
   const onLayout = React.useCallback(() => {
-    tooltipRef.current?.measure((x, y, w, h, px, py) => {
-      switch (data.position) {
+    tooltipRef.current?.measure?.((x, y, w, h, px, py) => {
+      switch (activeTooltip!.position) {
         case 'top':
           if (Math.abs(py) - PIN_SIZE < top) {
             setPosition('bottom');
@@ -35,22 +31,24 @@ const TooltipView = () => {
           break;
       }
     });
-  }, [bottom, data.position, tooltipRef, top]);
+  }, [bottom, activeTooltip, tooltipRef, top]);
 
   const calc = React.useMemo(() => {
     return calculatePosition(
       {
-        ...data,
+        ...activeTooltip!,
         position,
       },
       isRTL,
       overlayViewport,
     );
-  }, [data, overlayViewport, position]);
+  }, [activeTooltip, overlayViewport, position]);
 
-  const hide = React.useCallback(() => {
-    hideTooltip(data.id);
-  }, [data.id, hideTooltip]);
+  const _hide = React.useCallback(() => {
+    if (activeTooltip) {
+      hide(activeTooltip.id);
+    }
+  }, [activeTooltip, hide]);
 
   const pinPos = React.useMemo(() => {
     return {
@@ -72,7 +70,7 @@ const TooltipView = () => {
     };
   }, [calc]);
 
-  if (!overlayViewport) {
+  if (!overlayViewport || !activeTooltip) {
     return null;
   }
 
@@ -88,10 +86,10 @@ const TooltipView = () => {
         top={calc.top}
         height={calc.height}
         justifyContent={position === 'top' ? 'flex-end' : 'flex-start'}
-        testID={`tooltip-area-${data.id}`}>
+        testID={`tooltip-area-${activeTooltip.id}`}>
         <Box
-          testID={`tooltip-${data.id}`}
-          bg={data.color}
+          testID={`tooltip-${activeTooltip.id}`}
+          bg={activeTooltip.color}
           onLayout={onLayout}
           ref={tooltipRef}
           borderRadius="m"
@@ -103,16 +101,16 @@ const TooltipView = () => {
               <Text
                 color="neutralFull"
                 variant="body2"
-                testID={`tooltip-content-${data.id}`}
+                testID={`tooltip-content-${activeTooltip.id}`}
                 textAlign={'left'}>
-                {data.content}
+                {activeTooltip.content}
               </Text>
             </Box>
             <Box>
               <TouchableOpacity
-                onPress={hide}
-                testID={`tooltip-close-${data.id}`}
-                accessibilityLabel={`tooltip-close-${data.id}`}>
+                onPress={_hide}
+                testID={`tooltip-close-${activeTooltip.id}`}
+                accessibilityLabel={`tooltip-close-${activeTooltip.id}`}>
                 <Box padding="m">
                   <Icon name="close" size="xs" color="neutralFull" />
                 </Box>
@@ -121,9 +119,9 @@ const TooltipView = () => {
           </Box>
         </Box>
         <Box
-          testID={`tooltip-pin-${data.id}`}
+          testID={`tooltip-pin-${activeTooltip.id}`}
           position="absolute"
-          bg={data.color}
+          bg={activeTooltip.color}
           height={PIN_SIZE}
           width={PIN_SIZE}
           style={pinPos}

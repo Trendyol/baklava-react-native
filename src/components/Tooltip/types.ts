@@ -41,11 +41,12 @@ export type TooltipData = {
 };
 
 export interface TooltipContextType {
-  activeTooltip: TooltipData;
+  activeTooltip?: TooltipData;
   overlayViewport?: Viewport;
   show: (tooltipData: Omit<TooltipData, 'viewport'>) => void;
   hide: (key: string) => void;
   clearAll: () => void;
+  setOverlayViewport: (viewport: Viewport) => void;
 }
 
 export interface Viewport {

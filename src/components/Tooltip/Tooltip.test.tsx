@@ -1,13 +1,18 @@
 import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { cleanup, fireEvent, render, waitFor } from '../../test-utils';
-import Text from '../Text/Text';
-import Tooltip from './Tooltip';
-import { TooltipProvider, useTooltipContext } from './TooltipContext';
+import { deviceHeight } from '../../utils/dimentions';
 import Box from '../Box/Box';
 import Button from '../Button/Button';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import Text from '../Text/Text';
+import { Overlay } from './Overlay';
+import Tooltip from './Tooltip';
+import {
+  TooltipContext,
+  TooltipProvider,
+  useTooltipContext,
+} from './TooltipContext';
 import { TooltipRef } from './types';
-import { deviceHeight } from '../../utils/dimentions';
 
 describe('Tooltip', () => {
   const mockOverlayMeasure = jest.fn();
@@ -598,5 +603,41 @@ describe('Tooltip', () => {
     const content = queryByTestId('tooltip-content-test');
     expect(content).toBeNull();
     expect(mockOnClose).not.toBeCalled();
+  });
+
+  test('should not show overlay when no activeTooltip', async () => {
+    // given
+    const mockShow = jest.fn();
+    const mockHide = jest.fn();
+    const mockClearAll = jest.fn();
+    const mockSetOverlayViewport = jest.fn();
+    // when
+    const { queryByTestId, toJSON } = render(
+      <SafeAreaProvider>
+        <TooltipContext.Provider
+          value={{
+            activeTooltip: undefined,
+            hide: mockHide,
+            show: mockShow,
+            clearAll: mockClearAll,
+            overlayViewport: {
+              x: 0,
+              y: 0,
+              w: 400,
+              h: 800,
+              px: 0,
+              py: 62,
+            },
+            setOverlayViewport: mockSetOverlayViewport,
+          }}>
+          <Overlay />
+        </TooltipContext.Provider>
+      </SafeAreaProvider>,
+    );
+
+    // then
+    const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test');
+    expect(overlayLayout).toBeNull();
+    expect(toJSON()).toBeNull();
   });
 });
