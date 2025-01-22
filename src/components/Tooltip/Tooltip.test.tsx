@@ -293,14 +293,14 @@ describe('Tooltip', () => {
     const content = queryByTestId('tooltip-content-test');
     const overlay = queryByTestId('tooltip-overlay-test');
     const hole = queryByTestId('tooltip-hole-test');
-    const contour = queryByTestId('tooltip-contour-test');
+    const highlight = queryByTestId('tooltip-highlight-test');
     expect(content).not.toBeNull();
     expect(overlay).not.toBeNull();
     expect(hole).not.toBeNull();
-    expect(contour).toBeNull();
+    expect(highlight).toBeNull();
   });
 
-  test('should render overlay and hole and contour', async () => {
+  test('should render overlay and hole and highlight', async () => {
     // when
     const { queryByTestId } = render(
       <SafeAreaProvider>
@@ -309,7 +309,7 @@ describe('Tooltip', () => {
             id={'test'}
             overlay
             hole
-            contour
+            highlight
             position="bottom"
             content={'content Lorem ipsum dolor sit amet'}>
             <Text>trigger text</Text>
@@ -333,11 +333,11 @@ describe('Tooltip', () => {
     const content = queryByTestId('tooltip-content-test');
     const overlay = queryByTestId('tooltip-overlay-test');
     const hole = queryByTestId('tooltip-hole-test');
-    const contour = queryByTestId('tooltip-contour-test');
+    const highlight = queryByTestId('tooltip-highlight-test');
     expect(content).not.toBeNull();
     expect(overlay).not.toBeNull();
     expect(hole).not.toBeNull();
-    expect(contour).not.toBeNull();
+    expect(highlight).not.toBeNull();
   });
 
   test('should show and hide via ref', async () => {
@@ -521,5 +521,82 @@ describe('Tooltip', () => {
 
     fireEvent.press(overlayLayout);
     expect(queryByTestId('tooltip-content-test')).toBeNull();
+  });
+
+  test('should not show when error', async () => {
+    // given
+    const ref = React.createRef<TooltipRef>();
+    const mockOnClose = jest.fn();
+    const mockOnError = jest.fn();
+    // when
+    const { queryByTestId } = render(
+      <SafeAreaProvider>
+        <TooltipProvider>
+          <Tooltip
+            id={'test'}
+            ref={ref}
+            overlay
+            content={'content Lorem ipsum dolor sit amet'}
+            position={'top'}
+            highlight
+            onClose={mockOnClose}
+            onError={mockOnError}>
+            <Text>trigger text</Text>
+          </Tooltip>
+        </TooltipProvider>
+      </SafeAreaProvider>,
+    );
+
+    // then
+    const childWrapper = queryByTestId('tooltip-child-wrapper-test');
+    childWrapper!.parent!.instance.measure = jest.fn().mockImplementation(f => {
+      // x,y,w,h,px,py
+      f(undefined, undefined, undefined, undefined, undefined, undefined);
+    });
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
+
+    ref.current?.show();
+
+    const content = queryByTestId('tooltip-content-test');
+    expect(content).toBeNull();
+    expect(mockOnClose).not.toBeCalled();
+    expect(mockOnError).toHaveBeenCalledWith('test');
+  });
+
+  test('should not show when error without onError', async () => {
+    // given
+    const ref = React.createRef<TooltipRef>();
+    const mockOnClose = jest.fn();
+    // when
+    const { queryByTestId } = render(
+      <SafeAreaProvider>
+        <TooltipProvider>
+          <Tooltip
+            id={'test'}
+            ref={ref}
+            overlay
+            content={'content Lorem ipsum dolor sit amet'}
+            position={'top'}
+            highlight
+            onClose={mockOnClose}>
+            <Text>trigger text</Text>
+          </Tooltip>
+        </TooltipProvider>
+      </SafeAreaProvider>,
+    );
+
+    // then
+    const childWrapper = queryByTestId('tooltip-child-wrapper-test');
+    childWrapper!.parent!.instance.measure = jest.fn().mockImplementation(f => {
+      // x,y,w,h,px,py
+      f(undefined, undefined, undefined, undefined, undefined, undefined);
+    });
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
+
+    ref.current?.show();
+
+    const content = queryByTestId('tooltip-content-test');
+    expect(content).toBeNull();
+    expect(mockOnClose).not.toBeCalled();
   });
 });

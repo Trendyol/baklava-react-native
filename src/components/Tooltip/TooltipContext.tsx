@@ -36,7 +36,11 @@ export const TooltipProvider: React.FC<{ children: ReactNode }> = ({
   const addToStack = React.useCallback(
     (tooltipData: Omit<TooltipData, 'viewport'>) => {
       if (tooltipData) {
-        tooltipData.triggerRef.current?.measure((x, y, w, h, px, py) => {
+        tooltipData.triggerRef.current?.measure?.((x, y, w, h, px, py) => {
+          if (x ?? w ?? px === undefined) {
+            tooltipData.onError?.(tooltipData.id);
+            return;
+          }
           const _viewport: Viewport = {
             x,
             y,
@@ -89,6 +93,27 @@ export const TooltipProvider: React.FC<{ children: ReactNode }> = ({
             width={'100%'}
             onLayout={onLayout}
             ref={overlayRef}>
+            {activeTooltip.highlight ? (
+              <Box
+                testID={`tooltip-highlight-${activeTooltip.id}`}
+                bg="white"
+                position="absolute"
+                borderRadius="m"
+                justifyContent="center"
+                alignItems="center"
+                top={
+                  activeTooltip.viewport.py -
+                  (viewport?.py ?? 0) -
+                  activeTooltip.holePadding
+                }
+                left={activeTooltip.viewport.px - activeTooltip.holePadding}
+                width={activeTooltip.viewport.w + activeTooltip.holePadding * 2}
+                height={
+                  activeTooltip.viewport.h + activeTooltip.holePadding * 2
+                }>
+                {activeTooltip.children}
+              </Box>
+            ) : null}
             <Svg height="100%" width="100%" pointerEvents="none">
               {activeTooltip.overlay ? (
                 <G>
@@ -101,8 +126,8 @@ export const TooltipProvider: React.FC<{ children: ReactNode }> = ({
                           accessibilityLabel={`tooltip-hole-${activeTooltip.id}`}
                           testID={`tooltip-hole-${activeTooltip.id}`}
                           fill="#000"
-                          ry={4}
-                          rx={4}
+                          ry={6}
+                          rx={6}
                           x={
                             activeTooltip.viewport.px -
                             activeTooltip.holePadding

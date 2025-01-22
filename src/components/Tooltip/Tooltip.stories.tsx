@@ -23,7 +23,7 @@ const TooltipMeta: ComponentMeta<typeof Tooltip> = {
     content: 'Lorem ipsum dolor sit amet',
     overlay: true,
     hole: true,
-    contour: true,
+    highlight: true,
     holePadding: 4,
   },
 };
@@ -48,7 +48,7 @@ export const Basic: TooltipStory = args => {
           overlay={args.overlay}
           hole={args.hole}
           holePadding={args.holePadding}
-          contour={args.contour}
+          highlight={args.highlight}
           content={args.content}>
           <Icon name="info" color="primaryColor" size="m" />
         </Tooltip>

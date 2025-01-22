@@ -11,11 +11,12 @@ export type TooltipProps = React.PropsWithChildren<{
   overlay?: boolean;
   hole?: boolean;
   holePadding?: number;
-  contour?: boolean;
+  highlight?: boolean;
   pressable?: boolean;
   color?: VariantProps<Theme, 'colors'>['variant'];
   wrapperStyle?: ViewStyle;
   onClose?: (id: string) => void;
+  onError?: (id: string) => void;
 }>;
 
 export type TooltipRef = {
@@ -32,9 +33,11 @@ export type TooltipData = {
   overlay: boolean;
   hole: boolean;
   holePadding: number;
-  contour?: boolean;
+  highlight?: boolean;
   onClose: TooltipProps['onClose'];
+  onError: TooltipProps['onError'];
   triggerRef: React.RefObject<View>;
+  children: React.ReactNode;
 };
 
 export interface TooltipContextType {
