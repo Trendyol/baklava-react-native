@@ -1,5 +1,5 @@
 import React from 'react';
-import { act, cleanup, fireEvent, render, waitFor } from '../../test-utils';
+import { cleanup, fireEvent, render, waitFor } from '../../test-utils';
 import Text from '../Text/Text';
 import Tooltip from './Tooltip';
 import { TooltipProvider, useTooltipContext } from './TooltipContext';
@@ -13,6 +13,14 @@ describe('Tooltip', () => {
   const mockOverlayMeasure = jest.fn();
   const mockChildWrapperTopMeasure = jest.fn();
   const mockChildWrapperBottomMeasure = jest.fn();
+  const mockChildWrapperOnLayoutParam = {
+    nativeEvent: {
+      layout: {
+        width: 200,
+        height: 30,
+      },
+    },
+  };
 
   beforeEach(() => {
     mockChildWrapperTopMeasure.mockImplementation(f => {
@@ -112,8 +120,8 @@ describe('Tooltip', () => {
     const trigger = queryByTestId('tooltip-trigger-test');
     const childWrapper = queryByTestId('tooltip-child-wrapper-test');
     childWrapper!.parent!.instance.measure = mockChildWrapperTopMeasure;
-    fireEvent(childWrapper!, 'layout', {});
-    fireEvent.press(trigger!);
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
+    fireEvent.press(trigger);
 
     const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test');
     overlayLayout!.parent!.instance.measure = mockOverlayMeasure;
@@ -153,8 +161,8 @@ describe('Tooltip', () => {
 
     childWrapper!.parent!.instance.measure = mockChildWrapperTopMeasure;
 
-    fireEvent(childWrapper!, 'layout', {});
-    fireEvent.press(trigger!);
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
+    fireEvent.press(trigger);
 
     const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test');
     overlayLayout!.parent!.instance.measure = mockOverlayMeasure;
@@ -193,8 +201,8 @@ describe('Tooltip', () => {
     const trigger = queryByTestId('tooltip-trigger-test');
     const childWrapper = queryByTestId('tooltip-child-wrapper-test');
     childWrapper!.parent!.instance.measure = mockChildWrapperTopMeasure;
-    fireEvent(childWrapper!, 'layout', {});
-    fireEvent.press(trigger!);
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
+    fireEvent.press(trigger);
 
     const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test');
     overlayLayout!.parent!.instance.measure = mockOverlayMeasure;
@@ -235,8 +243,8 @@ describe('Tooltip', () => {
     const trigger = queryByTestId('tooltip-trigger-test');
     const childWrapper = queryByTestId('tooltip-child-wrapper-test');
     childWrapper!.parent!.instance.measure = mockChildWrapperBottomMeasure;
-    fireEvent(childWrapper!, 'layout', {});
-    fireEvent.press(trigger!);
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
+    fireEvent.press(trigger);
 
     const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test');
     overlayLayout!.parent!.instance.measure = mockOverlayMeasure;
@@ -275,19 +283,61 @@ describe('Tooltip', () => {
     const childWrapper = queryByTestId('tooltip-child-wrapper-test');
     childWrapper!.parent!.instance.measure = mockChildWrapperTopMeasure;
 
-    fireEvent(childWrapper!, 'layout', {});
-    fireEvent.press(trigger!);
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
+    fireEvent.press(trigger);
 
     const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test');
     overlayLayout!.parent!.instance.measure = mockOverlayMeasure;
-    fireEvent(overlayLayout!, 'layout', {});
+    fireEvent(overlayLayout, 'layout', {});
 
     const content = queryByTestId('tooltip-content-test');
     const overlay = queryByTestId('tooltip-overlay-test');
     const hole = queryByTestId('tooltip-hole-test');
+    const contour = queryByTestId('tooltip-contour-test');
     expect(content).not.toBeNull();
     expect(overlay).not.toBeNull();
     expect(hole).not.toBeNull();
+    expect(contour).toBeNull();
+  });
+
+  test('should render overlay and hole and contour', async () => {
+    // when
+    const { queryByTestId } = render(
+      <SafeAreaProvider>
+        <TooltipProvider>
+          <Tooltip
+            id={'test'}
+            overlay
+            hole
+            contour
+            position="bottom"
+            content={'content Lorem ipsum dolor sit amet'}>
+            <Text>trigger text</Text>
+          </Tooltip>
+        </TooltipProvider>
+      </SafeAreaProvider>,
+    );
+
+    // then
+    const trigger = queryByTestId('tooltip-trigger-test');
+    const childWrapper = queryByTestId('tooltip-child-wrapper-test');
+    childWrapper!.parent!.instance.measure = mockChildWrapperTopMeasure;
+
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
+    fireEvent.press(trigger);
+
+    const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test');
+    overlayLayout!.parent!.instance.measure = mockOverlayMeasure;
+    fireEvent(overlayLayout, 'layout', {});
+
+    const content = queryByTestId('tooltip-content-test');
+    const overlay = queryByTestId('tooltip-overlay-test');
+    const hole = queryByTestId('tooltip-hole-test');
+    const contour = queryByTestId('tooltip-contour-test');
+    expect(content).not.toBeNull();
+    expect(overlay).not.toBeNull();
+    expect(hole).not.toBeNull();
+    expect(contour).not.toBeNull();
   });
 
   test('should show and hide via ref', async () => {
@@ -314,13 +364,13 @@ describe('Tooltip', () => {
     // then
     const childWrapper = queryByTestId('tooltip-child-wrapper-test');
     childWrapper!.parent!.instance.measure = mockChildWrapperTopMeasure;
-    fireEvent(childWrapper!, 'layout', {});
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
 
     ref.current?.show();
 
     const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test');
     overlayLayout!.parent!.instance.measure = mockOverlayMeasure;
-    fireEvent(overlayLayout!, 'layout', {});
+    fireEvent(overlayLayout, 'layout', {});
 
     const content = queryByTestId('tooltip-content-test');
     expect(content).not.toBeNull();
@@ -381,13 +431,11 @@ describe('Tooltip', () => {
         // x,y,w,h,px,py
         f(0, 0, 200, 30, 16, 64);
       });
-    fireEvent(childWrapper1!, 'layout', {});
-    fireEvent(childWrapper2!, 'layout', {});
+    fireEvent(childWrapper1, 'layout', mockChildWrapperOnLayoutParam);
+    fireEvent(childWrapper2, 'layout', mockChildWrapperOnLayoutParam);
 
-    act(() => {
-      ref1.current?.show();
-      ref2.current?.show();
-    });
+    ref1.current?.show();
+    ref2.current?.show();
 
     const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test1');
     overlayLayout!.parent!.instance.measure = mockOverlayMeasure;
@@ -432,7 +480,7 @@ describe('Tooltip', () => {
     ref.current?.show();
     expect(queryByTestId('tooltip-content-test')).toBeNull();
 
-    fireEvent(childWrapper!, 'layout', {});
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
 
     const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test');
     overlayLayout!.parent!.instance.measure = mockOverlayMeasure;
@@ -463,15 +511,15 @@ describe('Tooltip', () => {
     const childWrapper = queryByTestId('tooltip-child-wrapper-test');
     childWrapper!.parent!.instance.measure = mockChildWrapperTopMeasure;
 
-    fireEvent(childWrapper!, 'layout', {});
+    fireEvent(childWrapper, 'layout', mockChildWrapperOnLayoutParam);
 
     const trigger = queryByTestId('tooltip-trigger-test');
-    fireEvent.press(trigger!);
+    fireEvent.press(trigger);
     const overlayLayout = queryByTestId('tooltip-overlay-wrapper-test');
     overlayLayout!.parent!.instance.measure = mockOverlayMeasure;
-    fireEvent(overlayLayout!, 'layout', {});
+    fireEvent(overlayLayout, 'layout', {});
 
-    fireEvent.press(overlayLayout!);
+    fireEvent.press(overlayLayout);
     expect(queryByTestId('tooltip-content-test')).toBeNull();
   });
 });

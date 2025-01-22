@@ -21,8 +21,9 @@ const TooltipMeta: ComponentMeta<typeof Tooltip> = {
   },
   args: {
     content: 'Lorem ipsum dolor sit amet',
-    overlay: false,
-    hole: false,
+    overlay: true,
+    hole: true,
+    contour: true,
     holePadding: 4,
   },
 };
@@ -36,8 +37,9 @@ export const Basic: TooltipStory = args => {
     <>
       <Box height={deviceHeight * 0.3} />
       <Box
-        p="l"
+        p="3xl"
         flexDirection="row"
+        bg="secondaryColor"
         alignItems="center"
         justifyContent="center">
         <Tooltip
@@ -46,11 +48,14 @@ export const Basic: TooltipStory = args => {
           overlay={args.overlay}
           hole={args.hole}
           holePadding={args.holePadding}
+          contour={args.contour}
           content={args.content}>
-          <Icon name="info" color="lightblue" size="m" />
+          <Icon name="info" color="primaryColor" size="m" />
         </Tooltip>
         <Box ml="m">
-          <Text variant="subtitle2Medium">Click to info icon</Text>
+          <Text color="white" variant="subtitle2Medium">
+            Click to info icon
+          </Text>
         </Box>
       </Box>
       <Box style={{ height: deviceHeight * 0.5 }} />

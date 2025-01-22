@@ -11,6 +11,7 @@ export type TooltipProps = React.PropsWithChildren<{
   overlay?: boolean;
   hole?: boolean;
   holePadding?: number;
+  contour?: boolean;
   pressable?: boolean;
   color?: VariantProps<Theme, 'colors'>['variant'];
   wrapperStyle?: ViewStyle;
@@ -31,6 +32,7 @@ export type TooltipData = {
   overlay: boolean;
   hole: boolean;
   holePadding: number;
+  contour?: boolean;
   onClose: TooltipProps['onClose'];
   triggerRef: React.RefObject<View>;
 };
