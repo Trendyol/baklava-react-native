@@ -39,7 +39,7 @@ export const Basic: IconStory = args => (
     </Text>
     <Box flexDirection="row" p="2xs" alignItems="center">
       <Icon name={args.name} color={args.color} size={args.size} />
-      <Text pl="2xs">{args.name}</Text>
+      <Text px="2xs">{args.name}</Text>
     </Box>
   </>
 );
@@ -52,27 +52,27 @@ export const IconSizes: IconStory = args => (
     <Box p="2xs" alignSelf="flex-start">
       <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color={args.color} size="xl" />
-        <Text pl="2xs">xl</Text>
+        <Text px="2xs">xl</Text>
       </Box>
       <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color={args.color} size="l" />
-        <Text pl="2xs">l</Text>
+        <Text px="2xs">l</Text>
       </Box>
       <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color={args.color} size="m" />
-        <Text pl="2xs">m</Text>
+        <Text px="2xs">m</Text>
       </Box>
       <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color={args.color} size="s" />
-        <Text pl="2xs">s</Text>
+        <Text px="2xs">s</Text>
       </Box>
       <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color={args.color} size="xs" />
-        <Text pl="2xs">xs</Text>
+        <Text px="2xs">xs</Text>
       </Box>
       <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color={args.color} size="2xs" />
-        <Text pl="2xs">2xs</Text>
+        <Text px="2xs">2xs</Text>
       </Box>
     </Box>
   </>
@@ -86,15 +86,15 @@ export const IconColors: IconStory = args => (
     <Box alignSelf="flex-start" p="2xs">
       <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color="neutralDarker" />
-        <Text pl="2xs">neutralDarker</Text>
+        <Text px="2xs">neutralDarker</Text>
       </Box>
       <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color="red" />
-        <Text pl="2xs">red</Text>
+        <Text px="2xs">red</Text>
       </Box>
       <Box flexDirection="row" p="2xs" alignItems="center">
         <Icon name={args.name} color="#fcba03" />
-        <Text pl="2xs">#fcba03</Text>
+        <Text px="2xs">#fcba03</Text>
       </Box>
     </Box>
   </>
@@ -109,7 +109,7 @@ export const IconList: IconStory = args => (
       {iconList.map((iconName: IconNameType) => (
         <Box key={iconName} flexDirection="row" p="2xs" alignItems="center">
           <Icon name={iconName} color={args.color} />
-          <Text pl="2xs">{iconName}</Text>
+          <Text px="2xs">{iconName}</Text>
         </Box>
       ))}
     </Box>
