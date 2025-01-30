@@ -1,3 +1,5 @@
+
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Trendyol/baklava-react-native/badge)](https://scorecard.dev/viewer/?uri=github.com/Trendyol/baklava-react-native)
 # Baklava React Native
 
 Baklava is a design system provided by <a href="https://github.com/trendyol" target="_blank">Trendyol</a> to create a consistent UI/UX for app users.
