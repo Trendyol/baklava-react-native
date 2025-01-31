@@ -1,6 +1,7 @@
 #import "AppDelegate.h"
 
 #import <React/RCTBundleURLProvider.h>
+#import <React/RCTI18nUtil.h>
 
 @implementation AppDelegate
 
@@ -11,7 +12,20 @@
   // They will be passed down to the ViewController used by React Native.
   self.initialProps = @{};
 
+    // Allow RTL layouts, if the device prefers RTL then force the app into RTL layout.
+  [[RCTI18nUtil sharedInstance] allowRTL:YES];
+  if ([self isDevicePreferredLanguageRTL]) {
+    [[RCTI18nUtil sharedInstance] forceRTL:YES];
+  }
+
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
+}
+
+- (BOOL)isDevicePreferredLanguageRTL
+{
+  NSLocaleLanguageDirection direction =
+      [NSLocale characterDirectionForLanguage:[[NSLocale preferredLanguages] objectAtIndex:0]];
+  return direction == NSLocaleLanguageDirectionRightToLeft;
 }
 
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge

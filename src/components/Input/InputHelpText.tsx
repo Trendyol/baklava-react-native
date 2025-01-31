@@ -2,9 +2,6 @@ import React from 'react';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
 import { getHelpText, getTextColor } from './utils';
-import { I18nManager } from 'react-native';
-
-const isRTL = I18nManager.isRTL;
 
 export const InputHelpText = React.memo(
   ({
@@ -36,10 +33,7 @@ export const InputHelpText = React.memo(
 
     return content ? (
       <Box mt="3xs" ml="m">
-        <Text
-          variant="subtitle04Regular"
-          color={textColor}
-          textAlign={isRTL ? 'left' : 'right'}>
+        <Text variant="subtitle04Regular" color={textColor} textAlign="left">
           {content}
         </Text>
       </Box>
