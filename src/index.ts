@@ -10,6 +10,7 @@ export { default as Icon } from './components/Icon/Icon';
 export { default as Image } from './components/Image/Image';
 export { default as Input } from './components/Input/Input';
 export { default as Modal } from './components/Modal/Modal';
+export { default as RadioButton } from './components/RadioButton/RadioButton';
 export { default as Spinner } from './components/Spinner/Spinner';
 export { default as Switch } from './components/Switch/Switch';
 export { default as Text } from './components/Text/Text';

@@ -664,6 +664,32 @@ const theme = createTheme({
       backgroundColor: 'primaryBackground',
     },
   },
+  radioButtonVariants: {
+    defaults: {
+      borderWidth: 1,
+      borderRadius: 'full',
+      backgroundColor: 'white',
+      borderColor: 'neutralLighter',
+      height: 16,
+      width: 16,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    unselected: {
+      backgroundColor: 'white',
+      borderColor: 'neutralLighter',
+    },
+    selected: {
+      backgroundColor: 'primaryKey',
+      borderColor: 'primaryKey',
+    },
+    disabledSelected: {
+      backgroundColor: 'neutralLightest',
+    },
+    disabledUnselected: {
+      backgroundColor: 'neutralLightest',
+    },
+  },
   badgeVariants: {
     defaults: {
       backgroundColor: 'primaryContrast',
