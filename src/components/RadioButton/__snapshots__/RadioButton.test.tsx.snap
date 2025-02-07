@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButton should render RadioButton correctly when disable, selected is false 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="selectbox"
+    accessible={true}
+    style={
+      [
+        {},
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#F1F2F7",
+            "borderColor": "#AFBBCA",
+            "borderRadius": 999,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="selectbox"
+  />
+</View>
+`;
+
+exports[`RadioButton should render RadioButton correctly when disable, selected is true 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": true,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="selectbox"
+    accessible={true}
+    style={
+      [
+        {},
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#F1F2F7",
+            "borderColor": "#AFBBCA",
+            "borderRadius": 999,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="selectbox"
+  >
+    <View
+      accessibilityLabel="bullet"
+      accessible={true}
+      style={
+        [
+          {
+            "backgroundColor": "#AFBBCA",
+            "borderRadius": 999,
+            "height": 8,
+            "width": 8,
+          },
+        ]
+      }
+      testID="bullet"
+    />
+  </View>
+</View>
+`;
+
+exports[`RadioButton should render RadioButton correctly when selected is false 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="selectbox"
+    accessible={true}
+    style={
+      [
+        {},
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#AFBBCA",
+            "borderRadius": 999,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="selectbox"
+  />
+</View>
+`;
+
+exports[`RadioButton should render RadioButton correctly when selected is true 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": false,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={false}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignSelf": "flex-start",
+      "flexDirection": "row",
+      "opacity": 1,
+    }
+  }
+>
+  <View
+    accessibilityLabel="selectbox"
+    accessible={true}
+    style={
+      [
+        {},
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#F27A1A",
+            "borderColor": "#F27A1A",
+            "borderRadius": 999,
+            "borderWidth": 1,
+            "height": 16,
+            "justifyContent": "center",
+            "width": 16,
+          },
+        ],
+      ]
+    }
+    testID="selectbox"
+  >
+    <View
+      accessibilityLabel="bullet"
+      accessible={true}
+      style={
+        [
+          {
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 999,
+            "height": 8,
+            "width": 8,
+          },
+        ]
+      }
+      testID="bullet"
+    />
+  </View>
+</View>
+`;
