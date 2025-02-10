@@ -1,0 +1,140 @@
+import { Meta, ArgsTable } from '@storybook/addon-docs';
+import Tooltip1 from '../assets/tooltip/tooltip1.png';
+import Tooltip2 from '../assets/tooltip/tooltip2.png';
+import Tooltip3 from '../assets/tooltip/tooltip3.png';
+import Tooltip4 from '../assets/tooltip/tooltip4.png';
+import Tooltip5 from '../assets/tooltip/tooltip5.png';
+import Tooltip6 from '../assets/tooltip/tooltip6.png';
+
+<Meta
+  title="Components/Tooltip"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Tooltip
+
+Tooltip component displays a brief informational message to users with additional features if desired.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={Tooltip1} width="250" alt="No Overlay" />
+  <img src={Tooltip2} width="250" alt="Overlay" />
+  <img src={Tooltip3} width="250" alt="Overlay + Hole" />
+  <img src={Tooltip4} width="250" alt="Overlay + Hole + Highlight" />
+  <img src={Tooltip5} width="250" alt="Overlay + Hole + Extra Padding" />
+  <img src={Tooltip6} width="250" alt="Tooltip + Hole + Highlight + Extra Padding" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+Add it to root view so that it can be seen above all views.
+```jsx
+// ...
+import { theme, TooltipProvider } from '@trendyol/baklava-react-native';
+// ...
+
+<ThemeProvider theme={theme}>
+  <TooltipProvider>
+    <SafeAreaProvider>
+      {/* other components or providers. ex: <App/> */}
+    </SafeAreaProvider>
+  </TooltipProvider>
+</ThemeProvider>
+
+// ...
+```
+
+
+```jsx
+<Tooltip
+  id="basic"
+  position="top"
+  overlay
+  hole
+  highlight
+  content="Lorem ipsum dolor sit amet">
+  <Icon name="info" color="primaryColor" size="m" />
+</Tooltip>
+```
+
+<br />
+
+## Props
+
+#### id;
+Type: `string`
+#### content
+Type: `string`
+#### position
+Type: `top`,`bottom`,
+#### overlay?
+Type: `boolean`
+#### hole?
+Type: `boolean`
+#### holePadding?
+Type: `number`
+#### highlight?
+Type: `boolean`
+#### pressable?
+Type: `boolean`
+#### color?
+Type: `string`
+
+The color of the Icon. 
+It can be <a href="/docs/design-system-colors--page" title="title">theme color key</a> or <a href="https://reactnative.dev/docs/colors#named-colors" title="title">ColorValue</a>.
+
+Type: `(id: string) => void`
+#### wrapperStyle?
+Type: `ViewStyle`
+#### onClose?
+Type: `(id: string) => void`
+#### onError?
+Type: `(id: string) => void`
+
+
+## Methods
+
+#### show and hide
+
+```jsx
+
+const tooltipRef = React.useRef<TooltipRef>(null);
+
+React.useEffect(() => {
+  setTimeout(()=>{
+    tooltipRef.current?.show();
+    setTimeout(()=>{
+      tooltipRef.current?.hide();
+    },5000);
+  },5000);
+},[])
+
+return (
+  <Tooltip
+    ref={tooltipRef}
+    id="basic"
+    position="top"
+    overlay
+    hole
+    highlight
+    holePadding={8}
+    content="Lorem ipsum dolor sit amet">
+    <Icon name="info" color="primaryColor" size="m" />
+  </Tooltip>
+)
+```
+
+
