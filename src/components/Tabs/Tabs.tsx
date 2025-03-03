@@ -1,0 +1,180 @@
+import React, {
+  createContext,
+  PropsWithChildren,
+  useContext,
+  useEffect,
+  useState,
+} from 'react';
+import { FlatList, TouchableOpacity } from 'react-native';
+import Box, { BoxProps } from '../Box/Box';
+import Text from '../Text/Text';
+import theme from '../../theme';
+import insertObjectBetweenElements from './utils';
+
+type TabsContextType = {
+  value: string;
+  onValueChange: (newValue: string) => void;
+};
+
+const TabsContext = createContext<TabsContextType | null>(null);
+
+type TabsProps = BoxProps & {
+  value: string;
+  defaultValue?: string;
+  onValueChange: (value: string) => void;
+};
+
+const Tabs = ({
+  value: controlledValue,
+  defaultValue,
+  onValueChange,
+  ...rest
+}: TabsProps) => {
+  const [value, setValue] = useState(defaultValue || '');
+
+  useEffect(() => {
+    if (controlledValue !== undefined) {
+      setValue(controlledValue);
+    }
+  }, [controlledValue]);
+
+  const handleChange = (newValue: string) => {
+    if (controlledValue === undefined) {
+      setValue(newValue);
+    }
+    onValueChange(newValue);
+  };
+
+  return (
+    <TabsContext.Provider value={{ value, onValueChange: handleChange }}>
+      <Box testID="tabsBox" accessibilityLabel="tabsBox" flex={1} {...rest} />
+    </TabsContext.Provider>
+  );
+};
+
+const List = ({ children }: PropsWithChildren) => {
+  const childrenArray = React.Children.toArray(children);
+
+  return (
+    <Box testID="tabsListBox" accessibilityLabel="tabsListBox">
+      <FlatList
+        data={insertObjectBetweenElements(
+          childrenArray,
+          <Box
+            flex={1}
+            width={1}
+            height={30}
+            alignSelf="center"
+            backgroundColor="neutralLighter"
+          />,
+        )}
+        testID="tabsFlatList"
+        accessibilityLabel="tabsFlatList"
+        keyExtractor={(item, index) => index.toString()}
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        renderItem={({ item }) => item as React.JSX.Element}
+        contentContainerStyle={{ flexGrow: 1, justifyContent: 'space-around' }}
+      />
+    </Box>
+  );
+};
+
+type OptionProps = {
+  value: string;
+  title: string;
+  caption?: string;
+  disabled?: boolean;
+};
+
+const Option = ({
+  value,
+  title,
+  caption = '',
+  disabled = false,
+}: OptionProps) => {
+  const context = useContext(TabsContext);
+  if (!context) {
+    throw new Error('Tabs.Option must be used within Tabs');
+  }
+
+  const [textWidth, setTextWidth] = useState(0);
+  const isSelected = context.value === value;
+
+  return (
+    <TouchableOpacity
+      disabled={disabled}
+      style={{ justifyContent: 'center' }}
+      onPress={() => !disabled && context.onValueChange(value)}>
+      <Box
+        testID="tabsOptionBox"
+        accessibilityLabel="tabsOptionBox"
+        alignItems="center"
+        justifyContent="center"
+        paddingHorizontal="m"
+        paddingVertical="xs">
+        <Text
+          fontWeight="500"
+          color={
+            disabled
+              ? 'neutralLight'
+              : isSelected
+              ? 'primaryKey'
+              : 'neutralDarker'
+          }
+          numberOfLines={1}
+          ellipsizeMode="tail"
+          onLayout={e => {
+            const width = e.nativeEvent.layout.width;
+            setTextWidth(width);
+          }}>
+          {title}
+        </Text>
+        {caption ? (
+          <Text
+            fontSize={12}
+            color={disabled ? 'neutralLight' : 'neutralDarker'}>
+            {caption}
+          </Text>
+        ) : null}
+      </Box>
+      {isSelected && (
+        <Box
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            alignSelf: 'center',
+            width: textWidth,
+            borderBottomWidth: 2,
+            borderColor: theme.colors.primaryKey,
+          }}
+        />
+      )}
+    </TouchableOpacity>
+  );
+};
+
+type ContentProps = BoxProps & {
+  value: string;
+};
+
+const Content = ({ value, ...rest }: ContentProps) => {
+  const context = useContext(TabsContext);
+  if (!context) {
+    throw new Error('Tabs.Content must be used within Tabs');
+  }
+
+  return context.value === value ? (
+    <Box
+      testID="tabsContentBox"
+      accessibilityLabel="tabsContentBox"
+      {...rest}
+    />
+  ) : null;
+};
+
+Tabs.List = List;
+Tabs.Option = Option;
+Tabs.Content = Content;
+
+export default Tabs;
