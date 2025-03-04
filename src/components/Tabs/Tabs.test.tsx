@@ -65,7 +65,11 @@ describe('Tabs', () => {
     // given
     const onValueChange = jest.fn();
     const { getByText } = render(
-      <Tabs value={undefined} onValueChange={onValueChange} defaultValue="tab1">
+      <Tabs
+        // @ts-ignore
+        value={undefined}
+        onValueChange={onValueChange}
+        defaultValue="tab1">
         <Tabs.List>
           <Tabs.Option value="tab1" title="Tab 1" />
           <Tabs.Option value="tab2" title="Tab 2" />
