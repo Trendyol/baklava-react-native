@@ -56,6 +56,7 @@ export const parameters: Parameters = {
         'Image',
         'Input',
         'RadioButton',
+        'Tabs',
         'Text',
         'TextArea',
         'Toast',

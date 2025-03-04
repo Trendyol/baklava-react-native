@@ -1,0 +1,358 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tabs should render Tabs correctly 1`] = `
+<View
+  accessibilityLabel="tabsBox"
+  accessible={true}
+  style={
+    [
+      {
+        "flex": 1,
+      },
+    ]
+  }
+  testID="tabsBox"
+>
+  <View
+    accessibilityLabel="tabsListBox"
+    accessible={true}
+    style={
+      [
+        {},
+      ]
+    }
+    testID="tabsListBox"
+  >
+    <RCTScrollView
+      accessibilityLabel="tabsFlatList"
+      contentContainerStyle={
+        {
+          "flexGrow": 1,
+          "justifyContent": "space-around",
+        }
+      }
+      data={
+        [
+          <Option
+            title="Tab 1"
+            value="tab1"
+          />,
+          <ForwardRef
+            alignSelf="center"
+            backgroundColor="neutralLighter"
+            flex={1}
+            height={30}
+            mx="m"
+            width={1}
+          />,
+          <Option
+            title="Tab 2"
+            value="tab2"
+          />,
+        ]
+      }
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={true}
+      keyExtractor={[Function]}
+      onContentSizeChange={[Function]}
+      onLayout={[Function]}
+      onMomentumScrollBegin={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={0.0001}
+      showsHorizontalScrollIndicator={false}
+      stickyHeaderIndices={[]}
+      testID="tabsFlatList"
+      viewabilityConfigCallbackPairs={[]}
+    >
+      <View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={
+            [
+              {
+                "flexDirection": "row",
+              },
+              null,
+            ]
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": false,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "justifyContent": "center",
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel="tabOptionBox"
+              accessible={true}
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "paddingVertical": 12,
+                  },
+                ]
+              }
+              testID="tabOptionBox"
+            >
+              <View
+                accessible={false}
+                style={
+                  [
+                    {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                    },
+                  ]
+                }
+              >
+                <View
+                  accessibilityLabel="tabTitleBox"
+                  accessible={true}
+                  style={
+                    [
+                      {},
+                    ]
+                  }
+                  testID="tabTitleBox"
+                >
+                  <Text
+                    accessibilityLabel="tabTitle"
+                    accessible={true}
+                    ellipsizeMode="tail"
+                    numberOfLines={1}
+                    style={
+                      [
+                        {
+                          "color": "#F27A1A",
+                          "fontFamily": "Rubik-Regular",
+                          "fontSize": 14,
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    testID="tabTitle"
+                  >
+                    Tab 1
+                  </Text>
+                </View>
+              </View>
+            </View>
+            <View
+              accessible={false}
+              style={
+                [
+                  {
+                    "alignSelf": "center",
+                    "borderBottomWidth": 2,
+                    "borderColor": "#F27A1A",
+                    "bottom": 0,
+                    "position": "absolute",
+                    "width": "100%",
+                  },
+                ]
+              }
+            />
+          </View>
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={
+            [
+              {
+                "flexDirection": "row",
+              },
+              null,
+            ]
+          }
+        >
+          <View
+            accessible={false}
+            style={
+              [
+                {
+                  "alignSelf": "center",
+                  "backgroundColor": "#AFBBCA",
+                  "flex": 1,
+                  "height": 30,
+                  "marginHorizontal": 16,
+                  "width": 1,
+                },
+              ]
+            }
+          />
+        </View>
+        <View
+          onFocusCapture={[Function]}
+          onLayout={[Function]}
+          style={
+            [
+              {
+                "flexDirection": "row",
+              },
+              null,
+            ]
+          }
+        >
+          <View
+            accessibilityState={
+              {
+                "busy": undefined,
+                "checked": undefined,
+                "disabled": false,
+                "expanded": undefined,
+                "selected": undefined,
+              }
+            }
+            accessibilityValue={
+              {
+                "max": undefined,
+                "min": undefined,
+                "now": undefined,
+                "text": undefined,
+              }
+            }
+            accessible={true}
+            collapsable={false}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              {
+                "justifyContent": "center",
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              accessibilityLabel="tabOptionBox"
+              accessible={true}
+              style={
+                [
+                  {
+                    "alignItems": "center",
+                    "justifyContent": "center",
+                    "paddingVertical": 12,
+                  },
+                ]
+              }
+              testID="tabOptionBox"
+            >
+              <View
+                accessible={false}
+                style={
+                  [
+                    {
+                      "alignItems": "center",
+                      "flexDirection": "row",
+                    },
+                  ]
+                }
+              >
+                <View
+                  accessibilityLabel="tabTitleBox"
+                  accessible={true}
+                  style={
+                    [
+                      {},
+                    ]
+                  }
+                  testID="tabTitleBox"
+                >
+                  <Text
+                    accessibilityLabel="tabTitle"
+                    accessible={true}
+                    ellipsizeMode="tail"
+                    numberOfLines={1}
+                    style={
+                      [
+                        {
+                          "color": "#273142",
+                          "fontFamily": "Rubik-Regular",
+                          "fontSize": 14,
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    testID="tabTitle"
+                  >
+                    Tab 2
+                  </Text>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+  <View
+    accessibilityLabel="tabsContentBox"
+    accessible={true}
+    style={
+      [
+        {},
+      ]
+    }
+    testID="tabsContentBox"
+  >
+    <Text
+      accessible={false}
+      style={
+        [
+          {
+            "color": "#273142",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+          },
+        ]
+      }
+    >
+      Tab 1 Content
+    </Text>
+  </View>
+</View>
+`;
