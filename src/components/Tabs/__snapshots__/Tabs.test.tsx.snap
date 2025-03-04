@@ -42,6 +42,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
             backgroundColor="neutralLighter"
             flex={1}
             height={30}
+            mx="m"
             width={1}
           />,
           <Option
@@ -118,51 +119,73 @@ exports[`Tabs should render Tabs correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel="tabsOptionBox"
+              accessibilityLabel="tabOptionBox"
               accessible={true}
               style={
                 [
                   {
                     "alignItems": "center",
                     "justifyContent": "center",
-                    "paddingHorizontal": 16,
                     "paddingVertical": 12,
                   },
                 ]
               }
-              testID="tabsOptionBox"
+              testID="tabOptionBox"
             >
-              <Text
+              <View
                 accessible={false}
-                ellipsizeMode="tail"
-                numberOfLines={1}
-                onLayout={[Function]}
                 style={
                   [
                     {
-                      "color": "#F27A1A",
-                      "fontFamily": "Rubik-Regular",
-                      "fontSize": 14,
-                      "fontWeight": "500",
+                      "alignItems": "center",
+                      "flexDirection": "row",
                     },
                   ]
                 }
               >
-                Tab 1
-              </Text>
+                <View
+                  accessibilityLabel="tabTitleBox"
+                  accessible={true}
+                  style={
+                    [
+                      {},
+                    ]
+                  }
+                  testID="tabTitleBox"
+                >
+                  <Text
+                    accessibilityLabel="tabTitle"
+                    accessible={true}
+                    ellipsizeMode="tail"
+                    numberOfLines={1}
+                    style={
+                      [
+                        {
+                          "color": "#F27A1A",
+                          "fontFamily": "Rubik-Regular",
+                          "fontSize": 14,
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    testID="tabTitle"
+                  >
+                    Tab 1
+                  </Text>
+                </View>
+              </View>
             </View>
             <View
               accessible={false}
               style={
                 [
-                  {},
                   {
                     "alignSelf": "center",
                     "borderBottomWidth": 2,
                     "borderColor": "#F27A1A",
                     "bottom": 0,
                     "position": "absolute",
-                    "width": 0,
+                    "width": "100%",
                   },
                 ]
               }
@@ -190,6 +213,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
                   "backgroundColor": "#AFBBCA",
                   "flex": 1,
                   "height": 30,
+                  "marginHorizontal": 16,
                   "width": 1,
                 },
               ]
@@ -244,38 +268,61 @@ exports[`Tabs should render Tabs correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel="tabsOptionBox"
+              accessibilityLabel="tabOptionBox"
               accessible={true}
               style={
                 [
                   {
                     "alignItems": "center",
                     "justifyContent": "center",
-                    "paddingHorizontal": 16,
                     "paddingVertical": 12,
                   },
                 ]
               }
-              testID="tabsOptionBox"
+              testID="tabOptionBox"
             >
-              <Text
+              <View
                 accessible={false}
-                ellipsizeMode="tail"
-                numberOfLines={1}
-                onLayout={[Function]}
                 style={
                   [
                     {
-                      "color": "#273142",
-                      "fontFamily": "Rubik-Regular",
-                      "fontSize": 14,
-                      "fontWeight": "500",
+                      "alignItems": "center",
+                      "flexDirection": "row",
                     },
                   ]
                 }
               >
-                Tab 2
-              </Text>
+                <View
+                  accessibilityLabel="tabTitleBox"
+                  accessible={true}
+                  style={
+                    [
+                      {},
+                    ]
+                  }
+                  testID="tabTitleBox"
+                >
+                  <Text
+                    accessibilityLabel="tabTitle"
+                    accessible={true}
+                    ellipsizeMode="tail"
+                    numberOfLines={1}
+                    style={
+                      [
+                        {
+                          "color": "#273142",
+                          "fontFamily": "Rubik-Regular",
+                          "fontSize": 14,
+                          "fontWeight": "500",
+                        },
+                      ]
+                    }
+                    testID="tabTitle"
+                  >
+                    Tab 2
+                  </Text>
+                </View>
+              </View>
             </View>
           </View>
         </View>

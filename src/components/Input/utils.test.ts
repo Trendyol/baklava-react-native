@@ -51,6 +51,29 @@ describe('Input Utils', () => {
       expect(result).toBe('placeholder');
     });
 
+    test('should return placeholder when label null and has subLabel and placeholder', () => {
+      // given
+      const label = null;
+      const labelFixed = false;
+      const placeholder = 'placeholder';
+      const subLabel = 'sublabel';
+      const focused = false;
+      const value = '';
+
+      // when
+      const result = getPlaceholderText({
+        label,
+        labelFixed,
+        placeholder,
+        value,
+        focused,
+        subLabel,
+      });
+
+      // then
+      expect(result).toBe('placeholder sublabel');
+    });
+
     test('should return empty text when placeholder null and has label', () => {
       // given
       const label = 'label';

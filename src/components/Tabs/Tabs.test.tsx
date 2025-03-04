@@ -61,6 +61,31 @@ describe('Tabs', () => {
     expect(onValueChange).toHaveBeenCalledWith('tab2');
   });
 
+  test('should change selected tab on press when value undefined', () => {
+    // given
+    const onValueChange = jest.fn();
+    const { getByText } = render(
+      <Tabs value={undefined} onValueChange={onValueChange} defaultValue="tab1">
+        <Tabs.List>
+          <Tabs.Option value="tab1" title="Tab 1" />
+          <Tabs.Option value="tab2" title="Tab 2" />
+        </Tabs.List>
+        <Tabs.Content value="tab1">
+          <Text>Tab 1 Content</Text>
+        </Tabs.Content>
+        <Tabs.Content value="tab2">
+          <Text>Tab 2 Content</Text>
+        </Tabs.Content>
+      </Tabs>,
+    );
+
+    // when
+    fireEvent.press(getByText('Tab 2'));
+
+    // then
+    expect(onValueChange).toHaveBeenCalledWith('tab2');
+  });
+
   test('should not trigger onValueChange when disabled tab is pressed', () => {
     // given
     const onValueChange = jest.fn();
@@ -133,57 +158,65 @@ describe('Tabs', () => {
     expect(queryByTestId('content-tab2')).toBeNull();
   });
 
-  test('should update text width on layout change', () => {
-    // given
-    const { getByText } = render(
-      <Tabs value="tab1" onValueChange={jest.fn()}>
-        <Tabs.List>
-          <Tabs.Option value="tab1" title="Tab 1" />
-        </Tabs.List>
-      </Tabs>,
-    );
-
-    const tab1 = getByText('Tab 1');
-
-    // when
-    fireEvent(tab1, 'layout', { nativeEvent: { layout: { width: 100 } } });
-
-    // then
-    expect(tab1.props.onLayout).toBeDefined();
-  });
-
   test('should have neutralLight color when disabled', () => {
     // given
-    const { getByText } = render(
+    const { getByTestId } = render(
       <Tabs value="tab1" onValueChange={jest.fn()}>
         <Tabs.List>
-          <Tabs.Option value="tab1" title="Tab 1" disabled />
+          <Tabs.Option
+            value="tab1"
+            title="Tab 1"
+            disabled
+            iconName="heart"
+            badgeText="test"
+          />
         </Tabs.List>
       </Tabs>,
     );
 
     // when
-    const tab1 = getByText('Tab 1');
+    const title = getByTestId('tabTitle');
+    const icon = getByTestId('tabIcon');
+    const badge = getByTestId('tabBadge');
+    const badgeText = getByTestId('badgeText');
 
     // then
-    expect(tab1.props.style[0].color).toEqual(theme.colors.neutralLight);
+    expect(title.props.style[0].color).toEqual(theme.colors.neutralLight);
+    expect(icon.props.fill).toEqual(theme.colors.neutralLight);
+    expect(badgeText.props.style[0].color).toEqual(theme.colors.neutralFull);
+    expect(badge.props.style[1].backgroundColor).toEqual(
+      theme.colors.dangerKey,
+    );
   });
 
   test('should have primaryKey color when selected and enabled', () => {
     // given
-    const { getByText } = render(
+    const { getByTestId } = render(
       <Tabs value="tab1" onValueChange={jest.fn()}>
         <Tabs.List>
-          <Tabs.Option value="tab1" title="Tab 1" />
+          <Tabs.Option
+            value="tab1"
+            title="Tab 1"
+            iconName="heart"
+            badgeText="test"
+          />
         </Tabs.List>
       </Tabs>,
     );
 
     // when
-    const tab1 = getByText('Tab 1');
+    const title = getByTestId('tabTitle');
+    const icon = getByTestId('tabIcon');
+    const badge = getByTestId('tabBadge');
+    const badgeText = getByTestId('badgeText');
 
     // then
-    expect(tab1.props.style[0].color).toEqual(theme.colors.primaryKey);
+    expect(title.props.style[0].color).toEqual(theme.colors.primaryKey);
+    expect(icon.props.fill).toEqual(theme.colors.primaryKey);
+    expect(badgeText.props.style[0].color).toEqual(theme.colors.neutralFull);
+    expect(badge.props.style[1].backgroundColor).toEqual(
+      theme.colors.dangerKey,
+    );
   });
 
   test('should render caption when provided', () => {
@@ -269,6 +302,8 @@ describe('Tabs', () => {
 
     consoleErrorSpy.mockRestore();
   });
+
+  test('provider', () => {});
 });
 
 describe('insertObjectBetweenElements', () => {

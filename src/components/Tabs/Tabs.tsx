@@ -8,8 +8,10 @@ import React, {
 import { FlatList, TouchableOpacity } from 'react-native';
 import Box, { BoxProps } from '../Box/Box';
 import Text from '../Text/Text';
-import theme from '../../theme';
+import Icon from '../Icon/Icon';
 import insertObjectBetweenElements from './utils';
+import Badge from '../Badge/Badge';
+import { IconNameType } from '../Icon/types';
 
 type TabsContextType = {
   value: string;
@@ -30,7 +32,7 @@ const Tabs = ({
   onValueChange,
   ...rest
 }: TabsProps) => {
-  const [value, setValue] = useState(defaultValue || '');
+  const [value, setValue] = useState(defaultValue ?? '');
 
   useEffect(() => {
     if (controlledValue !== undefined) {
@@ -59,6 +61,7 @@ const List = ({ children }: PropsWithChildren) => {
       childrenArray,
       <Box
         flex={1}
+        mx="m"
         width={1}
         height={30}
         alignSelf="center"
@@ -88,6 +91,8 @@ type OptionProps = {
   title: string;
   caption?: string;
   disabled?: boolean;
+  iconName?: IconNameType;
+  badgeText?: string;
 };
 
 const Option = ({
@@ -95,14 +100,37 @@ const Option = ({
   title,
   caption = '',
   disabled = false,
+  iconName = undefined,
+  badgeText = undefined,
 }: OptionProps) => {
   const context = useContext(TabsContext);
   if (!context) {
     throw new Error('Tabs.Option must be used within Tabs');
   }
 
-  const [textWidth, setTextWidth] = useState(0);
   const isSelected = context.value === value;
+  const conditionalColor = disabled
+    ? 'neutralLight'
+    : isSelected
+    ? 'primaryKey'
+    : 'neutralDarker';
+
+  const underline = React.useMemo(() => {
+    if (!isSelected) {
+      return null;
+    }
+
+    return (
+      <Box
+        position="absolute"
+        bottom={0}
+        alignSelf="center"
+        width="100%"
+        borderBottomWidth={2}
+        borderColor="primaryKey"
+      />
+    );
+  }, [isSelected]);
 
   return (
     <TouchableOpacity
@@ -110,49 +138,54 @@ const Option = ({
       style={{ justifyContent: 'center' }}
       onPress={() => !disabled && context.onValueChange(value)}>
       <Box
-        testID="tabsOptionBox"
-        accessibilityLabel="tabsOptionBox"
+        testID="tabOptionBox"
         alignItems="center"
         justifyContent="center"
-        paddingHorizontal="m"
         paddingVertical="xs">
-        <Text
-          fontWeight="500"
-          color={
-            disabled
-              ? 'neutralLight'
-              : isSelected
-              ? 'primaryKey'
-              : 'neutralDarker'
-          }
-          numberOfLines={1}
-          ellipsizeMode="tail"
-          onLayout={e => {
-            const width = e.nativeEvent.layout.width;
-            setTextWidth(width);
-          }}>
-          {title}
-        </Text>
+        <Box flexDirection="row" alignItems="center">
+          {iconName ? (
+            <Box pr="3xs" testID="tabIconBox">
+              <Icon
+                name={iconName}
+                size="s"
+                color={conditionalColor}
+                testID="tabIcon"
+              />
+            </Box>
+          ) : null}
+          <Box testID="tabTitleBox">
+            <Text
+              testID="tabTitle"
+              fontWeight="500"
+              color={conditionalColor}
+              numberOfLines={1}
+              ellipsizeMode="tail">
+              {title}
+            </Text>
+          </Box>
+          {badgeText ? (
+            <Box pl="3xs" testID="tabBadgeBox">
+              <Badge
+                testID="tabBadge"
+                text={badgeText}
+                size="small"
+                transparent
+                color="neutralFull"
+                backgroundColor="dangerKey"
+              />
+            </Box>
+          ) : null}
+        </Box>
         {caption ? (
           <Text
+            testID="tabCaption"
             fontSize={12}
             color={disabled ? 'neutralLight' : 'neutralDarker'}>
             {caption}
           </Text>
         ) : null}
       </Box>
-      {isSelected && (
-        <Box
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            alignSelf: 'center',
-            width: textWidth,
-            borderBottomWidth: 2,
-            borderColor: theme.colors.primaryKey,
-          }}
-        />
-      )}
+      {underline}
     </TouchableOpacity>
   );
 };

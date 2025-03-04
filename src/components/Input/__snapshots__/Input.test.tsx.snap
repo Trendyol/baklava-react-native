@@ -306,6 +306,7 @@ exports[`Input should render input with error state and error text correctly 1`]
       textAlign="left"
     />
     <RNSVGSvgView
+      accessibilityLabel="input-icon"
       align="xMidYMid"
       bbHeight={16}
       bbWidth={16}
@@ -500,6 +501,7 @@ exports[`Input should render input with error state correctly 1`] = `
       textAlign="left"
     />
     <RNSVGSvgView
+      accessibilityLabel="input-icon"
       align="xMidYMid"
       bbHeight={16}
       bbWidth={16}
@@ -797,6 +799,7 @@ exports[`Input should render input with icon correctly 1`] = `
       textAlign="left"
     />
     <RNSVGSvgView
+      accessibilityLabel="input-icon"
       align="xMidYMid"
       bbHeight={16}
       bbWidth={16}
@@ -1328,6 +1331,7 @@ exports[`Input should render input with success state and success text correctly
       textAlign="left"
     />
     <RNSVGSvgView
+      accessibilityLabel="input-icon"
       align="xMidYMid"
       bbHeight={16}
       bbWidth={16}
@@ -1522,6 +1526,7 @@ exports[`Input should render input with success state correctly 1`] = `
       textAlign="left"
     />
     <RNSVGSvgView
+      accessibilityLabel="input-icon"
       align="xMidYMid"
       bbHeight={16}
       bbWidth={16}

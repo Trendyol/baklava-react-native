@@ -33,7 +33,7 @@ export const Basic: TabsStory = args => {
       </Text>
       <Tabs
         {...args}
-        onValueChange={() => setValue(value)}
+        onValueChange={setValue}
         value={value}
         defaultValue="tab1">
         <Tabs.List>
@@ -170,6 +170,141 @@ export const Cases: TabsStory = () => {
             <Tabs.Option value="tab3" title="Tab Title" />
             <Tabs.Option value="tab4" title="Tab Title" caption="Caption" />
             <Tabs.Option value="tab5" title="Tab Title" caption="Caption" />
+          </Tabs.List>
+          <Tabs.Content value="tab1">
+            <Box mt="s">
+              <Text>Tab 1 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab2">
+            <Box mt="s">
+              <Text>Tab 2 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab3">
+            <Box mt="s">
+              <Text>Tab 3 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab4">
+            <Box mt="s">
+              <Text>Tab 4 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab5">
+            <Box mt="s">
+              <Text>Tab 5 Content</Text>
+            </Box>
+          </Tabs.Content>
+        </Tabs>
+      </Box>
+    </>
+  );
+};
+
+export const IconAndBadge: TabsStory = () => {
+  const [value1, setValue1] = useState('tab1');
+  const [value2, setValue2] = useState('tab1');
+  const [value3, setValue3] = useState('tab1');
+
+  return (
+    <>
+      <Text p="2xs" variant="subtitle01Bold">
+        Icon And Badge Tab Cases
+      </Text>
+
+      <Box px="m" py="2xs" mt="5xl">
+        <Tabs value={value1} onValueChange={setValue1} defaultValue="tab1">
+          <Tabs.List>
+            <Tabs.Option value="tab2" title="Tab Title" caption="Caption" />
+            <Tabs.Option
+              value="tab1"
+              title="Tab Title"
+              caption="Caption"
+              iconName="heart"
+            />
+            <Tabs.Option value="tab3" title="Tab Title" />
+          </Tabs.List>
+          <Tabs.Content value="tab1">
+            <Box mt="s">
+              <Text>Tab 1 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab2">
+            <Box mt="s">
+              <Text>Tab 2 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab3">
+            <Box mt="s">
+              <Text>Tab 3 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab4">
+            <Box mt="s">
+              <Text>Tab 4 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab5">
+            <Box mt="s">
+              <Text>Tab 5 Content</Text>
+            </Box>
+          </Tabs.Content>
+        </Tabs>
+      </Box>
+
+      <Box px="m" py="2xs" mt="5xl">
+        <Tabs value={value2} onValueChange={setValue2} defaultValue="tab1">
+          <Tabs.List>
+            <Tabs.Option value="tab2" title="Tab Title" caption="Caption" />
+            <Tabs.Option
+              value="tab1"
+              title="Tab Title"
+              caption="Caption"
+              badgeText="New"
+            />
+            <Tabs.Option value="tab3" title="Tab Title" />
+          </Tabs.List>
+          <Tabs.Content value="tab1">
+            <Box mt="s">
+              <Text>Tab 1 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab2">
+            <Box mt="s">
+              <Text>Tab 2 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab3">
+            <Box mt="s">
+              <Text>Tab 3 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab4">
+            <Box mt="s">
+              <Text>Tab 4 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab5">
+            <Box mt="s">
+              <Text>Tab 5 Content</Text>
+            </Box>
+          </Tabs.Content>
+        </Tabs>
+      </Box>
+
+      <Box px="m" py="2xs" mt="5xl">
+        <Tabs value={value3} onValueChange={setValue3} defaultValue="tab1">
+          <Tabs.List>
+            <Tabs.Option value="tab2" title="Tab Title" caption="Caption" />
+            <Tabs.Option
+              value="tab1"
+              title="Tab Title"
+              caption="Caption"
+              iconName="confetti"
+              badgeText="Ipsum"
+            />
+            <Tabs.Option value="tab3" title="Tab Title" />
           </Tabs.List>
           <Tabs.Content value="tab1">
             <Box mt="s">

@@ -40,6 +40,7 @@ exports[`Alert should render alert correctly 1`] = `
       }
     >
       <RNSVGSvgView
+        accessibilityLabel="alert-icon"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -198,6 +199,7 @@ exports[`Alert should render alert correctly 1`] = `
         testID="alert-close-button"
       >
         <RNSVGSvgView
+          accessibilityLabel="icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}
