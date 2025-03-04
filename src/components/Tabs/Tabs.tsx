@@ -53,21 +53,24 @@ const Tabs = ({
 };
 
 const List = ({ children }: PropsWithChildren) => {
-  const childrenArray = React.Children.toArray(children);
+  const data = React.useMemo(() => {
+    const childrenArray = React.Children.toArray(children);
+    return insertObjectBetweenElements(
+      childrenArray,
+      <Box
+        flex={1}
+        width={1}
+        height={30}
+        alignSelf="center"
+        backgroundColor="neutralLighter"
+      />,
+    );
+  }, [children]);
 
   return (
     <Box testID="tabsListBox" accessibilityLabel="tabsListBox">
       <FlatList
-        data={insertObjectBetweenElements(
-          childrenArray,
-          <Box
-            flex={1}
-            width={1}
-            height={30}
-            alignSelf="center"
-            backgroundColor="neutralLighter"
-          />,
-        )}
+        data={data}
         testID="tabsFlatList"
         accessibilityLabel="tabsFlatList"
         keyExtractor={(item, index) => index.toString()}
