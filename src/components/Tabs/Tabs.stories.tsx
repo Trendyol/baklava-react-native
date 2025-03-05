@@ -216,9 +216,9 @@ export const IconAndBadge: TabsStory = () => {
       <Box px="m" py="2xs" mt="5xl">
         <Tabs value={value1} onValueChange={setValue1} defaultValue="tab1">
           <Tabs.List>
-            <Tabs.Option value="tab2" title="Tab Title" caption="Caption" />
+            <Tabs.Option value="tab1" title="Tab Title" caption="Caption" />
             <Tabs.Option
-              value="tab1"
+              value="tab2"
               title="Tab Title"
               caption="Caption"
               iconName="heart"
@@ -240,25 +240,15 @@ export const IconAndBadge: TabsStory = () => {
               <Text>Tab 3 Content</Text>
             </Box>
           </Tabs.Content>
-          <Tabs.Content value="tab4">
-            <Box mt="s">
-              <Text>Tab 4 Content</Text>
-            </Box>
-          </Tabs.Content>
-          <Tabs.Content value="tab5">
-            <Box mt="s">
-              <Text>Tab 5 Content</Text>
-            </Box>
-          </Tabs.Content>
         </Tabs>
       </Box>
 
       <Box px="m" py="2xs" mt="5xl">
         <Tabs value={value2} onValueChange={setValue2} defaultValue="tab1">
           <Tabs.List>
-            <Tabs.Option value="tab2" title="Tab Title" caption="Caption" />
+            <Tabs.Option value="tab1" title="Tab Title" caption="Caption" />
             <Tabs.Option
-              value="tab1"
+              value="tab2"
               title="Tab Title"
               caption="Caption"
               badgeText="New"
@@ -280,29 +270,19 @@ export const IconAndBadge: TabsStory = () => {
               <Text>Tab 3 Content</Text>
             </Box>
           </Tabs.Content>
-          <Tabs.Content value="tab4">
-            <Box mt="s">
-              <Text>Tab 4 Content</Text>
-            </Box>
-          </Tabs.Content>
-          <Tabs.Content value="tab5">
-            <Box mt="s">
-              <Text>Tab 5 Content</Text>
-            </Box>
-          </Tabs.Content>
         </Tabs>
       </Box>
 
       <Box px="m" py="2xs" mt="5xl">
         <Tabs value={value3} onValueChange={setValue3} defaultValue="tab1">
           <Tabs.List>
-            <Tabs.Option value="tab2" title="Tab Title" caption="Caption" />
+            <Tabs.Option value="tab1" title="Tab Title" caption="Caption" />
             <Tabs.Option
-              value="tab1"
+              value="tab2"
               title="Tab Title"
               caption="Caption"
               iconName="confetti"
-              badgeText="Ipsum"
+              badgeText="Lorem"
             />
             <Tabs.Option value="tab3" title="Tab Title" />
           </Tabs.List>
@@ -319,16 +299,6 @@ export const IconAndBadge: TabsStory = () => {
           <Tabs.Content value="tab3">
             <Box mt="s">
               <Text>Tab 3 Content</Text>
-            </Box>
-          </Tabs.Content>
-          <Tabs.Content value="tab4">
-            <Box mt="s">
-              <Text>Tab 4 Content</Text>
-            </Box>
-          </Tabs.Content>
-          <Tabs.Content value="tab5">
-            <Box mt="s">
-              <Text>Tab 5 Content</Text>
             </Box>
           </Tabs.Content>
         </Tabs>
