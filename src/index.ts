@@ -3,6 +3,7 @@ export { default as theme } from './theme';
 
 export { default as Alert } from './components/Alert/Alert';
 export { default as Badge } from './components/Badge/Badge';
+export { default as BottomSheet } from './components/BottomSheet/BottomSheet';
 export { default as Box } from './components/Box/Box';
 export { default as Button } from './components/Button/Button';
 export { default as Checkbox } from './components/Checkbox/Checkbox';

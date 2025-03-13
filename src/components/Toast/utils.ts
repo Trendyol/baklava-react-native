@@ -7,7 +7,7 @@ export function capitalizeFirstLetter(str?: string) {
 
 export function getFirstNChar(str: string, n: number, suffix?: string) {
   let result = str?.substring(0, n);
-  if (str.length > n) {
+  if (str?.length > n) {
     result = result.trim() + (suffix ?? '');
   }
   return result;
