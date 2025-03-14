@@ -125,7 +125,7 @@ exports[`Modal should render Modal when visible true with children 1`] = `
         }
         accessible={true}
         collapsable={false}
-        focusable={true}
+        focusable={false}
         hitSlop={
           {
             "bottom": 0,

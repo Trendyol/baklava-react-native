@@ -1,0 +1,136 @@
+import { Meta } from '@storybook/addon-docs';
+import BottomSheetBasic from '../assets/bottomsheet/BottomSheetBasic.png';
+import BottomSheetWithImage from '../assets/bottomsheet/BottomSheetWithImage.png';
+
+<Meta
+  title="Components/BottomSheet"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# BottomSheet
+
+Bottom sheets are surfaces containing additional content anchored below the fold.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={BottomSheetBasic} width="250" alt="BottomSheetBasic" />
+  <img src={BottomSheetWithImage} width="250" alt="BottomSheetWithImage" />
+</div>
+
+<br/>
+<br/>
+
+## Provider
+Developed using Portal for easy use of Component.
+There is no direct portal solution in React Native as <a href="https://legacy.reactjs.org/docs/portals.html" title="title">React Portal</a>.
+We use the https://github.com/gorhom/react-native-portal.
+
+Make sure to add `PortalProvider` in your root view.
+
+```jsx
+import * as React from 'react';
+import { theme, ThemeProvider, PortalProvider } from '@trendyol/baklava-react-native';
+import App from './src/App';
+
+export default function Main() {
+  return (
+    <ThemeProvider theme={theme}>
+      <PortalProvider>
+        <App />
+      </PortalProvider>
+    </ThemeProvider>
+  );
+}
+```
+
+
+## Usage
+
+```jsx
+
+<BottomSheet
+  modalKey="example-bottom-sheet"
+  selectButtonLabel="Select"
+  closeButtonLabel="Close"
+  visible={isVisible}
+  title="Basic"
+  closeButtonAction={() => setVisible(false)}
+  selectButtonAction={() => setVisible(false)}>
+  <Text>...</Text>
+</BottomSheet>
+```
+
+<br />
+
+## Props
+
+#### modalKey
+
+If you want to open multiple modals, you must assign different keys.
+
+Type: `string`
+
+### visible (required)
+
+Type: `boolean`, Default value: `false`
+
+### closable
+
+Type: `boolean`, Default value : `true`
+
+### title
+
+Type: `string`
+
+### duration
+
+It is the duration of the fade in effect of the overlay. It is in microseconds.
+
+Type: `number`, Default value: `200`
+
+### justifyContent
+
+Type: `center`, `flex-start` , `flex-end`,
+
+Default value: `center`
+
+### wrongPressThresholdMs
+
+It is to prevent close due to wrong clicks. It is in microseconds.
+
+Type: `number`, Default value: `1000`
+
+### closeButtonAction (required)
+
+Type: `Function`
+
+### closeButtonLabel (required)
+
+Type: `string`
+
+### selectButtonAction (required)
+
+Type: `Function`
+
+### selectButtonLabel (required)
+
+Type: `string`
+
+#### children (required)
+
+Type: `React.ReactNode`
+
+#### header
+
+Type: `React.ReactNode`

@@ -48,6 +48,7 @@ export const parameters: Parameters = {
       order: [
         'Alert',
         'Badge',
+        'BottomSheet',
         'Box',
         'Button',
         ['Button Variants', 'Button Types'],
