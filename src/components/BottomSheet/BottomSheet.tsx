@@ -9,7 +9,6 @@ export type BottomSheetProps = ModalProps & {
   closeButtonLabel: string;
   selectButtonLabel: string;
   selectButtonAction?: () => void;
-  title: string;
   header?: React.ReactNode;
 };
 export const BottomSheetTitle = ({
