@@ -190,4 +190,45 @@ describe('Checkbox', () => {
     // then
     expect(checkboxLabel).toBeFalsy();
   });
+
+  test('should render with icon correctly when checked', () => {
+    // when
+    const { getByTestId } = render(<Checkbox checked={true} icon="heart" />);
+    const icon = getByTestId('icon');
+
+    // then
+    expect(icon).toBeTruthy();
+    expect(icon.props.fill).toBe(theme.colors.primaryKey);
+  });
+
+  test('should render with icon correctly when unchecked', () => {
+    // when
+    const { getByTestId } = render(<Checkbox checked={false} icon="heart" />);
+    const icon = getByTestId('icon');
+
+    // then
+    expect(icon).toBeTruthy();
+    expect(icon.props.fill).toBe(theme.colors.neutralDarker);
+  });
+
+  test('should render with icon correctly when disabled', () => {
+    // when
+    const { getByTestId } = render(
+      <Checkbox checked={false} disabled icon="heart" />,
+    );
+    const icon = getByTestId('icon');
+
+    // then
+    expect(icon).toBeTruthy();
+    expect(icon.props.fill).toBe(theme.colors.neutralLight);
+  });
+
+  test('should render without icon correctly when icon prop is not provided', () => {
+    // when
+    const { queryByTestId } = render(<Checkbox checked={false} />);
+    const icon = queryByTestId('icon');
+
+    // then
+    expect(icon).toBeFalsy();
+  });
 });

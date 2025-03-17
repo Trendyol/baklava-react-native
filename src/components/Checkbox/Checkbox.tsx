@@ -15,6 +15,7 @@ import { Theme } from '../../theme';
 import Box from '../Box/Box';
 import Icon from '../Icon/Icon';
 import Text from '../Text/Text';
+import { IconNameType } from '../Icon/types';
 
 const variant = createVariant({ themeKey: 'checkboxVariants' });
 
@@ -38,6 +39,7 @@ type CheckboxProps = React.ComponentProps<typeof CheckboxContainer> & {
   indeterminate?: boolean;
   label?: string;
   disabled?: boolean;
+  icon?: IconNameType | null;
   onPress?: () => void;
 };
 
@@ -46,10 +48,11 @@ const Checkbox = ({
   indeterminate,
   label,
   disabled = false,
+  icon,
   onPress,
   ...rest
 }: CheckboxProps) => {
-  const icon = React.useMemo(() => {
+  const checkIcon = React.useMemo(() => {
     if (!checked) {
       return null;
     }
@@ -91,8 +94,24 @@ const Checkbox = ({
             ? 'disabledUnchecked'
             : 'unchecked'
         }>
-        {icon}
+        {checkIcon}
       </Tickbox>
+      {icon ? (
+        <Box marginLeft="2xs">
+          <Icon
+            size="s"
+            name={icon}
+            color={
+              disabled
+                ? 'neutralLight'
+                : checked
+                ? 'primaryKey'
+                : 'neutralDarker'
+            }
+            testID="icon"
+          />
+        </Box>
+      ) : null}
       {label ? (
         <Text
           testID="label"
