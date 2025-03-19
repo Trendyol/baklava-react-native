@@ -14,8 +14,9 @@ import { TouchableOpacity } from 'react-native';
 import { Theme } from '../../theme';
 import Box from '../Box/Box';
 import Icon from '../Icon/Icon';
+import FlagIcon from '../FlagIcon/FlagIcon';
 import Text from '../Text/Text';
-import { IconNameType } from '../Icon/types';
+import { FlagIconNameType } from '../FlagIcon/types';
 
 const variant = createVariant({ themeKey: 'checkboxVariants' });
 
@@ -39,7 +40,7 @@ type CheckboxProps = React.ComponentProps<typeof CheckboxContainer> & {
   indeterminate?: boolean;
   label?: string;
   disabled?: boolean;
-  icon?: IconNameType | null;
+  flagIcon?: FlagIconNameType | null;
   onPress?: () => void;
 };
 
@@ -48,7 +49,7 @@ const Checkbox = ({
   indeterminate,
   label,
   disabled = false,
-  icon,
+  flagIcon,
   onPress,
   ...rest
 }: CheckboxProps) => {
@@ -96,11 +97,11 @@ const Checkbox = ({
         }>
         {checkIcon}
       </Tickbox>
-      {icon ? (
+      {flagIcon ? (
         <Box marginLeft="2xs">
-          <Icon
+          <FlagIcon
             size="s"
-            name={icon}
+            name={flagIcon}
             color={
               disabled
                 ? 'neutralLight'
@@ -108,7 +109,7 @@ const Checkbox = ({
                 ? 'primaryKey'
                 : 'neutralDarker'
             }
-            testID="icon"
+            testID="flag-icon"
           />
         </Box>
       ) : null}

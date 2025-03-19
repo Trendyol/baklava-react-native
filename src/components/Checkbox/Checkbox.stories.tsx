@@ -159,39 +159,39 @@ export const Cases: CheckboxStory = () => {
   );
 };
 
-export const CheckboxWithIcon: CheckboxStory = () => {
+export const CheckboxWithFlagIcon: CheckboxStory = () => {
   return (
     <>
       <Text p="2xs" variant="subtitle01Bold">
-        Checkbox With Icon
+        Checkbox With Flag Icon
       </Text>
 
       <Box px="m" py="2xs">
         <Box height={12} />
         <Checkbox
           checked={false}
-          label="checked: false, icon: heart"
-          icon="heart"
+          label="checked: false, flagIcon: turkey"
+          flagIcon="turkey"
         />
         <Box height={12} />
         <Checkbox
           checked={true}
-          label="checked: true, icon: heart"
-          icon="heart"
+          label="checked: true, flagIcon: germany"
+          flagIcon="germany"
         />
         <Box height={12} />
         <Checkbox
           checked={true}
           indeterminate={true}
-          label="checked: true, indeterminate: true, icon: heart"
-          icon="heart"
+          label="checked: true, indeterminate: true, flagIcon: greece"
+          flagIcon="greece"
         />
         <Box height={12} />
         <Checkbox
           disabled={true}
           checked={false}
-          label="checked: false, disabled, icon: heart"
-          icon="heart"
+          label="checked: false, disabled, flagIcon: romania"
+          flagIcon="romania"
         />
       </Box>
     </>

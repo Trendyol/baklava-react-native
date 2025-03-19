@@ -141,43 +141,40 @@ describe('RadioButton', () => {
   test('should render with icon correctly when selected', () => {
     // when
     const { getByTestId } = render(
-      <RadioButton selected={true} icon="heart" />,
+      <RadioButton selected={true} flagIcon="turkey" />,
     );
-    const iconComponent = getByTestId('icon');
+    const iconComponent = getByTestId('flag-icon');
 
     // then
     expect(iconComponent).toBeTruthy();
-    expect(iconComponent.props.fill).toBe(theme.colors.primaryKey);
   });
 
   test('should render with icon correctly when unselected', () => {
     // when
     const { getByTestId } = render(
-      <RadioButton selected={false} icon="heart" />,
+      <RadioButton selected={false} flagIcon="turkey" />,
     );
-    const iconComponent = getByTestId('icon');
+    const iconComponent = getByTestId('flag-icon');
 
     // then
     expect(iconComponent).toBeTruthy();
-    expect(iconComponent.props.fill).toBe(theme.colors.neutralDarker);
   });
 
   test('should render with icon correctly when disabled', () => {
     // when
     const { getByTestId } = render(
-      <RadioButton selected={false} disabled icon="heart" />,
+      <RadioButton selected={false} disabled flagIcon="turkey" />,
     );
-    const iconComponent = getByTestId('icon');
+    const iconComponent = getByTestId('flag-icon');
 
     // then
     expect(iconComponent).toBeTruthy();
-    expect(iconComponent.props.fill).toBe(theme.colors.neutralLight);
   });
 
   test('should render without icon correctly', () => {
     // when
     const { queryByTestId } = render(<RadioButton selected={true} />);
-    const iconComponent = queryByTestId('icon');
+    const iconComponent = queryByTestId('flag-icon');
 
     // then
     expect(iconComponent).toBeFalsy();

@@ -98,39 +98,39 @@ export const Cases: RadioButtonStory = () => {
   );
 };
 
-export const RadioButtonWithIcon: RadioButtonStory = () => {
+export const RadioButtonWithFlagIcon: RadioButtonStory = () => {
   return (
     <>
       <Text p="2xs" variant="subtitle01Bold">
-        Radio Button With Icon
+        Radio Button With Flag Icon
       </Text>
 
       <Box px="m" py="2xs">
         <Box height={12} />
         <RadioButton
           selected={false}
-          label="selected: false, icon: heart"
-          icon="heart"
+          label="selected: false, flagIcon: turkey"
+          flagIcon="turkey"
         />
         <Box height={12} />
         <RadioButton
           selected={true}
-          label="selected: true, icon: heart"
-          icon="heart"
+          label="selected: true, flagIcon: germany"
+          flagIcon="germany"
         />
         <Box height={12} />
         <RadioButton
           disabled
           selected={false}
-          label="selected: false, disabled, icon: heart"
-          icon="heart"
+          label="selected: false, disabled, flagIcon: greece"
+          flagIcon="greece"
         />
         <Box height={12} />
         <RadioButton
           disabled
           selected={true}
-          label="selected: true, disabled, icon: heart"
-          icon="heart"
+          label="selected: true, disabled, flagIcon: romania"
+          flagIcon="romania"
         />
       </Box>
     </>

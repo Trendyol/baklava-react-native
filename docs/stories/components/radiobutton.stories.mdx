@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs';
 import RadioButtonCases from '../assets/radiobutton/radiobuttonCases.png';
-import RadioButtonWithIcon from '../assets/radiobutton/radiobuttonWithIcon.png';
+import RadiobuttonWithFlagIcon from '../assets/radiobutton/radiobuttonWithFlagIcon.png';
 
 <Meta
   title="Components/RadioButton"
@@ -25,7 +25,7 @@ RadioButton allow users to select one item.
     justifyContent: 'center',
   }}>
   <img src={RadioButtonCases} width="250" alt="RadioButtonCases" />
-  <img src={RadioButtonWithIcon} width="250" alt="RadioButtonWithIcon" />
+  <img src={RadiobuttonWithFlagIcon} width="250" alt="RadiobuttonWithFlagIcon" />
 </div>
 
 <br/>
@@ -34,7 +34,7 @@ RadioButton allow users to select one item.
 ## Usage
 
 ```jsx
-<RadioButton disable={false} selected={true} label="lorem ipsum" icon="heart" />
+<RadioButton disable={false} selected={true} label="lorem ipsum" flagIcon="turkey" />
 ```
 
 <br />
@@ -53,11 +53,11 @@ Type: `string`
 
 The label defines a caption for an text.
 
-### icon
+### flagIcon
 
 Type: `string`
 
-Radio Button icon
+Radio Button flag icon.
 
 ### disabled
 
