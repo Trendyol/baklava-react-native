@@ -14,8 +14,8 @@ import { TouchableOpacity } from 'react-native';
 import { Theme } from '../../theme';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
-import Icon from '../Icon/Icon';
-import { IconNameType } from '../Icon/types';
+import FlagIcon from '../FlagIcon/FlagIcon';
+import { FlagIconNameType } from '../FlagIcon/types';
 
 const variant = createVariant({ themeKey: 'radioButtonVariants' });
 
@@ -38,7 +38,7 @@ type RadioButtonProps = React.ComponentProps<typeof RadioButtonContainer> & {
   selected: boolean;
   label?: string;
   disabled?: boolean;
-  icon?: IconNameType | null;
+  flagIcon?: FlagIconNameType | null;
   onPress?: () => void;
 };
 
@@ -46,7 +46,7 @@ const RadioButton = ({
   selected,
   label,
   disabled = false,
-  icon,
+  flagIcon,
   onPress,
   ...rest
 }: RadioButtonProps) => {
@@ -92,11 +92,11 @@ const RadioButton = ({
       <Selectbox testID="selectbox" variant={selectVariant}>
         {selectedBox}
       </Selectbox>
-      {icon ? (
+      {flagIcon ? (
         <Box marginLeft="2xs">
-          <Icon
+          <FlagIcon
             size="s"
-            name={icon}
+            name={flagIcon}
             color={
               disabled
                 ? 'neutralLight'
@@ -104,7 +104,7 @@ const RadioButton = ({
                 ? 'primaryKey'
                 : 'neutralDarker'
             }
-            testID="icon"
+            testID="flag-icon"
           />
         </Box>
       ) : null}

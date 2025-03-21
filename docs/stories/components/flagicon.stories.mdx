@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/addon-docs';
+import FlagIconSizes from '../assets/flagicon/FlagIconSizes.png';
+import FlagIconList from '../assets/flagicon/FlagIconList.png';
+
+<Meta
+  title="Components/FlagIcon"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Flag Icon
+
+The icon of the flags of the countries. Cannot get color from outside.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={FlagIconSizes} width="250" alt="FlagIconSizes" />
+  <img src={FlagIconList} width="250" alt="FlagIconList" />
+</div>
+
+<br/><br/>
+<br/><br/>
+
+## Usage
+
+```jsx
+<FlagIcon name="turkey" size="xl" />
+```
+
+<br />
+
+## Props
+
+#### name
+
+Type: `string`
+
+Flag Icon names are in the list, fixed and cannot be used outside the list.
+
+`czech-republic`,
+`germany`,
+`greece`,
+`qatar`,
+`romania`,
+`saudi-arabia`,
+`slovakia`,
+`turkey`,
+`united-arab-emirates`
+
+#### size
+
+Type: `string`
+
+The size of the flag icon.
+
+`xl`,
+`l`,
+`m`,
+`s`,
+`xs`,
+`2xs`

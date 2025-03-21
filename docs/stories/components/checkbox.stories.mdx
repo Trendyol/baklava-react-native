@@ -1,6 +1,6 @@
 import { Meta } from '@storybook/addon-docs';
 import CheckboxCases from '../assets/checkbox/checkboxCases.png';
-import CheckboxWithIcon from '../assets/checkbox/checkboxWithIcon.png';
+import CheckboxWithFlagIcon from '../assets/checkbox/checkboxWithFlagIcon.png';
 
 <Meta
   title="Components/Checkbox"
@@ -25,7 +25,7 @@ Checkboxes allow users to select one or more items from a set.
     justifyContent: 'center',
   }}>
   <img src={CheckboxCases} width="250" alt="CheckboxCases" />
-  <img src={CheckboxWithIcon} width="250" alt="CheckboxWithIcon" />
+  <img src={CheckboxWithFlagIcon} width="250" alt="CheckboxWithFlagIcon" />
 </div>
 
 <br/>
@@ -34,7 +34,7 @@ Checkboxes allow users to select one or more items from a set.
 ## Usage
 
 ```jsx
-<Checkbox disable={false} checked={true} indeterminate={true} label="lorem ipsum" icon="heart" />
+<Checkbox disable={false} checked={true} indeterminate={true} label="lorem ipsum" flagIcon="turkey" />
 ```
 
 <br />
@@ -59,11 +59,11 @@ Type: `string`
 
 The label defines a caption for an text.
 
-### icon
+### flagIcon
 
 Type: `string`
 
-Checkbox icon.
+Checkbox flag icon.
 
 ### disabled
 
