@@ -1,0 +1,109 @@
+import { Meta } from '@storybook/addon-docs';
+import SelectBottomSheetWithCheckbox from '../assets/selectbottomsheet/SelectBottomSheetWithCheckbox.png';
+import SelectBottomSheetWithRadioButton from '../assets/selectbottomsheet/SelectBottomSheetWithRadioButton.png';
+
+<Meta
+  title="Components/SelectBottomSheet"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# SelectBottomSheet
+
+Select component uses the Bottom Sheet component for listing the selectable (single and multi selection) options.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={SelectBottomSheetWithCheckbox} width="250" alt="SelectBottomSheetWithCheckbox" />
+  <img src={SelectBottomSheetWithRadioButton} width="250" alt="SelectBottomSheetWithRadioButton" />
+</div>
+
+<br/>
+<br/>
+
+## Provider
+Developed using Portal for easy use of Component.
+There is no direct portal solution in React Native as <a href="https://legacy.reactjs.org/docs/portals.html" title="title">React Portal</a>.
+We use the https://github.com/gorhom/react-native-portal.
+
+Make sure to add `PortalProvider` in your root view.
+
+```jsx
+import * as React from 'react';
+import { theme, ThemeProvider, PortalProvider } from '@trendyol/baklava-react-native';
+import App from './src/App';
+
+export default function Main() {
+  return (
+    <ThemeProvider theme={theme}>
+      <PortalProvider>
+        <App />
+      </PortalProvider>
+    </ThemeProvider>
+  );
+}
+```
+
+## Usage
+
+```jsx
+<SelectBottomSheet
+  visible={isVisible}
+  type="checkbox"
+  selectButtonLabel="Select"
+  closeButtonLabel="Close"
+  title="Select Options"
+  closeButtonAction={() => setVisible(false)}
+  selectButtonAction={() => {
+    showAlert(selectedOptions);
+    setVisible(false);
+  }}
+  options={options}
+  selectedOption={selectedOptions}
+  onSelect={handleMultiSelect}
+/>
+```
+
+<br />
+
+## Props
+
+### options (required)
+
+Type: `Option[]`
+
+### type (required)
+
+Type: `'checkbox' | 'radio'`
+
+### onSelect (required)
+
+Type: `Function`
+
+### selectedOption
+
+Type: `string[]`
+
+### maxVisibleItems
+
+Type: `number`
+
+### ...bottomSheetProps
+
+Type: `BottomSheetProps`
+
+<>
+  <a href="https://trendyol.github.io/baklava-react-native/?path=/docs/components-bottomsheet--page" title="title">
+    ...BottomSheet props
+  </a>
+</>
