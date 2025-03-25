@@ -59,6 +59,7 @@ export const parameters: Parameters = {
         'Input',
         'Modal',
         'RadioButton',
+        'SelectBottomSheet',
         'Spinner',
         'Switch',
         'Tabs',
