@@ -14,7 +14,7 @@ export interface BaseToastData {
   /**
    * message to appear in toast
    *
-   * max length is 110
+   * max length is 250
    */
   text?: string;
   /**
