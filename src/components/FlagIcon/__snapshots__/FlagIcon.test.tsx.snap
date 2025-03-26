@@ -26,7 +26,7 @@ exports[`FlagIcon should render icon correctly 1`] = `
     ]
   }
   testID="flagIcon"
-  title="turkey"
+  title="TR"
   vbHeight={24}
   vbWidth={24}
   width={24}

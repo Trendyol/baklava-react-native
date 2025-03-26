@@ -109,28 +109,28 @@ export const RadioButtonWithFlagIcon: RadioButtonStory = () => {
         <Box height={12} />
         <RadioButton
           selected={false}
-          label="selected: false, flagIcon: turkey"
-          flagIcon="turkey"
+          label="selected: false, flagIcon: TR"
+          flagIcon="TR"
         />
         <Box height={12} />
         <RadioButton
           selected={true}
-          label="selected: true, flagIcon: germany"
-          flagIcon="germany"
+          label="selected: true, flagIcon: DE"
+          flagIcon="DE"
         />
         <Box height={12} />
         <RadioButton
           disabled
           selected={false}
-          label="selected: false, disabled, flagIcon: greece"
-          flagIcon="greece"
+          label="selected: false, disabled, flagIcon: GR"
+          flagIcon="GR"
         />
         <Box height={12} />
         <RadioButton
           disabled
           selected={true}
-          label="selected: true, disabled, flagIcon: romania"
-          flagIcon="romania"
+          label="selected: true, disabled, flagIcon: RO"
+          flagIcon="RO"
         />
       </Box>
     </>

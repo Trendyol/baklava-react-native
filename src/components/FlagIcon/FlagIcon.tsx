@@ -3,7 +3,6 @@ import { useTheme, VariantProps } from '@ergenekonyigit/restyle';
 import * as icons from '../../icons';
 import { Theme } from '../../theme';
 import { FlagIconNameType } from './types';
-import { toPascalCase } from './utils';
 import { SvgProps } from 'react-native-svg';
 
 const FlagIcon = ({
@@ -23,7 +22,7 @@ const FlagIcon = ({
 
   const iconSize = theme.iconSizeVariants[size];
 
-  const TheIcon = icons[toPascalCase(name) as keyof typeof icons];
+  const TheIcon = icons[name as keyof typeof icons];
 
   return (
     <TheIcon

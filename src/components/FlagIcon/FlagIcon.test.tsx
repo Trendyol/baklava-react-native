@@ -11,7 +11,7 @@ describe('FlagIcon', () => {
 
   test('should render icon correctly', () => {
     // when
-    const { toJSON } = render(<FlagIcon name="turkey" />);
+    const { toJSON } = render(<FlagIcon name="TR" />);
 
     // then
     expect(toJSON()).toMatchSnapshot();
@@ -19,9 +19,7 @@ describe('FlagIcon', () => {
 
   test('should render default size correctly', () => {
     // when
-    const { getByTestId } = render(
-      <FlagIcon testID="flagIcon" name="turkey" />,
-    );
+    const { getByTestId } = render(<FlagIcon testID="flagIcon" name="TR" />);
     const iconComponent = getByTestId('flagIcon');
 
     // then
@@ -32,7 +30,7 @@ describe('FlagIcon', () => {
   test('should render given size correctly', () => {
     // when
     const { getByTestId } = render(
-      <FlagIcon testID="flagIcon" name="turkey" size="2xs" />,
+      <FlagIcon testID="flagIcon" name="TR" size="2xs" />,
     );
     const iconComponent = getByTestId('flagIcon');
 

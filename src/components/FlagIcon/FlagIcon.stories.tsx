@@ -22,7 +22,7 @@ const FlagIconMeta: ComponentMeta<typeof FlagIcon> = {
     },
   },
   args: {
-    name: 'turkey',
+    name: 'TR',
     size: 'l',
   },
 };

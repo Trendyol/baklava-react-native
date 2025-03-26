@@ -170,28 +170,28 @@ export const CheckboxWithFlagIcon: CheckboxStory = () => {
         <Box height={12} />
         <Checkbox
           checked={false}
-          label="checked: false, flagIcon: turkey"
-          flagIcon="turkey"
+          label="checked: false, flagIcon: TR"
+          flagIcon="TR"
         />
         <Box height={12} />
         <Checkbox
           checked={true}
-          label="checked: true, flagIcon: germany"
-          flagIcon="germany"
+          label="checked: true, flagIcon: DE"
+          flagIcon="DE"
         />
         <Box height={12} />
         <Checkbox
           checked={true}
           indeterminate={true}
-          label="checked: true, indeterminate: true, flagIcon: greece"
-          flagIcon="greece"
+          label="checked: true, indeterminate: true, flagIcon: GR"
+          flagIcon="GR"
         />
         <Box height={12} />
         <Checkbox
           disabled={true}
           checked={false}
-          label="checked: false, disabled, flagIcon: romania"
-          flagIcon="romania"
+          label="checked: false, disabled, flagIcon: RO"
+          flagIcon="RO"
         />
       </Box>
     </>

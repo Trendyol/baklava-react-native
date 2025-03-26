@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList, ScrollView, StyleSheet } from 'react-native';
-import Box from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 import BottomSheet, { BottomSheetProps } from '../BottomSheet/BottomSheet';
 import Checkbox from '../Checkbox/Checkbox';
 import RadioButton from '../RadioButton/RadioButton';
@@ -18,6 +18,7 @@ interface SelectBottomSheetProps extends BottomSheetProps {
   onSelect: (selectedValues: string[]) => void;
   selectedOption?: string[];
   maxVisibleItems?: number;
+  pb?: BoxProps['pb'];
 }
 
 const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
@@ -26,6 +27,7 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
   onSelect,
   selectedOption,
   maxVisibleItems = 6,
+  pb,
   ...bottomSheetProps
 }) => {
   const [selectedValues, setSelectedValues] = React.useState<string[]>(
@@ -81,21 +83,23 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
 
   return (
     <BottomSheet {...bottomSheetProps}>
-      <ScrollView
-        testID={'selectBottomSheet'}
-        contentContainerStyle={styles.flatListContainer}
-        horizontal
-        bounces={false}>
-        <FlatList
-          data={options}
-          renderItem={renderItem}
-          keyExtractor={item => item.id}
-          nestedScrollEnabled
-          initialNumToRender={maxVisibleItems}
-          maxToRenderPerBatch={maxVisibleItems}
-          style={{ maxHeight: maxVisibleItems * 50 - 15 }}
-        />
-      </ScrollView>
+      <Box pb={pb}>
+        <ScrollView
+          testID={'selectBottomSheet'}
+          contentContainerStyle={styles.flatListContainer}
+          horizontal
+          bounces={false}>
+          <FlatList
+            data={options}
+            renderItem={renderItem}
+            keyExtractor={item => item.id}
+            nestedScrollEnabled
+            initialNumToRender={maxVisibleItems}
+            maxToRenderPerBatch={maxVisibleItems}
+            style={{ maxHeight: maxVisibleItems * 50 - 15 }}
+          />
+        </ScrollView>
+      </Box>
     </BottomSheet>
   );
 };

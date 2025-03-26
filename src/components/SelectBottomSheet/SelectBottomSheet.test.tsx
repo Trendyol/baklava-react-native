@@ -18,7 +18,7 @@ describe('SelectBottomSheet', () => {
     visible: true,
     closeButtonLabel: 'Close',
     selectButtonLabel: 'Select',
-    flagIcon: 'turkey',
+    flagIcon: 'TR',
   };
 
   afterEach(() => {
@@ -155,7 +155,7 @@ describe('SelectBottomSheet', () => {
   test('should render flag icon if provided', () => {
     // given
     const optionsWithFlag = [
-      { id: '1', label: 'Option 1', flagIcon: 'turkey' as FlagIconNameType },
+      { id: '1', label: 'Option 1', flagIcon: 'TR' as FlagIconNameType },
     ];
 
     // when
@@ -164,6 +164,6 @@ describe('SelectBottomSheet', () => {
     );
 
     // then
-    expect(getByTestId('flag-icon').props.title).toBe('turkey');
+    expect(getByTestId('flag-icon').props.title).toBe('TR');
   });
 });

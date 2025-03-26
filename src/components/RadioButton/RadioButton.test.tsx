@@ -141,7 +141,7 @@ describe('RadioButton', () => {
   test('should render with icon correctly when selected', () => {
     // when
     const { getByTestId } = render(
-      <RadioButton selected={true} flagIcon="turkey" />,
+      <RadioButton selected={true} flagIcon="TR" />,
     );
     const iconComponent = getByTestId('flag-icon');
 
@@ -152,7 +152,7 @@ describe('RadioButton', () => {
   test('should render with icon correctly when unselected', () => {
     // when
     const { getByTestId } = render(
-      <RadioButton selected={false} flagIcon="turkey" />,
+      <RadioButton selected={false} flagIcon="TR" />,
     );
     const iconComponent = getByTestId('flag-icon');
 
@@ -163,7 +163,7 @@ describe('RadioButton', () => {
   test('should render with icon correctly when disabled', () => {
     // when
     const { getByTestId } = render(
-      <RadioButton selected={false} disabled flagIcon="turkey" />,
+      <RadioButton selected={false} disabled flagIcon="TR" />,
     );
     const iconComponent = getByTestId('flag-icon');
 

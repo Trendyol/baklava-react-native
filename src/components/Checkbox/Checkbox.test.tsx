@@ -193,9 +193,7 @@ describe('Checkbox', () => {
 
   test('should render with icon correctly when checked', () => {
     // when
-    const { getByTestId } = render(
-      <Checkbox checked={true} flagIcon="turkey" />,
-    );
+    const { getByTestId } = render(<Checkbox checked={true} flagIcon="TR" />);
     const icon = getByTestId('flag-icon');
 
     // then
@@ -204,9 +202,7 @@ describe('Checkbox', () => {
 
   test('should render with icon correctly when unchecked', () => {
     // when
-    const { getByTestId } = render(
-      <Checkbox checked={false} flagIcon="turkey" />,
-    );
+    const { getByTestId } = render(<Checkbox checked={false} flagIcon="TR" />);
     const icon = getByTestId('flag-icon');
 
     // then
@@ -216,7 +212,7 @@ describe('Checkbox', () => {
   test('should render with icon correctly when disabled', () => {
     // when
     const { getByTestId } = render(
-      <Checkbox checked={false} disabled flagIcon="turkey" />,
+      <Checkbox checked={false} disabled flagIcon="TR" />,
     );
     const icon = getByTestId('flag-icon');
 
