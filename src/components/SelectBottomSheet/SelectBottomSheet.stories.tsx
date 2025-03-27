@@ -126,6 +126,23 @@ export const RadioButton: SelectBottomSheetStory = () => {
     }
   };
 
+  const [modal2, showModal2] = React.useState(false);
+  const [selectedRadioOption2, setSelectedRadioOption2] =
+    React.useState<string>('');
+
+  const handleRadioSelect2 = (option: string | string[]) => {
+    if (Array.isArray(option) && option.length > 0) {
+      setSelectedRadioOption2(option[0]);
+    } else if (typeof option === 'string') {
+      setSelectedRadioOption2(option);
+    }
+
+    if (selectedRadioOption2) {
+      showAlert([selectedRadioOption2]);
+      showModal2(false);
+    }
+  };
+
   const options = [
     { id: '1', label: 'Option 1' },
     { id: '2', label: 'Option 2' },
@@ -169,6 +186,24 @@ export const RadioButton: SelectBottomSheetStory = () => {
           options={options}
           selectedOption={[selectedRadioOption]}
           onSelect={handleRadioSelect}
+        />
+      </Box>
+
+      <Box px="m" py="2xs">
+        <Button
+          mb="m"
+          filled
+          label="RadioButton without select button"
+          onPress={() => showModal2(true)}
+        />
+        <SelectBottomSheet
+          visible={modal2}
+          type="radio"
+          options={options}
+          title="Select a Single Option"
+          closeButtonLabel="Close"
+          closeButtonAction={() => showModal2(false)}
+          onSelect={handleRadioSelect2}
         />
       </Box>
     </>

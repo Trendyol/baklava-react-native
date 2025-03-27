@@ -15,7 +15,7 @@ interface Option {
 interface SelectBottomSheetProps extends BottomSheetProps {
   options: Option[];
   type: 'checkbox' | 'radio';
-  onSelect: (selectedValues: string[]) => void;
+  onSelect?: (selectedValues: string[]) => void;
   selectedOption?: string[];
   maxVisibleItems?: number;
   pb?: BoxProps['pb'];
@@ -51,7 +51,9 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
   };
 
   React.useEffect(() => {
-    onSelect(selectedValues);
+    if (onSelect) {
+      onSelect(selectedValues);
+    }
   }, [selectedValues, onSelect]);
 
   const renderItem = ({ item, index }: { item: Option; index: number }) => {

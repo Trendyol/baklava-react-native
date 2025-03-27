@@ -166,4 +166,26 @@ describe('SelectBottomSheet', () => {
     // then
     expect(getByTestId('flag-icon').props.title).toBe('TR');
   });
+
+  test('should call onSelect if provided', () => {
+    // when
+    const { getByTestId } = render(<SelectBottomSheet {...defaultProps} />);
+    const checkbox = getByTestId('checkbox-selectBottomSheet-1');
+    fireEvent.press(checkbox);
+
+    // then
+    expect(mockOnSelect).toHaveBeenCalledWith(['1']);
+  });
+
+  test('should not call onSelect if not provided', () => {
+    // when
+    const { getByTestId } = render(
+      <SelectBottomSheet {...defaultProps} onSelect={undefined} />,
+    );
+    const checkbox = getByTestId('checkbox-selectBottomSheet-1');
+    fireEvent.press(checkbox);
+
+    // then
+    expect(mockOnSelect).not.toHaveBeenCalled();
+  });
 });
