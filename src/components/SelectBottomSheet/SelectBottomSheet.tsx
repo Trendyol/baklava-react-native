@@ -1,5 +1,10 @@
 import React from 'react';
-import { FlatList, ScrollView, StyleSheet } from 'react-native';
+import {
+  FlatList,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
 import Box, { BoxProps } from '../Box/Box';
 import BottomSheet, { BottomSheetProps } from '../BottomSheet/BottomSheet';
 import Checkbox from '../Checkbox/Checkbox';
@@ -59,23 +64,25 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
   const renderItem = ({ item, index }: { item: Option; index: number }) => {
     return (
       <Box key={item.id}>
-        {type === 'checkbox' ? (
-          <Checkbox
-            testID={`checkbox-selectBottomSheet-${item.id}`}
-            label={item.label}
-            flagIcon={item.flagIcon}
-            checked={selectedValues.includes(item.id)}
-            onPress={() => handleSelect(item.id)}
-          />
-        ) : (
-          <RadioButton
-            testID={`radiobutton-selectBottomSheet-${item.id}`}
-            label={item.label}
-            flagIcon={item.flagIcon}
-            selected={selectedValues.includes(item.id)}
-            onPress={() => handleSelect(item.id)}
-          />
-        )}
+        <TouchableOpacity onPress={() => handleSelect(item.id)}>
+          {type === 'checkbox' ? (
+            <Checkbox
+              testID={`checkbox-selectBottomSheet-${item.id}`}
+              label={item.label}
+              flagIcon={item.flagIcon}
+              checked={selectedValues.includes(item.id)}
+              onPress={() => handleSelect(item.id)}
+            />
+          ) : (
+            <RadioButton
+              testID={`radiobutton-selectBottomSheet-${item.id}`}
+              label={item.label}
+              flagIcon={item.flagIcon}
+              selected={selectedValues.includes(item.id)}
+              onPress={() => handleSelect(item.id)}
+            />
+          )}
+        </TouchableOpacity>
         {index < options.length - 1 && (
           <Box height={1} backgroundColor="borderColor" marginVertical="m" />
         )}
