@@ -340,6 +340,7 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                             "opacity": 1,
                           }
                         }
+                        testID="touchable-selectBottomSheet-1"
                       >
                         <View
                           accessibilityState={
@@ -479,6 +480,7 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                             "opacity": 1,
                           }
                         }
+                        testID="touchable-selectBottomSheet-2"
                       >
                         <View
                           accessibilityState={
@@ -618,6 +620,7 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                             "opacity": 1,
                           }
                         }
+                        testID="touchable-selectBottomSheet-3"
                       >
                         <View
                           accessibilityState={
@@ -1052,6 +1055,7 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                             "opacity": 1,
                           }
                         }
+                        testID="touchable-selectBottomSheet-1"
                       >
                         <View
                           accessibilityState={
@@ -1191,6 +1195,7 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                             "opacity": 1,
                           }
                         }
+                        testID="touchable-selectBottomSheet-2"
                       >
                         <View
                           accessibilityState={
@@ -1330,6 +1335,7 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                             "opacity": 1,
                           }
                         }
+                        testID="touchable-selectBottomSheet-3"
                       >
                         <View
                           accessibilityState={

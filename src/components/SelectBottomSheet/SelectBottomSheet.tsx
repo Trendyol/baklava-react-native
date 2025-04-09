@@ -24,6 +24,8 @@ interface SelectBottomSheetProps extends BottomSheetProps {
   selectedOption?: string[];
   maxVisibleItems?: number;
   pb?: BoxProps['pb'];
+  accessibilityLabel?: string;
+  testID?: string;
 }
 
 const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
@@ -33,11 +35,20 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
   selectedOption,
   maxVisibleItems = 6,
   pb,
+  accessibilityLabel,
+  testID,
   ...bottomSheetProps
 }) => {
   const [selectedValues, setSelectedValues] = React.useState<string[]>(
     selectedOption ?? [],
   );
+
+  const testProps = React.useMemo(() => {
+    return {
+      accessibilityLabel: accessibilityLabel ?? testID,
+      testID: testID ?? accessibilityLabel,
+    };
+  }, [testID, accessibilityLabel]);
 
   React.useEffect(() => {
     if (Array.isArray(selectedOption)) {
@@ -64,7 +75,10 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
   const renderItem = ({ item, index }: { item: Option; index: number }) => {
     return (
       <Box key={item.id}>
-        <TouchableOpacity onPress={() => handleSelect(item.id)}>
+        <TouchableOpacity
+          onPress={() => handleSelect(item.id)}
+          {...testProps}
+          testID={`touchable-selectBottomSheet-${item.id}`}>
           {type === 'checkbox' ? (
             <Checkbox
               testID={`checkbox-selectBottomSheet-${item.id}`}
@@ -91,7 +105,7 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
   };
 
   return (
-    <BottomSheet {...bottomSheetProps}>
+    <BottomSheet {...bottomSheetProps} {...testProps}>
       <Box pb={pb}>
         <ScrollView
           testID={'selectBottomSheet'}
