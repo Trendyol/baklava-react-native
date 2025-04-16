@@ -188,4 +188,54 @@ describe('SelectBottomSheet', () => {
     // then
     expect(mockOnSelect).not.toHaveBeenCalled();
   });
+
+  test('should render disabled options checkbox', () => {
+    // given
+    const optionsWithDisabled = [
+      { id: '1', label: 'Option 1', disabled: true },
+      { id: '2', label: 'Option 2' },
+    ];
+
+    // when
+    const { getByTestId } = render(
+      <SelectBottomSheet {...defaultProps} options={optionsWithDisabled} />,
+    );
+
+    // then
+    expect(
+      getByTestId('checkbox-selectBottomSheet-1').props.accessibilityState
+        .disabled,
+    ).toBe(true);
+    expect(
+      getByTestId('checkbox-selectBottomSheet-2').props.accessibilityState
+        .disabled,
+    ).toBe(false);
+  });
+
+  test('should render disabled options radio', () => {
+    // given
+    const optionsWithDisabled = [
+      { id: '1', label: 'Option 1', disabled: true },
+      { id: '2', label: 'Option 2' },
+    ];
+
+    // when
+    const { getByTestId } = render(
+      <SelectBottomSheet
+        {...defaultProps}
+        type="radio"
+        options={optionsWithDisabled}
+      />,
+    );
+
+    // then
+    expect(
+      getByTestId('radiobutton-selectBottomSheet-1').props.accessibilityState
+        .disabled,
+    ).toBe(true);
+    expect(
+      getByTestId('radiobutton-selectBottomSheet-2').props.accessibilityState
+        .disabled,
+    ).toBe(false);
+  });
 });
