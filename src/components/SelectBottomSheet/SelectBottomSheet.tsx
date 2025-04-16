@@ -15,6 +15,7 @@ interface Option {
   id: string;
   label: string;
   flagIcon?: FlagIconNameType | null;
+  disabled?: boolean;
 }
 
 interface SelectBottomSheetProps extends BottomSheetProps {
@@ -77,6 +78,7 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
       <Box key={item.id}>
         <TouchableOpacity
           onPress={() => handleSelect(item.id)}
+          disabled={item.disabled}
           {...testProps}
           testID={`touchable-selectBottomSheet-${item.id}`}>
           {type === 'checkbox' ? (
@@ -86,6 +88,7 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
               flagIcon={item.flagIcon}
               checked={selectedValues.includes(item.id)}
               onPress={() => handleSelect(item.id)}
+              disabled={item.disabled}
             />
           ) : (
             <RadioButton
@@ -94,6 +97,7 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
               flagIcon={item.flagIcon}
               selected={selectedValues.includes(item.id)}
               onPress={() => handleSelect(item.id)}
+              disabled={item.disabled}
             />
           )}
         </TouchableOpacity>
