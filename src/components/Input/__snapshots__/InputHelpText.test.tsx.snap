@@ -6,7 +6,6 @@ exports[`Input Help Text should render help text correctly 1`] = `
   style={
     [
       {
-        "marginLeft": 16,
         "marginTop": 4,
       },
     ]

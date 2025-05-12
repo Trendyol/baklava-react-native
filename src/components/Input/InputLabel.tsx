@@ -4,6 +4,7 @@ import Box from '../Box/Box';
 import Text from '../Text/Text';
 import { AnimatedTextPropsType, AnimatedViewPropsType } from './types';
 import { getLabelColor } from './utils';
+import theme from '../../theme';
 
 const isRTL = I18nManager.isRTL;
 
@@ -17,6 +18,7 @@ export const InputLabel = React.memo(
     animatedViewProps,
     animatedTextProps,
     inputHeight,
+    required,
   }: {
     label?: string | null;
     subLabel?: string | null;
@@ -26,6 +28,7 @@ export const InputLabel = React.memo(
     animatedViewProps: AnimatedViewPropsType;
     animatedTextProps: AnimatedTextPropsType;
     inputHeight: number;
+    required?: boolean;
   }) => {
     if (!label) {
       return null;
@@ -41,6 +44,11 @@ export const InputLabel = React.memo(
             color={contentSecondaryColor}
             testID="fixed-label">
             {label}
+            {required && (
+              <Text variant="subtitle04Medium" color="dangerKey">
+                *
+              </Text>
+            )}
           </Text>
           {subLabel ? (
             <Text
@@ -68,6 +76,15 @@ export const InputLabel = React.memo(
                   ? `${subLabel ?? ''}${label}`
                   : `${label}${subLabel ?? ''}`}
               </Animated.Text>
+              {required && (
+                <Animated.Text
+                  style={[
+                    animatedTextProps.style,
+                    { color: theme.colors.dangerKey },
+                  ]}>
+                  *
+                </Animated.Text>
+              )}
             </Box>
           </Animated.View>
         </>

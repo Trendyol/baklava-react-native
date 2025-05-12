@@ -1,0 +1,197 @@
+import { Meta } from '@storybook/addon-docs';
+import Select from '../assets/select/Select.png';
+import SelectCases from '../assets/select/SelectCases.png';
+import SingleSelect from '../assets/select/SingleSelect.png';
+
+<Meta
+  title="Components/Select"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Select
+
+Select components are used for collecting user provided information from a list of options.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={Select} width="250" alt="Select" />
+  <img src={SelectCases} width="250" alt="SelectCases" />
+  <img src={SingleSelect} width="250" alt="SingleSelect" />
+</div>
+
+<br/>
+<br/>
+
+## Provider
+Developed using Portal for easy use of Component.
+There is no direct portal solution in React Native as <a href="https://legacy.reactjs.org/docs/portals.html" title="title">React Portal</a>.
+We use the https://github.com/gorhom/react-native-portal.
+
+Make sure to add `PortalProvider` in your root view.
+
+```jsx
+import * as React from 'react';
+import { theme, ThemeProvider, PortalProvider } from '@trendyol/baklava-react-native';
+import App from './src/App';
+
+export default function Main() {
+  return (
+    <ThemeProvider theme={theme}>
+      <PortalProvider>
+        <App />
+      </PortalProvider>
+    </ThemeProvider>
+  );
+}
+```
+
+## Usage
+
+```jsx
+<Select
+  label="Label text"
+  placeholder="Placeholder text"
+  size="large"
+  labelFixed={true}
+  multiple={false}
+  bottomSheetTitle="Options"
+  closeButtonLabel="Cancel"
+  selectButtonLabel="Select"
+  required
+  options={[
+    { id: '1', label: 'Option 1' },
+    { id: '2', label: 'Option 2' },
+    { id: '3', label: 'Option 3' },
+  ]}
+/>
+```
+
+<br />
+
+## Props
+
+### label
+
+Type: `string`
+
+The text or component to use for the label
+
+### labelFixed
+
+Type: `boolean`
+
+Boolean value that checks if the label is fixed
+
+### placeholder
+
+Type: `string`
+
+The string that will be rendered before text input has been entered
+
+### helpText
+
+Type: `string`
+
+Helper text providing information for the select
+
+### error
+
+Type: `boolean`
+
+Boolean value indicating the error status
+
+### errorText
+
+Type: `string`
+
+Helper text showing the error in the select
+
+### success
+
+Type: `boolean`
+
+Boolean value indicating the success status
+
+### successText
+
+Type: `string`
+
+Helper text showing the success in the select
+
+### required
+
+Type: `boolean`
+
+Boolean value that controls whether the field is required
+
+### disabled
+
+Type: `boolean`
+
+If true, user won't be able to interact with the component
+
+### size
+
+The size of the select
+`large`,
+`medium`,
+`small`
+
+### options (required)
+
+Type: `Option[]`
+
+An array of options. Each option can have an id, label, and optionally a flagIcon
+
+### onSelect
+
+Type: `Function`
+
+A function that returns an array of selected values
+
+### bottomSheetTitle
+
+Type: `string`
+
+Title of Select Bottom Sheet 
+
+### selectButtonLabel
+
+Type: `string`
+
+Label of Select Bottom Sheet 
+
+### closeButtonLabel
+
+Type: `string`
+
+Label of Select Bottom Sheet close button
+
+### multiple
+
+Type: `boolean`
+
+If true, SelectBottomSheet with checkbox. If false, SelectBottomSheet with radio button	
+
+### maxVisibleItems
+
+Type: `number`
+
+The maximum number of items that can be visible	
+
+<>
+  <a href="https://trendyol.github.io/baklava-react-native/?path=/docs/components-selectbottomsheet--page" title="title">
+    ...SelectBottomSheet props
+  </a>
+</>

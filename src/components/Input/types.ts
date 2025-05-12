@@ -7,7 +7,9 @@ export type InputRefType =
 
 export type AnimatedViewPropsType = {};
 
-export type AnimatedTextPropsType = {};
+export type AnimatedTextPropsType = {
+  style?: any;
+};
 
 export type CommonAnimatedPropsTypes = {
   duration: number;

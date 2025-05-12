@@ -374,7 +374,6 @@ exports[`Input should render input with error state and error text correctly 1`]
     style={
       [
         {
-          "marginLeft": 16,
           "marginTop": 4,
         },
       ]
@@ -672,7 +671,6 @@ exports[`Input should render input with help text correctly 1`] = `
     style={
       [
         {
-          "marginLeft": 16,
           "marginTop": 4,
         },
       ]
@@ -1399,7 +1397,6 @@ exports[`Input should render input with success state and success text correctly
     style={
       [
         {
-          "marginLeft": 16,
           "marginTop": 4,
         },
       ]
