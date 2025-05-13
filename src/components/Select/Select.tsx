@@ -52,8 +52,7 @@ type SelectProps = React.ComponentProps<typeof Box> & {
   disabled?: boolean;
   size?: VariantProps<Theme, 'inputSizeVariants'>['variant'];
   options: SelectOption[];
-  selectedOption?: string | null;
-  selectedOptions?: string[];
+  selectedOptions?: string[] | string;
   testID?: string;
   onSelect?: (value: string[]) => void;
   bottomSheetTitle?: string;
@@ -63,51 +62,22 @@ type SelectProps = React.ComponentProps<typeof Box> & {
   maxVisibleItems?: number;
 };
 
-const useSelectState = (props: {
-  multiple: boolean;
-  selectedOption: string | null;
-  selectedOptions: string[];
-}) => {
-  const { multiple, selectedOption, selectedOptions } = props;
-  const [selectedValue, setSelectedValue] = useState<string | null>(
-    selectedOption,
-  );
+const useSelectState = (selectedOptions: string[] | string) => {
   const [selectedValues, setSelectedValues] = useState<string[]>(
-    multiple ? selectedOptions : selectedOption ? [selectedOption] : [],
+    Array.isArray(selectedOptions) ? selectedOptions : [selectedOptions],
   );
 
   const bottomSheetSelectionRef = useRef<string[]>([]);
 
-  useEffect(() => {
-    if (multiple && selectedOptions.length > 0) {
-      setSelectedValues(selectedOptions);
-    } else if (!multiple && selectedOption !== null) {
-      setSelectedValue(selectedOption);
-      setSelectedValues(selectedOption ? [selectedOption] : []);
-    }
-  }, [selectedOption, selectedOptions, multiple]);
-
   const resetSelections = useCallback(() => {
-    setSelectedValue(null);
     setSelectedValues([]);
   }, []);
 
-  const updateSelections = useCallback(
-    (newSelections: string[]) => {
-      if (multiple) {
-        setSelectedValues(newSelections);
-      } else if (newSelections.length > 0) {
-        setSelectedValue(newSelections[0]);
-        setSelectedValues([newSelections[0]]);
-      } else {
-        resetSelections();
-      }
-    },
-    [multiple, resetSelections],
-  );
+  const updateSelections = useCallback((newSelections: string[]) => {
+    setSelectedValues(newSelections);
+  }, []);
 
   return {
-    selectedValue,
     selectedValues,
     updateSelections,
     resetSelections,
@@ -166,19 +136,11 @@ const useDisplayValue = (props: {
 const useSortedOptions = (props: {
   options: SelectOption[];
   selectedValues: string[];
-  selectedValue: string | null;
   multiple: boolean;
   isBottomSheetVisible: boolean;
   wasCleared: boolean;
 }) => {
-  const {
-    options,
-    selectedValues,
-    selectedValue,
-    multiple,
-    isBottomSheetVisible,
-    wasCleared,
-  } = props;
+  const { options, selectedValues, isBottomSheetVisible, wasCleared } = props;
   const originalOptionsRef = useRef<SelectOption[]>([]);
 
   useEffect(() => {
@@ -192,36 +154,19 @@ const useSortedOptions = (props: {
       return options;
     }
 
-    if (
-      (multiple && selectedValues.length === 0) ||
-      (!multiple && !selectedValue)
-    ) {
+    if (selectedValues.length === 0) {
       return options;
     }
 
-    if (multiple) {
-      const selectedOptions = options.filter(option =>
-        selectedValues.includes(option.id),
-      );
-      const unselectedOptions = options.filter(
-        option => !selectedValues.includes(option.id),
-      );
+    const selectedOptions = options.filter(option =>
+      selectedValues.includes(option.id),
+    );
+    const unselectedOptions = options.filter(
+      option => !selectedValues.includes(option.id),
+    );
 
-      return [...selectedOptions, ...unselectedOptions];
-    }
-
-    const selectedOption = options.find(option => option.id === selectedValue);
-    const otherOptions = options.filter(option => option.id !== selectedValue);
-
-    return selectedOption ? [selectedOption, ...otherOptions] : options;
-  }, [
-    options,
-    selectedValues,
-    selectedValue,
-    multiple,
-    isBottomSheetVisible,
-    wasCleared,
-  ]);
+    return [...selectedOptions, ...unselectedOptions];
+  }, [options, selectedValues, isBottomSheetVisible, wasCleared]);
 };
 
 const Select = forwardRef<SelectHandles, SelectProps>(
@@ -240,7 +185,6 @@ const Select = forwardRef<SelectHandles, SelectProps>(
       disabled = false,
       size = 'medium',
       options = [],
-      selectedOption = null,
       selectedOptions = [],
       testID = 'select',
       onSelect,
@@ -261,31 +205,20 @@ const Select = forwardRef<SelectHandles, SelectProps>(
     const [wasCleared, setWasCleared] = useState<boolean>(false);
 
     const {
-      selectedValue,
       selectedValues,
       updateSelections,
       resetSelections,
       bottomSheetSelectionRef,
-    } = useSelectState({
-      multiple,
-      selectedOption,
-      selectedOptions,
-    });
+    } = useSelectState(selectedOptions);
 
     const selectedOptionObjects = useMemo(
-      () =>
-        options.filter(option =>
-          multiple
-            ? selectedValues.includes(option.id)
-            : option.id === selectedValue,
-        ),
-      [multiple, options, selectedValue, selectedValues],
+      () => options.filter(option => selectedValues.includes(option.id)),
+      [options, selectedValues],
     );
 
     const sortedOptions = useSortedOptions({
       options,
       selectedValues,
-      selectedValue,
       multiple,
       isBottomSheetVisible,
       wasCleared,
@@ -338,22 +271,11 @@ const Select = forwardRef<SelectHandles, SelectProps>(
       await startAnimation();
       setFocused(true);
 
-      bottomSheetSelectionRef.current = multiple
-        ? [...selectedValues]
-        : selectedValue
-        ? [selectedValue]
-        : [];
+      bottomSheetSelectionRef.current = [...selectedValues];
 
       setWasCleared(false);
       setIsBottomSheetVisible(true);
-    }, [
-      disabled,
-      startAnimation,
-      multiple,
-      selectedValues,
-      selectedValue,
-      bottomSheetSelectionRef,
-    ]);
+    }, [disabled, startAnimation, selectedValues, bottomSheetSelectionRef]);
 
     const closeBottomSheet = useCallback(() => {
       setIsBottomSheetVisible(false);
@@ -398,8 +320,8 @@ const Select = forwardRef<SelectHandles, SelectProps>(
     );
 
     const hasSelectedValue = useMemo(
-      () => (multiple ? selectedValues.length > 0 : selectedValue !== null),
-      [multiple, selectedValues, selectedValue],
+      () => selectedValues.length > 0,
+      [selectedValues],
     );
 
     const iconColor = useMemo(() => {
@@ -530,11 +452,7 @@ const Select = forwardRef<SelectHandles, SelectProps>(
           selectedOption={
             isBottomSheetVisible
               ? bottomSheetSelectionRef.current
-              : multiple
-              ? selectedValues
-              : selectedValue
-              ? [selectedValue]
-              : []
+              : selectedValues
           }
           testID={`${testID}-bottomSheet`}
           maxVisibleItems={maxVisibleItems}

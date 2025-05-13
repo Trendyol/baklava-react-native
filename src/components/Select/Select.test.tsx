@@ -138,7 +138,7 @@ describe('Select', () => {
     );
   });
 
-  test.skip('should render selected option correctly for single select', () => {
+  test('should render selected option correctly for single select', () => {
     // given
     const mockOptions = [
       { id: '1', label: 'Option 1' },
@@ -151,7 +151,7 @@ describe('Select', () => {
       <Select
         testID="select"
         multiple={false}
-        selectedOption="2"
+        selectedOptions="2"
         options={mockOptions}
         placeholder="Select"
       />,
@@ -226,8 +226,8 @@ describe('Select', () => {
       <Select {...defaultProps} multiple={false} onSelect={onSelect} />,
     );
 
+    fireEvent.press(getByTestId('select-pressable'));
     await act(async () => {
-      fireEvent.press(getByTestId('select-pressable'));
       jest.runAllTimers();
     });
 
@@ -251,27 +251,22 @@ describe('Select', () => {
     );
 
     // Open the bottom sheet
+    fireEvent.press(getByTestId('select-pressable'));
     await act(async () => {
-      fireEvent.press(getByTestId('select-pressable'));
       jest.runAllTimers();
     });
 
     // Selecting individual options
-    await act(async () => {
-      const option1 = getByText('Option 1');
-      fireEvent.press(option1);
-    });
-    await act(async () => {
-      const option3 = getByText('Option 3');
-      fireEvent.press(option3);
-    });
+    const option1 = getByText('Option 1');
+    fireEvent.press(option1);
+
+    const option3 = getByText('Option 3');
+    fireEvent.press(option3);
 
     // Press the select button
-    await act(async () => {
-      const selectButton = getByText('Select');
-      fireEvent.press(selectButton);
-      jest.runAllTimers();
-    });
+    const selectButton = getByText('Select');
+    fireEvent.press(selectButton);
+    jest.runAllTimers();
 
     // then
     expect(onSelect).toHaveBeenCalledWith(['1', '3']);
@@ -308,17 +303,15 @@ describe('Select', () => {
     );
 
     // Open the bottom sheet
+    fireEvent.press(getByTestId('select-pressable'));
     await act(async () => {
-      fireEvent.press(getByTestId('select-pressable'));
       jest.runAllTimers();
     });
 
     // Press the close button
-    await act(async () => {
-      const closeButton = getByText('Cancel');
-      fireEvent.press(closeButton);
-      jest.runAllTimers();
-    });
+    const closeButton = getByText('Cancel');
+    fireEvent.press(closeButton);
+    jest.runAllTimers();
 
     // then
     expect(queryByTestId('select-bottomSheet')).toBeFalsy();
@@ -401,9 +394,7 @@ describe('Select', () => {
     expect(ref.current?.blur).toBeTruthy();
     expect(ref.current?.clear).toBeTruthy();
 
-    act(() => {
-      ref.current?.clear();
-    });
+    ref.current?.clear();
 
     // then
     expect(onSelect).toHaveBeenCalledWith([]);
@@ -424,10 +415,8 @@ describe('Select', () => {
     expect(queryByTestId('select-bottomSheet')).toBeFalsy();
 
     // when
-    act(() => {
-      ref.current?.focus();
-      jest.runAllTimers();
-    });
+    ref.current?.focus();
+    jest.runAllTimers();
 
     // then
     expect(queryByTestId('select-bottomSheet')).toBeFalsy();
@@ -442,11 +431,58 @@ describe('Select', () => {
     // when
     render(<Select {...defaultProps} ref={ref} onSelect={onSelect} />);
 
-    act(() => {
-      ref.current?.clear();
-    });
+    ref.current?.clear();
 
     // then
     expect(onSelect).toHaveBeenCalledWith([]);
+  });
+
+  test('selected items should appear at the top of the list when bottom sheet is reopened after selection', async () => {
+    // given
+    jest.useFakeTimers();
+    const onSelect = jest.fn();
+    const options = [
+      { id: '1', label: 'Option 1' },
+      { id: '2', label: 'Option 2' },
+      { id: '3', label: 'Option 3' },
+      { id: '4', label: 'Option 4' },
+    ];
+
+    // when
+    const { getByTestId, getByText, queryByTestId, queryAllByTestId } = render(
+      <Select
+        {...defaultProps}
+        options={options}
+        multiple
+        onSelect={onSelect}
+      />,
+    );
+
+    fireEvent.press(getByTestId('select-pressable'));
+    await act(async () => {
+      jest.runAllTimers();
+    });
+
+    fireEvent.press(getByText('Option 2'));
+    fireEvent.press(getByText('Option 4'));
+
+    fireEvent.press(getByText('Select'));
+    jest.runAllTimers();
+
+    expect(queryByTestId('select-bottomSheet')).toBeFalsy();
+
+    fireEvent.press(getByTestId('select-pressable'));
+    await act(async () => {
+      jest.runAllTimers();
+    });
+
+    // then
+    const labels = queryAllByTestId('label');
+    expect(labels[0].props.children).toContain('Option 2');
+    expect(labels[1].props.children).toContain('Option 4');
+    expect(labels[2].props.children).toContain('Option 1');
+    expect(labels[3].props.children).toContain('Option 3');
+
+    jest.useRealTimers();
   });
 });
