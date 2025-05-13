@@ -32,7 +32,7 @@ export const InputHelpText = React.memo(
     });
 
     return content ? (
-      <Box mt="3xs" ml="m">
+      <Box mt="3xs">
         <Text variant="subtitle04Regular" color={textColor} textAlign="left">
           {content}
         </Text>

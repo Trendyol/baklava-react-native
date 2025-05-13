@@ -28,7 +28,6 @@ const InputMeta: ComponentMeta<typeof Input> = {
     placeholder: 'Placeholder Text',
     labelFixed: false,
     required: false,
-    requiredText: false,
     secureTextEntry: false,
     helpText: 'Help Text',
     error: false,
@@ -90,7 +89,6 @@ export const Cases: InputStory = args => {
         subLabel={'(Optional)'}
         labelFixed={true}
         icon={null}
-        requiredText={true}
         size="large"
         helpText={null}
       />
@@ -98,7 +96,6 @@ export const Cases: InputStory = args => {
         {...args}
         subLabel={'(Optional)'}
         icon={null}
-        requiredText={true}
         size="large"
         helpText={null}
       />
