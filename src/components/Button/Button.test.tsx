@@ -2,6 +2,7 @@ import React from 'react';
 import theme from '../../theme';
 import { fireEvent, render } from '../../test-utils';
 import Button from './Button';
+import Text from '../Text/Text';
 import { ReactTestInstance } from 'react-test-renderer';
 
 describe('Button', () => {
@@ -190,5 +191,14 @@ describe('Button', () => {
 
     // then
     expect(buttonComponent.props.alignSelf).toBe('stretch');
+  });
+
+  test('should render custom children correctly', () => {
+    const { getByText } = render(
+      <Button testID="button">
+        <Text>Custom Content</Text>
+      </Button>,
+    );
+    expect(getByText('Custom Content')).toBeTruthy();
   });
 });

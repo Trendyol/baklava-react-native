@@ -192,6 +192,7 @@ const Button = ({
         {...variantColors}>
         {iconView}
         {labelView}
+        {children}
       </ButtonContainer>
     </PressableContainer>
   );
