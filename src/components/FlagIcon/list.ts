@@ -8,4 +8,5 @@ export const flagIconList = [
   'SK',
   'TR',
   'AE',
+  'BG',
 ] as const;

@@ -197,3 +197,4 @@ export { default as WebFilled } from './WebFilled';
 export { default as WebStroke } from './WebStroke';
 export { default as ZoomIn } from './ZoomIn';
 export { default as ZoomOut } from './ZoomOut';
+export { default as BG } from './BG';
