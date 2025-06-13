@@ -22,7 +22,7 @@ const FlagIcon = ({
 
   const iconSize = theme.iconSizeVariants[size];
 
-  const TheIcon = icons[name as keyof typeof icons];
+  const TheIcon = icons[name as keyof typeof icons] || icons.GlobeFlag;
 
   return (
     <TheIcon
