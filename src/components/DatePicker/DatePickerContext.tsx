@@ -170,7 +170,8 @@ export const DatePickerProvider = ({
 
   const onSelectDate = useCallback(
     (selectedDate: Day) => {
-      const isOutOfRange = selectedDate.year < minYear || selectedDate.year > maxYear;
+      const isOutOfRange =
+        selectedDate.year < minYear || selectedDate.year > maxYear;
       if (isOutOfRange) {
         return;
       }
@@ -191,7 +192,15 @@ export const DatePickerProvider = ({
         setDate(selectedDate);
       }
     },
-    [multiple, updateDateRange, nameOfMonths, nameOfWeekdays, firstDayOfWeek, minYear, maxYear],
+    [
+      multiple,
+      updateDateRange,
+      nameOfMonths,
+      nameOfWeekdays,
+      firstDayOfWeek,
+      minYear,
+      maxYear,
+    ],
   );
 
   const onChange = useCallback(() => {

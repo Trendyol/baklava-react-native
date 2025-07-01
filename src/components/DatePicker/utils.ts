@@ -259,6 +259,6 @@ export function formatDate(
 const getYearWithMonth = (year: number, month: number) => {
   const _monthString = month.toString().padStart(2, '0');
   const _yearString = year.toString();
-  
+
   return Number(`${_yearString}${_monthString}`);
-}
+};
