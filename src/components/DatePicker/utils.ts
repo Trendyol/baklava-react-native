@@ -136,6 +136,7 @@ export function getDateFromString(date: string, format: string = DEFAULT_DATE_FO
   const dayIndex = format.indexOf("dd");
   
   if (yearIndex === -1 || monthIndex === -1 || dayIndex === -1) {
+    console.warn('invalid date format', format);
     return new Date();
   }
   
@@ -145,6 +146,7 @@ export function getDateFromString(date: string, format: string = DEFAULT_DATE_FO
 
   
   if (!year || !month || !day) {
+    console.warn('invalid date', date);
     return new Date();
   }
 
@@ -154,6 +156,7 @@ export function getDateFromString(date: string, format: string = DEFAULT_DATE_FO
     _date.getMonth() !== Number(month) - 1 ||
     _date.getDate() !== Number(day)
   ) {
+    console.warn('invalid date', date);
     return new Date();
   }
 

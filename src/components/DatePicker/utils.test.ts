@@ -586,7 +586,7 @@ describe('DatePicker Utils', () => {
 
   describe('getDateFromString edge cases', () => {
     test('should handle invalid date format with missing year', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       
       const result = getDateFromString('01-15', 'yyyy-MM-dd');
       
@@ -597,7 +597,7 @@ describe('DatePicker Utils', () => {
     });
 
     test('should handle invalid date format with missing month', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       
       const result = getDateFromString('2025-15', 'yyyy-MM-dd');
       
@@ -608,7 +608,7 @@ describe('DatePicker Utils', () => {
     });
 
     test('should handle invalid date format with missing day', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       
       const result = getDateFromString('2025-01', 'yyyy-MM-dd');
       
@@ -634,7 +634,7 @@ describe('DatePicker Utils', () => {
     });
 
     test('should handle date with completely wrong format', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       
       const result = getDateFromString('15/01/2025', 'yyyy-MM-dd');
       expect(consoleSpy).toHaveBeenCalledWith('invalid date', '15/01/2025');
@@ -644,7 +644,7 @@ describe('DatePicker Utils', () => {
     });
 
     test('should handle date with partial format', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       
       const result = getDateFromString('2025', 'yyyy-MM-dd');
       
@@ -655,21 +655,21 @@ describe('DatePicker Utils', () => {
     });
 
     test('should handle getDateFromString with empty year', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       const result = getDateFromString('01-15', 'MM-dd');
       expect(consoleSpy).toHaveBeenCalledWith('invalid date format', 'MM-dd');
       expect(result).toBeInstanceOf(Date);
       consoleSpy.mockRestore();
     });
     test('should handle getDateFromString with empty month', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       const result = getDateFromString('2025-15', 'yyyy-dd');
       expect(consoleSpy).toHaveBeenCalledWith('invalid date format', 'yyyy-dd');
       expect(result).toBeInstanceOf(Date);
       consoleSpy.mockRestore();
     });
     test('should handle getDateFromString with empty day', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       const result = getDateFromString('2025-01', 'yyyy-MM');
       expect(consoleSpy).toHaveBeenCalledWith('invalid date format', 'yyyy-MM');
       expect(result).toBeInstanceOf(Date);
@@ -718,7 +718,7 @@ describe('DatePicker Utils', () => {
   describe('Branch coverage tests', () => {
     // getDateFromString: isNaN kontrolü
     test('should handle invalid date that creates NaN', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       
       // Bu tarih geçersiz (32. gün geçersiz)
       const result = getDateFromString('2025-01-32', 'yyyy-MM-dd');
@@ -730,7 +730,7 @@ describe('DatePicker Utils', () => {
     });
 
     test('should handle invalid date with invalid month', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       
       // 13. ay geçersiz
       const result = getDateFromString('2025-13-01', 'yyyy-MM-dd');
@@ -742,7 +742,7 @@ describe('DatePicker Utils', () => {
     });
 
     test('should handle invalid date with February 30', () => {
-      const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+      const consoleSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
       
       // Şubat ayında 30. gün yok
       const result = getDateFromString('2025-02-30', 'yyyy-MM-dd');
