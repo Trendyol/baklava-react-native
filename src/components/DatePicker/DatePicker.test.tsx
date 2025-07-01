@@ -3,16 +3,17 @@ import { fireEvent, render } from '../../test-utils';
 import DatePicker from './DatePicker';
 import { DEFAULT_NAME_OF_MONTHS, DEFAULT_NAME_OF_WEEKDAYS } from './constants';
 import { useDatePickerContext } from './DatePickerContext';
+import Text from '../Text/Text';
 
 const defaultProps = {
   nameOfWeekdays: DEFAULT_NAME_OF_WEEKDAYS,
   nameOfMonths: DEFAULT_NAME_OF_MONTHS,
-  closeButtonLabel: 'Kapat',
-  selectButtonLabel: 'Seç',
-  title: 'Tarih seçiniz',
+  closeButtonLabel: 'Close',
+  selectButtonLabel: 'Select',
+  title: 'Select Date',
   testID: 'datepicker',
   value: null as string | null,
-  placeholder: 'Tarih seçiniz',
+  placeholder: 'Select date',
   firstDayOfWeek: 1 as const,
   disableDates: [] as string[],
   onChange: jest.fn(),
@@ -73,30 +74,30 @@ describe('DatePicker', () => {
   });
 
   test('should handle custom nameOfWeekdays', () => {
-    const customWeekdays = ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'];
+    const customWeekdays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
     const { getByTestId } = render(
       <DatePicker {...defaultProps} nameOfWeekdays={customWeekdays} />,
     );
     fireEvent.press(getByTestId('datepicker-touchable'));
 
     const headerText = getByTestId('datepicker-datepicker-header-0-text');
-    expect(headerText.props.children).toBe('Pzt');
+    expect(headerText.props.children).toBe('Mon');
   });
 
   test('should handle custom nameOfMonths', () => {
     const customMonths = [
-      'Ocak',
-      'Şubat',
-      'Mart',
-      'Nisan',
-      'Mayıs',
-      'Haziran',
-      'Temmuz',
-      'Ağustos',
-      'Eylül',
-      'Ekim',
-      'Kasım',
-      'Aralık',
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
     ];
     const { getByTestId } = render(
       <DatePicker {...defaultProps} nameOfMonths={customMonths} />,
@@ -142,7 +143,7 @@ describe('DatePicker', () => {
   describe('Label prop', () => {
     test('should render with label', () => {
       const { getByTestId } = render(
-        <DatePicker {...defaultProps} label="Doğum Tarihi" />,
+        <DatePicker {...defaultProps} label="Birth Date" />,
       );
       const input = getByTestId('datepicker-input');
       expect(input).toBeTruthy();
@@ -683,7 +684,7 @@ describe('DatePicker', () => {
     test('should handle context error when used outside provider', () => {
       const TestComponent = () => {
         const context = useDatePickerContext();
-        return <div>{context.value}</div>;
+        return <Text>{context.value}</Text>;
       };
 
       expect(() => render(<TestComponent />)).toThrow(

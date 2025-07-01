@@ -94,8 +94,12 @@ describe('DatePicker Utils', () => {
 
       weeks.forEach(week => {
         week.forEach(day => {
-          if (day.isPrevMonth) hasPrevMonthDays = true;
-          if (day.isNextMonth) hasNextMonthDays = true;
+          if (day.isPrevMonth) {
+            hasPrevMonthDays = true;
+          }
+          if (day.isNextMonth) {
+            hasNextMonthDays = true;
+          }
         });
       });
 
@@ -191,7 +195,7 @@ describe('DatePicker Utils', () => {
     });
 
     test('should use custom month names', () => {
-      const customMonths = ['Ocak', 'Şubat', 'Mart'];
+      const customMonths = ['January', 'February', 'March'];
       const options: CalendarOptions = {
         year: 2025,
         month: 0,
@@ -199,7 +203,7 @@ describe('DatePicker Utils', () => {
       };
 
       const result = getMonthCalendar(options);
-      expect(result.nameOfMonth).toBe('Ocak');
+      expect(result.nameOfMonth).toBe('January');
     });
   });
 
@@ -267,7 +271,7 @@ describe('DatePicker Utils', () => {
 
       expect(result).toBeDefined();
       expect(result.month).toBe(11);
-      expect(result.year).toBe(2024); // year should be decremented
+      expect(result.year).toBe(2024);
     });
 
     test('should handle changeMonthCalendar with defined year when month >= 11', () => {
@@ -280,7 +284,7 @@ describe('DatePicker Utils', () => {
 
       expect(result).toBeDefined();
       expect(result.month).toBe(0);
-      expect(result.year).toBe(2026); // year should be incremented
+      expect(result.year).toBe(2026);
     });
   });
 
@@ -726,7 +730,7 @@ describe('DatePicker Utils', () => {
 
       expect(result).toBeInstanceOf(Date);
       expect(result.getDate()).toBe(22);
-      expect(result.getMonth()).toBe(10); // November is month 10 (0-indexed)
+      expect(result.getMonth()).toBe(10);
       expect(result.getFullYear()).toBe(2025);
     });
 
@@ -735,7 +739,7 @@ describe('DatePicker Utils', () => {
 
       expect(result).toBeInstanceOf(Date);
       expect(result.getDate()).toBe(15);
-      expect(result.getMonth()).toBe(2); // March is month 2 (0-indexed)
+      expect(result.getMonth()).toBe(2);
       expect(result.getFullYear()).toBe(2024);
     });
 
@@ -744,7 +748,7 @@ describe('DatePicker Utils', () => {
 
       expect(result).toBeInstanceOf(Date);
       expect(result.getDate()).toBe(31);
-      expect(result.getMonth()).toBe(11); // December is month 11 (0-indexed)
+      expect(result.getMonth()).toBe(11);
       expect(result.getFullYear()).toBe(2025);
     });
 
@@ -753,19 +757,17 @@ describe('DatePicker Utils', () => {
 
       expect(result).toBeInstanceOf(Date);
       expect(result.getDate()).toBe(5);
-      expect(result.getMonth()).toBe(8); // September is month 8 (0-indexed)
+      expect(result.getMonth()).toBe(8);
       expect(result.getFullYear()).toBe(2025);
     });
   });
 
   describe('Branch coverage tests', () => {
-    // getDateFromString: isNaN kontrolü
     test('should handle invalid date that creates NaN', () => {
       const consoleSpy = jest
         .spyOn(console, 'warn')
         .mockImplementation(() => {});
 
-      // Bu tarih geçersiz (32. gün geçersiz)
       const result = getDateFromString('2025-01-32', 'yyyy-MM-dd');
 
       expect(consoleSpy).toHaveBeenCalledWith('invalid date', '2025-01-32');
@@ -779,7 +781,6 @@ describe('DatePicker Utils', () => {
         .spyOn(console, 'warn')
         .mockImplementation(() => {});
 
-      // 13. ay geçersiz
       const result = getDateFromString('2025-13-01', 'yyyy-MM-dd');
 
       expect(consoleSpy).toHaveBeenCalledWith('invalid date', '2025-13-01');
@@ -793,7 +794,6 @@ describe('DatePicker Utils', () => {
         .spyOn(console, 'warn')
         .mockImplementation(() => {});
 
-      // Şubat ayında 30. gün yok
       const result = getDateFromString('2025-02-30', 'yyyy-MM-dd');
 
       expect(consoleSpy).toHaveBeenCalledWith('invalid date', '2025-02-30');

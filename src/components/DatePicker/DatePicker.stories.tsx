@@ -19,6 +19,42 @@ const DatePickerMeta: ComponentMeta<typeof DatePicker> = {
       control: { type: 'text' },
       description: 'Input label text',
     },
+    maxYear: {
+      control: { type: 'number' },
+      description: 'Maximum year',
+      defaultValue: 2035,
+    },
+    minYear: {
+      control: { type: 'number' },
+      description: 'Minimum year',
+      defaultValue: 2015,
+    },
+    disableDates: {
+      control: { type: 'array' },
+      description: 'Disabled dates',
+    },
+    disableMonths: {
+      control: { type: 'array' },
+      description: 'Disabled months',
+    },
+    disableYears: {
+      control: { type: 'array' },
+      description: 'Disabled years',
+    },
+    multiple: {
+      control: { type: 'boolean' },
+      description: 'Multiple selection',
+    },
+    format: {
+      control: { type: 'text' },
+      description: 'Date format',
+    },
+    firstDayOfWeek: {
+      control: { type: 'select' },
+      options: [0, 1],
+      defaultValue: 1,
+      description: 'First day of week',
+    },
   },
 };
 
@@ -46,6 +82,31 @@ export const Basic: DatePickerStory = args => {
         placeholder="Select date"
         firstDayOfWeek={1}
         multiple={false}
+        format="dd/MM/yyyy"
+      />
+    </Box>
+  );
+};
+
+export const WithStartViaSunday: DatePickerStory = args => {
+  const [value, setValue] = React.useState<string | null>(null);
+  return (
+    <Box p="2xs">
+      <Text p="2xs" variant="subtitle01Bold">
+        DatePicker
+      </Text>
+      <DatePicker
+        {...args}
+        title="Select Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
+        nameOfWeekdays={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
+        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
+        testID="datepicker"
+        value={value}
+        onChange={setValue}
+        placeholder="Select date"
+        firstDayOfWeek={0}
         format="dd/MM/yyyy"
       />
     </Box>
@@ -272,18 +333,17 @@ export const MultipleDateSelectionWithCustomLabels: DatePickerStory = args => {
 export const WithDisabledDates: DatePickerStory = args => {
   const [value, setValue] = React.useState<string | null>(null);
 
-  // Disable specific dates (weekends and some holidays)
   const disabledDates = [
-    '2025-01-04', // Saturday
-    '2025-01-05', // Sunday
-    '2025-01-11', // Saturday
-    '2025-01-12', // Sunday
-    '2025-01-18', // Saturday
-    '2025-01-19', // Sunday
-    '2025-01-25', // Saturday
-    '2025-01-26', // Sunday
-    '2025-01-01', // New Year's Day
-    '2025-01-15', // Specific holiday
+    '2025-01-04',
+    '2025-01-05',
+    '2025-01-11',
+    '2025-01-12',
+    '2025-01-18',
+    '2025-01-19',
+    '2025-01-25',
+    '2025-01-26',
+    '2025-01-01',
+    '2025-01-15',
   ];
 
   return (
@@ -317,7 +377,6 @@ export const WithDisabledDates: DatePickerStory = args => {
 export const WithYearRange: DatePickerStory = args => {
   const [value, setValue] = React.useState<string | null>(null);
 
-  // Restrict year range to 2024-2026
   const minYear = 2024;
   const maxYear = 2026;
 

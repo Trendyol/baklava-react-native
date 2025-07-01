@@ -16,11 +16,16 @@ const YearItem = React.memo<{
   isCurrentYear: boolean;
   onSelect: (year: number) => void;
   testID: string;
-  disableYears?: number[];
-}>(({ year, isSelected, isCurrentYear, onSelect, testID, disableYears }) => (
+  isDisabled: boolean;
+}>(({ year, isSelected, isCurrentYear, onSelect, testID, isDisabled }) => (
   <TouchableOpacity
     key={year}
-    onPress={() => onSelect(year)}
+    onPress={() => {
+      if (isDisabled) {
+        return;
+      }
+      onSelect(year);
+    }}
     style={styles.yearItem}
     testID={`${testID}-year-${year}`}
     accessibilityLabel={`${testID}-year-${year}`}>
@@ -31,7 +36,7 @@ const YearItem = React.memo<{
       py="2xs"
       borderRadius="s"
       backgroundColor={isSelected ? 'primaryKey' : 'neutralFull'}
-      opacity={disableYears?.includes(year) ? 0.5 : 1}>
+      opacity={isDisabled ? 0.5 : 1}>
       <Text
         variant="subtitle03Regular"
         color={
@@ -62,10 +67,6 @@ const YearPicker = React.memo<YearPickerProps>(({ context }) => {
 
   const onSelect = useCallback(
     (year: number) => {
-      if (disableYears?.includes(year)) {
-        return;
-      }
-
       const calendar = generateCalendar({
         year,
         month: calendarData.month,
@@ -88,7 +89,6 @@ const YearPicker = React.memo<YearPickerProps>(({ context }) => {
       firstDayOfWeek,
       setCalendarData,
       setShowPickerType,
-      disableYears,
     ],
   );
 
@@ -109,7 +109,7 @@ const YearPicker = React.memo<YearPickerProps>(({ context }) => {
         {years.map(year => {
           const isSelected = calendarData.year === year;
           const isCurrentYear = year === currentYear;
-
+          const isDisabled = disableYears ? disableYears.includes(year) : false;
           return (
             <YearItem
               key={year}
@@ -118,7 +118,7 @@ const YearPicker = React.memo<YearPickerProps>(({ context }) => {
               isCurrentYear={isCurrentYear}
               onSelect={onSelect}
               testID={testID || ''}
-              disableYears={disableYears}
+              isDisabled={isDisabled}
             />
           );
         })}

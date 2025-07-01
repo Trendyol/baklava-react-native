@@ -23,7 +23,12 @@ const MonthItem = React.memo<{
     return (
       <TouchableOpacity
         key={name}
-        onPress={() => onSelect(idx)}
+        onPress={() => {
+          if (isDisabled) {
+            return;
+          }
+          onSelect(idx);
+        }}
         style={styles.monthItem}
         testID={`${testID}-month-${idx + 1}`}
         accessibilityLabel={`${testID}-month-${idx + 1}`}>
@@ -111,12 +116,7 @@ const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
               idx={idx}
               isSelected={isSelected}
               isCurrentMonth={isCurrentMonth}
-              onSelect={() => {
-                if (isDisabled) {
-                  return;
-                }
-                onSelect(idx);
-              }}
+              onSelect={onSelect}
               testID={testID || ''}
               isDisabled={isDisabled}
             />
