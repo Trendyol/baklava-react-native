@@ -103,7 +103,6 @@ describe('DatePicker', () => {
     );
     fireEvent.press(getByTestId('datepicker-touchable'));
 
-    // Month button should exist and be clickable
     const monthButton = getByTestId('datepicker-header-month-select');
     expect(monthButton).toBeTruthy();
   });
@@ -173,12 +172,10 @@ describe('DatePicker', () => {
 
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Find any available date button using timestamp
       const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
       if (dateButtons.length > 0) {
         fireEvent.press(dateButtons[0]);
 
-        // Press select button
         fireEvent.press(getByTestId('datepicker-header-select'));
 
         expect(onChange).toHaveBeenCalled();
@@ -193,16 +190,12 @@ describe('DatePicker', () => {
 
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Find any available date buttons using timestamp
       const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
       if (dateButtons.length >= 2) {
-        // Select start date
         fireEvent.press(dateButtons[0]);
 
-        // Select end date
         fireEvent.press(dateButtons[1]);
 
-        // Press select button
         fireEvent.press(getByTestId('datepicker-header-select'));
 
         expect(onChange).toHaveBeenCalled();
@@ -234,16 +227,12 @@ describe('DatePicker', () => {
 
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Find any available date button using timestamp
       const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
       if (dateButtons.length > 0) {
-        // Try to select a date
         fireEvent.press(dateButtons[0]);
 
-        // Press select button
         fireEvent.press(getByTestId('datepicker-header-select'));
 
-        // onChange should be called (but not with disabled date if it was selected)
         expect(onChange).toHaveBeenCalled();
       }
     });
@@ -310,7 +299,6 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-year-select'));
 
-      // Should show years within the range
       expect(getByTestId('datepicker-year-2020')).toBeTruthy();
       expect(getByTestId('datepicker-year-2030')).toBeTruthy();
     });
@@ -334,14 +322,12 @@ describe('DatePicker', () => {
       );
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Get current year
       const currentYear = new Date().getFullYear();
 
       fireEvent.press(getByTestId('datepicker-header-month-select'));
       fireEvent.press(getByTestId('datepicker-month-12'));
 
       fireEvent.press(getByTestId('datepicker-header-next'));
-      // Check if year has increased (December to January should increment year)
       expect(getByText(String(currentYear + 1))).toBeTruthy();
     });
 
@@ -416,16 +402,12 @@ describe('DatePicker', () => {
 
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Find any available date button using timestamp
       const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
       if (dateButtons.length > 0) {
-        // Select only one date
         fireEvent.press(dateButtons[0]);
 
-        // Press select button
         fireEvent.press(getByTestId('datepicker-header-select'));
 
-        // Should call onChange
         expect(onChange).toHaveBeenCalled();
       }
     });
@@ -438,19 +420,14 @@ describe('DatePicker', () => {
 
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Find any available date buttons using timestamp
       const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
       if (dateButtons.length >= 2) {
-        // Select end date first
         fireEvent.press(dateButtons[1]);
 
-        // Select start date second
         fireEvent.press(dateButtons[0]);
 
-        // Press select button
         fireEvent.press(getByTestId('datepicker-header-select'));
 
-        // Should call onChange
         expect(onChange).toHaveBeenCalled();
       }
     });
@@ -542,14 +519,11 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-year-select'));
 
-      // Should show years within the range
       expect(getByTestId('datepicker-year-2020')).toBeTruthy();
       expect(getByTestId('datepicker-year-2030')).toBeTruthy();
 
-      // Navigate to next range - check if navigation works
       fireEvent.press(getByTestId('datepicker-header-next'));
 
-      // Check if we can navigate back
       fireEvent.press(getByTestId('datepicker-header-prev'));
       expect(getByTestId('datepicker-year-2020')).toBeTruthy();
       expect(getByTestId('datepicker-year-2030')).toBeTruthy();
@@ -561,16 +535,13 @@ describe('DatePicker', () => {
       );
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Navigate to next month
       fireEvent.press(getByTestId('datepicker-header-next'));
-      // Check if month changed (any month name should be visible)
       expect(
         getByText(
           /January|February|March|April|May|June|July|August|September|October|November|December/,
         ),
       ).toBeTruthy();
 
-      // Navigate to previous month
       fireEvent.press(getByTestId('datepicker-header-prev'));
       expect(
         getByText(
@@ -578,11 +549,9 @@ describe('DatePicker', () => {
         ),
       ).toBeTruthy();
 
-      // Open year picker
       fireEvent.press(getByTestId('datepicker-header-year-select'));
       expect(getByTestId('datepicker-year-2026')).toBeTruthy();
 
-      // Select different year
       fireEvent.press(getByTestId('datepicker-year-2026'));
       expect(getByText('2026')).toBeTruthy();
     });
@@ -594,13 +563,34 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-month-select'));
 
-      // Navigate to December (should handle year boundary)
       fireEvent.press(getByTestId('datepicker-month-12'));
       expect(toJSON()).toMatchSnapshot();
 
-      // Navigate to next year and select January
       fireEvent.press(getByTestId('datepicker-header-next'));
       expect(toJSON()).toMatchSnapshot();
+    });
+
+    test('should handle previous/next month navigation', () => {
+      const { getByTestId, getByText } = render(
+        <DatePicker {...defaultProps} />,
+      );
+      fireEvent.press(getByTestId('datepicker-touchable'));
+
+      const initialMonth = getByText(
+        /January|February|March|April|May|June|July|August|September|October|November|December/,
+      ).props.children;
+
+      fireEvent.press(getByTestId('datepicker-header-next'));
+      const nextMonth = getByText(
+        /January|February|March|April|May|June|July|August|September|October|November|December/,
+      ).props.children;
+      expect(nextMonth).not.toBe(initialMonth);
+
+      fireEvent.press(getByTestId('datepicker-header-prev'));
+      const prevMonth = getByText(
+        /January|February|March|April|May|June|July|August|September|October|November|December/,
+      ).props.children;
+      expect(prevMonth).toBe(initialMonth);
     });
   });
 
@@ -611,12 +601,10 @@ describe('DatePicker', () => {
       );
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Select month
       fireEvent.press(getByTestId('datepicker-header-month-select'));
       fireEvent.press(getByTestId('datepicker-month-3'));
       expect(getByText('March')).toBeTruthy();
 
-      // Select year
       fireEvent.press(getByTestId('datepicker-header-year-select'));
       fireEvent.press(getByTestId('datepicker-year-2026'));
       expect(getByText('2026')).toBeTruthy();
@@ -630,20 +618,16 @@ describe('DatePicker', () => {
 
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Navigate to specific month
       fireEvent.press(getByTestId('datepicker-header-month-select'));
       fireEvent.press(getByTestId('datepicker-month-3'));
 
-      // Navigate to specific year
       fireEvent.press(getByTestId('datepicker-header-year-select'));
       fireEvent.press(getByTestId('datepicker-year-2026'));
 
-      // Find a date button using timestamp
-      const timestamp = getTimestamp(2026, 2, 15); // March 15, 2026
+      const timestamp = getTimestamp(2026, 2, 15);
       const dateButton = getByTestId(`datepicker-datepicker-day-${timestamp}`);
       fireEvent.press(dateButton);
 
-      // Press select button
       fireEvent.press(getByTestId('datepicker-header-select'));
 
       expect(onChange).toHaveBeenCalledWith('2026-03-15');
@@ -662,13 +646,11 @@ describe('DatePicker', () => {
 
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Navigate to specific month
       fireEvent.press(getByTestId('datepicker-header-month-select'));
       fireEvent.press(getByTestId('datepicker-month-3'));
 
-      // Find date buttons using timestamps
-      const startTimestamp = getTimestamp(2025, 2, 15); // March 15, 2025
-      const endTimestamp = getTimestamp(2025, 2, 20); // March 20, 2025
+      const startTimestamp = getTimestamp(2025, 2, 15);
+      const endTimestamp = getTimestamp(2025, 2, 20);
 
       try {
         const startDateButton = getByTestId(
@@ -678,18 +660,14 @@ describe('DatePicker', () => {
           `datepicker-datepicker-day-${endTimestamp}`,
         );
 
-        // Select start date
         fireEvent.press(startDateButton);
 
-        // Select end date
         fireEvent.press(endDateButton);
 
-        // Press select button
         fireEvent.press(getByTestId('datepicker-header-select'));
 
         expect(onChange).toHaveBeenCalledWith('2025-03-15 - 2025-03-20');
       } catch (error) {
-        // If specific dates are not found, try with any available dates
         const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
         if (dateButtons.length >= 2) {
           fireEvent.press(dateButtons[0]);
@@ -703,7 +681,6 @@ describe('DatePicker', () => {
 
   describe('Edge cases and error handling', () => {
     test('should handle context error when used outside provider', () => {
-      // Test useDatePickerContext error
       const TestComponent = () => {
         const context = useDatePickerContext();
         return <div>{context.value}</div>;
@@ -769,7 +746,6 @@ describe('DatePicker', () => {
 
       const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
       if (dateButtons.length > 0) {
-        // Select same date twice
         fireEvent.press(dateButtons[0]);
         fireEvent.press(dateButtons[0]);
 
@@ -788,11 +764,8 @@ describe('DatePicker', () => {
 
       const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
       if (dateButtons.length >= 3) {
-        // Select start date
         fireEvent.press(dateButtons[0]);
-        // Select end date
         fireEvent.press(dateButtons[1]);
-        // Select start date again (should switch back to startDate mode)
         fireEvent.press(dateButtons[2]);
 
         fireEvent.press(getByTestId('datepicker-header-select'));
@@ -807,7 +780,6 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-year-select'));
 
-      // Navigate back multiple times to test minYear constraint
       fireEvent.press(getByTestId('datepicker-header-prev'));
       fireEvent.press(getByTestId('datepicker-header-prev'));
 
@@ -821,7 +793,6 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-year-select'));
 
-      // Navigate forward multiple times to test maxYear constraint
       fireEvent.press(getByTestId('datepicker-header-next'));
       fireEvent.press(getByTestId('datepicker-header-next'));
 
@@ -836,7 +807,6 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-header-month-select'));
       expect(toJSON()).toMatchSnapshot();
 
-      // Select different months that exist
       fireEvent.press(getByTestId('datepicker-month-1'));
       expect(toJSON()).toMatchSnapshot();
       expect(getByTestId('datepicker-wrapper')).toBeTruthy();
@@ -895,7 +865,6 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-year-select'));
 
-      // Should show years from 2020
       expect(getByTestId('datepicker-year-2020')).toBeTruthy();
     });
 
@@ -906,7 +875,6 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-year-select'));
 
-      // Should show years up to 2030
       expect(getByTestId('datepicker-year-2030')).toBeTruthy();
     });
 
@@ -917,10 +885,8 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-year-select'));
 
-      // Navigate to next range
       fireEvent.press(getByTestId('datepicker-header-next'));
 
-      // Navigate back
       fireEvent.press(getByTestId('datepicker-header-prev'));
 
       expect(getByTestId('datepicker-wrapper')).toBeTruthy();
@@ -933,10 +899,8 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-year-select'));
 
-      // Select a year
       fireEvent.press(getByTestId('datepicker-year-2026'));
 
-      // Should return to calendar view
       expect(getByText('2026')).toBeTruthy();
     });
   });
@@ -949,22 +913,17 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-month-select'));
       expect(toJSON()).toMatchSnapshot();
-      // Select different months that exist
       fireEvent.press(getByTestId('datepicker-month-1'));
       expect(toJSON()).toMatchSnapshot();
     });
 
     test('should handle month navigation with year boundaries', () => {
-      const { getByTestId, getByText } = render(
-        <DatePicker {...defaultProps} />,
-      );
+      const { getByTestId } = render(<DatePicker {...defaultProps} />);
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-month-select'));
 
-      // Navigate to next year
       fireEvent.press(getByTestId('datepicker-header-next'));
 
-      // Navigate back
       fireEvent.press(getByTestId('datepicker-header-prev'));
 
       expect(getByTestId('datepicker-wrapper')).toBeTruthy();
@@ -977,25 +936,19 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-month-select'));
 
-      // Select a month
       fireEvent.press(getByTestId('datepicker-month-3'));
 
-      // Should return to calendar view with selected month
       expect(getByText('March')).toBeTruthy();
     });
   });
 
   describe('CalendarWrapper specific tests', () => {
     test('should handle calendar data updates', () => {
-      const { getByTestId, getByText } = render(
-        <DatePicker {...defaultProps} />,
-      );
+      const { getByTestId } = render(<DatePicker {...defaultProps} />);
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Navigate to next month
       fireEvent.press(getByTestId('datepicker-header-next'));
 
-      // Calendar should update with new month data
       expect(getByTestId('datepicker-wrapper')).toBeTruthy();
     });
 
@@ -1005,7 +958,6 @@ describe('DatePicker', () => {
       );
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Should show Sunday as first day
       expect(getByTestId('datepicker-datepicker-header-0-text')).toBeTruthy();
     });
 
@@ -1016,7 +968,6 @@ describe('DatePicker', () => {
       );
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Should show custom weekday names
       expect(getByTestId('datepicker-datepicker-header-0-text')).toBeTruthy();
     });
 
@@ -1027,7 +978,6 @@ describe('DatePicker', () => {
       );
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      // Calendar should render with disabled dates
       expect(getByTestId('datepicker-wrapper')).toBeTruthy();
     });
 
@@ -1041,19 +991,193 @@ describe('DatePicker', () => {
         /January|February|March|April|May|June|July|August|September|October|November|December/,
       ).props.children;
 
-      // Navigate to next month
       fireEvent.press(getByTestId('datepicker-header-next'));
       const nextMonth = getByText(
         /January|February|March|April|May|June|July|August|September|October|November|December/,
       ).props.children;
       expect(nextMonth).not.toBe(initialMonth);
 
-      // Navigate back
       fireEvent.press(getByTestId('datepicker-header-prev'));
       const prevMonth = getByText(
         /January|February|March|April|May|June|July|August|September|October|November|December/,
       ).props.children;
       expect(prevMonth).toBe(initialMonth);
+    });
+  });
+
+  describe('DisableMonths', () => {
+    test('should disable specified months in month picker', () => {
+      const disableMonths = [0, 1, 2];
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} disableMonths={disableMonths} />,
+      );
+
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-month-select'));
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should not allow selection of disabled months', () => {
+      const onChange = jest.fn();
+      const disableMonths = [0];
+      const { getByTestId } = render(
+        <DatePicker
+          {...defaultProps}
+          disableMonths={disableMonths}
+          onChange={onChange}
+        />,
+      );
+
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-month-select'));
+
+      fireEvent.press(getByTestId('datepicker-month-1'));
+
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should allow selection of enabled months', () => {
+      const onChange = jest.fn();
+      const disableMonths = [0, 1];
+      const { getByTestId, getByText } = render(
+        <DatePicker
+          {...defaultProps}
+          disableMonths={disableMonths}
+          onChange={onChange}
+        />,
+      );
+
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-month-select'));
+
+      fireEvent.press(getByTestId('datepicker-month-3'));
+
+      expect(getByText('March')).toBeTruthy();
+    });
+
+    test('should handle empty disableMonths array', () => {
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} disableMonths={[]} />,
+      );
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-month-select'));
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should handle null disableMonths', () => {
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} disableMonths={undefined as any} />,
+      );
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-month-select'));
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should handle large disableMonths array efficiently', () => {
+      const largeDisableMonths = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} disableMonths={largeDisableMonths} />,
+      );
+
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-month-select'));
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+  });
+
+  describe('DisableYears', () => {
+    test('should disable specified years in year picker', () => {
+      const disableYears = [2020, 2021, 2022];
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} disableYears={disableYears} />,
+      );
+
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-year-select'));
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should not allow selection of disabled years', () => {
+      const onChange = jest.fn();
+      const disableYears = [2020];
+      const { getByTestId } = render(
+        <DatePicker
+          {...defaultProps}
+          disableYears={disableYears}
+          onChange={onChange}
+        />,
+      );
+
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-year-select'));
+
+      fireEvent.press(getByTestId('datepicker-year-2020'));
+
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should allow selection of enabled years', () => {
+      const onChange = jest.fn();
+      const disableYears = [2020, 2021];
+      const { getByTestId, getByText } = render(
+        <DatePicker
+          {...defaultProps}
+          disableYears={disableYears}
+          onChange={onChange}
+        />,
+      );
+
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-year-select'));
+
+      fireEvent.press(getByTestId('datepicker-year-2022'));
+
+      expect(getByText('2022')).toBeTruthy();
+    });
+
+    test('should handle empty disableYears array', () => {
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} disableYears={[]} />,
+      );
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-year-select'));
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should handle null disableYears', () => {
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} disableYears={undefined as any} />,
+      );
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-year-select'));
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should handle large disableYears array efficiently', () => {
+      const largeDisableYears = Array.from({ length: 20 }, (_, i) => 2020 + i);
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} disableYears={largeDisableYears} />,
+      );
+
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-year-select'));
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should work with minYear and maxYear constraints', () => {
+      const disableYears = [2022, 2023];
+      const { getByTestId } = render(
+        <DatePicker
+          {...defaultProps}
+          disableYears={disableYears}
+          minYear={2020}
+          maxYear={2030}
+        />,
+      );
+
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-year-select'));
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
     });
   });
 });

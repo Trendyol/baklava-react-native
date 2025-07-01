@@ -50,6 +50,8 @@ export interface DatePickerContextType {
   dateRange: { startDate: Day; endDate: Day } | null;
   selectionMode: 'startDate' | 'endDate';
   format?: string;
+  disableMonths?: number[];
+  disableYears?: number[];
 }
 
 interface DatePickerProviderProps {
@@ -65,6 +67,8 @@ interface DatePickerProviderProps {
   disableDates?: number[];
   multiple?: boolean;
   format?: string;
+  disableMonths?: number[];
+  disableYears?: number[];
 }
 
 interface DatePickerYearRange {
@@ -89,6 +93,8 @@ export const DatePickerProvider = ({
   disableDates = [],
   multiple = false,
   format,
+  disableMonths,
+  disableYears,
 }: DatePickerProviderProps) => {
   const [date, setDate] = useState<Day>(
     getDayFromDate(getDateFromString(value || '', format)),
@@ -220,7 +226,7 @@ export const DatePickerProvider = ({
       onChangeProp?.(formattedDate || '');
     }
     setVisible(false);
-  }, [multiple, dateRange, date, onChangeProp]);
+  }, [multiple, dateRange, date, onChangeProp, format]);
 
   const onPressPrev = useCallback(() => {
     if (showPickerType === ShowPickerType.YEAR) {
@@ -321,6 +327,8 @@ export const DatePickerProvider = ({
       dateRange,
       selectionMode,
       disableDates,
+      disableMonths,
+      disableYears,
     }),
     [
       value,
@@ -348,6 +356,8 @@ export const DatePickerProvider = ({
       dateRange,
       selectionMode,
       disableDates,
+      disableMonths,
+      disableYears,
     ],
   );
 

@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo } from 'react';
-import { TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
 import { ShowPickerType } from './constants';
@@ -16,13 +16,12 @@ const YearItem = React.memo<{
   isCurrentYear: boolean;
   onSelect: (year: number) => void;
   testID: string;
-}>(({ year, isSelected, isCurrentYear, onSelect, testID }) => (
+  disableYears?: number[];
+}>(({ year, isSelected, isCurrentYear, onSelect, testID, disableYears }) => (
   <TouchableOpacity
     key={year}
     onPress={() => onSelect(year)}
-    style={{
-      width: '30%',
-    }}
+    style={styles.yearItem}
     testID={`${testID}-year-${year}`}
     accessibilityLabel={`${testID}-year-${year}`}>
     <Box
@@ -31,7 +30,8 @@ const YearItem = React.memo<{
       alignItems="center"
       py="2xs"
       borderRadius="s"
-      backgroundColor={isSelected ? 'primaryKey' : 'neutralFull'}>
+      backgroundColor={isSelected ? 'primaryKey' : 'neutralFull'}
+      opacity={disableYears?.includes(year) ? 0.5 : 1}>
       <Text
         variant="subtitle03Regular"
         color={
@@ -57,10 +57,15 @@ const YearPicker = React.memo<YearPickerProps>(({ context }) => {
     firstDayOfWeek,
     yearRange,
     testID,
+    disableYears,
   } = context;
 
   const onSelect = useCallback(
     (year: number) => {
+      if (disableYears?.includes(year)) {
+        return;
+      }
+
       const calendar = generateCalendar({
         year,
         month: calendarData.month,
@@ -83,6 +88,7 @@ const YearPicker = React.memo<YearPickerProps>(({ context }) => {
       firstDayOfWeek,
       setCalendarData,
       setShowPickerType,
+      disableYears,
     ],
   );
 
@@ -112,6 +118,7 @@ const YearPicker = React.memo<YearPickerProps>(({ context }) => {
               isCurrentYear={isCurrentYear}
               onSelect={onSelect}
               testID={testID || ''}
+              disableYears={disableYears}
             />
           );
         })}
@@ -124,3 +131,9 @@ YearPicker.displayName = 'YearPicker';
 YearItem.displayName = 'YearItem';
 
 export default YearPicker;
+
+const styles = StyleSheet.create({
+  yearItem: {
+    width: '30%',
+  },
+});

@@ -10077,6 +10077,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10147,6 +10148,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10217,6 +10219,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10287,6 +10290,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10357,6 +10361,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10427,6 +10432,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10497,6 +10503,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10567,6 +10574,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10637,6 +10645,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10707,6 +10716,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10777,6 +10787,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -10847,6 +10858,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -11742,6 +11754,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -11812,6 +11825,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -11882,6 +11896,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -11952,6 +11967,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12022,6 +12038,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12092,6 +12109,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12162,6 +12180,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12232,6 +12251,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12302,6 +12322,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12372,6 +12393,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12442,6 +12464,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12512,6 +12535,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12582,6 +12606,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12652,6 +12677,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -12722,6 +12748,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -13615,6 +13642,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -13685,6 +13713,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -13755,6 +13784,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -13825,6 +13855,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -13895,6 +13926,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -13965,6 +13997,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -14035,6 +14068,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -14105,6 +14139,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -14175,6 +14210,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -14245,6 +14281,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -14315,6 +14352,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -14385,6 +14423,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -19886,6 +19925,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -19956,6 +19996,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -20026,6 +20067,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -20096,6 +20138,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -20166,6 +20209,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -20236,6 +20280,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -20306,6 +20351,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -20376,6 +20422,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -20446,6 +20493,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -20516,6 +20564,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -20586,6 +20635,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]
@@ -20656,6 +20706,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
+                        "opacity": 1,
                         "paddingVertical": 8,
                       },
                     ]

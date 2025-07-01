@@ -26,6 +26,8 @@ interface DatePickerProps {
   label?: string;
   multiple?: boolean;
   format?: string;
+  disableMonths?: number[];
+  disableYears?: number[];
 }
 
 interface DatePickerContentProps {
@@ -97,6 +99,8 @@ const DatePicker = React.memo<DatePickerProps>(props => {
       onChange: props.onChange,
       multiple: props.multiple || false,
       format: props.format,
+      disableMonths: props.disableMonths,
+      disableYears: props.disableYears,
     }),
     [
       props.value,
@@ -107,10 +111,12 @@ const DatePicker = React.memo<DatePickerProps>(props => {
       props.testID,
       props.firstDayOfWeek,
       props.placeholder,
-      props.disableDates,
       props.onChange,
       props.multiple,
       props.format,
+      props.disableMonths,
+      props.disableYears,
+      _disableDates,
     ],
   );
 

@@ -349,3 +349,71 @@ export const WithYearRange: DatePickerStory = args => {
     </Box>
   );
 };
+
+export const WithDisabledMonths: DatePickerStory = args => {
+  const [value, setValue] = React.useState<string | null>(null);
+
+  const disabledMonths = [
+    202501, 202502, 202506, 202507, 202512, 202601, 202606, 202610,
+  ];
+
+  return (
+    <Box p="2xs">
+      <Text p="2xs" variant="subtitle01Bold">
+        DatePicker with Disabled Months
+      </Text>
+      <Text p="2xs" variant="subtitle03Regular" color="neutralDark">
+        Winter months and peak summer months are disabled
+      </Text>
+      <DatePicker
+        {...args}
+        label="Seasonal Event Date"
+        title="Select Seasonal Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
+        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
+        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
+        testID="datepicker-disabled-months"
+        value={value}
+        onChange={setValue}
+        placeholder="Select available month"
+        firstDayOfWeek={1}
+        disableMonths={disabledMonths}
+        format="dd/MM/yyyy"
+      />
+    </Box>
+  );
+};
+
+export const WithDisabledYears: DatePickerStory = args => {
+  const [value, setValue] = React.useState<string | null>(null);
+
+  const disabledYears = [2020, 2021, 2022, 2027, 2028, 2029];
+
+  return (
+    <Box p="2xs">
+      <Text p="2xs" variant="subtitle01Bold">
+        DatePicker with Disabled Years
+      </Text>
+      <Text p="2xs" variant="subtitle03Regular" color="neutralDark">
+        Past years and future years are disabled
+      </Text>
+      <DatePicker
+        {...args}
+        label="Current Period Date"
+        title="Select Current Period Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
+        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
+        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
+        testID="datepicker-disabled-years"
+        value={value}
+        onChange={setValue}
+        placeholder="Select current period date"
+        firstDayOfWeek={1}
+        disableYears={disabledYears}
+        format="dd/MM/yyyy"
+      />
+    </Box>
+  );
+};

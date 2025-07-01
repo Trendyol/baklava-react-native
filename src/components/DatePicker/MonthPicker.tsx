@@ -17,34 +17,40 @@ const MonthItem = React.memo<{
   isCurrentMonth: boolean;
   onSelect: (idx: number) => void;
   testID: string;
-}>(({ name, idx, isSelected, isCurrentMonth, onSelect, testID }) => (
-  <TouchableOpacity
-    key={name}
-    onPress={() => onSelect(idx)}
-    style={styles.monthItem}
-    testID={`${testID}-month-${idx + 1}`}
-    accessibilityLabel={`${testID}-month-${idx + 1}`}>
-    <Box
-      flex={1}
-      mb="2xs"
-      alignItems="center"
-      py="2xs"
-      borderRadius="s"
-      backgroundColor={isSelected ? 'primaryKey' : 'neutralFull'}>
-      <Text
-        variant="subtitle03Regular"
-        color={
-          isSelected
-            ? 'white'
-            : isCurrentMonth
-            ? 'primaryColor'
-            : 'contentPrimary'
-        }>
-        {name}
-      </Text>
-    </Box>
-  </TouchableOpacity>
-));
+  isDisabled: boolean;
+}>(
+  ({ name, idx, isSelected, isCurrentMonth, onSelect, testID, isDisabled }) => {
+    return (
+      <TouchableOpacity
+        key={name}
+        onPress={() => onSelect(idx)}
+        style={styles.monthItem}
+        testID={`${testID}-month-${idx + 1}`}
+        accessibilityLabel={`${testID}-month-${idx + 1}`}>
+        <Box
+          flex={1}
+          mb="2xs"
+          alignItems="center"
+          py="2xs"
+          borderRadius="s"
+          backgroundColor={isSelected ? 'primaryKey' : 'neutralFull'}
+          opacity={isDisabled ? 0.5 : 1}>
+          <Text
+            variant="subtitle03Regular"
+            color={
+              isSelected
+                ? 'white'
+                : isCurrentMonth
+                ? 'primaryColor'
+                : 'contentPrimary'
+            }>
+            {name}
+          </Text>
+        </Box>
+      </TouchableOpacity>
+    );
+  },
+);
 
 const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
   const {
@@ -54,6 +60,7 @@ const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
     nameOfMonths,
     firstDayOfWeek,
     testID,
+    disableMonths,
   } = context;
 
   const currentMonth = new Date().getMonth();
@@ -87,6 +94,15 @@ const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
         {nameOfMonths?.map((name, idx) => {
           const isSelected = calendarData.month === idx;
           const isCurrentMonth = idx === currentMonth;
+          const isDisabled = disableMonths
+            ? disableMonths.includes(
+                Number(
+                  `${calendarData.year}${(idx + 1)
+                    .toString()
+                    .padStart(2, '0')}`,
+                ),
+              )
+            : false;
 
           return (
             <MonthItem
@@ -95,8 +111,14 @@ const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
               idx={idx}
               isSelected={isSelected}
               isCurrentMonth={isCurrentMonth}
-              onSelect={onSelect}
+              onSelect={() => {
+                if (isDisabled) {
+                  return;
+                }
+                onSelect(idx);
+              }}
               testID={testID || ''}
+              isDisabled={isDisabled}
             />
           );
         })}
