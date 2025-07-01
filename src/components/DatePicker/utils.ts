@@ -44,6 +44,9 @@ export function createCalendar({
       if (week === 0 && day < startingDayIndex) {
         const d = prevMonthDays - startingDayIndex + day + 1;
         const timestamp = getDateTimestamp(prevMonthYear, prevMonth, d);
+        const yearWithMonth = Number(
+          `${prevMonthYear}${(prevMonth + 1).toString().padStart(2, '0')}`,
+        );
         currentWeek.push({
           day: d,
           month: prevMonth,
@@ -53,11 +56,15 @@ export function createCalendar({
           isNextMonth: false,
           isCurrentDate: false,
           timestamp: timestamp,
+          yearWithMonth: yearWithMonth,
         });
       } else if (dayCounter <= daysInMonth) {
         const d = dayCounter++;
         const timestamp = getDateTimestamp(year, month, d);
         const isCurrentDate = timestamp === today.getTime();
+        const yearWithMonth = Number(
+          `${year}${(month + 1).toString().padStart(2, '0')}`,
+        );
 
         currentWeek.push({
           day: d,
@@ -68,10 +75,14 @@ export function createCalendar({
           isNextMonth: false,
           isCurrentDate: isCurrentDate,
           timestamp: timestamp,
+          yearWithMonth: yearWithMonth,
         });
       } else {
         const d = nextMonthDay++;
         const timestamp = getDateTimestamp(year, month + 1, d);
+        const yearWithMonth = Number(
+          `${year}${(month + 1).toString().padStart(2, '0')}`,
+        );
         currentWeek.push({
           day: d,
           month: month + 1,
@@ -81,6 +92,7 @@ export function createCalendar({
           isNextMonth: true,
           isCurrentDate: false,
           timestamp: timestamp,
+          yearWithMonth: yearWithMonth,
         });
       }
     }
@@ -191,6 +203,11 @@ export function getDayFromDate(date: Date): Day {
     isPrevMonth: false,
     isNextMonth: false,
     isCurrentDate: false,
+    yearWithMonth: Number(
+      `${date.getFullYear()}${(date.getMonth() + 1)
+        .toString()
+        .padStart(2, '0')}`,
+    ),
   };
 }
 

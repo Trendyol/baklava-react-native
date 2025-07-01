@@ -7,6 +7,7 @@ export type Day = {
   isNextMonth: boolean;
   isCurrentDate: boolean;
   timestamp: number;
+  yearWithMonth: number;
 };
 
 export interface CalendarData {

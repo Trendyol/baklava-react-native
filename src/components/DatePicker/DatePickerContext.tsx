@@ -167,10 +167,6 @@ export const DatePickerProvider = ({
 
   const onSelectDate = useCallback(
     (selectedDate: Day) => {
-      if (disableDates.includes(selectedDate.timestamp)) {
-        return;
-      }
-
       if (selectedDate.isPrevMonth || selectedDate.isNextMonth) {
         const currentCalendar = changeMonthCalendar({
           year: selectedDate.year,
@@ -188,14 +184,7 @@ export const DatePickerProvider = ({
         setDate(selectedDate);
       }
     },
-    [
-      multiple,
-      updateDateRange,
-      nameOfMonths,
-      nameOfWeekdays,
-      firstDayOfWeek,
-      disableDates,
-    ],
+    [multiple, updateDateRange, nameOfMonths, nameOfWeekdays, firstDayOfWeek],
   );
 
   const onChange = useCallback(() => {

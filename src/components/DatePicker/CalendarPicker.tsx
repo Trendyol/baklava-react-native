@@ -16,6 +16,8 @@ const DayItem = React.memo<{
   inRange: boolean | undefined;
   onSelectDate: (date: any) => void;
   disableDates: number[];
+  disableMonths: number[];
+  disableYears: number[];
   testID: string;
   children: React.ReactNode;
 }>(
@@ -29,6 +31,8 @@ const DayItem = React.memo<{
     testID,
     children,
     disableDates,
+    disableMonths,
+    disableYears,
   }) => {
     const isCurrentDay = date.isCurrentDate && date.isActive;
     const backgroundColor = isSelected ? 'primaryKey' : undefined;
@@ -40,7 +44,10 @@ const DayItem = React.memo<{
       ? 'primaryColor'
       : 'neutralDark';
     const inRangeBackgroundColor = inRange ? 'primaryContrast' : 'transparent';
-    const isDisabled = disableDates.includes(date.timestamp);
+    const isDisabled =
+      disableDates.includes(date.timestamp) ||
+      disableMonths.includes(date.yearWithMonth) ||
+      disableYears.includes(date.year);
 
     return (
       <Box
@@ -50,7 +57,12 @@ const DayItem = React.memo<{
         backgroundColor={inRangeBackgroundColor}>
         <TouchableOpacity
           key={`day-${weekIndex}-${dateIndex}`}
-          onPress={() => onSelectDate(date)}
+          onPress={() => {
+            if (isDisabled) {
+              return;
+            }
+            onSelectDate(date);
+          }}
           testID={`${testID}-datepicker-day-${date.timestamp}`}
           accessibilityLabel={`${testID}-datepicker-day-${date.timestamp}`}
           style={styles.dayItemTouchableOpacity}>
@@ -108,6 +120,8 @@ const CalendarPicker = React.memo<CalendarPickerProps>(({ context }) => {
     nameOfWeekdays,
     multiple,
     disableDates = [],
+    disableMonths = [],
+    disableYears = [],
   } = context;
 
   const getIsSelected = (date: any) => {
@@ -176,7 +190,9 @@ const CalendarPicker = React.memo<CalendarPickerProps>(({ context }) => {
                   inRange={multiple && inRange}
                   onSelectDate={onSelectDate}
                   testID={testID || ''}
-                  disableDates={disableDates}>
+                  disableDates={disableDates}
+                  disableMonths={disableMonths}
+                  disableYears={disableYears}>
                   {multiple && rangeIsActive ? (
                     <>
                       <Box
