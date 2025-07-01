@@ -151,6 +151,7 @@ export function getDateFromString(
   const dayIndex = format.indexOf('dd');
 
   if (yearIndex === -1 || monthIndex === -1 || dayIndex === -1) {
+    // eslint-disable-next-line no-console
     console.warn('invalid date format', format);
     return new Date();
   }
@@ -160,6 +161,7 @@ export function getDateFromString(
   const day = date.substring(dayIndex, dayIndex + 2);
 
   if (!year || !month || !day) {
+    // eslint-disable-next-line no-console
     console.warn('invalid date', date);
     return new Date();
   }
@@ -171,6 +173,7 @@ export function getDateFromString(
     _date.getMonth() !== Number(month) - 1 ||
     _date.getDate() !== Number(day)
   ) {
+    // eslint-disable-next-line no-console
     console.warn('invalid date', date);
     return new Date();
   }
@@ -195,7 +198,9 @@ export function getDayFromDateRange(
   dateRange: string | null,
   format: string = DEFAULT_DATE_FORMAT,
 ): { startDate: Day; endDate: Day } | null {
-  if (!dateRange) return null;
+  if (!dateRange) {
+    return null;
+  }
 
   const parts = dateRange.split(' - ');
   if (parts.length !== 2) {

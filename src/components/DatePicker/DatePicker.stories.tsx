@@ -35,15 +35,15 @@ export const Basic: DatePickerStory = args => {
       </Text>
       <DatePicker
         {...args}
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
+        title="Select Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker"
         value={value}
         onChange={setValue}
-        placeholder="Tarih seçiniz"
+        placeholder="Select date"
         firstDayOfWeek={1}
         multiple={false}
         format="dd/MM/yyyy"
@@ -61,91 +61,16 @@ export const WithLabel: DatePickerStory = args => {
       </Text>
       <DatePicker
         {...args}
-        label="Doğum Tarihi"
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
+        label="Birth Date"
+        title="Select Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-with-label"
         value={value}
         onChange={setValue}
-        placeholder="Tarih seçiniz"
-        firstDayOfWeek={1}
-      />
-    </Box>
-  );
-};
-
-export const Small: DatePickerStory = args => {
-  const [value, setValue] = React.useState<string | null>(null);
-  return (
-    <Box p="2xs">
-      <Text p="2xs" variant="subtitle01Bold">
-        Small DatePicker
-      </Text>
-      <DatePicker
-        {...args}
-        size="small"
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-small"
-        value={value}
-        onChange={setValue}
-        placeholder="Tarih seçiniz"
-        firstDayOfWeek={1}
-      />
-    </Box>
-  );
-};
-
-export const Medium: DatePickerStory = args => {
-  const [value, setValue] = React.useState<string | null>(null);
-  return (
-    <Box p="2xs">
-      <Text p="2xs" variant="subtitle01Bold">
-        Medium DatePicker
-      </Text>
-      <DatePicker
-        {...args}
-        size="medium"
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-medium"
-        value={value}
-        onChange={setValue}
-        placeholder="Tarih seçiniz"
-        firstDayOfWeek={1}
-      />
-    </Box>
-  );
-};
-
-export const Large: DatePickerStory = args => {
-  const [value, setValue] = React.useState<string | null>(null);
-  return (
-    <Box p="2xs">
-      <Text p="2xs" variant="subtitle01Bold">
-        Large DatePicker
-      </Text>
-      <DatePicker
-        {...args}
-        size="large"
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-large"
-        value={value}
-        onChange={setValue}
-        placeholder="Tarih seçiniz"
+        placeholder="Select date"
         firstDayOfWeek={1}
       />
     </Box>
@@ -169,15 +94,15 @@ export const SizeComparison: DatePickerStory = args => {
       <DatePicker
         {...args}
         size="small"
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
+        title="Select Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-small-compare"
         value={value1}
         onChange={setValue1}
-        placeholder="Küçük boyut"
+        placeholder="Small size"
         firstDayOfWeek={1}
       />
 
@@ -187,15 +112,15 @@ export const SizeComparison: DatePickerStory = args => {
       <DatePicker
         {...args}
         size="medium"
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
+        title="Select Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-medium-compare"
         value={value2}
         onChange={setValue2}
-        placeholder="Orta boyut"
+        placeholder="Medium size"
         firstDayOfWeek={1}
       />
 
@@ -205,15 +130,15 @@ export const SizeComparison: DatePickerStory = args => {
       <DatePicker
         {...args}
         size="large"
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
+        title="Select Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-large-compare"
         value={value3}
         onChange={setValue3}
-        placeholder="Büyük boyut"
+        placeholder="Large size"
         firstDayOfWeek={1}
       />
     </Box>
@@ -237,16 +162,16 @@ export const WithLabelAndSize: DatePickerStory = args => {
       <DatePicker
         {...args}
         size="small"
-        label="Küçük Tarih"
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
+        label="Small Date"
+        title="Select Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-small-label"
         value={value1}
         onChange={setValue1}
-        placeholder="Küçük boyut"
+        placeholder="Small size"
         firstDayOfWeek={1}
       />
 
@@ -256,16 +181,16 @@ export const WithLabelAndSize: DatePickerStory = args => {
       <DatePicker
         {...args}
         size="medium"
-        label="Orta Tarih"
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
+        label="Medium Date"
+        title="Select Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-medium-label"
         value={value2}
         onChange={setValue2}
-        placeholder="Orta boyut"
+        placeholder="Medium size"
         firstDayOfWeek={1}
       />
 
@@ -275,16 +200,16 @@ export const WithLabelAndSize: DatePickerStory = args => {
       <DatePicker
         {...args}
         size="large"
-        label="Büyük Tarih"
-        title="Tarih seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
+        label="Large Date"
+        title="Select Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-large-label"
         value={value3}
         onChange={setValue3}
-        placeholder="Büyük boyut"
+        placeholder="Large size"
         firstDayOfWeek={1}
       />
     </Box>
@@ -301,11 +226,11 @@ export const MultipleDateSelection: DatePickerStory = args => {
       <DatePicker
         {...args}
         multiple={true}
-        label="Tarih Aralığı Seçici"
-        placeholder="Başlangıç - Bitiş tarihi seçin"
-        title="Tarih aralığı seçiniz"
-        closeButtonLabel="Kapat"
-        selectButtonLabel="Seç"
+        label="Date Range Selector"
+        placeholder="Select start - end date"
+        title="Select date range"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-multiple"
@@ -328,17 +253,98 @@ export const MultipleDateSelectionWithCustomLabels: DatePickerStory = args => {
       <DatePicker
         {...args}
         multiple={true}
-        label="Rezervasyon Tarihi"
-        placeholder="Giriş - Çıkış tarihi seçin"
-        title="Rezervasyon tarihi seçiniz"
-        closeButtonLabel="İptal"
-        selectButtonLabel="Onayla"
+        label="Reservation Date"
+        placeholder="Select check-in - check-out date"
+        title="Select reservation date"
+        closeButtonLabel="Cancel"
+        selectButtonLabel="Confirm"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-multiple-custom"
         value={value}
         onChange={setValue}
         firstDayOfWeek={1}
+      />
+    </Box>
+  );
+};
+
+export const WithDisabledDates: DatePickerStory = args => {
+  const [value, setValue] = React.useState<string | null>(null);
+
+  // Disable specific dates (weekends and some holidays)
+  const disabledDates = [
+    '2025-01-04', // Saturday
+    '2025-01-05', // Sunday
+    '2025-01-11', // Saturday
+    '2025-01-12', // Sunday
+    '2025-01-18', // Saturday
+    '2025-01-19', // Sunday
+    '2025-01-25', // Saturday
+    '2025-01-26', // Sunday
+    '2025-01-01', // New Year's Day
+    '2025-01-15', // Specific holiday
+  ];
+
+  return (
+    <Box p="2xs">
+      <Text p="2xs" variant="subtitle01Bold">
+        DatePicker with Disabled Dates
+      </Text>
+      <Text p="2xs" variant="subtitle03Regular" color="neutralDark">
+        Weekends and holidays are disabled
+      </Text>
+      <DatePicker
+        {...args}
+        label="Appointment Date"
+        title="Select Available Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
+        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
+        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
+        testID="datepicker-disabled-dates"
+        value={value}
+        onChange={setValue}
+        placeholder="Select available date"
+        firstDayOfWeek={1}
+        disableDates={disabledDates}
+        format="yyyy-MM-dd"
+      />
+    </Box>
+  );
+};
+
+export const WithYearRange: DatePickerStory = args => {
+  const [value, setValue] = React.useState<string | null>(null);
+
+  // Restrict year range to 2024-2026
+  const minYear = 2024;
+  const maxYear = 2026;
+
+  return (
+    <Box p="2xs">
+      <Text p="2xs" variant="subtitle01Bold">
+        DatePicker with Year Range
+      </Text>
+      <Text p="2xs" variant="subtitle03Regular" color="neutralDark">
+        Only years 2024-2026 are selectable
+      </Text>
+      <DatePicker
+        {...args}
+        label="Event Date"
+        title="Select Event Date"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
+        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
+        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
+        testID="datepicker-year-range"
+        value={value}
+        onChange={setValue}
+        placeholder="Select event date (2024-2026)"
+        firstDayOfWeek={1}
+        minYear={minYear}
+        maxYear={maxYear}
+        format="dd/MM/yyyy"
       />
     </Box>
   );
