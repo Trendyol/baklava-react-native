@@ -8,6 +8,8 @@ import {
   formatDate,
   getDayFromDateRange,
   getDateFromString,
+  createDate,
+  getDateTimestamp,
 } from './utils';
 import { CalendarOptions } from './types';
 import { DEFAULT_NAME_OF_MONTHS, DEFAULT_NAME_OF_WEEKDAYS } from './constants';
@@ -228,7 +230,7 @@ describe('DatePicker Utils', () => {
     test('should handle month increment correctly', () => {
       const options: CalendarOptions = {
         year: 2025,
-        month: 11,
+        month: 12,
       };
 
       const result = changeMonthCalendar(options);
@@ -240,10 +242,10 @@ describe('DatePicker Utils', () => {
     test('should handle month decrement correctly', () => {
       const options: CalendarOptions = {
         year: 2025,
-        month: 0,
+        month: -1,
       };
 
-      const result = changeMonthCalendar({ ...options, month: -1 });
+      const result = changeMonthCalendar(options);
 
       expect(result.year).toBe(2024);
       expect(result.month).toBe(11);
@@ -274,7 +276,7 @@ describe('DatePicker Utils', () => {
       expect(result.year).toBe(2024);
     });
 
-    test('should handle changeMonthCalendar with defined year when month >= 11', () => {
+    test('should handle changeMonthCalendar with defined year when month >= 12', () => {
       const options: CalendarOptions = {
         year: 2025,
         month: 12,
@@ -800,6 +802,147 @@ describe('DatePicker Utils', () => {
       expect(result).toBeInstanceOf(Date);
 
       consoleSpy.mockRestore();
+    });
+  });
+
+  describe('createDate', () => {
+    test('should create date with specified year, month, and day', () => {
+      const result = createDate(2025, 0, 15);
+
+      expect(result).toBeInstanceOf(Date);
+      expect(result.getFullYear()).toBe(2025);
+      expect(result.getMonth()).toBe(0);
+      expect(result.getDate()).toBe(15);
+      expect(result.getHours()).toBe(0);
+      expect(result.getMinutes()).toBe(0);
+      expect(result.getSeconds()).toBe(0);
+      expect(result.getMilliseconds()).toBe(0);
+    });
+
+    test('should handle leap year date', () => {
+      const result = createDate(2024, 1, 29);
+
+      expect(result).toBeInstanceOf(Date);
+      expect(result.getFullYear()).toBe(2024);
+      expect(result.getMonth()).toBe(1);
+      expect(result.getDate()).toBe(29);
+    });
+
+    test('should handle year boundary dates', () => {
+      const result = createDate(2024, 11, 31);
+
+      expect(result).toBeInstanceOf(Date);
+      expect(result.getFullYear()).toBe(2024);
+      expect(result.getMonth()).toBe(11);
+      expect(result.getDate()).toBe(31);
+    });
+
+    test('should handle month boundary dates', () => {
+      const result = createDate(2025, 0, 1);
+
+      expect(result).toBeInstanceOf(Date);
+      expect(result.getFullYear()).toBe(2025);
+      expect(result.getMonth()).toBe(0);
+      expect(result.getDate()).toBe(1);
+    });
+
+    test('should handle single digit day and month', () => {
+      const result = createDate(2025, 0, 5);
+
+      expect(result).toBeInstanceOf(Date);
+      expect(result.getFullYear()).toBe(2025);
+      expect(result.getMonth()).toBe(0);
+      expect(result.getDate()).toBe(5);
+    });
+
+    test('should handle edge case dates', () => {
+      const result = createDate(1900, 0, 1);
+
+      expect(result).toBeInstanceOf(Date);
+      expect(result.getFullYear()).toBe(1900);
+      expect(result.getMonth()).toBe(0);
+      expect(result.getDate()).toBe(1);
+    });
+
+    test('should handle future dates', () => {
+      const result = createDate(2030, 11, 31);
+
+      expect(result).toBeInstanceOf(Date);
+      expect(result.getFullYear()).toBe(2030);
+      expect(result.getMonth()).toBe(11);
+      expect(result.getDate()).toBe(31);
+    });
+  });
+
+  describe('getDateTimestamp', () => {
+    test('should return timestamp for valid date', () => {
+      const result = getDateTimestamp(2025, 0, 15);
+      const expectedDate = new Date(2025, 0, 15, 0, 0, 0, 0);
+
+      expect(typeof result).toBe('number');
+      expect(result).toBe(expectedDate.getTime());
+    });
+
+    test('should handle leap year timestamp', () => {
+      const result = getDateTimestamp(2024, 1, 29);
+      const expectedDate = new Date(2024, 1, 29, 0, 0, 0, 0);
+
+      expect(typeof result).toBe('number');
+      expect(result).toBe(expectedDate.getTime());
+    });
+
+    test('should handle year boundary timestamp', () => {
+      const result = getDateTimestamp(2024, 11, 31);
+      const expectedDate = new Date(2024, 11, 31, 0, 0, 0, 0);
+
+      expect(typeof result).toBe('number');
+      expect(result).toBe(expectedDate.getTime());
+    });
+
+    test('should handle month boundary timestamp', () => {
+      const result = getDateTimestamp(2025, 0, 1);
+      const expectedDate = new Date(2025, 0, 1, 0, 0, 0, 0);
+
+      expect(typeof result).toBe('number');
+      expect(result).toBe(expectedDate.getTime());
+    });
+
+    test('should handle single digit day and month timestamp', () => {
+      const result = getDateTimestamp(2025, 0, 5);
+      const expectedDate = new Date(2025, 0, 5, 0, 0, 0, 0);
+
+      expect(typeof result).toBe('number');
+      expect(result).toBe(expectedDate.getTime());
+    });
+
+    test('should handle edge case timestamps', () => {
+      const result = getDateTimestamp(1900, 0, 1);
+      const expectedDate = new Date(1900, 0, 1, 0, 0, 0, 0);
+
+      expect(typeof result).toBe('number');
+      expect(result).toBe(expectedDate.getTime());
+    });
+
+    test('should handle future timestamps', () => {
+      const result = getDateTimestamp(2030, 11, 31);
+      const expectedDate = new Date(2030, 11, 31, 0, 0, 0, 0);
+
+      expect(typeof result).toBe('number');
+      expect(result).toBe(expectedDate.getTime());
+    });
+
+    test('should return consistent timestamps for same date', () => {
+      const timestamp1 = getDateTimestamp(2025, 0, 15);
+      const timestamp2 = getDateTimestamp(2025, 0, 15);
+
+      expect(timestamp1).toBe(timestamp2);
+    });
+
+    test('should return different timestamps for different dates', () => {
+      const timestamp1 = getDateTimestamp(2025, 0, 15);
+      const timestamp2 = getDateTimestamp(2025, 0, 16);
+
+      expect(timestamp1).not.toBe(timestamp2);
     });
   });
 });

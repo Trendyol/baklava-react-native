@@ -1,6 +1,7 @@
 export const YEAR_RANGE_STEP = 10;
-export const DEFAULT_MIN_YEAR = 2015;
-export const DEFAULT_MAX_YEAR = 2035;
+export const DEFAULT_MIN_YEAR = new Date().getFullYear() - 100;
+export const DEFAULT_MAX_YEAR = new Date().getFullYear() + 100;
+
 export enum ShowPickerType {
   MONTH,
   YEAR,

@@ -13,6 +13,7 @@ import {
   formatDate,
   getDateFromString,
   createDate,
+  getMonthCalendar,
 } from './utils';
 import {
   DEFAULT_YEAR_OFFSET,
@@ -20,6 +21,8 @@ import {
   DEFAULT_NAME_OF_MONTHS,
   DEFAULT_NAME_OF_WEEKDAYS,
   ShowPickerType,
+  DEFAULT_MIN_YEAR,
+  DEFAULT_MAX_YEAR,
 } from './constants';
 import { Day } from './types';
 
@@ -85,8 +88,8 @@ export const DatePickerProvider = ({
   value = null,
   nameOfWeekdays = DEFAULT_NAME_OF_WEEKDAYS,
   nameOfMonths = DEFAULT_NAME_OF_MONTHS,
-  minYear = new Date().getFullYear() - 100,
-  maxYear = new Date().getFullYear() + 100,
+  minYear = DEFAULT_MIN_YEAR,
+  maxYear = DEFAULT_MAX_YEAR,
   firstDayOfWeek,
   testID,
   onChange: onChangeProp,
@@ -167,8 +170,12 @@ export const DatePickerProvider = ({
 
   const onSelectDate = useCallback(
     (selectedDate: Day) => {
+      const isOutOfRange = selectedDate.year < minYear || selectedDate.year > maxYear;
+      if (isOutOfRange) {
+        return;
+      }
       if (selectedDate.isPrevMonth || selectedDate.isNextMonth) {
-        const currentCalendar = changeMonthCalendar({
+        const currentCalendar = getMonthCalendar({
           year: selectedDate.year,
           month: selectedDate.month,
           nameOfMonths,
@@ -184,7 +191,7 @@ export const DatePickerProvider = ({
         setDate(selectedDate);
       }
     },
-    [multiple, updateDateRange, nameOfMonths, nameOfWeekdays, firstDayOfWeek],
+    [multiple, updateDateRange, nameOfMonths, nameOfWeekdays, firstDayOfWeek, minYear, maxYear],
   );
 
   const onChange = useCallback(() => {
@@ -233,6 +240,9 @@ export const DatePickerProvider = ({
         year: minYear && prev.year - 1 < minYear ? minYear : prev.year - 1,
       }));
     } else {
+      if (calendarData.month === 0 && calendarData.year - 1 < minYear) {
+        return;
+      }
       setCalendarData(
         changeMonthCalendar({
           year: calendarData.year,
@@ -269,6 +279,9 @@ export const DatePickerProvider = ({
         year: maxYear && prev.year + 1 > maxYear ? maxYear : prev.year + 1,
       }));
     } else {
+      if (calendarData.month === 11 && calendarData.year + 1 > maxYear) {
+        return;
+      }
       setCalendarData(
         changeMonthCalendar({
           year: calendarData.year,

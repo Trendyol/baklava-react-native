@@ -21,6 +21,10 @@ export function createCalendar({
   const daysInMonth = lastDay.getDate();
   const prevMonth = month === 0 ? DEFAULT_MONTH_COUNT - 1 : month - 1;
   const prevMonthYear = month === 0 ? year - 1 : year;
+
+  const nextMonth = month === 11 ? 0 : month + 1;
+  const nextMonthYear = month === 11 ? year + 1 : year;
+
   const prevMonthLastDay = new Date(prevMonthYear, prevMonth + 1, 0);
   const prevMonthDays = prevMonthLastDay.getDate();
 
@@ -44,9 +48,7 @@ export function createCalendar({
       if (week === 0 && day < startingDayIndex) {
         const d = prevMonthDays - startingDayIndex + day + 1;
         const timestamp = getDateTimestamp(prevMonthYear, prevMonth, d);
-        const yearWithMonth = Number(
-          `${prevMonthYear}${(prevMonth + 1).toString().padStart(2, '0')}`,
-        );
+        const yearWithMonth = getYearWithMonth(prevMonthYear, prevMonth);
         currentWeek.push({
           day: d,
           month: prevMonth,
@@ -62,9 +64,7 @@ export function createCalendar({
         const d = dayCounter++;
         const timestamp = getDateTimestamp(year, month, d);
         const isCurrentDate = timestamp === today.getTime();
-        const yearWithMonth = Number(
-          `${year}${(month + 1).toString().padStart(2, '0')}`,
-        );
+        const yearWithMonth = getYearWithMonth(year, month);
 
         currentWeek.push({
           day: d,
@@ -79,14 +79,12 @@ export function createCalendar({
         });
       } else {
         const d = nextMonthDay++;
-        const timestamp = getDateTimestamp(year, month + 1, d);
-        const yearWithMonth = Number(
-          `${year}${(month + 1).toString().padStart(2, '0')}`,
-        );
+        const timestamp = getDateTimestamp(nextMonthYear, nextMonth, d);
+        const yearWithMonth = getYearWithMonth(nextMonthYear, nextMonth);
         currentWeek.push({
           day: d,
-          month: month + 1,
-          year: year,
+          month: nextMonth,
+          year: nextMonthYear,
           isActive: false,
           isPrevMonth: false,
           isNextMonth: true,
@@ -137,7 +135,7 @@ export function changeMonthCalendar(options: CalendarOptions): CalendarData {
     if (options.year) {
       options.year = options.year - 1;
     }
-  } else if (options.month && options.month >= 11) {
+  } else if (options.month && options.month > 11) {
     options.month = 0;
     if (options.year) {
       options.year = options.year + 1;
@@ -256,4 +254,11 @@ export function formatDate(
     .replace(/MM/g, month)
     .replace(/yyyy/g, year)
     .replace(/YY/g, yearShort);
+}
+
+const getYearWithMonth = (year: number, month: number) => {
+  const _monthString = month.toString().padStart(2, '0');
+  const _yearString = year.toString();
+  
+  return Number(`${_yearString}${_monthString}`);
 }
