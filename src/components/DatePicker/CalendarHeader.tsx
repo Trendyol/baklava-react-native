@@ -20,36 +20,29 @@ const PickerButton = React.memo<{
     onPress={onPress}
     style={styles.touchableOpacity}
     testID={testID}
-    accessibilityLabel={testID}
-  >
+    accessibilityLabel={testID}>
     <Box
       py="2xs"
       px="xl"
       alignItems="center"
       borderRadius="s"
-      backgroundColor={isActive ? 'neutralLightest' : undefined}
-    >
-      <Text
-        variant="subtitle03Medium"
-        color='neutralDarkest'
-      >
+      backgroundColor={isActive ? 'neutralLightest' : undefined}>
+      <Text variant="subtitle03Medium" color="neutralDarkest">
         {label}
       </Text>
     </Box>
   </TouchableOpacity>
 ));
 
-// Navigasyon butonları için memoized component
 const NavigationButton = React.memo<{
   iconName: 'arrow-left' | 'arrow-right';
   onPress: () => void;
   testID: string;
 }>(({ iconName, onPress, testID }) => (
-  <TouchableOpacity 
-    onPress={onPress} 
-    testID={testID} 
-    accessibilityLabel={testID}
-  >
+  <TouchableOpacity
+    onPress={onPress}
+    testID={testID}
+    accessibilityLabel={testID}>
     <Box p="xs">
       <Icon size="m" name={iconName} />
     </Box>
@@ -57,11 +50,23 @@ const NavigationButton = React.memo<{
 ));
 
 const CalendarHeader = React.memo<CalendarHeaderProps>(({ context }) => {
-  const { calendarData, showPickerType, setShowPickerType, onPressNext, onPressPrev, testID } = context;
+  const {
+    calendarData,
+    showPickerType,
+    setShowPickerType,
+    onPressNext,
+    onPressPrev,
+    testID,
+  } = context;
 
-  const handlePickerPress = useCallback((pickerType: ShowPickerType) => {
-    setShowPickerType(showPickerType === pickerType ? ShowPickerType.NONE : pickerType);
-  }, [showPickerType, setShowPickerType]);
+  const handlePickerPress = useCallback(
+    (pickerType: ShowPickerType) => {
+      setShowPickerType(
+        showPickerType === pickerType ? ShowPickerType.NONE : pickerType,
+      );
+    },
+    [showPickerType, setShowPickerType],
+  );
 
   return (
     <Box
@@ -69,22 +74,26 @@ const CalendarHeader = React.memo<CalendarHeaderProps>(({ context }) => {
       alignItems="center"
       justifyContent="space-between"
       py="2xs"
-      mb="2xs"
-    >
+      mb="2xs">
       <NavigationButton
         iconName="arrow-left"
         onPress={onPressPrev}
         testID={`${testID}-header-prev`}
       />
-      
-      <Box flex={1} flexDirection="row" gap='2xs' alignItems="center" justifyContent="space-between">
+
+      <Box
+        flex={1}
+        flexDirection="row"
+        gap="2xs"
+        alignItems="center"
+        justifyContent="space-between">
         <PickerButton
           label={calendarData.nameOfMonth}
           isActive={showPickerType === ShowPickerType.MONTH}
           onPress={() => handlePickerPress(ShowPickerType.MONTH)}
           testID={`${testID}-header-month-select`}
         />
-        
+
         <PickerButton
           label={calendarData.year}
           isActive={showPickerType === ShowPickerType.YEAR}
@@ -92,7 +101,7 @@ const CalendarHeader = React.memo<CalendarHeaderProps>(({ context }) => {
           testID={`${testID}-header-year-select`}
         />
       </Box>
-      
+
       <NavigationButton
         iconName="arrow-right"
         onPress={onPressNext}
@@ -106,7 +115,7 @@ CalendarHeader.displayName = 'CalendarHeader';
 PickerButton.displayName = 'PickerButton';
 NavigationButton.displayName = 'NavigationButton';
 
-export default CalendarHeader; 
+export default CalendarHeader;
 
 const styles = StyleSheet.create({
   touchableOpacity: {

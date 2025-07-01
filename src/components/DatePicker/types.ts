@@ -23,4 +23,3 @@ export type CalendarOptions = {
   nameOfMonths?: string[];
   firstDayOfWeek?: 0 | 1;
 };
-

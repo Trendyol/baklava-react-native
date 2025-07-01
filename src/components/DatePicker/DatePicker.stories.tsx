@@ -28,7 +28,6 @@ type DatePickerStory = ComponentStory<typeof DatePicker>;
 
 export const Basic: DatePickerStory = args => {
   const [value, setValue] = React.useState<string | null>(null);
-  const [disableDates] = React.useState<string[]>(['29/06/2025', '30/06/2025', '01/06/2025']);
   return (
     <Box p="2xs">
       <Text p="2xs" variant="subtitle01Bold">
@@ -42,15 +41,13 @@ export const Basic: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker"
-        value={value} 
-        maxYear={2025}
+        value={value}
         onChange={setValue}
         placeholder="Tarih seçiniz"
-        firstDayOfWeek={1}        
-        disableDates={disableDates}
+        firstDayOfWeek={1}
         multiple={false}
         format="dd/MM/yyyy"
-      /> 
+      />
     </Box>
   );
 };
@@ -71,11 +68,11 @@ export const WithLabel: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-with-label"
-        value={value} 
+        value={value}
         onChange={setValue}
         placeholder="Tarih seçiniz"
         firstDayOfWeek={1}
-      /> 
+      />
     </Box>
   );
 };
@@ -96,11 +93,11 @@ export const Small: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-small"
-        value={value} 
+        value={value}
         onChange={setValue}
         placeholder="Tarih seçiniz"
         firstDayOfWeek={1}
-      /> 
+      />
     </Box>
   );
 };
@@ -121,11 +118,11 @@ export const Medium: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-medium"
-        value={value} 
+        value={value}
         onChange={setValue}
         placeholder="Tarih seçiniz"
         firstDayOfWeek={1}
-      /> 
+      />
     </Box>
   );
 };
@@ -146,11 +143,11 @@ export const Large: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-large"
-        value={value} 
+        value={value}
         onChange={setValue}
         placeholder="Tarih seçiniz"
         firstDayOfWeek={1}
-      /> 
+      />
     </Box>
   );
 };
@@ -159,13 +156,13 @@ export const SizeComparison: DatePickerStory = args => {
   const [value1, setValue1] = React.useState<string | null>(null);
   const [value2, setValue2] = React.useState<string | null>(null);
   const [value3, setValue3] = React.useState<string | null>(null);
-  
+
   return (
     <Box p="2xs" gap="2xs">
       <Text p="2xs" variant="subtitle01Bold">
         DatePicker Size Comparison
       </Text>
-      
+
       <Text variant="subtitle03Medium" color="neutralDark">
         Small Size:
       </Text>
@@ -178,12 +175,12 @@ export const SizeComparison: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-small-compare"
-        value={value1} 
+        value={value1}
         onChange={setValue1}
         placeholder="Küçük boyut"
         firstDayOfWeek={1}
       />
-      
+
       <Text variant="subtitle03Medium" color="neutralDark">
         Medium Size:
       </Text>
@@ -196,12 +193,12 @@ export const SizeComparison: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-medium-compare"
-        value={value2} 
+        value={value2}
         onChange={setValue2}
         placeholder="Orta boyut"
         firstDayOfWeek={1}
       />
-      
+
       <Text variant="subtitle03Medium" color="neutralDark">
         Large Size:
       </Text>
@@ -214,7 +211,7 @@ export const SizeComparison: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-large-compare"
-        value={value3} 
+        value={value3}
         onChange={setValue3}
         placeholder="Büyük boyut"
         firstDayOfWeek={1}
@@ -227,13 +224,13 @@ export const WithLabelAndSize: DatePickerStory = args => {
   const [value1, setValue1] = React.useState<string | null>(null);
   const [value2, setValue2] = React.useState<string | null>(null);
   const [value3, setValue3] = React.useState<string | null>(null);
-  
+
   return (
     <Box p="2xs" gap="2xs">
       <Text p="2xs" variant="subtitle01Bold">
         DatePicker with Label and Different Sizes
       </Text>
-      
+
       <Text variant="subtitle03Medium" color="neutralDark">
         Small with Label:
       </Text>
@@ -247,12 +244,12 @@ export const WithLabelAndSize: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-small-label"
-        value={value1} 
+        value={value1}
         onChange={setValue1}
         placeholder="Küçük boyut"
         firstDayOfWeek={1}
       />
-      
+
       <Text variant="subtitle03Medium" color="neutralDark">
         Medium with Label:
       </Text>
@@ -266,12 +263,12 @@ export const WithLabelAndSize: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-medium-label"
-        value={value2} 
+        value={value2}
         onChange={setValue2}
         placeholder="Orta boyut"
         firstDayOfWeek={1}
       />
-      
+
       <Text variant="subtitle03Medium" color="neutralDark">
         Large with Label:
       </Text>
@@ -285,7 +282,7 @@ export const WithLabelAndSize: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-large-label"
-        value={value3} 
+        value={value3}
         onChange={setValue3}
         placeholder="Büyük boyut"
         firstDayOfWeek={1}
@@ -312,11 +309,11 @@ export const MultipleDateSelection: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-multiple"
-        value={value} 
+        value={value}
         onChange={setValue}
         firstDayOfWeek={1}
         format="yyyy-MM-dd"
-      /> 
+      />
     </Box>
   );
 };
@@ -339,10 +336,10 @@ export const MultipleDateSelectionWithCustomLabels: DatePickerStory = args => {
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
         nameOfMonths={DEFAULT_NAME_OF_MONTHS}
         testID="datepicker-multiple-custom"
-        value={value} 
+        value={value}
         onChange={setValue}
         firstDayOfWeek={1}
-      /> 
+      />
     </Box>
   );
 };

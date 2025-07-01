@@ -53,6 +53,7 @@ export const parameters: Parameters = {
         'Button',
         ['Button Variants', 'Button Types'],
         'Checkbox',
+        'DatePicker',
         'Icon',
         'Image',
         'Input',

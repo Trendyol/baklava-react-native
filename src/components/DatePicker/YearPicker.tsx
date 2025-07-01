@@ -10,7 +10,6 @@ type YearPickerProps = {
   context: DatePickerContextType;
 };
 
-// Yıl öğesi için memoized component
 const YearItem = React.memo<{
   year: number;
   isSelected: boolean;
@@ -25,20 +24,23 @@ const YearItem = React.memo<{
       width: '30%',
     }}
     testID={`${testID}-year-${year}`}
-    accessibilityLabel={`${testID}-year-${year}`}
-  >
+    accessibilityLabel={`${testID}-year-${year}`}>
     <Box
       flex={1}
       mb="2xs"
       alignItems="center"
       py="2xs"
       borderRadius="s"
-      backgroundColor={isSelected ? 'primaryKey' : 'neutralFull'}
-    >
+      backgroundColor={isSelected ? 'primaryKey' : 'neutralFull'}>
       <Text
         variant="subtitle03Regular"
-        color={isSelected ? 'white' : isCurrentYear ? 'primaryColor' : 'neutralDarker'}
-      >
+        color={
+          isSelected
+            ? 'white'
+            : isCurrentYear
+            ? 'primaryColor'
+            : 'neutralDarker'
+        }>
         {year}
       </Text>
     </Box>
@@ -46,49 +48,62 @@ const YearItem = React.memo<{
 ));
 
 const YearPicker = React.memo<YearPickerProps>(({ context }) => {
-  const { 
-    calendarData, 
-    setCalendarData, 
+  const {
+    calendarData,
+    setCalendarData,
     setShowPickerType,
-    nameOfMonths, 
-    nameOfWeekdays, 
-    firstDayOfWeek, 
+    nameOfMonths,
+    nameOfWeekdays,
+    firstDayOfWeek,
     yearRange,
-    testID
+    testID,
   } = context;
-  
-  const onSelect = useCallback((year: number) => {
-    const calendar = generateCalendar({
-      year,
-      month: calendarData.month,
+
+  const onSelect = useCallback(
+    (year: number) => {
+      const calendar = generateCalendar({
+        year,
+        month: calendarData.month,
+        nameOfMonths,
+        nameOfWeekdays,
+        firstDayOfWeek,
+      });
+      setCalendarData({
+        calendar,
+        year,
+        month: calendarData.month,
+        nameOfMonth: nameOfMonths?.[calendarData.month],
+      });
+      setShowPickerType(ShowPickerType.NONE);
+    },
+    [
+      calendarData.month,
       nameOfMonths,
       nameOfWeekdays,
-      firstDayOfWeek
-    });
-    setCalendarData({
-      calendar,
-      year,
-      month: calendarData.month,
-      nameOfMonth: nameOfMonths?.[calendarData.month]
-    });
-    setShowPickerType(ShowPickerType.NONE);
-  }, [calendarData.month, nameOfMonths, nameOfWeekdays, firstDayOfWeek, setCalendarData, setShowPickerType]);
-  
+      firstDayOfWeek,
+      setCalendarData,
+      setShowPickerType,
+    ],
+  );
+
   const currentYear = new Date().getFullYear();
 
-  // Yıl listesini memoize et
-  const years = useMemo(() => 
-    Array.from({ length: yearRange.max - yearRange.min + 1 }, (_, i) => yearRange.min + i),
-    [yearRange.min, yearRange.max]
+  const years = useMemo(
+    () =>
+      Array.from(
+        { length: yearRange.max - yearRange.min + 1 },
+        (_, i) => yearRange.min + i,
+      ),
+    [yearRange.min, yearRange.max],
   );
 
   return (
     <Box mb="2xs">
       <Box flexDirection="row" flexWrap="wrap" justifyContent="space-between">
-        {years.map((year) => {
+        {years.map(year => {
           const isSelected = calendarData.year === year;
           const isCurrentYear = year === currentYear;
-          
+
           return (
             <YearItem
               key={year}
@@ -108,4 +123,4 @@ const YearPicker = React.memo<YearPickerProps>(({ context }) => {
 YearPicker.displayName = 'YearPicker';
 YearItem.displayName = 'YearItem';
 
-export default YearPicker; 
+export default YearPicker;

@@ -1,4 +1,3 @@
-// React Native örnek kullanım:
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 import CalendarWrapper from './CalendarWrapper';
@@ -40,9 +39,8 @@ interface DatePickerContentProps {
   format?: string;
 }
 
-const DatePickerContent = React.memo<DatePickerContentProps>((props) => {
+const DatePickerContent = React.memo<DatePickerContentProps>(props => {
   const { handleOpen, testID, value } = useDatePickerContext();
-
 
   return (
     <>
@@ -67,56 +65,65 @@ const DatePickerContent = React.memo<DatePickerContentProps>((props) => {
           accessibilityLabel={`${testID}-touchable`}
         />
       </Box>
-      <CalendarWrapper 
+      <CalendarWrapper
         closeButtonLabel={props.closeButtonLabel}
-        selectButtonLabel={props.selectButtonLabel} 
+        selectButtonLabel={props.selectButtonLabel}
         title={props.title}
-       />
+      />
     </>
   );
 });
 
-const DatePicker = React.memo<DatePickerProps>((props) => {
-  const _disableDates = React.useMemo(() => (props.disableDates || []).map(date => getDateFromString(date, props.format).getTime()), [props.disableDates, props.format]);
+const DatePicker = React.memo<DatePickerProps>(props => {
+  const _disableDates = React.useMemo(
+    () =>
+      (props.disableDates || []).map(date =>
+        getDateFromString(date, props.format).getTime(),
+      ),
+    [props.disableDates, props.format],
+  );
 
-  const contextValue = React.useMemo(() => ({
-    value: props.value,
-    nameOfWeekdays: props.nameOfWeekdays,
-    nameOfMonths: props.nameOfMonths,
-    minYear: props.minYear,
-    maxYear: props.maxYear,
-    testID: props.testID,
-    firstDayOfWeek: props.firstDayOfWeek,
-    placeholder: props.placeholder, 
-    disableDates: _disableDates,
-    onChange: props.onChange,
-    multiple: props.multiple || false,
-    format: props.format,
-  }), [
-    props.value,
-    props.nameOfWeekdays, 
-    props.nameOfMonths, 
-    props.minYear, 
-    props.maxYear, 
-    props.testID, 
-    props.firstDayOfWeek, 
-    props.placeholder, 
-    props.disableDates,
-    props.onChange,
-    props.multiple,
-    props.format
-  ]);
-  
+  const contextValue = React.useMemo(
+    () => ({
+      value: props.value,
+      nameOfWeekdays: props.nameOfWeekdays,
+      nameOfMonths: props.nameOfMonths,
+      minYear: props.minYear,
+      maxYear: props.maxYear,
+      testID: props.testID,
+      firstDayOfWeek: props.firstDayOfWeek,
+      placeholder: props.placeholder,
+      disableDates: _disableDates,
+      onChange: props.onChange,
+      multiple: props.multiple || false,
+      format: props.format,
+    }),
+    [
+      props.value,
+      props.nameOfWeekdays,
+      props.nameOfMonths,
+      props.minYear,
+      props.maxYear,
+      props.testID,
+      props.firstDayOfWeek,
+      props.placeholder,
+      props.disableDates,
+      props.onChange,
+      props.multiple,
+      props.format,
+    ],
+  );
+
   return (
     <DatePickerProvider {...contextValue}>
-      <DatePickerContent 
-       closeButtonLabel={props.closeButtonLabel}
-       selectButtonLabel={props.selectButtonLabel}
-       title={props.title}
-       placeholder={props.placeholder}
-       size={props.size}
-       label={props.label}
-       multiple={props.multiple}
+      <DatePickerContent
+        closeButtonLabel={props.closeButtonLabel}
+        selectButtonLabel={props.selectButtonLabel}
+        title={props.title}
+        placeholder={props.placeholder}
+        size={props.size}
+        label={props.label}
+        multiple={props.multiple}
       />
     </DatePickerProvider>
   );
@@ -126,7 +133,7 @@ DatePicker.displayName = 'DatePicker';
 DatePickerContent.displayName = 'DatePickerContent';
 
 export default DatePicker;
-  
+
 const styles = StyleSheet.create({
   touchableOpacity: {
     position: 'absolute',

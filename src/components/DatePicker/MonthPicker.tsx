@@ -23,20 +23,23 @@ const MonthItem = React.memo<{
     onPress={() => onSelect(idx)}
     style={styles.monthItem}
     testID={`${testID}-month-${idx + 1}`}
-    accessibilityLabel={`${testID}-month-${idx + 1}`}
-  >
+    accessibilityLabel={`${testID}-month-${idx + 1}`}>
     <Box
       flex={1}
       mb="2xs"
       alignItems="center"
       py="2xs"
       borderRadius="s"
-      backgroundColor={isSelected ? 'primaryKey' : 'neutralFull'}
-    >
+      backgroundColor={isSelected ? 'primaryKey' : 'neutralFull'}>
       <Text
         variant="subtitle03Regular"
-        color={isSelected ? 'white' : isCurrentMonth ? 'primaryColor' : 'contentPrimary'}
-      >
+        color={
+          isSelected
+            ? 'white'
+            : isCurrentMonth
+            ? 'primaryColor'
+            : 'contentPrimary'
+        }>
         {name}
       </Text>
     </Box>
@@ -44,30 +47,39 @@ const MonthItem = React.memo<{
 ));
 
 const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
-  const { 
-    calendarData, 
-    setCalendarData, 
+  const {
+    calendarData,
+    setCalendarData,
     setShowPickerType,
-    nameOfMonths, 
-    firstDayOfWeek, 
+    nameOfMonths,
+    firstDayOfWeek,
     testID,
   } = context;
-  
+
   const currentMonth = new Date().getMonth();
-  
-  const onSelect = useCallback((idx: number) => {
-    setCalendarData({
-      calendar: generateCalendar({
+
+  const onSelect = useCallback(
+    (idx: number) => {
+      setCalendarData({
+        calendar: generateCalendar({
+          year: calendarData.year,
+          month: idx,
+          firstDayOfWeek,
+        }),
         year: calendarData.year,
         month: idx,
-        firstDayOfWeek,
-      }),
-      year: calendarData.year,
-      month: idx,
-      nameOfMonth: nameOfMonths?.[idx]
-    });
-    setShowPickerType(ShowPickerType.NONE);
-  }, [calendarData.year, firstDayOfWeek, nameOfMonths, setCalendarData, setShowPickerType]);
+        nameOfMonth: nameOfMonths?.[idx],
+      });
+      setShowPickerType(ShowPickerType.NONE);
+    },
+    [
+      calendarData.year,
+      firstDayOfWeek,
+      nameOfMonths,
+      setCalendarData,
+      setShowPickerType,
+    ],
+  );
 
   return (
     <Box>
@@ -75,7 +87,7 @@ const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
         {nameOfMonths?.map((name, idx) => {
           const isSelected = calendarData.month === idx;
           const isCurrentMonth = idx === currentMonth;
-          
+
           return (
             <MonthItem
               key={name}
@@ -96,7 +108,7 @@ const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
 MonthPicker.displayName = 'MonthPicker';
 MonthItem.displayName = 'MonthItem';
 
-export default MonthPicker; 
+export default MonthPicker;
 
 const styles = StyleSheet.create({
   monthItem: {

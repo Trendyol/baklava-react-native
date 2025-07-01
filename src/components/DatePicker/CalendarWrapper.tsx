@@ -1,4 +1,3 @@
-// React Native örnek kullanım:
 import React from 'react';
 import CalendarPicker from './CalendarPicker';
 import MonthPicker from './MonthPicker';
@@ -8,13 +7,12 @@ import CalendarHeader from './CalendarHeader';
 import { ShowPickerType } from './constants';
 import { useDatePickerContext } from './DatePickerContext';
 
-
 interface CalendarWrapperProps {
   closeButtonLabel: string;
   selectButtonLabel: string;
   title: string;
 }
-const CalendarWrapper: React.FC<CalendarWrapperProps> = (props) => {
+const CalendarWrapper: React.FC<CalendarWrapperProps> = props => {
   const context = useDatePickerContext();
 
   return (
@@ -25,29 +23,19 @@ const CalendarWrapper: React.FC<CalendarWrapperProps> = (props) => {
       closeButtonLabel={props.closeButtonLabel || ''}
       selectButtonLabel={props.selectButtonLabel || ''}
       selectButtonAction={context.onChange}
-      testID={context.testID}
-    >
-      <CalendarHeader
-        context={context}
-      />
+      testID={context.testID}>
+      <CalendarHeader context={context} />
       {context.showPickerType === ShowPickerType.MONTH && (
-        <MonthPicker  
-          context={context}
-        />
+        <MonthPicker context={context} />
       )}
       {context.showPickerType === ShowPickerType.YEAR && (
-        <YearPicker
-          context={context}
-        />
+        <YearPicker context={context} />
       )}
       {context.showPickerType === ShowPickerType.NONE && (
-        <CalendarPicker
-          context={context}
-        />
+        <CalendarPicker context={context} />
       )}
     </BottomSheet>
   );
 };
 
 export default CalendarWrapper;
-  
