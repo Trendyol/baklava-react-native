@@ -186,12 +186,13 @@ export const SizeComparison: DatePickerStory = args => {
       />
 
       <Text variant="subtitle03Medium" color="neutralDark">
-        Large Size:
+        Large with Label:
       </Text>
       <DatePicker
         {...args}
         size="large"
         title="Select Date"
+        label="Large Date"
         closeButtonLabel="Close"
         selectButtonLabel="Select"
         nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
@@ -206,132 +207,64 @@ export const SizeComparison: DatePickerStory = args => {
   );
 };
 
-export const WithLabelAndSize: DatePickerStory = args => {
-  const [value1, setValue1] = React.useState<string | null>(null);
-  const [value2, setValue2] = React.useState<string | null>(null);
-  const [value3, setValue3] = React.useState<string | null>(null);
-
-  return (
-    <Box p="2xs" gap="2xs">
-      <Text p="2xs" variant="subtitle01Bold">
-        DatePicker with Label and Different Sizes
-      </Text>
-
-      <Text variant="subtitle03Medium" color="neutralDark">
-        Small with Label:
-      </Text>
-      <DatePicker
-        {...args}
-        size="small"
-        label="Small Date"
-        title="Select Date"
-        closeButtonLabel="Close"
-        selectButtonLabel="Select"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-small-label"
-        value={value1}
-        onChange={setValue1}
-        placeholder="Small size"
-        firstDayOfWeek={1}
-      />
-
-      <Text variant="subtitle03Medium" color="neutralDark">
-        Medium with Label:
-      </Text>
-      <DatePicker
-        {...args}
-        size="medium"
-        label="Medium Date"
-        title="Select Date"
-        closeButtonLabel="Close"
-        selectButtonLabel="Select"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-medium-label"
-        value={value2}
-        onChange={setValue2}
-        placeholder="Medium size"
-        firstDayOfWeek={1}
-      />
-
-      <Text variant="subtitle03Medium" color="neutralDark">
-        Large with Label:
-      </Text>
-      <DatePicker
-        {...args}
-        size="large"
-        label="Large Date"
-        title="Select Date"
-        closeButtonLabel="Close"
-        selectButtonLabel="Select"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-large-label"
-        value={value3}
-        onChange={setValue3}
-        placeholder="Large size"
-        firstDayOfWeek={1}
-      />
-    </Box>
-  );
-};
-
 export const MultipleDateSelection: DatePickerStory = args => {
   const [value, setValue] = React.useState<string | null>(null);
   return (
-    <Box p="2xs">
-      <Text p="2xs" variant="subtitle01Bold">
-        Multiple Date Selection
-      </Text>
-      <DatePicker
-        {...args}
-        multiple={true}
-        label="Date Range Selector"
-        placeholder="Select start - end date"
-        title="Select date range"
-        closeButtonLabel="Close"
-        selectButtonLabel="Select"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-multiple"
-        value={value}
-        onChange={setValue}
-        firstDayOfWeek={1}
-        format="yyyy-MM-dd"
-      />
-    </Box>
-  );
-};
+    <Box gap="2xs">
+      <Box p="2xs">
+        <Text p="2xs" variant="subtitle01Bold">
+          Multiple Date Selection
+        </Text>
+        <DatePicker
+          {...args}
+          multiple={true}
+          label="Date Range Selector"
+          placeholder="Select start - end date"
+          title="Select date range"
+          closeButtonLabel="Close"
+          selectButtonLabel="Select"
+          nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
+          nameOfMonths={DEFAULT_NAME_OF_MONTHS}
+          testID="datepicker-multiple"
+          value={value}
+          onChange={setValue}
+          firstDayOfWeek={1}
+          format="yyyy-MM-dd"
+        />
+      </Box>
 
-export const MultipleDateSelectionWithCustomLabels: DatePickerStory = args => {
-  const [value, setValue] = React.useState<string | null>(null);
-  return (
-    <Box p="2xs">
-      <Text p="2xs" variant="subtitle01Bold">
-        Multiple Date Selection with Custom Labels
-      </Text>
-      <DatePicker
-        {...args}
-        multiple={true}
-        label="Reservation Date"
-        placeholder="Select check-in - check-out date"
-        title="Select reservation date"
-        closeButtonLabel="Cancel"
-        selectButtonLabel="Confirm"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-multiple-custom"
-        value={value}
-        onChange={setValue}
-        firstDayOfWeek={1}
-      />
+      <Box p="2xs">
+        <Text p="2xs" variant="subtitle01Bold">
+          Multiple Date Selection with Custom Labels
+        </Text>
+        <DatePicker
+          {...args}
+          multiple={true}
+          label="Reservation Date"
+          placeholder="Select check-in - check-out date"
+          title="Select reservation date"
+          closeButtonLabel="Cancel"
+          selectButtonLabel="Confirm"
+          nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
+          nameOfMonths={DEFAULT_NAME_OF_MONTHS}
+          testID="datepicker-multiple-custom"
+          value={value}
+          onChange={setValue}
+          firstDayOfWeek={1}
+        />
+      </Box>
     </Box>
   );
 };
 
 export const WithDisabledDates: DatePickerStory = args => {
   const [value, setValue] = React.useState<string | null>(null);
+  const [value1, setValue1] = React.useState<string | null>(null);
+  const [value2, setValue2] = React.useState<string | null>(null);
+  const disabledMonths = [
+    202501, 202502, 202506, 202507, 202512, 202601, 202606, 202610,
+  ];
+  const disabledYears = [2024, 2026];
 
   const disabledDates = [
     '2025-01-04',
@@ -347,29 +280,79 @@ export const WithDisabledDates: DatePickerStory = args => {
   ];
 
   return (
-    <Box p="2xs">
-      <Text p="2xs" variant="subtitle01Bold">
-        DatePicker with Disabled Dates
-      </Text>
-      <Text p="2xs" variant="subtitle03Regular" color="neutralDark">
-        Weekends and holidays are disabled
-      </Text>
-      <DatePicker
-        {...args}
-        label="Appointment Date"
-        title="Select Available Date"
-        closeButtonLabel="Close"
-        selectButtonLabel="Select"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-disabled-dates"
-        value={value}
-        onChange={setValue}
-        placeholder="Select available date"
-        firstDayOfWeek={1}
-        disableDates={disabledDates}
-        format="yyyy-MM-dd"
-      />
+    <Box gap="2xs">
+      <Box p="2xs">
+        <Text p="2xs" variant="subtitle01Bold">
+          DatePicker with Disabled Dates
+        </Text>
+        <Text p="2xs" variant="subtitle03Regular" color="neutralDark">
+          Weekends and holidays are disabled
+        </Text>
+        <DatePicker
+          {...args}
+          label="Appointment Date"
+          title="Select Available Date"
+          closeButtonLabel="Close"
+          selectButtonLabel="Select"
+          nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
+          nameOfMonths={DEFAULT_NAME_OF_MONTHS}
+          testID="datepicker-disabled-dates"
+          value={value}
+          onChange={setValue}
+          placeholder="Select available date"
+          firstDayOfWeek={1}
+          disableDates={disabledDates}
+          format="yyyy-MM-dd"
+        />
+      </Box>
+      <Box p="2xs">
+        <Text p="2xs" variant="subtitle01Bold">
+          DatePicker with Disabled Months
+        </Text>
+        <Text p="2xs" variant="subtitle03Regular" color="neutralDark">
+          Some months are disabled
+        </Text>
+        <DatePicker
+          {...args}
+          label="Month Selection"
+          title="Select Available Month"
+          closeButtonLabel="Close"
+          selectButtonLabel="Select"
+          nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
+          nameOfMonths={DEFAULT_NAME_OF_MONTHS}
+          testID="datepicker-disabled-months"
+          value={value1}
+          onChange={setValue1}
+          placeholder="Select available month"
+          firstDayOfWeek={1}
+          disableMonths={disabledMonths}
+          format="yyyy-MM-dd"
+        />
+      </Box>
+      <Box p="2xs">
+        <Text p="2xs" variant="subtitle01Bold">
+          DatePicker with Disabled Years
+        </Text>
+        <Text p="2xs" variant="subtitle03Regular" color="neutralDark">
+          Some years are disabled
+        </Text>
+        <DatePicker
+          {...args}
+          label="Year Selection"
+          title="Select Available Year"
+          closeButtonLabel="Close"
+          selectButtonLabel="Select"
+          nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
+          nameOfMonths={DEFAULT_NAME_OF_MONTHS}
+          testID="datepicker-disabled-years"
+          value={value2}
+          onChange={setValue2}
+          placeholder="Select available year"
+          firstDayOfWeek={1}
+          disableYears={disabledYears}
+          format="yyyy-MM-dd"
+        />
+      </Box>
     </Box>
   );
 };
@@ -403,74 +386,6 @@ export const WithYearRange: DatePickerStory = args => {
         firstDayOfWeek={1}
         minYear={minYear}
         maxYear={maxYear}
-        format="dd/MM/yyyy"
-      />
-    </Box>
-  );
-};
-
-export const WithDisabledMonths: DatePickerStory = args => {
-  const [value, setValue] = React.useState<string | null>(null);
-
-  const disabledMonths = [
-    202501, 202502, 202506, 202507, 202512, 202601, 202606, 202610,
-  ];
-
-  return (
-    <Box p="2xs">
-      <Text p="2xs" variant="subtitle01Bold">
-        DatePicker with Disabled Months
-      </Text>
-      <Text p="2xs" variant="subtitle03Regular" color="neutralDark">
-        Winter months and peak summer months are disabled
-      </Text>
-      <DatePicker
-        {...args}
-        label="Seasonal Event Date"
-        title="Select Seasonal Date"
-        closeButtonLabel="Close"
-        selectButtonLabel="Select"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-disabled-months"
-        value={value}
-        onChange={setValue}
-        placeholder="Select available month"
-        firstDayOfWeek={1}
-        disableMonths={disabledMonths}
-        format="dd/MM/yyyy"
-      />
-    </Box>
-  );
-};
-
-export const WithDisabledYears: DatePickerStory = args => {
-  const [value, setValue] = React.useState<string | null>(null);
-
-  const disabledYears = [2020, 2021, 2022, 2027, 2028, 2029];
-
-  return (
-    <Box p="2xs">
-      <Text p="2xs" variant="subtitle01Bold">
-        DatePicker with Disabled Years
-      </Text>
-      <Text p="2xs" variant="subtitle03Regular" color="neutralDark">
-        Past years and future years are disabled
-      </Text>
-      <DatePicker
-        {...args}
-        label="Current Period Date"
-        title="Select Current Period Date"
-        closeButtonLabel="Close"
-        selectButtonLabel="Select"
-        nameOfWeekdays={DEFAULT_NAME_OF_WEEKDAYS}
-        nameOfMonths={DEFAULT_NAME_OF_MONTHS}
-        testID="datepicker-disabled-years"
-        value={value}
-        onChange={setValue}
-        placeholder="Select current period date"
-        firstDayOfWeek={1}
-        disableYears={disabledYears}
         format="dd/MM/yyyy"
       />
     </Box>
