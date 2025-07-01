@@ -1,0 +1,155 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta
+  title="Components/DatePicker"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# DatePicker
+
+The DatePicker component allows users to select a date from a calendar interface.
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<DatePicker
+  value={selectedDate}
+  onChange={setSelectedDate}
+  placeholder="Select a date"
+  title="Select Date"
+  closeButtonLabel="Close"
+  selectButtonLabel="Select"
+  nameOfWeekdays={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
+  nameOfMonths={['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']}
+  testID="datepicker"
+  firstDayOfWeek={0}
+/>
+```
+
+<br/>
+
+## Props
+
+#### value
+
+Type: `string | null`
+
+The currently selected date value.
+
+#### onChange
+
+Type: `(date: string) => void`
+
+Callback function called when a date is selected.
+
+#### placeholder
+
+Type: `string`
+
+The placeholder text shown in the input field.
+
+#### title
+
+Type: `string`
+
+The title displayed in the date picker modal.
+
+#### closeButtonLabel
+
+Type: `string`
+
+The label for the close button in the date picker modal.
+
+#### selectButtonLabel
+
+Type: `string`
+
+The label for the select button in the date picker modal.
+
+#### nameOfWeekdays
+
+Type: `string[]`
+
+Array of weekday names to display in the calendar.
+
+#### nameOfMonths
+
+Type: `string[]`
+
+Array of month names to display in the calendar.
+
+#### testID
+
+Type: `string`
+
+Test identifier for the component.
+
+#### firstDayOfWeek
+
+Type: `0 | 1`
+
+The first day of the week. 0 for Sunday, 1 for Monday.
+
+#### size
+
+Type: `'s' | 'm' | 'l'`
+
+The size of the input field.
+
+#### label
+
+Type: `string`
+
+The label for the input field.
+
+#### multiple
+
+Type: `boolean`
+
+Whether multiple date selection is enabled.
+
+#### format
+
+Type: `string`
+
+The date format string for parsing and formatting dates.
+
+#### minYear
+
+Type: `number`
+
+The minimum year that can be selected.
+
+#### maxYear
+
+Type: `number`
+
+The maximum year that can be selected.
+
+#### disableDates
+
+Type: `string[]`
+
+Array of dates that should be disabled and not selectable.
+
+#### disableMonths
+
+Type: `number[]`
+
+Array of month numbers (1-12) that should be disabled.
+
+#### disableYears
+
+Type: `number[]`
+
+Array of years that should be disabled.
