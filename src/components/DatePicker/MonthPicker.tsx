@@ -68,7 +68,9 @@ const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
     disableMonths,
   } = context;
 
-  const currentMonth = new Date().getMonth();
+  const currentDate = new Date();
+  const currentMonth = currentDate.getMonth();
+  const currentYear = currentDate.getFullYear();
 
   const onSelect = useCallback(
     (idx: number) => {
@@ -98,7 +100,8 @@ const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
       <Box flexDirection="row" flexWrap="wrap" justifyContent="space-between">
         {nameOfMonths?.map((name, idx) => {
           const isSelected = calendarData.month === idx;
-          const isCurrentMonth = idx === currentMonth;
+          const isCurrentMonth =
+            idx === currentMonth && calendarData.year === currentYear;
           const isDisabled = disableMonths
             ? disableMonths.includes(
                 Number(

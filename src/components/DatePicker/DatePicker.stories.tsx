@@ -225,6 +225,7 @@ export const SizeComparison: DatePickerStory = args => {
 
 export const MultipleDateSelection: DatePickerStory = args => {
   const [value, setValue] = React.useState<string | null>(null);
+  const [value1, setValue1] = React.useState<string | null>(null);
   return (
     <Box gap="2xs">
       <Box p="2xs">
@@ -260,8 +261,8 @@ export const MultipleDateSelection: DatePickerStory = args => {
           closeButtonLabel="Cancel"
           selectButtonLabel="Confirm"
           testID="datepicker-multiple-custom"
-          value={value}
-          onChange={setValue}
+          value={value1}
+          onChange={setValue1}
           firstDayOfWeek={1}
         />
       </Box>
