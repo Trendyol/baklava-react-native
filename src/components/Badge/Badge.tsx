@@ -20,6 +20,7 @@ type BadgeProps = {
   text?: string;
   size?: VariantProps<Theme, 'badgeSizeVariants'>['variant'];
   transparent?: boolean;
+  testID?: string;
 };
 
 const variantVariant = createVariant<Theme, 'badgeVariants', 'variant'>({
@@ -50,6 +51,7 @@ const Badge = ({
   text,
   size,
   transparent,
+  testID = 'badge',
 }: BadgeProps) => {
   const iconView = React.useMemo(() => {
     let iconName: IconNameType | undefined;
@@ -101,7 +103,7 @@ const Badge = ({
 
   return (
     <Box
-      testID="badge"
+      testID={testID}
       borderRadius="xs"
       justifyContent="center"
       alignSelf="flex-start"

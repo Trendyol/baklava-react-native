@@ -328,6 +328,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -501,6 +502,7 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -646,6 +648,7 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -791,6 +794,7 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -936,6 +940,7 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1081,6 +1086,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1226,6 +1232,7 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1371,6 +1378,7 @@ exports[`Badge should render badgeText correctly when default 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1516,6 +1524,7 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1661,6 +1670,7 @@ exports[`Badge should render badgeText correctly when success 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1806,6 +1816,7 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1930,6 +1941,7 @@ exports[`Badge should render correctly only icon badge 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -2079,6 +2091,7 @@ exports[`Badge should render correctly only text badge 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -2224,6 +2237,7 @@ exports[`Badge should render fontSize correctly when large 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -2369,6 +2383,7 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -2514,6 +2529,7 @@ exports[`Badge should render fontSize correctly when small 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
+      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}

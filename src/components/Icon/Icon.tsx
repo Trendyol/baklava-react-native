@@ -4,7 +4,8 @@ import * as icons from '../../icons';
 import { Theme } from '../../theme';
 import { IconNameType } from './types';
 import { toPascalCase } from './utils';
-import { ColorValue, ViewProps } from 'react-native';
+import { ColorValue } from 'react-native';
+import { SvgProps } from 'react-native-svg';
 
 const Icon = ({
   name,
@@ -12,11 +13,10 @@ const Icon = ({
   size = 'l',
   testID = 'icon',
   ...rest
-}: ViewProps & {
+}: SvgProps & {
   name: IconNameType;
   size?: VariantProps<Theme, 'iconSizeVariants'>['variant'];
   color?: VariantProps<Theme, 'colors'>['variant'] | ColorValue;
-  testID?: string;
 }) => {
   const theme = useTheme<Theme>();
 
@@ -33,12 +33,12 @@ const Icon = ({
   return (
     <TheIcon
       {...rest}
-      hitSlop={rest.hitSlop || undefined}
       title={name}
       fill={iconColor}
       width={iconSize}
       height={iconSize}
       testID={testID}
+      accessibilityLabel={testID}
     />
   );
 };

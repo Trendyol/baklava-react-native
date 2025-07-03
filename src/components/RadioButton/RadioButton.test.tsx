@@ -137,4 +137,46 @@ describe('RadioButton', () => {
     // then
     expect(radioButtonLabel).toBeFalsy();
   });
+
+  test('should render with icon correctly when selected', () => {
+    // when
+    const { getByTestId } = render(
+      <RadioButton selected={true} flagIcon="TR" />,
+    );
+    const iconComponent = getByTestId('flag-icon');
+
+    // then
+    expect(iconComponent).toBeTruthy();
+  });
+
+  test('should render with icon correctly when unselected', () => {
+    // when
+    const { getByTestId } = render(
+      <RadioButton selected={false} flagIcon="TR" />,
+    );
+    const iconComponent = getByTestId('flag-icon');
+
+    // then
+    expect(iconComponent).toBeTruthy();
+  });
+
+  test('should render with icon correctly when disabled', () => {
+    // when
+    const { getByTestId } = render(
+      <RadioButton selected={false} disabled flagIcon="TR" />,
+    );
+    const iconComponent = getByTestId('flag-icon');
+
+    // then
+    expect(iconComponent).toBeTruthy();
+  });
+
+  test('should render without icon correctly', () => {
+    // when
+    const { queryByTestId } = render(<RadioButton selected={true} />);
+    const iconComponent = queryByTestId('flag-icon');
+
+    // then
+    expect(iconComponent).toBeFalsy();
+  });
 });

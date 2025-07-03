@@ -34,6 +34,7 @@ exports[`Input Icon should render eye icon when secureTextEntry true 1`] = `
   testID="password-visibility-button"
 >
   <RNSVGSvgView
+    accessibilityLabel="secure-input-icon"
     align="xMidYMid"
     bbHeight={16}
     bbWidth={16}
@@ -114,6 +115,7 @@ exports[`Input Icon should render eye icon when secureTextEntry true 1`] = `
 
 exports[`Input Icon should render icon correctly 1`] = `
 <RNSVGSvgView
+  accessibilityLabel="input-icon"
   align="xMidYMid"
   bbHeight={16}
   bbWidth={16}

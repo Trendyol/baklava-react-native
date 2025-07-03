@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/addon-docs';
-import RadioButton from '../assets/radiobutton/radiobuttonCases.png';
+import RadioButtonCases from '../assets/radiobutton/radiobuttonCases.png';
+import RadiobuttonWithFlagIcon from '../assets/radiobutton/radiobuttonWithFlagIcon.png';
 
 <Meta
   title="Components/RadioButton"
@@ -23,7 +24,8 @@ RadioButton allow users to select one item.
     flexWrap: 'wrap',
     justifyContent: 'center',
   }}>
-  <img src={RadioButton} width="250" alt="RadioButton" />
+  <img src={RadioButtonCases} width="250" alt="RadioButtonCases" />
+  <img src={RadiobuttonWithFlagIcon} width="250" alt="RadiobuttonWithFlagIcon" />
 </div>
 
 <br/>
@@ -32,7 +34,7 @@ RadioButton allow users to select one item.
 ## Usage
 
 ```jsx
-<RadioButton disable={false} selected={true} label="lorem ipsum" />
+<RadioButton disable={false} selected={true} label="lorem ipsum" flagIcon="TR" />
 ```
 
 <br />
@@ -50,6 +52,12 @@ Use selected state when the item is selected.
 Type: `string`
 
 The label defines a caption for an text.
+
+### flagIcon
+
+Type: `string`
+
+Radio Button flag icon.
 
 ### disabled
 

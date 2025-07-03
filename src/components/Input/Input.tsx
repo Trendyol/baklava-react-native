@@ -43,7 +43,6 @@ type InputProps = React.ComponentProps<typeof Box> &
     errorText?: string | null;
     successText?: string | null;
     required?: boolean;
-    requiredText?: boolean;
     icon?: IconNameType | null;
     success?: boolean;
     error?: boolean;
@@ -95,7 +94,6 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       error = false,
       secureTextEntry = false,
       required = false,
-      requiredText = false,
       disabled = false,
       editable = true,
       easing = Easing.inOut(Easing.ease),
@@ -244,6 +242,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           animatedViewProps={animatedViewProps}
           animatedTextProps={animatedTextProps}
           inputHeight={inputHeight}
+          required={required}
         />
         <Box
           flexDirection="row"

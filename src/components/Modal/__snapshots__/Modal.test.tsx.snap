@@ -161,6 +161,7 @@ exports[`Modal should render Modal when visible true with children 1`] = `
           }
         >
           <RNSVGSvgView
+            accessibilityLabel="icon"
             align="xMidYMid"
             bbHeight={14}
             bbWidth={14}

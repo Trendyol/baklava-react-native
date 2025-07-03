@@ -168,7 +168,7 @@ const ToastView = React.forwardRef<ToastViewRef, ToastViewProps>(
             testID="toast-text"
             accessibilityLabel="toast-text"
             textAlign="left">
-            {getFirstNChar(text!, 110, '...')}
+            {getFirstNChar(text!, 250, '...')}
           </Text>
         </Box>
         {actionView}

@@ -7,7 +7,7 @@ import BaseModal, { A11yProps } from '../Modal/BaseModal';
 
 export type BottomSheetProps = ModalProps & {
   closeButtonLabel: string;
-  selectButtonLabel: string;
+  selectButtonLabel?: string;
   selectButtonAction?: () => void;
   header?: React.ReactNode;
 };
@@ -22,7 +22,7 @@ export const BottomSheetTitle = ({
 }: {
   closeButtonAction?: () => void;
   closeButtonLabel: string;
-  selectButtonLabel: string;
+  selectButtonLabel?: string;
   selectButtonAction?: () => void;
   testID?: string;
   accessibilityLabel?: string;

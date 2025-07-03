@@ -1,0 +1,102 @@
+import { Meta, ArgsTable } from '@storybook/addon-docs';
+import TabCases from '../assets/tabs/TabCases.png';
+import IconBadgeTabs from '../assets/tabs/IconBadgeTabs.png';
+
+<Meta
+  title="Components/Tabs"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Tabs
+
+Tabs are used to organize related content. They allow the user to navigate between groups of information that appear within the same context.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={TabCases} width="250" alt="TabCases" />
+  <img src={IconBadgeTabs} width="250" alt="IconBadgeTabs" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<Tabs value={value} onValueChange={setValue} defaultValue="tab1">
+  <Tabs.List>
+    <Tabs.Option value="tab1" title="Tab Title" caption="Caption" />
+    <Tabs.Option value="tab2" title="Tab Title" caption="Caption" iconName="confetti" />
+    <Tabs.Option value="tab3" title="Tab Title" badgeText="New" />
+  </Tabs.List>
+  <Tabs.Content value="tab1">
+    <Text>Tab 1 Content</Text>
+  </Tabs.Content>
+  <Tabs.Content value="tab2">
+    <Text>Tab 2 Content</Text>
+  </Tabs.Content>
+  <Tabs.Content value="tab3">
+    <Text>Tab 3 Content</Text>
+  </Tabs.Content>
+</Tabs>
+```
+
+## Props
+
+#### value
+
+Type: `string`
+
+Tab's active value
+
+#### defaultValue
+
+Type: `string`
+
+Tab's default value
+
+#### title
+
+Type: `string`
+
+Tab's title
+
+#### caption
+
+Type: `string`
+
+Tab's caption
+
+#### iconName
+
+Type: `string`
+
+Tab's icon
+
+#### badgeText
+
+Type: `string`
+
+Tab's badge text
+
+#### style
+
+Type: `StyleProp<TouchableOpacityStyle>`
+
+<br />
+Tabs implements: <>
+  <a href="https://reactnative.dev/docs/touchableopacity#props" title="title">
+    ...TouchableOpacity props
+  </a>
+</>

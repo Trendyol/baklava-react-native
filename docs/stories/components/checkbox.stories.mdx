@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/addon-docs';
-import Checkbox from '../assets/checkbox/checkboxCases.png';
+import CheckboxCases from '../assets/checkbox/checkboxCases.png';
+import CheckboxWithFlagIcon from '../assets/checkbox/checkboxWithFlagIcon.png';
 
 <Meta
   title="Components/Checkbox"
@@ -23,7 +24,8 @@ Checkboxes allow users to select one or more items from a set.
     flexWrap: 'wrap',
     justifyContent: 'center',
   }}>
-  <img src={Checkbox} width="250" alt="Checkbox" />
+  <img src={CheckboxCases} width="250" alt="CheckboxCases" />
+  <img src={CheckboxWithFlagIcon} width="250" alt="CheckboxWithFlagIcon" />
 </div>
 
 <br/>
@@ -32,7 +34,7 @@ Checkboxes allow users to select one or more items from a set.
 ## Usage
 
 ```jsx
-<Checkbox disable={false} checked={true} indeterminate={true} label="lorem ipsum" />
+<Checkbox disable={false} checked={true} indeterminate={true} label="lorem ipsum" flagIcon="TR" />
 ```
 
 <br />
@@ -56,6 +58,12 @@ Use the indeterminate state when the checkbox contains a sublist of selections, 
 Type: `string`
 
 The label defines a caption for an text.
+
+### flagIcon
+
+Type: `string`
+
+Checkbox flag icon.
 
 ### disabled
 
