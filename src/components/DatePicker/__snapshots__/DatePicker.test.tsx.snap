@@ -67,6 +67,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
           value=""
         />
         <RNSVGSvgView
+          accessibilityLabel="input-icon"
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
@@ -468,6 +469,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -729,6 +731,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -4675,6 +4678,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
           value=""
         />
         <RNSVGSvgView
+          accessibilityLabel="input-icon"
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
@@ -5076,6 +5080,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -5337,6 +5342,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -9283,6 +9289,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
           value=""
         />
         <RNSVGSvgView
+          accessibilityLabel="input-icon"
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
@@ -9684,6 +9691,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -9946,6 +9954,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -10958,6 +10967,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
           value=""
         />
         <RNSVGSvgView
+          accessibilityLabel="input-icon"
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
@@ -11359,6 +11369,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -11621,6 +11632,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -12848,6 +12860,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
           value=""
         />
         <RNSVGSvgView
+          accessibilityLabel="input-icon"
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
@@ -13249,6 +13262,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -13511,6 +13525,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -14523,6 +14538,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
           value=""
         />
         <RNSVGSvgView
+          accessibilityLabel="input-icon"
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
@@ -14924,6 +14940,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -15185,6 +15202,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -19131,6 +19149,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
           value=""
         />
         <RNSVGSvgView
+          accessibilityLabel="input-icon"
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
@@ -19532,6 +19551,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -19794,6 +19814,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -20806,6 +20827,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
           value=""
         />
         <RNSVGSvgView
+          accessibilityLabel="input-icon"
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
@@ -21207,6 +21229,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -21468,6 +21491,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 }
               >
                 <RNSVGSvgView
+                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
