@@ -101,7 +101,10 @@ export const Basic: DatePickerStory = args => {
 };
 
 export const Cases: DatePickerStory = args => {
-  const [value, setValue] = React.useState<string | null>(null);
+  const [value1, setValue1] = React.useState<string | null>(null);
+  const [value2, setValue2] = React.useState<string | null>(null);
+  const [value3, setValue3] = React.useState<string | null>(null);
+
   return (
     <Box gap="2xs">
       <Box p="2xs">
@@ -115,8 +118,8 @@ export const Cases: DatePickerStory = args => {
           selectButtonLabel="Select"
           nameOfWeekdays={['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']}
           testID="datepicker"
-          value={value}
-          onChange={setValue}
+          value={value1}
+          onChange={setValue1}
           placeholder="Select date"
           firstDayOfWeek={0}
           format="dd/MM/yyyy"
@@ -132,8 +135,8 @@ export const Cases: DatePickerStory = args => {
           closeButtonLabel="Close"
           selectButtonLabel="Select"
           testID="datepicker"
-          value={value}
-          onChange={setValue}
+          value={value2}
+          onChange={setValue2}
           placeholder="Select date"
           firstDayOfWeek={1}
           format="dd/MM/yyyy"
@@ -150,8 +153,8 @@ export const Cases: DatePickerStory = args => {
           closeButtonLabel="Close"
           selectButtonLabel="Select"
           testID="datepicker-with-label"
-          value={value}
-          onChange={setValue}
+          value={value3}
+          onChange={setValue3}
           placeholder="Select date"
           firstDayOfWeek={1}
         />
@@ -282,10 +285,7 @@ export const WithDisabledDates: DatePickerStory = args => {
   const disabledDates = [
     '2025-01-04',
     '2025-01-05',
-    '2025-01-11',
     '2025-01-12',
-    '2025-01-18',
-    '2025-01-19',
     '2025-01-25',
     '2025-01-26',
     '2025-01-01',

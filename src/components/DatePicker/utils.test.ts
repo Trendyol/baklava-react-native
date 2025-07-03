@@ -1,6 +1,5 @@
 import {
   createCalendar,
-  generateCalendar,
   getMonthCalendar,
   getCurrentMonthCalendar,
   changeMonthCalendar,
@@ -154,21 +153,6 @@ describe('DatePicker Utils', () => {
       });
 
       expect(foundLeapYearDay).toBe(true);
-    });
-  });
-
-  describe('generateCalendar', () => {
-    test('should return same result as createCalendar', () => {
-      const options: CalendarOptions = {
-        year: 2025,
-        month: 0,
-        firstDayOfWeek: 1,
-      };
-
-      const calendar1 = createCalendar(options);
-      const calendar2 = generateCalendar(options);
-
-      expect(calendar2).toEqual(calendar1);
     });
   });
 

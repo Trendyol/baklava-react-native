@@ -3,7 +3,7 @@ import { StyleSheet, TouchableOpacity } from 'react-native';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
 import { ShowPickerType } from './constants';
-import { generateCalendar } from './utils';
+import { createCalendar } from './utils';
 import { DatePickerContextType } from './DatePickerContext';
 
 type YearPickerProps = {
@@ -67,7 +67,7 @@ const YearPicker = React.memo<YearPickerProps>(({ context }) => {
 
   const onSelect = useCallback(
     (year: number) => {
-      const calendar = generateCalendar({
+      const calendar = createCalendar({
         year,
         month: calendarData.month,
         nameOfMonths,

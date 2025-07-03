@@ -4,7 +4,7 @@ import Box from '../Box/Box';
 import Text from '../Text/Text';
 import { DatePickerContextType } from './DatePickerContext';
 import { ShowPickerType } from './constants';
-import { generateCalendar } from './utils';
+import { createCalendar } from './utils';
 
 type MonthPickerProps = {
   context: DatePickerContextType;
@@ -75,7 +75,7 @@ const MonthPicker = React.memo<MonthPickerProps>(({ context }) => {
   const onSelect = useCallback(
     (idx: number) => {
       setCalendarData({
-        calendar: generateCalendar({
+        calendar: createCalendar({
           year: calendarData.year,
           month: idx,
           firstDayOfWeek,

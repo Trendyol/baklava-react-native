@@ -23,7 +23,7 @@ export function createCalendar({
   const prevMonthYear = month === 0 ? year - 1 : year;
 
   const nextMonth = month === 11 ? 0 : month + 1;
-  const nextMonthYear = month === 11 ? year + 1 : year;
+  const nextYear = month === 11 ? year + 1 : year;
 
   const prevMonthLastDay = new Date(prevMonthYear, prevMonth + 1, 0);
   const prevMonthDays = prevMonthLastDay.getDate();
@@ -79,12 +79,12 @@ export function createCalendar({
         });
       } else {
         const d = nextMonthDay++;
-        const timestamp = getDateTimestamp(nextMonthYear, nextMonth, d);
-        const yearWithMonth = getYearWithMonth(nextMonthYear, nextMonth);
+        const timestamp = getDateTimestamp(nextYear, nextMonth, d);
+        const yearWithMonth = getYearWithMonth(nextYear, nextMonth);
         currentWeek.push({
           day: d,
           month: nextMonth,
-          year: nextMonthYear,
+          year: nextYear,
           isActive: false,
           isPrevMonth: false,
           isNextMonth: true,
@@ -99,15 +99,9 @@ export function createCalendar({
   return calendar;
 }
 
-export function generateCalendar(
-  options: CalendarOptions,
-): (string[] | Day[])[] {
-  return createCalendar(options);
-}
-
 export function getMonthCalendar(options: CalendarOptions): CalendarData {
   const monthNamesParam = options.nameOfMonths || DEFAULT_NAME_OF_MONTHS;
-  const calendar = generateCalendar(options);
+  const calendar = createCalendar(options);
   return {
     calendar,
     year: options.year || DEFAULT_YEAR,
@@ -257,7 +251,7 @@ export function formatDate(
 }
 
 const getYearWithMonth = (year: number, month: number) => {
-  const _monthString = month.toString().padStart(2, '0');
+  const _monthString = (month + 1).toString().padStart(2, '0');
   const _yearString = year.toString();
 
   return Number(`${_yearString}${_monthString}`);

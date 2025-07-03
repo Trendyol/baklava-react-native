@@ -34,13 +34,13 @@ const DayItem = React.memo<{
     disableMonths,
     disableYears,
   }) => {
-    const isCurrentDay = date.isCurrentDate && date.isActive;
+    const isActiveCurrentDate = date.isCurrentDate && date.isActive;
     const backgroundColor = isSelected ? 'primaryKey' : undefined;
     const textColor = isSelected
       ? 'white'
       : !date.isActive
       ? 'neutralDark'
-      : isCurrentDay
+      : isActiveCurrentDate
       ? 'primaryColor'
       : 'neutralDark';
     const inRangeBackgroundColor = inRange ? 'primaryContrast' : 'transparent';
@@ -124,15 +124,19 @@ const CalendarPicker = React.memo<CalendarPickerProps>(({ context }) => {
     disableYears = [],
   } = context;
 
-  const getIsSelected = (date: any) => {
-    if (multiple) {
-      return (
-        dateRange?.startDate?.timestamp === date.timestamp ||
-        dateRange?.endDate?.timestamp === date.timestamp
-      );
-    }
-    return selectedDate?.timestamp === date.timestamp;
-  };
+  const getIsSelected = React.useCallback(
+    (date: any) => {
+      if (multiple) {
+        return (
+          dateRange?.startDate?.timestamp === date.timestamp ||
+          dateRange?.endDate?.timestamp === date.timestamp
+        );
+      }
+      return selectedDate?.timestamp === date.timestamp;
+    },
+    [multiple, selectedDate, dateRange],
+  );
+
   const isRange = (date: any) => {
     if (!multiple) {
       return false;

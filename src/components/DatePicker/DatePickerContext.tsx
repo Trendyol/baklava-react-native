@@ -24,7 +24,7 @@ import {
   DEFAULT_MIN_YEAR,
   DEFAULT_MAX_YEAR,
 } from './constants';
-import { Day } from './types';
+import { CalendarData, Day } from './types';
 
 export interface DatePickerContextType {
   value: string | null;
@@ -244,7 +244,7 @@ export const DatePickerProvider = ({
         max: prev.max - offset,
       }));
     } else if (showPickerType === ShowPickerType.MONTH) {
-      setCalendarData((prev: any) => ({
+      setCalendarData((prev: CalendarData) => ({
         ...prev,
         year: minYear && prev.year - 1 < minYear ? minYear : prev.year - 1,
       }));
@@ -283,7 +283,7 @@ export const DatePickerProvider = ({
         max: prev.max + offset,
       }));
     } else if (showPickerType === ShowPickerType.MONTH) {
-      setCalendarData((prev: any) => ({
+      setCalendarData((prev: CalendarData) => ({
         ...prev,
         year: maxYear && prev.year + 1 > maxYear ? maxYear : prev.year + 1,
       }));
