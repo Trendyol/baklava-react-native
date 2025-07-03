@@ -23,6 +23,7 @@ export { default as TextArea } from './components/TextArea/TextArea';
 export { default as TextLink } from './components/TextLink/TextLink';
 export { default as Toast } from './components/Toast/Toast';
 export { default as Tooltip } from './components/Tooltip/Tooltip';
+export { default as DatePicker } from './components/DatePicker/DatePicker';
 export {
   TooltipProvider,
   useTooltipContext,

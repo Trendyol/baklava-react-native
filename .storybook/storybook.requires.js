@@ -33,6 +33,7 @@ const getStories = () => {
     require('../src/components/Box/Box.stories.tsx'),
     require('../src/components/Button/Button.stories.tsx'),
     require('../src/components/Checkbox/Checkbox.stories.tsx'),
+    require('../src/components/DatePicker/DatePicker.stories.tsx'),
     require('../src/components/Icon/Icon.stories.tsx'),
     require('../src/components/FlagIcon/FlagIcon.stories.tsx'),
     require('../src/components/Image/Image.stories.tsx'),
