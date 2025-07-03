@@ -195,11 +195,7 @@ export function getDayFromDate(date: Date): Day {
     isPrevMonth: false,
     isNextMonth: false,
     isCurrentDate: false,
-    yearWithMonth: Number(
-      `${date.getFullYear()}${(date.getMonth() + 1)
-        .toString()
-        .padStart(2, '0')}`,
-    ),
+    yearWithMonth: getYearWithMonth(date.getFullYear(), date.getMonth()),
   };
 }
 
