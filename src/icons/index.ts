@@ -271,6 +271,7 @@ export { default as OrderCancel } from './OrderCancel';
 export { default as OrderCheck } from './OrderCheck';
 export { default as OrderReturn } from './OrderReturn';
 export { default as OrderTracking } from './OrderTracking';
+export { default as OrtakAi } from './OrtakAi';
 export { default as PA } from './PA';
 export { default as Paper } from './Paper';
 export { default as Pause } from './Pause';
