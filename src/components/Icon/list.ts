@@ -129,6 +129,7 @@ export const iconList = [
   'order-return',
   'order-tracking',
   'order',
+  'ortak-ai',
   'paper',
   'pause-fill',
   'pause',
