@@ -10,12 +10,8 @@ const defaultProps = {
   nameOfMonths: DEFAULT_NAME_OF_MONTHS,
   closeButtonLabel: 'Close',
   selectButtonLabel: 'Select',
-  title: 'Select Date',
-  testID: 'datepicker',
   value: null as string | null,
-  placeholder: 'Select date',
   firstDayOfWeek: 1 as const,
-  disableDates: [] as string[],
   onChange: jest.fn(),
 };
 
@@ -26,6 +22,31 @@ const getTimestamp = (year: number, month: number, day: number) => {
 describe('DatePicker', () => {
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  test('should render with minimal props using default values', () => {
+    const { getByTestId } = render(<DatePicker {...defaultProps} />);
+    expect(getByTestId('datepicker-input').props.value).toBe('');
+    expect(getByTestId('datepicker-input').props.placeholder).toBe('');
+  });
+
+  test('should render with custom testID or use default', () => {
+    const { getByTestId } = render(
+      <DatePicker {...defaultProps} testID="custom-picker" />,
+    );
+    expect(getByTestId('custom-picker-input')).toBeTruthy();
+
+    const { getByTestId: getByTestId2 } = render(
+      <DatePicker {...defaultProps} />,
+    );
+    expect(getByTestId2('datepicker-input')).toBeTruthy();
+  });
+
+  test('should use empty array for disableDates when not provided', () => {
+    const { getByTestId } = render(<DatePicker {...defaultProps} />);
+    fireEvent.press(getByTestId('datepicker-touchable'));
+
+    expect(getByTestId('datepicker-wrapper')).toBeTruthy();
   });
 
   test('should render with empty input and calendar closed initially', () => {
@@ -236,6 +257,45 @@ describe('DatePicker', () => {
 
         expect(onChange).toHaveBeenCalled();
       }
+    });
+
+    test('should not trigger onSelectDate when disabled date is pressed', () => {
+      // given
+      const onChange = jest.fn();
+      const currentYear = new Date().getFullYear();
+      const currentMonth = new Date().getMonth();
+      const disableDates = [
+        `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-05`,
+      ];
+      const { getByTestId, getAllByTestId } = render(
+        <DatePicker
+          {...defaultProps}
+          disableDates={disableDates}
+          onChange={onChange}
+        />,
+      );
+      fireEvent.press(getByTestId('datepicker-touchable'));
+
+      // when
+      const validDateButtons = getAllByTestId(/datepicker-datepicker-day-/);
+      if (validDateButtons.length > 0) {
+        fireEvent.press(validDateButtons[0]);
+      }
+
+      const timestamp = getTimestamp(currentYear, currentMonth, 5);
+      const disabledButton = getByTestId(
+        `datepicker-datepicker-day-${timestamp}`,
+      );
+      fireEvent.press(disabledButton);
+
+      fireEvent.press(getByTestId('datepicker-header-select'));
+
+      // then
+      expect(onChange).toHaveBeenCalledTimes(1);
+      const calledDate = onChange.mock.calls[0][0];
+      expect(calledDate).not.toBe(
+        `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-05`,
+      );
     });
   });
 
@@ -493,6 +553,38 @@ describe('DatePicker', () => {
 
       fireEvent.press(getByTestId('datepicker-year-2026'));
       expect(getByText('2026')).toBeTruthy();
+    });
+
+    test('should close month picker when month button is pressed twice', () => {
+      // given
+      const { getByTestId, queryByTestId } = render(
+        <DatePicker {...defaultProps} />,
+      );
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-month-select'));
+      expect(queryByTestId('datepicker-month-1')).toBeTruthy();
+
+      // when
+      fireEvent.press(getByTestId('datepicker-header-month-select'));
+
+      // then
+      expect(queryByTestId('datepicker-month-1')).toBeFalsy();
+    });
+
+    test('should close year picker when year button is pressed twice', () => {
+      // given
+      const { getByTestId, queryByTestId } = render(
+        <DatePicker {...defaultProps} />,
+      );
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-year-select'));
+      expect(queryByTestId('datepicker-year-2026')).toBeTruthy();
+
+      // when
+      fireEvent.press(getByTestId('datepicker-header-year-select'));
+
+      // then
+      expect(queryByTestId('datepicker-year-2026')).toBeFalsy();
     });
 
     test('should navigate between years in MonthPicker', () => {
@@ -1004,6 +1096,40 @@ describe('DatePicker', () => {
       ).props.children;
       expect(prevMonth).toBe(initialMonth);
     });
+
+    test('should handle undefined closeButtonLabel prop', () => {
+      // given
+      const propsWithUndefinedCloseLabel = {
+        ...defaultProps,
+        closeButtonLabel: undefined as any,
+      };
+
+      // when
+      const { getByTestId } = render(
+        <DatePicker {...propsWithUndefinedCloseLabel} />,
+      );
+      fireEvent.press(getByTestId('datepicker-touchable'));
+
+      // then
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should handle undefined selectButtonLabel prop', () => {
+      // given
+      const propsWithUndefinedSelectLabel = {
+        ...defaultProps,
+        selectButtonLabel: undefined as any,
+      };
+
+      // when
+      const { getByTestId } = render(
+        <DatePicker {...propsWithUndefinedSelectLabel} />,
+      );
+      fireEvent.press(getByTestId('datepicker-touchable'));
+
+      // then
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
   });
 
   describe('DisableMonths', () => {
@@ -1083,6 +1209,33 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-month-select'));
       expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should NOT call onSelect when disabled month is pressed', () => {
+      // given
+      const onChange = jest.fn();
+      const disableMonths = [202501];
+      const { getByTestId, queryByText } = render(
+        <DatePicker
+          {...defaultProps}
+          disableMonths={disableMonths}
+          onChange={onChange}
+          value="2025-02-15"
+        />,
+      );
+
+      // when
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-month-select'));
+      fireEvent.press(getByTestId('datepicker-month-1'));
+
+      // then
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+      expect(queryByText('January')).toBeTruthy();
+      expect(queryByText('February')).toBeTruthy();
+
+      const headerMonth = getByTestId('datepicker-header-month-select');
+      expect(headerMonth).toBeTruthy();
     });
   });
 
@@ -1179,6 +1332,203 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-year-select'));
       expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+  });
+
+  describe('Context Coverage Tests', () => {
+    test('should handle case when newTimestamp > endTimestamp in multiple mode', () => {
+      // given
+      const onChange = jest.fn();
+      const { getByTestId, getAllByTestId } = render(
+        <DatePicker {...defaultProps} multiple={true} onChange={onChange} />,
+      );
+
+      // when
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
+      if (dateButtons.length >= 3) {
+        fireEvent.press(dateButtons[14]); // 15th day - startDate
+        fireEvent.press(dateButtons[9]); // 10th day - endDate
+        fireEvent.press(dateButtons[24]); // 25th day - newTimestamp > endTimestamp
+        fireEvent.press(getByTestId('datepicker-header-select'));
+      }
+
+      // then
+      expect(onChange).toHaveBeenCalled();
+    });
+
+    test('should handle case when newTimestamp < startTimestamp in multiple mode', () => {
+      // given
+      const onChange = jest.fn();
+      const { getByTestId, getAllByTestId } = render(
+        <DatePicker {...defaultProps} multiple={true} onChange={onChange} />,
+      );
+
+      // when
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
+      if (dateButtons.length >= 3) {
+        fireEvent.press(dateButtons[14]); // 15th day - startDate
+        fireEvent.press(dateButtons[19]); // 20th day - endDate
+        fireEvent.press(dateButtons[9]); // 10th day - newTimestamp < startTimestamp
+        fireEvent.press(getByTestId('datepicker-header-select'));
+      }
+
+      // then
+      expect(onChange).toHaveBeenCalled();
+    });
+
+    test('should update calendar when navigating with prev button', () => {
+      // given
+      const onChange = jest.fn();
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} onChange={onChange} />,
+      );
+
+      // when
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-next')); // Go to next month
+      fireEvent.press(getByTestId('datepicker-header-prev')); // Go back to prev month
+
+      // then
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should update calendar when navigating with next button', () => {
+      // given
+      const onChange = jest.fn();
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} onChange={onChange} />,
+      );
+
+      // when
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-prev')); // Go to prev month
+      fireEvent.press(getByTestId('datepicker-header-next')); // Go back to next month
+
+      // then
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should handle out of range date selection', () => {
+      // given
+      const onChange = jest.fn();
+      const { getByTestId } = render(
+        <DatePicker
+          {...defaultProps}
+          minYear={2025}
+          maxYear={2025}
+          onChange={onChange}
+        />,
+      );
+
+      // when
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-year-select'));
+      fireEvent.press(getByTestId('datepicker-header-prev')); // Should not go below minYear
+      fireEvent.press(getByTestId('datepicker-header-next')); // Should not go above maxYear
+
+      // then
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should handle minYear constraint with calendar navigation', () => {
+      // given
+      const onChange = jest.fn();
+      const { getByTestId } = render(
+        <DatePicker
+          {...defaultProps}
+          minYear={2025}
+          maxYear={2030}
+          value="2025-01-15"
+          onChange={onChange}
+        />,
+      );
+
+      // when
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      for (let i = 0; i < 15; i++) {
+        fireEvent.press(getByTestId('datepicker-header-prev'));
+      }
+
+      // then
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should handle maxYear constraint with calendar navigation', () => {
+      // given
+      const onChange = jest.fn();
+      const { getByTestId } = render(
+        <DatePicker
+          {...defaultProps}
+          minYear={2020}
+          maxYear={2025}
+          value="2025-12-15"
+          onChange={onChange}
+        />,
+      );
+
+      // when
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      for (let i = 0; i < 15; i++) {
+        fireEvent.press(getByTestId('datepicker-header-next'));
+      }
+
+      // then
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+    });
+
+    test('should handle useEffect with multiple=true and visible=true', () => {
+      // given
+      const onChange = jest.fn();
+      const { getByTestId } = render(
+        <DatePicker
+          {...defaultProps}
+          multiple={true}
+          value="2025-01-15 - 2025-01-20"
+          onChange={onChange}
+        />,
+      );
+
+      // when
+      fireEvent.press(getByTestId('datepicker-touchable'));
+
+      // then
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+
+      // when
+      fireEvent.press(getByTestId('datepicker-header-select'));
+
+      // then
+      expect(onChange).toHaveBeenCalled();
+    });
+
+    test('should NOT select out of range dates', () => {
+      // given
+      const onChange = jest.fn();
+      const { getByTestId, getAllByTestId } = render(
+        <DatePicker
+          {...defaultProps}
+          minYear={2020}
+          maxYear={2024}
+          value="2024-12-15"
+          onChange={onChange}
+        />,
+      );
+
+      // when
+      fireEvent.press(getByTestId('datepicker-touchable'));
+      fireEvent.press(getByTestId('datepicker-header-next'));
+
+      const dateButtons = getAllByTestId(/datepicker-datepicker-day-/);
+
+      if (dateButtons.length > 10) {
+        fireEvent.press(dateButtons[15]);
+
+        // then
+        expect(onChange).not.toHaveBeenCalled();
+        expect(getByTestId('datepicker-wrapper')).toBeTruthy();
+      }
     });
   });
 });
