@@ -50,7 +50,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
-          placeholder="Select date"
+          placeholder=""
           placeholderTextColor="#95A1B5"
           pointerEvents="none"
           secureTextEntry={false}
@@ -329,9 +329,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               ]
             }
             testID="datepicker-header-label"
-          >
-            Select Date
-          </Text>
+          />
           <View
             accessibilityLabel="datepicker-header-select"
             accessibilityState={
@@ -4661,7 +4659,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
-          placeholder="Select date"
+          placeholder=""
           placeholderTextColor="#95A1B5"
           pointerEvents="none"
           secureTextEntry={false}
@@ -4940,9 +4938,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               ]
             }
             testID="datepicker-header-label"
-          >
-            Select Date
-          </Text>
+          />
           <View
             accessibilityLabel="datepicker-header-select"
             accessibilityState={
@@ -9272,7 +9268,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
-          placeholder="Select date"
+          placeholder=""
           placeholderTextColor="#95A1B5"
           pointerEvents="none"
           secureTextEntry={false}
@@ -9551,9 +9547,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
               ]
             }
             testID="datepicker-header-label"
-          >
-            Select Date
-          </Text>
+          />
           <View
             accessibilityLabel="datepicker-header-select"
             accessibilityState={
@@ -10950,7 +10944,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
-          placeholder="Select date"
+          placeholder=""
           placeholderTextColor="#95A1B5"
           pointerEvents="none"
           secureTextEntry={false}
@@ -11229,9 +11223,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
               ]
             }
             testID="datepicker-header-label"
-          >
-            Select Date
-          </Text>
+          />
           <View
             accessibilityLabel="datepicker-header-select"
             accessibilityState={
@@ -12843,7 +12835,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
-          placeholder="Select date"
+          placeholder=""
           placeholderTextColor="#95A1B5"
           pointerEvents="none"
           secureTextEntry={false}
@@ -13122,9 +13114,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               ]
             }
             testID="datepicker-header-label"
-          >
-            Select Date
-          </Text>
+          />
           <View
             accessibilityLabel="datepicker-header-select"
             accessibilityState={
@@ -14521,7 +14511,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
-          placeholder="Select date"
+          placeholder=""
           placeholderTextColor="#95A1B5"
           pointerEvents="none"
           secureTextEntry={false}
@@ -14800,9 +14790,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               ]
             }
             testID="datepicker-header-label"
-          >
-            Select Date
-          </Text>
+          />
           <View
             accessibilityLabel="datepicker-header-select"
             accessibilityState={
@@ -19132,7 +19120,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
-          placeholder="Select date"
+          placeholder=""
           placeholderTextColor="#95A1B5"
           pointerEvents="none"
           secureTextEntry={false}
@@ -19411,9 +19399,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               ]
             }
             testID="datepicker-header-label"
-          >
-            Select Date
-          </Text>
+          />
           <View
             accessibilityLabel="datepicker-header-select"
             accessibilityState={
@@ -20810,7 +20796,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
           onBlur={[Function]}
           onChangeText={[Function]}
           onFocus={[Function]}
-          placeholder="Select date"
+          placeholder=""
           placeholderTextColor="#95A1B5"
           pointerEvents="none"
           secureTextEntry={false}
@@ -21089,9 +21075,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               ]
             }
             testID="datepicker-header-label"
-          >
-            Select Date
-          </Text>
+          />
           <View
             accessibilityLabel="datepicker-header-select"
             accessibilityState={

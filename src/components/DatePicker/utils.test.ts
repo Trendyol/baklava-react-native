@@ -578,6 +578,39 @@ describe('DatePicker Utils', () => {
       expect(result).toBeNull();
     });
 
+    test('should return null when start date is empty/whitespace', () => {
+      // given
+      const dateRangeWithEmptyStart = ' - 2025-01-20';
+
+      // when
+      const result = getDayFromDateRange(dateRangeWithEmptyStart);
+
+      // then
+      expect(result).toBeNull();
+    });
+
+    test('should return null when end date is empty/whitespace', () => {
+      // given
+      const dateRangeWithEmptyEnd = '2025-01-15 - ';
+
+      // when
+      const result = getDayFromDateRange(dateRangeWithEmptyEnd);
+
+      // then
+      expect(result).toBeNull();
+    });
+
+    test('should return null when both dates are empty/whitespace', () => {
+      // given
+      const dateRangeWithBothEmpty = ' - ';
+
+      // when
+      const result = getDayFromDateRange(dateRangeWithBothEmpty);
+
+      // then
+      expect(result).toBeNull();
+    });
+
     test('should handle very old dates', () => {
       const result = getDayFromDateRange(
         '01/01/1900 - 31/12/1900',
