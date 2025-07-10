@@ -7,20 +7,21 @@ import { DatePickerProvider, useDatePickerContext } from './DatePickerContext';
 import { VariantProps } from '@ergenekonyigit/restyle';
 import { Theme } from '../../theme';
 import { getDateFromString } from './utils';
+import { DEFAULT_DATE_FORMAT } from './constants';
 
 interface DatePickerProps {
   nameOfWeekdays: string[];
   nameOfMonths: string[];
   closeButtonLabel: string;
   selectButtonLabel: string;
-  title: string;
-  testID: string;
+  title?: string;
+  testID?: string;
   value: string | null;
   minYear?: number;
   maxYear?: number;
-  placeholder: string;
+  placeholder?: string;
   firstDayOfWeek: 0 | 1;
-  disableDates: string[];
+  disableDates?: string[];
   onChange: (date: string) => void;
   size?: VariantProps<Theme, 'inputSizeVariants'>['variant'];
   label?: string;
@@ -33,8 +34,8 @@ interface DatePickerProps {
 interface DatePickerContentProps {
   closeButtonLabel: string;
   selectButtonLabel: string;
-  title: string;
-  placeholder: string;
+  title?: string;
+  placeholder?: string;
   size?: VariantProps<Theme, 'inputSizeVariants'>['variant'];
   label?: string;
   multiple?: boolean;
@@ -48,7 +49,7 @@ const DatePickerContent = React.memo<DatePickerContentProps>(props => {
     <>
       <Box position="relative">
         <Input
-          placeholder={props.placeholder}
+          placeholder={props.placeholder || ''}
           value={value || ''}
           editable={false}
           pointerEvents="none"
@@ -70,7 +71,7 @@ const DatePickerContent = React.memo<DatePickerContentProps>(props => {
       <CalendarWrapper
         closeButtonLabel={props.closeButtonLabel}
         selectButtonLabel={props.selectButtonLabel}
-        title={props.title}
+        title={props.title || ''}
       />
     </>
   );
@@ -80,7 +81,7 @@ const DatePicker = React.memo<DatePickerProps>(props => {
   const _disableDates = React.useMemo(
     () =>
       (props.disableDates || []).map(date =>
-        getDateFromString(date, props.format).getTime(),
+        getDateFromString(date, props.format || DEFAULT_DATE_FORMAT).getTime(),
       ),
     [props.disableDates, props.format],
   );
@@ -92,13 +93,13 @@ const DatePicker = React.memo<DatePickerProps>(props => {
       nameOfMonths: props.nameOfMonths,
       minYear: props.minYear,
       maxYear: props.maxYear,
-      testID: props.testID,
+      testID: props.testID || 'datepicker',
       firstDayOfWeek: props.firstDayOfWeek,
-      placeholder: props.placeholder,
+      placeholder: props.placeholder || '',
       disableDates: _disableDates,
       onChange: props.onChange,
       multiple: props.multiple || false,
-      format: props.format,
+      format: props.format || DEFAULT_DATE_FORMAT,
       disableMonths: props.disableMonths,
       disableYears: props.disableYears,
     }),
