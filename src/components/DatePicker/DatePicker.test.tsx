@@ -1531,4 +1531,47 @@ describe('DatePicker', () => {
       }
     });
   });
+
+  describe('Clear Button', () => {
+    test('should not render clear button when value is null or empty', () => {
+      // given
+      const { queryByTestId: queryByTestId1 } = render(
+        <DatePicker {...defaultProps} value={null} />,
+      );
+      const { queryByTestId: queryByTestId2 } = render(
+        <DatePicker {...defaultProps} value="" />,
+      );
+
+      // then
+      expect(queryByTestId1('datepicker-clear')).toBeNull();
+      expect(queryByTestId2('datepicker-clear')).toBeNull();
+    });
+
+    test('should render clear button when value is provided and clear value when pressed', () => {
+      // given
+      const onChange = jest.fn();
+      const { getByTestId } = render(
+        <DatePicker {...defaultProps} value="2025-01-15" onChange={onChange} />,
+      );
+
+      // then
+      expect(getByTestId('datepicker-clear')).toBeTruthy();
+
+      // when
+      fireEvent.press(getByTestId('datepicker-clear'));
+
+      // then
+      expect(onChange).toHaveBeenCalledWith('');
+    });
+
+    test('should render DatePicker with clear button correctly', () => {
+      // when
+      const { toJSON } = render(
+        <DatePicker {...defaultProps} value="2025-01-15" />,
+      );
+
+      // then
+      expect(toJSON()).toMatchSnapshot();
+    });
+  });
 });

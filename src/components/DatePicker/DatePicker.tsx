@@ -3,6 +3,7 @@ import { StyleSheet, TouchableOpacity } from 'react-native';
 import CalendarWrapper from './CalendarWrapper';
 import Input from '../Input/Input';
 import Box from '../Box/Box';
+import Icon from '../Icon/Icon';
 import { DatePickerProvider, useDatePickerContext } from './DatePickerContext';
 import { VariantProps } from '@ergenekonyigit/restyle';
 import { Theme } from '../../theme';
@@ -43,7 +44,11 @@ interface DatePickerContentProps {
 }
 
 const DatePickerContent = React.memo<DatePickerContentProps>(props => {
-  const { handleOpen, testID, value } = useDatePickerContext();
+  const { handleOpen, testID, value, onChangeProp } = useDatePickerContext();
+
+  const handleClear = React.useCallback(() => {
+    onChangeProp('');
+  }, [onChangeProp]);
 
   return (
     <>
@@ -56,7 +61,6 @@ const DatePickerContent = React.memo<DatePickerContentProps>(props => {
           testID={`${testID}-input`}
           accessibilityLabel={`${testID}-input`}
           size={props.size}
-          icon="calendar"
           labelFixed={true}
           label={props.label}
         />
@@ -67,6 +71,27 @@ const DatePickerContent = React.memo<DatePickerContentProps>(props => {
           testID={`${testID}-touchable`}
           accessibilityLabel={`${testID}-touchable`}
         />
+        <Box style={styles.rightIconsContainer}>
+          {value && (
+            <>
+              <TouchableOpacity
+                style={styles.clearButton}
+                onPress={handleClear}
+                testID={`${testID}-clear`}>
+                <Icon name="close" size="xs" color="neutralDarker" />
+              </TouchableOpacity>
+              <Box
+                width={1}
+                height={16}
+                backgroundColor="neutralLighter"
+                marginHorizontal="2xs"
+              />
+            </>
+          )}
+          <Box style={styles.calendarIconContainer}>
+            <Icon name="calendar" size="xs" color="neutralLight" />
+          </Box>
+        </Box>
       </Box>
       <CalendarWrapper
         closeButtonLabel={props.closeButtonLabel}
@@ -148,5 +173,23 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     bottom: 0,
+  },
+  clearButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 8,
+  },
+  rightIconsContainer: {
+    position: 'absolute',
+    top: 0,
+    right: 0,
+    bottom: 0,
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  calendarIconContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 16,
   },
 });

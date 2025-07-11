@@ -36,6 +36,7 @@ export interface DatePickerContextType {
   firstDayOfWeek?: 0 | 1;
   testID?: string;
   onChange: () => void;
+  onChangeProp: (date: string) => void;
   handleOpen: () => void;
   handleClose: () => void;
   onSelectDate: (date: Day) => void;
@@ -326,6 +327,7 @@ export const DatePickerProvider = ({
       handleClose,
       onSelectDate,
       onChange,
+      onChangeProp,
       showPickerType,
       setShowPickerType,
       calendarData,
@@ -355,6 +357,7 @@ export const DatePickerProvider = ({
       handleClose,
       onSelectDate,
       onChange,
+      onChangeProp,
       showPickerType,
       setShowPickerType,
       calendarData,
