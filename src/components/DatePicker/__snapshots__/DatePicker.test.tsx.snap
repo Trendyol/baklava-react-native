@@ -66,69 +66,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
           textAlign="left"
           value=""
         />
-        <RNSVGSvgView
-          accessibilityLabel="input-icon"
-          align="xMidYMid"
-          bbHeight={16}
-          bbWidth={16}
-          fill="#95A1B5"
-          focusable={false}
-          height={16}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            [
-              {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              {
-                "flex": 0,
-                "height": 16,
-                "width": 16,
-              },
-            ]
-          }
-          testID="input-icon"
-          title="calendar"
-          vbHeight={24}
-          vbWidth={24}
-          width={16}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <RNSVGGroup
-            fill={
-              {
-                "payload": 4287996341,
-                "type": 0,
-              }
-            }
-            propList={
-              [
-                "fill",
-              ]
-            }
-          >
-            <RNSVGPath
-              clipRule={0}
-              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
-              fill={
-                {
-                  "payload": 4287996341,
-                  "type": 0,
-                }
-              }
-              fillRule={0}
-              propList={
-                [
-                  "fill",
-                  "fillRule",
-                ]
-              }
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
       </View>
     </View>
     <View
@@ -172,6 +109,100 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
       }
       testID="datepicker-touchable"
     />
+    <View
+      accessible={false}
+      style={
+        [
+          {},
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {},
+            {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginRight": 16,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="icon"
+          align="xMidYMid"
+          bbHeight={14}
+          bbWidth={14}
+          fill="#95A1B5"
+          focusable={false}
+          height={14}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          testID="icon"
+          title="calendar"
+          vbHeight={24}
+          vbWidth={24}
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
+              fill={
+                {
+                  "payload": 4287996341,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityLabel="datepicker-wrapper"
@@ -4675,69 +4706,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
           textAlign="left"
           value=""
         />
-        <RNSVGSvgView
-          accessibilityLabel="input-icon"
-          align="xMidYMid"
-          bbHeight={16}
-          bbWidth={16}
-          fill="#95A1B5"
-          focusable={false}
-          height={16}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            [
-              {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              {
-                "flex": 0,
-                "height": 16,
-                "width": 16,
-              },
-            ]
-          }
-          testID="input-icon"
-          title="calendar"
-          vbHeight={24}
-          vbWidth={24}
-          width={16}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <RNSVGGroup
-            fill={
-              {
-                "payload": 4287996341,
-                "type": 0,
-              }
-            }
-            propList={
-              [
-                "fill",
-              ]
-            }
-          >
-            <RNSVGPath
-              clipRule={0}
-              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
-              fill={
-                {
-                  "payload": 4287996341,
-                  "type": 0,
-                }
-              }
-              fillRule={0}
-              propList={
-                [
-                  "fill",
-                  "fillRule",
-                ]
-              }
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
       </View>
     </View>
     <View
@@ -4781,6 +4749,100 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
       }
       testID="datepicker-touchable"
     />
+    <View
+      accessible={false}
+      style={
+        [
+          {},
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {},
+            {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginRight": 16,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="icon"
+          align="xMidYMid"
+          bbHeight={14}
+          bbWidth={14}
+          fill="#95A1B5"
+          focusable={false}
+          height={14}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          testID="icon"
+          title="calendar"
+          vbHeight={24}
+          vbWidth={24}
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
+              fill={
+                {
+                  "payload": 4287996341,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityLabel="datepicker-wrapper"
@@ -9284,69 +9346,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
           textAlign="left"
           value=""
         />
-        <RNSVGSvgView
-          accessibilityLabel="input-icon"
-          align="xMidYMid"
-          bbHeight={16}
-          bbWidth={16}
-          fill="#95A1B5"
-          focusable={false}
-          height={16}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            [
-              {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              {
-                "flex": 0,
-                "height": 16,
-                "width": 16,
-              },
-            ]
-          }
-          testID="input-icon"
-          title="calendar"
-          vbHeight={24}
-          vbWidth={24}
-          width={16}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <RNSVGGroup
-            fill={
-              {
-                "payload": 4287996341,
-                "type": 0,
-              }
-            }
-            propList={
-              [
-                "fill",
-              ]
-            }
-          >
-            <RNSVGPath
-              clipRule={0}
-              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
-              fill={
-                {
-                  "payload": 4287996341,
-                  "type": 0,
-                }
-              }
-              fillRule={0}
-              propList={
-                [
-                  "fill",
-                  "fillRule",
-                ]
-              }
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
       </View>
     </View>
     <View
@@ -9390,6 +9389,100 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
       }
       testID="datepicker-touchable"
     />
+    <View
+      accessible={false}
+      style={
+        [
+          {},
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {},
+            {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginRight": 16,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="icon"
+          align="xMidYMid"
+          bbHeight={14}
+          bbWidth={14}
+          fill="#95A1B5"
+          focusable={false}
+          height={14}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          testID="icon"
+          title="calendar"
+          vbHeight={24}
+          vbWidth={24}
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
+              fill={
+                {
+                  "payload": 4287996341,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityLabel="datepicker-wrapper"
@@ -10960,69 +11053,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
           textAlign="left"
           value=""
         />
-        <RNSVGSvgView
-          accessibilityLabel="input-icon"
-          align="xMidYMid"
-          bbHeight={16}
-          bbWidth={16}
-          fill="#95A1B5"
-          focusable={false}
-          height={16}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            [
-              {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              {
-                "flex": 0,
-                "height": 16,
-                "width": 16,
-              },
-            ]
-          }
-          testID="input-icon"
-          title="calendar"
-          vbHeight={24}
-          vbWidth={24}
-          width={16}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <RNSVGGroup
-            fill={
-              {
-                "payload": 4287996341,
-                "type": 0,
-              }
-            }
-            propList={
-              [
-                "fill",
-              ]
-            }
-          >
-            <RNSVGPath
-              clipRule={0}
-              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
-              fill={
-                {
-                  "payload": 4287996341,
-                  "type": 0,
-                }
-              }
-              fillRule={0}
-              propList={
-                [
-                  "fill",
-                  "fillRule",
-                ]
-              }
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
       </View>
     </View>
     <View
@@ -11066,6 +11096,100 @@ exports[`DatePicker Calendar navigation should open year picker when year button
       }
       testID="datepicker-touchable"
     />
+    <View
+      accessible={false}
+      style={
+        [
+          {},
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {},
+            {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginRight": 16,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="icon"
+          align="xMidYMid"
+          bbHeight={14}
+          bbWidth={14}
+          fill="#95A1B5"
+          focusable={false}
+          height={14}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          testID="icon"
+          title="calendar"
+          vbHeight={24}
+          vbWidth={24}
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
+              fill={
+                {
+                  "payload": 4287996341,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityLabel="datepicker-wrapper"
@@ -12785,6 +12909,326 @@ exports[`DatePicker Calendar navigation should open year picker when year button
 ]
 `;
 
+exports[`DatePicker Clear Button should render DatePicker with clear button correctly 1`] = `
+<View
+  accessible={false}
+  style={
+    [
+      {
+        "position": "relative",
+      },
+    ]
+  }
+>
+  <View
+    accessible={false}
+    style={
+      [
+        {
+          "paddingVertical": 8,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="datepicker-input-box"
+      accessible={true}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#AFBBCA",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "paddingHorizontal": 16,
+            "zIndex": 0,
+          },
+        ]
+      }
+      testID="datepicker-input-box"
+    >
+      <TextInput
+        accessibilityLabel="datepicker-input"
+        bg="transparent"
+        disabled={false}
+        editable={true}
+        multiline={false}
+        onBlur={[Function]}
+        onChangeText={[Function]}
+        onFocus={[Function]}
+        placeholder=""
+        placeholderTextColor="#95A1B5"
+        pointerEvents="none"
+        secureTextEntry={false}
+        style={
+          [
+            {
+              "flex": 1,
+              "height": 48,
+            },
+          ]
+        }
+        testID="datepicker-input"
+        textAlign="left"
+        value="2025-01-15"
+      />
+    </View>
+  </View>
+  <View
+    accessibilityLabel="datepicker-touchable"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "bottom": 0,
+        "left": 0,
+        "opacity": 1,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    testID="datepicker-touchable"
+  />
+  <View
+    accessible={false}
+    style={
+      [
+        {},
+        {
+          "alignItems": "center",
+          "bottom": 0,
+          "flexDirection": "row",
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "marginRight": 8,
+          "opacity": 1,
+        }
+      }
+      testID="datepicker-clear"
+    >
+      <RNSVGSvgView
+        accessibilityLabel="icon"
+        align="xMidYMid"
+        bbHeight={14}
+        bbWidth={14}
+        fill="#273142"
+        focusable={false}
+        height={14}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 14,
+              "width": 14,
+            },
+          ]
+        }
+        testID="icon"
+        title="close"
+        vbHeight={24}
+        vbWidth={24}
+        width={14}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4280758594,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M.54.54a1.846 1.846 0 0 1 2.612 0L12 9.39 20.848.54a1.846 1.846 0 0 1 2.611 2.612L14.611 12l8.848 8.848a1.846 1.846 0 0 1-2.61 2.611L12 14.611l-8.848 8.848A1.846 1.846 0 0 1 .54 20.85L9.389 12 .541 3.152A1.846 1.846 0 0 1 .54.54Z"
+            fill={
+              {
+                "payload": 4280758594,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+    <View
+      accessible={false}
+      style={
+        [
+          {
+            "backgroundColor": "#AFBBCA",
+            "height": 16,
+            "marginHorizontal": 8,
+            "width": 1,
+          },
+        ]
+      }
+    />
+    <View
+      accessible={false}
+      style={
+        [
+          {},
+          {
+            "alignItems": "center",
+            "justifyContent": "center",
+            "marginRight": 16,
+          },
+        ]
+      }
+    >
+      <RNSVGSvgView
+        accessibilityLabel="icon"
+        align="xMidYMid"
+        bbHeight={14}
+        bbWidth={14}
+        fill="#95A1B5"
+        focusable={false}
+        height={14}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 14,
+              "width": 14,
+            },
+          ]
+        }
+        testID="icon"
+        title="calendar"
+        vbHeight={24}
+        vbWidth={24}
+        width={14}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4287996341,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`DatePicker Context edge cases should handle month selection with year constraints 1`] = `
 [
   <View
@@ -12851,69 +13295,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
           textAlign="left"
           value=""
         />
-        <RNSVGSvgView
-          accessibilityLabel="input-icon"
-          align="xMidYMid"
-          bbHeight={16}
-          bbWidth={16}
-          fill="#95A1B5"
-          focusable={false}
-          height={16}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            [
-              {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              {
-                "flex": 0,
-                "height": 16,
-                "width": 16,
-              },
-            ]
-          }
-          testID="input-icon"
-          title="calendar"
-          vbHeight={24}
-          vbWidth={24}
-          width={16}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <RNSVGGroup
-            fill={
-              {
-                "payload": 4287996341,
-                "type": 0,
-              }
-            }
-            propList={
-              [
-                "fill",
-              ]
-            }
-          >
-            <RNSVGPath
-              clipRule={0}
-              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
-              fill={
-                {
-                  "payload": 4287996341,
-                  "type": 0,
-                }
-              }
-              fillRule={0}
-              propList={
-                [
-                  "fill",
-                  "fillRule",
-                ]
-              }
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
       </View>
     </View>
     <View
@@ -12957,6 +13338,100 @@ exports[`DatePicker Context edge cases should handle month selection with year c
       }
       testID="datepicker-touchable"
     />
+    <View
+      accessible={false}
+      style={
+        [
+          {},
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {},
+            {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginRight": 16,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="icon"
+          align="xMidYMid"
+          bbHeight={14}
+          bbWidth={14}
+          fill="#95A1B5"
+          focusable={false}
+          height={14}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          testID="icon"
+          title="calendar"
+          vbHeight={24}
+          vbWidth={24}
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
+              fill={
+                {
+                  "payload": 4287996341,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityLabel="datepicker-wrapper"
@@ -14527,69 +15002,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
           textAlign="left"
           value=""
         />
-        <RNSVGSvgView
-          accessibilityLabel="input-icon"
-          align="xMidYMid"
-          bbHeight={16}
-          bbWidth={16}
-          fill="#95A1B5"
-          focusable={false}
-          height={16}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            [
-              {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              {
-                "flex": 0,
-                "height": 16,
-                "width": 16,
-              },
-            ]
-          }
-          testID="input-icon"
-          title="calendar"
-          vbHeight={24}
-          vbWidth={24}
-          width={16}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <RNSVGGroup
-            fill={
-              {
-                "payload": 4287996341,
-                "type": 0,
-              }
-            }
-            propList={
-              [
-                "fill",
-              ]
-            }
-          >
-            <RNSVGPath
-              clipRule={0}
-              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
-              fill={
-                {
-                  "payload": 4287996341,
-                  "type": 0,
-                }
-              }
-              fillRule={0}
-              propList={
-                [
-                  "fill",
-                  "fillRule",
-                ]
-              }
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
       </View>
     </View>
     <View
@@ -14633,6 +15045,100 @@ exports[`DatePicker Context edge cases should handle month selection with year c
       }
       testID="datepicker-touchable"
     />
+    <View
+      accessible={false}
+      style={
+        [
+          {},
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {},
+            {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginRight": 16,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="icon"
+          align="xMidYMid"
+          bbHeight={14}
+          bbWidth={14}
+          fill="#95A1B5"
+          focusable={false}
+          height={14}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          testID="icon"
+          title="calendar"
+          vbHeight={24}
+          vbWidth={24}
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
+              fill={
+                {
+                  "payload": 4287996341,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityLabel="datepicker-wrapper"
@@ -19136,69 +19642,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
           textAlign="left"
           value=""
         />
-        <RNSVGSvgView
-          accessibilityLabel="input-icon"
-          align="xMidYMid"
-          bbHeight={16}
-          bbWidth={16}
-          fill="#95A1B5"
-          focusable={false}
-          height={16}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            [
-              {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              {
-                "flex": 0,
-                "height": 16,
-                "width": 16,
-              },
-            ]
-          }
-          testID="input-icon"
-          title="calendar"
-          vbHeight={24}
-          vbWidth={24}
-          width={16}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <RNSVGGroup
-            fill={
-              {
-                "payload": 4287996341,
-                "type": 0,
-              }
-            }
-            propList={
-              [
-                "fill",
-              ]
-            }
-          >
-            <RNSVGPath
-              clipRule={0}
-              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
-              fill={
-                {
-                  "payload": 4287996341,
-                  "type": 0,
-                }
-              }
-              fillRule={0}
-              propList={
-                [
-                  "fill",
-                  "fillRule",
-                ]
-              }
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
       </View>
     </View>
     <View
@@ -19242,6 +19685,100 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
       }
       testID="datepicker-touchable"
     />
+    <View
+      accessible={false}
+      style={
+        [
+          {},
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {},
+            {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginRight": 16,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="icon"
+          align="xMidYMid"
+          bbHeight={14}
+          bbWidth={14}
+          fill="#95A1B5"
+          focusable={false}
+          height={14}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          testID="icon"
+          title="calendar"
+          vbHeight={24}
+          vbWidth={24}
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
+              fill={
+                {
+                  "payload": 4287996341,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityLabel="datepicker-wrapper"
@@ -20812,69 +21349,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
           textAlign="left"
           value=""
         />
-        <RNSVGSvgView
-          accessibilityLabel="input-icon"
-          align="xMidYMid"
-          bbHeight={16}
-          bbWidth={16}
-          fill="#95A1B5"
-          focusable={false}
-          height={16}
-          meetOrSlice={0}
-          minX={0}
-          minY={0}
-          style={
-            [
-              {
-                "backgroundColor": "transparent",
-                "borderWidth": 0,
-              },
-              {
-                "flex": 0,
-                "height": 16,
-                "width": 16,
-              },
-            ]
-          }
-          testID="input-icon"
-          title="calendar"
-          vbHeight={24}
-          vbWidth={24}
-          width={16}
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <RNSVGGroup
-            fill={
-              {
-                "payload": 4287996341,
-                "type": 0,
-              }
-            }
-            propList={
-              [
-                "fill",
-              ]
-            }
-          >
-            <RNSVGPath
-              clipRule={0}
-              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
-              fill={
-                {
-                  "payload": 4287996341,
-                  "type": 0,
-                }
-              }
-              fillRule={0}
-              propList={
-                [
-                  "fill",
-                  "fillRule",
-                ]
-              }
-            />
-          </RNSVGGroup>
-        </RNSVGSvgView>
       </View>
     </View>
     <View
@@ -20918,6 +21392,100 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
       }
       testID="datepicker-touchable"
     />
+    <View
+      accessible={false}
+      style={
+        [
+          {},
+          {
+            "alignItems": "center",
+            "bottom": 0,
+            "flexDirection": "row",
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {},
+            {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "marginRight": 16,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="icon"
+          align="xMidYMid"
+          bbHeight={14}
+          bbWidth={14}
+          fill="#95A1B5"
+          focusable={false}
+          height={14}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          testID="icon"
+          title="calendar"
+          vbHeight={24}
+          vbWidth={24}
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M6 0a1.5 1.5 0 0 1 1.5 1.5V3h9V1.5a1.5 1.5 0 0 1 3 0V3h.5a4 4 0 0 1 4 4v13a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4h.5V1.5A1.5 1.5 0 0 1 6 0ZM3 6.864a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v3.772H3V6.864Z"
+              fill={
+                {
+                  "payload": 4287996341,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
   </View>,
   <View
     accessibilityLabel="datepicker-wrapper"

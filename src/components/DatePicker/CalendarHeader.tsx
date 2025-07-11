@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet, TouchableOpacity, I18nManager } from 'react-native';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
 import Icon from '../Icon/Icon';
@@ -76,7 +76,7 @@ const CalendarHeader = React.memo<CalendarHeaderProps>(({ context }) => {
       py="2xs"
       mb="2xs">
       <NavigationButton
-        iconName="arrow-left"
+        iconName={I18nManager.isRTL ? 'arrow-right' : 'arrow-left'}
         onPress={onPressPrev}
         testID={`${testID}-header-prev`}
       />
@@ -103,7 +103,7 @@ const CalendarHeader = React.memo<CalendarHeaderProps>(({ context }) => {
       </Box>
 
       <NavigationButton
-        iconName="arrow-right"
+        iconName={I18nManager.isRTL ? 'arrow-left' : 'arrow-right'}
         onPress={onPressNext}
         testID={`${testID}-header-next`}
       />
