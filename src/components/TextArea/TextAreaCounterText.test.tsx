@@ -5,6 +5,7 @@ import { TextAreaCounterText } from './TextAreaCounterText';
 describe('TextArea Counter Text', () => {
   let counterText: number;
   let errorState: boolean;
+  const DEFAULT_MAX_LENGTH = 200;
 
   test('should render counter text correctly', () => {
     // given
@@ -13,7 +14,11 @@ describe('TextArea Counter Text', () => {
 
     // when
     const { toJSON } = render(
-      <TextAreaCounterText counterText={counterText} errorState={errorState} />,
+      <TextAreaCounterText
+        counterText={counterText}
+        errorState={errorState}
+        maxLength={DEFAULT_MAX_LENGTH}
+      />,
     );
 
     // then
@@ -27,7 +32,30 @@ describe('TextArea Counter Text', () => {
 
     // when
     const { toJSON } = render(
-      <TextAreaCounterText counterText={counterText} errorState={errorState} />,
+      <TextAreaCounterText
+        counterText={counterText}
+        errorState={errorState}
+        maxLength={DEFAULT_MAX_LENGTH}
+      />,
+    );
+
+    // then
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  test('should render with custom maxLength', () => {
+    // given
+    counterText = 0;
+    errorState = false;
+    const customMaxLength = 500;
+
+    // when
+    const { toJSON } = render(
+      <TextAreaCounterText
+        counterText={counterText}
+        errorState={errorState}
+        maxLength={customMaxLength}
+      />,
     );
 
     // then

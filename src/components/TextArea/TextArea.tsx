@@ -257,6 +257,7 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
             <TextAreaCounterText
               counterText={length}
               errorState={length > maxLength ? true : errorState}
+              maxLength={maxLength}
             />
           </Box>
         </Box>
