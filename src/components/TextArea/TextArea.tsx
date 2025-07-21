@@ -241,6 +241,7 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
             accessibilityLabel={testID}
             testID={testID}
             textAlign={isRTL ? 'right' : 'left'}
+            textAlignVertical="top"
           />
         </Box>
 
