@@ -7,9 +7,11 @@ export const TextAreaCounterText = React.memo(
   ({
     counterText,
     errorState,
+    maxLength,
   }: {
     counterText?: number;
     errorState: boolean;
+    maxLength: number;
   }): JSX.Element | null => {
     const textColor = getTextColor({ errorState });
 
@@ -21,7 +23,7 @@ export const TextAreaCounterText = React.memo(
     return (
       <Box mt="3xs" ml="m">
         <Text variant="subtitle04Regular" color={textColor}>
-          {`${content}/200`}
+          {`${content}/${maxLength}`}
         </Text>
       </Box>
     );
