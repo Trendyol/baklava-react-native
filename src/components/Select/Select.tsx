@@ -60,7 +60,7 @@ type SelectProps = React.ComponentProps<typeof Box> & {
   closeButtonLabel?: string;
   multiple?: boolean;
   maxVisibleItems?: number;
-  bottomSheetPAddingBottom?: BoxProps['pb'];
+  bottomSheetPaddingBottom?: BoxProps['pb'];
 };
 
 const useSelectState = (selectedOptions: string[] | string) => {
@@ -194,7 +194,7 @@ const Select = forwardRef<SelectHandles, SelectProps>(
       selectButtonLabel,
       multiple = true,
       maxVisibleItems = 6,
-      bottomSheetPAddingBottom,
+      bottomSheetPaddingBottom,
       ...rest
     }: SelectProps,
     ref,
@@ -442,7 +442,7 @@ const Select = forwardRef<SelectHandles, SelectProps>(
         )}
 
         <SelectBottomSheet
-          pb={bottomSheetPAddingBottom}
+          pb={bottomSheetPaddingBottom}
           visible={isBottomSheetVisible}
           title={bottomSheetTitle}
           closeButtonLabel={closeButtonLabel}
