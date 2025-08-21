@@ -14,7 +14,7 @@ import {
   GestureResponderEvent,
 } from 'react-native';
 import theme, { Theme } from '../../theme';
-import Box from '../Box/Box';
+import Box, { BoxProps } from '../Box/Box';
 import Icon from '../Icon/Icon';
 import Text from '../Text/Text';
 import SelectBottomSheet from '../SelectBottomSheet/SelectBottomSheet';
@@ -60,6 +60,7 @@ type SelectProps = React.ComponentProps<typeof Box> & {
   closeButtonLabel?: string;
   multiple?: boolean;
   maxVisibleItems?: number;
+  bottomSheetPAddingBottom?: BoxProps['pb'];
 };
 
 const useSelectState = (selectedOptions: string[] | string) => {
@@ -193,6 +194,7 @@ const Select = forwardRef<SelectHandles, SelectProps>(
       selectButtonLabel,
       multiple = true,
       maxVisibleItems = 6,
+      bottomSheetPAddingBottom,
       ...rest
     }: SelectProps,
     ref,
@@ -440,6 +442,7 @@ const Select = forwardRef<SelectHandles, SelectProps>(
         )}
 
         <SelectBottomSheet
+          pb={bottomSheetPAddingBottom}
           visible={isBottomSheetVisible}
           title={bottomSheetTitle}
           closeButtonLabel={closeButtonLabel}
