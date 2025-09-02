@@ -151,6 +151,7 @@ export const iconList = [
   'profile',
   'rating',
   'report',
+  'rocket',
   'rotate',
   'sad',
   'save',
