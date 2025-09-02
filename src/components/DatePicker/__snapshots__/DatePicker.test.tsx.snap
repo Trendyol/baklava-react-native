@@ -9921,7 +9921,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                       ]
                     }
                   >
-                    July
+                    September
                   </Text>
                 </View>
               </View>
@@ -10595,7 +10595,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                     [
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#F27A1A",
+                        "backgroundColor": "#FFFFFF",
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
@@ -10610,7 +10610,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                     style={
                       [
                         {
-                          "color": "#FFFFFF",
+                          "color": "#273142",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
@@ -10737,7 +10737,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                     [
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
+                        "backgroundColor": "#F27A1A",
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
@@ -10752,7 +10752,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                     style={
                       [
                         {
-                          "color": "#273142",
+                          "color": "#FFFFFF",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
@@ -11627,7 +11627,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                       ]
                     }
                   >
-                    July
+                    September
                   </Text>
                 </View>
               </View>
@@ -13870,7 +13870,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                       ]
                     }
                   >
-                    July
+                    September
                   </Text>
                 </View>
               </View>
@@ -14544,7 +14544,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                     [
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#F27A1A",
+                        "backgroundColor": "#FFFFFF",
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
@@ -14559,7 +14559,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                     style={
                       [
                         {
-                          "color": "#FFFFFF",
+                          "color": "#273142",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
@@ -14686,7 +14686,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                     [
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
+                        "backgroundColor": "#F27A1A",
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
@@ -14701,7 +14701,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                     style={
                       [
                         {
-                          "color": "#273142",
+                          "color": "#FFFFFF",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
@@ -20217,7 +20217,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                       ]
                     }
                   >
-                    July
+                    September
                   </Text>
                 </View>
               </View>
@@ -20891,7 +20891,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                     [
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#F27A1A",
+                        "backgroundColor": "#FFFFFF",
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
@@ -20906,7 +20906,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                     style={
                       [
                         {
-                          "color": "#FFFFFF",
+                          "color": "#273142",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
@@ -21033,7 +21033,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                     [
                       {
                         "alignItems": "center",
-                        "backgroundColor": "#FFFFFF",
+                        "backgroundColor": "#F27A1A",
                         "borderRadius": 4,
                         "flex": 1,
                         "marginBottom": 8,
@@ -21048,7 +21048,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                     style={
                       [
                         {
-                          "color": "#273142",
+                          "color": "#FFFFFF",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
