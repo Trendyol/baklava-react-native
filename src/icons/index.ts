@@ -306,6 +306,7 @@ export { default as QA } from './QA';
 export { default as Rating } from './Rating';
 export { default as Report } from './Report';
 export { default as RO } from './RO';
+export { default as Rocket } from './Rocket';
 export { default as Rotate } from './Rotate';
 export { default as RS } from './RS';
 export { default as RW } from './RW';
