@@ -11,7 +11,6 @@ import Icon from '../Icon/Icon';
 import { IconNameType } from '../Icon/types';
 import theme, { Theme } from '../../theme';
 import { AlertIcon } from './AlertIcon';
-import { deviceWidth } from '../../utils/dimentions';
 
 type AlertProps = React.ComponentProps<typeof Box> & {
   variant?: VariantProps<Theme, 'alertVariants'>['variant'];
@@ -51,7 +50,7 @@ const Alert = ({
 
   return (
     <AlertContainer variant={variant} {...rest}>
-      <Box p="m" flexDirection="row" width={deviceWidth - theme.spacing['2xl']}>
+      <Box p="m" flexDirection="row">
         <Box pr="2xs">
           <AlertIcon variant={variant} icon={icon} />
         </Box>
