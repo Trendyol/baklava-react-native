@@ -24,7 +24,6 @@ exports[`Alert should render alert correctly 1`] = `
         {
           "flexDirection": "row",
           "padding": 16,
-          "width": 718,
         },
       ]
     }
