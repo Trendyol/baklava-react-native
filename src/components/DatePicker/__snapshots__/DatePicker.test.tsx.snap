@@ -514,6 +514,16 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -523,6 +533,13 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                   testID="icon"
                   title="arrow-left"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -776,6 +793,16 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -785,6 +812,13 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                   testID="icon"
                   title="arrow-right"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -5154,6 +5188,16 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -5163,6 +5207,13 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                   testID="icon"
                   title="arrow-left"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -5416,6 +5467,16 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -5425,6 +5486,13 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                   testID="icon"
                   title="arrow-right"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -9794,6 +9862,16 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -9803,6 +9881,13 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                   testID="icon"
                   title="arrow-left"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -10057,6 +10142,16 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -10066,6 +10161,13 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                   testID="icon"
                   title="arrow-right"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -11501,6 +11603,16 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -11510,6 +11622,13 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                   testID="icon"
                   title="arrow-left"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -11764,6 +11883,16 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -11773,6 +11902,13 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                   testID="icon"
                   title="arrow-right"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -13743,6 +13879,16 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -13752,6 +13898,13 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                   testID="icon"
                   title="arrow-left"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -14006,6 +14159,16 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -14015,6 +14178,13 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                   testID="icon"
                   title="arrow-right"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -15450,6 +15620,16 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -15459,6 +15639,13 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                   testID="icon"
                   title="arrow-left"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -15712,6 +15899,16 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -15721,6 +15918,13 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                   testID="icon"
                   title="arrow-right"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -20090,6 +20294,16 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -20099,6 +20313,13 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                   testID="icon"
                   title="arrow-left"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -20353,6 +20574,16 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -20362,6 +20593,13 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                   testID="icon"
                   title="arrow-right"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -21797,6 +22035,16 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -21806,6 +22054,13 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                   testID="icon"
                   title="arrow-left"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}
@@ -22059,6 +22314,16 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                         "backgroundColor": "transparent",
                         "borderWidth": 0,
                       },
+                      [
+                        {
+                          "transform": [
+                            {
+                              "scaleX": 1,
+                            },
+                          ],
+                        },
+                        undefined,
+                      ],
                       {
                         "flex": 0,
                         "height": 20,
@@ -22068,6 +22333,13 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                   testID="icon"
                   title="arrow-right"
+                  transform={
+                    [
+                      {
+                        "scaleX": 1,
+                      },
+                    ]
+                  }
                   vbHeight={24}
                   vbWidth={24}
                   width={20}

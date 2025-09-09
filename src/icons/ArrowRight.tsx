@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
+import { I18nManager } from 'react-native';
 
 const SvgArrowRight = (props: SvgProps) => (
   <Svg
@@ -8,12 +9,16 @@ const SvgArrowRight = (props: SvgProps) => (
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    style={[
+      { transform: [{ scaleX: I18nManager.isRTL ? -1 : 1 }] },
+      props.style,
+    ]}
     {...props}>
     <Path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M7.359 3.93c.67-.669 1.755-.669 2.424 0l6.857 6.858c.67.67.67 1.755 0 2.424L9.784 20.07a1.714 1.714 0 1 1-2.424-2.424L13.004 12 7.359 6.355a1.714 1.714 0 0 1 0-2.424Z"
-      fill={props?.fill ?? `#273142`}
+      fill={props?.fill ?? '#273142'}
     />
   </Svg>
 );
