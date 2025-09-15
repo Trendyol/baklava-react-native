@@ -988,6 +988,7 @@ exports[`Input should render input with leadingText correctly 1`] = `
               "fontSize": 16,
               "fontWeight": "500",
               "lineHeight": 20,
+              "textAlign": "left",
             },
           ]
         }
@@ -1710,6 +1711,7 @@ exports[`Input should render input with trailingText correctly 1`] = `
               "fontSize": 16,
               "fontWeight": "500",
               "lineHeight": 20,
+              "textAlign": "left",
             },
           ]
         }
@@ -1757,6 +1759,7 @@ exports[`Input should render label fixed input correctly 1`] = `
             "fontSize": 12,
             "fontWeight": "500",
             "lineHeight": 14,
+            "textAlign": "left",
           },
         ]
       }
@@ -1776,6 +1779,7 @@ exports[`Input should render label fixed input correctly 1`] = `
             "fontWeight": "400",
             "lineHeight": 14,
             "marginLeft": 2,
+            "textAlign": "left",
           },
         ]
       }

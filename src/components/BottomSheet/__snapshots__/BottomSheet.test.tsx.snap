@@ -246,6 +246,7 @@ exports[`BottomSheet should render BottomSheet when visible true 1`] = `
                 "color": "#273142",
                 "fontFamily": "Rubik-Regular",
                 "fontSize": 14,
+                "textAlign": "left",
               },
             ]
           }

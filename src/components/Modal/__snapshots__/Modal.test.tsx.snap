@@ -242,6 +242,7 @@ exports[`Modal should render Modal when visible true with children 1`] = `
                 "color": "#273142",
                 "fontFamily": "Rubik-Regular",
                 "fontSize": 14,
+                "textAlign": "left",
               },
             ]
           }
@@ -325,6 +326,7 @@ exports[`Modal should render Modal without header 1`] = `
                 "color": "#273142",
                 "fontFamily": "Rubik-Regular",
                 "fontSize": 14,
+                "textAlign": "left",
               },
             ]
           }

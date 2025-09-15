@@ -10,6 +10,7 @@ exports[`Text should render text correctly 1`] = `
         "color": "#273142",
         "fontFamily": "Rubik-Regular",
         "fontSize": 14,
+        "textAlign": "left",
       },
     ]
   }

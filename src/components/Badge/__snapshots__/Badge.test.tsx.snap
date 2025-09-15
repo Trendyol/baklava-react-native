@@ -51,6 +51,7 @@ exports[`Badge should render Badge correctly  1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -119,6 +120,7 @@ exports[`Badge should render badge correctly when custom badge 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -187,6 +189,7 @@ exports[`Badge should render badge correctly when default 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -255,6 +258,7 @@ exports[`Badge should render badgeBackground correctly when default 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -429,6 +433,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -575,6 +580,7 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -721,6 +727,7 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -867,6 +874,7 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -1013,6 +1021,7 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -1159,6 +1168,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -1305,6 +1315,7 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -1451,6 +1462,7 @@ exports[`Badge should render badgeText correctly when default 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -1597,6 +1609,7 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -1743,6 +1756,7 @@ exports[`Badge should render badgeText correctly when success 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -1889,6 +1903,7 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -2164,6 +2179,7 @@ exports[`Badge should render correctly only text badge 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -2310,6 +2326,7 @@ exports[`Badge should render fontSize correctly when large 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -2456,6 +2473,7 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
@@ -2602,6 +2620,7 @@ exports[`Badge should render fontSize correctly when small 1`] = `
           "fontFamily": "Rubik-Medium",
           "fontSize": 14,
           "fontWeight": "500",
+          "textAlign": "left",
         },
         [
           {
