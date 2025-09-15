@@ -653,6 +653,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -721,6 +722,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -1188,6 +1190,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -1288,6 +1291,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -1388,6 +1392,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -1488,6 +1493,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -1588,6 +1594,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -1688,6 +1695,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -1788,6 +1796,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -1905,6 +1914,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -2005,6 +2015,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -2105,6 +2116,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -2205,6 +2217,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -2305,6 +2318,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -2405,6 +2419,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -2505,6 +2520,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -2622,6 +2638,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -2722,6 +2739,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -2822,6 +2840,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -2922,6 +2941,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -3022,6 +3042,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -3122,6 +3143,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -3222,6 +3244,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -3339,6 +3362,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -3439,6 +3463,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -3539,6 +3564,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -3639,6 +3665,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -3739,6 +3766,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -3839,6 +3867,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -3939,6 +3968,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -4056,6 +4086,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -4156,6 +4187,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -4256,6 +4288,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -4356,6 +4389,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -4456,6 +4490,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -4556,6 +4591,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -4656,6 +4692,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -5327,6 +5364,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -5395,6 +5433,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -5862,6 +5901,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -5962,6 +6002,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -6062,6 +6103,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -6162,6 +6204,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -6262,6 +6305,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -6362,6 +6406,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -6462,6 +6507,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -6579,6 +6625,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -6679,6 +6726,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -6779,6 +6827,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -6879,6 +6928,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -6979,6 +7029,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -7079,6 +7130,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -7179,6 +7231,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -7296,6 +7349,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -7396,6 +7450,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -7496,6 +7551,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -7596,6 +7652,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -7696,6 +7753,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -7796,6 +7854,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -7896,6 +7955,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -8013,6 +8073,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -8113,6 +8174,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -8213,6 +8275,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -8313,6 +8376,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -8413,6 +8477,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -8513,6 +8578,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -8613,6 +8679,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -8730,6 +8797,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -8830,6 +8898,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -8930,6 +8999,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -9030,6 +9100,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -9130,6 +9201,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -9230,6 +9302,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -9330,6 +9403,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10002,6 +10076,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10070,6 +10145,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10291,6 +10367,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10362,6 +10439,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10433,6 +10511,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10504,6 +10583,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10575,6 +10655,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10646,6 +10727,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10717,6 +10799,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10788,6 +10871,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10859,6 +10943,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -10930,6 +11015,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -11001,6 +11087,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -11072,6 +11159,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -11742,6 +11830,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -11811,6 +11900,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12034,6 +12124,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12105,6 +12196,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12176,6 +12268,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12247,6 +12340,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12318,6 +12412,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12389,6 +12484,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12460,6 +12556,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12531,6 +12628,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12602,6 +12700,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12673,6 +12772,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12744,6 +12844,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12815,6 +12916,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12886,6 +12988,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -12957,6 +13060,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -13028,6 +13132,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14019,6 +14124,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14087,6 +14193,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14308,6 +14415,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14379,6 +14487,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14450,6 +14559,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14521,6 +14631,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14592,6 +14703,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14663,6 +14775,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14734,6 +14847,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14805,6 +14919,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14876,6 +14991,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -14947,6 +15063,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -15018,6 +15135,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -15089,6 +15207,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -15759,6 +15878,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -15827,6 +15947,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -16294,6 +16415,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -16394,6 +16516,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -16494,6 +16617,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -16594,6 +16718,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -16694,6 +16819,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -16794,6 +16920,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -16894,6 +17021,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -17011,6 +17139,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -17111,6 +17240,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -17211,6 +17341,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -17311,6 +17442,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -17411,6 +17543,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -17511,6 +17644,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -17611,6 +17745,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -17728,6 +17863,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -17828,6 +17964,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -17928,6 +18065,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -18028,6 +18166,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -18128,6 +18267,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -18228,6 +18368,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -18328,6 +18469,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -18445,6 +18587,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -18545,6 +18688,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -18645,6 +18789,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -18745,6 +18890,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -18845,6 +18991,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -18945,6 +19092,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -19045,6 +19193,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -19162,6 +19311,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -19262,6 +19412,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -19362,6 +19513,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -19462,6 +19614,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -19562,6 +19715,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -19662,6 +19816,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -19762,6 +19917,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -20434,6 +20590,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -20502,6 +20659,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -20723,6 +20881,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -20794,6 +20953,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -20865,6 +21025,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -20936,6 +21097,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -21007,6 +21169,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -21078,6 +21241,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -21149,6 +21313,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -21220,6 +21385,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -21291,6 +21457,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -21362,6 +21529,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -21433,6 +21601,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -21504,6 +21673,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -22174,6 +22344,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -22242,6 +22413,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "500",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -22709,6 +22881,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -22809,6 +22982,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -22909,6 +23083,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -23009,6 +23184,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -23109,6 +23285,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -23209,6 +23386,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -23309,6 +23487,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -23426,6 +23605,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -23526,6 +23706,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -23626,6 +23807,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -23726,6 +23908,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -23826,6 +24009,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -23926,6 +24110,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -24026,6 +24211,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -24143,6 +24329,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -24243,6 +24430,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -24343,6 +24531,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -24443,6 +24632,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -24543,6 +24733,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -24643,6 +24834,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -24743,6 +24935,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -24860,6 +25053,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -24960,6 +25154,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -25060,6 +25255,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -25160,6 +25356,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -25260,6 +25457,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -25360,6 +25558,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -25460,6 +25659,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -25577,6 +25777,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -25677,6 +25878,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -25777,6 +25979,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -25877,6 +26080,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -25977,6 +26181,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -26077,6 +26282,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -26177,6 +26383,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                           "fontSize": 14,
                           "fontWeight": "400",
                           "lineHeight": 16,
+                          "textAlign": "left",
                         },
                       ]
                     }

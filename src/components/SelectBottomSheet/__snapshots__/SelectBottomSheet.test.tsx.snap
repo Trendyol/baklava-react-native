@@ -411,6 +411,7 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                                   "fontFamily": "Rubik-Regular",
                                   "fontSize": 14,
                                   "marginLeft": 8,
+                                  "textAlign": "left",
                                 },
                               ]
                             }
@@ -551,6 +552,7 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                                   "fontFamily": "Rubik-Regular",
                                   "fontSize": 14,
                                   "marginLeft": 8,
+                                  "textAlign": "left",
                                 },
                               ]
                             }
@@ -691,6 +693,7 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                                   "fontFamily": "Rubik-Regular",
                                   "fontSize": 14,
                                   "marginLeft": 8,
+                                  "textAlign": "left",
                                 },
                               ]
                             }
@@ -1126,6 +1129,7 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                                   "fontFamily": "Rubik-Regular",
                                   "fontSize": 14,
                                   "marginLeft": 8,
+                                  "textAlign": "left",
                                 },
                               ]
                             }
@@ -1266,6 +1270,7 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                                   "fontFamily": "Rubik-Regular",
                                   "fontSize": 14,
                                   "marginLeft": 8,
+                                  "textAlign": "left",
                                 },
                               ]
                             }
@@ -1406,6 +1411,7 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                                   "fontFamily": "Rubik-Regular",
                                   "fontSize": 14,
                                   "marginLeft": 8,
+                                  "textAlign": "left",
                                 },
                               ]
                             }

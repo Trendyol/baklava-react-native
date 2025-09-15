@@ -12,6 +12,7 @@ exports[`TextLink should render textLink correctly 1`] = `
         "fontSize": 14,
         "fontWeight": "400",
         "lineHeight": 16,
+        "textAlign": "left",
         "textDecorationLine": "underline",
       },
     ]

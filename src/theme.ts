@@ -142,6 +142,7 @@ const theme = createTheme({
       fontSize: 14,
       fontFamily: 'regular',
       color: 'contentPrimary',
+      textAlign: 'left',
     },
     // Heading
     heading1: {

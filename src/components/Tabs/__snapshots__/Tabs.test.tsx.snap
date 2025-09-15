@@ -165,6 +165,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "500",
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -314,6 +315,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "500",
+                          "textAlign": "left",
                         },
                       ]
                     }
@@ -347,6 +349,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
             "color": "#273142",
             "fontFamily": "Rubik-Regular",
             "fontSize": 14,
+            "textAlign": "left",
           },
         ]
       }
