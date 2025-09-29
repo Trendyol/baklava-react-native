@@ -261,4 +261,24 @@ describe('Input', () => {
     // then
     expect(ref.current?.focus).toBeTruthy();
   });
+
+  test('should render input with default fontFamily correctly', () => {
+    // when
+    const { getByTestId } = render(<Input label="label" testID="input" />);
+    const input = getByTestId('input');
+
+    // then
+    expect(input.props.style[0].fontFamily).toBe('Rubik-Regular');
+  });
+
+  test('should render input with custom fontFamily correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Input label="label" testID="input" fontFamily="bold" />,
+    );
+    const input = getByTestId('input');
+
+    // then
+    expect(input.props.style[0].fontFamily).toBe('Rubik-Bold');
+  });
 });
