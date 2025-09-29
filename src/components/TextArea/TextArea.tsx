@@ -24,6 +24,7 @@ import {
   position,
   spacing,
   VariantProps,
+  createRestyleFunction,
 } from '@ergenekonyigit/restyle';
 
 const isRTL = I18nManager.isRTL;
@@ -49,6 +50,7 @@ type TextAreaProps = React.ComponentProps<typeof Box> &
     size?: VariantProps<Theme, 'textAreaSizeVariants'>['variant'];
     maxLength?: number;
     maxLengthErrorText?: string;
+    fontFamily?: keyof Theme['fonts'];
   };
 
 const sizeVariant = createVariant<Theme, 'textAreaSizeVariants', 'size'>({
@@ -56,10 +58,26 @@ const sizeVariant = createVariant<Theme, 'textAreaSizeVariants', 'size'>({
   themeKey: 'textAreaSizeVariants',
 });
 
+const fontFamilyVariant = createRestyleFunction({
+  property: 'fontFamily',
+  themeKey: 'fonts',
+});
+
 const BaseTextArea = createRestyleComponent<
   TextAreaProps & VariantProps<Theme, 'textAreaSizeVariants'>,
   Theme
->([layout, spacing, border, backgroundColor, position, sizeVariant], TextInput);
+>(
+  [
+    layout,
+    spacing,
+    border,
+    backgroundColor,
+    position,
+    sizeVariant,
+    fontFamilyVariant,
+  ],
+  TextInput,
+);
 
 export type TextInputHandles = Pick<
   TextInput,
@@ -83,6 +101,7 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
       testID = 'textArea',
       maxLength = 200,
       maxLengthErrorText = 'You have exceeded the character limit.',
+      fontFamily = 'regular',
       ...rest
     }: TextAreaProps,
     ref,
@@ -242,6 +261,7 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
             testID={testID}
             textAlign={isRTL ? 'right' : 'left'}
             textAlignVertical="top"
+            fontFamily={fontFamily}
           />
         </Box>
 

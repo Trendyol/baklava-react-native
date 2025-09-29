@@ -58,6 +58,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             [
               {
                 "flex": 1,
+                "fontFamily": "Rubik-Regular",
                 "height": 48,
               },
             ]
@@ -4769,6 +4770,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             [
               {
                 "flex": 1,
+                "fontFamily": "Rubik-Regular",
                 "height": 48,
               },
             ]
@@ -9480,6 +9482,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
             [
               {
                 "flex": 1,
+                "fontFamily": "Rubik-Regular",
                 "height": 48,
               },
             ]
@@ -11235,6 +11238,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
             [
               {
                 "flex": 1,
+                "fontFamily": "Rubik-Regular",
                 "height": 48,
               },
             ]
@@ -13207,6 +13211,7 @@ exports[`DatePicker Clear Button should render DatePicker with clear button corr
           [
             {
               "flex": 1,
+              "fontFamily": "Rubik-Regular",
               "height": 48,
             },
           ]
@@ -13528,6 +13533,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             [
               {
                 "flex": 1,
+                "fontFamily": "Rubik-Regular",
                 "height": 48,
               },
             ]
@@ -15283,6 +15289,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             [
               {
                 "flex": 1,
+                "fontFamily": "Rubik-Regular",
                 "height": 48,
               },
             ]
@@ -19994,6 +20001,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             [
               {
                 "flex": 1,
+                "fontFamily": "Rubik-Regular",
                 "height": 48,
               },
             ]
@@ -21749,6 +21757,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             [
               {
                 "flex": 1,
+                "fontFamily": "Rubik-Regular",
                 "height": 48,
               },
             ]

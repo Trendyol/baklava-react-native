@@ -93,6 +93,7 @@ exports[`TextArea should render TextArea correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 88,
             "paddingTop": 12,
           },
@@ -261,6 +262,7 @@ exports[`TextArea should render TextArea with error state and error text correct
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 88,
             "paddingTop": 12,
           },
@@ -458,6 +460,7 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 88,
             "paddingTop": 12,
           },
@@ -626,6 +629,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 88,
             "paddingTop": 12,
           },
@@ -823,6 +827,7 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 104,
             "paddingTop": 16,
           },
@@ -991,6 +996,7 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 88,
             "paddingTop": 12,
           },
@@ -1159,6 +1165,7 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 80,
             "paddingTop": 8,
           },
@@ -1327,6 +1334,7 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 88,
             "paddingTop": 12,
           },
@@ -1482,6 +1490,7 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 88,
             "paddingTop": 12,
           },

@@ -92,6 +92,7 @@ exports[`Input should render disabled input correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
@@ -195,6 +196,7 @@ exports[`Input should render input correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
@@ -298,6 +300,7 @@ exports[`Input should render input with error state and error text correctly 1`]
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
@@ -492,6 +495,7 @@ exports[`Input should render input with error state correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
@@ -658,6 +662,7 @@ exports[`Input should render input with help text correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
@@ -789,6 +794,7 @@ exports[`Input should render input with icon correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
@@ -1013,6 +1019,7 @@ exports[`Input should render input with leadingText correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
@@ -1116,6 +1123,7 @@ exports[`Input should render input with medium size correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 40,
           },
         ]
@@ -1219,6 +1227,7 @@ exports[`Input should render input with small size correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 32,
           },
         ]
@@ -1322,6 +1331,7 @@ exports[`Input should render input with success state and success text correctly
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
@@ -1516,6 +1526,7 @@ exports[`Input should render input with success state correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
@@ -1682,6 +1693,7 @@ exports[`Input should render input with trailingText correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
@@ -1823,6 +1835,7 @@ exports[`Input should render label fixed input correctly 1`] = `
         [
           {
             "flex": 1,
+            "fontFamily": "Rubik-Regular",
             "height": 48,
           },
         ]
