@@ -49,7 +49,7 @@ describe('Badge', () => {
     expect(badgeComponent.props.style[1][0].fontSize).toBe(
       theme.badgeSizeVariants.medium.fontSize,
     );
-    expect(badgeComponent.props.style[0].fontWeight).toBe('500');
+    expect(badgeComponent.props.style[1][0].fontWeight).toBe('500');
     expect(badgeComponent.props.children).toBe('Lorem Ipsum');
   });
 
@@ -68,7 +68,7 @@ describe('Badge', () => {
     expect(badgeComponent.props.style[1][0].fontSize).toBe(
       theme.badgeSizeVariants.medium.fontSize,
     );
-    expect(badgeComponent.props.style[0].fontWeight).toBe('500');
+    expect(badgeComponent.props.style[1][0].fontWeight).toBe('500');
     expect(badgeComponent.props.children).toBe('Lorem Ipsum');
   });
 
@@ -85,7 +85,7 @@ describe('Badge', () => {
     expect(badgeComponent.props.style[1][0].fontSize).toBe(
       theme.badgeSizeVariants.medium.fontSize,
     );
-    expect(badgeComponent.props.style[0].fontWeight).toBe('500');
+    expect(badgeComponent.props.style[1][0].fontWeight).toBe('500');
     expect(badgeComponent.props.children).toBe('Lorem Ipsum');
   });
 
@@ -102,7 +102,7 @@ describe('Badge', () => {
     expect(badgeComponent.props.style[1][0].fontSize).toBe(
       theme.badgeSizeVariants.medium.fontSize,
     );
-    expect(badgeComponent.props.style[0].fontWeight).toBe('500');
+    expect(badgeComponent.props.style[1][0].fontWeight).toBe('500');
     expect(badgeComponent.props.children).toBe('Lorem Ipsum');
   });
 
@@ -119,7 +119,7 @@ describe('Badge', () => {
     expect(badgeComponent.props.style[1][0].fontSize).toBe(
       theme.badgeSizeVariants.medium.fontSize,
     );
-    expect(badgeComponent.props.style[0].fontWeight).toBe('500');
+    expect(badgeComponent.props.style[1][0].fontWeight).toBe('500');
     expect(badgeComponent.props.children).toBe('Lorem Ipsum');
   });
 
@@ -223,7 +223,7 @@ describe('Badge', () => {
     expect(badgeComponent.props.style[1][0].fontSize).toBe(
       theme.badgeSizeVariants.medium.fontSize,
     );
-    expect(badgeComponent.props.style[0].fontWeight).toBe('500');
+    expect(badgeComponent.props.style[1][0].fontWeight).toBe('500');
     expect(badgeComponent.props.children).toBe('Lorem Ipsum');
   });
 
@@ -280,8 +280,22 @@ describe('Badge', () => {
     expect(badgeComponent.props.style[1][0].fontSize).toBe(
       theme.badgeSizeVariants.medium.fontSize,
     );
-    expect(badgeComponent.props.style[0].fontWeight).toBe('500');
+    expect(badgeComponent.props.style[1][0].fontWeight).toBe('500');
     expect(badgeComponent.props.children).toBe('Lorem ipsum dolor sit amet');
+  });
+
+  test('should render fontSize correctly when smallRegular', () => {
+    // when
+    const { toJSON, getByTestId } = render(
+      <Badge variant="warning" text="Lorem Ipsum" size="smallRegular" />,
+    );
+    const badgeText = getByTestId('badgeText');
+
+    // then
+    expect(toJSON()).toMatchSnapshot();
+    expect(badgeText.props.style[1][0].fontSize).toBe(
+      theme.badgeSizeVariants.small.fontSize,
+    );
   });
 
   test('should render fontSize correctly when small', () => {
