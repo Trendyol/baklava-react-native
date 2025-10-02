@@ -118,9 +118,7 @@ const Badge = ({
         <BadgeText
           testID="badgeText"
           color={textColor as ThemeColor}
-          size={size}
-          fontWeight="500"
-          fontFamily="medium">
+          size={size}>
           {text}
         </BadgeText>
       )}
