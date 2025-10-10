@@ -36,6 +36,7 @@ const ButtonMeta: ComponentMeta<typeof Button> = {
     kind: kindList[0] as ButtonKindVariantTypes,
     variant: variantList[0] as ButtonVariantVariantTypes,
     disabled: false,
+    loading: false,
     filled: false,
   },
 };
@@ -57,7 +58,9 @@ export const Basic: ButtonStory = args => (
       filled={args.filled}
       icon="confetti"
       label={
-        args.disabled
+        args.loading
+          ? `loading ${args.kind} ${args.size} button`
+          : args.disabled
           ? `disabled ${args.kind} ${args.size} button`
           : `${args.variant} ${args.kind} ${args.size} button`
       }
@@ -281,6 +284,92 @@ export const DisabledButtons: ButtonStory = () => (
         label="Passive Button"
         m="2xs"
       />
+    </Box>
+  </>
+);
+
+export const LoadingButtons: ButtonStory = () => (
+  <>
+    <Text p="2xs" variant="subtitle01Bold">
+      Loading States
+    </Text>
+    <Box mt="xl">
+      <Text p="2xs" variant="captionMedium">
+        Primary Buttons
+      </Text>
+      <Button loading={true} label="Loading" m="2xs" />
+      <Button loading={true} kind="neutral" label="Loading" m="2xs" />
+      <Button loading={true} kind="success" label="Loading" m="2xs" />
+      <Button loading={true} kind="danger" label="Loading" m="2xs" mb="2xl" />
+      <Text p="2xs" variant="captionMedium">
+        Secondary Buttons
+      </Text>
+      <Button variant="secondary" loading={true} label="Loading" m="2xs" />
+      <Button
+        variant="secondary"
+        loading={true}
+        kind="neutral"
+        label="Loading"
+        m="2xs"
+      />
+      <Button
+        variant="secondary"
+        loading={true}
+        kind="success"
+        label="Loading"
+        m="2xs"
+      />
+      <Button
+        variant="secondary"
+        loading={true}
+        kind="danger"
+        label="Loading"
+        m="2xs"
+        mb="2xl"
+      />
+      <Text p="2xs" variant="captionMedium">
+        Tertiary Buttons
+      </Text>
+      <Button variant="tertiary" loading={true} label="Loading" m="2xs" />
+      <Button
+        variant="tertiary"
+        loading={true}
+        kind="neutral"
+        label="Loading"
+        m="2xs"
+      />
+      <Button
+        variant="tertiary"
+        loading={true}
+        kind="success"
+        label="Loading"
+        m="2xs"
+      />
+      <Button
+        variant="tertiary"
+        loading={true}
+        kind="danger"
+        label="Loading"
+        m="2xs"
+        mb="2xl"
+      />
+      <Text p="2xs" variant="captionMedium">
+        Loading with Icons
+      </Text>
+      <Button loading={true} label="Save" icon="info" m="2xs" />
+      <Button
+        loading={true}
+        kind="success"
+        label="Submit"
+        icon="check"
+        m="2xs"
+      />
+      <Text p="2xs" variant="captionMedium">
+        Different Sizes
+      </Text>
+      <Button size="l" loading={true} label="Large Loading" m="2xs" />
+      <Button size="m" loading={true} label="Medium Loading" m="2xs" />
+      <Button size="s" loading={true} label="Small Loading" m="2xs" />
     </Box>
   </>
 );
