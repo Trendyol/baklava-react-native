@@ -191,4 +191,210 @@ describe('Button', () => {
     // then
     expect(buttonComponent.props.alignSelf).toBe('stretch');
   });
+
+  test('should render loading state correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" label="Loading" loading />,
+    );
+    const buttonComponent = getByTestId('button');
+    const spinner = getByTestId('button-spinner');
+
+    // then
+    expect(spinner).toBeTruthy();
+    expect(buttonComponent.props.accessibilityState.disabled).toBeTruthy();
+  });
+
+  test('should show spinner instead of icon when loading', () => {
+    // when
+    const { getByTestId, queryByTestId } = render(
+      <Button testID="button" label="Loading" icon="check" loading />,
+    );
+    const spinner = getByTestId('button-spinner');
+    const icon = queryByTestId('button-icon');
+
+    // then
+    expect(spinner).toBeTruthy();
+    expect(icon).not.toBeTruthy();
+  });
+
+  test('should not call onPress when loading', () => {
+    // given
+    const onPress = jest.fn();
+
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" label="Loading" loading onPress={onPress} />,
+    );
+    const buttonComponent = getByTestId('button');
+    fireEvent.press(buttonComponent);
+
+    // then
+    expect(onPress).not.toBeCalled();
+  });
+
+  test('should render loading state with spinner for small button', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" size="s" label="Small Loading" loading />,
+    );
+    const spinner = getByTestId('button-spinner');
+
+    // then
+    expect(spinner).toBeTruthy();
+  });
+
+  test('should render loading state with spinner for medium button', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" size="m" label="Medium Loading" loading />,
+    );
+    const spinner = getByTestId('button-spinner');
+
+    // then
+    expect(spinner).toBeTruthy();
+  });
+
+  test('should render loading state with spinner for large button', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" size="l" label="Large Loading" loading />,
+    );
+    const spinner = getByTestId('button-spinner');
+
+    // then
+    expect(spinner).toBeTruthy();
+  });
+
+  test('should render loading state with spinner for primary variant', () => {
+    // when
+    const { getByTestId } = render(
+      <Button
+        testID="button"
+        variant="primary"
+        label="Primary Loading"
+        loading
+      />,
+    );
+    const spinner = getByTestId('button-spinner');
+
+    // then
+    expect(spinner).toBeTruthy();
+  });
+
+  test('should render loading state with spinner for secondary variant', () => {
+    // when
+    const { getByTestId } = render(
+      <Button
+        testID="button"
+        variant="secondary"
+        label="Secondary Loading"
+        loading
+      />,
+    );
+    const spinner = getByTestId('button-spinner');
+
+    // then
+    expect(spinner).toBeTruthy();
+  });
+
+  test('should render loading state with spinner for tertiary variant', () => {
+    // when
+    const { getByTestId } = render(
+      <Button
+        testID="button"
+        variant="tertiary"
+        label="Tertiary Loading"
+        loading
+      />,
+    );
+    const spinner = getByTestId('button-spinner');
+
+    // then
+    expect(spinner).toBeTruthy();
+  });
+
+  test('should render loading state with spinner for transparent variant', () => {
+    // when
+    const { getByTestId } = render(
+      <Button
+        testID="button"
+        variant="transparent"
+        tintColor="#FF0000"
+        label="Transparent Loading"
+        loading
+      />,
+    );
+    const spinner = getByTestId('button-spinner');
+
+    // then
+    expect(spinner).toBeTruthy();
+  });
+
+  test('should render loading state without label', () => {
+    // when
+    const { getByTestId, queryByTestId } = render(
+      <Button testID="button" loading />,
+    );
+    const spinner = getByTestId('button-spinner');
+    const label = queryByTestId('button-text');
+
+    // then
+    expect(spinner).toBeTruthy();
+    expect(label).not.toBeTruthy();
+  });
+
+  test('should maintain label visibility during loading', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" label="Loading Text" loading />,
+    );
+    const spinner = getByTestId('button-spinner');
+    const label = getByTestId('button-text');
+
+    // then
+    expect(spinner).toBeTruthy();
+    expect(label).toBeTruthy();
+    expect(label.props.children).toBe('Loading Text');
+  });
+
+  test('should apply correct margin to label when loading', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" label="Loading Text" loading />,
+    );
+    const label = getByTestId('button-text');
+
+    // then
+    expect(label.props.style[0].marginLeft).toBe(8); // '2xs' spacing
+  });
+
+  test('should prioritize loading over disabled state', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" label="Button" disabled={false} loading />,
+    );
+    const buttonComponent = getByTestId('button');
+
+    // then
+    expect(buttonComponent.props.accessibilityState.disabled).toBeTruthy();
+  });
+
+  test('should render loading with different kinds', () => {
+    // when
+    const { getByTestId: getByTestIdSuccess } = render(
+      <Button testID="button-success" kind="success" label="Success" loading />,
+    );
+    const { getByTestId: getByTestIdDanger } = render(
+      <Button testID="button-danger" kind="danger" label="Danger" loading />,
+    );
+    const { getByTestId: getByTestIdNeutral } = render(
+      <Button testID="button-neutral" kind="neutral" label="Neutral" loading />,
+    );
+
+    // then
+    expect(getByTestIdSuccess('button-spinner')).toBeTruthy();
+    expect(getByTestIdDanger('button-spinner')).toBeTruthy();
+    expect(getByTestIdNeutral('button-spinner')).toBeTruthy();
+  });
 });
