@@ -19,6 +19,7 @@ import { IconNameType } from '../Icon/types';
 import Icon from '../Icon/Icon';
 import { Theme } from '../../theme';
 import Box from '../Box/Box';
+import Spinner from '../Spinner/Spinner';
 import { variantColorSelector } from './utils';
 
 export type ButtonProps = React.ComponentProps<typeof Box> &
@@ -28,6 +29,7 @@ export type ButtonProps = React.ComponentProps<typeof Box> &
     tintColor?: ColorValue;
     icon?: IconNameType | null;
     disabled?: boolean;
+    loading?: boolean;
     isPressed?: boolean;
     filled?: boolean;
     size?: VariantProps<Theme, 'buttonSizeVariants'>['variant'];
@@ -87,10 +89,12 @@ const Button = ({
   label,
   tintColor,
   disabled = false,
+  loading = false,
   filled = false,
   ...rest
 }: ButtonProps) => {
   const { pressableProps, isPressed } = useIsPressed(rest.isPressed);
+  const isDisabled = disabled || loading;
 
   /* istanbul ignore next */
   const onPressIn = () => pressableProps.onPressIn();
@@ -136,16 +140,36 @@ const Button = ({
     variant,
     kind,
     isPressed,
-    disabled,
+    disabled: isDisabled,
   });
 
-  const typeColor = disabled
+  const typeColor = isDisabled
     ? 'neutralLighter'
     : isPressed && variant !== 'tertiary'
     ? 'neutralFull'
     : variantColors.color;
 
+  const spinnerSize = (
+    {
+      s: 'xs',
+      m: 's',
+      l: 's',
+    } as const
+  )[size];
+
   const iconView = React.useMemo(() => {
+    if (loading) {
+      // Loading durumunda disabled renk kullan (button zaten disabled)
+      const spinnerColor =
+        variant === 'transparent' ? tintColor : 'neutralLighter';
+      return (
+        <Spinner
+          size={spinnerSize}
+          color={spinnerColor}
+          testID="button-spinner"
+        />
+      );
+    }
     if (!icon) {
       return null;
     }
@@ -155,7 +179,7 @@ const Button = ({
       );
     }
     return <Icon name={icon} size="s" color={typeColor} testID="button-icon" />;
-  }, [icon, typeColor, tintColor, variant]);
+  }, [icon, loading, tintColor, variant, spinnerSize, typeColor]);
 
   const labelView = React.useMemo(() => {
     if (!label) {
@@ -165,18 +189,18 @@ const Button = ({
       <Text
         variant={textVariant}
         color={typeColor}
-        marginLeft={icon ? '2xs' : 'none'}
+        marginLeft={icon || loading ? '2xs' : 'none'}
         testID="button-text">
         {label}
       </Text>
     );
-  }, [icon, label, textVariant, typeColor]);
+  }, [icon, loading, label, textVariant, typeColor]);
 
   return (
     <PressableContainer
       onPressIn={onPressIn}
       onPressOut={onPressOut}
-      disabled={disabled}
+      disabled={isDisabled}
       {...rest}>
       <ButtonContainer
         size={size}
