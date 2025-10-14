@@ -159,7 +159,7 @@ const Button = ({
 
   const iconView = React.useMemo(() => {
     if (loading) {
-      // Loading durumunda disabled renk kullan (button zaten disabled)
+      // Use disabled color in loading state (button is already disabled)
       const spinnerColor =
         variant === 'transparent' ? tintColor : 'neutralLighter';
       return (
