@@ -1,39 +1,17 @@
-import { Portal } from '@gorhom/portal';
 import React, { PropsWithChildren } from 'react';
-import {
-  Animated,
-  ScrollView,
-  StyleSheet,
-  TouchableOpacity,
-  I18nManager,
-} from 'react-native';
-import theme from '../../theme';
+import { TouchableOpacity } from 'react-native';
 import Box from '../Box/Box';
 import Button, { ButtonProps } from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Text from '../Text/Text';
+import BaseModal, { BaseModalProps, A11yProps } from './BaseModal';
 
-type A11yProps = {
-  testID?: string;
-  accessibilityLabel?: string;
-  accessible?: boolean;
-};
-
-export type ModalProps = A11yProps &
+export type ModalProps = BaseModalProps &
   PropsWithChildren<{
-    visible: boolean;
     title?: string;
-    closable?: boolean;
-    modalKey?: string;
-    closeButtonAction?: () => void;
     actionButtonProps?: ButtonProps;
     secondActionButtonProps?: ButtonProps;
-    duration?: number;
-    justifyContent?: 'flex-start' | 'flex-end' | 'center';
-    wrongPressThresholdMs?: number;
   }>;
-
-const isRTL = I18nManager.isRTL;
 
 const Modal = ({
   visible,
@@ -43,30 +21,13 @@ const Modal = ({
   closeButtonAction,
   actionButtonProps,
   secondActionButtonProps,
-  duration = 200,
   justifyContent = 'center',
-  wrongPressThresholdMs = 1000, // 1 second
   testID,
   accessibilityLabel,
   accessible = true,
   children,
+  ...etc
 }: ModalProps) => {
-  const anim = React.useRef(new Animated.Value(0)).current;
-  const preventWrongPressToClose = React.useRef(Date.now());
-
-  React.useEffect(() => {
-    if (visible) {
-      preventWrongPressToClose.current = Date.now();
-      Animated.timing(anim, {
-        toValue: 0.7,
-        duration,
-        useNativeDriver: true,
-      }).start();
-    } else {
-      anim.setValue(0);
-    }
-  }, [anim, duration, visible]);
-
   const testProps = React.useMemo(() => {
     return {
       accessible: accessible,
@@ -74,13 +35,6 @@ const Modal = ({
       testID: testID ?? accessibilityLabel,
     } as A11yProps;
   }, [testID, accessibilityLabel, accessible]);
-
-  const close = React.useCallback(() => {
-    const threshold = preventWrongPressToClose.current + wrongPressThresholdMs;
-    if (closable && threshold < Date.now()) {
-      closeButtonAction?.();
-    }
-  }, [closable, closeButtonAction, wrongPressThresholdMs]);
 
   const header = React.useMemo(() => {
     if (!title && !closable) {
@@ -100,7 +54,7 @@ const Modal = ({
             variant="subtitle2Medium"
             testID={`${testProps.testID}-title`}
             numberOfLines={2}
-            textAlign={isRTL ? 'left' : 'right'}>
+            textAlign="left">
             {title}
           </Text>
         </Box>
@@ -109,7 +63,7 @@ const Modal = ({
             testID={`${testProps.testID}-close`}
             accessibilityLabel={`${testProps.accessibilityLabel}-close`}
             hitSlop={{ left: 0, bottom: 0, top: 12, right: 12 }}
-            onPress={close}>
+            onPress={closeButtonAction}>
             <Box p="4xs" pl="2xs" pb="2xs">
               <Icon name="close" color="neutralDarker" size="xs" />
             </Box>
@@ -117,7 +71,13 @@ const Modal = ({
         )}
       </Box>
     );
-  }, [closable, close, testProps.accessibilityLabel, testProps.testID, title]);
+  }, [
+    closeButtonAction,
+    closable,
+    testProps.accessibilityLabel,
+    testProps.testID,
+    title,
+  ]);
 
   const actions = React.useMemo(() => {
     if (!actionButtonProps && !secondActionButtonProps) {
@@ -159,63 +119,22 @@ const Modal = ({
     testProps.testID,
   ]);
 
-  if (!visible || !children) {
-    return null;
-  }
-
   return (
-    <Portal name={modalKey ?? 'modal'}>
-      <Box
-        position="absolute"
-        justifyContent={justifyContent}
-        p="l"
-        top={0}
-        bottom={0}
-        left={0}
-        right={0}
-        testID={`${testProps.testID}-wrapper`}
-        accessibilityLabel={`${testProps.accessibilityLabel}-wrapper`}>
-        <Animated.View
-          testID={`${testProps.testID}-overlay`}
-          accessibilityLabel={`${testProps.testID}-overlay`}
-          style={[styles.overlay, { opacity: anim }]}
-          onStartShouldSetResponder={() => true}
-          onResponderRelease={close}
-        />
-        <Box
-          {...testProps}
-          bg="white"
-          p="m"
-          borderRadius="l"
-          style={styles.card}>
-          {header}
-          <ScrollView
-            testID={`${testProps.testID}-body`}
-            accessibilityLabel={`${testProps.accessibilityLabel}-body`}
-            bounces={false}
-            showsVerticalScrollIndicator>
-            {children}
-          </ScrollView>
-          {actions}
-        </Box>
-      </Box>
-    </Portal>
+    <BaseModal
+      {...etc}
+      closeButtonAction={closeButtonAction}
+      header={header}
+      accessible={accessible}
+      accessibilityLabel={accessibilityLabel}
+      testID={testID}
+      actions={actions}
+      modalKey={modalKey}
+      justifyContent={justifyContent}
+      closable={closable}
+      visible={visible}>
+      {children}
+    </BaseModal>
   );
 };
-
-const styles = StyleSheet.create({
-  card: {
-    maxHeight: '90%',
-  },
-  overlay: {
-    position: 'absolute',
-    backgroundColor: theme.colors.neutralDarker,
-    opacity: 0.7,
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-  },
-});
 
 export default Modal;

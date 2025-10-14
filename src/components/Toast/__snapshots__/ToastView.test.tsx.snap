@@ -203,6 +203,7 @@ exports[`ToastView should render toast with action correctly 1`] = `
             "fontWeight": "500",
             "lineHeight": 16,
             "padding": 8,
+            "textAlign": "left",
           },
         ]
       }

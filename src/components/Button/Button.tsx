@@ -24,7 +24,6 @@ import { variantColorSelector } from './utils';
 
 export type ButtonProps = React.ComponentProps<typeof Box> &
   React.ComponentProps<typeof Pressable> & {
-    children?: React.ReactNode;
     onPress?: () => void;
     label?: string;
     tintColor?: ColorValue;

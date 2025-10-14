@@ -22,6 +22,14 @@ describe('Text', () => {
     expect(textComponent.props.children).toBe('Test Text');
   });
 
+  test('should render with default left text alignment', () => {
+    // when
+    const { getByTestId } = render(<Text testID="text">Test Text</Text>);
+    const textComponent = getByTestId('text');
+    // then
+    expect(textComponent.props.style[0].textAlign).toBe('left');
+  });
+
   // Heading
   test('should render heading1 variant correctly', () => {
     // when

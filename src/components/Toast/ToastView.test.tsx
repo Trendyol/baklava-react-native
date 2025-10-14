@@ -419,7 +419,7 @@ describe('ToastView', () => {
       nativeEvent: { layout: { height: 100 } },
     });
 
-    toastContainer?.props.onResponderRelease({}, { dy: 110 });
+    toastContainer?.props.onResponderRelease({}, { dy: 250 });
     jest.advanceTimersByTime(350);
     expect(mockOnDisappared).toBeCalled();
   });

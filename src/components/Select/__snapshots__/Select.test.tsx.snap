@@ -1,0 +1,446 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select should render select correctly 1`] = `
+<View
+  accessible={false}
+  style={
+    [
+      {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    collapsable={false}
+    pointerEvents="none"
+    style={
+      {
+        "bottom": 0,
+        "height": 46,
+        "left": 12,
+        "position": "absolute",
+        "zIndex": 2,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="outlined-label-box"
+      accessible={true}
+      style={
+        [
+          {
+            "flexDirection": "row",
+            "height": 46,
+          },
+        ]
+      }
+      testID="outlined-label-box"
+    >
+      <Text
+        collapsable={false}
+        style={
+          {
+            "backgroundColor": "#FFFFFF",
+            "color": "#95A1B5",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "height": 16,
+            "lineHeight": 16,
+            "paddingLeft": 4,
+            "paddingRight": 4,
+            "top": 9,
+          }
+        }
+      >
+        Select Label
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    testID="select-pressable"
+  >
+    <View
+      accessibilityLabel="select-box"
+      accessible={true}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#AFBBCA",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "height": 40,
+            "paddingHorizontal": 16,
+            "zIndex": 0,
+          },
+        ]
+      }
+      testID="select-box"
+    >
+      <View
+        accessibilityLabel="select-text-container"
+        accessible={true}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            },
+          ]
+        }
+        testID="select-text-container"
+      >
+        <Text
+          accessibilityLabel="select-value"
+          accessible={true}
+          ellipsizeMode="tail"
+          numberOfLines={1}
+          style={
+            [
+              {
+                "color": "#95A1B5",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 14,
+                "fontWeight": "400",
+                "lineHeight": 16,
+                "textAlign": "left",
+              },
+              {
+                "flex": 1,
+              },
+            ]
+          }
+          testID="select-value"
+        >
+          Select item
+        </Text>
+      </View>
+      <View
+        accessible={false}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="select-icon"
+          align="xMidYMid"
+          bbHeight={14}
+          bbWidth={14}
+          fill="#95A1B5"
+          focusable={false}
+          height={14}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          testID="select-icon"
+          title="arrow-down"
+          vbHeight={24}
+          vbWidth={24}
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M3.93 7.36c.67-.67 1.756-.67 2.425 0L12 13.003l5.645-5.645a1.714 1.714 0 0 1 2.425 2.425l-6.858 6.857c-.67.67-1.755.67-2.424 0L3.931 9.784a1.714 1.714 0 0 1 0-2.425Z"
+              fill={
+                {
+                  "payload": 4287996341,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Select should render select with fixed label correctly 1`] = `
+<View
+  accessible={false}
+  style={
+    [
+      {
+        "paddingVertical": 8,
+      },
+    ]
+  }
+>
+  <View
+    accessibilityLabel="fixed-label-box"
+    accessible={true}
+    style={
+      [
+        {
+          "flexDirection": "row",
+          "marginBottom": 4,
+        },
+      ]
+    }
+    testID="fixed-label-box"
+  >
+    <Text
+      accessibilityLabel="fixed-label"
+      accessible={true}
+      style={
+        [
+          {
+            "color": "#6E7787",
+            "fontFamily": "Rubik-Medium",
+            "fontSize": 12,
+            "fontWeight": "500",
+            "lineHeight": 14,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="fixed-label"
+    >
+      Select Label
+    </Text>
+  </View>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    testID="select-pressable"
+  >
+    <View
+      accessibilityLabel="select-box"
+      accessible={true}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderColor": "#AFBBCA",
+            "borderRadius": 6,
+            "borderWidth": 1,
+            "flexDirection": "row",
+            "height": 40,
+            "paddingHorizontal": 16,
+            "zIndex": 0,
+          },
+        ]
+      }
+      testID="select-box"
+    >
+      <View
+        accessibilityLabel="select-text-container"
+        accessible={true}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+            },
+          ]
+        }
+        testID="select-text-container"
+      >
+        <Text
+          accessibilityLabel="select-value"
+          accessible={true}
+          ellipsizeMode="tail"
+          numberOfLines={1}
+          style={
+            [
+              {
+                "color": "#95A1B5",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 14,
+                "fontWeight": "400",
+                "lineHeight": 16,
+                "textAlign": "left",
+              },
+              {
+                "flex": 1,
+              },
+            ]
+          }
+          testID="select-value"
+        >
+          Select item
+        </Text>
+      </View>
+      <View
+        accessible={false}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="select-icon"
+          align="xMidYMid"
+          bbHeight={14}
+          bbWidth={14}
+          fill="#95A1B5"
+          focusable={false}
+          height={14}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 14,
+                "width": 14,
+              },
+            ]
+          }
+          testID="select-icon"
+          title="arrow-down"
+          vbHeight={24}
+          vbWidth={24}
+          width={14}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M3.93 7.36c.67-.67 1.756-.67 2.425 0L12 13.003l5.645-5.645a1.714 1.714 0 0 1 2.425 2.425l-6.858 6.857c-.67.67-1.755.67-2.424 0L3.931 9.784a1.714 1.714 0 0 1 0-2.425Z"
+              fill={
+                {
+                  "payload": 4287996341,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+</View>
+`;

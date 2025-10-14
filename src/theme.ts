@@ -142,6 +142,7 @@ const theme = createTheme({
       fontSize: 14,
       fontFamily: 'regular',
       color: 'contentPrimary',
+      textAlign: 'left',
     },
     // Heading
     heading1: {
@@ -664,6 +665,32 @@ const theme = createTheme({
       backgroundColor: 'primaryBackground',
     },
   },
+  radioButtonVariants: {
+    defaults: {
+      borderWidth: 1,
+      borderRadius: 'full',
+      backgroundColor: 'white',
+      borderColor: 'neutralLighter',
+      height: 16,
+      width: 16,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    unselected: {
+      backgroundColor: 'white',
+      borderColor: 'neutralLighter',
+    },
+    selected: {
+      backgroundColor: 'primaryKey',
+      borderColor: 'primaryKey',
+    },
+    disabledSelected: {
+      backgroundColor: 'neutralLightest',
+    },
+    disabledUnselected: {
+      backgroundColor: 'neutralLightest',
+    },
+  },
   badgeVariants: {
     defaults: {
       backgroundColor: 'primaryContrast',
@@ -703,21 +730,36 @@ const theme = createTheme({
       paddingHorizontal: '3xs',
       paddingVertical: '3xs',
       fontSize: 12,
+      fontWeight: '500',
+      fontFamily: 'medium',
+    },
+    smallRegular: {
+      paddingHorizontal: '3xs',
+      paddingVertical: '4xs',
+      fontSize: 10,
+      fontWeight: '400',
+      fontFamily: 'regular',
     },
     small: {
       paddingHorizontal: '3xs',
       paddingVertical: '4xs',
       fontSize: 10,
+      fontWeight: '500',
+      fontFamily: 'medium',
     },
     medium: {
       paddingHorizontal: '3xs',
       paddingVertical: '3xs',
       fontSize: 12,
+      fontWeight: '500',
+      fontFamily: 'medium',
     },
     large: {
       paddingHorizontal: '2xs',
       paddingVertical: '2xs',
       fontSize: 14,
+      fontWeight: '500',
+      fontFamily: 'medium',
     },
   },
   spinnerSizeVariants: {

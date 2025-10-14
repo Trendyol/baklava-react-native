@@ -2,6 +2,7 @@
 
 exports[`Icon should render icon correctly 1`] = `
 <RNSVGSvgView
+  accessibilityLabel="icon"
   align="xMidYMid"
   bbHeight={24}
   bbWidth={24}

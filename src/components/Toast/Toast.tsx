@@ -28,6 +28,10 @@ const Toast: ToastType = React.memo(
 
     React.useEffect(() => {
       Toast.show = (params: ShowMethodParams) => {
+        if (!params.text) {
+          return false;
+        }
+
         setData({
           id: uuid(16),
           variant: params.variant,

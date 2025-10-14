@@ -101,7 +101,7 @@ export const Overflow: TooltipStory = () => {
 
 export const Overlay: TooltipStory = () => {
   return (
-    <>
+    <Box p="l" backgroundColor="secondaryColor">
       <Box p="m" flexDirection="row" alignItems="center">
         <Tooltip
           id="test1"
@@ -187,7 +187,7 @@ export const Overlay: TooltipStory = () => {
           </Box>
         </Tooltip>
       </Box>
-    </>
+    </Box>
   );
 };
 

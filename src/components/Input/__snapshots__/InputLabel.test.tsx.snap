@@ -25,6 +25,7 @@ exports[`Input Label should render fixed label correctly 1`] = `
           "fontSize": 12,
           "fontWeight": "500",
           "lineHeight": 14,
+          "textAlign": "left",
         },
       ]
     }
@@ -60,6 +61,7 @@ exports[`Input Label should render fixed label with optional correctly 1`] = `
           "fontSize": 12,
           "fontWeight": "500",
           "lineHeight": 14,
+          "textAlign": "left",
         },
       ]
     }

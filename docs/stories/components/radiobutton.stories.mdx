@@ -1,0 +1,77 @@
+import { Meta } from '@storybook/addon-docs';
+import RadioButtonCases from '../assets/radiobutton/radiobuttonCases.png';
+import RadiobuttonWithFlagIcon from '../assets/radiobutton/radiobuttonWithFlagIcon.png';
+
+<Meta
+  title="Components/RadioButton"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# RadioButton
+
+RadioButton allow users to select one item.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={RadioButtonCases} width="250" alt="RadioButtonCases" />
+  <img src={RadiobuttonWithFlagIcon} width="250" alt="RadiobuttonWithFlagIcon" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<RadioButton disable={false} selected={true} label="lorem ipsum" flagIcon="TR" />
+```
+
+<br />
+
+## Props
+
+### selected
+
+Type: `boolean`
+
+Use selected state when the item is selected.
+
+### label
+
+Type: `string`
+
+The label defines a caption for an text.
+
+### flagIcon
+
+Type: `string`
+
+Radio Button flag icon.
+
+### disabled
+
+Type: `boolean`
+
+If true, user won't be able to interact with the component.
+
+#### style
+
+Type: `StyleProp<TouchableOpacityStyle>`
+
+<br />
+RadioButton implements: <>
+  <a href="https://reactnative.dev/docs/touchableopacity#props" title="title">
+    ...TouchableOpacity props
+  </a>
+</>

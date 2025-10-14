@@ -20,7 +20,7 @@
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios --simulator=\"iPhone 16 Pro\"",
+    "ios": "react-native run-ios --simulator=\"iPhone 15 Pro Max\"",
     "start": "react-native start",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -120,6 +120,7 @@
   },
   "jest": {
     "preset": "react-native",
+    "globalSetup": "<rootDir>/jest.setup.js",
     "moduleFileExtensions": [
       "ts",
       "tsx",

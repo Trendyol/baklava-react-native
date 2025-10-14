@@ -227,4 +227,26 @@ describe('TextArea', () => {
     // then
     expect(ref.current?.focus).toBeTruthy();
   });
+
+  test('should render textArea with default fontFamily correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <TextArea label="label" testID="textArea" />,
+    );
+    const textArea = getByTestId('textArea');
+
+    // then
+    expect(textArea.props.style[0].fontFamily).toBe('Rubik-Regular');
+  });
+
+  test('should render textArea with custom fontFamily correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <TextArea label="label" testID="textArea" fontFamily="bold" />,
+    );
+    const textArea = getByTestId('textArea');
+
+    // then
+    expect(textArea.props.style[0].fontFamily).toBe('Rubik-Bold');
+  });
 });

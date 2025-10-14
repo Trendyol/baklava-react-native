@@ -30,6 +30,7 @@ import {
   position,
   spacing,
   VariantProps,
+  createRestyleFunction,
 } from '@ergenekonyigit/restyle';
 import Text from '../Text/Text';
 
@@ -43,7 +44,6 @@ type InputProps = React.ComponentProps<typeof Box> &
     errorText?: string | null;
     successText?: string | null;
     required?: boolean;
-    requiredText?: boolean;
     icon?: IconNameType | null;
     success?: boolean;
     error?: boolean;
@@ -60,6 +60,7 @@ type InputProps = React.ComponentProps<typeof Box> &
     trailingText?: string;
     onChangeText?: (text: string) => void;
     size?: VariantProps<Theme, 'inputSizeVariants'>['variant'];
+    fontFamily?: keyof Theme['fonts'];
   };
 
 const sizeVariant = createVariant<Theme, 'inputSizeVariants', 'size'>({
@@ -67,10 +68,26 @@ const sizeVariant = createVariant<Theme, 'inputSizeVariants', 'size'>({
   themeKey: 'inputSizeVariants',
 });
 
+const fontFamilyVariant = createRestyleFunction({
+  property: 'fontFamily',
+  themeKey: 'fonts',
+});
+
 const BaseInput = createRestyleComponent<
   InputProps & VariantProps<Theme, 'inputSizeVariants'>,
   Theme
->([layout, spacing, border, backgroundColor, position, sizeVariant], TextInput);
+>(
+  [
+    layout,
+    spacing,
+    border,
+    backgroundColor,
+    position,
+    sizeVariant,
+    fontFamilyVariant,
+  ],
+  TextInput,
+);
 
 export type TextInputHandles = Pick<
   TextInput,
@@ -95,13 +112,13 @@ const Input = forwardRef<TextInputHandles, InputProps>(
       error = false,
       secureTextEntry = false,
       required = false,
-      requiredText = false,
       disabled = false,
       editable = true,
       easing = Easing.inOut(Easing.ease),
       testID = 'input',
       leadingText,
       trailingText,
+      fontFamily = 'regular',
       ...rest
     }: InputProps,
     ref,
@@ -244,6 +261,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           animatedViewProps={animatedViewProps}
           animatedTextProps={animatedTextProps}
           inputHeight={inputHeight}
+          required={required}
         />
         <Box
           flexDirection="row"
@@ -285,6 +303,7 @@ const Input = forwardRef<TextInputHandles, InputProps>(
             accessibilityLabel={testID}
             testID={testID}
             textAlign={isRTL ? 'right' : 'left'}
+            fontFamily={fontFamily}
           />
           {trailingText ? (
             <Box ml="m" mr={icon ? 'm' : 'none'}>

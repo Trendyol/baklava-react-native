@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BottomSheet should render BottomSheet when visible false 1`] = `null`;
+
+exports[`BottomSheet should render BottomSheet when visible true 1`] = `
+<View
+  accessibilityLabel="modal-wrapper"
+  accessible={true}
+  style={
+    [
+      {
+        "bottom": 0,
+        "justifyContent": "flex-end",
+        "left": 0,
+        "padding": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+    ]
+  }
+  testID="modal-wrapper"
+>
+  <View
+    accessibilityLabel="modal-overlay"
+    collapsable={false}
+    onResponderRelease={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "backgroundColor": "#273142",
+        "bottom": 0,
+        "left": 0,
+        "opacity": 0,
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+    testID="modal-overlay"
+  />
+  <View
+    accessibilityLabel="modal"
+    accessible={true}
+    style={
+      [
+        {
+          "backgroundColor": "#FFFFFF",
+          "borderBottomEndRadius": 0,
+          "borderBottomStartRadius": 0,
+          "borderRadius": 8,
+          "padding": 16,
+        },
+        {
+          "maxHeight": "90%",
+        },
+      ]
+    }
+    testID="modal"
+  >
+    <View
+      accessible={false}
+      style={
+        [
+          {
+            "flexDirection": "column",
+            "gap": 14,
+            "marginBottom": 16,
+            "width": "100%",
+          },
+        ]
+      }
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "width": "100%",
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="modal-header-close"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+              "width": "25%",
+            }
+          }
+          testID="modal-header-close"
+        >
+          <Text
+            accessible={false}
+            style={
+              [
+                {
+                  "color": "#273142",
+                  "fontFamily": "Rubik-Medium",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "lineHeight": 16,
+                  "textAlign": "left",
+                },
+              ]
+            }
+          >
+            Close
+          </Text>
+        </View>
+        <Text
+          accessibilityLabel="modal-header-label"
+          accessible={true}
+          numberOfLines={1}
+          style={
+            [
+              {
+                "color": "#273142",
+                "fontFamily": "Rubik-Medium",
+                "fontSize": 14,
+                "fontWeight": "500",
+                "lineHeight": 16,
+                "textAlign": "center",
+              },
+              {
+                "width": "50%",
+              },
+            ]
+          }
+          testID="modal-header-label"
+        >
+          Base Title
+        </Text>
+        <View
+          accessibilityLabel="modal-header-select"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={false}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "opacity": 1,
+              "width": "25%",
+            }
+          }
+          testID="modal-header-select"
+        >
+          <Text
+            accessible={false}
+            style={
+              [
+                {
+                  "color": "#F27A1A",
+                  "fontFamily": "Rubik-Medium",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "lineHeight": 16,
+                  "textAlign": "right",
+                },
+              ]
+            }
+          >
+            Select
+          </Text>
+        </View>
+      </View>
+      <View
+        accessible={false}
+        style={
+          [
+            {
+              "backgroundColor": "#D5D9E1",
+              "height": 1,
+              "marginHorizontal": -16,
+            },
+          ]
+        }
+      />
+    </View>
+    <RCTScrollView
+      accessibilityLabel="modal-body"
+      bounces={false}
+      showsVerticalScrollIndicator={true}
+      testID="modal-body"
+    >
+      <View>
+        <Text
+          accessible={false}
+          style={
+            [
+              {
+                "color": "#273142",
+                "fontFamily": "Rubik-Regular",
+                "fontSize": 14,
+                "textAlign": "left",
+              },
+            ]
+          }
+        >
+          Base Content
+        </Text>
+      </View>
+    </RCTScrollView>
+  </View>
+</View>
+`;
