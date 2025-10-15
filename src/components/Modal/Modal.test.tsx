@@ -315,4 +315,36 @@ describe('Modal', () => {
     expect(firstModalWrapper).not.toBeNull();
     expect(secondModalWrapper).not.toBeNull();
   });
+
+  test('should use custom titleNumberOfLines prop', () => {
+    // when
+    const { getByTestId } = render(
+      <Modal
+        testID="modal"
+        visible={true}
+        title="Very long title that should be truncated based on numberOfLines prop"
+        titleLineNumber={1}>
+        <Text testID="lorem-text">Lorem ipsum dolor</Text>
+      </Modal>,
+    );
+
+    const title = getByTestId('modal-title');
+
+    // then
+    expect(title.props.numberOfLines).toBe(1);
+  });
+
+  test('should use default titleNumberOfLines when not provided', () => {
+    // when
+    const { getByTestId } = render(
+      <Modal testID="modal" visible={true} title="test title">
+        <Text testID="lorem-text">Lorem ipsum dolor</Text>
+      </Modal>,
+    );
+
+    const title = getByTestId('modal-title');
+
+    // then
+    expect(title.props.numberOfLines).toBe(2);
+  });
 });

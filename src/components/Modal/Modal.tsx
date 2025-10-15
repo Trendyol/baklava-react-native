@@ -9,6 +9,7 @@ import BaseModal, { BaseModalProps, A11yProps } from './BaseModal';
 export type ModalProps = BaseModalProps &
   PropsWithChildren<{
     title?: string;
+    titleLineNumber?: number;
     actionButtonProps?: ButtonProps;
     secondActionButtonProps?: ButtonProps;
   }>;
@@ -26,6 +27,7 @@ const Modal = ({
   accessibilityLabel,
   accessible = true,
   children,
+  titleLineNumber = 2,
   ...etc
 }: ModalProps) => {
   const testProps = React.useMemo(() => {
@@ -53,7 +55,7 @@ const Modal = ({
           <Text
             variant="subtitle2Medium"
             testID={`${testProps.testID}-title`}
-            numberOfLines={2}
+            numberOfLines={titleLineNumber}
             textAlign="left">
             {title}
           </Text>
@@ -77,6 +79,7 @@ const Modal = ({
     testProps.accessibilityLabel,
     testProps.testID,
     title,
+    titleLineNumber,
   ]);
 
   const actions = React.useMemo(() => {
