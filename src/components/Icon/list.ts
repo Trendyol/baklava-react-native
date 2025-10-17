@@ -42,6 +42,7 @@ export const iconList = [
   'credit-card',
   'delete',
   'dialog',
+  'disable',
   'dislike',
   'document-search',
   'document',

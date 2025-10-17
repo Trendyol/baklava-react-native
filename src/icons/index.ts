@@ -87,6 +87,7 @@ export { default as CZ } from './CZ';
 export { default as DE } from './DE';
 export { default as Delete } from './Delete';
 export { default as Dialog } from './Dialog';
+export { default as Disable } from './Disable';
 export { default as Dislike } from './Dislike';
 export { default as DJ } from './DJ';
 export { default as DK } from './DK';
