@@ -10,6 +10,8 @@ import BottomSheet, { BottomSheetProps } from '../BottomSheet/BottomSheet';
 import Checkbox from '../Checkbox/Checkbox';
 import RadioButton from '../RadioButton/RadioButton';
 import { FlagIconNameType } from '../FlagIcon/types';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import theme from '../../theme';
 
 interface Option {
   id: string;
@@ -25,6 +27,7 @@ interface SelectBottomSheetProps extends BottomSheetProps {
   selectedOption?: string[];
   maxVisibleItems?: number;
   pb?: BoxProps['pb'];
+  applyBottomInset?: boolean;
   accessibilityLabel?: string;
   testID?: string;
 }
@@ -38,8 +41,10 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
   pb,
   accessibilityLabel,
   testID,
+  applyBottomInset = false,
   ...bottomSheetProps
 }) => {
+  const insets = useSafeAreaInsets();
   const [selectedValues, setSelectedValues] = React.useState<string[]>(
     selectedOption ?? [],
   );
@@ -108,9 +113,29 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
     );
   };
 
+  const paddingProps = React.useMemo(() => {
+    if (applyBottomInset && pb) {
+      return {
+        style: {
+          paddingBottom: insets.bottom + theme.spacing[pb],
+        },
+      };
+    } else if (applyBottomInset) {
+      return {
+        style: {
+          paddingBottom: insets.bottom,
+        },
+      };
+    }
+
+    return {
+      pb: pb,
+    };
+  }, [applyBottomInset, pb, insets.bottom]);
+
   return (
     <BottomSheet {...bottomSheetProps} {...testProps}>
-      <Box pb={pb}>
+      <Box {...paddingProps}>
         <ScrollView
           testID={'selectBottomSheet'}
           contentContainerStyle={styles.flatListContainer}
