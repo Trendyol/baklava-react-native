@@ -19515,7 +19515,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                     style={
                       [
                         {
-                          "color": "#6E7787",
+                          "color": "#F27A1A",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
