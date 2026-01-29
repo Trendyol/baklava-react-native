@@ -296,7 +296,9 @@ describe('DatePicker', () => {
       // but the selected date should NOT be the disabled date
       expect(onChange).toHaveBeenCalledTimes(1);
       const calledDate = onChange.mock.calls[0][0];
-      expect(calledDate).not.toBe('2025-01-20');
+      expect(calledDate).not.toBe(
+        `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-05`,
+      );
     });
   });
 
@@ -1221,11 +1223,11 @@ describe('DatePicker', () => {
           {...defaultProps}
           disableMonths={disableMonths}
           onChange={onChange}
-          value={initialValue}
+          value="2025-02-15"
         />,
       );
 
-      // when - open month picker and click on disabled month
+      // when
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-month-select'));
       fireEvent.press(getByTestId('datepicker-month-1')); // January month (disabled)
