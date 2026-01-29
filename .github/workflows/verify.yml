@@ -21,7 +21,9 @@ jobs:
       - name: Run tests
         run: npm run test
       - name: Create coverage artifact
+        if: hashFiles('coverage/**') != ''
         uses: actions/upload-artifact@v4
         with:
           name: coverage-output
           path: coverage/
+          if-no-files-found: ignore
