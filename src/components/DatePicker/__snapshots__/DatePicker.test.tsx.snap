@@ -19515,7 +19515,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                     style={
                       [
                         {
-                          "color": "#F27A1A",
+                          "color": "#6E7787",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
@@ -19616,7 +19616,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                     style={
                       [
                         {
-                          "color": "#6E7787",
+                          "color": "#F27A1A",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
@@ -25983,7 +25983,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                     style={
                       [
                         {
-                          "color": "#F27A1A",
+                          "color": "#6E7787",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
@@ -26084,7 +26084,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                     style={
                       [
                         {
-                          "color": "#6E7787",
+                          "color": "#F27A1A",
                           "fontFamily": "Rubik-Regular",
                           "fontSize": 14,
                           "fontWeight": "400",
