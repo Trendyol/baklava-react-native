@@ -2,9 +2,6 @@ name: Release
 
 on:
   workflow_call:
-    secrets:
-      TRENDYOL_JS_NPM_TOKEN:
-        required: true
 
 jobs:
   release:
@@ -30,5 +27,4 @@ jobs:
       - name: Publish
         run: npx semantic-release
         env:
-          NPM_TOKEN: ${{ secrets.TRENDYOL_JS_NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
