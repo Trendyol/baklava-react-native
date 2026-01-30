@@ -259,7 +259,7 @@ describe('DatePicker', () => {
       }
     });
 
-    test('should not trigger onSelectDate when disabled date is pressed', () => {
+    test('should not select disabled date when pressed', () => {
       // given
       const onChange = jest.fn();
       const currentYear = new Date().getFullYear();
@@ -267,7 +267,7 @@ describe('DatePicker', () => {
       const disableDates = [
         `${currentYear}-${String(currentMonth + 1).padStart(2, '0')}-05`,
       ];
-      const { getByTestId, getAllByTestId } = render(
+      const { getByTestId } = render(
         <DatePicker
           {...defaultProps}
           disableDates={disableDates}
@@ -277,11 +277,6 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-touchable'));
 
       // when
-      const validDateButtons = getAllByTestId(/datepicker-datepicker-day-/);
-      if (validDateButtons.length > 0) {
-        fireEvent.press(validDateButtons[0]);
-      }
-
       const timestamp = getTimestamp(currentYear, currentMonth, 5);
       const disabledButton = getByTestId(
         `datepicker-datepicker-day-${timestamp}`,
@@ -291,6 +286,8 @@ describe('DatePicker', () => {
       fireEvent.press(getByTestId('datepicker-header-select'));
 
       // then
+      // onChange should still be called (with current date as fallback)
+      // but the selected date should NOT be the disabled date
       expect(onChange).toHaveBeenCalledTimes(1);
       const calledDate = onChange.mock.calls[0][0];
       expect(calledDate).not.toBe(
@@ -1211,11 +1208,11 @@ describe('DatePicker', () => {
       expect(getByTestId('datepicker-wrapper')).toBeTruthy();
     });
 
-    test('should NOT call onSelect when disabled month is pressed', () => {
+    test('should NOT call onChange when disabled month is pressed', () => {
       // given
       const onChange = jest.fn();
-      const disableMonths = [202501];
-      const { getByTestId, queryByText } = render(
+      const disableMonths = [202501]; // January 2025 disabled
+      const { getByTestId } = render(
         <DatePicker
           {...defaultProps}
           disableMonths={disableMonths}
@@ -1227,15 +1224,11 @@ describe('DatePicker', () => {
       // when
       fireEvent.press(getByTestId('datepicker-touchable'));
       fireEvent.press(getByTestId('datepicker-header-month-select'));
-      fireEvent.press(getByTestId('datepicker-month-1'));
+      fireEvent.press(getByTestId('datepicker-month-1')); // January month (disabled)
 
       // then
-      expect(getByTestId('datepicker-wrapper')).toBeTruthy();
-      expect(queryByText('January')).toBeTruthy();
-      expect(queryByText('February')).toBeTruthy();
-
-      const headerMonth = getByTestId('datepicker-header-month-select');
-      expect(headerMonth).toBeTruthy();
+      expect(onChange).not.toHaveBeenCalled(); // onChange should not be called
+      expect(getByTestId('datepicker-wrapper')).toBeTruthy(); // Modal should still be open
     });
   });
 

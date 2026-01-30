@@ -11,6 +11,8 @@ jobs:
     uses: ./.github/workflows/verify.yml
     secrets: inherit
   publish:
+    # Only publish docs from main branch
+    if: github.ref == 'refs/heads/main'
     uses: ./.github/workflows/publish-docs.yml
     needs: verify
     secrets: inherit
