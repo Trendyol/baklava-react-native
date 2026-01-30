@@ -281,7 +281,10 @@ describe('DatePicker', () => {
       const disabledButton = getByTestId(
         `datepicker-datepicker-day-${timestamp}`,
       );
-      fireEvent.press(disabledButton);
+
+      if (disabledButton) {
+        fireEvent.press(disabledButton);
+      }
 
       fireEvent.press(getByTestId('datepicker-header-select'));
 
