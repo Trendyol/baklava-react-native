@@ -223,6 +223,7 @@ export { default as MealBag } from './MealBag';
 export { default as MealOrderBack } from './MealOrderBack';
 export { default as MealOrderCancel } from './MealOrderCancel';
 export { default as MealOrderReturn } from './MealOrderReturn';
+export { default as Medal } from './Medal';
 export { default as Menu } from './Menu';
 export { default as Message } from './Message';
 export { default as MetricStatusDown } from './MetricStatusDown';
