@@ -206,6 +206,7 @@ export const IconAndBadge: TabsStory = () => {
   const [value1, setValue1] = useState('tab1');
   const [value2, setValue2] = useState('tab1');
   const [value3, setValue3] = useState('tab1');
+  const [value4, setValue4] = useState('tab1');
 
   return (
     <>
@@ -285,6 +286,36 @@ export const IconAndBadge: TabsStory = () => {
               badgeText="Lorem"
             />
             <Tabs.Option value="tab3" title="Tab Title" />
+          </Tabs.List>
+          <Tabs.Content value="tab1">
+            <Box mt="s">
+              <Text>Tab 1 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab2">
+            <Box mt="s">
+              <Text>Tab 2 Content</Text>
+            </Box>
+          </Tabs.Content>
+          <Tabs.Content value="tab3">
+            <Box mt="s">
+              <Text>Tab 3 Content</Text>
+            </Box>
+          </Tabs.Content>
+        </Tabs>
+      </Box>
+
+      <Box px="m" py="2xs" mt="5xl">
+        <Tabs value={value4} onValueChange={setValue4} defaultValue="tab1">
+          <Tabs.List>
+            <Tabs.Option value="tab1" title="Tab Title" caption="Caption" />
+            <Tabs.Option
+              value="tab2"
+              title="Tab Title"
+              caption="Caption"
+              redDot
+            />
+            <Tabs.Option value="tab3" title="Tab Title" redDot />
           </Tabs.List>
           <Tabs.Content value="tab1">
             <Box mt="s">

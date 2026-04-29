@@ -93,6 +93,7 @@ type OptionProps = {
   disabled?: boolean;
   iconName?: IconNameType;
   badgeText?: string;
+  redDot?: boolean;
 };
 
 const Option = ({
@@ -102,6 +103,7 @@ const Option = ({
   disabled = false,
   iconName = undefined,
   badgeText = undefined,
+  redDot = false,
 }: OptionProps) => {
   const context = useContext(TabsContext);
   if (!context) {
@@ -171,6 +173,17 @@ const Option = ({
                 size="small"
                 transparent
                 color="neutralFull"
+                backgroundColor="dangerKey"
+              />
+            </Box>
+          ) : null}
+          {redDot ? (
+            <Box testID="tabDotBox" pl="3xs">
+              <Box
+                testID="tabDot"
+                width={8}
+                height={8}
+                borderRadius="full"
                 backgroundColor="dangerKey"
               />
             </Box>

@@ -307,6 +307,83 @@ describe('Tabs', () => {
     consoleErrorSpy.mockRestore();
   });
 
+  test('should render dot when redDot is true', () => {
+    // given
+    const { getByTestId } = render(
+      <Tabs value="tab1" onValueChange={jest.fn()}>
+        <Tabs.List>
+          <Tabs.Option value="tab1" title="Tab 1" redDot />
+        </Tabs.List>
+      </Tabs>,
+    );
+
+    // then
+    expect(getByTestId('tabDotBox')).toBeTruthy();
+    expect(getByTestId('tabDot')).toBeTruthy();
+  });
+
+  test('should not render dot when redDot is false', () => {
+    // given
+    const { queryByTestId } = render(
+      <Tabs value="tab1" onValueChange={jest.fn()}>
+        <Tabs.List>
+          <Tabs.Option value="tab1" title="Tab 1" redDot={false} />
+        </Tabs.List>
+      </Tabs>,
+    );
+
+    // then
+    expect(queryByTestId('tabDotBox')).toBeNull();
+    expect(queryByTestId('tabDot')).toBeNull();
+  });
+
+  test('should not render dot when redDot is not provided', () => {
+    // given
+    const { queryByTestId } = render(
+      <Tabs value="tab1" onValueChange={jest.fn()}>
+        <Tabs.List>
+          <Tabs.Option value="tab1" title="Tab 1" />
+        </Tabs.List>
+      </Tabs>,
+    );
+
+    // then
+    expect(queryByTestId('tabDotBox')).toBeNull();
+    expect(queryByTestId('tabDot')).toBeNull();
+  });
+
+  test('should render dot with dangerKey background color', () => {
+    // given
+    const { getByTestId } = render(
+      <Tabs value="tab1" onValueChange={jest.fn()}>
+        <Tabs.List>
+          <Tabs.Option value="tab1" title="Tab 1" redDot />
+        </Tabs.List>
+      </Tabs>,
+    );
+
+    // when
+    const dot = getByTestId('tabDot');
+
+    // then
+    expect(dot.props.style[0].backgroundColor).toEqual(theme.colors.dangerKey);
+  });
+
+  test('should render both badgeText and dot when both are provided', () => {
+    // given
+    const { getByTestId } = render(
+      <Tabs value="tab1" onValueChange={jest.fn()}>
+        <Tabs.List>
+          <Tabs.Option value="tab1" title="Tab 1" badgeText="New" redDot />
+        </Tabs.List>
+      </Tabs>,
+    );
+
+    // then
+    expect(getByTestId('tabBadgeBox')).toBeTruthy();
+    expect(getByTestId('tabDotBox')).toBeTruthy();
+  });
+
   test('provider', () => {});
 });
 
