@@ -39,6 +39,7 @@ Tabs are used to organize related content. They allow the user to navigate betwe
     <Tabs.Option value="tab1" title="Tab Title" caption="Caption" />
     <Tabs.Option value="tab2" title="Tab Title" caption="Caption" iconName="confetti" />
     <Tabs.Option value="tab3" title="Tab Title" badgeText="New" />
+    <Tabs.Option value="tab4" title="Tab Title" redDot />
   </Tabs.List>
   <Tabs.Content value="tab1">
     <Text>Tab 1 Content</Text>
@@ -48,6 +49,9 @@ Tabs are used to organize related content. They allow the user to navigate betwe
   </Tabs.Content>
   <Tabs.Content value="tab3">
     <Text>Tab 3 Content</Text>
+  </Tabs.Content>
+  <Tabs.Content value="tab4">
+    <Text>Tab 4 Content</Text>
   </Tabs.Content>
 </Tabs>
 ```
@@ -89,6 +93,12 @@ Tab's icon
 Type: `string`
 
 Tab's badge text
+
+#### redDot
+
+Type: `boolean`
+
+Shows a small red dot indicator next to the tab title
 
 #### style
 
