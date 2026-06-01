@@ -41,10 +41,12 @@ Switch component can be used to toggle On or Off states of any single item.
 
 ```jsx
 <Switch
-    disabled={true}
-    checked={false}
-    customization={{colorOn: '#0BC15C', colorOff: '#FF5043'}}
-    onChange={(value) => {console.log(value)}}
+    label="Notifications"
+    value={false}
+    onValueChange={(value) => {console.log(value)}}
+    disabled={false}
+    onColor="#0BC15C"
+    offColor="#FF5043"
 />
 ```
 
@@ -52,42 +54,67 @@ Switch component can be used to toggle On or Off states of any single item.
 
 ## Props
 
-### onChange
+#### onValueChange
 
-Type: `() => void`
+Type: `(value: boolean) => void`
 
-Callback fired when the switch is checked
+Callback fired when the switch value changes. Receives the new boolean value as a parameter.
 
-### label
+#### label
 
 Type: `string`
 
-Optional label for the switch
+Optional label displayed next to the switch.
 
-### disabled
-
-Type: `boolean`
-
-Optional prop to make the component disabled
-
-### checked
+#### value
 
 Type: `boolean`
 
-Optional prop to make the component checked by default
+Optional prop to set the initial state of the switch (on/off).
+
+#### disabled
+
+Type: `boolean`
+
+Optional prop to make the component disabled. When disabled, opacity is reduced to 0.5.
 
 #### onColor
 
 Type: `string`
 
-The on color of the Switch. 
-Default value is `primaryKey`. 
+The background color of the switch when it is in the "on" state.
+Default value is `primaryKey`.
 It can be <a href="https://reactnative.dev/docs/colors#named-colors" title="title">ColorValue</a>.
 
 #### offColor
 
 Type: `string`
 
-The off color of the Switch. 
-Default value is `neutralLighter`. 
+The background color of the switch when it is in the "off" state.
+Default value is `neutralLighter`.
 It can be <a href="https://reactnative.dev/docs/colors#named-colors" title="title">ColorValue</a>.
+
+#### containerStyle
+
+Type: `StyleProp<ViewStyle>`
+
+Optional style prop applied to the outer container of the switch.
+
+#### testID
+
+Type: `string`
+
+Optional test identifier for the component.
+
+#### accessibilityLabel
+
+Type: `string`
+
+Optional accessibility label for screen readers.
+
+<br />
+Switch implements: <>
+  <a href="https://reactnative.dev/docs/switch#props" title="title">
+    ...Switch props
+  </a>
+</>
