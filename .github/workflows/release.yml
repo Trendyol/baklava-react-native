@@ -1,31 +1,35 @@
 name: Release
 
 on:
-  workflow_call:
+  push:
+    branches:
+      - main
+      - next
+      - 1.0.x
+
+# Required for npm Trusted Publishing (OIDC) + semantic-release/github
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  id-token: write
 
 jobs:
+  verify:
+    uses: ./.github/workflows/verify.yml
+    secrets: inherit
+  publish-docs:
+    # Only publish docs from main branch
+    if: github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/publish-docs.yml
+    needs: verify
+    secrets: inherit
   release:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Set Node env
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Install dependencies
-        run: npm ci
-      - name: Run build
-        run: npm run build
-      - name: Create build artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-output
-          path: lib/
-      - name: Publish
-        run: npx semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    uses: ./.github/workflows/publish-package.yml
+    needs: verify
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+    secrets: inherit

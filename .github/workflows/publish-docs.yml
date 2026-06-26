@@ -27,9 +27,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Set Node env
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24.10.0
           cache: 'npm'
       - name: Install dependencies
         run: npm ci

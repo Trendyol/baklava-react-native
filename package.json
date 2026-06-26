@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Trendyol/baklava-react-native.git"
+    "url": "git+https://github.com/Trendyol/baklava-react-native.git"
   },
   "license": "MIT",
   "scripts": {
@@ -32,6 +32,7 @@
     "lint:prettier": "prettier --check src/",
     "format": "eslint -c .eslintrc.js --fix && prettier --write .",
     "commit": "commit",
+    "release": "semantic-release",
     "storybook": "start-storybook -c docs/.storybook -p 6006",
     "build-storybook-docs": "build-storybook -c docs/.storybook --docs",
     "build": "bob build",
@@ -105,6 +106,7 @@
     "react-native-safe-area-context": "^5.1.0",
     "react-native-svg": "^15.11.1",
     "react-test-renderer": "^18.2.0",
+    "semantic-release": "^25.0.5",
     "typescript": "5.0.4"
   },
   "peerDependencies": {
@@ -114,9 +116,6 @@
   },
   "resolutions": {
     "@types/react": "^17"
-  },
-  "engines": {
-    "node": ">=18"
   },
   "jest": {
     "preset": "react-native",
