@@ -20,6 +20,15 @@ const getTimestamp = (year: number, month: number, day: number) => {
 };
 
 describe('DatePicker', () => {
+  beforeAll(() => {
+    jest.useFakeTimers();
+    jest.setSystemTime(new Date(2026, 5, 15)); // June 15, 2026
+  });
+
+  afterAll(() => {
+    jest.useRealTimers();
+  });
+
   beforeEach(() => {
     jest.clearAllMocks();
   });
