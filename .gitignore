@@ -83,5 +83,6 @@ lib/
 storybook-static/
 example/package-lock.json
 
-
-
+# Husky local hooks
+.husky/post-commit
+.husky/post-rewrite
