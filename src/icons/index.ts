@@ -349,6 +349,7 @@ export { default as StarFill } from './StarFill';
 export { default as Stop } from './Stop';
 export { default as StopFill } from './StopFill';
 export { default as Store } from './Store';
+export { default as NewStore } from './NewStore';
 export { default as StorePerformance } from './StorePerformance';
 export { default as Suitcase } from './Suitcase';
 export { default as Support } from './Support';
