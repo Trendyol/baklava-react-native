@@ -123,6 +123,7 @@ export const iconList = [
   'motorcycle-check',
   'motorcycle',
   'my-offers',
+  'new-store',
   'normal',
   'notification',
   'order-back',
