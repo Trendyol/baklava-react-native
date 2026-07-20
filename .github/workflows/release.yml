@@ -7,12 +7,13 @@ on:
       - next
       - 1.0.x
 
-# Required for npm Trusted Publishing (OIDC) + semantic-release/github
+# Required for npm Trusted Publishing (OIDC) + semantic-release/github + GitHub Pages
 permissions:
   contents: write
   issues: write
   pull-requests: write
   id-token: write
+  pages: write
 
 jobs:
   verify:
@@ -23,6 +24,10 @@ jobs:
     if: github.ref == 'refs/heads/main'
     uses: ./.github/workflows/publish-docs.yml
     needs: verify
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     secrets: inherit
   release:
     uses: ./.github/workflows/publish-package.yml
