@@ -99,7 +99,7 @@ describe('ToastView', () => {
     expect(actionText).toBeTruthy();
   });
 
-  test('should render the default toast with color #FEF2E8', () => {
+  test('should render the default toast with color #EEF4FF', () => {
     // given
     const data: ToastData = {
       variant: 'default',
@@ -120,7 +120,8 @@ describe('ToastView', () => {
     const toastContainer = getByTestId('toast-container');
     // then
     expect(toastContainer).toHaveStyle({
-      backgroundColor: '#FEF2E8',
+      backgroundColor: '#EEF4FF',
+      borderColor: '#5794FF',
     });
   });
 

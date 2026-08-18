@@ -20,8 +20,8 @@ exports[`ToastView should render toast correctly 1`] = `
   style={
     {
       "alignItems": "center",
-      "backgroundColor": "#FEF2E8",
-      "borderColor": "#F27A1A",
+      "backgroundColor": "#EEF4FF",
+      "borderColor": "#5794FF",
       "borderRadius": 6,
       "borderWidth": 1,
       "elevation": 5,
@@ -99,8 +99,8 @@ exports[`ToastView should render toast with action correctly 1`] = `
   style={
     {
       "alignItems": "center",
-      "backgroundColor": "#FEF2E8",
-      "borderColor": "#F27A1A",
+      "backgroundColor": "#EEF4FF",
+      "borderColor": "#5794FF",
       "borderRadius": 6,
       "borderWidth": 1,
       "elevation": 5,
