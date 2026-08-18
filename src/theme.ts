@@ -603,14 +603,13 @@ const theme = createTheme({
     defaults: {
       borderWidth: 1,
       borderRadius: 'm',
-      backgroundColor: 'accentBackground',
-      borderColor: 'primaryColor',
+      backgroundColor: 'infoBackground',
+      borderColor: 'infoKey',
       flexDirection: 'row',
       minHeight: 40,
       paddingHorizontal: 'xs',
       paddingVertical: '2xs',
       alignItems: 'center',
-
       shadowColor: 'black',
       shadowOffset: {
         width: 0,
@@ -618,12 +617,11 @@ const theme = createTheme({
       },
       shadowOpacity: 0.25,
       shadowRadius: 10,
-
       elevation: 5,
     },
     default: {
-      backgroundColor: 'accentBackground',
-      borderColor: 'primaryColor',
+      backgroundColor: 'infoBackground',
+      borderColor: 'infoKey',
     },
     success: {
       backgroundColor: 'successBackground',
