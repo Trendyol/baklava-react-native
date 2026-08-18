@@ -579,12 +579,12 @@ const theme = createTheme({
     defaults: {
       borderWidth: 1,
       borderRadius: 'l',
-      backgroundColor: 'accentBackground',
-      borderColor: 'primaryColor',
+      backgroundColor: 'infoContrast',
+      borderColor: 'infoKey',
     },
     info: {
-      backgroundColor: 'accentBackground',
-      borderColor: 'primaryColor',
+      backgroundColor: 'infoContrast',
+      borderColor: 'infoKey',
     },
     warning: {
       backgroundColor: 'warningBackground',

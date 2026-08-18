@@ -6,7 +6,7 @@ exports[`AlertIcon should render alert icon correctly 1`] = `
   align="xMidYMid"
   bbHeight={16}
   bbWidth={16}
-  fill="#F27A1A"
+  fill="#5794FF"
   focusable={false}
   height={16}
   meetOrSlice={0}
@@ -35,7 +35,7 @@ exports[`AlertIcon should render alert icon correctly 1`] = `
   <RNSVGGroup
     fill={
       {
-        "payload": 4294081050,
+        "payload": 4283929855,
         "type": 0,
       }
     }
@@ -50,7 +50,7 @@ exports[`AlertIcon should render alert icon correctly 1`] = `
       d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0Zm-1.5 11.5a1.5 1.5 0 0 1 3 0v5a1.5 1.5 0 0 1-3 0v-5ZM12 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
       fill={
         {
-          "payload": 4294081050,
+          "payload": 4283929855,
           "type": 0,
         }
       }

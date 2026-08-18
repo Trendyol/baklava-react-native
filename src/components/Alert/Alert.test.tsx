@@ -51,6 +51,7 @@ describe('Alert', () => {
       <Alert testID="alert" description="description">
         <Button
           label="Button"
+          kind="neutral"
           testID="alert-child-button"
           onPress={mockOnPress}
         />

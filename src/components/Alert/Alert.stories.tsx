@@ -43,8 +43,8 @@ export const Basic: AlertStory = args => {
       </Text>
       <Box px="m" py="2xs">
         <Alert {...state} onClose={() => setState({ ...state, closed: true })}>
-          <Button label="Button" />
-          <Button label="Button" variant="secondary" ml="2xs" />
+          <Button label="Button" kind="neutral" />
+          <Button label="Button" variant="secondary" kind="neutral" ml="2xs" />
         </Alert>
       </Box>
     </>
@@ -61,8 +61,8 @@ export const Variants: AlertStory = () => (
         caption="Informational Caption"
         description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt tellus, tellus non facilisis. Est at ante amet eget ut blandit."
         closable={false}>
-        <Button label="Button" />
-        <Button label="Button" variant="secondary" ml="2xs" />
+        <Button label="Button" kind="neutral" />
+        <Button label="Button" variant="secondary" kind="neutral" ml="2xs" />
       </Alert>
     </Box>
     <Box px="m" py="2xs">
@@ -72,7 +72,7 @@ export const Variants: AlertStory = () => (
         variant="warning"
         closable={true}
         icon={false}>
-        <Button label="Button" />
+        <Button label="Button" kind="neutral" />
       </Alert>
     </Box>
     <Box px="m" py="2xs">
@@ -82,7 +82,7 @@ export const Variants: AlertStory = () => (
         variant="success"
         closable={false}
         icon={false}>
-        <Button label="Button" variant="secondary" />
+        <Button label="Button" variant="secondary" kind="success" />
       </Alert>
     </Box>
     <Box px="m" py="2xs">
