@@ -45,6 +45,8 @@ export const parameters: Parameters = {
   layout: 'fullscreen',
   options: {
     storySort: {
+      // Required for the nested arrays below to sort stories inside a component.
+      includeNames: true,
       order: [
         'Alert',
         'Badge',
@@ -59,6 +61,15 @@ export const parameters: Parameters = {
         'Image',
         'Input',
         'Modal',
+        'ProgressIndicator',
+        [
+          'Basic',
+          'Variants',
+          'Sizes',
+          'Icon And Label',
+          'Helper Text',
+          'Cases',
+        ],
         'RadioButton',
         'Select',
         'SelectBottomSheet',

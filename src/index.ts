@@ -12,6 +12,7 @@ export { default as Icon } from './components/Icon/Icon';
 export { default as Image } from './components/Image/Image';
 export { default as Input } from './components/Input/Input';
 export { default as Modal } from './components/Modal/Modal';
+export { default as ProgressIndicator } from './components/ProgressIndicator/ProgressIndicator';
 export { default as RadioButton } from './components/RadioButton/RadioButton';
 export { default as Select } from './components/Select/Select';
 export { default as SelectBottomSheet } from './components/SelectBottomSheet/SelectBottomSheet';

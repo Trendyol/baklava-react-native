@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProgressIndicator should render ProgressIndicator correctly 1`] = `
+<View
+  accessibilityLabel="progressIndicator"
+  accessible={true}
+  style={
+    [
+      {},
+    ]
+  }
+  testID="progressIndicator"
+>
+  <View
+    accessibilityLabel="progressIndicator-header"
+    accessible={true}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginBottom": 4,
+        },
+      ]
+    }
+    testID="progressIndicator-header"
+  >
+    <View
+      accessible={false}
+      style={
+        [
+          {
+            "flex": 1,
+            "marginLeft": 0,
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityLabel="progressIndicator-label"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 16,
+              "fontWeight": "500",
+              "lineHeight": 20,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="progressIndicator-label"
+      >
+        Label
+      </Text>
+    </View>
+    <Text
+      accessibilityLabel="progressIndicator-percentage"
+      accessible={true}
+      style={
+        [
+          {
+            "color": "#6E7787",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 16,
+            "fontWeight": "400",
+            "lineHeight": 20,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="progressIndicator-percentage"
+    >
+      %
+      0
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      hitSlop={8}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      testID="progressIndicator-closeButton"
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {
+              "marginLeft": 12,
+            },
+          ]
+        }
+      >
+        <RNSVGSvgView
+          accessibilityLabel="icon"
+          align="xMidYMid"
+          bbHeight={16}
+          bbWidth={16}
+          fill="#273142"
+          focusable={false}
+          height={16}
+          meetOrSlice={0}
+          minX={0}
+          minY={0}
+          style={
+            [
+              {
+                "backgroundColor": "transparent",
+                "borderWidth": 0,
+              },
+              {
+                "flex": 0,
+                "height": 16,
+                "width": 16,
+              },
+            ]
+          }
+          testID="icon"
+          title="close"
+          vbHeight={24}
+          vbWidth={24}
+          width={16}
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <RNSVGGroup
+            fill={
+              {
+                "payload": 4280758594,
+                "type": 0,
+              }
+            }
+            propList={
+              [
+                "fill",
+              ]
+            }
+          >
+            <RNSVGPath
+              clipRule={0}
+              d="M.54.54a1.846 1.846 0 0 1 2.612 0L12 9.39 20.848.54a1.846 1.846 0 0 1 2.611 2.612L14.611 12l8.848 8.848a1.846 1.846 0 0 1-2.61 2.611L12 14.611l-8.848 8.848A1.846 1.846 0 0 1 .54 20.85L9.389 12 .541 3.152A1.846 1.846 0 0 1 .54.54Z"
+              fill={
+                {
+                  "payload": 4280758594,
+                  "type": 0,
+                }
+              }
+              fillRule={0}
+              propList={
+                [
+                  "fill",
+                  "fillRule",
+                ]
+              }
+            />
+          </RNSVGGroup>
+        </RNSVGSvgView>
+      </View>
+    </View>
+  </View>
+  <View
+    style={
+      {
+        "backgroundColor": "#F1F2F7",
+        "borderRadius": 4,
+        "height": 8,
+        "overflow": "hidden",
+      }
+    }
+    testID="progressIndicator-barBackground"
+  >
+    <View
+      style={
+        {
+          "backgroundColor": "#F27A1A",
+          "borderRadius": 4,
+          "height": "100%",
+          "width": "0%",
+        }
+      }
+      testID="progressIndicator-barFill"
+    />
+  </View>
+</View>
+`;
