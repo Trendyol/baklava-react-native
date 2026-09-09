@@ -2,6 +2,8 @@ export { ThemeProvider } from '@ergenekonyigit/restyle';
 export { default as theme } from './theme';
 
 export { default as Alert } from './components/Alert/Alert';
+export { default as Accordion } from './components/Accordion/Accordion';
+export { default as AccordionGroup } from './components/Accordion/AccordionGroup';
 export { default as Badge } from './components/Badge/Badge';
 export { default as BottomSheet } from './components/BottomSheet/BottomSheet';
 export { default as Box } from './components/Box/Box';

@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion should render closed accordion correctly 1`] = `
+<View
+  accessibilityLabel="accordion"
+  accessible={true}
+  style={
+    [
+      {
+        "backgroundColor": "#FFFFFF",
+        "borderBottomWidth": 1,
+        "borderColor": "#AFBBCA",
+        "borderLeftWidth": 1,
+        "borderRadius": 8,
+        "borderRightWidth": 1,
+        "borderTopWidth": 1,
+      },
+    ]
+  }
+  testID="accordion"
+>
+  <View
+    accessibilityLabel="accordion-header"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": false,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#AFBBCA",
+          "borderBottomWidth": 0,
+          "flexDirection": "row",
+          "gap": 8,
+          "padding": 16,
+        },
+      ]
+    }
+    testID="accordion-header"
+  >
+    <RNSVGSvgView
+      accessibilityLabel="accordion-header-icon"
+      align="xMidYMid"
+      bbHeight={16}
+      bbWidth={16}
+      fill="#273142"
+      focusable={false}
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      testID="accordion-header-icon"
+      title="info"
+      vbHeight={24}
+      vbWidth={24}
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          {
+            "payload": 4280758594,
+            "type": 0,
+          }
+        }
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0Zm-1.5 11.5a1.5 1.5 0 0 1 3 0v5a1.5 1.5 0 0 1-3 0v-5ZM12 6a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"
+          fill={
+            {
+              "payload": 4280758594,
+              "type": 0,
+            }
+          }
+          fillRule={0}
+          propList={
+            [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+    <View
+      accessible={false}
+      style={
+        [
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityLabel="accordion-title"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="accordion-title"
+      >
+        Accordion Title
+      </Text>
+    </View>
+    <RNSVGSvgView
+      accessibilityLabel="accordion-chevron"
+      align="xMidYMid"
+      bbHeight={16}
+      bbWidth={16}
+      fill="#273142"
+      focusable={false}
+      height={16}
+      meetOrSlice={0}
+      minX={0}
+      minY={0}
+      style={
+        [
+          {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          },
+          {
+            "flex": 0,
+            "height": 16,
+            "width": 16,
+          },
+        ]
+      }
+      testID="accordion-chevron"
+      title="arrow-down"
+      vbHeight={24}
+      vbWidth={24}
+      width={16}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <RNSVGGroup
+        fill={
+          {
+            "payload": 4280758594,
+            "type": 0,
+          }
+        }
+        propList={
+          [
+            "fill",
+          ]
+        }
+      >
+        <RNSVGPath
+          clipRule={0}
+          d="M3.93 7.36c.67-.67 1.756-.67 2.425 0L12 13.003l5.645-5.645a1.714 1.714 0 0 1 2.425 2.425l-6.858 6.857c-.67.67-1.755.67-2.424 0L3.931 9.784a1.714 1.714 0 0 1 0-2.425Z"
+          fill={
+            {
+              "payload": 4280758594,
+              "type": 0,
+            }
+          }
+          fillRule={0}
+          propList={
+            [
+              "fill",
+              "fillRule",
+            ]
+          }
+        />
+      </RNSVGGroup>
+    </RNSVGSvgView>
+  </View>
+</View>
+`;

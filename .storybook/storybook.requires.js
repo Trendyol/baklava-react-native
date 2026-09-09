@@ -25,6 +25,7 @@ if (parameters) {
 
 const getStories = () => {
   return [
+    require('../src/components/Accordion/Accordion.stories.tsx'),
     require('../src/components/Alert/Alert.stories.tsx'),
     require('../src/components/Badge/Badge.stories.tsx'),
     require('../src/components/BottomSheet/BottomSheet.stories.tsx'),
