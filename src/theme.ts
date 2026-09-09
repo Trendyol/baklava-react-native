@@ -781,6 +781,30 @@ const theme = createTheme({
       height: 104,
     },
   },
+  progressIndicatorVariants: {
+    inProgress: {
+      barColor: 'primaryKey',
+      helperTextColor: 'neutralDark',
+    },
+    success: {
+      barColor: 'successKey',
+      helperTextColor: 'successKey',
+    },
+    fail: {
+      barColor: 'dangerKey',
+      helperTextColor: 'dangerKey',
+    },
+  },
+  progressIndicatorSizeVariants: {
+    small: {
+      barHeight: 4,
+      barBorderRadius: 2,
+    },
+    medium: {
+      barHeight: 8,
+      barBorderRadius: 4,
+    },
+  },
 });
 
 export type Theme = typeof theme;

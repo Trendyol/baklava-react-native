@@ -1,0 +1,125 @@
+import { Meta } from '@storybook/addon-docs';
+import ProgressIndicatorVariants from '../assets/progressindicator/ProgressIndicatorVariants.png';
+import ProgressIndicatorSizes from '../assets/progressindicator/ProgressIndicatorSizes.png';
+import ProgressIndicatorIconAndLabel from '../assets/progressindicator/ProgressIndicatorIconAndLabel.png';
+import ProgressIndicatorHelperText from '../assets/progressindicator/ProgressIndicatorHelperText.png';
+import ProgressIndicatorCases from '../assets/progressindicator/ProgressIndicatorCases.png';
+
+<Meta
+  title="Components/ProgressIndicator"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# ProgressIndicator
+
+A progress indicator provides feedback about the duration and progression of a process to indicate how long a user will be waiting.
+
+Progress indicator component used for a long operation or a process that can take a considerable or unknown amount of time. It visually shows the progression of a system operation such as downloading, uploading, loading data, submitting a form, or saving updates.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'nowrap',
+    justifyContent: 'center',
+  }}>
+  <img src={ProgressIndicatorVariants} width="20%" alt="ProgressIndicatorVariants" />
+  <img src={ProgressIndicatorSizes} width="20%" alt="ProgressIndicatorSizes" />
+  <img src={ProgressIndicatorIconAndLabel} width="20%" alt="ProgressIndicatorIconAndLabel" />
+  <img src={ProgressIndicatorHelperText} width="20%" alt="ProgressIndicatorHelperText" />
+  <img src={ProgressIndicatorCases} width="20%" alt="ProgressIndicatorCases" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<ProgressIndicator
+  variant="inProgress"
+  size="medium"
+  label="Label"
+  progress={16}
+  helperText="Optional helper text"
+  onClose={() => {}}
+/>
+```
+
+The component is controlled. The `progress` value comes from the parent, so the bar and the percentage text are updated whenever the parent passes a new value.
+
+```jsx
+const [progress, setProgress] = useState(0);
+
+<ProgressIndicator variant="inProgress" label="file.pdf" progress={progress} />
+```
+
+<br />
+
+## Props
+
+#### variant
+
+Type: `string`
+
+There are three types of progress indicator components: in progress, success and fail status displays.
+
+`inProgress`,
+`success`,
+`fail`
+
+#### size
+
+Type: `string`
+
+We have 2 sizes of progress indicator: small and medium.
+Default value is `medium`.
+
+`small`,
+`medium`
+
+#### label
+
+Type: `string`
+
+Optional. Icons and labels may be used to provide additional clarity when needed or hidden to maintain a cleaner, more minimal layout.
+
+#### progress
+
+Type: `number`
+
+The completion percentage of the process. Accepts a value between `0` and `100`, values outside this range are clamped. Default value is `0`.
+
+It is only used by the `inProgress` variant, the `success` and `fail` variants always render a full bar.
+
+#### showPercentage
+
+Type: `boolean`
+
+Shows the percentage text next to the label. It is only displayed on the `inProgress` variant. Default value is `true`.
+
+#### showIcon
+
+Type: `boolean`
+
+Optional. Icons and labels may be used to provide additional clarity when needed or hidden to maintain a cleaner, more minimal layout.
+
+check-fill is used for the `success` variant and alert is used for the `fail` variant. Default value is `true`. The icon is not shown on the `inProgress` variant.
+
+#### helperText
+
+Type: `string`
+
+Optional helper text displayed under the progress bar. Its color follows the variant, neutralDark for `inProgress`, successKey for `success` and dangerKey for `fail`.
+
+#### onClose
+
+Type: `() => void`
+
+Callback fired when the close button is pressed.

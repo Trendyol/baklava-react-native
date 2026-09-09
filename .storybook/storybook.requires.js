@@ -48,6 +48,7 @@ const getStories = () => {
     require('../src/components/Tooltip/Tooltip.stories.tsx'),
     require('../src/components/Spinner/Spinner.stories.tsx'),
     require('../src/components/Modal/Modal.stories.tsx'),
+    require('../src/components/ProgressIndicator/ProgressIndicator.stories.tsx'),
   ];
 };
 configure(getStories, module, false);
