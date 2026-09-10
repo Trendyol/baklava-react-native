@@ -1,6 +1,7 @@
 export { ThemeProvider } from '@ergenekonyigit/restyle';
 export { default as theme } from './theme';
 
+export { default as ActionBar } from './components/ActionBar/ActionBar';
 export { default as Alert } from './components/Alert/Alert';
 export { default as Accordion } from './components/Accordion/Accordion';
 export { default as AccordionGroup } from './components/Accordion/AccordionGroup';

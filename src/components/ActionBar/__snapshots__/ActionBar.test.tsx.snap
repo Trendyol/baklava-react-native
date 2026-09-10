@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ActionBar should render ActionBar correctly 1`] = `
+<View
+  accessibilityLabel="actionBar"
+  accessible={true}
+  style={
+    [
+      {
+        "backgroundColor": "#FFFFFF",
+        "borderTopLeftRadius": 8,
+        "borderTopRightRadius": 8,
+        "gap": 16,
+        "paddingHorizontal": 16,
+        "paddingTop": 16,
+        "shadowColor": "#273142",
+        "shadowOffset": {
+          "height": -4,
+          "width": 0,
+        },
+        "shadowOpacity": 0.15,
+        "shadowRadius": 7.5,
+      },
+      [
+        {
+          "bottom": 0,
+          "elevation": 5,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        {
+          "paddingBottom": 34,
+        },
+      ],
+    ]
+  }
+  testID="actionBar"
+>
+  <Text
+    accessible={false}
+    style={
+      [
+        {
+          "color": "#273142",
+          "fontFamily": "Rubik-Regular",
+          "fontSize": 14,
+          "textAlign": "left",
+        },
+      ]
+    }
+  >
+    Primary Button
+  </Text>
+</View>
+`;
