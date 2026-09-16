@@ -26,7 +26,9 @@ export const decorators = [
       <TooltipProvider>
         <PortalProvider>
           <SafeAreaProvider>
-            <ScrollView style={{ backgroundColor: theme.colors.neutralFull }}>
+            <ScrollView
+              keyboardShouldPersistTaps="handled"
+              style={{ backgroundColor: theme.colors.neutralFull }}>
               <Story />
             </ScrollView>
             <Toast ignoreKeyboard extraPaddingBottom={16} />
@@ -81,6 +83,7 @@ export const parameters: Parameters = {
           'Cases',
         ],
         'RadioButton',
+        'SearchInput',
         'Select',
         'SelectBottomSheet',
         'Spinner',
