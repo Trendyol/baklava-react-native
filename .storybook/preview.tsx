@@ -87,6 +87,8 @@ export const parameters: Parameters = {
         'Select',
         'SelectBottomSheet',
         'Spinner',
+        'Stepper',
+        ['Basic', 'States', 'BarHeights', 'StepCounts'],
         'Switch',
         'Tabs',
         'Text',

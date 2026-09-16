@@ -16,6 +16,7 @@ export { default as Image } from './components/Image/Image';
 export { default as Input } from './components/Input/Input';
 export { default as Modal } from './components/Modal/Modal';
 export { default as ProgressIndicator } from './components/ProgressIndicator/ProgressIndicator';
+export { default as Stepper } from './components/Stepper/Stepper';
 export { default as RadioButton } from './components/RadioButton/RadioButton';
 export { default as SearchInput } from './components/SearchInput/SearchInput';
 export { default as Select } from './components/Select/Select';
@@ -38,6 +39,10 @@ export {
 export { ToastDurations } from './components/Toast/types';
 export type { SearchInputProps } from './components/SearchInput/SearchInput';
 export type { TooltipRef } from './components/Tooltip/types';
+export type {
+  StepperProps,
+  StepperStepState,
+} from './components/Stepper/types';
 
 // 3rd party
 export { Portal, PortalHost, PortalProvider, usePortal } from '@gorhom/portal';
