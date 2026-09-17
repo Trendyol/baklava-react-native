@@ -30,6 +30,7 @@ export { default as TextLink } from './components/TextLink/TextLink';
 export { default as Toast } from './components/Toast/Toast';
 export { default as Tooltip } from './components/Tooltip/Tooltip';
 export { default as DatePicker } from './components/DatePicker/DatePicker';
+export { default as Upload } from './components/Upload/Upload';
 export {
   TooltipProvider,
   useTooltipContext,
@@ -43,6 +44,7 @@ export type {
   StepperProps,
   StepperStepState,
 } from './components/Stepper/types';
+export type { UploadFile, UploadFileStatus } from './components/Upload/types';
 
 // 3rd party
 export { Portal, PortalHost, PortalProvider, usePortal } from '@gorhom/portal';

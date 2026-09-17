@@ -53,6 +53,7 @@ const getStories = () => {
     require('../src/components/Stepper/Stepper.stories.tsx'),
     require('../src/components/Modal/Modal.stories.tsx'),
     require('../src/components/ProgressIndicator/ProgressIndicator.stories.tsx'),
+    require('../src/components/Upload/Upload.stories.tsx'),
   ];
 };
 configure(getStories, module, false);
