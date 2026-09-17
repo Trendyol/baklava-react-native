@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Stepper should render Stepper correctly 1`] = `
+<View
+  accessibilityLabel="stepper"
+  accessible={true}
+  style={
+    [
+      {
+        "gap": 8,
+      },
+    ]
+  }
+  testID="stepper"
+>
+  <View
+    accessibilityLabel="stepper-header"
+    accessible={true}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "gap": 4,
+        },
+      ]
+    }
+    testID="stepper-header"
+  >
+    <Text
+      accessibilityLabel="stepper-stepLabelPrefix"
+      accessible={true}
+      style={
+        [
+          {
+            "color": "#273142",
+            "fontFamily": "Rubik-Medium",
+            "fontSize": 16,
+            "fontWeight": "500",
+            "lineHeight": 20,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="stepper-stepLabelPrefix"
+    >
+      Step
+    </Text>
+    <View
+      accessible={false}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "flexDirection": "row",
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityLabel="stepper-stepLabel"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 16,
+              "fontWeight": "500",
+              "lineHeight": 20,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="stepper-stepLabel"
+      >
+        2
+      </Text>
+      <Text
+        accessibilityLabel="stepper-stepCount"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#95A1B5",
+              "fontFamily": "Rubik-Regular",
+              "fontSize": 16,
+              "fontWeight": "400",
+              "lineHeight": 20,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="stepper-stepCount"
+      >
+        /4:
+      </Text>
+    </View>
+    <View
+      accessible={false}
+      style={
+        [
+          {
+            "flex": 1,
+          },
+        ]
+      }
+    >
+      <Text
+        accessibilityLabel="stepper-stepTitle"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 16,
+              "fontWeight": "500",
+              "lineHeight": 20,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="stepper-stepTitle"
+      >
+        Contact Information
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="stepper-bars"
+    accessible={true}
+    style={
+      [
+        {
+          "flexDirection": "row",
+          "gap": 4,
+        },
+      ]
+    }
+    testID="stepper-bars"
+  >
+    <View
+      accessibilityLabel="stepper-bar-0"
+      accessible={true}
+      style={
+        [
+          {
+            "backgroundColor": "#0BC15C",
+            "borderRadius": 2,
+            "flex": 1,
+            "height": 6,
+          },
+        ]
+      }
+      testID="stepper-bar-0"
+    />
+    <View
+      accessibilityLabel="stepper-bar-1"
+      accessible={true}
+      style={
+        [
+          {
+            "backgroundColor": "#F27A1A",
+            "borderRadius": 2,
+            "flex": 1,
+            "height": 6,
+          },
+        ]
+      }
+      testID="stepper-bar-1"
+    />
+    <View
+      accessibilityLabel="stepper-bar-2"
+      accessible={true}
+      style={
+        [
+          {
+            "backgroundColor": "#F1F2F7",
+            "borderRadius": 2,
+            "flex": 1,
+            "height": 6,
+          },
+        ]
+      }
+      testID="stepper-bar-2"
+    />
+    <View
+      accessibilityLabel="stepper-bar-3"
+      accessible={true}
+      style={
+        [
+          {
+            "backgroundColor": "#F1F2F7",
+            "borderRadius": 2,
+            "flex": 1,
+            "height": 6,
+          },
+        ]
+      }
+      testID="stepper-bar-3"
+    />
+  </View>
+  <View
+    accessibilityLabel="stepper-nextStep"
+    accessible={true}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "gap": 4,
+          "justifyContent": "flex-end",
+        },
+      ]
+    }
+    testID="stepper-nextStep"
+  >
+    <Text
+      accessibilityLabel="stepper-nextStepLabel"
+      accessible={true}
+      style={
+        [
+          {
+            "color": "#6E7787",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "fontWeight": "400",
+            "lineHeight": 16,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="stepper-nextStepLabel"
+    >
+      Next:
+    </Text>
+    <Text
+      accessibilityLabel="stepper-nextStepTitle"
+      accessible={true}
+      style={
+        [
+          {
+            "color": "#6E7787",
+            "fontFamily": "Rubik-Regular",
+            "fontSize": 14,
+            "fontWeight": "400",
+            "lineHeight": 16,
+            "textAlign": "left",
+          },
+        ]
+      }
+      testID="stepper-nextStepTitle"
+    >
+      Payment Information
+    </Text>
+  </View>
+</View>
+`;

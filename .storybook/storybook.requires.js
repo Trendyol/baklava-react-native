@@ -50,6 +50,7 @@ const getStories = () => {
     require('../src/components/Toast/Toast.stories.tsx'),
     require('../src/components/Tooltip/Tooltip.stories.tsx'),
     require('../src/components/Spinner/Spinner.stories.tsx'),
+    require('../src/components/Stepper/Stepper.stories.tsx'),
     require('../src/components/Modal/Modal.stories.tsx'),
     require('../src/components/ProgressIndicator/ProgressIndicator.stories.tsx'),
   ];

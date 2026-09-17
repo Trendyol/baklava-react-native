@@ -805,6 +805,20 @@ const theme = createTheme({
       barBorderRadius: 4,
     },
   },
+  stepperVariants: {
+    default: {
+      barColor: 'neutralLightest',
+    },
+    active: {
+      barColor: 'primaryKey',
+    },
+    success: {
+      barColor: 'successKey',
+    },
+    error: {
+      barColor: 'dangerKey',
+    },
+  },
 });
 
 export type Theme = typeof theme;
