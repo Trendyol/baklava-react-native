@@ -4,6 +4,7 @@ import Text from '../Text/Text';
 import theme, { Theme } from '../../theme';
 import { StepperProps, StepperStepState } from './types';
 import { clampStep, getStepState } from './utils';
+import { I18nManager } from 'react-native';
 
 const Stepper = ({
   currentStep,
@@ -50,7 +51,7 @@ const Stepper = ({
             testID={`${testID}-stepCount`}
             variant="subtitle2Regular"
             color="neutralLight">
-            {`/${totalSteps}:`}
+            {I18nManager.isRTL ? `:${totalSteps}/` : `/${totalSteps}:`}
           </Text>
         </Box>
         <Box flex={1}>
@@ -91,7 +92,7 @@ const Stepper = ({
             testID={`${testID}-nextStepLabel`}
             variant="subtitle3Regular"
             color="neutralDark">
-            {`${nextStepLabelPrefix}:`}
+            {I18nManager.isRTL ? `:${nextStepLabelPrefix}` : `${nextStepLabelPrefix}:`}
           </Text>
           <Text
             testID={`${testID}-nextStepTitle`}

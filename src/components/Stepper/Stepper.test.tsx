@@ -1,9 +1,20 @@
 import React from 'react';
+import { I18nManager } from 'react-native';
 import theme from '../../theme';
 import { render } from '../../test-utils';
 import Stepper from './Stepper';
 
+const setIsRTL = (isRTL: boolean) => {
+  Object.defineProperty(I18nManager, 'isRTL', {
+    configurable: true,
+    value: isRTL,
+  });
+};
+
 describe('Stepper', () => {
+  afterEach(() => {
+    setIsRTL(false);
+  });
   test('should render Stepper correctly', () => {
     const { toJSON } = render(
       <Stepper
@@ -296,5 +307,68 @@ describe('Stepper', () => {
     );
 
     expect(getByTestId('stepper-bar-0').props.style[0].height).toBe(10);
+  });
+
+  describe('RTL', () => {
+    beforeEach(() => {
+      setIsRTL(true);
+    });
+
+    test('should render step count with RTL colon placement', () => {
+      const { getByTestId } = render(
+        <Stepper
+          currentStep={2}
+          totalSteps={4}
+          stepTitle="Contact Information"
+        />,
+      );
+
+      expect(getByTestId('stepper-stepCount').props.children).toBe(':4/');
+    });
+
+    test('should render next step label with RTL colon placement', () => {
+      const { getByTestId } = render(
+        <Stepper
+          currentStep={2}
+          totalSteps={4}
+          stepTitle="Contact Information"
+          nextStepTitle="Payment Information"
+        />,
+      );
+
+      expect(getByTestId('stepper-nextStepLabel').props.children).toBe(':Next');
+      expect(getByTestId('stepper-nextStepTitle').props.children).toBe(
+        'Payment Information',
+      );
+    });
+
+    test('should render custom next step label prefix in RTL', () => {
+      const { getByTestId } = render(
+        <Stepper
+          currentStep={2}
+          totalSteps={4}
+          stepTitle="İletişim Bilgileri"
+          nextStepTitle="Ödeme Bilgileri"
+          nextStepLabelPrefix="Sonraki"
+        />,
+      );
+
+      expect(getByTestId('stepper-nextStepLabel').props.children).toBe(
+        ':Sonraki',
+      );
+    });
+
+    test('should render Stepper correctly in RTL', () => {
+      const { toJSON } = render(
+        <Stepper
+          currentStep={2}
+          totalSteps={4}
+          stepTitle="Contact Information"
+          nextStepTitle="Payment Information"
+        />,
+      );
+
+      expect(toJSON()).toMatchSnapshot();
+    });
   });
 });
