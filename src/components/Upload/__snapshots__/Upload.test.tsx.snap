@@ -1,0 +1,1374 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Upload should render Upload correctly 1`] = `
+<View
+  accessibilityLabel="upload"
+  accessible={true}
+  style={
+    [
+      {},
+    ]
+  }
+  testID="upload"
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {},
+      ]
+    }
+    testID="upload-selectButton"
+  >
+    <View
+      accessible={false}
+      color="primaryKey"
+      style={
+        [
+          {},
+          [
+            {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "transparent",
+              "borderColor": "#F27A1A",
+              "borderRadius": 6,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "height": 40,
+              "justifyContent": "center",
+              "paddingHorizontal": 24,
+            },
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        accessibilityLabel="button-icon"
+        align="xMidYMid"
+        bbHeight={16}
+        bbWidth={16}
+        fill="#F27A1A"
+        focusable={false}
+        height={16}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+        testID="button-icon"
+        title="upload"
+        vbHeight={24}
+        vbWidth={24}
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4294081050,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M1.5 13A1.5 1.5 0 0 1 3 14.5v5A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-5a1.5 1.5 0 0 1 3 0v5a4.5 4.5 0 0 1-4.5 4.5h-15A4.5 4.5 0 0 1 0 19.5v-5A1.5 1.5 0 0 1 1.5 13Z"
+            fill={
+              {
+                "payload": 4294081050,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+          <RNSVGPath
+            clipRule={0}
+            d="M12 16a1.5 1.5 0 0 0 1.5-1.5V2a1.5 1.5 0 0 0-3 0v12.5A1.5 1.5 0 0 0 12 16Z"
+            fill={
+              {
+                "payload": 4294081050,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+          <RNSVGPath
+            clipRule={0}
+            d="M17.56 7.06a1.5 1.5 0 0 0 0-2.12l-4.5-4.5a1.5 1.5 0 0 0-2.12 0l-4.5 4.5a1.5 1.5 0 0 0 2.12 2.12L12 3.622l3.44 3.44a1.5 1.5 0 0 0 2.12 0Z"
+            fill={
+              {
+                "payload": 4294081050,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+      <Text
+        accessibilityLabel="button-text"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#F27A1A",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "marginLeft": 8,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="button-text"
+      >
+        Dosya Seç
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Upload should render error file correctly 1`] = `
+<View
+  accessibilityLabel="upload"
+  accessible={true}
+  style={
+    [
+      {},
+    ]
+  }
+  testID="upload"
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {},
+      ]
+    }
+    testID="upload-selectButton"
+  >
+    <View
+      accessible={false}
+      color="primaryKey"
+      style={
+        [
+          {},
+          [
+            {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "transparent",
+              "borderColor": "#F27A1A",
+              "borderRadius": 6,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "height": 40,
+              "justifyContent": "center",
+              "paddingHorizontal": 24,
+            },
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        accessibilityLabel="button-icon"
+        align="xMidYMid"
+        bbHeight={16}
+        bbWidth={16}
+        fill="#F27A1A"
+        focusable={false}
+        height={16}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+        testID="button-icon"
+        title="upload"
+        vbHeight={24}
+        vbWidth={24}
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4294081050,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M1.5 13A1.5 1.5 0 0 1 3 14.5v5A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-5a1.5 1.5 0 0 1 3 0v5a4.5 4.5 0 0 1-4.5 4.5h-15A4.5 4.5 0 0 1 0 19.5v-5A1.5 1.5 0 0 1 1.5 13Z"
+            fill={
+              {
+                "payload": 4294081050,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+          <RNSVGPath
+            clipRule={0}
+            d="M12 16a1.5 1.5 0 0 0 1.5-1.5V2a1.5 1.5 0 0 0-3 0v12.5A1.5 1.5 0 0 0 12 16Z"
+            fill={
+              {
+                "payload": 4294081050,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+          <RNSVGPath
+            clipRule={0}
+            d="M17.56 7.06a1.5 1.5 0 0 0 0-2.12l-4.5-4.5a1.5 1.5 0 0 0-2.12 0l-4.5 4.5a1.5 1.5 0 0 0 2.12 2.12L12 3.622l3.44 3.44a1.5 1.5 0 0 0 2.12 0Z"
+            fill={
+              {
+                "payload": 4294081050,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+      <Text
+        accessibilityLabel="button-text"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#F27A1A",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "marginLeft": 8,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="button-text"
+      >
+        Dosya Seç
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="upload-fileList"
+    accessible={true}
+    style={
+      [
+        {
+          "marginTop": 12,
+        },
+      ]
+    }
+    testID="upload-fileList"
+  >
+    <View
+      accessibilityLabel="upload-item-1"
+      accessible={true}
+      style={
+        [
+          {
+            "paddingVertical": 12,
+          },
+        ]
+      }
+      testID="upload-item-1"
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="upload-item-1-leadingIcon"
+          accessible={true}
+          style={
+            [
+              {
+                "marginRight": 8,
+              },
+            ]
+          }
+          testID="upload-item-1-leadingIcon"
+        >
+          <RNSVGSvgView
+            accessibilityLabel="icon"
+            align="xMidYMid"
+            bbHeight={16}
+            bbWidth={16}
+            fill="#FF5043"
+            focusable={false}
+            height={16}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              [
+                {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                {
+                  "flex": 0,
+                  "height": 16,
+                  "width": 16,
+                },
+              ]
+            }
+            testID="icon"
+            title="alert"
+            vbHeight={24}
+            vbWidth={24}
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4294922307,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                clipRule={0}
+                d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0Zm-1.53 7.067A1 1 0 0 1 11.468 6h1.065a1 1 0 0 1 .997 1.067l-.4 6a1 1 0 0 1-.998.933h-.264a1 1 0 0 1-.998-.933l-.4-6ZM12 18a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+                fill={
+                  {
+                    "payload": 4294922307,
+                    "type": 0,
+                  }
+                }
+                fillRule={0}
+                propList={
+                  [
+                    "fill",
+                    "fillRule",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+        <View
+          accessible={false}
+          style={
+            [
+              {
+                "flex": 1,
+                "marginRight": 8,
+              },
+            ]
+          }
+        >
+          <Text
+            accessibilityLabel="upload-item-1-label"
+            accessible={true}
+            numberOfLines={1}
+            style={
+              [
+                {
+                  "color": "#273142",
+                  "fontFamily": "Rubik-Medium",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                  "lineHeight": 20,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="upload-item-1-label"
+          >
+            dosya_adı.jpg
+          </Text>
+        </View>
+        <View
+          accessibilityLabel="remove file"
+          accessibilityRole="button"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          hitSlop={8}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          testID="upload-item-1-removeButton"
+        >
+          <RNSVGSvgView
+            accessibilityLabel="icon"
+            align="xMidYMid"
+            bbHeight={16}
+            bbWidth={16}
+            fill="#273142"
+            focusable={false}
+            height={16}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              [
+                {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                {
+                  "flex": 0,
+                  "height": 16,
+                  "width": 16,
+                },
+              ]
+            }
+            testID="icon"
+            title="delete"
+            vbHeight={24}
+            vbWidth={24}
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4280758594,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                clipRule={0}
+                d="M7 4V3a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1h4.5a1.5 1.5 0 0 1 0 3h-19a1.5 1.5 0 1 1 0-3H7Zm3.5-1.5h3a1 1 0 0 1 1 1V4h-5v-.5a1 1 0 0 1 1-1Z"
+                fill={
+                  {
+                    "payload": 4280758594,
+                    "type": 0,
+                  }
+                }
+                fillRule={0}
+                propList={
+                  [
+                    "fill",
+                    "fillRule",
+                  ]
+                }
+              />
+              <RNSVGPath
+                d="M3 8h18l-.824 13.187A3 3 0 0 1 17.182 24H6.818a3 3 0 0 1-2.994-2.813L3 8Z"
+                fill={
+                  {
+                    "payload": 4280758594,
+                    "type": 0,
+                  }
+                }
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#FF5043",
+            "height": 2,
+            "marginTop": 8,
+          }
+        }
+        testID="upload-item-1-errorLine"
+      />
+      <Text
+        accessibilityLabel="upload-item-1-helperText"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#FF5043",
+              "fontFamily": "Rubik-Regular",
+              "fontSize": 14,
+              "fontWeight": "400",
+              "lineHeight": 16,
+              "marginTop": 8,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="upload-item-1-helperText"
+      >
+        Optional helper text
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Upload should render uploaded files correctly 1`] = `
+<View
+  accessibilityLabel="upload"
+  accessible={true}
+  style={
+    [
+      {},
+    ]
+  }
+  testID="upload"
+>
+  <View
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      [
+        {},
+      ]
+    }
+    testID="upload-selectButton"
+  >
+    <View
+      accessible={false}
+      color="primaryKey"
+      style={
+        [
+          {},
+          [
+            {
+              "alignItems": "center",
+              "alignSelf": "flex-start",
+              "backgroundColor": "transparent",
+              "borderColor": "#F27A1A",
+              "borderRadius": 6,
+              "borderWidth": 1,
+              "flexDirection": "row",
+              "height": 40,
+              "justifyContent": "center",
+              "paddingHorizontal": 24,
+            },
+          ],
+        ]
+      }
+    >
+      <RNSVGSvgView
+        accessibilityLabel="button-icon"
+        align="xMidYMid"
+        bbHeight={16}
+        bbWidth={16}
+        fill="#F27A1A"
+        focusable={false}
+        height={16}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+        testID="button-icon"
+        title="upload"
+        vbHeight={24}
+        vbWidth={24}
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4294081050,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M1.5 13A1.5 1.5 0 0 1 3 14.5v5A1.5 1.5 0 0 0 4.5 21h15a1.5 1.5 0 0 0 1.5-1.5v-5a1.5 1.5 0 0 1 3 0v5a4.5 4.5 0 0 1-4.5 4.5h-15A4.5 4.5 0 0 1 0 19.5v-5A1.5 1.5 0 0 1 1.5 13Z"
+            fill={
+              {
+                "payload": 4294081050,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+          <RNSVGPath
+            clipRule={0}
+            d="M12 16a1.5 1.5 0 0 0 1.5-1.5V2a1.5 1.5 0 0 0-3 0v12.5A1.5 1.5 0 0 0 12 16Z"
+            fill={
+              {
+                "payload": 4294081050,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+          <RNSVGPath
+            clipRule={0}
+            d="M17.56 7.06a1.5 1.5 0 0 0 0-2.12l-4.5-4.5a1.5 1.5 0 0 0-2.12 0l-4.5 4.5a1.5 1.5 0 0 0 2.12 2.12L12 3.622l3.44 3.44a1.5 1.5 0 0 0 2.12 0Z"
+            fill={
+              {
+                "payload": 4294081050,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+      <Text
+        accessibilityLabel="button-text"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#F27A1A",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "marginLeft": 8,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="button-text"
+      >
+        Dosya Seç
+      </Text>
+    </View>
+  </View>
+  <View
+    accessibilityLabel="upload-fileList"
+    accessible={true}
+    style={
+      [
+        {
+          "marginTop": 12,
+        },
+      ]
+    }
+    testID="upload-fileList"
+  >
+    <View
+      accessibilityLabel="upload-item-1"
+      accessible={true}
+      style={
+        [
+          {
+            "paddingVertical": 12,
+          },
+        ]
+      }
+      testID="upload-item-1"
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="upload-item-1-leadingIcon"
+          accessible={true}
+          style={
+            [
+              {
+                "marginRight": 8,
+              },
+            ]
+          }
+          testID="upload-item-1-leadingIcon"
+        >
+          <RNSVGSvgView
+            accessibilityLabel="icon"
+            align="xMidYMid"
+            bbHeight={16}
+            bbWidth={16}
+            fill="#273142"
+            focusable={false}
+            height={16}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              [
+                {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                {
+                  "flex": 0,
+                  "height": 16,
+                  "width": 16,
+                },
+              ]
+            }
+            testID="icon"
+            title="attach"
+            vbHeight={24}
+            vbWidth={24}
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4280758594,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                clipRule={0}
+                d="M16.41 0a5.925 5.925 0 0 0-4.063 1.594L2.363 11.01C.861 12.427 0 14.367 0 16.408c0 2.042.86 3.982 2.362 5.398C3.862 23.219 5.877 24 7.962 24c2.086 0 4.102-.78 5.6-2.194l9.986-9.417a1.44 1.44 0 1 0-1.976-2.096l-9.985 9.418c-.948.893-2.25 1.409-3.624 1.409-1.375 0-2.677-.516-3.625-1.41-.944-.89-1.458-2.08-1.458-3.302 0-1.221.514-2.411 1.458-3.302l9.985-9.417c.54-.51 1.29-.809 2.087-.809.798 0 1.547.3 2.087.809.537.506.822 1.174.822 1.852 0 .678-.285 1.346-.822 1.852l-9.996 9.418a.803.803 0 0 1-.55.208.803.803 0 0 1-.549-.208.554.554 0 0 1-.184-.403c0-.134.055-.28.184-.402l9.224-8.69a1.44 1.44 0 1 0-1.975-2.095l-9.225 8.69a3.433 3.433 0 0 0-1.088 2.497c0 .954.402 1.85 1.088 2.498a3.682 3.682 0 0 0 2.526.993c.932 0 1.842-.349 2.525-.993l9.996-9.417A5.426 5.426 0 0 0 22.2 5.54a5.426 5.426 0 0 0-1.726-3.947A5.925 5.925 0 0 0 16.41 0Z"
+                fill={
+                  {
+                    "payload": 4280758594,
+                    "type": 0,
+                  }
+                }
+                fillRule={0}
+                propList={
+                  [
+                    "fill",
+                    "fillRule",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+        <View
+          accessible={false}
+          style={
+            [
+              {
+                "flex": 1,
+                "marginRight": 8,
+              },
+            ]
+          }
+        >
+          <Text
+            accessibilityLabel="upload-item-1-label"
+            accessible={true}
+            numberOfLines={1}
+            style={
+              [
+                {
+                  "color": "#273142",
+                  "fontFamily": "Rubik-Medium",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                  "lineHeight": 20,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="upload-item-1-label"
+          >
+            dosya_adı.jpg
+          </Text>
+        </View>
+        <View
+          accessibilityLabel="remove file"
+          accessibilityRole="button"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          hitSlop={8}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          testID="upload-item-1-removeButton"
+        >
+          <RNSVGSvgView
+            accessibilityLabel="icon"
+            align="xMidYMid"
+            bbHeight={16}
+            bbWidth={16}
+            fill="#273142"
+            focusable={false}
+            height={16}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              [
+                {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                {
+                  "flex": 0,
+                  "height": 16,
+                  "width": 16,
+                },
+              ]
+            }
+            testID="icon"
+            title="delete"
+            vbHeight={24}
+            vbWidth={24}
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4280758594,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                clipRule={0}
+                d="M7 4V3a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1h4.5a1.5 1.5 0 0 1 0 3h-19a1.5 1.5 0 1 1 0-3H7Zm3.5-1.5h3a1 1 0 0 1 1 1V4h-5v-.5a1 1 0 0 1 1-1Z"
+                fill={
+                  {
+                    "payload": 4280758594,
+                    "type": 0,
+                  }
+                }
+                fillRule={0}
+                propList={
+                  [
+                    "fill",
+                    "fillRule",
+                  ]
+                }
+              />
+              <RNSVGPath
+                d="M3 8h18l-.824 13.187A3 3 0 0 1 17.182 24H6.818a3 3 0 0 1-2.994-2.813L3 8Z"
+                fill={
+                  {
+                    "payload": 4280758594,
+                    "type": 0,
+                  }
+                }
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="upload-item-2"
+      accessible={true}
+      style={
+        [
+          {
+            "paddingVertical": 12,
+          },
+        ]
+      }
+      testID="upload-item-2"
+    >
+      <View
+        accessible={false}
+        style={
+          [
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="upload-item-2-leadingIcon"
+          accessible={true}
+          style={
+            [
+              {
+                "marginRight": 8,
+              },
+            ]
+          }
+          testID="upload-item-2-leadingIcon"
+        >
+          <RNSVGSvgView
+            accessibilityLabel="icon"
+            align="xMidYMid"
+            bbHeight={16}
+            bbWidth={16}
+            fill="#273142"
+            focusable={false}
+            height={16}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              [
+                {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                {
+                  "flex": 0,
+                  "height": 16,
+                  "width": 16,
+                },
+              ]
+            }
+            testID="icon"
+            title="attach"
+            vbHeight={24}
+            vbWidth={24}
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4280758594,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                clipRule={0}
+                d="M16.41 0a5.925 5.925 0 0 0-4.063 1.594L2.363 11.01C.861 12.427 0 14.367 0 16.408c0 2.042.86 3.982 2.362 5.398C3.862 23.219 5.877 24 7.962 24c2.086 0 4.102-.78 5.6-2.194l9.986-9.417a1.44 1.44 0 1 0-1.976-2.096l-9.985 9.418c-.948.893-2.25 1.409-3.624 1.409-1.375 0-2.677-.516-3.625-1.41-.944-.89-1.458-2.08-1.458-3.302 0-1.221.514-2.411 1.458-3.302l9.985-9.417c.54-.51 1.29-.809 2.087-.809.798 0 1.547.3 2.087.809.537.506.822 1.174.822 1.852 0 .678-.285 1.346-.822 1.852l-9.996 9.418a.803.803 0 0 1-.55.208.803.803 0 0 1-.549-.208.554.554 0 0 1-.184-.403c0-.134.055-.28.184-.402l9.224-8.69a1.44 1.44 0 1 0-1.975-2.095l-9.225 8.69a3.433 3.433 0 0 0-1.088 2.497c0 .954.402 1.85 1.088 2.498a3.682 3.682 0 0 0 2.526.993c.932 0 1.842-.349 2.525-.993l9.996-9.417A5.426 5.426 0 0 0 22.2 5.54a5.426 5.426 0 0 0-1.726-3.947A5.925 5.925 0 0 0 16.41 0Z"
+                fill={
+                  {
+                    "payload": 4280758594,
+                    "type": 0,
+                  }
+                }
+                fillRule={0}
+                propList={
+                  [
+                    "fill",
+                    "fillRule",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+        <View
+          accessible={false}
+          style={
+            [
+              {
+                "flex": 1,
+                "marginRight": 8,
+              },
+            ]
+          }
+        >
+          <Text
+            accessibilityLabel="upload-item-2-label"
+            accessible={true}
+            numberOfLines={1}
+            style={
+              [
+                {
+                  "color": "#273142",
+                  "fontFamily": "Rubik-Medium",
+                  "fontSize": 16,
+                  "fontWeight": "500",
+                  "lineHeight": 20,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="upload-item-2-label"
+          >
+            dosya_adı.pdf
+          </Text>
+        </View>
+        <View
+          accessibilityLabel="remove file"
+          accessibilityRole="button"
+          accessibilityState={
+            {
+              "busy": undefined,
+              "checked": undefined,
+              "disabled": undefined,
+              "expanded": undefined,
+              "selected": undefined,
+            }
+          }
+          accessibilityValue={
+            {
+              "max": undefined,
+              "min": undefined,
+              "now": undefined,
+              "text": undefined,
+            }
+          }
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          hitSlop={8}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          testID="upload-item-2-removeButton"
+        >
+          <RNSVGSvgView
+            accessibilityLabel="icon"
+            align="xMidYMid"
+            bbHeight={16}
+            bbWidth={16}
+            fill="#273142"
+            focusable={false}
+            height={16}
+            meetOrSlice={0}
+            minX={0}
+            minY={0}
+            style={
+              [
+                {
+                  "backgroundColor": "transparent",
+                  "borderWidth": 0,
+                },
+                {
+                  "flex": 0,
+                  "height": 16,
+                  "width": 16,
+                },
+              ]
+            }
+            testID="icon"
+            title="delete"
+            vbHeight={24}
+            vbWidth={24}
+            width={16}
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <RNSVGGroup
+              fill={
+                {
+                  "payload": 4280758594,
+                  "type": 0,
+                }
+              }
+              propList={
+                [
+                  "fill",
+                ]
+              }
+            >
+              <RNSVGPath
+                clipRule={0}
+                d="M7 4V3a3 3 0 0 1 3-3h4a3 3 0 0 1 3 3v1h4.5a1.5 1.5 0 0 1 0 3h-19a1.5 1.5 0 1 1 0-3H7Zm3.5-1.5h3a1 1 0 0 1 1 1V4h-5v-.5a1 1 0 0 1 1-1Z"
+                fill={
+                  {
+                    "payload": 4280758594,
+                    "type": 0,
+                  }
+                }
+                fillRule={0}
+                propList={
+                  [
+                    "fill",
+                    "fillRule",
+                  ]
+                }
+              />
+              <RNSVGPath
+                d="M3 8h18l-.824 13.187A3 3 0 0 1 17.182 24H6.818a3 3 0 0 1-2.994-2.813L3 8Z"
+                fill={
+                  {
+                    "payload": 4280758594,
+                    "type": 0,
+                  }
+                }
+                propList={
+                  [
+                    "fill",
+                  ]
+                }
+              />
+            </RNSVGGroup>
+          </RNSVGSvgView>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
