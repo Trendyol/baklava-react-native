@@ -20,7 +20,7 @@
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios --simulator=\"iPhone 15 Pro Max\"",
+    "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -50,19 +50,22 @@
     "styled-system": "5.1.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "@babel/preset-env": "^7.20.0",
-    "@babel/runtime": "^7.20.0",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.3",
+    "@babel/runtime": "^7.25.0",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
     "@commitlint/prompt-cli": "17.1.2",
-    "@react-native-async-storage/async-storage": "1.17.7",
-    "@react-native-community/datetimepicker": "3.5.2",
-    "@react-native-community/slider": "4.1.8",
-    "@react-native/babel-preset": "0.74.87",
-    "@react-native/eslint-config": "0.74.87",
-    "@react-native/metro-config": "0.74.87",
-    "@react-native/typescript-config": "0.74.87",
+    "@react-native-async-storage/async-storage": "^2.1.0",
+    "@react-native-community/cli": "15.0.1",
+    "@react-native-community/cli-platform-android": "15.0.1",
+    "@react-native-community/cli-platform-ios": "15.0.1",
+    "@react-native-community/datetimepicker": "^8.2.0",
+    "@react-native-community/slider": "^4.5.5",
+    "@react-native/babel-preset": "0.77.3",
+    "@react-native/eslint-config": "0.77.3",
+    "@react-native/metro-config": "0.77.3",
+    "@react-native/typescript-config": "0.77.3",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-controls": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
@@ -99,13 +102,13 @@
     "lint-staged": "13.0.3",
     "npm-run-all": "4.1.5",
     "prettier": "2.8.8",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-native": "0.74.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-native": "0.77.3",
     "react-native-builder-bob": "^0.35.2",
-    "react-native-safe-area-context": "^5.1.0",
-    "react-native-svg": "^15.11.1",
-    "react-test-renderer": "^18.2.0",
+    "react-native-safe-area-context": "^5.4.0",
+    "react-native-svg": "^15.12.1",
+    "react-test-renderer": "18.3.1",
     "semantic-release": "^25.0.5",
     "typescript": "5.0.4"
   },
@@ -114,8 +117,11 @@
     "react-native": "*",
     "react-native-svg": "*"
   },
+  "engines": {
+    "node": ">=18"
+  },
   "resolutions": {
-    "@types/react": "^17"
+    "@types/react": "^18"
   },
   "jest": {
     "preset": "react-native",

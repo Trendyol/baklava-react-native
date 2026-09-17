@@ -78,7 +78,6 @@ exports[`Input Label should render outlined label correctly 1`] = `
 <View
   collapsable={false}
   pointerEvents="none"
-  style={{}}
 >
   <View
     accessibilityLabel="outlined-label-box"
@@ -95,7 +94,6 @@ exports[`Input Label should render outlined label correctly 1`] = `
   >
     <Text
       collapsable={false}
-      style={{}}
     >
       Label
     </Text>
@@ -107,7 +105,6 @@ exports[`Input Label should render outlined label with optional correctly 1`] = 
 <View
   collapsable={false}
   pointerEvents="none"
-  style={{}}
 >
   <View
     accessibilityLabel="outlined-label-box"
@@ -124,7 +121,6 @@ exports[`Input Label should render outlined label with optional correctly 1`] = 
   >
     <Text
       collapsable={false}
-      style={{}}
     >
       Label
     </Text>
