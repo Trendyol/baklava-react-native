@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Run build docs
-        run: NODE_OPTIONS=--openssl-legacy-provider npm run build-storybook-docs
+        run: npm run build-storybook-docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

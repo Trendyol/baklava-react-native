@@ -1,26 +1,29 @@
-import { ComponentStory } from '@storybook/react-native';
+import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import Text from '../Text/Text';
 import Box from './Box';
 
-export default {
+const meta: Meta<typeof Box> = {
   title: 'Box',
   component: Box,
 };
 
-type BoxStory = ComponentStory<typeof Box>;
+export default meta;
 
-export const Basic: BoxStory = args => (
-  <>
-    <Text p="2xs" variant="subtitle01Bold">
-      Box
-    </Text>
-    <Box {...args} />
-  </>
-);
+type Story = StoryObj<typeof meta>;
 
-Basic.args = {
-  backgroundColor: 'primaryKey',
-  width: 200,
-  height: 200,
+export const Basic: Story = {
+  args: {
+    backgroundColor: 'primaryKey',
+    width: 200,
+    height: 200,
+  },
+  render: args => (
+    <>
+      <Text p="2xs" variant="subtitle01Bold">
+        Box
+      </Text>
+      <Box {...args} />
+    </>
+  ),
 };

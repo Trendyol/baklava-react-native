@@ -12,9 +12,16 @@ module.exports = {
       },
       plugins: ['@typescript-eslint'],
     },
+    {
+      files: ['**/*.stories.tsx'],
+      rules: {
+        'react-hooks/rules-of-hooks': 'off',
+      },
+    },
   ],
   ignorePatterns: [
     'lib/**',
+    '.rnstorybook/**',
     'storybook-static/**',
     'ios/**',
     'android/**',

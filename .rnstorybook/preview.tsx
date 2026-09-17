@@ -1,8 +1,9 @@
 import { withBackgrounds } from '@storybook/addon-ondevice-backgrounds';
 import React from 'react';
 import { ScrollView } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Parameters, Story } from '@storybook/react-native';
+import type { Parameters, StoryFn } from '@storybook/react';
 import {
   PortalProvider,
   ThemeProvider,
@@ -21,21 +22,23 @@ theme.fonts = {
 
 export const decorators = [
   withBackgrounds,
-  (Story: Story) => (
-    <ThemeProvider theme={theme}>
-      <TooltipProvider>
-        <PortalProvider>
-          <SafeAreaProvider>
-            <ScrollView
-              keyboardShouldPersistTaps="handled"
-              style={{ backgroundColor: theme.colors.neutralFull }}>
-              <Story />
-            </ScrollView>
-            <Toast ignoreKeyboard extraPaddingBottom={16} />
-          </SafeAreaProvider>
-        </PortalProvider>
-      </TooltipProvider>
-    </ThemeProvider>
+  (StoryFn: StoryFn) => (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider theme={theme}>
+        <TooltipProvider>
+          <PortalProvider>
+            <SafeAreaProvider>
+              <ScrollView
+                keyboardShouldPersistTaps="handled"
+                style={{ backgroundColor: theme.colors.neutralFull }}>
+                <StoryFn />
+              </ScrollView>
+              <Toast ignoreKeyboard extraPaddingBottom={16} />
+            </SafeAreaProvider>
+          </PortalProvider>
+        </TooltipProvider>
+      </ThemeProvider>
+    </GestureHandlerRootView>
   ),
 ];
 

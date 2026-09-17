@@ -1,10 +1,10 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react-native';
+import type { Meta, StoryObj } from '@storybook/react';
 import React from 'react';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
 import Image from './Image';
 
-const ImageMeta: ComponentMeta<typeof Image> = {
+const ImageMeta: Meta<typeof Image> = {
   title: 'Image',
   component: Image,
   argTypes: {},
@@ -16,57 +16,61 @@ const ImageMeta: ComponentMeta<typeof Image> = {
 
 export default ImageMeta;
 
-type ImageStory = ComponentStory<typeof Image>;
+type Story = StoryObj<typeof ImageMeta>;
 
-export const Basic: ImageStory = args => (
-  <>
-    <Text p="2xs" variant="subtitle1Bold">
-      Image
-    </Text>
-    <Image
-      width={Number(args.width)}
-      height={Number(args.height)}
-      source={{
-        uri: 'https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/44/e5/9c/44e59caf-c7f4-90c0-fac6-2b22d3a66a5a/AppIcon-1x_U007emarketing-0-10-0-sRGB-85-220.png/1200x600wa.png',
-      }}
-    />
-  </>
-);
-
-export const Cases: ImageStory = () => {
-  return (
+export const Basic: Story = {
+  render: args => (
     <>
-      <Text p="2xs" variant="subtitle01Bold">
-        Image Cases
+      <Text p="2xs" variant="subtitle1Bold">
+        Image
       </Text>
-
-      <Box px="m" py="2xs">
-        <Image
-          width={60}
-          height={60}
-          source={{
-            uri: 'https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/44/e5/9c/44e59caf-c7f4-90c0-fac6-2b22d3a66a5a/AppIcon-1x_U007emarketing-0-10-0-sRGB-85-220.png/1200x600wa.png',
-          }}
-          borderRadius={12}
-        />
-      </Box>
-      <Box px="m" py="2xs">
-        <Image
-          resizeMode="contain"
-          source={require('../../../assets/trendyol.png')}
-        />
-      </Box>
-      <Box px="m" py="2xs">
-        <Image
-          width={65}
-          height={65}
-          bordered={false}
-          source={require('../../../assets/trendyol.png')}
-        />
-      </Box>
-      <Box px="m" py="2xs">
-        <Image source={require('../../../assets/trendyol.png')} />
-      </Box>
+      <Image
+        width={Number(args.width)}
+        height={Number(args.height)}
+        source={{
+          uri: 'https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/44/e5/9c/44e59caf-c7f4-90c0-fac6-2b22d3a66a5a/AppIcon-1x_U007emarketing-0-10-0-sRGB-85-220.png/1200x600wa.png',
+        }}
+      />
     </>
-  );
+  ),
+};
+
+export const Cases: Story = {
+  render: () => {
+    return (
+      <>
+        <Text p="2xs" variant="subtitle01Bold">
+          Image Cases
+        </Text>
+
+        <Box px="m" py="2xs">
+          <Image
+            width={60}
+            height={60}
+            source={{
+              uri: 'https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/44/e5/9c/44e59caf-c7f4-90c0-fac6-2b22d3a66a5a/AppIcon-1x_U007emarketing-0-10-0-sRGB-85-220.png/1200x600wa.png',
+            }}
+            borderRadius={12}
+          />
+        </Box>
+        <Box px="m" py="2xs">
+          <Image
+            resizeMode="contain"
+            source={require('../../../assets/trendyol.png')}
+          />
+        </Box>
+        <Box px="m" py="2xs">
+          <Image
+            width={65}
+            height={65}
+            bordered={false}
+            source={require('../../../assets/trendyol.png')}
+          />
+        </Box>
+        <Box px="m" py="2xs">
+          <Image source={require('../../../assets/trendyol.png')} />
+        </Box>
+      </>
+    );
+  },
 };

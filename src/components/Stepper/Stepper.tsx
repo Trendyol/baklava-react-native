@@ -92,7 +92,9 @@ const Stepper = ({
             testID={`${testID}-nextStepLabel`}
             variant="subtitle3Regular"
             color="neutralDark">
-            {I18nManager.isRTL ? `:${nextStepLabelPrefix}` : `${nextStepLabelPrefix}:`}
+            {I18nManager.isRTL
+              ? `:${nextStepLabelPrefix}`
+              : `${nextStepLabelPrefix}:`}
           </Text>
           <Text
             testID={`${testID}-nextStepTitle`}
