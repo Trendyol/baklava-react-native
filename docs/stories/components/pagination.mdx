@@ -1,0 +1,131 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import PaginationBasic from '../assets/pagination/PaginationBasic.png';
+import PaginationJumper from '../assets/pagination/PaginationJumper.png';
+import PaginationMiddlePage from '../assets/pagination/PaginationMiddlePage.png';
+import JumperMiddlePage from '../assets/pagination/JumperMiddlePage.png';
+
+<Meta
+  title="Components/Pagination"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Pagination
+
+Pagination is used for splitting up content or data into several pages, with a control for navigating to the next or previous page.
+
+Generally, pagination is used if there are more than 10 items displayed in one view.
+
+There are 2 elements of pagination: **Simple Pagination** and **Jumper**.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={PaginationBasic} width="250" alt="PaginationBasic" />
+  <img src={PaginationJumper} width="250" alt="PaginationJumper" />
+  <img src={PaginationMiddlePage} width="250" alt="PaginationMiddlePage" />
+  <img src={JumperMiddlePage} width="250" alt="JumperMiddlePage" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+The component is controlled. `currentPage` comes from the parent, so the selected page and navigation states update whenever the parent passes a new value.
+
+```jsx
+const [currentPage, setCurrentPage] = useState(1);
+
+<Pagination
+  currentPage={currentPage}
+  totalPages={150}
+  onPageChange={setCurrentPage}
+/>
+```
+
+```jsx
+<Pagination
+  currentPage={1}
+  totalPages={15}
+  hasJumper
+  onPageChange={page => setCurrentPage(page)}
+/>
+```
+
+The component always fills the full width of its parent. Previous/next (and jumper) arrows stay at the edges. Page numbers are centered in the remaining space.
+
+<br />
+
+## Props
+
+#### currentPage
+
+Type: `number`
+
+The current page number (1-indexed). Values outside the `1..totalPages` range are clamped.
+
+#### totalPages
+
+Type: `number`
+
+The total number of pages. Values below `1` are normalized to `1`. The component still renders when there is only one page; the caller decides whether to mount it.
+
+#### onPageChange
+
+Type: `(page: number) => void`
+
+Callback fired when the user selects a different page. It is not called when the already selected page is pressed, or when a disabled navigation control is pressed.
+
+#### hasJumper
+
+Type: `boolean`
+
+Shows first/last page jumper buttons (`<<` `>>`) next to previous/next. Default value is `false`.
+
+#### testID
+
+Type: `string`
+
+Test identifier prefix. Default value is `pagination`.
+
+<br />
+
+## Elements
+
+### Simple Pagination
+
+Use simple pagination for navigating to the next or previous page.
+
+`< 1 2 3 4 5 ... 150 >`
+
+At most **9** items are shown. Previous and next take 2 slots, so the page list has **7** slots. `...` counts as one slot.
+
+### Jumper
+
+Click the double-arrow icons to jump directly to the last or first page.
+
+`<< < 1 2 3 ... 15 > >>`
+
+Jumper uses 4 arrow slots, so the page list has **5** slots. Simple pagination is still included.
+
+When there are few pages, all numbers are shown and centered. When there are more pages than the available slots, ellipsis is used.
+
+<br />
+
+## Layout
+
+The component should exhibit fill behavior on mobile screens. When there are few pages, the page numbers should be center-aligned.
+
+- First page: previous (and first jumper) buttons are disabled.
+- Last page: next (and last jumper) buttons are disabled.
+- Middle of a large set: ellipsis is shown on both sides of the current page and its neighbours.

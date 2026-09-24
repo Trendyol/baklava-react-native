@@ -1,0 +1,87 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import { ColorBox, styles } from './ColorBox';
+
+<Meta
+  title="Design System/Colors"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Colors
+
+Baklava uses a list of defined color with some default values.
+
+<div style={styles.colorBox} markdown="1">
+  <ColorBox color="#F27A1A" colorText="Primary Key" />
+  <ColorBox color="#0BC15C" colorText="Success Key" />
+  <ColorBox color="#FF5043" colorText="Danger Key" />
+  <ColorBox color="#FFB600" colorText="Warning Key" />
+  <ColorBox color="#5794FF" colorText="Info Key" />
+  <ColorBox color="#8C4EFF" colorText="Featured Key" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#EF6114" colorText="Primary Highlight" />
+  <ColorBox color="#09A44E" colorText="Success Highlight" />
+  <ColorBox color="#FF3028" colorText="Danger Highlight" />
+  <ColorBox color="#FF9800" colorText="Warning Highlight" />
+  <ColorBox color="#457EFF" colorText="Info Highlight" />
+  <ColorBox color="#753EFF" colorText="Featured Highlight" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#FEF2E8" colorText="Primary Contrast" />
+  <ColorBox color="#E7F9EF" colorText="Success Contrast" />
+  <ColorBox color="#FFEEEC" colorText="Danger Contrast" />
+  <ColorBox color="#FFF8E6" colorText="Warning Contrast" />
+  <ColorBox color="#EEF4FF" colorText="Info Contrast" />
+  <ColorBox color="#F4EDFF" colorText="Featured Contrast" />
+</div>
+
+<br/>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#000000" colorText="Neutral None" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#0F131A" colorText="Neutral Darkest" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#273142" colorText="Neutral Darker" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#6E7787" colorText="Neutral Dark" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#95A1B5" colorText="Neutral Light" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#AFBBCA" colorText="Neutral Lighter" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#F1F2F7" colorText="Neutral Lightest" />
+</div>
+
+<div style={styles.colorBox}>
+  <ColorBox color="#FFFFFF" colorText="Neutral Full" />
+</div>
+
+<br/>
+
+## Usage
+
+```jsx
+<Box color="neutralLight" />
+```

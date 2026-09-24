@@ -1,0 +1,106 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import SearchInputBasic from '../assets/searchinput/SearchInputBasic.png';
+import SearchInputSizes from '../assets/searchinput/SearchInputSizes.png';
+import SearchInputStates from '../assets/searchinput/SearchInputStates.png';
+
+<Meta
+  title="Components/Search Input"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Search Input
+
+Search Input lets users enter a query, clear it, and see when search results are
+being loaded.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={SearchInputBasic} width="250" alt="SearchInputBasic" />
+  <img src={SearchInputSizes} width="250" alt="SearchInputSizes" />
+  <img src={SearchInputStates} width="250" alt="SearchInputStates" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+Let the input keep its own text and listen to `onChangeText`. Typing then never
+waits for a render, which keeps fast typing and deleting smooth.
+
+```jsx
+<SearchInput placeholder="Search" onChangeText={search} onClear={reset} />
+```
+
+## Searching an endpoint
+
+Requests are left to the caller, so debouncing and a minimum query length live
+next to the request. Feed `loading` back in while it is in flight.
+
+```jsx
+const [loading, setLoading] = React.useState(false);
+
+const search = query => {
+  clearTimeout(timeout.current);
+
+  if (query.length < 3) {
+    setLoading(false);
+    return;
+  }
+
+  setLoading(true);
+  timeout.current = setTimeout(async () => {
+    await fetchResults(query);
+    setLoading(false);
+  }, 300);
+};
+
+<SearchInput loading={loading} onChangeText={search} onClear={reset} />;
+```
+
+Passing `value` is supported when the text has to be owned elsewhere, but then
+every keystroke waits for that owner to render — prefer the uncontrolled form
+for search fields.
+
+## Props
+
+#### size
+
+Controls the input height. Supported values are `small` (32px), `medium`
+(40px), and `large` (48px).
+
+#### loading
+
+Shows a loading indicator and temporarily replaces the trailing action.
+
+#### disabled
+
+Prevents editing and hides the clear action.
+
+#### onClear
+
+Called after the clear action is pressed. `onChangeText` is also called with an
+empty string.
+
+#### clearAccessibilityLabel
+
+Provides the accessible label for the clear action. Defaults to
+`"Clear search"`.
+
+#### fontFamily
+
+Selects a font from the Baklava theme.
+
+Search Input also implements
+<a href="https://reactnative.dev/docs/textinput#props">React Native TextInput props</a>.
