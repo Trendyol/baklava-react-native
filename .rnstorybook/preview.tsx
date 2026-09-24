@@ -30,6 +30,7 @@ export const decorators = [
             <SafeAreaProvider>
               <ScrollView
                 keyboardShouldPersistTaps="handled"
+                contentContainerStyle={{ flexGrow: 1 }}
                 style={{ backgroundColor: theme.colors.neutralFull }}>
                 <StoryFn />
               </ScrollView>
@@ -76,6 +77,7 @@ export const parameters: Parameters = {
         'Image',
         'Input',
         'Modal',
+        'Pagination',
         'ProgressIndicator',
         [
           'Basic',

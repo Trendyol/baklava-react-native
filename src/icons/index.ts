@@ -97,6 +97,8 @@ export { default as Document } from './Document';
 export { default as DocumentSearch } from './DocumentSearch';
 export { default as Donation } from './Donation';
 export { default as DoorOpen } from './DoorOpen';
+export { default as DoubleArrowLeft } from './DoubleArrowLeft';
+export { default as DoubleArrowRight } from './DoubleArrowRight';
 export { default as Download } from './Download';
 export { default as DZ } from './DZ';
 export { default as EC } from './EC';

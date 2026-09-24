@@ -15,6 +15,7 @@ export { default as Icon } from './components/Icon/Icon';
 export { default as Image } from './components/Image/Image';
 export { default as Input } from './components/Input/Input';
 export { default as Modal } from './components/Modal/Modal';
+export { default as Pagination } from './components/Pagination/Pagination';
 export { default as ProgressIndicator } from './components/ProgressIndicator/ProgressIndicator';
 export { default as Stepper } from './components/Stepper/Stepper';
 export { default as RadioButton } from './components/RadioButton/RadioButton';
@@ -38,6 +39,7 @@ export {
 
 // types
 export { ToastDurations } from './components/Toast/types';
+export type { PaginationProps } from './components/Pagination/Pagination';
 export type { SearchInputProps } from './components/SearchInput/SearchInput';
 export type { TooltipRef } from './components/Tooltip/types';
 export type {
