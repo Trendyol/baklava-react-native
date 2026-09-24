@@ -805,6 +805,15 @@ const theme = createTheme({
       barBorderRadius: 4,
     },
   },
+  pagination: {
+    itemSize: 32,
+    itemGap: 4,
+    activeBackgroundColor: 'neutralDarker',
+    activeTextColor: 'neutralFull',
+    textColor: 'neutralDarker',
+    disabledColor: 'neutralLighter',
+    borderRadius: 6,
+  },
   stepperVariants: {
     default: {
       barColor: 'neutralLightest',

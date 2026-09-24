@@ -1,0 +1,720 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pagination should render simple pagination correctly 1`] = `
+<View
+  accessibilityLabel="pagination"
+  accessible={false}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "width": "100%",
+      },
+    ]
+  }
+  testID="pagination"
+>
+  <View
+    accessible={false}
+    style={
+      [
+        {
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="Go to previous page"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": true,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "height": 32,
+          "justifyContent": "center",
+          "width": 32,
+        }
+      }
+      testID="pagination-previous"
+    >
+      <RNSVGSvgView
+        accessibilityLabel="pagination-previous-icon"
+        accessible={false}
+        align="xMidYMid"
+        bbHeight={16}
+        bbWidth={16}
+        fill="#AFBBCA"
+        focusable={false}
+        height={16}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            [
+              {
+                "transform": [
+                  {
+                    "scaleX": 1,
+                  },
+                ],
+              },
+              undefined,
+            ],
+            {
+              "flex": 0,
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+        testID="pagination-previous-icon"
+        title="arrow-left"
+        transform={
+          [
+            {
+              "scaleX": 1,
+            },
+          ]
+        }
+        vbHeight={24}
+        vbWidth={24}
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4289706954,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M16.64 3.93c.67.67.67 1.756 0 2.425L10.996 12l5.644 5.645a1.714 1.714 0 1 1-2.424 2.424L7.36 13.212a1.714 1.714 0 0 1 0-2.424l6.857-6.857c.67-.67 1.755-.67 2.425 0Z"
+            fill={
+              {
+                "payload": 4289706954,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+  <View
+    accessible={false}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        },
+        {
+          "gap": 4,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="Page 1"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": true,
+          "expanded": undefined,
+          "selected": true,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "height": 32,
+            "justifyContent": "center",
+            "width": 32,
+          },
+          {
+            "backgroundColor": "#273142",
+            "borderRadius": 6,
+          },
+        ]
+      }
+      testID="pagination-page-1"
+    >
+      <Text
+        accessible={false}
+        style={
+          [
+            {
+              "color": "#FFFFFF",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "textAlign": "left",
+            },
+          ]
+        }
+      >
+        1
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Page 2"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": false,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "height": 32,
+            "justifyContent": "center",
+            "width": 32,
+          },
+          undefined,
+        ]
+      }
+      testID="pagination-page-2"
+    >
+      <Text
+        accessible={false}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "textAlign": "left",
+            },
+          ]
+        }
+      >
+        2
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Page 3"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": false,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "height": 32,
+            "justifyContent": "center",
+            "width": 32,
+          },
+          undefined,
+        ]
+      }
+      testID="pagination-page-3"
+    >
+      <Text
+        accessible={false}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "textAlign": "left",
+            },
+          ]
+        }
+      >
+        3
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Page 4"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": false,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "height": 32,
+            "justifyContent": "center",
+            "width": 32,
+          },
+          undefined,
+        ]
+      }
+      testID="pagination-page-4"
+    >
+      <Text
+        accessible={false}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "textAlign": "left",
+            },
+          ]
+        }
+      >
+        4
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Page 5"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": false,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "height": 32,
+            "justifyContent": "center",
+            "width": 32,
+          },
+          undefined,
+        ]
+      }
+      testID="pagination-page-5"
+    >
+      <Text
+        accessible={false}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "textAlign": "left",
+            },
+          ]
+        }
+      >
+        5
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="pagination-ellipsis-end"
+      accessible={false}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "height": 32,
+            "justifyContent": "center",
+            "width": 32,
+          },
+        ]
+      }
+      testID="pagination-ellipsis-end"
+    >
+      <Text
+        accessible={false}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "textAlign": "left",
+            },
+          ]
+        }
+      >
+        ...
+      </Text>
+    </View>
+    <View
+      accessibilityLabel="Page 150"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": false,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        [
+          {
+            "alignItems": "center",
+            "height": 32,
+            "justifyContent": "center",
+            "width": 32,
+          },
+          undefined,
+        ]
+      }
+      testID="pagination-page-150"
+    >
+      <Text
+        accessible={false}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "textAlign": "left",
+            },
+          ]
+        }
+      >
+        150
+      </Text>
+    </View>
+  </View>
+  <View
+    accessible={false}
+    style={
+      [
+        {
+          "flexDirection": "row",
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="Go to next page"
+      accessibilityRole="button"
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": false,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "alignItems": "center",
+          "height": 32,
+          "justifyContent": "center",
+          "width": 32,
+        }
+      }
+      testID="pagination-next"
+    >
+      <RNSVGSvgView
+        accessibilityLabel="pagination-next-icon"
+        accessible={false}
+        align="xMidYMid"
+        bbHeight={16}
+        bbWidth={16}
+        fill="#273142"
+        focusable={false}
+        height={16}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
+          [
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            [
+              {
+                "transform": [
+                  {
+                    "scaleX": 1,
+                  },
+                ],
+              },
+              undefined,
+            ],
+            {
+              "flex": 0,
+              "height": 16,
+              "width": 16,
+            },
+          ]
+        }
+        testID="pagination-next-icon"
+        title="arrow-right"
+        transform={
+          [
+            {
+              "scaleX": 1,
+            },
+          ]
+        }
+        vbHeight={24}
+        vbWidth={24}
+        width={16}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <RNSVGGroup
+          fill={
+            {
+              "payload": 4280758594,
+              "type": 0,
+            }
+          }
+          propList={
+            [
+              "fill",
+            ]
+          }
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M7.359 3.93c.67-.669 1.755-.669 2.424 0l6.857 6.858c.67.67.67 1.755 0 2.424L9.784 20.07a1.714 1.714 0 1 1-2.424-2.424L13.004 12 7.359 6.355a1.714 1.714 0 0 1 0-2.424Z"
+            fill={
+              {
+                "payload": 4280758594,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
+  </View>
+</View>
+`;
