@@ -1,6 +1,7 @@
 export const iconList = [
   'academy',
   'account',
+  'ai2',
   'add-note',
   'add-photo',
   'add-product',
