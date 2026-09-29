@@ -8,6 +8,7 @@ export { default as AE } from './AE';
 export { default as AF } from './AF';
 export { default as AG } from './AG';
 export { default as AI } from './AI';
+export { default as Ai2 } from './Ai2';
 export { default as AL } from './AL';
 export { default as AM } from './AM';
 export { default as Alert } from './Alert';
