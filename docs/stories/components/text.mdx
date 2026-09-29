@@ -1,0 +1,86 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import TextHeading from '../assets/text/TextHeading.png';
+import TextSubtitle1 from '../assets/text/TextSubtitle1.png';
+import TextSubtitle2 from '../assets/text/TextSubtitle2.png';
+import TextSubtitle3 from '../assets/text/TextSubtitle3.png';
+import TextSubtitle4 from '../assets/text/TextSubtitle4.png';
+import TextBody from '../assets/text/TextBody.png';
+import TextCaption from '../assets/text/TextCaption.png';
+
+<Meta
+  title="Components/Text"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Text
+
+Text allows the rendering of text and paragraphs within an interface. Shows styles compatible with the passed variant prop and supported by the type system.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={TextHeading} width="250" alt="TextHeading" />
+  <img src={TextSubtitle1} width="250" alt="TextSubtitle1" />
+  <img src={TextSubtitle2} width="250" alt="TextSubtitle2" />
+  <img src={TextSubtitle3} width="250" alt="TextSubtitle3" />
+  <img src={TextSubtitle4} width="250" alt="TextSubtitle4" />
+  <img src={TextBody} width="250" alt="TextBody" />
+  <img src={TextCaption} width="250" alt="TextCaption" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<Text variant="heading2">Baklava Design System</Text>
+```
+
+<br />
+
+## Props
+
+#### variant
+
+Variant defines appropriate text styles for type role and its size. Available variants:
+
+Heading: _`heading1`, `heading2`, `heading3`_ <br />
+Subtitle1: _`subtitle1Regular`, `subtitle1Medium`, `subtitle1Semibold`, `subtitle1Bold`_ <br />
+Subtitle2: _`subtitle2Regular`, `subtitle2Medium`, `subtitle2Semibold`, `subtitle2Bold`_ <br />
+Subtitle3: _`subtitle3Regular`, `subtitle3Medium`, `subtitle3Semibold`, `subtitle3Bold`_ <br />
+Subtitle4: _`subtitle4Regular`, `subtitle4Medium`, `subtitle4Semibold`, `subtitle4Bold`_ <br />
+Body: _`body1`, `body2`, `body3`_ <br />
+Caption: _`caption`_ <br />
+
+#### children (required)
+
+Type: `React.ReactNode`
+
+#### theme
+
+Type: `ThemeProp`
+
+#### color
+
+Type: `string`
+
+The color of the Text. 
+It can be <a href="/docs/design-system-colors--page" title="title">theme color key</a>.
+
+#### style
+
+Type: `StyleProp<TextStyle>`
+
+<br />
+Text implements: <a href="https://reactnative.dev/docs/text#props" title="title">...Text props</a>

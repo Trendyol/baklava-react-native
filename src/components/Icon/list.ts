@@ -48,6 +48,8 @@ export const iconList = [
   'document',
   'donation',
   'door-open',
+  'double-arrow-left',
+  'double-arrow-right',
   'download',
   'edit',
   'engagement',

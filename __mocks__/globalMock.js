@@ -1,4 +1,1 @@
-jest.mock('global', () => ({
-  ...global,
-  WebSocket: function WebSocket() {},
-}));
+global.WebSocket = function WebSocket() {};

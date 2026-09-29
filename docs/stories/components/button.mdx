@@ -1,0 +1,130 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import ButtonVariants from '../assets/button/ButtonVariants.png';
+import PrimaryButtons from '../assets/button/PrimaryButtons.png';
+import SecondaryButtons from '../assets/button/SecondaryButtons.png';
+import TertiaryButtons from '../assets/button/TertiaryButtons.png';
+import IconButtons from '../assets/button/IconButtons.png';
+import IconOnlyButtons from '../assets/button/IconOnlyButtons.png';
+import ButtonSizes from '../assets/button/ButtonSizes.png';
+import DisabledButtons from '../assets/button/DisabledButtons.png';
+import PressedButtons from '../assets/button/PressedButtons.png';
+
+<Meta
+  title="Components/Button"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Button
+
+A button is component that the user can press to trigger an action.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={ButtonVariants} width="250" alt="ButtonVariants" />
+  <img src={PrimaryButtons} width="250" alt="PrimaryButtons" />
+  <img src={SecondaryButtons} width="250" alt="SecondaryButtons" />
+  <img src={TertiaryButtons} width="250" alt="TertiaryButtons" />
+  <img src={IconButtons} width="250" alt="IconButtons" />
+  <img src={IconOnlyButtons} width="250" alt="IconOnlyButtons" />
+  <img src={ButtonSizes} width="250" alt="ButtonSizes" />
+  <img src={DisabledButtons} width="250" alt="DisabledButtons" />
+  <img src={PressedButtons} width="250" alt="PressedButtons" />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<Button variant="primary" kind="success" size="l" label="Primary Button" />
+```
+
+<br/>
+
+## Props
+
+#### variant
+
+Type: `string`
+
+The variant of the button style to use.
+
+`primary`,
+`secondary`,
+`tertiary`
+
+#### kind
+
+Type: `string`
+
+The kind of the button. To adjust the styling to give it desired emphasis.
+
+`default`,
+`neutral`,
+`success`,
+`danger`
+
+#### size
+
+Type: `string`
+
+The size of the button.
+
+`s`,
+`m`,
+`l`
+
+#### icon
+
+Type: `string`
+
+The icon name of the button. Icon names are in the list, fixed and cannot be used outside the list.
+
+`academy`,
+`confetti`,
+`info`,
+`profile`,
+`warning`...
+
+#### label
+
+Type: `string`
+
+The label of the button.
+
+#### disabled
+
+Type: `boolean`
+
+Disabled state of the button. Default value is false.
+
+#### loading
+
+Type: `boolean`
+
+Loading state of the button. When true, displays a spinner instead of the icon and automatically disables the button. Default value is false.
+
+#### filled
+
+Type: `boolean`
+
+Filled state of the button. Default value is false.
+
+#### style
+
+Type: `StyleProp<PressableStyle>`
+
+<br />
+Button implements: <a href="https://reactnative.dev/docs/pressable#props" title="title">...Pressable props</a>

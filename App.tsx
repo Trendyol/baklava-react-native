@@ -1,3 +1,3 @@
-import StorybookUI from './.storybook/Storybook';
+import StorybookUI from './.rnstorybook';
 
 export default StorybookUI;

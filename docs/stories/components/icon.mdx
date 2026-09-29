@@ -1,0 +1,283 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import IconSizes from '../assets/icon/IconSizes.png';
+import IconColors from '../assets/icon/IconColors.png';
+import IconList1 from '../assets/icon/IconList1.png';
+import IconList2 from '../assets/icon/IconList2.png';
+import IconList3 from '../assets/icon/IconList3.png';
+import IconList4 from '../assets/icon/IconList4.png';
+import IconList5 from '../assets/icon/IconList5.png';
+import IconList6 from '../assets/icon/IconList6.png';
+import IconList7 from '../assets/icon/IconList7.png';
+import IconList8 from '../assets/icon/IconList8.png';
+import IconList9 from '../assets/icon/IconList9.png';
+import IconList10 from '../assets/icon/IconList10.png';
+
+<Meta
+  title="Components/Icon"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Icon
+
+Icon component is used to show some decorative icons.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={IconSizes} width="250" alt="IconSizes" />
+  <img src={IconColors} width="250" alt="IconColors" />
+  <img src={IconList1} width="250" alt="IconList1" />
+  <img src={IconList2} width="250" alt="IconList2" />
+  <img src={IconList3} width="250" alt="IconList3" />
+  <img src={IconList4} width="250" alt="IconList4" />
+  <img src={IconList5} width="250" alt="IconList5" />
+  <img src={IconList6} width="250" alt="IconList6" />
+  <img src={IconList7} width="250" alt="IconList7" />
+  <img src={IconList8} width="250" alt="IconList8" />
+  <img src={IconList9} width="250" alt="IconList9" />
+  <img src={IconList10} width="250" alt="IconList10" />
+</div>
+
+<br/><br/>
+<br/><br/>
+
+## Usage
+
+```jsx
+<Icon name="confetti" color="primaryColor" size="xl" />
+```
+
+<br />
+
+## Props
+
+#### name
+
+Type: `string`
+
+Icon names are in the list, fixed and cannot be used outside the list.
+
+`academy`,
+`account`,
+`add-note`,
+`add-photo`,
+`add-product`,
+`alert`,
+`announcement`,
+`archive`,
+`arrow-down`,
+`arrow-left`,
+`arrow-right`,
+`arrow-right-up`,
+`arrow-up`,
+`attach`,
+`automatic-pricing`,
+`award`,
+`back-fill`,
+`back`,
+`barcode`,
+`bill`,
+`book`,
+`browser`,
+`calendar-stroke`,
+`calendar`,
+`camera`,
+`campaign`,
+`change-fill`,
+`change`,
+`chart`,
+`chatbot`,
+`check-fill`,
+`check`,
+`clock`,
+`close-fill`,
+`close`,
+`coin`,
+`compass`,
+`confetti`,
+`copy`,
+`coupon`,
+`credit-card`,
+`delete`,
+`dialog`,
+`disable`,
+`dislike`,
+`document-search`,
+`document`,
+`donation`,
+`door-open`,
+`download`,
+`edit`,
+`engagement`,
+`excel`,
+`exit`,
+`expand`,
+`export`,
+`external-link`,
+`external-share`,
+`eye-off`,
+`eye-on`,
+`facebook`,
+`feedback`,
+`filter`,
+`finance-accounting`,
+`fire`,
+`flash-fill`,
+`flash`,
+`forward`,
+`gift`,
+`globe`,
+`go-forward`,
+`graphic`,
+`growth`,
+`hamburger-menu`,
+`hamburger`,
+`handshake`,
+`happy`,
+`heart-line`,
+`heart`,
+`help`,
+`home`,
+`image`,
+`incognito`
+`influencer`,
+`info`,
+`label`,
+`light-bulb`,
+`like`,
+`link`,
+`listing`,
+`live-monitor`,
+`live-support`,
+`loading`,
+`lock`,
+`magic-wand`,
+`mail-opened`,
+`mail`,
+`map`,
+`market-order-back`,
+`market-order-cancel`,
+`market-order-change`,
+`market-order-check`,
+`market`,
+`meal-bag`
+`meal-order-back`
+`meal-order-cancel`
+`meal-order-return`
+`menu`
+`message`,
+`metric-status-down`,
+`metric-status-up`,
+`minus-fill`,
+`minus`,
+`mobile-filled`,
+`mobile-settings`,
+`mobile-stroke`,
+`money-transfer`,
+`money`,
+`more-horizontal`
+`more-vertical`,
+`motorcycle-check`
+`motorcycle`,
+`my-offers`,
+`normal`,
+`notification`,
+`order-back`,
+`order-box`,
+`order-cancel`,
+`order-check`,
+`order-return`,
+`order-tracking`,
+`order`,
+`ortak-ai`,
+`paper`,
+`pause-fill`,
+`pause`,
+`people`,
+`performance-data`,
+`phone-settings`,
+`phone`,
+`photo`,
+`pin`,
+`play-fill`,
+`play`,
+`plus-fill`,
+`plus`,
+`preview`,
+`print`,
+`product`,
+`profile-check`,
+`profile`,
+`rating`,
+`report`,
+`rocket`,
+`rotate`,
+`sad`,
+`save`,
+`search`,
+`seller-ads`,
+`send-mail`,
+`send`,
+`services`,
+`settings`,
+`share`,
+`shopping-bag-back`,
+`shopping-bag-cancel`,
+`shopping-bag-discount`,
+`shopping-bag-return`,
+`shopping-bag`,
+`sorting`,
+`sound-off`,
+`sound-on`,
+`star`,
+`star-fill`,
+`stop-fill`,
+`stop`,
+`store-performance`,
+`store`,
+`suitcase`,
+`support`,
+`take-away`,
+`ticket`,
+`truck`,
+`turn-back`,
+`unlock`,
+`upload`,
+`user-management`,
+`vacation-mode`,
+`wallet`,
+`warning`,
+`web-filled`,
+`web-stroke`,
+`zoom-in`,
+`zoom-out`
+
+#### color
+
+Type: `string`
+
+The color of the Icon. 
+It can be <a href="/docs/design-system-colors--page" title="title">theme color key</a> or <a href="https://reactnative.dev/docs/colors#named-colors" title="title">ColorValue</a>.
+
+#### size
+
+Type: `string`
+
+The size of the icon.
+
+`xl`,
+`l`,
+`m`,
+`s`,
+`xs`,
+`2xs`

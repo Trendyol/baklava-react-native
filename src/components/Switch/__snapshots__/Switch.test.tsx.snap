@@ -60,14 +60,16 @@ exports[`Switch should render switch correctly 1`] = `
       backgroundColor="rgba(175, 187, 202, 1)"
       collapsable={false}
       style={
-        {
-          "alignItems": "center",
-          "borderRadius": 999,
-          "flexDirection": "row",
-          "height": 24,
-          "paddingHorizontal": 2,
-          "width": 48,
-        }
+        [
+          {
+            "alignItems": "center",
+            "borderRadius": 999,
+            "flexDirection": "row",
+            "height": 24,
+            "paddingHorizontal": 2,
+            "width": 48,
+          },
+        ]
       }
       testID="switch-outer-view"
     >
