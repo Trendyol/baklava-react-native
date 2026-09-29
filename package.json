@@ -38,7 +38,7 @@
     "storybook-generate": "sb-rn-get-stories -c .rnstorybook",
     "build": "bob build",
     "pod": "cd ios; pod install; cd ..;",
-    "prepare": "bob build && husky install",
+    "prepare": "npm run storybook-generate && bob build && husky install",
     "svgr": "svgr ./src/svg-icons -d ./src/icons --icon --native --typescript --svgo-config svgo.config.js --ignore-existing --replace-attr-values '#273142={props?.fill ?? `#273142`}'"
   },
   "dependencies": {

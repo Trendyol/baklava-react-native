@@ -1,6 +1,7 @@
 import React from 'react';
+import { Animated } from 'react-native';
 import theme from '../../theme';
-import { fireEvent, render } from '../../test-utils';
+import { act, fireEvent, render } from '../../test-utils';
 import Accordion from './Accordion';
 import Button from '../Button/Button';
 import Text from '../Text/Text';
@@ -191,6 +192,37 @@ describe('Accordion', () => {
     expect(queryByTestId('accordion-animated-wrapper')).toBeNull();
   });
 
+  test('should keep the animated wrapper constrained during the opening transition', () => {
+    let rendered: ReturnType<typeof render>;
+    const openingCommitHeights: unknown[] = [];
+    const onRender = (_id: string, phase: string) => {
+      if (phase !== 'update' || !rendered) {
+        return;
+      }
+      openingCommitHeights.push(
+        rendered.getByTestId('accordion-animated-wrapper').props.style.height,
+      );
+    };
+    rendered = render(
+      <React.Profiler id="accordion" onRender={onRender}>
+        <Accordion title="Accordion Title" animated>
+          <Text>Animated Content</Text>
+        </Accordion>
+      </React.Profiler>,
+    );
+    act(() => {
+      rendered.getByTestId('accordion-content-measure').props.onLayout({
+        nativeEvent: { layout: { height: 100 } },
+      });
+    });
+    openingCommitHeights.length = 0;
+
+    fireEvent.press(rendered.getByTestId('accordion-header'));
+
+    expect(openingCommitHeights.length).toBeGreaterThan(0);
+    expect(openingCommitHeights).not.toContain(undefined);
+  });
+
   test('should keep content always mounted in animated mode', () => {
     // given
     const { getByTestId } = render(
@@ -223,5 +255,22 @@ describe('Accordion', () => {
     // then
     expect(getByTestId('accordion-chevron').props.title).toBe('arrow-up');
     expect(getByTestId('accordion-content')).toBeTruthy();
+  });
+
+  test('should stop the animation when unmounted', () => {
+    const stop = jest.fn();
+    const timingSpy = jest.spyOn(Animated, 'timing').mockReturnValue({
+      start: jest.fn(),
+      stop,
+    } as unknown as Animated.CompositeAnimation);
+    const { getByTestId, unmount } = render(
+      <Accordion title="Accordion Title" animated />,
+    );
+
+    fireEvent.press(getByTestId('accordion-header'));
+    unmount();
+
+    expect(stop).toHaveBeenCalled();
+    timingSpy.mockRestore();
   });
 });

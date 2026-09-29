@@ -69,6 +69,8 @@ const Accordion = ({
   const [isOpen, setIsOpen] = React.useState<boolean>(defaultOpen);
   const [contentHeight, setContentHeight] = React.useState(0);
   const [isAnimating, setIsAnimating] = React.useState(false);
+  const [animationTargetOpen, setAnimationTargetOpen] =
+    React.useState(defaultOpen);
   const { pressableProps, isPressed } = useIsPressed();
 
   const animatedValue = React.useRef(new Animated.Value(defaultOpen ? 1 : 0));
@@ -88,14 +90,22 @@ const Accordion = ({
       hasInitialized.current = true;
       return;
     }
+    setAnimationTargetOpen(isOpen);
     setIsAnimating(true);
-    Animated.timing(animatedValue.current, {
+    const animation = Animated.timing(animatedValue.current, {
       toValue: isOpen ? 1 : 0,
       duration: ANIMATION_DURATION,
       useNativeDriver: false,
-    }).start(() => {
-      setIsAnimating(false);
     });
+    animation.start(({ finished }) => {
+      if (finished) {
+        setIsAnimating(false);
+      }
+    });
+
+    return () => {
+      animation.stop();
+    };
   }, [isOpen, animated, animatedValue]);
 
   const handleToggle = () => {
@@ -154,7 +164,7 @@ const Accordion = ({
         </View>
       );
     }
-    const useAutoHeight = isOpen && !isAnimating;
+    const useAutoHeight = isOpen && !isAnimating && animationTargetOpen;
     return (
       <Animated.View
         style={[
