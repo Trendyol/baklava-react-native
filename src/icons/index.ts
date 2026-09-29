@@ -356,6 +356,7 @@ export { default as NewStore } from './NewStore';
 export { default as StorePerformance } from './StorePerformance';
 export { default as Suitcase } from './Suitcase';
 export { default as Support } from './Support';
+export { default as Support2 } from './Support2';
 export { default as SV } from './SV';
 export { default as SZ } from './SZ';
 export { default as TakeAway } from './TakeAway';
