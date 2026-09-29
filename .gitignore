@@ -81,6 +81,7 @@ coverage/
 lib/
 
 storybook-static/
+.rnstorybook/storybook.requires.ts
 example/package-lock.json
 
 # Husky local hooks
