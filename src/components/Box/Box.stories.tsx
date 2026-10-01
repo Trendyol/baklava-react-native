@@ -39,7 +39,9 @@ export const Shrink: Story = {
       </Text>
 
       <Box px="2xs" py="3xs">
-        <Text variant="captionText">Without Shrink / Sibling Is Pushed Out</Text>
+        <Text variant="captionText">
+          Without Shrink / Sibling Is Pushed Out
+        </Text>
         <Box
           flexDirection="row"
           alignItems="center"
