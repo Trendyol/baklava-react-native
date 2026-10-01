@@ -35,6 +35,17 @@ This is a generic component for low level layout needs. It is similar to a `div`
 <Box backgroundColor="primaryColor" />
 ```
 
+```jsx
+<Box flexDirection="row">
+  <Box shrink>
+    <Text variant="body2" truncate>
+      Long text that should not push its sibling off-screen
+    </Text>
+  </Box>
+  <Text variant="subtitle04Bold">99 TL</Text>
+</Box>
+```
+
 <br />
 
 ## Props
@@ -42,6 +53,13 @@ This is a generic component for low level layout needs. It is similar to a `div`
 #### children (required)
 
 Type: `React.ReactNode`
+
+#### shrink
+
+Type: `boolean` <br />
+Default: `false`
+
+Applies `flexShrink: 1` and `minWidth: 0` so the Box can shrink inside a row and long content, such as a `Text` with `truncate`, does not push its siblings off-screen. It is opt-in to keep existing layouts unchanged.
 
 #### style
 

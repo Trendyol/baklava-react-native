@@ -12,7 +12,11 @@ import {
   visible,
 } from '@ergenekonyigit/restyle';
 import React from 'react';
-import { TextProps as RNTextProps, Text as RNText } from 'react-native';
+import {
+  TextProps as RNTextProps,
+  TextStyle as RNTextStyle,
+  Text as RNText,
+} from 'react-native';
 import { Theme } from '../../theme';
 
 export type TextVariants = RestyleTextProps<Theme>['variant'];
@@ -30,12 +34,21 @@ const restyleFunctions = composeRestyleFunctions<Theme, RestyleProps>([
   createVariant({ themeKey: 'textVariants' }),
 ]);
 
-export type TextProps = RNTextProps & RestyleProps;
+const truncateStyle: RNTextStyle = { flexShrink: 1, minWidth: 0 };
+
+export type TextProps = RNTextProps &
+  RestyleProps & {
+    /** When true, truncates overflowing text with an ellipsis instead of wrapping. */
+    truncate?: boolean;
+  };
 
 const Text = ({
   testID,
   accessibilityLabel,
   accessible,
+  truncate = false,
+  numberOfLines,
+  ellipsizeMode,
   ...rest
 }: TextProps) => {
   const props = useRestyle(restyleFunctions, rest);
@@ -58,7 +71,15 @@ const Text = ({
     return result;
   }, [testID, accessibilityLabel, accessible]);
 
-  return <RNText {...props} {...testProps} />;
+  return (
+    <RNText
+      {...props}
+      {...testProps}
+      numberOfLines={numberOfLines ?? (truncate ? 1 : undefined)}
+      ellipsizeMode={ellipsizeMode ?? (truncate ? 'tail' : undefined)}
+      style={truncate ? [props.style, truncateStyle] : props.style}
+    />
+  );
 };
 
 export default Text;

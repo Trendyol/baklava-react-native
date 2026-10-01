@@ -47,6 +47,12 @@ Text allows the rendering of text and paragraphs within an interface. Shows styl
 <Text variant="heading2">Baklava Design System</Text>
 ```
 
+```jsx
+<Text variant="body2" truncate>
+  Long text that should be truncated with an ellipsis
+</Text>
+```
+
 <br />
 
 ## Props
@@ -66,6 +72,19 @@ Caption: _`caption`_ <br />
 #### children (required)
 
 Type: `React.ReactNode`
+
+#### truncate
+
+Type: `boolean` <br />
+Default: `false`
+
+Truncates overflowing text with an ellipsis instead of wrapping it. It applies `numberOfLines={1}` and `ellipsizeMode="tail"`, and lets the text shrink inside a row so it does not push its siblings off-screen. Both defaults can be overridden by passing `numberOfLines` or `ellipsizeMode` explicitly.
+
+```jsx
+<Text variant="body2" truncate numberOfLines={2} ellipsizeMode="middle">
+  Long text that should be truncated after two lines
+</Text>
+```
 
 #### theme
 

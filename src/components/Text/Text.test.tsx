@@ -679,5 +679,37 @@ describe('Text', () => {
     expect(textComponent.props.style[0].textDecorationLine).toBe('underline');
     expect(textComponent.props.style[0].color).toBe(theme.colors.neutralDarker);
   });
-  //
+
+  test('should apply truncate props when truncate is true', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" truncate>
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+
+    // then
+    expect(textComponent.props.numberOfLines).toBe(1);
+    expect(textComponent.props.ellipsizeMode).toBe('tail');
+    expect(textComponent.props.style).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({ flexShrink: 1, minWidth: 0 }),
+      ]),
+    );
+  });
+
+  test('should allow numberOfLines and ellipsizeMode to override truncate defaults', () => {
+    // when
+    const { getByTestId } = render(
+      <Text testID="text" truncate numberOfLines={2} ellipsizeMode="middle">
+        Test Text
+      </Text>,
+    );
+    const textComponent = getByTestId('text');
+
+    // then
+    expect(textComponent.props.numberOfLines).toBe(2);
+    expect(textComponent.props.ellipsizeMode).toBe('middle');
+  });
 });

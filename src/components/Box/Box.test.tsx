@@ -41,4 +41,14 @@ describe('Box', () => {
     const textComponent = boxComponent.children[0] as ReactTestInstance;
     expect(textComponent.props.children).toBe('testtest');
   });
+
+  test('should apply shrink styles when shrink is true', () => {
+    // when
+    const { getByTestId } = render(<Box testID="box" shrink />);
+    const boxComponent = getByTestId('box');
+
+    // then
+    expect(boxComponent.props.style[0].flexShrink).toBe(1);
+    expect(boxComponent.props.style[0].minWidth).toBe(0);
+  });
 });

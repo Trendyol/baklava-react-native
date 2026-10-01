@@ -1,9 +1,14 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import Text from './Text';
+import Box from '../Box/Box';
 import theme from '../../theme';
 
 const variantList = Object.keys(theme.textVariants);
+const ellipsizeModeList = ['head', 'middle', 'tail', 'clip'];
+
+const longText =
+  'Baklava Design System is the design system of Trendyol and this text is long enough to overflow.';
 
 const TextMeta: Meta<typeof Text> = {
   title: 'Text',
@@ -13,9 +18,17 @@ const TextMeta: Meta<typeof Text> = {
       options: variantList,
       control: { type: 'radio' },
     },
+    truncate: {
+      control: { type: 'boolean' },
+    },
+    ellipsizeMode: {
+      options: ellipsizeModeList,
+      control: { type: 'radio' },
+    },
   },
   args: {
     variant: variantList[0] as any,
+    truncate: false,
   },
 };
 
@@ -29,8 +42,13 @@ export const Basic: Story = {
       <Text p="2xs" variant="subtitle1Bold">
         Text
       </Text>
-      <Text variant={args.variant} p="2xs">
-        Sample Text
+      <Text
+        variant={args.variant}
+        truncate={args.truncate}
+        numberOfLines={args.numberOfLines}
+        ellipsizeMode={args.ellipsizeMode}
+        p="2xs">
+        {args.truncate ? longText : 'Sample Text'}
       </Text>
     </>
   ),
@@ -180,6 +198,54 @@ export const Caption: Story = {
       <Text variant="captionText" p="2xs">
         Caption / Text
       </Text>
+    </>
+  ),
+};
+
+export const Truncate: Story = {
+  render: () => (
+    <>
+      <Text p="2xs" variant="subtitle1Bold">
+        Text Truncate
+      </Text>
+
+      <Box px="2xs" py="3xs">
+        <Text variant="captionText">Default / Wraps</Text>
+        <Text variant="body2">{longText}</Text>
+      </Box>
+
+      <Box px="2xs" py="3xs">
+        <Text variant="captionText">Truncate</Text>
+        <Text variant="body2" truncate>
+          {longText}
+        </Text>
+      </Box>
+
+      <Box px="2xs" py="3xs">
+        <Text variant="captionText">Truncate / Two Lines</Text>
+        <Text variant="body2" truncate numberOfLines={2}>
+          {longText}
+        </Text>
+      </Box>
+
+      <Box px="2xs" py="3xs">
+        <Text variant="captionText">Truncate / Middle Ellipsis</Text>
+        <Text variant="body2" truncate ellipsizeMode="middle">
+          {longText}
+        </Text>
+      </Box>
+
+      <Box px="2xs" py="3xs">
+        <Text variant="captionText">Truncate / Next To A Sibling</Text>
+        <Box flexDirection="row" alignItems="center">
+          <Text variant="body2" truncate>
+            {longText}
+          </Text>
+          <Text variant="subtitle4Bold" pl="3xs">
+            99 TL
+          </Text>
+        </Box>
+      </Box>
     </>
   ),
 };

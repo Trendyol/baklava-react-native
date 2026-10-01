@@ -32,14 +32,31 @@ const restyleFunctions = composeRestyleFunctions<Theme, RestyleProps>([
   position,
 ]);
 
-export type BoxProps = RNViewProps & RestyleProps;
+export type BoxProps = RNViewProps &
+  RestyleProps & {
+    /**
+     * When true, allows this Box to shrink inside a row so long content
+     * (e.g. Text with truncate) does not push siblings off-screen.
+     * Opt-in to avoid changing existing layouts.
+     */
+    shrink?: boolean;
+  };
 
 const Box = React.forwardRef(
   (
-    { testID, accessibilityLabel, accessible, ...rest }: BoxProps,
+    {
+      testID,
+      accessibilityLabel,
+      accessible,
+      shrink = false,
+      ...rest
+    }: BoxProps,
     ref: React.ForwardedRef<RNView>,
   ) => {
-    const props = useRestyle(restyleFunctions, rest);
+    const props = useRestyle(restyleFunctions, {
+      ...(shrink ? { flexShrink: 1, minWidth: 0 } : null),
+      ...rest,
+    });
 
     const testProps = React.useMemo(() => {
       const result: RNViewProps = {
