@@ -14,6 +14,7 @@ export { default as FlagIcon } from './components/FlagIcon/FlagIcon';
 export { default as Icon } from './components/Icon/Icon';
 export { default as Image } from './components/Image/Image';
 export { default as Input } from './components/Input/Input';
+export { default as ListItem } from './components/ListItem/ListItem';
 export { default as Modal } from './components/Modal/Modal';
 export { default as Pagination } from './components/Pagination/Pagination';
 export { default as ProgressIndicator } from './components/ProgressIndicator/ProgressIndicator';
@@ -41,6 +42,11 @@ export {
 export { ToastDurations } from './components/Toast/types';
 export type { PaginationProps } from './components/Pagination/Pagination';
 export type { SearchInputProps } from './components/SearchInput/SearchInput';
+export type { ListItemProps } from './components/ListItem/types';
+export type {
+  ListItemCollapseButtonVariant,
+  ListItemCollapseButtonVisibility,
+} from './components/ListItem/types';
 export type { TooltipRef } from './components/Tooltip/types';
 export type {
   StepperProps,
