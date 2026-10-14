@@ -38,7 +38,7 @@ const textAlign = I18nManager.isRTL ? 'right' : 'left';
 const SearchInput = React.forwardRef<TextInputHandles, SearchInputProps>(
   (
     {
-      size = 'large',
+      size = 'medium',
       loading = false,
       disabled = false,
       editable = true,

@@ -13,7 +13,7 @@ describe('SearchInput', () => {
       getByTestId('search-input-box').props.style,
     );
 
-    expect(boxStyle.height).toBe(48);
+    expect(boxStyle.height).toBe(40);
     expect(boxStyle.borderRadius).toBe(theme.borderRadii.m);
     expect(boxStyle.borderColor).toBe(theme.colors.neutralLighter);
     expect(getByTestId('search-input').props.placeholder).toBe('Search');

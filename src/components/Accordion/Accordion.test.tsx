@@ -88,6 +88,16 @@ describe('Accordion', () => {
     expect(getByText('Content')).toBeTruthy();
   });
 
+  test('should have no top spacing above the content when open', () => {
+    const { getByTestId } = render(
+      <Accordion title="Accordion Title" defaultOpen>
+        <Text>Content</Text>
+      </Accordion>,
+    );
+
+    expect(getByTestId('accordion-content').props.style[0].paddingTop).toBe(0);
+  });
+
   test('should call onOpenChange and keep controlled value when open prop provided', () => {
     // given
     const mockOnOpenChange = jest.fn();
@@ -166,6 +176,7 @@ describe('Accordion', () => {
     // when
     const { getByTestId } = render(<Accordion title="Accordion Title" />);
 
+    const accordion = getByTestId('accordion');
     const header = getByTestId('accordion-header');
 
     fireEvent(header, 'pressIn');
@@ -173,6 +184,9 @@ describe('Accordion', () => {
     // then
     expect(header.props.style[0].backgroundColor).toBe(
       theme.colors.neutralLightest,
+    );
+    expect(header.props.style[0].borderRadius).toBe(
+      accordion.props.style[0].borderRadius,
     );
 
     fireEvent(header, 'pressOut');

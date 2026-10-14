@@ -65,8 +65,7 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
           {
             "alignItems": "center",
             "backgroundColor": "transparent",
-            "borderBottomColor": "#AFBBCA",
-            "borderBottomWidth": 0,
+            "borderRadius": 0,
             "flexDirection": "row",
             "gap": 8,
             "padding": 16,
@@ -290,8 +289,7 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
           {
             "alignItems": "center",
             "backgroundColor": "transparent",
-            "borderBottomColor": "#AFBBCA",
-            "borderBottomWidth": 0,
+            "borderRadius": 0,
             "flexDirection": "row",
             "gap": 8,
             "padding": 16,
