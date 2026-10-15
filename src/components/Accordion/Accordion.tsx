@@ -129,11 +129,12 @@ const Accordion = ({
     inputRange: [0, 1],
     outputRange: [0, 1],
   });
+  const accordionBorderRadius = rest.borderRadius ?? (fullWidth ? 'none' : 'l');
 
   const contentBody = (
     <Box
       px="m"
-      pt="m"
+      pt="none"
       pb="m"
       gap="m"
       testID="accordion-content"
@@ -190,7 +191,7 @@ const Accordion = ({
       borderBottomWidth={1}
       borderLeftWidth={fullWidth ? 0 : 1}
       borderRightWidth={fullWidth ? 0 : 1}
-      borderRadius={fullWidth ? 'none' : 'l'}
+      borderRadius={accordionBorderRadius}
       backgroundColor="neutralFull"
       {...rest}>
       <PressableContainer
@@ -199,8 +200,7 @@ const Accordion = ({
         onPressOut={onPressOut}
         accessibilityState={{ expanded: isOpen }}
         backgroundColor={isPressed ? 'neutralLightest' : 'transparent'}
-        borderBottomWidth={isOpen ? 1 : 0}
-        borderBottomColor="neutralLighter"
+        borderRadius={accordionBorderRadius}
         padding="m"
         flexDirection="row"
         alignItems="center"

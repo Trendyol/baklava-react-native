@@ -1,0 +1,236 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import ListItemBasic from '../assets/listitem/ListItemBasic.png';
+import ListItemPlaceholderSlots from '../assets/listitem/ListItemPlaceholderSlots.png';
+import ListItemCollapseButtonVariants from '../assets/listitem/ListItemCollapseButtonVariants.png';
+import ListItemClickableAreas from '../assets/listitem/ListItemClickableAreas.png';
+import ListItemProductDetail from '../assets/listitem/ListItemProductDetail.png';
+import ListItemVariantRows from '../assets/listitem/ListItemVariantRows.png';
+import ListItemExampleCompositions from '../assets/listitem/ListItemExampleCompositions.png';
+
+<Meta
+  title="Components/ListItem"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# ListItem
+
+ListItem is a flexible list row shell. It provides layout zones (leading, image, content, trailing), optional selection highlight, and optional collapse. Free content areas accept any React children. Image is a data URL prop — not a component slot.
+
+* Use `leading` for Checkbox, Radio, or index.
+* Pass `image` as a remote URL from list data; optional `imageBadge` for count overlay.
+* Put short content next to the image in `children`; put full-width blocks in `footer`.
+* Use `collapseContent` for expandable free content.
+* `showActionButton` renders a tappable chevron for detail navigation (`onActionPress`).
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={ListItemBasic} width="250" alt="ListItemBasic" />
+  <img src={ListItemPlaceholderSlots} width="250" alt="ListItemPlaceholderSlots" />
+  <img
+    src={ListItemCollapseButtonVariants}
+    width="250"
+    alt="ListItemCollapseButtonVariants"
+  />
+  <img src={ListItemClickableAreas} width="250" alt="ListItemClickableAreas" />
+  <img src={ListItemProductDetail} width="250" alt="ListItemProductDetail" />
+  <img src={ListItemVariantRows} width="250" alt="ListItemVariantRows" />
+  <img
+    src={ListItemExampleCompositions}
+    width="250"
+    alt="ListItemExampleCompositions"
+  />
+</div>
+
+<br/>
+<br/>
+
+## Usage
+
+```jsx
+<ListItem
+  selected={selected}
+  leading={<Checkbox checked={selected} onPress={onToggle} />}
+  image={item.imageUrl}
+  imageBadge={item.count}
+  title="Product Title"
+  showActionButton
+  onActionPress={onOpenDetail}
+  collapsible
+  expandLabel="Show More"
+  collapseLabel="Collapse"
+  collapseButtonVariant="filled"
+  footer={<Text>Footer content</Text>}
+  collapseContent={<Text>Hidden details</Text>}>
+  <Text variant="body3">Detail next to image</Text>
+</ListItem>
+```
+
+```jsx
+// Custom collapse title + ghost button (no background)
+<ListItem
+  image={item.imageUrl}
+  collapsible
+  expandLabel="6 Varyantı Göster"
+  collapseLabel="Varyantları Gizle"
+  collapseButtonVariant="ghost"
+  footer={<PricingBlock />}
+  collapseContent={<VariantsList />}>
+  <Badge text="Önerilen" />
+  <Text>{item.title}</Text>
+</ListItem>
+```
+
+<br />
+
+## Props
+
+#### leading
+
+Type: `React.ReactNode`
+
+Leading slot (Checkbox, Radio, index, etc.).
+
+#### children
+
+Type: `React.ReactNode`
+
+Free content area under the title / next to the image. Keep this to short header content; put full-width blocks in `footer`.
+
+#### trailing
+
+Type: `React.ReactNode`
+
+Trailing slot. Overrides `showActionButton` when provided.
+
+#### footer
+
+Type: `React.ReactNode`
+
+Always-visible full-width free content below the main row.
+
+#### collapseContent
+
+Type: `React.ReactNode`
+
+Content shown only when collapse is expanded.
+
+#### image
+
+Type: `string`
+
+Remote image URL from list data. Not a component slot. Renders a fixed-size thumbnail when set.
+
+#### imageBadge
+
+Type: `number | string`
+
+Optional count badge overlay on the image.
+
+#### onImagePress
+
+Type: `() => void`
+
+Image press callback (e.g. open preview). Modal is owned by the consumer.
+
+#### selected
+
+Type: `boolean`
+
+Selected row background highlight.
+
+#### onPress
+
+Type: `() => void`
+
+Body / content press.
+
+#### disabled
+
+Type: `boolean`
+
+Disables interactions and reduces opacity.
+
+#### collapsible
+
+Type: `boolean`
+
+Enables the collapse toggle and `collapseContent` visibility.
+
+#### defaultExpanded
+
+Type: `boolean`
+
+Initial expanded state (uncontrolled).
+
+#### expanded
+
+Type: `boolean`
+
+Controlled expanded state.
+
+#### onExpandedChange
+
+Type: `(expanded: boolean) => void`
+
+Callback when expand/collapse changes.
+
+#### expandLabel
+
+Type: `string`
+
+Label when collapsed. Default: `Show More`.
+
+#### collapseLabel
+
+Type: `string`
+
+Label when expanded. Default: `Collapse`.
+
+#### collapseButtonVariant
+
+Type: `'filled' | 'ghost'`
+
+* `filled`: light gray background (default)
+* `ghost`: no background
+
+#### collapseButtonVisibility
+
+Type: `'always' | 'expanded'`
+
+* `always`: show toggle when collapsed and expanded (default)
+* `expanded`: show toggle only when open
+
+#### title
+
+Type: `string`
+
+Optional title rendered above `children`.
+
+#### showActionButton
+
+Type: `boolean`
+
+Renders the default trailing chevron. Always tappable for detail navigation.
+
+#### onActionPress
+
+Type: `() => void`
+
+Trailing / action button press. Falls back to `onPress` if omitted.
+
+#### testID
+
+Type: `string`
+
+Optional test id prefix. Default value is `list-item`.

@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem should render basic ListItem correctly 1`] = `
+<View
+  accessibilityLabel="list-item"
+  accessibilityState={
+    {
+      "disabled": false,
+      "selected": false,
+    }
+  }
+  accessible={true}
+  style={
+    [
+      {
+        "backgroundColor": "#FFFFFF",
+        "gap": 16,
+        "opacity": 1,
+        "padding": 16,
+      },
+    ]
+  }
+  testID="list-item"
+>
+  <View
+    accessibilityLabel="list-item-row"
+    accessible={true}
+    style={
+      [
+        {
+          "alignItems": "flex-start",
+          "flexDirection": "row",
+          "gap": 16,
+        },
+      ]
+    }
+    testID="list-item-row"
+  >
+    <View
+      accessibilityLabel="list-item-content"
+      accessible={true}
+      style={
+        [
+          {
+            "flex": 1,
+            "flexShrink": 1,
+            "gap": 8,
+            "minWidth": 0,
+          },
+        ]
+      }
+      testID="list-item-content"
+    >
+      <Text
+        accessibilityLabel="list-item-title"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Medium",
+              "fontSize": 14,
+              "fontWeight": "500",
+              "lineHeight": 16,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="list-item-title"
+      >
+        Product Title
+      </Text>
+      <Text
+        accessible={false}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Regular",
+              "fontSize": 14,
+              "textAlign": "left",
+            },
+          ]
+        }
+      >
+        Detail
+      </Text>
+    </View>
+  </View>
+</View>
+`;

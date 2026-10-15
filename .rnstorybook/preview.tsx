@@ -54,6 +54,7 @@ export const parameters: Parameters = {
       // Required for the nested arrays below to sort stories inside a component.
       includeNames: true,
       order: [
+        'Accordion',
         'ActionBar',
         [
           'Single',
