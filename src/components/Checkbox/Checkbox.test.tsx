@@ -228,4 +228,75 @@ describe('Checkbox', () => {
     // then
     expect(icon).toBeFalsy();
   });
+
+  test('should render error unchecked tickbox with danger border', () => {
+    const { getByTestId } = render(
+      <Checkbox checked={false} error label="label" />,
+    );
+    const tickbox = getByTestId('tickbox');
+
+    expect(tickbox.props.style[1][0].borderColor).toBe(
+      theme.colors.dangerColor,
+    );
+  });
+
+  test('should render helper text with danger color when error', () => {
+    const { getByTestId } = render(
+      <Checkbox
+        checked={false}
+        error
+        helperText="You must agree before submitting."
+      />,
+    );
+    const helperText = getByTestId('helper-text');
+
+    expect(helperText.props.children).toBe('You must agree before submitting.');
+    expect(helperText.props.style[0].color).toBe(theme.colors.dangerKey);
+  });
+
+  test('should not render helper text when error without helperText', () => {
+    const { queryByTestId } = render(<Checkbox checked={false} error />);
+
+    expect(queryByTestId('helper-text')).toBeFalsy();
+  });
+
+  test('should ignore error styling when checked', () => {
+    const { getByTestId } = render(
+      <Checkbox checked error helperText="message" />,
+    );
+    const tickbox = getByTestId('tickbox');
+
+    expect(tickbox.props.style[1][0].borderColor).toBe(theme.colors.primaryKey);
+    expect(getByTestId('helper-text').props.style[0].color).toBe(
+      theme.colors.neutralDark,
+    );
+  });
+
+  test('should ignore error styling when disabled', () => {
+    const { getByTestId, queryByTestId } = render(
+      <Checkbox
+        checked={false}
+        disabled
+        error
+        helperText="message"
+        label="label"
+      />,
+    );
+    const tickbox = getByTestId('tickbox');
+
+    expect(tickbox.props.style[1][0].backgroundColor).toBe(
+      theme.colors.primaryBackground,
+    );
+    expect(queryByTestId('helper-text')).toBeFalsy();
+  });
+
+  test('should render helper text with neutral color when not in error state', () => {
+    const { getByTestId } = render(
+      <Checkbox checked={false} helperText="Optional helper text" />,
+    );
+
+    expect(getByTestId('helper-text').props.style[0].color).toBe(
+      theme.colors.neutralDark,
+    );
+  });
 });

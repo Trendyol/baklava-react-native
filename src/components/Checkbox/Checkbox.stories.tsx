@@ -203,3 +203,121 @@ export const CheckboxWithFlagIcon: Story = {
     );
   },
 };
+
+const GROUP_ERROR_MESSAGE = 'You must select at least 1 item.';
+const TERMS_ERROR_MESSAGE = 'You must agree before submitting.';
+
+export const RequiredCheckbox: Story = {
+  name: 'Required Checkbox',
+  render: () => {
+    const [termsAccepted, setTermsAccepted] = React.useState(false);
+    const [termsSubmitted, setTermsSubmitted] = React.useState(false);
+
+    const [groupSelectedItems, setGroupSelectedItems] = React.useState<
+      string[]
+    >([]);
+    const [groupValidationTriggered, setGroupValidationTriggered] =
+      React.useState(true);
+
+    const termsHasError = termsSubmitted && !termsAccepted;
+    const groupHasError =
+      groupValidationTriggered && groupSelectedItems.length === 0;
+
+    const toggleGroupItem = (id: string) => {
+      setGroupSelectedItems(prev =>
+        prev.includes(id) ? prev.filter(item => item !== id) : [...prev, id],
+      );
+    };
+
+    return (
+      <>
+        <Text p="2xs" variant="subtitle01Bold">
+          Required Checkbox
+        </Text>
+
+        <Box px="m" py="2xs">
+          <Text py="xs" variant="subtitle02Medium">
+            Single checkbox (terms):
+          </Text>
+          <Checkbox
+            checked={termsAccepted}
+            error={termsHasError}
+            helperText={termsHasError ? TERMS_ERROR_MESSAGE : undefined}
+            label="Agree to terms and conditions"
+            onPress={() => setTermsAccepted(!termsAccepted)}
+          />
+          <Box height={8} />
+          <Text
+            variant="subtitle04Regular"
+            color="primaryKey"
+            onPress={() => setTermsSubmitted(true)}>
+            Validate terms
+          </Text>
+        </Box>
+
+        <Box px="m" py="xs">
+          <Text py="xs" variant="subtitle02Medium">
+            Error states (static):
+          </Text>
+          <Checkbox
+            checked={false}
+            error
+            helperText={TERMS_ERROR_MESSAGE}
+            label="Agree to terms and conditions"
+          />
+          <Box height={12} />
+          <Checkbox
+            checked={false}
+            error
+            helperText="Helper text"
+            label="Label"
+            flagIcon="TR"
+          />
+        </Box>
+
+        <Box height={24} />
+
+        <Box px="m" py="2xs">
+          <Text py="xs" variant="subtitle02Medium">
+            {GROUP_ERROR_MESSAGE}
+          </Text>
+          <Checkbox
+            checked={groupSelectedItems.includes('1')}
+            error={groupHasError}
+            label="Item 1"
+            onPress={() => toggleGroupItem('1')}
+          />
+          <Box height={12} />
+          <Checkbox
+            checked={groupSelectedItems.includes('2')}
+            error={groupHasError}
+            label="Item 2"
+            onPress={() => toggleGroupItem('2')}
+          />
+          <Box height={12} />
+          <Checkbox
+            checked={groupSelectedItems.includes('3')}
+            error={groupHasError}
+            label="Item 3"
+            onPress={() => toggleGroupItem('3')}
+          />
+          {groupHasError ? (
+            <Text marginTop="3xs" variant="subtitle04Regular" color="dangerKey">
+              {GROUP_ERROR_MESSAGE}
+            </Text>
+          ) : null}
+          <Box height={8} />
+          <Text
+            variant="subtitle04Regular"
+            color="primaryKey"
+            onPress={() => {
+              setGroupSelectedItems([]);
+              setGroupValidationTriggered(true);
+            }}>
+            Reset demo
+          </Text>
+        </Box>
+      </>
+    );
+  },
+};

@@ -1,6 +1,7 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 import CheckboxCases from '../assets/checkbox/checkboxCases.png';
 import CheckboxWithFlagIcon from '../assets/checkbox/checkboxWithFlagIcon.png';
+import CheckboxRequired from '../assets/checkbox/checkboxRequired.png';
 
 <Meta
   title="Components/Checkbox"
@@ -26,6 +27,7 @@ Checkboxes allow users to select one or more items from a set.
   }}>
   <img src={CheckboxCases} width="250" alt="CheckboxCases" />
   <img src={CheckboxWithFlagIcon} width="250" alt="CheckboxWithFlagIcon" />
+  <img src={CheckboxRequired} width="250" alt="CheckboxRequired" />
 </div>
 
 <br/>
@@ -34,8 +36,58 @@ Checkboxes allow users to select one or more items from a set.
 ## Usage
 
 ```jsx
-<Checkbox disable={false} checked={true} indeterminate={true} label="lorem ipsum" flagIcon="TR" />
+<Checkbox
+  checked={true}
+  indeterminate={false}
+  disabled={false}
+  label="lorem ipsum"
+  flagIcon="TR"
+  onPress={() => {}}
+/>
 ```
+
+### Validation (required)
+
+Use `error` for invalid state (red tickbox border when unchecked). Use `helperText` for the message below the checkbox; text color is `dangerKey` when in error state, otherwise neutral helper color.
+
+```jsx
+<Checkbox
+  checked={agreed}
+  error={showError && !agreed}
+  helperText={showError && !agreed ? 'You must agree before submitting.' : undefined}
+  label="Agree to terms and conditions"
+  onPress={() => setAgreed(!agreed)}
+/>
+```
+
+When `checked` is true, `indeterminate` is true, or `disabled` is true, error styling on the tickbox is not applied. If both `error` and `disabled` are true, helper text is hidden.
+
+### Checkbox group validation
+
+For “select at least one item”, set `error` on each checkbox when the group is invalid, and render a single error message once below the group (not on every checkbox):
+
+```jsx
+const groupInvalid = submitted && selectedIds.length === 0;
+
+<>
+  {items.map(item => (
+    <Checkbox
+      key={item.id}
+      checked={selectedIds.includes(item.id)}
+      error={groupInvalid}
+      label={item.label}
+      onPress={() => toggle(item.id)}
+    />
+  ))}
+  {groupInvalid ? (
+    <Text variant="subtitle04Regular" color="dangerKey">
+      You must select at least 1 item.
+    </Text>
+  ) : null}
+</>
+```
+
+See Storybook: **Checkbox → Required Checkbox**.
 
 <br />
 
@@ -51,25 +103,37 @@ Use selected state when the item is selected.
 
 Type: `boolean`
 
-Use the indeterminate state when the checkbox contains a sublist of selections, some of which are selected, and some unselected.
+Use the indeterminate state when the checkbox contains a sublist of selections, some of which are selected, and some unselected. The minus icon is shown only when `checked` is true and `indeterminate` is true.
 
 ### label
 
 Type: `string`
 
-The label defines a caption for an text.
+The label defines a caption for text next to the checkbox.
 
 ### flagIcon
 
 Type: `string`
 
-Checkbox flag icon.
+Optional flag icon name (for example `TR`, `DE`) shown between the tickbox and the label.
 
 ### disabled
 
 Type: `boolean`
 
 If true, user won't be able to interact with the component.
+
+### error
+
+Type: `boolean`
+
+When true and the checkbox is unchecked and not disabled, the tickbox uses the error border (danger color).
+
+### helperText
+
+Type: `string`
+
+Optional text below the checkbox row. Shown in danger color when the checkbox is in error state; otherwise shown as neutral helper text. Omitted when `error` and `disabled` are both true.
 
 #### style
 

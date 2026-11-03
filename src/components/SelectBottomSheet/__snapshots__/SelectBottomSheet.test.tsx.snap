@@ -343,82 +343,93 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                         testID="touchable-selectBottomSheet-1"
                       >
                         <View
-                          accessibilityState={
-                            {
-                              "busy": undefined,
-                              "checked": undefined,
-                              "disabled": false,
-                              "expanded": undefined,
-                              "selected": undefined,
-                            }
-                          }
-                          accessibilityValue={
-                            {
-                              "max": undefined,
-                              "min": undefined,
-                              "now": undefined,
-                              "text": undefined,
-                            }
-                          }
-                          accessible={true}
-                          collapsable={false}
-                          focusable={true}
-                          onClick={[Function]}
-                          onResponderGrant={[Function]}
-                          onResponderMove={[Function]}
-                          onResponderRelease={[Function]}
-                          onResponderTerminate={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
+                          accessible={false}
                           style={
-                            {
-                              "alignSelf": "flex-start",
-                              "flexDirection": "row",
-                              "opacity": 1,
-                            }
+                            [
+                              {
+                                "alignSelf": "flex-start",
+                              },
+                            ]
                           }
-                          testID="checkbox-selectBottomSheet-1"
                         >
                           <View
-                            accessibilityLabel="tickbox"
+                            accessibilityState={
+                              {
+                                "busy": undefined,
+                                "checked": undefined,
+                                "disabled": false,
+                                "expanded": undefined,
+                                "selected": undefined,
+                              }
+                            }
+                            accessibilityValue={
+                              {
+                                "max": undefined,
+                                "min": undefined,
+                                "now": undefined,
+                                "text": undefined,
+                              }
+                            }
                             accessible={true}
+                            collapsable={false}
+                            focusable={true}
+                            onClick={[Function]}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
                             style={
-                              [
-                                {},
+                              {
+                                "alignSelf": "flex-start",
+                                "flexDirection": "row",
+                                "opacity": 1,
+                              }
+                            }
+                            testID="checkbox-selectBottomSheet-1"
+                          >
+                            <View
+                              accessibilityLabel="tickbox"
+                              accessible={true}
+                              style={
+                                [
+                                  {},
+                                  [
+                                    {
+                                      "alignItems": "center",
+                                      "backgroundColor": "#FFFFFF",
+                                      "borderColor": "#AFBBCA",
+                                      "borderRadius": 2,
+                                      "borderWidth": 1,
+                                      "height": 16,
+                                      "justifyContent": "center",
+                                      "width": 16,
+                                    },
+                                  ],
+                                ]
+                              }
+                              testID="tickbox"
+                            />
+                            <Text
+                              accessibilityLabel="label"
+                              accessible={true}
+                              style={
                                 [
                                   {
-                                    "alignItems": "center",
-                                    "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#AFBBCA",
-                                    "borderRadius": 2,
-                                    "borderWidth": 1,
-                                    "height": 16,
-                                    "justifyContent": "center",
-                                    "width": 16,
+                                    "color": "#273142",
+                                    "fontFamily": "Rubik-Regular",
+                                    "fontSize": 14,
+                                    "marginLeft": 8,
+                                    "textAlign": "left",
                                   },
-                                ],
-                              ]
-                            }
-                            testID="tickbox"
-                          />
-                          <Text
-                            accessibilityLabel="label"
-                            accessible={true}
-                            style={
-                              [
-                                {
-                                  "color": "#273142",
-                                  "fontFamily": "Rubik-Regular",
-                                  "fontSize": 14,
-                                  "marginLeft": 8,
-                                  "textAlign": "left",
-                                },
-                              ]
-                            }
-                            testID="label"
-                          >
-                            Option 1
-                          </Text>
+                                ]
+                              }
+                              testID="label"
+                            >
+                              Option 1
+                            </Text>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -484,82 +495,93 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                         testID="touchable-selectBottomSheet-2"
                       >
                         <View
-                          accessibilityState={
-                            {
-                              "busy": undefined,
-                              "checked": undefined,
-                              "disabled": false,
-                              "expanded": undefined,
-                              "selected": undefined,
-                            }
-                          }
-                          accessibilityValue={
-                            {
-                              "max": undefined,
-                              "min": undefined,
-                              "now": undefined,
-                              "text": undefined,
-                            }
-                          }
-                          accessible={true}
-                          collapsable={false}
-                          focusable={true}
-                          onClick={[Function]}
-                          onResponderGrant={[Function]}
-                          onResponderMove={[Function]}
-                          onResponderRelease={[Function]}
-                          onResponderTerminate={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
+                          accessible={false}
                           style={
-                            {
-                              "alignSelf": "flex-start",
-                              "flexDirection": "row",
-                              "opacity": 1,
-                            }
+                            [
+                              {
+                                "alignSelf": "flex-start",
+                              },
+                            ]
                           }
-                          testID="checkbox-selectBottomSheet-2"
                         >
                           <View
-                            accessibilityLabel="tickbox"
+                            accessibilityState={
+                              {
+                                "busy": undefined,
+                                "checked": undefined,
+                                "disabled": false,
+                                "expanded": undefined,
+                                "selected": undefined,
+                              }
+                            }
+                            accessibilityValue={
+                              {
+                                "max": undefined,
+                                "min": undefined,
+                                "now": undefined,
+                                "text": undefined,
+                              }
+                            }
                             accessible={true}
+                            collapsable={false}
+                            focusable={true}
+                            onClick={[Function]}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
                             style={
-                              [
-                                {},
+                              {
+                                "alignSelf": "flex-start",
+                                "flexDirection": "row",
+                                "opacity": 1,
+                              }
+                            }
+                            testID="checkbox-selectBottomSheet-2"
+                          >
+                            <View
+                              accessibilityLabel="tickbox"
+                              accessible={true}
+                              style={
+                                [
+                                  {},
+                                  [
+                                    {
+                                      "alignItems": "center",
+                                      "backgroundColor": "#FFFFFF",
+                                      "borderColor": "#AFBBCA",
+                                      "borderRadius": 2,
+                                      "borderWidth": 1,
+                                      "height": 16,
+                                      "justifyContent": "center",
+                                      "width": 16,
+                                    },
+                                  ],
+                                ]
+                              }
+                              testID="tickbox"
+                            />
+                            <Text
+                              accessibilityLabel="label"
+                              accessible={true}
+                              style={
                                 [
                                   {
-                                    "alignItems": "center",
-                                    "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#AFBBCA",
-                                    "borderRadius": 2,
-                                    "borderWidth": 1,
-                                    "height": 16,
-                                    "justifyContent": "center",
-                                    "width": 16,
+                                    "color": "#273142",
+                                    "fontFamily": "Rubik-Regular",
+                                    "fontSize": 14,
+                                    "marginLeft": 8,
+                                    "textAlign": "left",
                                   },
-                                ],
-                              ]
-                            }
-                            testID="tickbox"
-                          />
-                          <Text
-                            accessibilityLabel="label"
-                            accessible={true}
-                            style={
-                              [
-                                {
-                                  "color": "#273142",
-                                  "fontFamily": "Rubik-Regular",
-                                  "fontSize": 14,
-                                  "marginLeft": 8,
-                                  "textAlign": "left",
-                                },
-                              ]
-                            }
-                            testID="label"
-                          >
-                            Option 2
-                          </Text>
+                                ]
+                              }
+                              testID="label"
+                            >
+                              Option 2
+                            </Text>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -625,82 +647,93 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                         testID="touchable-selectBottomSheet-3"
                       >
                         <View
-                          accessibilityState={
-                            {
-                              "busy": undefined,
-                              "checked": undefined,
-                              "disabled": false,
-                              "expanded": undefined,
-                              "selected": undefined,
-                            }
-                          }
-                          accessibilityValue={
-                            {
-                              "max": undefined,
-                              "min": undefined,
-                              "now": undefined,
-                              "text": undefined,
-                            }
-                          }
-                          accessible={true}
-                          collapsable={false}
-                          focusable={true}
-                          onClick={[Function]}
-                          onResponderGrant={[Function]}
-                          onResponderMove={[Function]}
-                          onResponderRelease={[Function]}
-                          onResponderTerminate={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
+                          accessible={false}
                           style={
-                            {
-                              "alignSelf": "flex-start",
-                              "flexDirection": "row",
-                              "opacity": 1,
-                            }
+                            [
+                              {
+                                "alignSelf": "flex-start",
+                              },
+                            ]
                           }
-                          testID="checkbox-selectBottomSheet-3"
                         >
                           <View
-                            accessibilityLabel="tickbox"
+                            accessibilityState={
+                              {
+                                "busy": undefined,
+                                "checked": undefined,
+                                "disabled": false,
+                                "expanded": undefined,
+                                "selected": undefined,
+                              }
+                            }
+                            accessibilityValue={
+                              {
+                                "max": undefined,
+                                "min": undefined,
+                                "now": undefined,
+                                "text": undefined,
+                              }
+                            }
                             accessible={true}
+                            collapsable={false}
+                            focusable={true}
+                            onClick={[Function]}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
                             style={
-                              [
-                                {},
+                              {
+                                "alignSelf": "flex-start",
+                                "flexDirection": "row",
+                                "opacity": 1,
+                              }
+                            }
+                            testID="checkbox-selectBottomSheet-3"
+                          >
+                            <View
+                              accessibilityLabel="tickbox"
+                              accessible={true}
+                              style={
+                                [
+                                  {},
+                                  [
+                                    {
+                                      "alignItems": "center",
+                                      "backgroundColor": "#FFFFFF",
+                                      "borderColor": "#AFBBCA",
+                                      "borderRadius": 2,
+                                      "borderWidth": 1,
+                                      "height": 16,
+                                      "justifyContent": "center",
+                                      "width": 16,
+                                    },
+                                  ],
+                                ]
+                              }
+                              testID="tickbox"
+                            />
+                            <Text
+                              accessibilityLabel="label"
+                              accessible={true}
+                              style={
                                 [
                                   {
-                                    "alignItems": "center",
-                                    "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#AFBBCA",
-                                    "borderRadius": 2,
-                                    "borderWidth": 1,
-                                    "height": 16,
-                                    "justifyContent": "center",
-                                    "width": 16,
+                                    "color": "#273142",
+                                    "fontFamily": "Rubik-Regular",
+                                    "fontSize": 14,
+                                    "marginLeft": 8,
+                                    "textAlign": "left",
                                   },
-                                ],
-                              ]
-                            }
-                            testID="tickbox"
-                          />
-                          <Text
-                            accessibilityLabel="label"
-                            accessible={true}
-                            style={
-                              [
-                                {
-                                  "color": "#273142",
-                                  "fontFamily": "Rubik-Regular",
-                                  "fontSize": 14,
-                                  "marginLeft": 8,
-                                  "textAlign": "left",
-                                },
-                              ]
-                            }
-                            testID="label"
-                          >
-                            Option 3
-                          </Text>
+                                ]
+                              }
+                              testID="label"
+                            >
+                              Option 3
+                            </Text>
+                          </View>
                         </View>
                       </View>
                     </View>
@@ -1061,82 +1094,93 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                         testID="touchable-selectBottomSheet-1"
                       >
                         <View
-                          accessibilityState={
-                            {
-                              "busy": undefined,
-                              "checked": undefined,
-                              "disabled": false,
-                              "expanded": undefined,
-                              "selected": undefined,
-                            }
-                          }
-                          accessibilityValue={
-                            {
-                              "max": undefined,
-                              "min": undefined,
-                              "now": undefined,
-                              "text": undefined,
-                            }
-                          }
-                          accessible={true}
-                          collapsable={false}
-                          focusable={true}
-                          onClick={[Function]}
-                          onResponderGrant={[Function]}
-                          onResponderMove={[Function]}
-                          onResponderRelease={[Function]}
-                          onResponderTerminate={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
+                          accessible={false}
                           style={
-                            {
-                              "alignSelf": "flex-start",
-                              "flexDirection": "row",
-                              "opacity": 1,
-                            }
+                            [
+                              {
+                                "alignSelf": "flex-start",
+                              },
+                            ]
                           }
-                          testID="checkbox-selectBottomSheet-1"
                         >
                           <View
-                            accessibilityLabel="tickbox"
+                            accessibilityState={
+                              {
+                                "busy": undefined,
+                                "checked": undefined,
+                                "disabled": false,
+                                "expanded": undefined,
+                                "selected": undefined,
+                              }
+                            }
+                            accessibilityValue={
+                              {
+                                "max": undefined,
+                                "min": undefined,
+                                "now": undefined,
+                                "text": undefined,
+                              }
+                            }
                             accessible={true}
+                            collapsable={false}
+                            focusable={true}
+                            onClick={[Function]}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
                             style={
-                              [
-                                {},
+                              {
+                                "alignSelf": "flex-start",
+                                "flexDirection": "row",
+                                "opacity": 1,
+                              }
+                            }
+                            testID="checkbox-selectBottomSheet-1"
+                          >
+                            <View
+                              accessibilityLabel="tickbox"
+                              accessible={true}
+                              style={
+                                [
+                                  {},
+                                  [
+                                    {
+                                      "alignItems": "center",
+                                      "backgroundColor": "#FFFFFF",
+                                      "borderColor": "#AFBBCA",
+                                      "borderRadius": 2,
+                                      "borderWidth": 1,
+                                      "height": 16,
+                                      "justifyContent": "center",
+                                      "width": 16,
+                                    },
+                                  ],
+                                ]
+                              }
+                              testID="tickbox"
+                            />
+                            <Text
+                              accessibilityLabel="label"
+                              accessible={true}
+                              style={
                                 [
                                   {
-                                    "alignItems": "center",
-                                    "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#AFBBCA",
-                                    "borderRadius": 2,
-                                    "borderWidth": 1,
-                                    "height": 16,
-                                    "justifyContent": "center",
-                                    "width": 16,
+                                    "color": "#273142",
+                                    "fontFamily": "Rubik-Regular",
+                                    "fontSize": 14,
+                                    "marginLeft": 8,
+                                    "textAlign": "left",
                                   },
-                                ],
-                              ]
-                            }
-                            testID="tickbox"
-                          />
-                          <Text
-                            accessibilityLabel="label"
-                            accessible={true}
-                            style={
-                              [
-                                {
-                                  "color": "#273142",
-                                  "fontFamily": "Rubik-Regular",
-                                  "fontSize": 14,
-                                  "marginLeft": 8,
-                                  "textAlign": "left",
-                                },
-                              ]
-                            }
-                            testID="label"
-                          >
-                            Option 1
-                          </Text>
+                                ]
+                              }
+                              testID="label"
+                            >
+                              Option 1
+                            </Text>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -1202,82 +1246,93 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                         testID="touchable-selectBottomSheet-2"
                       >
                         <View
-                          accessibilityState={
-                            {
-                              "busy": undefined,
-                              "checked": undefined,
-                              "disabled": false,
-                              "expanded": undefined,
-                              "selected": undefined,
-                            }
-                          }
-                          accessibilityValue={
-                            {
-                              "max": undefined,
-                              "min": undefined,
-                              "now": undefined,
-                              "text": undefined,
-                            }
-                          }
-                          accessible={true}
-                          collapsable={false}
-                          focusable={true}
-                          onClick={[Function]}
-                          onResponderGrant={[Function]}
-                          onResponderMove={[Function]}
-                          onResponderRelease={[Function]}
-                          onResponderTerminate={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
+                          accessible={false}
                           style={
-                            {
-                              "alignSelf": "flex-start",
-                              "flexDirection": "row",
-                              "opacity": 1,
-                            }
+                            [
+                              {
+                                "alignSelf": "flex-start",
+                              },
+                            ]
                           }
-                          testID="checkbox-selectBottomSheet-2"
                         >
                           <View
-                            accessibilityLabel="tickbox"
+                            accessibilityState={
+                              {
+                                "busy": undefined,
+                                "checked": undefined,
+                                "disabled": false,
+                                "expanded": undefined,
+                                "selected": undefined,
+                              }
+                            }
+                            accessibilityValue={
+                              {
+                                "max": undefined,
+                                "min": undefined,
+                                "now": undefined,
+                                "text": undefined,
+                              }
+                            }
                             accessible={true}
+                            collapsable={false}
+                            focusable={true}
+                            onClick={[Function]}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
                             style={
-                              [
-                                {},
+                              {
+                                "alignSelf": "flex-start",
+                                "flexDirection": "row",
+                                "opacity": 1,
+                              }
+                            }
+                            testID="checkbox-selectBottomSheet-2"
+                          >
+                            <View
+                              accessibilityLabel="tickbox"
+                              accessible={true}
+                              style={
+                                [
+                                  {},
+                                  [
+                                    {
+                                      "alignItems": "center",
+                                      "backgroundColor": "#FFFFFF",
+                                      "borderColor": "#AFBBCA",
+                                      "borderRadius": 2,
+                                      "borderWidth": 1,
+                                      "height": 16,
+                                      "justifyContent": "center",
+                                      "width": 16,
+                                    },
+                                  ],
+                                ]
+                              }
+                              testID="tickbox"
+                            />
+                            <Text
+                              accessibilityLabel="label"
+                              accessible={true}
+                              style={
                                 [
                                   {
-                                    "alignItems": "center",
-                                    "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#AFBBCA",
-                                    "borderRadius": 2,
-                                    "borderWidth": 1,
-                                    "height": 16,
-                                    "justifyContent": "center",
-                                    "width": 16,
+                                    "color": "#273142",
+                                    "fontFamily": "Rubik-Regular",
+                                    "fontSize": 14,
+                                    "marginLeft": 8,
+                                    "textAlign": "left",
                                   },
-                                ],
-                              ]
-                            }
-                            testID="tickbox"
-                          />
-                          <Text
-                            accessibilityLabel="label"
-                            accessible={true}
-                            style={
-                              [
-                                {
-                                  "color": "#273142",
-                                  "fontFamily": "Rubik-Regular",
-                                  "fontSize": 14,
-                                  "marginLeft": 8,
-                                  "textAlign": "left",
-                                },
-                              ]
-                            }
-                            testID="label"
-                          >
-                            Option 2
-                          </Text>
+                                ]
+                              }
+                              testID="label"
+                            >
+                              Option 2
+                            </Text>
+                          </View>
                         </View>
                       </View>
                       <View
@@ -1343,82 +1398,93 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                         testID="touchable-selectBottomSheet-3"
                       >
                         <View
-                          accessibilityState={
-                            {
-                              "busy": undefined,
-                              "checked": undefined,
-                              "disabled": false,
-                              "expanded": undefined,
-                              "selected": undefined,
-                            }
-                          }
-                          accessibilityValue={
-                            {
-                              "max": undefined,
-                              "min": undefined,
-                              "now": undefined,
-                              "text": undefined,
-                            }
-                          }
-                          accessible={true}
-                          collapsable={false}
-                          focusable={true}
-                          onClick={[Function]}
-                          onResponderGrant={[Function]}
-                          onResponderMove={[Function]}
-                          onResponderRelease={[Function]}
-                          onResponderTerminate={[Function]}
-                          onResponderTerminationRequest={[Function]}
-                          onStartShouldSetResponder={[Function]}
+                          accessible={false}
                           style={
-                            {
-                              "alignSelf": "flex-start",
-                              "flexDirection": "row",
-                              "opacity": 1,
-                            }
+                            [
+                              {
+                                "alignSelf": "flex-start",
+                              },
+                            ]
                           }
-                          testID="checkbox-selectBottomSheet-3"
                         >
                           <View
-                            accessibilityLabel="tickbox"
+                            accessibilityState={
+                              {
+                                "busy": undefined,
+                                "checked": undefined,
+                                "disabled": false,
+                                "expanded": undefined,
+                                "selected": undefined,
+                              }
+                            }
+                            accessibilityValue={
+                              {
+                                "max": undefined,
+                                "min": undefined,
+                                "now": undefined,
+                                "text": undefined,
+                              }
+                            }
                             accessible={true}
+                            collapsable={false}
+                            focusable={true}
+                            onClick={[Function]}
+                            onResponderGrant={[Function]}
+                            onResponderMove={[Function]}
+                            onResponderRelease={[Function]}
+                            onResponderTerminate={[Function]}
+                            onResponderTerminationRequest={[Function]}
+                            onStartShouldSetResponder={[Function]}
                             style={
-                              [
-                                {},
+                              {
+                                "alignSelf": "flex-start",
+                                "flexDirection": "row",
+                                "opacity": 1,
+                              }
+                            }
+                            testID="checkbox-selectBottomSheet-3"
+                          >
+                            <View
+                              accessibilityLabel="tickbox"
+                              accessible={true}
+                              style={
+                                [
+                                  {},
+                                  [
+                                    {
+                                      "alignItems": "center",
+                                      "backgroundColor": "#FFFFFF",
+                                      "borderColor": "#AFBBCA",
+                                      "borderRadius": 2,
+                                      "borderWidth": 1,
+                                      "height": 16,
+                                      "justifyContent": "center",
+                                      "width": 16,
+                                    },
+                                  ],
+                                ]
+                              }
+                              testID="tickbox"
+                            />
+                            <Text
+                              accessibilityLabel="label"
+                              accessible={true}
+                              style={
                                 [
                                   {
-                                    "alignItems": "center",
-                                    "backgroundColor": "#FFFFFF",
-                                    "borderColor": "#AFBBCA",
-                                    "borderRadius": 2,
-                                    "borderWidth": 1,
-                                    "height": 16,
-                                    "justifyContent": "center",
-                                    "width": 16,
+                                    "color": "#273142",
+                                    "fontFamily": "Rubik-Regular",
+                                    "fontSize": 14,
+                                    "marginLeft": 8,
+                                    "textAlign": "left",
                                   },
-                                ],
-                              ]
-                            }
-                            testID="tickbox"
-                          />
-                          <Text
-                            accessibilityLabel="label"
-                            accessible={true}
-                            style={
-                              [
-                                {
-                                  "color": "#273142",
-                                  "fontFamily": "Rubik-Regular",
-                                  "fontSize": 14,
-                                  "marginLeft": 8,
-                                  "textAlign": "left",
-                                },
-                              ]
-                            }
-                            testID="label"
-                          >
-                            Option 3
-                          </Text>
+                                ]
+                              }
+                              testID="label"
+                            >
+                              Option 3
+                            </Text>
+                          </View>
                         </View>
                       </View>
                     </View>

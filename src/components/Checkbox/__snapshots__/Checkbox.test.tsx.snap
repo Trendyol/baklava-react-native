@@ -2,754 +2,831 @@
 
 exports[`Checkbox should render Checkbox correctly when checked is false 1`] = `
 <View
-  accessibilityState={
-    {
-      "busy": undefined,
-      "checked": undefined,
-      "disabled": false,
-      "expanded": undefined,
-      "selected": undefined,
-    }
-  }
-  accessibilityValue={
-    {
-      "max": undefined,
-      "min": undefined,
-      "now": undefined,
-      "text": undefined,
-    }
-  }
-  accessible={true}
-  collapsable={false}
-  focusable={false}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  accessible={false}
   style={
-    {
-      "alignSelf": "flex-start",
-      "flexDirection": "row",
-      "opacity": 1,
-    }
+    [
+      {
+        "alignSelf": "flex-start",
+      },
+    ]
   }
 >
   <View
-    accessibilityLabel="tickbox"
-    accessible={true}
-    style={
-      [
-        {},
-        [
-          {
-            "alignItems": "center",
-            "backgroundColor": "#FFFFFF",
-            "borderColor": "#AFBBCA",
-            "borderRadius": 2,
-            "borderWidth": 1,
-            "height": 16,
-            "justifyContent": "center",
-            "width": 16,
-          },
-        ],
-      ]
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
     }
-    testID="tickbox"
-  />
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "flexDirection": "row",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="tickbox"
+      accessible={true}
+      style={
+        [
+          {},
+          [
+            {
+              "alignItems": "center",
+              "backgroundColor": "#FFFFFF",
+              "borderColor": "#AFBBCA",
+              "borderRadius": 2,
+              "borderWidth": 1,
+              "height": 16,
+              "justifyContent": "center",
+              "width": 16,
+            },
+          ],
+        ]
+      }
+      testID="tickbox"
+    />
+  </View>
 </View>
 `;
 
 exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
 <View
-  accessibilityState={
-    {
-      "busy": undefined,
-      "checked": undefined,
-      "disabled": false,
-      "expanded": undefined,
-      "selected": undefined,
-    }
-  }
-  accessibilityValue={
-    {
-      "max": undefined,
-      "min": undefined,
-      "now": undefined,
-      "text": undefined,
-    }
-  }
-  accessible={true}
-  collapsable={false}
-  focusable={false}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  accessible={false}
   style={
-    {
-      "alignSelf": "flex-start",
-      "flexDirection": "row",
-      "opacity": 1,
-    }
+    [
+      {
+        "alignSelf": "flex-start",
+      },
+    ]
   }
 >
   <View
-    accessibilityLabel="tickbox"
-    accessible={true}
-    style={
-      [
-        {},
-        [
-          {
-            "alignItems": "center",
-            "backgroundColor": "#F27A1A",
-            "borderColor": "#F27A1A",
-            "borderRadius": 2,
-            "borderWidth": 1,
-            "height": 16,
-            "justifyContent": "center",
-            "width": 16,
-          },
-        ],
-      ]
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
     }
-    testID="tickbox"
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "flexDirection": "row",
+        "opacity": 1,
+      }
+    }
   >
-    <RNSVGSvgView
-      accessibilityLabel="check-icon"
-      align="xMidYMid"
-      bbHeight={10}
-      bbWidth={10}
-      fill="#FFFFFF"
-      focusable={false}
-      height={10}
-      meetOrSlice={0}
-      minX={0}
-      minY={0}
+    <View
+      accessibilityLabel="tickbox"
+      accessible={true}
       style={
         [
-          {
-            "backgroundColor": "transparent",
-            "borderWidth": 0,
-          },
-          {
-            "flex": 0,
-            "height": 10,
-            "width": 10,
-          },
+          {},
+          [
+            {
+              "alignItems": "center",
+              "backgroundColor": "#F27A1A",
+              "borderColor": "#F27A1A",
+              "borderRadius": 2,
+              "borderWidth": 1,
+              "height": 16,
+              "justifyContent": "center",
+              "width": 16,
+            },
+          ],
         ]
       }
-      testID="check-icon"
-      title="check"
-      vbHeight={24}
-      vbWidth={24}
-      width={10}
-      xmlns="http://www.w3.org/2000/svg"
+      testID="tickbox"
     >
-      <RNSVGGroup
-        fill={
-          {
-            "payload": 4294967295,
-            "type": 0,
-          }
-        }
-        propList={
+      <RNSVGSvgView
+        accessibilityLabel="check-icon"
+        align="xMidYMid"
+        bbHeight={10}
+        bbWidth={10}
+        fill="#FFFFFF"
+        focusable={false}
+        height={10}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
           [
-            "fill",
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 10,
+              "width": 10,
+            },
           ]
         }
+        testID="check-icon"
+        title="check"
+        vbHeight={24}
+        vbWidth={24}
+        width={10}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <RNSVGPath
-          clipRule={0}
-          d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
+        <RNSVGGroup
           fill={
             {
               "payload": 4294967295,
               "type": 0,
             }
           }
-          fillRule={0}
           propList={
             [
               "fill",
-              "fillRule",
             ]
           }
-        />
-      </RNSVGGroup>
-    </RNSVGSvgView>
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
+            fill={
+              {
+                "payload": 4294967295,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
   </View>
 </View>
 `;
 
 exports[`Checkbox should render Checkbox correctly when checked is true, indeterminate is false 1`] = `
 <View
-  accessibilityState={
-    {
-      "busy": undefined,
-      "checked": undefined,
-      "disabled": false,
-      "expanded": undefined,
-      "selected": undefined,
-    }
-  }
-  accessibilityValue={
-    {
-      "max": undefined,
-      "min": undefined,
-      "now": undefined,
-      "text": undefined,
-    }
-  }
-  accessible={true}
-  collapsable={false}
-  focusable={false}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  accessible={false}
   style={
-    {
-      "alignSelf": "flex-start",
-      "flexDirection": "row",
-      "opacity": 1,
-    }
+    [
+      {
+        "alignSelf": "flex-start",
+      },
+    ]
   }
 >
   <View
-    accessibilityLabel="tickbox"
-    accessible={true}
-    style={
-      [
-        {},
-        [
-          {
-            "alignItems": "center",
-            "backgroundColor": "#F27A1A",
-            "borderColor": "#F27A1A",
-            "borderRadius": 2,
-            "borderWidth": 1,
-            "height": 16,
-            "justifyContent": "center",
-            "width": 16,
-          },
-        ],
-      ]
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
     }
-    testID="tickbox"
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "flexDirection": "row",
+        "opacity": 1,
+      }
+    }
   >
-    <RNSVGSvgView
-      accessibilityLabel="check-icon"
-      align="xMidYMid"
-      bbHeight={10}
-      bbWidth={10}
-      fill="#FFFFFF"
-      focusable={false}
-      height={10}
-      meetOrSlice={0}
-      minX={0}
-      minY={0}
+    <View
+      accessibilityLabel="tickbox"
+      accessible={true}
       style={
         [
-          {
-            "backgroundColor": "transparent",
-            "borderWidth": 0,
-          },
-          {
-            "flex": 0,
-            "height": 10,
-            "width": 10,
-          },
+          {},
+          [
+            {
+              "alignItems": "center",
+              "backgroundColor": "#F27A1A",
+              "borderColor": "#F27A1A",
+              "borderRadius": 2,
+              "borderWidth": 1,
+              "height": 16,
+              "justifyContent": "center",
+              "width": 16,
+            },
+          ],
         ]
       }
-      testID="check-icon"
-      title="check"
-      vbHeight={24}
-      vbWidth={24}
-      width={10}
-      xmlns="http://www.w3.org/2000/svg"
+      testID="tickbox"
     >
-      <RNSVGGroup
-        fill={
-          {
-            "payload": 4294967295,
-            "type": 0,
-          }
-        }
-        propList={
+      <RNSVGSvgView
+        accessibilityLabel="check-icon"
+        align="xMidYMid"
+        bbHeight={10}
+        bbWidth={10}
+        fill="#FFFFFF"
+        focusable={false}
+        height={10}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
           [
-            "fill",
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 10,
+              "width": 10,
+            },
           ]
         }
+        testID="check-icon"
+        title="check"
+        vbHeight={24}
+        vbWidth={24}
+        width={10}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <RNSVGPath
-          clipRule={0}
-          d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
+        <RNSVGGroup
           fill={
             {
               "payload": 4294967295,
               "type": 0,
             }
           }
-          fillRule={0}
           propList={
             [
               "fill",
-              "fillRule",
             ]
           }
-        />
-      </RNSVGGroup>
-    </RNSVGSvgView>
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
+            fill={
+              {
+                "payload": 4294967295,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
   </View>
 </View>
 `;
 
 exports[`Checkbox should render Checkbox correctly when checked is true, indeterminate is true 1`] = `
 <View
-  accessibilityState={
-    {
-      "busy": undefined,
-      "checked": undefined,
-      "disabled": false,
-      "expanded": undefined,
-      "selected": undefined,
-    }
-  }
-  accessibilityValue={
-    {
-      "max": undefined,
-      "min": undefined,
-      "now": undefined,
-      "text": undefined,
-    }
-  }
-  accessible={true}
-  collapsable={false}
-  focusable={false}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  accessible={false}
   style={
-    {
-      "alignSelf": "flex-start",
-      "flexDirection": "row",
-      "opacity": 1,
-    }
+    [
+      {
+        "alignSelf": "flex-start",
+      },
+    ]
   }
 >
   <View
-    accessibilityLabel="tickbox"
-    accessible={true}
-    style={
-      [
-        {},
-        [
-          {
-            "alignItems": "center",
-            "backgroundColor": "#F27A1A",
-            "borderColor": "#F27A1A",
-            "borderRadius": 2,
-            "borderWidth": 1,
-            "height": 16,
-            "justifyContent": "center",
-            "width": 16,
-          },
-        ],
-      ]
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": false,
+        "expanded": undefined,
+        "selected": undefined,
+      }
     }
-    testID="tickbox"
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "flexDirection": "row",
+        "opacity": 1,
+      }
+    }
   >
-    <RNSVGSvgView
-      accessibilityLabel="minus-icon"
-      align="xMidYMid"
-      bbHeight={8}
-      bbWidth={8}
-      fill="#FFFFFF"
-      focusable={false}
-      height={8}
-      meetOrSlice={0}
-      minX={0}
-      minY={0}
+    <View
+      accessibilityLabel="tickbox"
+      accessible={true}
       style={
         [
-          {
-            "backgroundColor": "transparent",
-            "borderWidth": 0,
-          },
-          {
-            "flex": 0,
-            "height": 8,
-            "width": 8,
-          },
+          {},
+          [
+            {
+              "alignItems": "center",
+              "backgroundColor": "#F27A1A",
+              "borderColor": "#F27A1A",
+              "borderRadius": 2,
+              "borderWidth": 1,
+              "height": 16,
+              "justifyContent": "center",
+              "width": 16,
+            },
+          ],
         ]
       }
-      testID="minus-icon"
-      title="minus"
-      vbHeight={24}
-      vbWidth={24}
-      width={8}
-      xmlns="http://www.w3.org/2000/svg"
+      testID="tickbox"
     >
-      <RNSVGGroup
-        fill={
-          {
-            "payload": 4294967295,
-            "type": 0,
-          }
-        }
-        propList={
+      <RNSVGSvgView
+        accessibilityLabel="minus-icon"
+        align="xMidYMid"
+        bbHeight={8}
+        bbWidth={8}
+        fill="#FFFFFF"
+        focusable={false}
+        height={8}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
           [
-            "fill",
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 8,
+              "width": 8,
+            },
           ]
         }
+        testID="minus-icon"
+        title="minus"
+        vbHeight={24}
+        vbWidth={24}
+        width={8}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <RNSVGPath
-          clipRule={0}
-          d="M0 12a2 2 0 0 1 2-2h20a2 2 0 1 1 0 4H2a2 2 0 0 1-2-2Z"
+        <RNSVGGroup
           fill={
             {
               "payload": 4294967295,
               "type": 0,
             }
           }
-          fillRule={0}
           propList={
             [
               "fill",
-              "fillRule",
             ]
           }
-        />
-      </RNSVGGroup>
-    </RNSVGSvgView>
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M0 12a2 2 0 0 1 2-2h20a2 2 0 1 1 0 4H2a2 2 0 0 1-2-2Z"
+            fill={
+              {
+                "payload": 4294967295,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
   </View>
 </View>
 `;
 
 exports[`Checkbox should render Checkbox correctly when disable, checked and indeterminate is true 1`] = `
 <View
-  accessibilityState={
-    {
-      "busy": undefined,
-      "checked": undefined,
-      "disabled": true,
-      "expanded": undefined,
-      "selected": undefined,
-    }
-  }
-  accessibilityValue={
-    {
-      "max": undefined,
-      "min": undefined,
-      "now": undefined,
-      "text": undefined,
-    }
-  }
-  accessible={true}
-  collapsable={false}
-  focusable={false}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  accessible={false}
   style={
-    {
-      "alignSelf": "flex-start",
-      "flexDirection": "row",
-      "opacity": 1,
-    }
+    [
+      {
+        "alignSelf": "flex-start",
+      },
+    ]
   }
 >
   <View
-    accessibilityLabel="tickbox"
-    accessible={true}
-    style={
-      [
-        {},
-        [
-          {
-            "alignItems": "center",
-            "backgroundColor": "#F1F2F7",
-            "borderColor": "#F1F2F7",
-            "borderRadius": 2,
-            "borderWidth": 1,
-            "height": 16,
-            "justifyContent": "center",
-            "width": 16,
-          },
-        ],
-      ]
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": true,
+        "expanded": undefined,
+        "selected": undefined,
+      }
     }
-    testID="tickbox"
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "flexDirection": "row",
+        "opacity": 1,
+      }
+    }
   >
-    <RNSVGSvgView
-      accessibilityLabel="minus-icon"
-      align="xMidYMid"
-      bbHeight={8}
-      bbWidth={8}
-      fill="#95A1B5"
-      focusable={false}
-      height={8}
-      meetOrSlice={0}
-      minX={0}
-      minY={0}
+    <View
+      accessibilityLabel="tickbox"
+      accessible={true}
       style={
         [
-          {
-            "backgroundColor": "transparent",
-            "borderWidth": 0,
-          },
-          {
-            "flex": 0,
-            "height": 8,
-            "width": 8,
-          },
+          {},
+          [
+            {
+              "alignItems": "center",
+              "backgroundColor": "#F1F2F7",
+              "borderColor": "#F1F2F7",
+              "borderRadius": 2,
+              "borderWidth": 1,
+              "height": 16,
+              "justifyContent": "center",
+              "width": 16,
+            },
+          ],
         ]
       }
-      testID="minus-icon"
-      title="minus"
-      vbHeight={24}
-      vbWidth={24}
-      width={8}
-      xmlns="http://www.w3.org/2000/svg"
+      testID="tickbox"
     >
-      <RNSVGGroup
-        fill={
-          {
-            "payload": 4287996341,
-            "type": 0,
-          }
-        }
-        propList={
+      <RNSVGSvgView
+        accessibilityLabel="minus-icon"
+        align="xMidYMid"
+        bbHeight={8}
+        bbWidth={8}
+        fill="#95A1B5"
+        focusable={false}
+        height={8}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
           [
-            "fill",
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 8,
+              "width": 8,
+            },
           ]
         }
+        testID="minus-icon"
+        title="minus"
+        vbHeight={24}
+        vbWidth={24}
+        width={8}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <RNSVGPath
-          clipRule={0}
-          d="M0 12a2 2 0 0 1 2-2h20a2 2 0 1 1 0 4H2a2 2 0 0 1-2-2Z"
+        <RNSVGGroup
           fill={
             {
               "payload": 4287996341,
               "type": 0,
             }
           }
-          fillRule={0}
           propList={
             [
               "fill",
-              "fillRule",
             ]
           }
-        />
-      </RNSVGGroup>
-    </RNSVGSvgView>
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M0 12a2 2 0 0 1 2-2h20a2 2 0 1 1 0 4H2a2 2 0 0 1-2-2Z"
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
   </View>
 </View>
 `;
 
 exports[`Checkbox should render Checkbox correctly when disable, checked is false 1`] = `
 <View
-  accessibilityState={
-    {
-      "busy": undefined,
-      "checked": undefined,
-      "disabled": true,
-      "expanded": undefined,
-      "selected": undefined,
-    }
-  }
-  accessibilityValue={
-    {
-      "max": undefined,
-      "min": undefined,
-      "now": undefined,
-      "text": undefined,
-    }
-  }
-  accessible={true}
-  collapsable={false}
-  focusable={false}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  accessible={false}
   style={
-    {
-      "alignSelf": "flex-start",
-      "flexDirection": "row",
-      "opacity": 1,
-    }
+    [
+      {
+        "alignSelf": "flex-start",
+      },
+    ]
   }
 >
   <View
-    accessibilityLabel="tickbox"
-    accessible={true}
-    style={
-      [
-        {},
-        [
-          {
-            "alignItems": "center",
-            "backgroundColor": "#F1F2F7",
-            "borderColor": "#AFBBCA",
-            "borderRadius": 2,
-            "borderWidth": 1,
-            "height": 16,
-            "justifyContent": "center",
-            "width": 16,
-          },
-        ],
-      ]
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": true,
+        "expanded": undefined,
+        "selected": undefined,
+      }
     }
-    testID="tickbox"
-  />
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "flexDirection": "row",
+        "opacity": 1,
+      }
+    }
+  >
+    <View
+      accessibilityLabel="tickbox"
+      accessible={true}
+      style={
+        [
+          {},
+          [
+            {
+              "alignItems": "center",
+              "backgroundColor": "#F1F2F7",
+              "borderColor": "#AFBBCA",
+              "borderRadius": 2,
+              "borderWidth": 1,
+              "height": 16,
+              "justifyContent": "center",
+              "width": 16,
+            },
+          ],
+        ]
+      }
+      testID="tickbox"
+    />
+  </View>
 </View>
 `;
 
 exports[`Checkbox should render Checkbox correctly when disable, checked is true 1`] = `
 <View
-  accessibilityState={
-    {
-      "busy": undefined,
-      "checked": undefined,
-      "disabled": true,
-      "expanded": undefined,
-      "selected": undefined,
-    }
-  }
-  accessibilityValue={
-    {
-      "max": undefined,
-      "min": undefined,
-      "now": undefined,
-      "text": undefined,
-    }
-  }
-  accessible={true}
-  collapsable={false}
-  focusable={false}
-  onClick={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
+  accessible={false}
   style={
-    {
-      "alignSelf": "flex-start",
-      "flexDirection": "row",
-      "opacity": 1,
-    }
+    [
+      {
+        "alignSelf": "flex-start",
+      },
+    ]
   }
 >
   <View
-    accessibilityLabel="tickbox"
-    accessible={true}
-    style={
-      [
-        {},
-        [
-          {
-            "alignItems": "center",
-            "backgroundColor": "#F1F2F7",
-            "borderColor": "#F1F2F7",
-            "borderRadius": 2,
-            "borderWidth": 1,
-            "height": 16,
-            "justifyContent": "center",
-            "width": 16,
-          },
-        ],
-      ]
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": true,
+        "expanded": undefined,
+        "selected": undefined,
+      }
     }
-    testID="tickbox"
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={false}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignSelf": "flex-start",
+        "flexDirection": "row",
+        "opacity": 1,
+      }
+    }
   >
-    <RNSVGSvgView
-      accessibilityLabel="check-icon"
-      align="xMidYMid"
-      bbHeight={10}
-      bbWidth={10}
-      fill="#95A1B5"
-      focusable={false}
-      height={10}
-      meetOrSlice={0}
-      minX={0}
-      minY={0}
+    <View
+      accessibilityLabel="tickbox"
+      accessible={true}
       style={
         [
-          {
-            "backgroundColor": "transparent",
-            "borderWidth": 0,
-          },
-          {
-            "flex": 0,
-            "height": 10,
-            "width": 10,
-          },
+          {},
+          [
+            {
+              "alignItems": "center",
+              "backgroundColor": "#F1F2F7",
+              "borderColor": "#F1F2F7",
+              "borderRadius": 2,
+              "borderWidth": 1,
+              "height": 16,
+              "justifyContent": "center",
+              "width": 16,
+            },
+          ],
         ]
       }
-      testID="check-icon"
-      title="check"
-      vbHeight={24}
-      vbWidth={24}
-      width={10}
-      xmlns="http://www.w3.org/2000/svg"
+      testID="tickbox"
     >
-      <RNSVGGroup
-        fill={
-          {
-            "payload": 4287996341,
-            "type": 0,
-          }
-        }
-        propList={
+      <RNSVGSvgView
+        accessibilityLabel="check-icon"
+        align="xMidYMid"
+        bbHeight={10}
+        bbWidth={10}
+        fill="#95A1B5"
+        focusable={false}
+        height={10}
+        meetOrSlice={0}
+        minX={0}
+        minY={0}
+        style={
           [
-            "fill",
+            {
+              "backgroundColor": "transparent",
+              "borderWidth": 0,
+            },
+            {
+              "flex": 0,
+              "height": 10,
+              "width": 10,
+            },
           ]
         }
+        testID="check-icon"
+        title="check"
+        vbHeight={24}
+        vbWidth={24}
+        width={10}
+        xmlns="http://www.w3.org/2000/svg"
       >
-        <RNSVGPath
-          clipRule={0}
-          d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
+        <RNSVGGroup
           fill={
             {
               "payload": 4287996341,
               "type": 0,
             }
           }
-          fillRule={0}
           propList={
             [
               "fill",
-              "fillRule",
             ]
           }
-        />
-      </RNSVGGroup>
-    </RNSVGSvgView>
+        >
+          <RNSVGPath
+            clipRule={0}
+            d="M23.401 3.573a2 2 0 0 1 .026 2.828l-13.75 14a2 2 0 0 1-2.854 0l-6.25-6.363a2 2 0 0 1 2.854-2.803l4.823 4.91L20.573 3.6a2 2 0 0 1 2.828-.026Z"
+            fill={
+              {
+                "payload": 4287996341,
+                "type": 0,
+              }
+            }
+            fillRule={0}
+            propList={
+              [
+                "fill",
+                "fillRule",
+              ]
+            }
+          />
+        </RNSVGGroup>
+      </RNSVGSvgView>
+    </View>
   </View>
 </View>
 `;
