@@ -662,6 +662,10 @@ const theme = createTheme({
     disabledUnchecked: {
       backgroundColor: 'primaryBackground',
     },
+    errorUnchecked: {
+      backgroundColor: 'white',
+      borderColor: 'dangerColor',
+    },
   },
   radioButtonVariants: {
     defaults: {
