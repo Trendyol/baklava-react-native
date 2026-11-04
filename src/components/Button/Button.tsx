@@ -28,6 +28,8 @@ export type ButtonProps = React.ComponentProps<typeof Box> &
     label?: string;
     tintColor?: ColorValue;
     icon?: IconNameType | null;
+    /** Right-side icon. Can be used together with `icon`. */
+    rightIcon?: IconNameType | null;
     disabled?: boolean;
     loading?: boolean;
     isPressed?: boolean;
@@ -86,6 +88,7 @@ const Button = ({
   kind = 'default',
   variant = 'primary',
   icon,
+  rightIcon,
   label,
   tintColor,
   disabled = false,
@@ -196,6 +199,23 @@ const Button = ({
     );
   }, [icon, loading, label, textVariant, typeColor]);
 
+  const rightIconView = React.useMemo(() => {
+    if (loading || !rightIcon) {
+      return null;
+    }
+    const iconColor = variant === 'transparent' ? tintColor : typeColor;
+    return (
+      <Box marginLeft={label || icon ? '2xs' : 'none'}>
+        <Icon
+          name={rightIcon}
+          size="s"
+          color={iconColor}
+          testID="button-right-icon"
+        />
+      </Box>
+    );
+  }, [rightIcon, loading, tintColor, variant, typeColor, label, icon]);
+
   return (
     <PressableContainer
       onPressIn={onPressIn}
@@ -215,6 +235,7 @@ const Button = ({
         {...variantColors}>
         {iconView}
         {labelView}
+        {rightIconView}
       </ButtonContainer>
     </PressableContainer>
   );

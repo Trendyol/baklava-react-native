@@ -8,6 +8,7 @@ import IconOnlyButtons from '../assets/button/IconOnlyButtons.png';
 import ButtonSizes from '../assets/button/ButtonSizes.png';
 import DisabledButtons from '../assets/button/DisabledButtons.png';
 import PressedButtons from '../assets/button/PressedButtons.png';
+import RightIconButtons from '../assets/button/RightIconButtons.png';
 
 <Meta
   title="Components/Button"
@@ -37,6 +38,7 @@ A button is component that the user can press to trigger an action.
   <img src={TertiaryButtons} width="250" alt="TertiaryButtons" />
   <img src={IconButtons} width="250" alt="IconButtons" />
   <img src={IconOnlyButtons} width="250" alt="IconOnlyButtons" />
+  <img src={RightIconButtons} width="250" alt="RightIconButtons" />
   <img src={ButtonSizes} width="250" alt="ButtonSizes" />
   <img src={DisabledButtons} width="250" alt="DisabledButtons" />
   <img src={PressedButtons} width="250" alt="PressedButtons" />
@@ -93,6 +95,20 @@ Type: `string`
 The icon name of the button. Icon names are in the list, fixed and cannot be used outside the list.
 
 `academy`,
+`confetti`,
+`info`,
+`profile`,
+`warning`...
+
+#### rightIcon
+
+Type: `string`
+
+The right-side icon name of the button. Icon names are in the list, fixed and cannot be used outside the list. Can be used together with `icon`.
+
+`academy`,
+`arrow-down`,
+`arrow-right`,
 `confetti`,
 `info`,
 `profile`,

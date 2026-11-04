@@ -73,6 +73,61 @@ describe('Button', () => {
     expect(buttonIcon).not.toBeTruthy();
   });
 
+  test('should render rightIcon correctly', () => {
+    // when
+    const { getByTestId } = render(
+      <Button testID="button" size="l" label="test" rightIcon="filter" />,
+    );
+    const rightIcon = getByTestId('button-right-icon');
+
+    // then
+    expect(rightIcon).toBeTruthy();
+    expect(rightIcon.props.accessibilityLabel).toBe('button-right-icon');
+  });
+
+  test('should not render rightIcon when not provided', () => {
+    // when
+    const { queryByTestId } = render(
+      <Button testID="button" size="l" label="test" />,
+    );
+    const rightIcon = queryByTestId('button-right-icon');
+
+    // then
+    expect(rightIcon).not.toBeTruthy();
+  });
+
+  test('should render left icon and rightIcon together', () => {
+    // when
+    const { getByTestId } = render(
+      <Button
+        testID="button"
+        size="l"
+        label="test"
+        icon="check"
+        rightIcon="arrow-right"
+      />,
+    );
+    const leftIcon = getByTestId('button-icon');
+    const rightIcon = getByTestId('button-right-icon');
+
+    // then
+    expect(leftIcon).toBeTruthy();
+    expect(rightIcon).toBeTruthy();
+  });
+
+  test('should not render rightIcon when loading', () => {
+    // when
+    const { getByTestId, queryByTestId } = render(
+      <Button testID="button" label="Loading" rightIcon="arrow-down" loading />,
+    );
+    const spinner = getByTestId('button-spinner');
+    const rightIcon = queryByTestId('button-right-icon');
+
+    // then
+    expect(spinner).toBeTruthy();
+    expect(rightIcon).not.toBeTruthy();
+  });
+
   test('should render icon variant is transparent', () => {
     // when
     const { getByTestId } = render(
