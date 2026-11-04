@@ -8,6 +8,7 @@ import {
   ButtonKindVariantTypes,
   ButtonVariantVariantTypes,
 } from './types';
+import { iconList } from '../Icon/list';
 
 const variantList = ['primary', 'secondary', 'tertiary'];
 const kindList = ['default', 'neutral', 'success', 'danger'];
@@ -29,6 +30,14 @@ const ButtonMeta: Meta<typeof Button> = {
     size: {
       options: sizeList,
       control: { type: 'radio' },
+    },
+    icon: {
+      options: iconList,
+      control: { type: 'select' },
+    },
+    rightIcon: {
+      options: iconList,
+      control: { type: 'select' },
     },
   },
   args: {
@@ -201,6 +210,54 @@ export const IconButtons: Story = {
             m="2xs"
           />
         </Box>
+      </Box>
+    </>
+  ),
+};
+
+export const RightIconButtons: Story = {
+  render: () => (
+    <>
+      <Text p="2xs" variant="subtitle01Bold">
+        Right Icon Buttons
+      </Text>
+      <Box>
+        <Button label="Continue" rightIcon="arrow-right" m="2xs" />
+        <Button label="Options" rightIcon="arrow-down" m="2xs" />
+        <Button label="Share" rightIcon="external-share" m="2xs" />
+        <Button label="Download" rightIcon="download" m="2xs" />
+        <Button
+          variant="secondary"
+          label="Settings"
+          rightIcon="settings"
+          m="2xs"
+        />
+        <Button variant="secondary" label="Filter" rightIcon="filter" m="2xs" />
+        <Button
+          variant="tertiary"
+          label="More"
+          rightIcon="more-horizontal"
+          m="2xs"
+        />
+        <Button
+          variant="tertiary"
+          label="Next"
+          rightIcon="arrow-right"
+          m="2xs"
+        />
+      </Box>
+      <Text p="2xs" variant="captionMedium" mt="m">
+        Left icon + right icon
+      </Text>
+      <Box>
+        <Button icon="info" label="Details" rightIcon="arrow-right" m="2xs" />
+        <Button icon="search" label="Search" rightIcon="filter" m="2xs" />
+        <Button
+          icon="confetti"
+          label="Campaigns"
+          rightIcon="arrow-down"
+          m="2xs"
+        />
       </Box>
     </>
   ),
