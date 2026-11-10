@@ -39,7 +39,8 @@
     "build": "bob build",
     "pod": "cd ios; pod install; cd ..;",
     "prepare": "npm run storybook-generate && bob build && husky install",
-    "svgr": "svgr ./src/svg-icons -d ./src/icons --icon --native --typescript --svgo-config svgo.config.js --ignore-existing --replace-attr-values '#273142={props?.fill ?? `#273142`}'"
+    "icons:generate": "node scripts/generate-icons.mjs",
+    "icons:check": "npm run icons:generate && ! git status --porcelain -- src/icons src/flag-icons src/components/Icon/list.ts | grep ."
   },
   "dependencies": {
     "@ergenekonyigit/restyle": "2.4.0-1ec4a08.3",
@@ -55,6 +56,7 @@
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
     "@commitlint/prompt-cli": "17.1.2",
+    "@gorhom/bottom-sheet": "^5.1.2",
     "@react-native-async-storage/async-storage": "^2.1.0",
     "@react-native-community/cli": "15.0.1",
     "@react-native-community/cli-platform-android": "15.0.1",
@@ -65,7 +67,6 @@
     "@react-native/eslint-config": "0.77.3",
     "@react-native/metro-config": "0.77.3",
     "@react-native/typescript-config": "0.77.3",
-    "@gorhom/bottom-sheet": "^5.1.2",
     "@storybook/addon-docs": "9.1.4",
     "@storybook/addon-links": "9.1.4",
     "@storybook/addon-ondevice-actions": "9.1.4",
@@ -79,6 +80,7 @@
     "@testing-library/jest-native": "4.0.5",
     "@testing-library/react-hooks": "^8.0.1",
     "@testing-library/react-native": "10.1.1",
+    "@trendyol/baklava-icons": "^1.4.0",
     "@types/jest": "^26.0.23",
     "@types/react": "^18.2.6",
     "@types/react-test-renderer": "^18.0.0",
@@ -143,7 +145,7 @@
       "<rootDir>/lib/"
     ],
     "transformIgnorePatterns": [
-      "node_modules/(?!(jest-)?react-native|@react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
+      "node_modules/(?!(jest-)?react-native|@react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@trendyol/baklava-icons)"
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/__mocks__/globalMock.js"

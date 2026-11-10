@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgDoorOpen = (props: SvgProps) => (
+const DoorOpen = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -16,4 +16,4 @@ const SvgDoorOpen = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgDoorOpen;
+export default DoorOpen;

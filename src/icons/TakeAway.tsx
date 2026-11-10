@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgTakeAway = (props: SvgProps) => (
+const TakeAway = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -18,4 +18,4 @@ const SvgTakeAway = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgTakeAway;
+export default TakeAway;

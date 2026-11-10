@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgPerformanceData = (props: SvgProps) => (
+const PerformanceData = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -18,4 +18,4 @@ const SvgPerformanceData = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgPerformanceData;
+export default PerformanceData;

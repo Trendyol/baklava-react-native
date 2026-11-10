@@ -11,6 +11,18 @@ const sizeList = ['2xs', 'xs', 's', 'm', 'l', 'xl'];
 const IconMeta: Meta<typeof Icon> = {
   title: 'Icon',
   component: Icon,
+  parameters: {
+    notes: {
+      'Icon set':
+        'Icons come from @trendyol/baklava-icons (same set as Baklava Web).\n' +
+        'Primary names use the package names, e.g. "add_note"; legacy kebab names like "add-note" are deprecated aliases.\n\n' +
+        'Browse all icons (visual reference):\n' +
+        'https://github.com/Trendyol/baklava-icons/tree/main/icons\n\n' +
+        'Any icon directly from CDN:\n' +
+        'https://cdn.jsdelivr.net/npm/@trendyol/baklava-icons/icons/<name>.svg\n\n' +
+        'Full name list: src/components/Icon/list.ts (auto-generated).',
+    },
+  },
   argTypes: {
     name: {
       options: iconList,

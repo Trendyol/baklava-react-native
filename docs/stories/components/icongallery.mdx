@@ -1,0 +1,130 @@
+import { useState } from 'react';
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta
+  title="Components/Icon Gallery"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Icon Gallery
+
+Every icon available in the `Icon` component, with the exact key to use in
+code. The list is built at build time from the `@trendyol/baklava-icons`
+package plus the mobile-only icons in `src/svg-icons-local`, so it is always
+in sync with the library.
+
+Click a card to copy its key.
+
+export const loadIcons = () => {
+  const toEntry = (ctx, local) => (key) => ({
+    name: key.replace('./', '').replace(/\.svg$/, ''),
+    url: (ctx(key).default || ctx(key)).toString(),
+    local,
+  });
+  const pkg = require.context('@trendyol/baklava-icons/icons', false, /\.svg$/);
+  const local = require.context('../../../src/svg-icons-local', false, /\.svg$/);
+  return [
+    ...pkg.keys().map(toEntry(pkg, false)),
+    ...local.keys().map(toEntry(local, true)),
+  ].sort((a, b) => a.name.localeCompare(b.name));
+};
+
+export const icons = loadIcons();
+
+export const IconGallery = () => {
+  const [query, setQuery] = useState('');
+  const [copied, setCopied] = useState(null);
+  const visible = icons.filter((icon) => icon.name.includes(query.trim()));
+
+  const copy = (name) => {
+    const done = () => {
+      setCopied(name);
+      setTimeout(() => setCopied(null), 1200);
+    };
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(name).then(done);
+    } else {
+      const el = document.createElement('textarea');
+      el.value = name;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand('copy');
+      document.body.removeChild(el);
+      done();
+    }
+  };
+
+  return (
+    <div>
+      <input
+        type="search"
+        placeholder={`Filter ${icons.length} icons…`}
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        style={{
+          width: '100%',
+          maxWidth: 360,
+          padding: '8px 12px',
+          marginBottom: 16,
+          border: '1px solid #d0d5dd',
+          borderRadius: 8,
+          fontSize: 14,
+          boxSizing: 'border-box',
+        }}
+      />
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))',
+          gap: 8,
+        }}
+      >
+        {visible.map((icon) => (
+          <div
+            key={icon.name}
+            title={copied === icon.name ? 'Copied!' : icon.name}
+            onClick={() => copy(icon.name)}
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: 6,
+              padding: '14px 6px 10px',
+              border: '1px solid #ebedf0',
+              borderRadius: 8,
+              cursor: 'pointer',
+              background: copied === icon.name ? '#f0f7ff' : '#fff',
+            }}
+          >
+            <img
+              src={icon.url}
+              width={24}
+              height={24}
+              alt={icon.name}
+              style={{ display: 'block' }}
+            />
+            <code style={{ fontSize: 11, textAlign: 'center', wordBreak: 'break-all' }}>
+              {icon.name}
+            </code>
+            {icon.local && (
+              <span
+                style={{ fontSize: 9, color: '#888', textTransform: 'uppercase', letterSpacing: 0.5 }}
+              >
+                mobile only
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+<IconGallery />

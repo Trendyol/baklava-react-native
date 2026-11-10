@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgStop = (props: SvgProps) => (
+const Stop = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -15,5 +14,4 @@ const SvgStop = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default SvgStop;
+export default Stop;

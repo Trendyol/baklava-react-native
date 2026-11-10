@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgStar = (props: SvgProps) => (
+const Star = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -15,5 +14,4 @@ const SvgStar = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default SvgStar;
+export default Star;

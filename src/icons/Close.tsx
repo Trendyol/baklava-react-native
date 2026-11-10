@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgClose = (props: SvgProps) => (
+const Close = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -12,10 +11,9 @@ const SvgClose = (props: SvgProps) => (
     <Path
       fillRule="evenodd"
       clipRule="evenodd"
-      d="M.54.54a1.846 1.846 0 0 1 2.612 0L12 9.39 20.848.54a1.846 1.846 0 0 1 2.611 2.612L14.611 12l8.848 8.848a1.846 1.846 0 0 1-2.61 2.611L12 14.611l-8.848 8.848A1.846 1.846 0 0 1 .54 20.85L9.389 12 .541 3.152A1.846 1.846 0 0 1 .54.54Z"
-      fill={props?.fill ?? `#273142`}
+      d="M2.45 2.45c.601-.6 1.576-.6 2.176 0L12 9.825l7.374-7.373a1.538 1.538 0 1 1 2.175 2.175L14.176 12l7.373 7.374a1.538 1.538 0 0 1-2.175 2.175L12 14.176l-7.374 7.373a1.538 1.538 0 0 1-2.175-2.175L9.824 12 2.451 4.626c-.601-.6-.601-1.575 0-2.175Z"
+      fill={props?.fill ?? '#273142'}
     />
   </Svg>
 );
-
-export default SvgClose;
+export default Close;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgMenu = (props: SvgProps) => (
+const Menu = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -16,4 +16,4 @@ const SvgMenu = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgMenu;
+export default Menu;

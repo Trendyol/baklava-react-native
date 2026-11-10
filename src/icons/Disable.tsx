@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgDisable = (props: SvgProps) => (
+const Disable = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -16,4 +16,4 @@ const SvgDisable = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgDisable;
+export default Disable;

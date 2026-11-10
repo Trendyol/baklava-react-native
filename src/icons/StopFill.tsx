@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgStopFill = (props: SvgProps) => (
+const StopFill = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -17,5 +16,4 @@ const SvgStopFill = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default SvgStopFill;
+export default StopFill;

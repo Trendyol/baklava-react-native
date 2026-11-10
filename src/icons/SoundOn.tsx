@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgSoundOn = (props: SvgProps) => (
+const SoundOn = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -17,5 +16,4 @@ const SvgSoundOn = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default SvgSoundOn;
+export default SoundOn;

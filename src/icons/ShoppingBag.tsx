@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path, Mask } from 'react-native-svg';
-
-const SvgShoppingBag = (props: SvgProps) => (
+const ShoppingBag = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -34,5 +33,4 @@ const SvgShoppingBag = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default SvgShoppingBag;
+export default ShoppingBag;

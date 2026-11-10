@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgAi2 = (props: SvgProps) => (
+const Ai2 = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -14,4 +14,4 @@ const SvgAi2 = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgAi2;
+export default Ai2;

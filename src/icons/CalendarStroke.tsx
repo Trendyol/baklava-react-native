@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgCalendarStroke = (props: SvgProps) => (
+const CalendarStroke = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -21,5 +20,4 @@ const SvgCalendarStroke = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default SvgCalendarStroke;
+export default CalendarStroke;

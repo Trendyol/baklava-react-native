@@ -1,7 +1,6 @@
 import * as React from 'react';
-import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgExternalShare = (props: SvgProps) => (
+import Svg, { SvgProps, Circle, Path } from 'react-native-svg';
+const ExternalShare = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -9,13 +8,40 @@ const SvgExternalShare = (props: SvgProps) => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}>
+    <Circle
+      cx={18}
+      cy={5}
+      r={3.5}
+      stroke={props?.fill ?? '#273142'}
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Circle
+      cx={6}
+      cy={12}
+      r={3.5}
+      stroke={props?.fill ?? '#273142'}
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <Circle
+      cx={18}
+      cy={19}
+      r={3.5}
+      stroke={props?.fill ?? '#273142'}
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
     <Path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M18 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm0 3a5 5 0 1 0-4.958-4.35L9.157 8.122a5 5 0 1 0 .483 7.306l3.488 2.443a5 5 0 1 0 1.53-2.59l-3.705-2.595a5.045 5.045 0 0 0-.144-2.06l3.515-2.236A4.987 4.987 0 0 0 18 10ZM6 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm14 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
-      fill={props?.fill ?? `#273142`}
+      d="m9.5 13.5 5 3.5M14.5 6.5 9 10"
+      stroke={props?.fill ?? '#273142'}
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </Svg>
 );
-
-export default SvgExternalShare;
+export default ExternalShare;
