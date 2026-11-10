@@ -1,5 +1,6 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 import ImageCases from '../assets/image/ImageCases.png';
+import ImagePreview from '../assets/image/ImagePreview.png';
 
 <Meta
   title="Components/Image"
@@ -24,6 +25,7 @@ An image is a graphic representation of something or someone.
     justifyContent: 'center',
   }}>
   <img src={ImageCases} width="250" alt="ImageCases" />
+  <img src={ImagePreview} width="250" alt="Image Preview" />
 </div>
 
 <br/>
@@ -61,3 +63,34 @@ Type: `StyleProp<ImageStyle>`
 
 <br />
 Image implements: <a href="https://reactnative.dev/docs/image#props" title="title">...Image props</a>
+
+<br />
+
+## Image Preview
+
+- The image can be opened in a larger view when the user taps it (wrap with `Pressable` or use `ListItem`’s `onImagePress`).
+- Use the <a href="/docs/components-modal--page" title="Modal">Modal</a> component for preview. Modal’s existing props such as `title`, `closable`, and `closeButtonAction` apply; action buttons are optional.
+- Preview state (`visible`) is owned by the consumer—the `Image` component does not include a built-in preview mode.
+
+Ensure `PortalProvider` wraps your app root (see <a href="/docs/components-modal--page" title="Modal">Modal</a>).
+
+```jsx
+<Modal
+  modalKey="image-preview"
+  visible={previewVisible}
+  closable
+  title="Image Preview"
+  closeButtonAction={() => setPreviewVisible(false)}>
+  <Box alignItems="center">
+    <Image
+      source={{
+        uri: 'https://example.com/your-image.png',
+      }}
+      width={width - 72}
+      height={height * 0.6}
+      resizeMode="cover"
+      borderRadius={8}
+    />
+  </Box>
+</Modal>
+```
