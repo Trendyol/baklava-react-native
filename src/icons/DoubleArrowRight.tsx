@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgDoubleArrowRight = (props: SvgProps) => (
+const DoubleArrowRight = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -14,4 +14,4 @@ const SvgDoubleArrowRight = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgDoubleArrowRight;
+export default DoubleArrowRight;

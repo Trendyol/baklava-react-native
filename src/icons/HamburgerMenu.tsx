@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgHamburgerMenu = (props: SvgProps) => (
+const HamburgerMenu = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -11,9 +10,8 @@ const SvgHamburgerMenu = (props: SvgProps) => (
     {...props}>
     <Path
       d="M0 20a1.5 1.5 0 0 1 1.5-1.5h21a1.5 1.5 0 0 1 0 3h-21A1.5 1.5 0 0 1 0 20ZM0 12a1.5 1.5 0 0 1 1.5-1.5h21a1.5 1.5 0 0 1 0 3h-21A1.5 1.5 0 0 1 0 12ZM0 4a1.5 1.5 0 0 1 1.5-1.5h21a1.5 1.5 0 0 1 0 3h-21A1.5 1.5 0 0 1 0 4Z"
-      fill={props?.fill ?? `#273142`}
+      fill={props?.fill ?? '#273142'}
     />
   </Svg>
 );
-
-export default SvgHamburgerMenu;
+export default HamburgerMenu;

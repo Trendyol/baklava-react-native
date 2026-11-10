@@ -1,4 +1,5 @@
 import React from 'react';
+import { I18nManager, StyleSheet } from 'react-native';
 import theme from '../../theme';
 import { render } from '../../test-utils';
 import Icon from './Icon';
@@ -78,6 +79,63 @@ describe('Icon', () => {
 
     // then
     expect(iconComponent).toBeTruthy();
+  });
+
+  test('should mirror rtl-flippable icon in RTL layout', () => {
+    const originalIsRTL = I18nManager.isRTL;
+    I18nManager.isRTL = true;
+
+    // when
+    const { getByTestId } = render(<Icon testID="icon" name="arrow_left" />);
+    const iconComponent = getByTestId('icon');
+
+    // then
+    expect(StyleSheet.flatten(iconComponent.props.style)).toMatchObject({
+      transform: [{ scaleX: -1 }],
+    });
+
+    I18nManager.isRTL = originalIsRTL;
+  });
+
+  test('should not mirror non-flippable icon in RTL layout', () => {
+    const originalIsRTL = I18nManager.isRTL;
+    I18nManager.isRTL = true;
+
+    // when
+    const { getByTestId } = render(<Icon testID="icon" name="confetti" />);
+    const iconComponent = getByTestId('icon');
+
+    // then
+    expect(StyleSheet.flatten(iconComponent.props.style)).not.toHaveProperty(
+      'transform',
+    );
+
+    I18nManager.isRTL = originalIsRTL;
+  });
+
+  test('should render icon component with deprecated legacy name', () => {
+    // when
+    const { getByTestId } = render(<Icon testID="icon" name="add-note" />);
+    const iconComponent = getByTestId('icon');
+
+    // then
+    expect(iconComponent).toBeTruthy();
+  });
+
+  test('should mirror icon resolved from deprecated alias in RTL layout', () => {
+    const originalIsRTL = I18nManager.isRTL;
+    I18nManager.isRTL = true;
+
+    // when
+    const { getByTestId } = render(<Icon testID="icon" name="arrow-left" />);
+    const iconComponent = getByTestId('icon');
+
+    // then
+    expect(StyleSheet.flatten(iconComponent.props.style)).toMatchObject({
+      transform: [{ scaleX: -1 }],
+    });
+
+    I18nManager.isRTL = originalIsRTL;
   });
 
   test('should not render icon component without name', () => {

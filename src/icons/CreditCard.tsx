@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgCreditCard = (props: SvgProps) => (
+const CreditCard = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -20,4 +20,4 @@ const SvgCreditCard = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgCreditCard;
+export default CreditCard;

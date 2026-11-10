@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgAnnouncement = (props: SvgProps) => (
+const Announcement = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -10,12 +9,15 @@ const SvgAnnouncement = (props: SvgProps) => (
     xmlns="http://www.w3.org/2000/svg"
     {...props}>
     <Path
-      d="M21 12h-1v6a1 1 0 1 1-2 0V2a1 1 0 1 1 2 0v6h1a2 2 0 1 1 0 4ZM5.38 15.804 5.22 15H2.999A1.999 1.999 0 0 1 1 13V8c0-1.105.895-2 1.999-2H9.5c1.813 0 3.305-.326 4.5-.78v10.298a17.553 17.553 0 0 0-3.553-.498l-1.274-.055.25 1.25 1.118 5.589A1 1 0 0 1 9.561 23H7.64a1 1 0 0 1-.981-.804l-1.278-6.392Z"
-      fill={props?.fill ?? `#273142`}
-      stroke={props?.fill ?? `#273142`}
-      strokeWidth={2}
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M13.96.17a1.28 1.28 0 0 0-.453 1.73l.558.986-9.541 9.422a2.058 2.058 0 0 0-.34 2.469l4.928 8.717a.982.982 0 0 0 1.156.46l4.36-1.402c.372-.12.64-.45.687-.845l.51-4.318 5.35-1.923.512.905c.342.605 1.1.812 1.693.463a1.28 1.28 0 0 0 .454-1.73L15.654.634A1.225 1.225 0 0 0 13.96.17Zm-.222 17.968L9.28 19.74l1.152 2.037 2.99-.961.316-2.678Z"
+      fill={props?.fill ?? '#273142'}
+    />
+    <Path
+      d="M.62 15.053a1.28 1.28 0 0 0-.454 1.73l2.727 4.823c.342.606 1.1.813 1.693.463a1.28 1.28 0 0 0 .454-1.729l-2.727-4.823a1.225 1.225 0 0 0-1.693-.464Z"
+      fill={props?.fill ?? '#273142'}
     />
   </Svg>
 );
-
-export default SvgAnnouncement;
+export default Announcement;

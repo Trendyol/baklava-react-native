@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgMealOrderReturn = (props: SvgProps) => (
+const MealOrderReturn = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -16,4 +16,4 @@ const SvgMealOrderReturn = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgMealOrderReturn;
+export default MealOrderReturn;

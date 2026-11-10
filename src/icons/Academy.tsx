@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgAcademy = (props: SvgProps) => (
+const Academy = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -17,5 +16,4 @@ const SvgAcademy = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default SvgAcademy;
+export default Academy;

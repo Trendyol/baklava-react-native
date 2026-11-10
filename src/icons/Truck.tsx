@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgTruck = (props: SvgProps) => (
+const Truck = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -25,5 +24,4 @@ const SvgTruck = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default SvgTruck;
+export default Truck;

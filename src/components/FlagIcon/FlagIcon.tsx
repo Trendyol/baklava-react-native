@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme, VariantProps } from '@ergenekonyigit/restyle';
-import * as icons from '../../icons';
+import * as icons from '../../flag-icons';
 import { Theme } from '../../theme';
 import { FlagIconNameType } from './types';
 import { SvgProps } from 'react-native-svg';

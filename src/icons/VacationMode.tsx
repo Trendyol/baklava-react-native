@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgVacationMode = (props: SvgProps) => (
+const VacationMode = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -21,5 +20,4 @@ const SvgVacationMode = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default SvgVacationMode;
+export default VacationMode;

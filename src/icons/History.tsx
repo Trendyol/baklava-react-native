@@ -1,17 +1,19 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgHistory = (props: SvgProps) => (
+const History = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
-    viewBox="0 0 14 14"
+    viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     {...props}>
     <Path
-      d="M7 0a7 7 0 1 1 0 14 .583.583 0 0 1 0-1.167 5.833 5.833 0 1 0-4.375-1.977V9.625a.583.583 0 0 1 1.167 0v2.625a.584.584 0 0 1-.584.583H.583a.583.583 0 0 1 0-1.166h1.17c-.14-.173-.28-.366-.419-.557A7 7 0 0 1 7 0Zm0 1.75a5.25 5.25 0 1 1-2.333 9.954V9.625a1.459 1.459 0 0 0-2.62-.882A5.25 5.25 0 0 1 7 1.75ZM7 3.5a.583.583 0 0 0-.583.583V7c0 .322.26.583.583.583h2.333a.584.584 0 1 0 0-1.166h-1.75V4.083A.583.583 0 0 0 7 3.5Z"
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M12 2C6.477 2 2 6.477 2 12c0 2.536.943 4.851 2.5 6.615V16.5a1 1 0 1 1 2 0V21a1 1 0 0 1-1 1H1a1 1 0 1 1 0-2h2.001c-.22-.27-.436-.57-.653-.868l-.062-.085A11.949 11.949 0 0 1 0 12C0 5.373 5.373 0 12 0s12 5.373 12 12-5.373 12-12 12a1 1 0 1 1 0-2c5.523 0 10-4.477 10-10S17.523 2 12 2Zm9 10a9 9 0 0 1-13 8.064V16.5a2.5 2.5 0 0 0-4.492-1.511A9 9 0 1 1 21 12ZM11 7a1 1 0 1 1 2 0v4h3a1 1 0 1 1 0 2h-4a1 1 0 0 1-1-1V7Z"
       fill={props?.fill ?? '#273142'}
     />
   </Svg>
 );
-export default SvgHistory;
+export default History;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgSupport2 = (props: SvgProps) => (
+const Support2 = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -14,4 +14,4 @@ const SvgSupport2 = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgSupport2;
+export default Support2;

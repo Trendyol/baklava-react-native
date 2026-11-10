@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-
-const SvgOrderBox = (props: SvgProps) => (
+const OrderBox = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -17,5 +16,4 @@ const SvgOrderBox = (props: SvgProps) => (
     />
   </Svg>
 );
-
-export default SvgOrderBox;
+export default OrderBox;

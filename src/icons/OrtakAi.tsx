@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Svg, { SvgProps, Path } from 'react-native-svg';
-const SvgOrtakAi = (props: SvgProps) => (
+const OrtakAi = (props: SvgProps) => (
   <Svg
     width={24}
     height={24}
@@ -14,4 +14,4 @@ const SvgOrtakAi = (props: SvgProps) => (
     />
   </Svg>
 );
-export default SvgOrtakAi;
+export default OrtakAi;
