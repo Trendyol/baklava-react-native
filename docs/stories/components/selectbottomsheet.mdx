@@ -1,6 +1,7 @@
 import { Meta } from '@storybook/addon-docs/blocks';
 import SelectBottomSheetWithCheckbox from '../assets/selectbottomsheet/SelectBottomSheetWithCheckbox.png';
 import SelectBottomSheetWithRadioButton from '../assets/selectbottomsheet/SelectBottomSheetWithRadioButton.png';
+import SelectBottomSheetFullPage from '../assets/selectbottomsheet/SelectBottomSheetFullPage.png';
 
 <Meta
   title="Components/SelectBottomSheet"
@@ -26,6 +27,7 @@ Select component uses the Bottom Sheet component for listing the selectable (sin
   }}>
   <img src={SelectBottomSheetWithCheckbox} width="250" alt="SelectBottomSheetWithCheckbox" />
   <img src={SelectBottomSheetWithRadioButton} width="250" alt="SelectBottomSheetWithRadioButton" />
+  <img src={SelectBottomSheetFullPage} width="250" alt="SelectBottomSheetFullPage" />
 </div>
 
 <br/>
@@ -96,7 +98,15 @@ Type: `string[]`
 
 ### maxVisibleItems
 
-Type: `number`
+Type: `number`, Default value: `6`
+
+Controls the maximum visible list height (`maxVisibleItems × 50 − 15` px). Increase this value when you need a taller sheet with more options before scrolling.
+
+### applyBottomInset
+
+Type: `boolean`, Default value: `false`
+
+Adds safe area padding at the bottom of the list when the sheet is expanded.
 
 ### pb
 
@@ -107,3 +117,34 @@ Type: `string`
 Type: `BottomSheetProps`
 
 <a href="https://trendyol.github.io/baklava-react-native/?path=/docs/components-bottomsheet--page" title="title">...BottomSheet props</a>
+
+<br />
+<br />
+<br />
+
+## Full Page (Max Height)
+
+- By default the sheet height follows the content (short lists stay compact).
+- To approach the maximum supported height (~90% of the screen; see BottomSheet), set a higher `maxVisibleItems` and use `applyBottomInset` when needed.
+- There is no dedicated `fullPage` prop yet; consumers tune height via `maxVisibleItems`. A long `options` list scrolls inside the expanded area.
+- See the FullPage story in Storybook for a reference implementation.
+
+```jsx
+<SelectBottomSheet
+  visible={isVisible}
+  type="checkbox"
+  maxVisibleItems={20}
+  applyBottomInset
+  selectButtonLabel="Tamam"
+  closeButtonLabel="Kapat"
+  title="Bottom Sheet Title"
+  closeButtonAction={() => setVisible(false)}
+  selectButtonAction={() => {
+    showAlert(selectedOptions);
+    setVisible(false);
+  }}
+  options={options}
+  selectedOption={selectedOptions}
+  onSelect={handleMultiSelect}
+/>
+```
