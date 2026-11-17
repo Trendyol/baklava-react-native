@@ -59,7 +59,6 @@ const DatePickerContent = React.memo<DatePickerContentProps>(props => {
           editable={false}
           pointerEvents="none"
           testID={`${testID}-input`}
-          accessibilityLabel={`${testID}-input`}
           size={props.size}
           labelFixed={true}
           label={props.label}
@@ -69,7 +68,6 @@ const DatePickerContent = React.memo<DatePickerContentProps>(props => {
           activeOpacity={1}
           onPress={handleOpen}
           testID={`${testID}-touchable`}
-          accessibilityLabel={`${testID}-touchable`}
         />
         <Box style={styles.rightIconsContainer}>
           {value && (

@@ -23,8 +23,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
       }
     >
       <View
-        accessibilityLabel="datepicker-input-box"
-        accessible={true}
+        accessible={false}
         style={
           [
             {
@@ -42,7 +41,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
         testID="datepicker-input-box"
       >
         <TextInput
-          accessibilityLabel="datepicker-input"
           bg="transparent"
           disabled={false}
           editable={true}
@@ -70,7 +68,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
       </View>
     </View>
     <View
-      accessibilityLabel="datepicker-touchable"
       accessibilityState={
         {
           "busy": undefined,
@@ -140,7 +137,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}
@@ -234,8 +230,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
     </View>
   </View>,
   <View
-    accessibilityLabel="datepicker-wrapper"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -252,7 +247,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
     testID="datepicker-wrapper"
   >
     <View
-      accessibilityLabel="datepicker-overlay"
       collapsable={false}
       onResponderRelease={[Function]}
       onStartShouldSetResponder={[Function]}
@@ -270,8 +264,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
       testID="datepicker-overlay"
     />
     <View
-      accessibilityLabel="datepicker"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -315,7 +308,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
           }
         >
           <View
-            accessibilityLabel="datepicker-header-close"
             accessibilityState={
               {
                 "busy": undefined,
@@ -352,7 +344,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             testID="datepicker-header-close"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -370,8 +361,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             </Text>
           </View>
           <Text
-            accessibilityLabel="datepicker-header-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -391,7 +380,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             testID="datepicker-header-label"
           />
           <View
-            accessibilityLabel="datepicker-header-select"
             accessibilityState={
               {
                 "busy": undefined,
@@ -428,7 +416,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             testID="datepicker-header-select"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -460,7 +447,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
         />
       </View>
       <RCTScrollView
-        accessibilityLabel="datepicker-body"
         bounces={false}
         showsVerticalScrollIndicator={true}
         testID="datepicker-body"
@@ -481,7 +467,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             }
           >
             <View
-              accessibilityLabel="datepicker-header-prev"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -527,7 +512,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -623,7 +607,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-header-month-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -673,7 +656,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -692,7 +674,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-header-year-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -742,7 +723,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -762,7 +742,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               </View>
             </View>
             <View
-              accessibilityLabel="datepicker-header-next"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -808,7 +787,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -913,8 +891,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-0-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -943,8 +919,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-1-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -973,8 +947,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-2-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -1003,8 +975,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-3-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -1033,8 +1003,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-4-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -1063,8 +1031,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-5-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -1093,8 +1059,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-6-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -1143,7 +1107,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1795996800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -1209,8 +1172,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1795996800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -1244,7 +1205,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796083200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -1310,8 +1270,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796083200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -1345,7 +1303,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796169600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -1411,8 +1368,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796169600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -1446,7 +1401,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796256000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -1512,8 +1466,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796256000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -1547,7 +1499,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796342400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -1613,8 +1564,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796342400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -1648,7 +1597,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796428800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -1714,8 +1662,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796428800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -1749,7 +1695,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796515200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -1815,8 +1760,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796515200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -1867,7 +1810,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796601600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -1933,8 +1875,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796601600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -1968,7 +1908,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796688000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -2034,8 +1973,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796688000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -2069,7 +2006,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796774400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -2135,8 +2071,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796774400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -2170,7 +2104,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796860800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -2236,8 +2169,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796860800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -2271,7 +2202,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1796947200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -2337,8 +2267,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1796947200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -2372,7 +2300,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797033600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -2438,8 +2365,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797033600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -2473,7 +2398,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797120000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -2539,8 +2463,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797120000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -2591,7 +2513,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797206400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -2657,8 +2578,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797206400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -2692,7 +2611,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797292800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -2758,8 +2676,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797292800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -2793,7 +2709,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797379200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -2859,8 +2774,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797379200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -2894,7 +2807,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797465600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -2960,8 +2872,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797465600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -2995,7 +2905,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797552000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -3061,8 +2970,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797552000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -3096,7 +3003,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797638400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -3162,8 +3068,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797638400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -3197,7 +3101,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797724800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -3263,8 +3166,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797724800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -3315,7 +3216,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797811200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -3381,8 +3281,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797811200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -3416,7 +3314,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797897600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -3482,8 +3379,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797897600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -3517,7 +3412,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1797984000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -3583,8 +3477,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1797984000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -3618,7 +3510,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798070400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -3684,8 +3575,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798070400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -3719,7 +3608,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798156800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -3785,8 +3673,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798156800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -3820,7 +3706,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798243200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -3886,8 +3771,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798243200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -3921,7 +3804,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798329600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -3987,8 +3869,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798329600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -4039,7 +3919,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798416000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -4105,8 +3984,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798416000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -4140,7 +4017,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798502400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -4206,8 +4082,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798502400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -4241,7 +4115,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798588800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -4307,8 +4180,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798588800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -4342,7 +4213,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798675200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -4408,8 +4278,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798675200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -4443,7 +4311,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798761600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -4509,8 +4376,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798761600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -4544,7 +4409,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798848000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -4610,8 +4474,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798848000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -4645,7 +4507,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798934400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -4711,8 +4572,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798934400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -4763,8 +4622,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
       }
     >
       <View
-        accessibilityLabel="datepicker-input-box"
-        accessible={true}
+        accessible={false}
         style={
           [
             {
@@ -4782,7 +4640,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
         testID="datepicker-input-box"
       >
         <TextInput
-          accessibilityLabel="datepicker-input"
           bg="transparent"
           disabled={false}
           editable={true}
@@ -4810,7 +4667,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
       </View>
     </View>
     <View
-      accessibilityLabel="datepicker-touchable"
       accessibilityState={
         {
           "busy": undefined,
@@ -4880,7 +4736,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}
@@ -4974,8 +4829,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
     </View>
   </View>,
   <View
-    accessibilityLabel="datepicker-wrapper"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -4992,7 +4846,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
     testID="datepicker-wrapper"
   >
     <View
-      accessibilityLabel="datepicker-overlay"
       collapsable={false}
       onResponderRelease={[Function]}
       onStartShouldSetResponder={[Function]}
@@ -5010,8 +4863,7 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
       testID="datepicker-overlay"
     />
     <View
-      accessibilityLabel="datepicker"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -5055,7 +4907,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
           }
         >
           <View
-            accessibilityLabel="datepicker-header-close"
             accessibilityState={
               {
                 "busy": undefined,
@@ -5092,7 +4943,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             testID="datepicker-header-close"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -5110,8 +4960,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             </Text>
           </View>
           <Text
-            accessibilityLabel="datepicker-header-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -5131,7 +4979,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             testID="datepicker-header-label"
           />
           <View
-            accessibilityLabel="datepicker-header-select"
             accessibilityState={
               {
                 "busy": undefined,
@@ -5168,7 +5015,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             testID="datepicker-header-select"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -5200,7 +5046,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
         />
       </View>
       <RCTScrollView
-        accessibilityLabel="datepicker-body"
         bounces={false}
         showsVerticalScrollIndicator={true}
         testID="datepicker-body"
@@ -5221,7 +5066,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
             }
           >
             <View
-              accessibilityLabel="datepicker-header-prev"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -5267,7 +5111,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -5363,7 +5206,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-header-month-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -5413,7 +5255,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -5432,7 +5273,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-header-year-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -5482,7 +5322,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -5502,7 +5341,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               </View>
             </View>
             <View
-              accessibilityLabel="datepicker-header-next"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -5548,7 +5386,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -5653,8 +5490,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-0-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -5683,8 +5518,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-1-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -5713,8 +5546,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-2-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -5743,8 +5574,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-3-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -5773,8 +5602,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-4-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -5803,8 +5630,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-5-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -5833,8 +5658,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-6-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -5883,7 +5706,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798416000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -5949,8 +5771,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798416000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -5984,7 +5804,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798502400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -6050,8 +5869,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798502400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -6085,7 +5902,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798588800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -6151,8 +5967,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798588800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -6186,7 +6000,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798675200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -6252,8 +6065,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798675200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -6287,7 +6098,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798761600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -6353,8 +6163,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798761600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -6388,7 +6196,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798848000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -6454,8 +6261,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798848000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -6489,7 +6294,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1798934400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -6555,8 +6359,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1798934400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -6607,7 +6409,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799020800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -6673,8 +6474,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799020800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -6708,7 +6507,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799107200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -6774,8 +6572,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799107200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -6809,7 +6605,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799193600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -6875,8 +6670,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799193600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -6910,7 +6703,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799280000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -6976,8 +6768,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799280000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -7011,7 +6801,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799366400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -7077,8 +6866,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799366400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -7112,7 +6899,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799452800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -7178,8 +6964,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799452800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -7213,7 +6997,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799539200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -7279,8 +7062,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799539200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -7331,7 +7112,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799625600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -7397,8 +7177,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799625600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -7432,7 +7210,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799712000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -7498,8 +7275,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799712000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -7533,7 +7308,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799798400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -7599,8 +7373,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799798400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -7634,7 +7406,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799884800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -7700,8 +7471,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799884800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -7735,7 +7504,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1799971200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -7801,8 +7569,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1799971200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -7836,7 +7602,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800057600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -7902,8 +7667,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800057600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -7937,7 +7700,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800144000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -8003,8 +7765,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800144000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -8055,7 +7815,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800230400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -8121,8 +7880,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800230400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -8156,7 +7913,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800316800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -8222,8 +7978,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800316800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -8257,7 +8011,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800403200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -8323,8 +8076,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800403200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -8358,7 +8109,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800489600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -8424,8 +8174,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800489600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -8459,7 +8207,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800576000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -8525,8 +8272,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800576000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -8560,7 +8305,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800662400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -8626,8 +8370,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800662400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -8661,7 +8403,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800748800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -8727,8 +8468,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800748800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -8779,7 +8518,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800835200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -8845,8 +8583,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800835200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -8880,7 +8616,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1800921600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -8946,8 +8681,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1800921600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -8981,7 +8714,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1801008000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -9047,8 +8779,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1801008000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -9082,7 +8812,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1801094400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -9148,8 +8877,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1801094400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -9183,7 +8910,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1801180800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -9249,8 +8975,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1801180800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -9284,7 +9008,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1801267200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -9350,8 +9073,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1801267200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -9385,7 +9106,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1801353600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -9451,8 +9171,6 @@ exports[`DatePicker Calendar navigation should handle month navigation with year
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1801353600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -9503,8 +9221,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
       }
     >
       <View
-        accessibilityLabel="datepicker-input-box"
-        accessible={true}
+        accessible={false}
         style={
           [
             {
@@ -9522,7 +9239,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
         testID="datepicker-input-box"
       >
         <TextInput
-          accessibilityLabel="datepicker-input"
           bg="transparent"
           disabled={false}
           editable={true}
@@ -9550,7 +9266,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
       </View>
     </View>
     <View
-      accessibilityLabel="datepicker-touchable"
       accessibilityState={
         {
           "busy": undefined,
@@ -9620,7 +9335,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}
@@ -9714,8 +9428,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
     </View>
   </View>,
   <View
-    accessibilityLabel="datepicker-wrapper"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -9732,7 +9445,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
     testID="datepicker-wrapper"
   >
     <View
-      accessibilityLabel="datepicker-overlay"
       collapsable={false}
       onResponderRelease={[Function]}
       onStartShouldSetResponder={[Function]}
@@ -9750,8 +9462,7 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
       testID="datepicker-overlay"
     />
     <View
-      accessibilityLabel="datepicker"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -9795,7 +9506,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
           }
         >
           <View
-            accessibilityLabel="datepicker-header-close"
             accessibilityState={
               {
                 "busy": undefined,
@@ -9832,7 +9542,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
             testID="datepicker-header-close"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -9850,8 +9559,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
             </Text>
           </View>
           <Text
-            accessibilityLabel="datepicker-header-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -9871,7 +9578,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
             testID="datepicker-header-label"
           />
           <View
-            accessibilityLabel="datepicker-header-select"
             accessibilityState={
               {
                 "busy": undefined,
@@ -9908,7 +9614,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
             testID="datepicker-header-select"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -9940,7 +9645,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
         />
       </View>
       <RCTScrollView
-        accessibilityLabel="datepicker-body"
         bounces={false}
         showsVerticalScrollIndicator={true}
         testID="datepicker-body"
@@ -9961,7 +9665,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
             }
           >
             <View
-              accessibilityLabel="datepicker-header-prev"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -10007,7 +9710,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -10103,7 +9805,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
               }
             >
               <View
-                accessibilityLabel="datepicker-header-month-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -10154,7 +9855,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -10173,7 +9873,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-header-year-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -10223,7 +9922,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -10243,7 +9941,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
               </View>
             </View>
             <View
-              accessibilityLabel="datepicker-header-next"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -10289,7 +9986,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -10392,7 +10088,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
               }
             >
               <View
-                accessibilityLabel="datepicker-month-1"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -10445,7 +10140,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -10464,7 +10158,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-2"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -10517,7 +10210,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -10536,7 +10228,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-3"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -10589,7 +10280,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -10608,7 +10298,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-4"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -10661,7 +10350,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -10680,7 +10368,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-5"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -10733,7 +10420,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -10752,7 +10438,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-6"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -10805,7 +10490,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -10824,7 +10508,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-7"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -10877,7 +10560,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -10896,7 +10578,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-8"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -10949,7 +10630,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -10968,7 +10648,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-9"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -11021,7 +10700,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -11040,7 +10718,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-10"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -11093,7 +10770,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -11112,7 +10788,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-11"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -11165,7 +10840,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -11184,7 +10858,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-12"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -11237,7 +10910,6 @@ exports[`DatePicker Calendar navigation should open month picker when month butt
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -11287,8 +10959,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
       }
     >
       <View
-        accessibilityLabel="datepicker-input-box"
-        accessible={true}
+        accessible={false}
         style={
           [
             {
@@ -11306,7 +10977,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
         testID="datepicker-input-box"
       >
         <TextInput
-          accessibilityLabel="datepicker-input"
           bg="transparent"
           disabled={false}
           editable={true}
@@ -11334,7 +11004,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
       </View>
     </View>
     <View
-      accessibilityLabel="datepicker-touchable"
       accessibilityState={
         {
           "busy": undefined,
@@ -11404,7 +11073,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}
@@ -11498,8 +11166,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
     </View>
   </View>,
   <View
-    accessibilityLabel="datepicker-wrapper"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -11516,7 +11183,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
     testID="datepicker-wrapper"
   >
     <View
-      accessibilityLabel="datepicker-overlay"
       collapsable={false}
       onResponderRelease={[Function]}
       onStartShouldSetResponder={[Function]}
@@ -11534,8 +11200,7 @@ exports[`DatePicker Calendar navigation should open year picker when year button
       testID="datepicker-overlay"
     />
     <View
-      accessibilityLabel="datepicker"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -11579,7 +11244,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
           }
         >
           <View
-            accessibilityLabel="datepicker-header-close"
             accessibilityState={
               {
                 "busy": undefined,
@@ -11616,7 +11280,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
             testID="datepicker-header-close"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -11634,8 +11297,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
             </Text>
           </View>
           <Text
-            accessibilityLabel="datepicker-header-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -11655,7 +11316,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
             testID="datepicker-header-label"
           />
           <View
-            accessibilityLabel="datepicker-header-select"
             accessibilityState={
               {
                 "busy": undefined,
@@ -11692,7 +11352,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
             testID="datepicker-header-select"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -11724,7 +11383,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
         />
       </View>
       <RCTScrollView
-        accessibilityLabel="datepicker-body"
         bounces={false}
         showsVerticalScrollIndicator={true}
         testID="datepicker-body"
@@ -11745,7 +11403,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
             }
           >
             <View
-              accessibilityLabel="datepicker-header-prev"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -11791,7 +11448,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -11887,7 +11543,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
               }
             >
               <View
-                accessibilityLabel="datepicker-header-month-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -11937,7 +11592,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -11956,7 +11610,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-header-year-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12007,7 +11660,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12027,7 +11679,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
               </View>
             </View>
             <View
-              accessibilityLabel="datepicker-header-next"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -12073,7 +11724,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -12178,7 +11828,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
               }
             >
               <View
-                accessibilityLabel="datepicker-year-2019"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12231,7 +11880,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12250,7 +11898,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2020"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12303,7 +11950,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12322,7 +11968,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2021"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12375,7 +12020,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12394,7 +12038,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2022"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12447,7 +12090,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12466,7 +12108,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2023"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12519,7 +12160,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12538,7 +12178,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2024"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12591,7 +12230,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12610,7 +12248,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2025"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12663,7 +12300,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12682,7 +12318,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2026"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12735,7 +12370,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12754,7 +12388,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2027"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12807,7 +12440,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12826,7 +12458,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2028"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12879,7 +12510,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12898,7 +12528,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2029"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -12951,7 +12580,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -12970,7 +12598,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2030"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -13023,7 +12650,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -13042,7 +12668,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2031"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -13095,7 +12720,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -13114,7 +12738,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2032"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -13167,7 +12790,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -13186,7 +12808,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-year-2033"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -13239,7 +12860,6 @@ exports[`DatePicker Calendar navigation should open year picker when year button
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -13288,8 +12908,7 @@ exports[`DatePicker Clear Button should render DatePicker with clear button corr
     }
   >
     <View
-      accessibilityLabel="datepicker-input-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -13307,7 +12926,6 @@ exports[`DatePicker Clear Button should render DatePicker with clear button corr
       testID="datepicker-input-box"
     >
       <TextInput
-        accessibilityLabel="datepicker-input"
         bg="transparent"
         disabled={false}
         editable={true}
@@ -13335,7 +12953,6 @@ exports[`DatePicker Clear Button should render DatePicker with clear button corr
     </View>
   </View>
   <View
-    accessibilityLabel="datepicker-touchable"
     accessibilityState={
       {
         "busy": undefined,
@@ -13430,7 +13047,6 @@ exports[`DatePicker Clear Button should render DatePicker with clear button corr
       testID="datepicker-clear"
     >
       <RNSVGSvgView
-        accessibilityLabel="icon"
         align="xMidYMid"
         bbHeight={14}
         bbWidth={14}
@@ -13520,7 +13136,6 @@ exports[`DatePicker Clear Button should render DatePicker with clear button corr
       }
     >
       <RNSVGSvgView
-        accessibilityLabel="icon"
         align="xMidYMid"
         bbHeight={14}
         bbWidth={14}
@@ -13638,8 +13253,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
       }
     >
       <View
-        accessibilityLabel="datepicker-input-box"
-        accessible={true}
+        accessible={false}
         style={
           [
             {
@@ -13657,7 +13271,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
         testID="datepicker-input-box"
       >
         <TextInput
-          accessibilityLabel="datepicker-input"
           bg="transparent"
           disabled={false}
           editable={true}
@@ -13685,7 +13298,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
       </View>
     </View>
     <View
-      accessibilityLabel="datepicker-touchable"
       accessibilityState={
         {
           "busy": undefined,
@@ -13755,7 +13367,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}
@@ -13849,8 +13460,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
     </View>
   </View>,
   <View
-    accessibilityLabel="datepicker-wrapper"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -13867,7 +13477,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
     testID="datepicker-wrapper"
   >
     <View
-      accessibilityLabel="datepicker-overlay"
       collapsable={false}
       onResponderRelease={[Function]}
       onStartShouldSetResponder={[Function]}
@@ -13885,8 +13494,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
       testID="datepicker-overlay"
     />
     <View
-      accessibilityLabel="datepicker"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -13930,7 +13538,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
           }
         >
           <View
-            accessibilityLabel="datepicker-header-close"
             accessibilityState={
               {
                 "busy": undefined,
@@ -13967,7 +13574,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             testID="datepicker-header-close"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -13985,8 +13591,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             </Text>
           </View>
           <Text
-            accessibilityLabel="datepicker-header-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -14006,7 +13610,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             testID="datepicker-header-label"
           />
           <View
-            accessibilityLabel="datepicker-header-select"
             accessibilityState={
               {
                 "busy": undefined,
@@ -14043,7 +13646,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             testID="datepicker-header-select"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -14075,7 +13677,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
         />
       </View>
       <RCTScrollView
-        accessibilityLabel="datepicker-body"
         bounces={false}
         showsVerticalScrollIndicator={true}
         testID="datepicker-body"
@@ -14096,7 +13697,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             }
           >
             <View
-              accessibilityLabel="datepicker-header-prev"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -14142,7 +13742,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -14238,7 +13837,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-header-month-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -14289,7 +13887,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -14308,7 +13905,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-header-year-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -14358,7 +13954,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -14378,7 +13973,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               </View>
             </View>
             <View
-              accessibilityLabel="datepicker-header-next"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -14424,7 +14018,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -14527,7 +14120,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-month-1"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -14580,7 +14172,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -14599,7 +14190,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-2"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -14652,7 +14242,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -14671,7 +14260,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-3"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -14724,7 +14312,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -14743,7 +14330,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-4"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -14796,7 +14382,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -14815,7 +14400,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-5"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -14868,7 +14452,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -14887,7 +14470,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-6"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -14940,7 +14522,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -14959,7 +14540,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-7"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -15012,7 +14592,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -15031,7 +14610,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-8"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -15084,7 +14662,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -15103,7 +14680,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-9"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -15156,7 +14732,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -15175,7 +14750,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-10"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -15228,7 +14802,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -15247,7 +14820,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-11"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -15300,7 +14872,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -15319,7 +14890,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-12"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -15372,7 +14942,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -15422,8 +14991,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
       }
     >
       <View
-        accessibilityLabel="datepicker-input-box"
-        accessible={true}
+        accessible={false}
         style={
           [
             {
@@ -15441,7 +15009,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
         testID="datepicker-input-box"
       >
         <TextInput
-          accessibilityLabel="datepicker-input"
           bg="transparent"
           disabled={false}
           editable={true}
@@ -15469,7 +15036,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
       </View>
     </View>
     <View
-      accessibilityLabel="datepicker-touchable"
       accessibilityState={
         {
           "busy": undefined,
@@ -15539,7 +15105,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}
@@ -15633,8 +15198,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
     </View>
   </View>,
   <View
-    accessibilityLabel="datepicker-wrapper"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -15651,7 +15215,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
     testID="datepicker-wrapper"
   >
     <View
-      accessibilityLabel="datepicker-overlay"
       collapsable={false}
       onResponderRelease={[Function]}
       onStartShouldSetResponder={[Function]}
@@ -15669,8 +15232,7 @@ exports[`DatePicker Context edge cases should handle month selection with year c
       testID="datepicker-overlay"
     />
     <View
-      accessibilityLabel="datepicker"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -15714,7 +15276,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
           }
         >
           <View
-            accessibilityLabel="datepicker-header-close"
             accessibilityState={
               {
                 "busy": undefined,
@@ -15751,7 +15312,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             testID="datepicker-header-close"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -15769,8 +15329,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             </Text>
           </View>
           <Text
-            accessibilityLabel="datepicker-header-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -15790,7 +15348,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             testID="datepicker-header-label"
           />
           <View
-            accessibilityLabel="datepicker-header-select"
             accessibilityState={
               {
                 "busy": undefined,
@@ -15827,7 +15384,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             testID="datepicker-header-select"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -15859,7 +15415,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
         />
       </View>
       <RCTScrollView
-        accessibilityLabel="datepicker-body"
         bounces={false}
         showsVerticalScrollIndicator={true}
         testID="datepicker-body"
@@ -15880,7 +15435,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
             }
           >
             <View
-              accessibilityLabel="datepicker-header-prev"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -15926,7 +15480,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -16022,7 +15575,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-header-month-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -16072,7 +15624,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -16091,7 +15642,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-header-year-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -16141,7 +15691,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -16161,7 +15710,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               </View>
             </View>
             <View
-              accessibilityLabel="datepicker-header-next"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -16207,7 +15755,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -16312,8 +15859,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-0-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -16342,8 +15887,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-1-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -16372,8 +15915,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-2-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -16402,8 +15943,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-3-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -16432,8 +15971,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-4-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -16462,8 +15999,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-5-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -16492,8 +16027,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-6-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -16542,7 +16075,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1766966400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -16608,8 +16140,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1766966400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -16643,7 +16173,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767052800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -16709,8 +16238,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767052800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -16744,7 +16271,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767139200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -16810,8 +16336,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767139200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -16845,7 +16369,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767225600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -16911,8 +16434,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767225600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -16946,7 +16467,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767312000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -17012,8 +16532,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767312000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -17047,7 +16565,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767398400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -17113,8 +16630,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767398400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -17148,7 +16663,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767484800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -17214,8 +16728,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767484800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -17266,7 +16778,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767571200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -17332,8 +16843,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767571200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -17367,7 +16876,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767657600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -17433,8 +16941,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767657600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -17468,7 +16974,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767744000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -17534,8 +17039,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767744000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -17569,7 +17072,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767830400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -17635,8 +17137,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767830400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -17670,7 +17170,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767916800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -17736,8 +17235,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767916800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -17771,7 +17268,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768003200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -17837,8 +17333,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768003200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -17872,7 +17366,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768089600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -17938,8 +17431,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768089600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -17990,7 +17481,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768176000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -18056,8 +17546,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768176000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -18091,7 +17579,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768262400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -18157,8 +17644,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768262400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -18192,7 +17677,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768348800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -18258,8 +17742,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768348800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -18293,7 +17775,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768435200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -18359,8 +17840,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768435200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -18394,7 +17873,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768521600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -18460,8 +17938,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768521600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -18495,7 +17971,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768608000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -18561,8 +18036,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768608000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -18596,7 +18069,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768694400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -18662,8 +18134,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768694400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -18714,7 +18184,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768780800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -18780,8 +18249,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768780800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -18815,7 +18282,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768867200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -18881,8 +18347,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768867200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -18916,7 +18380,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768953600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -18982,8 +18445,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768953600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -19017,7 +18478,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769040000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -19083,8 +18543,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769040000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -19118,7 +18576,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769126400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -19184,8 +18641,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769126400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -19219,7 +18674,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769212800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -19285,8 +18739,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769212800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -19320,7 +18772,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769299200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -19386,8 +18837,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769299200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -19438,7 +18887,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769385600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -19504,8 +18952,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769385600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -19539,7 +18985,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769472000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -19605,8 +19050,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769472000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -19640,7 +19083,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769558400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -19706,8 +19148,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769558400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -19741,7 +19181,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769644800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -19807,8 +19246,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769644800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -19842,7 +19279,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769731200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -19908,8 +19344,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769731200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -19943,7 +19377,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769817600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -20009,8 +19442,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769817600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -20044,7 +19475,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769904000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -20110,8 +19540,6 @@ exports[`DatePicker Context edge cases should handle month selection with year c
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769904000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -20162,8 +19590,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
       }
     >
       <View
-        accessibilityLabel="datepicker-input-box"
-        accessible={true}
+        accessible={false}
         style={
           [
             {
@@ -20181,7 +19608,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
         testID="datepicker-input-box"
       >
         <TextInput
-          accessibilityLabel="datepicker-input"
           bg="transparent"
           disabled={false}
           editable={true}
@@ -20209,7 +19635,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
       </View>
     </View>
     <View
-      accessibilityLabel="datepicker-touchable"
       accessibilityState={
         {
           "busy": undefined,
@@ -20279,7 +19704,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}
@@ -20373,8 +19797,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
     </View>
   </View>,
   <View
-    accessibilityLabel="datepicker-wrapper"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -20391,7 +19814,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
     testID="datepicker-wrapper"
   >
     <View
-      accessibilityLabel="datepicker-overlay"
       collapsable={false}
       onResponderRelease={[Function]}
       onStartShouldSetResponder={[Function]}
@@ -20409,8 +19831,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
       testID="datepicker-overlay"
     />
     <View
-      accessibilityLabel="datepicker"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -20454,7 +19875,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
           }
         >
           <View
-            accessibilityLabel="datepicker-header-close"
             accessibilityState={
               {
                 "busy": undefined,
@@ -20491,7 +19911,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             testID="datepicker-header-close"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -20509,8 +19928,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             </Text>
           </View>
           <Text
-            accessibilityLabel="datepicker-header-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -20530,7 +19947,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             testID="datepicker-header-label"
           />
           <View
-            accessibilityLabel="datepicker-header-select"
             accessibilityState={
               {
                 "busy": undefined,
@@ -20567,7 +19983,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             testID="datepicker-header-select"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -20599,7 +20014,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
         />
       </View>
       <RCTScrollView
-        accessibilityLabel="datepicker-body"
         bounces={false}
         showsVerticalScrollIndicator={true}
         testID="datepicker-body"
@@ -20620,7 +20034,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             }
           >
             <View
-              accessibilityLabel="datepicker-header-prev"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -20666,7 +20079,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -20762,7 +20174,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-header-month-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -20813,7 +20224,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -20832,7 +20242,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-header-year-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -20882,7 +20291,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -20902,7 +20310,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               </View>
             </View>
             <View
-              accessibilityLabel="datepicker-header-next"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -20948,7 +20355,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -21051,7 +20457,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-month-1"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21104,7 +20509,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21123,7 +20527,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-2"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21176,7 +20579,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21195,7 +20597,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-3"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21248,7 +20649,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21267,7 +20667,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-4"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21320,7 +20719,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21339,7 +20737,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-5"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21392,7 +20789,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21411,7 +20807,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-6"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21464,7 +20859,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21483,7 +20877,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-7"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21536,7 +20929,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21555,7 +20947,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-8"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21608,7 +20999,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21627,7 +21017,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-9"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21680,7 +21069,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21699,7 +21087,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-10"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21752,7 +21139,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21771,7 +21157,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-11"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21824,7 +21209,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21843,7 +21227,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-month-12"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -21896,7 +21279,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -21946,8 +21328,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
       }
     >
       <View
-        accessibilityLabel="datepicker-input-box"
-        accessible={true}
+        accessible={false}
         style={
           [
             {
@@ -21965,7 +21346,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
         testID="datepicker-input-box"
       >
         <TextInput
-          accessibilityLabel="datepicker-input"
           bg="transparent"
           disabled={false}
           editable={true}
@@ -21993,7 +21373,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
       </View>
     </View>
     <View
-      accessibilityLabel="datepicker-touchable"
       accessibilityState={
         {
           "busy": undefined,
@@ -22063,7 +21442,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}
@@ -22157,8 +21535,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
     </View>
   </View>,
   <View
-    accessibilityLabel="datepicker-wrapper"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -22175,7 +21552,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
     testID="datepicker-wrapper"
   >
     <View
-      accessibilityLabel="datepicker-overlay"
       collapsable={false}
       onResponderRelease={[Function]}
       onStartShouldSetResponder={[Function]}
@@ -22193,8 +21569,7 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
       testID="datepicker-overlay"
     />
     <View
-      accessibilityLabel="datepicker"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -22238,7 +21613,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
           }
         >
           <View
-            accessibilityLabel="datepicker-header-close"
             accessibilityState={
               {
                 "busy": undefined,
@@ -22275,7 +21649,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             testID="datepicker-header-close"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -22293,8 +21666,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             </Text>
           </View>
           <Text
-            accessibilityLabel="datepicker-header-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -22314,7 +21685,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             testID="datepicker-header-label"
           />
           <View
-            accessibilityLabel="datepicker-header-select"
             accessibilityState={
               {
                 "busy": undefined,
@@ -22351,7 +21721,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             testID="datepicker-header-select"
           >
             <Text
-              accessible={false}
               style={
                 [
                   {
@@ -22383,7 +21752,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
         />
       </View>
       <RCTScrollView
-        accessibilityLabel="datepicker-body"
         bounces={false}
         showsVerticalScrollIndicator={true}
         testID="datepicker-body"
@@ -22404,7 +21772,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
             }
           >
             <View
-              accessibilityLabel="datepicker-header-prev"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -22450,7 +21817,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -22546,7 +21912,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-header-month-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -22596,7 +21961,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -22615,7 +21979,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 </View>
               </View>
               <View
-                accessibilityLabel="datepicker-header-year-select"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -22665,7 +22028,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessible={false}
                     style={
                       [
                         {
@@ -22685,7 +22047,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               </View>
             </View>
             <View
-              accessibilityLabel="datepicker-header-next"
               accessibilityState={
                 {
                   "busy": undefined,
@@ -22731,7 +22092,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                 }
               >
                 <RNSVGSvgView
-                  accessibilityLabel="icon"
                   align="xMidYMid"
                   bbHeight={20}
                   bbWidth={20}
@@ -22836,8 +22196,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-0-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -22866,8 +22224,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-1-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -22896,8 +22252,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-2-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -22926,8 +22280,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-3-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -22956,8 +22308,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-4-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -22986,8 +22336,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-5-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -23016,8 +22364,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <Text
-                accessibilityLabel="datepicker-datepicker-header-6-text"
-                accessible={true}
                 style={
                   [
                     {
@@ -23066,7 +22412,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1766966400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -23132,8 +22477,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1766966400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -23167,7 +22510,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767052800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -23233,8 +22575,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767052800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -23268,7 +22608,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767139200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -23334,8 +22673,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767139200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -23369,7 +22706,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767225600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -23435,8 +22771,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767225600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -23470,7 +22804,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767312000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -23536,8 +22869,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767312000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -23571,7 +22902,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767398400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -23637,8 +22967,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767398400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -23672,7 +23000,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767484800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -23738,8 +23065,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767484800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -23790,7 +23115,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767571200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -23856,8 +23180,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767571200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -23891,7 +23213,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767657600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -23957,8 +23278,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767657600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -23992,7 +23311,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767744000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -24058,8 +23376,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767744000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -24093,7 +23409,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767830400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -24159,8 +23474,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767830400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -24194,7 +23507,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1767916800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -24260,8 +23572,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1767916800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -24295,7 +23605,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768003200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -24361,8 +23670,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768003200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -24396,7 +23703,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768089600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -24462,8 +23768,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768089600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -24514,7 +23818,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768176000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -24580,8 +23883,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768176000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -24615,7 +23916,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768262400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -24681,8 +23981,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768262400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -24716,7 +24014,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768348800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -24782,8 +24079,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768348800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -24817,7 +24112,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768435200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -24883,8 +24177,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768435200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -24918,7 +24210,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768521600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -24984,8 +24275,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768521600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -25019,7 +24308,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768608000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -25085,8 +24373,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768608000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -25120,7 +24406,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768694400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -25186,8 +24471,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768694400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -25238,7 +24521,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768780800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -25304,8 +24586,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768780800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -25339,7 +24619,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768867200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -25405,8 +24684,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768867200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -25440,7 +24717,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1768953600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -25506,8 +24782,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1768953600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -25541,7 +24815,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769040000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -25607,8 +24880,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769040000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -25642,7 +24913,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769126400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -25708,8 +24978,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769126400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -25743,7 +25011,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769212800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -25809,8 +25076,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769212800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -25844,7 +25109,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769299200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -25910,8 +25174,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769299200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -25962,7 +25224,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769385600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -26028,8 +25289,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769385600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -26063,7 +25322,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769472000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -26129,8 +25387,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769472000000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -26164,7 +25420,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769558400000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -26230,8 +25485,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769558400000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -26265,7 +25518,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769644800000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -26331,8 +25583,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769644800000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -26366,7 +25616,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769731200000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -26432,8 +25681,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769731200000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -26467,7 +25714,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769817600000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -26533,8 +25779,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769817600000-text"
-                    accessible={true}
                     style={
                       [
                         {
@@ -26568,7 +25812,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
               }
             >
               <View
-                accessibilityLabel="datepicker-datepicker-day-1769904000000"
                 accessibilityState={
                   {
                     "busy": undefined,
@@ -26634,8 +25877,6 @@ exports[`DatePicker MonthPicker specific tests should handle month selection wit
                   }
                 >
                   <Text
-                    accessibilityLabel="datepicker-datepicker-day-1769904000000-text"
-                    accessible={true}
                     style={
                       [
                         {

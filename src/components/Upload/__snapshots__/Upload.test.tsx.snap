@@ -2,8 +2,7 @@
 
 exports[`Upload should render Upload correctly 1`] = `
 <View
-  accessibilityLabel="upload"
-  accessible={true}
+  accessible={false}
   style={
     [
       {},
@@ -72,7 +71,6 @@ exports[`Upload should render Upload correctly 1`] = `
       }
     >
       <RNSVGSvgView
-        accessibilityLabel="button-icon"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -169,8 +167,6 @@ exports[`Upload should render Upload correctly 1`] = `
         </RNSVGGroup>
       </RNSVGSvgView>
       <Text
-        accessibilityLabel="button-text"
-        accessible={true}
         style={
           [
             {
@@ -195,8 +191,7 @@ exports[`Upload should render Upload correctly 1`] = `
 
 exports[`Upload should render error file correctly 1`] = `
 <View
-  accessibilityLabel="upload"
-  accessible={true}
+  accessible={false}
   style={
     [
       {},
@@ -265,7 +260,6 @@ exports[`Upload should render error file correctly 1`] = `
       }
     >
       <RNSVGSvgView
-        accessibilityLabel="button-icon"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -362,8 +356,6 @@ exports[`Upload should render error file correctly 1`] = `
         </RNSVGGroup>
       </RNSVGSvgView>
       <Text
-        accessibilityLabel="button-text"
-        accessible={true}
         style={
           [
             {
@@ -384,8 +376,7 @@ exports[`Upload should render error file correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="upload-fileList"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -396,8 +387,7 @@ exports[`Upload should render error file correctly 1`] = `
     testID="upload-fileList"
   >
     <View
-      accessibilityLabel="upload-item-1"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -419,8 +409,7 @@ exports[`Upload should render error file correctly 1`] = `
         }
       >
         <View
-          accessibilityLabel="upload-item-1-leadingIcon"
-          accessible={true}
+          accessible={false}
           style={
             [
               {
@@ -431,7 +420,6 @@ exports[`Upload should render error file correctly 1`] = `
           testID="upload-item-1-leadingIcon"
         >
           <RNSVGSvgView
-            accessibilityLabel="icon"
             align="xMidYMid"
             bbHeight={16}
             bbWidth={16}
@@ -506,8 +494,6 @@ exports[`Upload should render error file correctly 1`] = `
           }
         >
           <Text
-            accessibilityLabel="upload-item-1-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -527,7 +513,6 @@ exports[`Upload should render error file correctly 1`] = `
           </Text>
         </View>
         <View
-          accessibilityLabel="remove file"
           accessibilityRole="button"
           accessibilityState={
             {
@@ -562,7 +547,6 @@ exports[`Upload should render error file correctly 1`] = `
           testID="upload-item-1-removeButton"
         >
           <RNSVGSvgView
-            accessibilityLabel="icon"
             align="xMidYMid"
             bbHeight={16}
             bbWidth={16}
@@ -651,8 +635,6 @@ exports[`Upload should render error file correctly 1`] = `
         testID="upload-item-1-errorLine"
       />
       <Text
-        accessibilityLabel="upload-item-1-helperText"
-        accessible={true}
         style={
           [
             {
@@ -677,8 +659,7 @@ exports[`Upload should render error file correctly 1`] = `
 
 exports[`Upload should render uploaded files correctly 1`] = `
 <View
-  accessibilityLabel="upload"
-  accessible={true}
+  accessible={false}
   style={
     [
       {},
@@ -747,7 +728,6 @@ exports[`Upload should render uploaded files correctly 1`] = `
       }
     >
       <RNSVGSvgView
-        accessibilityLabel="button-icon"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -844,8 +824,6 @@ exports[`Upload should render uploaded files correctly 1`] = `
         </RNSVGGroup>
       </RNSVGSvgView>
       <Text
-        accessibilityLabel="button-text"
-        accessible={true}
         style={
           [
             {
@@ -866,8 +844,7 @@ exports[`Upload should render uploaded files correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="upload-fileList"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -878,8 +855,7 @@ exports[`Upload should render uploaded files correctly 1`] = `
     testID="upload-fileList"
   >
     <View
-      accessibilityLabel="upload-item-1"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -901,8 +877,7 @@ exports[`Upload should render uploaded files correctly 1`] = `
         }
       >
         <View
-          accessibilityLabel="upload-item-1-leadingIcon"
-          accessible={true}
+          accessible={false}
           style={
             [
               {
@@ -913,7 +888,6 @@ exports[`Upload should render uploaded files correctly 1`] = `
           testID="upload-item-1-leadingIcon"
         >
           <RNSVGSvgView
-            accessibilityLabel="icon"
             align="xMidYMid"
             bbHeight={16}
             bbWidth={16}
@@ -988,8 +962,6 @@ exports[`Upload should render uploaded files correctly 1`] = `
           }
         >
           <Text
-            accessibilityLabel="upload-item-1-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -1009,7 +981,6 @@ exports[`Upload should render uploaded files correctly 1`] = `
           </Text>
         </View>
         <View
-          accessibilityLabel="remove file"
           accessibilityRole="button"
           accessibilityState={
             {
@@ -1044,7 +1015,6 @@ exports[`Upload should render uploaded files correctly 1`] = `
           testID="upload-item-1-removeButton"
         >
           <RNSVGSvgView
-            accessibilityLabel="icon"
             align="xMidYMid"
             bbHeight={16}
             bbWidth={16}
@@ -1124,8 +1094,7 @@ exports[`Upload should render uploaded files correctly 1`] = `
       </View>
     </View>
     <View
-      accessibilityLabel="upload-item-2"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -1147,8 +1116,7 @@ exports[`Upload should render uploaded files correctly 1`] = `
         }
       >
         <View
-          accessibilityLabel="upload-item-2-leadingIcon"
-          accessible={true}
+          accessible={false}
           style={
             [
               {
@@ -1159,7 +1127,6 @@ exports[`Upload should render uploaded files correctly 1`] = `
           testID="upload-item-2-leadingIcon"
         >
           <RNSVGSvgView
-            accessibilityLabel="icon"
             align="xMidYMid"
             bbHeight={16}
             bbWidth={16}
@@ -1234,8 +1201,6 @@ exports[`Upload should render uploaded files correctly 1`] = `
           }
         >
           <Text
-            accessibilityLabel="upload-item-2-label"
-            accessible={true}
             numberOfLines={1}
             style={
               [
@@ -1255,7 +1220,6 @@ exports[`Upload should render uploaded files correctly 1`] = `
           </Text>
         </View>
         <View
-          accessibilityLabel="remove file"
           accessibilityRole="button"
           accessibilityState={
             {
@@ -1290,7 +1254,6 @@ exports[`Upload should render uploaded files correctly 1`] = `
           testID="upload-item-2-removeButton"
         >
           <RNSVGSvgView
-            accessibilityLabel="icon"
             align="xMidYMid"
             bbHeight={16}
             bbWidth={16}

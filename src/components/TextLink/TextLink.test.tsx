@@ -6,9 +6,7 @@ import TextLink from './TextLink';
 describe('TextLink', () => {
   test('should render textLink correctly', () => {
     // when
-    const { toJSON } = render(
-      <TextLink accessibilityLabel="text">test</TextLink>,
-    );
+    const { toJSON } = render(<TextLink>test</TextLink>);
 
     // then
     expect(toJSON()).toMatchSnapshot();

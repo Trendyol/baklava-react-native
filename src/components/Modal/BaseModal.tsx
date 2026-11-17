@@ -66,14 +66,6 @@ const BaseModal = ({
     }
   }, [closable, closeButtonAction, wrongPressThresholdMs]);
 
-  const testProps = React.useMemo(() => {
-    return {
-      accessible: accessible,
-      accessibilityLabel: accessibilityLabel ?? testID,
-      testID: testID ?? accessibilityLabel,
-    } as A11yProps;
-  }, [testID, accessibilityLabel, accessible]);
-
   if (!visible || !children) {
     return null;
   }
@@ -88,17 +80,17 @@ const BaseModal = ({
         bottom={0}
         left={0}
         right={0}
-        testID={`${testProps.testID}-wrapper`}
-        accessibilityLabel={`${testProps.accessibilityLabel}-wrapper`}>
+        testID={`${testID}-wrapper`}>
         <Animated.View
-          testID={`${testProps.testID}-overlay`}
-          accessibilityLabel={`${testProps.testID}-overlay`}
+          testID={`${testID}-overlay`}
           style={[styles.overlay, { opacity: anim }]}
           onStartShouldSetResponder={() => true}
           onResponderRelease={close}
         />
         <Box
-          {...testProps}
+          testID={testID}
+          accessible={accessible}
+          accessibilityLabel={accessibilityLabel}
           bg="white"
           p="m"
           borderRadius={'l'}
@@ -107,8 +99,7 @@ const BaseModal = ({
           style={styles.card}>
           {header}
           <ScrollView
-            testID={`${testProps.testID}-body`}
-            accessibilityLabel={`${testProps.accessibilityLabel}-body`}
+            testID={`${testID}-body`}
             bounces={false}
             showsVerticalScrollIndicator>
             {children}

@@ -7,9 +7,7 @@ import { Animated } from 'react-native';
 describe('Switch', () => {
   test('should render switch correctly', () => {
     // when
-    const { toJSON } = render(
-      <Switch onValueChange={() => {}} accessibilityLabel={'switch'} />,
-    );
+    const { toJSON } = render(<Switch onValueChange={() => {}} />);
 
     // then
     expect(toJSON()).toMatchSnapshot();
@@ -259,7 +257,7 @@ describe('Switch', () => {
     });
   });
 
-  test('should render correctly when testID is not present', () => {
+  test('should not leak testID into accessibilityLabel', () => {
     // when
     const { getByTestId } = render(
       <Switch onValueChange={() => {}} label={'test switch label'} />,
@@ -267,6 +265,7 @@ describe('Switch', () => {
     const switchComponent = getByTestId('switch-outer-view');
 
     // then
-    expect(switchComponent.props.accessibilityLabel).toBe('switch-outer-view');
+    // testID otomasyon icindir; ekran okuyucuya etiket olarak sizdirilmaz.
+    expect(switchComponent.props.testID).toBe('switch-outer-view');
   });
 });

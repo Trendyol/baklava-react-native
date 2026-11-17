@@ -309,17 +309,6 @@ describe('DatePicker', () => {
   });
 
   describe('Accessibility', () => {
-    test('should have proper accessibility labels', () => {
-      const { getByTestId } = render(<DatePicker {...defaultProps} />);
-
-      expect(getByTestId('datepicker-input').props.accessibilityLabel).toBe(
-        'datepicker-input',
-      );
-      expect(getByTestId('datepicker-touchable').props.accessibilityLabel).toBe(
-        'datepicker-touchable',
-      );
-    });
-
     test('should have proper testIDs for all interactive elements', () => {
       const { getByTestId } = render(<DatePicker {...defaultProps} />);
       fireEvent.press(getByTestId('datepicker-touchable'));
@@ -330,22 +319,16 @@ describe('DatePicker', () => {
       expect(getByTestId('datepicker-header-year-select')).toBeTruthy();
     });
 
-    test('should have proper accessibility labels for calendar elements', () => {
+    test('should not leak testIDs as accessibility labels in calendar', () => {
       const { getByTestId } = render(<DatePicker {...defaultProps} />);
       fireEvent.press(getByTestId('datepicker-touchable'));
 
-      expect(
-        getByTestId('datepicker-header-prev').props.accessibilityLabel,
-      ).toBe('datepicker-header-prev');
-      expect(
-        getByTestId('datepicker-header-next').props.accessibilityLabel,
-      ).toBe('datepicker-header-next');
-      expect(
-        getByTestId('datepicker-header-month-select').props.accessibilityLabel,
-      ).toBe('datepicker-header-month-select');
-      expect(
-        getByTestId('datepicker-header-year-select').props.accessibilityLabel,
-      ).toBe('datepicker-header-year-select');
+      // testID'ler otomasyon icindir; etiket olarak sizdirilmaz. Burada yalnizca
+      // testID'lerin varligini dogruluyoruz.
+      expect(getByTestId('datepicker-header-prev')).toBeTruthy();
+      expect(getByTestId('datepicker-header-next')).toBeTruthy();
+      expect(getByTestId('datepicker-header-month-select')).toBeTruthy();
+      expect(getByTestId('datepicker-header-year-select')).toBeTruthy();
     });
   });
 

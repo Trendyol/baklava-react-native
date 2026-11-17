@@ -239,7 +239,6 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
           px="m"
           justifyContent="flex-start"
           zIndex="layer_0"
-          accessibilityLabel={`${testID}-box`}
           testID={`${testID}-box`}>
           <BaseTextArea
             {...rest}
@@ -257,7 +256,6 @@ const TextArea = forwardRef<TextInputHandles, TextAreaProps>(
             value={value}
             disabled={disabled}
             editable={!disabled}
-            accessibilityLabel={testID}
             testID={testID}
             textAlign={isRTL ? 'right' : 'left'}
             textAlignVertical="top"

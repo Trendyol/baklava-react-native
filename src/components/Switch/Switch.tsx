@@ -122,24 +122,7 @@ const Switch = ({
     [animatedCirclePosition, animatedSwitchMarginRight, onValueChange],
   );
 
-  const testProps = React.useMemo(() => {
-    const result: RNSwitchProps = {
-      accessible: false,
-      accessibilityLabel: undefined,
-      testID: undefined,
-    };
-
-    if (!(testID || accessibilityLabel)) {
-      return result;
-    }
-
-    result.accessible = accessible ?? true;
-    result.accessibilityLabel = accessibilityLabel ?? testID;
-    result.testID = testID ?? accessibilityLabel;
-
-    return result;
-  }, [testID, accessibilityLabel, accessible]);
-
+  // accessibilityLabel'a burada dokunulmaz; ayri prop olarak gecirilir.
   const isRTL = I18nManager.isRTL;
 
   return (
@@ -148,11 +131,7 @@ const Switch = ({
       alignItems="center"
       style={containerStyle}>
       {label && (
-        <Text
-          variant="subtitle2Medium"
-          p="2xs"
-          testID="switch-label"
-          accessibilityLabel="switch-label">
+        <Text variant="subtitle2Medium" p="2xs" testID="switch-label">
           {label}
         </Text>
       )}
@@ -162,7 +141,9 @@ const Switch = ({
         onPressOut={onSwitchPressOut}
         onPressIn={onSwitchPressIn}
         onPress={() => handleValueChange(!isEnabled)}
-        {...testProps}>
+        accessibilityLabel={accessibilityLabel}
+        testID={testID}
+        accessible={accessible ?? Boolean(accessibilityLabel)}>
         <AnimatedView
           flexDirection={isRTL ? 'row-reverse' : 'row'}
           width={theme.spacing['4xl']}
@@ -171,7 +152,7 @@ const Switch = ({
           alignItems="center"
           borderRadius="full"
           testID="switch-outer-view"
-          accessibilityLabel="switch-outer-view"
+          accessible={false}
           // @ts-ignore
           backgroundColor={animatedCirclePosition.interpolate({
             inputRange: [0, 1],
@@ -186,7 +167,7 @@ const Switch = ({
             height={theme.spacing.l}
             borderRadius="full"
             testID="switch-inner-view"
-            accessibilityLabel="switch-inner-view"
+            accessible={false}
             //@ts-ignore
             width={animatedSwitchWidth}
             //@ts-ignore

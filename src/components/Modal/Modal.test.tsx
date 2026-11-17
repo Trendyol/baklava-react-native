@@ -22,7 +22,7 @@ describe('Modal', () => {
   test('should not render Modal when visible true without children', () => {
     // when
     const { toJSON, queryByTestId } = render(
-      <Modal accessibilityLabel="modal" visible={true} />,
+      <Modal testID="modal" visible={true} />,
     );
 
     const modalWrapper = queryByTestId('modal-wrapper');

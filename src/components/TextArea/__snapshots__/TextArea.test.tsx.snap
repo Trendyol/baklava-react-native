@@ -26,8 +26,7 @@ exports[`TextArea should render TextArea correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -59,8 +58,7 @@ exports[`TextArea should render TextArea correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="textArea-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -79,7 +77,6 @@ exports[`TextArea should render TextArea correctly 1`] = `
     testID="textArea-box"
   >
     <TextInput
-      accessibilityLabel="textArea"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -147,7 +144,6 @@ exports[`TextArea should render TextArea correctly 1`] = `
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {
@@ -195,8 +191,7 @@ exports[`TextArea should render TextArea with error state and error text correct
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -228,8 +223,7 @@ exports[`TextArea should render TextArea with error state and error text correct
     </View>
   </View>
   <View
-    accessibilityLabel="textArea-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -248,7 +242,6 @@ exports[`TextArea should render TextArea with error state and error text correct
     testID="textArea-box"
   >
     <TextInput
-      accessibilityLabel="textArea"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -305,7 +298,6 @@ exports[`TextArea should render TextArea with error state and error text correct
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {
@@ -345,7 +337,6 @@ exports[`TextArea should render TextArea with error state and error text correct
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {
@@ -393,8 +384,7 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -426,8 +416,7 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="textArea-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -446,7 +435,6 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
     testID="textArea-box"
   >
     <TextInput
-      accessibilityLabel="textArea"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -514,7 +502,6 @@ exports[`TextArea should render TextArea with error state correctly 1`] = `
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {
@@ -562,8 +549,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -595,8 +581,7 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="textArea-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -615,7 +600,6 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
     testID="textArea-box"
   >
     <TextInput
-      accessibilityLabel="textArea"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -672,7 +656,6 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {
@@ -712,7 +695,6 @@ exports[`TextArea should render TextArea with help text correctly 1`] = `
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {
@@ -760,8 +742,7 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -793,8 +774,7 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="textArea-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -813,7 +793,6 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
     testID="textArea-box"
   >
     <TextInput
-      accessibilityLabel="textArea"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -881,7 +860,6 @@ exports[`TextArea should render TextArea with large size correctly 1`] = `
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {
@@ -929,8 +907,7 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -962,8 +939,7 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="textArea-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -982,7 +958,6 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
     testID="textArea-box"
   >
     <TextInput
-      accessibilityLabel="textArea"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -1050,7 +1025,6 @@ exports[`TextArea should render TextArea with medium size correctly 1`] = `
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {
@@ -1098,8 +1072,7 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -1131,8 +1104,7 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="textArea-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1151,7 +1123,6 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
     testID="textArea-box"
   >
     <TextInput
-      accessibilityLabel="textArea"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -1219,7 +1190,6 @@ exports[`TextArea should render TextArea with small size correctly 1`] = `
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {
@@ -1267,8 +1237,7 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -1300,8 +1269,7 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="textArea-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1320,7 +1288,6 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
     testID="textArea-box"
   >
     <TextInput
-      accessibilityLabel="textArea"
       bg="transparent"
       disabled={true}
       editable={false}
@@ -1388,7 +1355,6 @@ exports[`TextArea should render disabled TextArea correctly 1`] = `
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {
@@ -1423,8 +1389,7 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
   }
 >
   <View
-    accessibilityLabel="fixed-label-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1436,8 +1401,6 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
     testID="fixed-label-box"
   >
     <Text
-      accessibilityLabel="fixed-label"
-      accessible={true}
       style={
         [
           {
@@ -1456,8 +1419,7 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
     </Text>
   </View>
   <View
-    accessibilityLabel="textArea-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1476,7 +1438,6 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
     testID="textArea-box"
   >
     <TextInput
-      accessibilityLabel="textArea"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -1544,7 +1505,6 @@ exports[`TextArea should render label fixed TextArea correctly 1`] = `
         }
       >
         <Text
-          accessible={false}
           style={
             [
               {

@@ -4,8 +4,7 @@ exports[`BottomSheet should render BottomSheet when visible false 1`] = `null`;
 
 exports[`BottomSheet should render BottomSheet when visible true 1`] = `
 <View
-  accessibilityLabel="modal-wrapper"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -22,7 +21,6 @@ exports[`BottomSheet should render BottomSheet when visible true 1`] = `
   testID="modal-wrapper"
 >
   <View
-    accessibilityLabel="modal-overlay"
     collapsable={false}
     onResponderRelease={[Function]}
     onStartShouldSetResponder={[Function]}
@@ -40,8 +38,7 @@ exports[`BottomSheet should render BottomSheet when visible true 1`] = `
     testID="modal-overlay"
   />
   <View
-    accessibilityLabel="modal"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -85,7 +82,6 @@ exports[`BottomSheet should render BottomSheet when visible true 1`] = `
         }
       >
         <View
-          accessibilityLabel="modal-header-close"
           accessibilityState={
             {
               "busy": undefined,
@@ -122,7 +118,6 @@ exports[`BottomSheet should render BottomSheet when visible true 1`] = `
           testID="modal-header-close"
         >
           <Text
-            accessible={false}
             style={
               [
                 {
@@ -140,8 +135,6 @@ exports[`BottomSheet should render BottomSheet when visible true 1`] = `
           </Text>
         </View>
         <Text
-          accessibilityLabel="modal-header-label"
-          accessible={true}
           numberOfLines={1}
           style={
             [
@@ -163,7 +156,6 @@ exports[`BottomSheet should render BottomSheet when visible true 1`] = `
           Base Title
         </Text>
         <View
-          accessibilityLabel="modal-header-select"
           accessibilityState={
             {
               "busy": undefined,
@@ -200,7 +192,6 @@ exports[`BottomSheet should render BottomSheet when visible true 1`] = `
           testID="modal-header-select"
         >
           <Text
-            accessible={false}
             style={
               [
                 {
@@ -232,14 +223,12 @@ exports[`BottomSheet should render BottomSheet when visible true 1`] = `
       />
     </View>
     <RCTScrollView
-      accessibilityLabel="modal-body"
       bounces={false}
       showsVerticalScrollIndicator={true}
       testID="modal-body"
     >
       <View>
         <Text
-          accessible={false}
           style={
             [
               {

@@ -38,10 +38,7 @@ const AccordionGroup = ({
   };
 
   return (
-    <Box
-      testID="accordion-group"
-      accessibilityLabel="accordion-group"
-      {...rest}>
+    <Box testID="accordion-group" {...rest}>
       {React.Children.map(children, (child, index) => {
         if (!React.isValidElement(child)) {
           return child;

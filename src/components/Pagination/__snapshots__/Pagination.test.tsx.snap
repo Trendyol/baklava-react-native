@@ -2,7 +2,6 @@
 
 exports[`Pagination should render simple pagination correctly 1`] = `
 <View
-  accessibilityLabel="pagination"
   accessible={false}
   style={
     [
@@ -26,7 +25,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="Go to previous page"
       accessibilityRole="button"
       accessibilityState={
         {
@@ -68,7 +66,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
       testID="pagination-previous"
     >
       <RNSVGSvgView
-        accessibilityLabel="pagination-previous-icon"
         accessible={false}
         align="xMidYMid"
         bbHeight={16}
@@ -167,7 +164,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="Page 1"
       accessibilityRole="button"
       accessibilityState={
         {
@@ -233,7 +229,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
       </Text>
     </View>
     <View
-      accessibilityLabel="Page 2"
       accessibilityRole="button"
       accessibilityState={
         {
@@ -296,7 +291,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
       </Text>
     </View>
     <View
-      accessibilityLabel="Page 3"
       accessibilityRole="button"
       accessibilityState={
         {
@@ -359,7 +353,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
       </Text>
     </View>
     <View
-      accessibilityLabel="Page 4"
       accessibilityRole="button"
       accessibilityState={
         {
@@ -422,7 +415,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
       </Text>
     </View>
     <View
-      accessibilityLabel="Page 5"
       accessibilityRole="button"
       accessibilityState={
         {
@@ -485,7 +477,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
       </Text>
     </View>
     <View
-      accessibilityLabel="pagination-ellipsis-end"
       accessible={false}
       style={
         [
@@ -500,7 +491,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
       testID="pagination-ellipsis-end"
     >
       <Text
-        accessible={false}
         style={
           [
             {
@@ -518,7 +508,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
       </Text>
     </View>
     <View
-      accessibilityLabel="Page 150"
       accessibilityRole="button"
       accessibilityState={
         {
@@ -592,7 +581,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="Go to next page"
       accessibilityRole="button"
       accessibilityState={
         {
@@ -634,7 +622,6 @@ exports[`Pagination should render simple pagination correctly 1`] = `
       testID="pagination-next"
     >
       <RNSVGSvgView
-        accessibilityLabel="pagination-next-icon"
         accessible={false}
         align="xMidYMid"
         bbHeight={16}

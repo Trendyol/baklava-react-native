@@ -4,7 +4,7 @@ import Box from '../Box/Box';
 import Button, { ButtonProps } from '../Button/Button';
 import Icon from '../Icon/Icon';
 import Text from '../Text/Text';
-import BaseModal, { BaseModalProps, A11yProps } from './BaseModal';
+import BaseModal, { BaseModalProps } from './BaseModal';
 
 export type ModalProps = BaseModalProps &
   PropsWithChildren<{
@@ -24,19 +24,12 @@ const Modal = ({
   secondActionButtonProps,
   justifyContent = 'center',
   testID,
-  accessibilityLabel,
   accessible = true,
   children,
   titleLineNumber = 2,
   ...etc
 }: ModalProps) => {
-  const testProps = React.useMemo(() => {
-    return {
-      accessible: accessible,
-      accessibilityLabel: accessibilityLabel ?? testID,
-      testID: testID ?? accessibilityLabel,
-    } as A11yProps;
-  }, [testID, accessibilityLabel, accessible]);
+  // accessibilityLabel'a burada dokunulmaz; etc uzerinden BaseModal'a akar.
 
   const header = React.useMemo(() => {
     if (!title && !closable) {
@@ -49,12 +42,11 @@ const Modal = ({
         justifyContent="space-between"
         alignItems="flex-start"
         mb="m"
-        testID={`${testProps.testID}-header`}
-        accessibilityLabel={`${testProps.accessibilityLabel}-header`}>
+        testID={`${testID}-header`}>
         <Box flex={1}>
           <Text
             variant="subtitle2Medium"
-            testID={`${testProps.testID}-title`}
+            testID={`${testID}-title`}
             numberOfLines={titleLineNumber}
             textAlign="left">
             {title}
@@ -62,8 +54,7 @@ const Modal = ({
         </Box>
         {closable && (
           <TouchableOpacity
-            testID={`${testProps.testID}-close`}
-            accessibilityLabel={`${testProps.accessibilityLabel}-close`}
+            testID={`${testID}-close`}
             hitSlop={{ left: 0, bottom: 0, top: 12, right: 12 }}
             onPress={closeButtonAction}>
             <Box p="4xs" pl="2xs" pb="2xs">
@@ -73,14 +64,7 @@ const Modal = ({
         )}
       </Box>
     );
-  }, [
-    closeButtonAction,
-    closable,
-    testProps.accessibilityLabel,
-    testProps.testID,
-    title,
-    titleLineNumber,
-  ]);
+  }, [closeButtonAction, closable, testID, title, titleLineNumber]);
 
   const actions = React.useMemo(() => {
     if (!actionButtonProps && !secondActionButtonProps) {
@@ -88,17 +72,14 @@ const Modal = ({
     }
 
     return (
-      <Box
-        testID={`${testProps.testID}-actions-area`}
-        accessibilityLabel={`${testProps.accessibilityLabel}-actions-area`}>
+      <Box testID={`${testID}-actions-area`}>
         {actionButtonProps && (
           <Button
             mt="m"
             filled
             size="l"
             variant="primary"
-            testID={`${testProps.testID}-action`}
-            accessibilityLabel={`${testProps.accessibilityLabel}-action`}
+            testID={`${testID}-action`}
             {...actionButtonProps}
           />
         )}
@@ -108,19 +89,13 @@ const Modal = ({
             filled
             size="l"
             variant="secondary"
-            testID={`${testProps.testID}-second-action`}
-            accessibilityLabel={`${testProps.accessibilityLabel}-second-action`}
+            testID={`${testID}-second-action`}
             {...secondActionButtonProps}
           />
         )}
       </Box>
     );
-  }, [
-    actionButtonProps,
-    secondActionButtonProps,
-    testProps.accessibilityLabel,
-    testProps.testID,
-  ]);
+  }, [actionButtonProps, secondActionButtonProps, testID]);
 
   return (
     <BaseModal
@@ -128,7 +103,6 @@ const Modal = ({
       closeButtonAction={closeButtonAction}
       header={header}
       accessible={accessible}
-      accessibilityLabel={accessibilityLabel}
       testID={testID}
       actions={actions}
       modalKey={modalKey}

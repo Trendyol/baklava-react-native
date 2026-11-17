@@ -44,39 +44,19 @@ export type BoxProps = RNViewProps &
 
 const Box = React.forwardRef(
   (
-    {
-      testID,
-      accessibilityLabel,
-      accessible,
-      shrink = false,
-      ...rest
-    }: BoxProps,
+    { shrink = false, accessible, ...rest }: BoxProps,
     ref: React.ForwardedRef<RNView>,
   ) => {
+    // testID ve accessibilityLabel rest uzerinden akar. accessible ise burada
+    // ele alinir: HEAD'den beri varsayilan olarak false set edilir. Aksi halde
+    // native varsayilan devreye girer ve kapsayicilar alt ogelerin etiketlerini
+    // tek bir odak dugumunde birlestirir ("okunmayan icerik" bulgusu).
     const props = useRestyle(restyleFunctions, {
       ...(shrink ? { flexShrink: 1, minWidth: 0 } : null),
       ...rest,
     });
 
-    const testProps = React.useMemo(() => {
-      const result: RNViewProps = {
-        accessible: false,
-        accessibilityLabel: undefined,
-        testID: undefined,
-      };
-
-      if (!(testID || accessibilityLabel)) {
-        return result;
-      }
-
-      result.accessible = accessible ?? true;
-      result.accessibilityLabel = accessibilityLabel ?? testID;
-      result.testID = testID ?? accessibilityLabel;
-
-      return result;
-    }, [testID, accessibilityLabel, accessible]);
-
-    return <RNView {...props} {...testProps} ref={ref} />;
+    return <RNView {...props} accessible={accessible ?? false} ref={ref} />;
   },
 );
 

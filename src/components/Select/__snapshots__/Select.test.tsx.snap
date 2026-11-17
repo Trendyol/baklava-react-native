@@ -25,8 +25,7 @@ exports[`Select should render select correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -90,8 +89,7 @@ exports[`Select should render select correctly 1`] = `
     testID="select-pressable"
   >
     <View
-      accessibilityLabel="select-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -110,8 +108,7 @@ exports[`Select should render select correctly 1`] = `
       testID="select-box"
     >
       <View
-        accessibilityLabel="select-text-container"
-        accessible={true}
+        accessible={false}
         style={
           [
             {
@@ -125,8 +122,6 @@ exports[`Select should render select correctly 1`] = `
         testID="select-text-container"
       >
         <Text
-          accessibilityLabel="select-value"
-          accessible={true}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -161,7 +156,6 @@ exports[`Select should render select correctly 1`] = `
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="select-icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}
@@ -241,8 +235,7 @@ exports[`Select should render select with fixed label correctly 1`] = `
   }
 >
   <View
-    accessibilityLabel="fixed-label-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -254,8 +247,6 @@ exports[`Select should render select with fixed label correctly 1`] = `
     testID="fixed-label-box"
   >
     <Text
-      accessibilityLabel="fixed-label"
-      accessible={true}
       style={
         [
           {
@@ -306,8 +297,7 @@ exports[`Select should render select with fixed label correctly 1`] = `
     testID="select-pressable"
   >
     <View
-      accessibilityLabel="select-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -326,8 +316,7 @@ exports[`Select should render select with fixed label correctly 1`] = `
       testID="select-box"
     >
       <View
-        accessibilityLabel="select-text-container"
-        accessible={true}
+        accessible={false}
         style={
           [
             {
@@ -341,8 +330,6 @@ exports[`Select should render select with fixed label correctly 1`] = `
         testID="select-text-container"
       >
         <Text
-          accessibilityLabel="select-value"
-          accessible={true}
           ellipsizeMode="tail"
           numberOfLines={1}
           style={
@@ -377,7 +364,6 @@ exports[`Select should render select with fixed label correctly 1`] = `
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="select-icon"
           align="xMidYMid"
           bbHeight={14}
           bbWidth={14}

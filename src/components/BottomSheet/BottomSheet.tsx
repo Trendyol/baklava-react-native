@@ -3,7 +3,7 @@ import { TouchableOpacity, StyleSheet } from 'react-native';
 import { ModalProps } from '../Modal/Modal';
 import Box from '../Box/Box';
 import Text from '../Text/Text';
-import BaseModal, { A11yProps } from '../Modal/BaseModal';
+import BaseModal from '../Modal/BaseModal';
 
 export type BottomSheetProps = ModalProps & {
   closeButtonLabel: string;
@@ -17,7 +17,6 @@ export const BottomSheetTitle = ({
   selectButtonLabel,
   selectButtonAction,
   testID,
-  accessibilityLabel,
   children,
 }: {
   closeButtonAction?: () => void;
@@ -25,16 +24,8 @@ export const BottomSheetTitle = ({
   selectButtonLabel?: string;
   selectButtonAction?: () => void;
   testID?: string;
-  accessibilityLabel?: string;
   children: React.ReactNode;
 }) => {
-  const testProps = React.useMemo(() => {
-    return {
-      accessibilityLabel: accessibilityLabel ?? testID,
-      testID: testID ?? accessibilityLabel,
-    } as A11yProps;
-  }, [testID, accessibilityLabel]);
-
   return (
     <Box flexDirection="column" width="100%" gap="s" mb="m">
       <Box
@@ -45,8 +36,7 @@ export const BottomSheetTitle = ({
         <TouchableOpacity
           onPress={closeButtonAction}
           style={styles.titleSmallButton}
-          testID={`${testProps.testID}-header-close`}
-          accessibilityLabel={`${testProps.accessibilityLabel}-header-close`}>
+          testID={`${testID}-header-close`}>
           <Text variant="subtitle3Medium" textAlign="left">
             {closeButtonLabel}
           </Text>
@@ -55,16 +45,14 @@ export const BottomSheetTitle = ({
           variant="subtitle3Medium"
           textAlign="center"
           style={styles.titleLabel}
-          testID={`${testProps.testID}-header-label`}
-          accessibilityLabel={`${testProps.accessibilityLabel}-header-label`}
+          testID={`${testID}-header-label`}
           numberOfLines={1}>
           {children}
         </Text>
         <TouchableOpacity
           onPress={selectButtonAction}
           style={styles.titleSmallButton}
-          testID={`${testProps.testID}-header-select`}
-          accessibilityLabel={`${testProps.accessibilityLabel}-header-select`}>
+          testID={`${testID}-header-select`}>
           <Text
             variant="subtitle3Medium"
             color="primaryColor"
@@ -83,7 +71,6 @@ const BottomSheet = ({
   closeButtonAction,
   selectButtonAction,
   selectButtonLabel,
-  accessibilityLabel,
   testID,
   title,
   header,
@@ -97,7 +84,6 @@ const BottomSheet = ({
       borderBottomStartRadius="none"
       borderBottomEndRadius="none"
       closeButtonAction={closeButtonAction}
-      accessibilityLabel={accessibilityLabel}
       testID={testID}
       header={
         header ?? (
@@ -106,7 +92,6 @@ const BottomSheet = ({
             closeButtonAction={closeButtonAction}
             selectButtonAction={selectButtonAction}
             selectButtonLabel={selectButtonLabel}
-            accessibilityLabel={accessibilityLabel}
             testID={testID}>
             {title}
           </BottomSheetTitle>

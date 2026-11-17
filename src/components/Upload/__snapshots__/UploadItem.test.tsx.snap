@@ -2,8 +2,7 @@
 
 exports[`UploadItem should render UploadItem correctly 1`] = `
 <View
-  accessibilityLabel="uploadItem"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -25,8 +24,7 @@ exports[`UploadItem should render UploadItem correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="uploadItem-leadingIcon"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -37,7 +35,6 @@ exports[`UploadItem should render UploadItem correctly 1`] = `
       testID="uploadItem-leadingIcon"
     >
       <RNSVGSvgView
-        accessibilityLabel="icon"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -112,8 +109,6 @@ exports[`UploadItem should render UploadItem correctly 1`] = `
       }
     >
       <Text
-        accessibilityLabel="uploadItem-label"
-        accessible={true}
         numberOfLines={1}
         style={
           [
@@ -133,7 +128,6 @@ exports[`UploadItem should render UploadItem correctly 1`] = `
       </Text>
     </View>
     <View
-      accessibilityLabel="remove file"
       accessibilityRole="button"
       accessibilityState={
         {
@@ -168,7 +162,6 @@ exports[`UploadItem should render UploadItem correctly 1`] = `
       testID="uploadItem-removeButton"
     >
       <RNSVGSvgView
-        accessibilityLabel="icon"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -251,8 +244,7 @@ exports[`UploadItem should render UploadItem correctly 1`] = `
 
 exports[`UploadItem should render error snapshot correctly 1`] = `
 <View
-  accessibilityLabel="uploadItem"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -274,8 +266,7 @@ exports[`UploadItem should render error snapshot correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="uploadItem-leadingIcon"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -286,7 +277,6 @@ exports[`UploadItem should render error snapshot correctly 1`] = `
       testID="uploadItem-leadingIcon"
     >
       <RNSVGSvgView
-        accessibilityLabel="icon"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -361,8 +351,6 @@ exports[`UploadItem should render error snapshot correctly 1`] = `
       }
     >
       <Text
-        accessibilityLabel="uploadItem-label"
-        accessible={true}
         numberOfLines={1}
         style={
           [
@@ -382,7 +370,6 @@ exports[`UploadItem should render error snapshot correctly 1`] = `
       </Text>
     </View>
     <View
-      accessibilityLabel="remove file"
       accessibilityRole="button"
       accessibilityState={
         {
@@ -417,7 +404,6 @@ exports[`UploadItem should render error snapshot correctly 1`] = `
       testID="uploadItem-removeButton"
     >
       <RNSVGSvgView
-        accessibilityLabel="icon"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -506,8 +492,6 @@ exports[`UploadItem should render error snapshot correctly 1`] = `
     testID="uploadItem-errorLine"
   />
   <Text
-    accessibilityLabel="uploadItem-helperText"
-    accessible={true}
     style={
       [
         {

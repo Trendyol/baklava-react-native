@@ -48,8 +48,7 @@ const UploadItem = ({
           testID={`${testID}-removeButton`}
           onPress={onRemove}
           hitSlop={8}
-          accessibilityRole="button"
-          accessibilityLabel="remove file">
+          accessibilityRole="button">
           <Icon name="delete" size="s" color="neutralDarker" />
         </Pressable>
       </Box>

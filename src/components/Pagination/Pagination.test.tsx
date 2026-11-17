@@ -126,7 +126,6 @@ describe('Pagination', () => {
     fireEvent.press(previousButton);
 
     // then
-    expect(previousButton.props.accessibilityLabel).toBe('Go to previous page');
     expect(previousButton.props.accessibilityState.disabled).toBe(true);
     expect(previousIcon.props.title).toBe('arrow-left');
     expect(previousIcon.props.fill).toBe(theme.colors.neutralLighter);
@@ -144,7 +143,6 @@ describe('Pagination', () => {
     fireEvent.press(nextButton);
 
     // then
-    expect(nextButton.props.accessibilityLabel).toBe('Go to next page');
     expect(nextButton.props.accessibilityState.disabled).toBe(false);
     expect(nextIcon.props.title).toBe('arrow-right');
     expect(nextIcon.props.fill).toBe(theme.colors.neutralDarker);
@@ -189,8 +187,6 @@ describe('Pagination', () => {
     fireEvent.press(lastButton);
 
     // then
-    expect(firstButton.props.accessibilityLabel).toBe('Go to first page');
-    expect(lastButton.props.accessibilityLabel).toBe('Go to last page');
     expect(getByTestId('pagination-first-icon').props.title).toBe(
       'double-arrow-left',
     );

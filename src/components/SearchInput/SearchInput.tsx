@@ -43,10 +43,10 @@ const SearchInput = React.forwardRef<TextInputHandles, SearchInputProps>(
       disabled = false,
       editable = true,
       onClear,
-      clearAccessibilityLabel = 'Clear search',
+      clearAccessibilityLabel,
       fontFamily = 'regular',
       testID = 'search-input',
-      placeholder = 'Search',
+      placeholder = '',
       onFocus,
       onBlur,
       onChangeText,
@@ -144,11 +144,7 @@ const SearchInput = React.forwardRef<TextInputHandles, SearchInputProps>(
     );
 
     return (
-      <View
-        accessible
-        accessibilityLabel={`${testID}-box`}
-        testID={`${testID}-box`}
-        style={containerStyle}>
+      <View accessible testID={`${testID}-box`} style={containerStyle}>
         <TextInput
           {...rest}
           ref={inputRef}
@@ -165,23 +161,18 @@ const SearchInput = React.forwardRef<TextInputHandles, SearchInputProps>(
           onBlur={handleBlur}
           onChangeText={handleChangeText}
           textAlign={textAlign}
-          accessibilityLabel={rest.accessibilityLabel || testID}
           accessibilityState={{ disabled }}
           testID={testID}
           style={[styles.input, textSizes[size], textStyle, style]}
         />
 
         {loading ? (
-          <Spinner
-            size="xs"
-            color="primaryKey"
-            testID={`${testID}-loading`}
-            accessibilityLabel={`${testID}-loading`}
-          />
+          <Spinner size="xs" color="primaryKey" testID={`${testID}-loading`} />
         ) : hasClearButton ? (
           <Pressable
             accessibilityRole="button"
             accessibilityLabel={clearAccessibilityLabel}
+            accessible={Boolean(clearAccessibilityLabel)}
             onPressIn={handleClear}
             hitSlop={{ top: 4, right: 4, bottom: 4, left: 4 }}
             testID={`${testID}-clear`}

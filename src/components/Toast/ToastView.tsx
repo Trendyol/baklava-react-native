@@ -138,13 +138,11 @@ const ToastView = React.forwardRef<ToastViewRef, ToastViewProps>(
       return (
         <TouchableOpacity
           onPress={() => action(playHideAnim)}
-          testID="toast-action"
-          accessibilityLabel="toast-action">
+          testID="toast-action">
           <Text
             variant="subtitle03Medium"
             color="neutralDarker"
             testID="toast-action-text"
-            accessibilityLabel="toast-action-text"
             p="2xs">
             {capitalizeFirstLetter(actionText)}
           </Text>
@@ -158,7 +156,6 @@ const ToastView = React.forwardRef<ToastViewRef, ToastViewProps>(
         variant={variant}
         onLayout={onLayout}
         testID="toast-container"
-        accessibilityLabel="toast-container"
         style={{ transform: [{ translateY: anim }] }}
         {...rest}>
         <Box flex={1} shadowRadius={30}>
@@ -166,7 +163,6 @@ const ToastView = React.forwardRef<ToastViewRef, ToastViewProps>(
             variant="bodyText"
             color="neutralDarker"
             testID="toast-text"
-            accessibilityLabel="toast-text"
             textAlign="left">
             {getFirstNChar(text!, 250, '...')}
           </Text>

@@ -48,8 +48,7 @@ exports[`Checkbox should render Checkbox correctly when checked is false 1`] = `
     }
   >
     <View
-      accessibilityLabel="tickbox"
-      accessible={true}
+      accessible={false}
       style={
         [
           {},
@@ -121,8 +120,7 @@ exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
     }
   >
     <View
-      accessibilityLabel="tickbox"
-      accessible={true}
+      accessible={false}
       style={
         [
           {},
@@ -143,7 +141,6 @@ exports[`Checkbox should render Checkbox correctly when checked is true 1`] = `
       testID="tickbox"
     >
       <RNSVGSvgView
-        accessibilityLabel="check-icon"
         align="xMidYMid"
         bbHeight={10}
         bbWidth={10}
@@ -258,8 +255,7 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
     }
   >
     <View
-      accessibilityLabel="tickbox"
-      accessible={true}
+      accessible={false}
       style={
         [
           {},
@@ -280,7 +276,6 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
       testID="tickbox"
     >
       <RNSVGSvgView
-        accessibilityLabel="check-icon"
         align="xMidYMid"
         bbHeight={10}
         bbWidth={10}
@@ -395,8 +390,7 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
     }
   >
     <View
-      accessibilityLabel="tickbox"
-      accessible={true}
+      accessible={false}
       style={
         [
           {},
@@ -417,7 +411,6 @@ exports[`Checkbox should render Checkbox correctly when checked is true, indeter
       testID="tickbox"
     >
       <RNSVGSvgView
-        accessibilityLabel="minus-icon"
         align="xMidYMid"
         bbHeight={8}
         bbWidth={8}
@@ -532,8 +525,7 @@ exports[`Checkbox should render Checkbox correctly when disable, checked and ind
     }
   >
     <View
-      accessibilityLabel="tickbox"
-      accessible={true}
+      accessible={false}
       style={
         [
           {},
@@ -554,7 +546,6 @@ exports[`Checkbox should render Checkbox correctly when disable, checked and ind
       testID="tickbox"
     >
       <RNSVGSvgView
-        accessibilityLabel="minus-icon"
         align="xMidYMid"
         bbHeight={8}
         bbWidth={8}
@@ -669,8 +660,7 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is fals
     }
   >
     <View
-      accessibilityLabel="tickbox"
-      accessible={true}
+      accessible={false}
       style={
         [
           {},
@@ -742,8 +732,7 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is true
     }
   >
     <View
-      accessibilityLabel="tickbox"
-      accessible={true}
+      accessible={false}
       style={
         [
           {},
@@ -764,7 +753,6 @@ exports[`Checkbox should render Checkbox correctly when disable, checked is true
       testID="tickbox"
     >
       <RNSVGSvgView
-        accessibilityLabel="check-icon"
         align="xMidYMid"
         bbHeight={10}
         bbWidth={10}

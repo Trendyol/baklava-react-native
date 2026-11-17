@@ -25,8 +25,7 @@ exports[`Input should render disabled input correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -58,8 +57,7 @@ exports[`Input should render disabled input correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -77,7 +75,6 @@ exports[`Input should render disabled input correctly 1`] = `
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={true}
       editable={false}
@@ -129,8 +126,7 @@ exports[`Input should render input correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -162,8 +158,7 @@ exports[`Input should render input correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -181,7 +176,6 @@ exports[`Input should render input correctly 1`] = `
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -233,8 +227,7 @@ exports[`Input should render input with error state and error text correctly 1`]
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -266,8 +259,7 @@ exports[`Input should render input with error state and error text correctly 1`]
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -285,7 +277,6 @@ exports[`Input should render input with error state and error text correctly 1`]
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -309,7 +300,6 @@ exports[`Input should render input with error state and error text correctly 1`]
       textAlign="left"
     />
     <RNSVGSvgView
-      accessibilityLabel="input-icon"
       align="xMidYMid"
       bbHeight={16}
       bbWidth={16}
@@ -383,7 +373,6 @@ exports[`Input should render input with error state and error text correctly 1`]
     }
   >
     <Text
-      accessible={false}
       style={
         [
           {
@@ -428,8 +417,7 @@ exports[`Input should render input with error state correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -461,8 +449,7 @@ exports[`Input should render input with error state correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -480,7 +467,6 @@ exports[`Input should render input with error state correctly 1`] = `
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -504,7 +490,6 @@ exports[`Input should render input with error state correctly 1`] = `
       textAlign="left"
     />
     <RNSVGSvgView
-      accessibilityLabel="input-icon"
       align="xMidYMid"
       bbHeight={16}
       bbWidth={16}
@@ -595,8 +580,7 @@ exports[`Input should render input with help text correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -628,8 +612,7 @@ exports[`Input should render input with help text correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -647,7 +630,6 @@ exports[`Input should render input with help text correctly 1`] = `
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -682,7 +664,6 @@ exports[`Input should render input with help text correctly 1`] = `
     }
   >
     <Text
-      accessible={false}
       style={
         [
           {
@@ -727,8 +708,7 @@ exports[`Input should render input with icon correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -760,8 +740,7 @@ exports[`Input should render input with icon correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -779,7 +758,6 @@ exports[`Input should render input with icon correctly 1`] = `
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -803,7 +781,6 @@ exports[`Input should render input with icon correctly 1`] = `
       textAlign="left"
     />
     <RNSVGSvgView
-      accessibilityLabel="input-icon"
       align="xMidYMid"
       bbHeight={16}
       bbWidth={16}
@@ -922,8 +899,7 @@ exports[`Input should render input with leadingText correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -955,8 +931,7 @@ exports[`Input should render input with leadingText correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -984,8 +959,6 @@ exports[`Input should render input with leadingText correctly 1`] = `
       }
     >
       <Text
-        accessibilityLabel="input-leading-text"
-        accessible={true}
         style={
           [
             {
@@ -998,13 +971,11 @@ exports[`Input should render input with leadingText correctly 1`] = `
             },
           ]
         }
-        testID="input-leading-text"
       >
         %
       </Text>
     </View>
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -1056,8 +1027,7 @@ exports[`Input should render input with medium size correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -1089,8 +1059,7 @@ exports[`Input should render input with medium size correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1108,7 +1077,6 @@ exports[`Input should render input with medium size correctly 1`] = `
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -1160,8 +1128,7 @@ exports[`Input should render input with small size correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -1193,8 +1160,7 @@ exports[`Input should render input with small size correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1212,7 +1178,6 @@ exports[`Input should render input with small size correctly 1`] = `
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -1264,8 +1229,7 @@ exports[`Input should render input with success state and success text correctly
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -1297,8 +1261,7 @@ exports[`Input should render input with success state and success text correctly
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1316,7 +1279,6 @@ exports[`Input should render input with success state and success text correctly
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -1340,7 +1302,6 @@ exports[`Input should render input with success state and success text correctly
       textAlign="left"
     />
     <RNSVGSvgView
-      accessibilityLabel="input-icon"
       align="xMidYMid"
       bbHeight={16}
       bbWidth={16}
@@ -1414,7 +1375,6 @@ exports[`Input should render input with success state and success text correctly
     }
   >
     <Text
-      accessible={false}
       style={
         [
           {
@@ -1459,8 +1419,7 @@ exports[`Input should render input with success state correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -1492,8 +1451,7 @@ exports[`Input should render input with success state correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1511,7 +1469,6 @@ exports[`Input should render input with success state correctly 1`] = `
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -1535,7 +1492,6 @@ exports[`Input should render input with success state correctly 1`] = `
       textAlign="left"
     />
     <RNSVGSvgView
-      accessibilityLabel="input-icon"
       align="xMidYMid"
       bbHeight={16}
       bbWidth={16}
@@ -1626,8 +1582,7 @@ exports[`Input should render input with trailingText correctly 1`] = `
     }
   >
     <View
-      accessibilityLabel="outlined-label-box"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -1659,8 +1614,7 @@ exports[`Input should render input with trailingText correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1678,7 +1632,6 @@ exports[`Input should render input with trailingText correctly 1`] = `
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}
@@ -1713,8 +1666,6 @@ exports[`Input should render input with trailingText correctly 1`] = `
       }
     >
       <Text
-        accessibilityLabel="input-trailing-text"
-        accessible={true}
         style={
           [
             {
@@ -1727,7 +1678,6 @@ exports[`Input should render input with trailingText correctly 1`] = `
             },
           ]
         }
-        testID="input-trailing-text"
       >
         ₺
       </Text>
@@ -1748,8 +1698,7 @@ exports[`Input should render label fixed input correctly 1`] = `
   }
 >
   <View
-    accessibilityLabel="fixed-label-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1761,8 +1710,6 @@ exports[`Input should render label fixed input correctly 1`] = `
     testID="fixed-label-box"
   >
     <Text
-      accessibilityLabel="fixed-label"
-      accessible={true}
       style={
         [
           {
@@ -1780,8 +1727,6 @@ exports[`Input should render label fixed input correctly 1`] = `
       label
     </Text>
     <Text
-      accessibilityLabel="subLabel"
-      accessible={true}
       style={
         [
           {
@@ -1801,8 +1746,7 @@ exports[`Input should render label fixed input correctly 1`] = `
     </Text>
   </View>
   <View
-    accessibilityLabel="input-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1820,7 +1764,6 @@ exports[`Input should render label fixed input correctly 1`] = `
     testID="input-box"
   >
     <TextInput
-      accessibilityLabel="input"
       bg="transparent"
       disabled={false}
       editable={true}

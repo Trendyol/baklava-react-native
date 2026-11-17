@@ -82,7 +82,7 @@ describe('Button', () => {
 
     // then
     expect(rightIcon).toBeTruthy();
-    expect(rightIcon.props.accessibilityLabel).toBe('button-right-icon');
+    expect(rightIcon.props.testID).toBe('button-right-icon');
   });
 
   test('should not render rightIcon when not provided', () => {

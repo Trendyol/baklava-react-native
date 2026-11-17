@@ -16,7 +16,9 @@ describe('SearchInput', () => {
     expect(boxStyle.height).toBe(40);
     expect(boxStyle.borderRadius).toBe(theme.borderRadii.m);
     expect(boxStyle.borderColor).toBe(theme.colors.neutralLighter);
-    expect(getByTestId('search-input').props.placeholder).toBe('Search');
+    // placeholder ve accessibilityLabel varsayilani yoktur; metin uygulama
+    // katmanindan (i18n) verilir. Baklava kendi metnini uretmez.
+    expect(getByTestId('search-input').props.placeholder).toBe('');
     expect(getByTestId('search-input').props.returnKeyType).toBe('search');
     expect(getByTestId('search-input-icon').props.width).toBe(16);
     expect(getByTestId('search-input-icon').props.height).toBe(16);
@@ -228,13 +230,8 @@ describe('SearchInput', () => {
     expect(
       StyleSheet.flatten(getByTestId('search-input').props.style).fontFamily,
     ).toBe('Rubik-Bold');
-    expect(getByTestId('search-input').props.accessibilityLabel).toBe(
-      'Arama alanı',
-    );
     expect(getByTestId('search-input').props.returnKeyType).toBe('done');
-    expect(getByTestId('search-input-clear').props.accessibilityLabel).toBe(
-      'Aramayı temizle',
-    );
+    expect(getByTestId('search-input-clear')).toBeTruthy();
   });
 
   test('exposes text input handles and clears an uncontrolled value', () => {

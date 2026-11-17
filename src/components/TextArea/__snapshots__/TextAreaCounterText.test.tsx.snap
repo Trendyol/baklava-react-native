@@ -13,7 +13,6 @@ exports[`TextArea Counter Text should render counter text correctly 1`] = `
   }
 >
   <Text
-    accessible={false}
     style={
       [
         {
@@ -45,7 +44,6 @@ exports[`TextArea Counter Text should render null when not has error text 1`] = 
   }
 >
   <Text
-    accessible={false}
     style={
       [
         {
@@ -77,7 +75,6 @@ exports[`TextArea Counter Text should render with custom maxLength 1`] = `
   }
 >
   <Text
-    accessible={false}
     style={
       [
         {

@@ -28,8 +28,6 @@ interface SelectBottomSheetProps extends BottomSheetProps {
   maxVisibleItems?: number;
   pb?: BoxProps['pb'];
   applyBottomInset?: boolean;
-  accessibilityLabel?: string;
-  testID?: string;
 }
 
 const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
@@ -39,8 +37,6 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
   selectedOption,
   maxVisibleItems = 6,
   pb,
-  accessibilityLabel,
-  testID,
   applyBottomInset = false,
   ...bottomSheetProps
 }) => {
@@ -48,13 +44,6 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
   const [selectedValues, setSelectedValues] = React.useState<string[]>(
     selectedOption ?? [],
   );
-
-  const testProps = React.useMemo(() => {
-    return {
-      accessibilityLabel: accessibilityLabel ?? testID,
-      testID: testID ?? accessibilityLabel,
-    };
-  }, [testID, accessibilityLabel]);
 
   React.useEffect(() => {
     if (Array.isArray(selectedOption)) {
@@ -84,7 +73,6 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
         <TouchableOpacity
           onPress={() => handleSelect(item.id)}
           disabled={item.disabled}
-          {...testProps}
           testID={`touchable-selectBottomSheet-${item.id}`}>
           {type === 'checkbox' ? (
             <Checkbox
@@ -134,7 +122,7 @@ const SelectBottomSheet: React.FC<SelectBottomSheetProps> = ({
   }, [applyBottomInset, pb, insets.bottom]);
 
   return (
-    <BottomSheet {...bottomSheetProps} {...testProps}>
+    <BottomSheet {...bottomSheetProps}>
       <Box {...paddingProps}>
         <ScrollView
           testID={'selectBottomSheet'}

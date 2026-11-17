@@ -49,7 +49,7 @@ const Tabs = ({
 
   return (
     <TabsContext.Provider value={{ value, onValueChange: handleChange }}>
-      <Box testID="tabsBox" accessibilityLabel="tabsBox" flex={1} {...rest} />
+      <Box testID="tabsBox" flex={1} {...rest} />
     </TabsContext.Provider>
   );
 };
@@ -66,16 +66,16 @@ const List = ({ children }: PropsWithChildren) => {
         height={30}
         alignSelf="center"
         backgroundColor="neutralLighter"
+        accessible={false}
       />,
     );
   }, [children]);
 
   return (
-    <Box testID="tabsListBox" accessibilityLabel="tabsListBox">
+    <Box testID="tabsListBox">
       <FlatList
         data={data}
         testID="tabsFlatList"
-        accessibilityLabel="tabsFlatList"
         keyExtractor={(item, index) => index.toString()}
         horizontal
         showsHorizontalScrollIndicator={false}
@@ -214,11 +214,7 @@ const Content = ({ value, ...rest }: ContentProps) => {
   }
 
   return context.value === value ? (
-    <Box
-      testID="tabsContentBox"
-      accessibilityLabel="tabsContentBox"
-      {...rest}
-    />
+    <Box testID="tabsContentBox" {...rest} />
   ) : null;
 };
 

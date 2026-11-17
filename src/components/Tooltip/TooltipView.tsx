@@ -109,8 +109,7 @@ const TooltipView = () => {
             <Box>
               <TouchableOpacity
                 onPress={_hide}
-                testID={`tooltip-close-${activeTooltip.id}`}
-                accessibilityLabel={`tooltip-close-${activeTooltip.id}`}>
+                testID={`tooltip-close-${activeTooltip.id}`}>
                 <Box padding="m">
                   <Icon name="close" size="xs" color="neutralFull" />
                 </Box>

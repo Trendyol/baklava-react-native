@@ -2,8 +2,6 @@
 
 exports[`TextLink should render textLink correctly 1`] = `
 <Text
-  accessibilityLabel="text"
-  accessible={true}
   style={
     [
       {

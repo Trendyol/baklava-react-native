@@ -2,7 +2,6 @@
 
 exports[`FlagIcon should render icon correctly 1`] = `
 <RNSVGSvgView
-  accessibilityLabel="flagIcon"
   align="xMidYMid"
   bbHeight={24}
   bbWidth={24}

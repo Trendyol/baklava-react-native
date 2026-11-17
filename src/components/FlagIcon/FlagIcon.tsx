@@ -31,7 +31,6 @@ const FlagIcon = ({
       width={iconSize}
       height={iconSize}
       testID={testID}
-      accessibilityLabel={testID}
     />
   );
 };

@@ -2,14 +2,13 @@
 
 exports[`ListItem should render basic ListItem correctly 1`] = `
 <View
-  accessibilityLabel="list-item"
   accessibilityState={
     {
       "disabled": false,
       "selected": false,
     }
   }
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -23,8 +22,7 @@ exports[`ListItem should render basic ListItem correctly 1`] = `
   testID="list-item"
 >
   <View
-    accessibilityLabel="list-item-row"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -37,8 +35,7 @@ exports[`ListItem should render basic ListItem correctly 1`] = `
     testID="list-item-row"
   >
     <View
-      accessibilityLabel="list-item-content"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -52,8 +49,6 @@ exports[`ListItem should render basic ListItem correctly 1`] = `
       testID="list-item-content"
     >
       <Text
-        accessibilityLabel="list-item-title"
-        accessible={true}
         style={
           [
             {
@@ -71,7 +66,6 @@ exports[`ListItem should render basic ListItem correctly 1`] = `
         Product Title
       </Text>
       <Text
-        accessible={false}
         style={
           [
             {

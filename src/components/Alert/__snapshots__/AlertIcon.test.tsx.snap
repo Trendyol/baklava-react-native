@@ -2,7 +2,6 @@
 
 exports[`AlertIcon should render alert icon correctly 1`] = `
 <RNSVGSvgView
-  accessibilityLabel="alert-icon"
   align="xMidYMid"
   bbHeight={16}
   bbWidth={16}

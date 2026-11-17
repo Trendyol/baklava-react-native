@@ -2,8 +2,7 @@
 
 exports[`ProgressIndicator should render ProgressIndicator correctly 1`] = `
 <View
-  accessibilityLabel="progressIndicator"
-  accessible={true}
+  accessible={false}
   style={
     [
       {},
@@ -12,8 +11,7 @@ exports[`ProgressIndicator should render ProgressIndicator correctly 1`] = `
   testID="progressIndicator"
 >
   <View
-    accessibilityLabel="progressIndicator-header"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -37,8 +35,6 @@ exports[`ProgressIndicator should render ProgressIndicator correctly 1`] = `
       }
     >
       <Text
-        accessibilityLabel="progressIndicator-label"
-        accessible={true}
         style={
           [
             {
@@ -57,8 +53,6 @@ exports[`ProgressIndicator should render ProgressIndicator correctly 1`] = `
       </Text>
     </View>
     <Text
-      accessibilityLabel="progressIndicator-percentage"
-      accessible={true}
       style={
         [
           {
@@ -120,7 +114,6 @@ exports[`ProgressIndicator should render ProgressIndicator correctly 1`] = `
         }
       >
         <RNSVGSvgView
-          accessibilityLabel="icon"
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}

@@ -8,9 +8,7 @@ const REMOTE_URI =
 
 describe('Image', () => {
   test('should render Image correctly', () => {
-    const { toJSON } = render(
-      <Image source={{ uri: REMOTE_URI }} accessibilityLabel="image" />,
-    );
+    const { toJSON } = render(<Image source={{ uri: REMOTE_URI }} />);
 
     expect(toJSON()).toMatchSnapshot();
   });

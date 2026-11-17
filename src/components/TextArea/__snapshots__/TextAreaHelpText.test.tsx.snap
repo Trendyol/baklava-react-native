@@ -12,7 +12,6 @@ exports[`TextArea Help Text should render help text correctly 1`] = `
   }
 >
   <Text
-    accessible={false}
     style={
       [
         {

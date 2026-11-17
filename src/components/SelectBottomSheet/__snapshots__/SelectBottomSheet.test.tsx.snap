@@ -2,8 +2,7 @@
 
 exports[`SelectBottomSheet should not render SelectBottomSheet when visible is false 1`] = `
 <View
-  accessibilityLabel="undefined-wrapper"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -20,7 +19,6 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
   testID="undefined-wrapper"
 >
   <View
-    accessibilityLabel="undefined-overlay"
     collapsable={false}
     onResponderRelease={[Function]}
     onStartShouldSetResponder={[Function]}
@@ -81,7 +79,6 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
         }
       >
         <View
-          accessibilityLabel="undefined-header-close"
           accessibilityState={
             {
               "busy": undefined,
@@ -118,7 +115,6 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
           testID="undefined-header-close"
         >
           <Text
-            accessible={false}
             style={
               [
                 {
@@ -136,8 +132,6 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
           </Text>
         </View>
         <Text
-          accessibilityLabel="undefined-header-label"
-          accessible={true}
           numberOfLines={1}
           style={
             [
@@ -157,7 +151,6 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
           testID="undefined-header-label"
         />
         <View
-          accessibilityLabel="undefined-header-select"
           accessibilityState={
             {
               "busy": undefined,
@@ -194,7 +187,6 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
           testID="undefined-header-select"
         >
           <Text
-            accessible={false}
             style={
               [
                 {
@@ -226,7 +218,6 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
       />
     </View>
     <RCTScrollView
-      accessibilityLabel="undefined-body"
       bounces={false}
       showsVerticalScrollIndicator={true}
       testID="undefined-body"
@@ -390,8 +381,7 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                             testID="checkbox-selectBottomSheet-1"
                           >
                             <View
-                              accessibilityLabel="tickbox"
-                              accessible={true}
+                              accessible={false}
                               style={
                                 [
                                   {},
@@ -412,8 +402,6 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                               testID="tickbox"
                             />
                             <Text
-                              accessibilityLabel="label"
-                              accessible={true}
                               style={
                                 [
                                   {
@@ -542,8 +530,7 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                             testID="checkbox-selectBottomSheet-2"
                           >
                             <View
-                              accessibilityLabel="tickbox"
-                              accessible={true}
+                              accessible={false}
                               style={
                                 [
                                   {},
@@ -564,8 +551,6 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                               testID="tickbox"
                             />
                             <Text
-                              accessibilityLabel="label"
-                              accessible={true}
                               style={
                                 [
                                   {
@@ -694,8 +679,7 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                             testID="checkbox-selectBottomSheet-3"
                           >
                             <View
-                              accessibilityLabel="tickbox"
-                              accessible={true}
+                              accessible={false}
                               style={
                                 [
                                   {},
@@ -716,8 +700,6 @@ exports[`SelectBottomSheet should not render SelectBottomSheet when visible is f
                               testID="tickbox"
                             />
                             <Text
-                              accessibilityLabel="label"
-                              accessible={true}
                               style={
                                 [
                                   {
@@ -753,8 +735,7 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible false 1`
 
 exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`] = `
 <View
-  accessibilityLabel="undefined-wrapper"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -771,7 +752,6 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
   testID="undefined-wrapper"
 >
   <View
-    accessibilityLabel="undefined-overlay"
     collapsable={false}
     onResponderRelease={[Function]}
     onStartShouldSetResponder={[Function]}
@@ -832,7 +812,6 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
         }
       >
         <View
-          accessibilityLabel="undefined-header-close"
           accessibilityState={
             {
               "busy": undefined,
@@ -869,7 +848,6 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
           testID="undefined-header-close"
         >
           <Text
-            accessible={false}
             style={
               [
                 {
@@ -887,8 +865,6 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
           </Text>
         </View>
         <Text
-          accessibilityLabel="undefined-header-label"
-          accessible={true}
           numberOfLines={1}
           style={
             [
@@ -908,7 +884,6 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
           testID="undefined-header-label"
         />
         <View
-          accessibilityLabel="undefined-header-select"
           accessibilityState={
             {
               "busy": undefined,
@@ -945,7 +920,6 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
           testID="undefined-header-select"
         >
           <Text
-            accessible={false}
             style={
               [
                 {
@@ -977,7 +951,6 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
       />
     </View>
     <RCTScrollView
-      accessibilityLabel="undefined-body"
       bounces={false}
       showsVerticalScrollIndicator={true}
       testID="undefined-body"
@@ -1141,8 +1114,7 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                             testID="checkbox-selectBottomSheet-1"
                           >
                             <View
-                              accessibilityLabel="tickbox"
-                              accessible={true}
+                              accessible={false}
                               style={
                                 [
                                   {},
@@ -1163,8 +1135,6 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                               testID="tickbox"
                             />
                             <Text
-                              accessibilityLabel="label"
-                              accessible={true}
                               style={
                                 [
                                   {
@@ -1293,8 +1263,7 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                             testID="checkbox-selectBottomSheet-2"
                           >
                             <View
-                              accessibilityLabel="tickbox"
-                              accessible={true}
+                              accessible={false}
                               style={
                                 [
                                   {},
@@ -1315,8 +1284,6 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                               testID="tickbox"
                             />
                             <Text
-                              accessibilityLabel="label"
-                              accessible={true}
                               style={
                                 [
                                   {
@@ -1445,8 +1412,7 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                             testID="checkbox-selectBottomSheet-3"
                           >
                             <View
-                              accessibilityLabel="tickbox"
-                              accessible={true}
+                              accessible={false}
                               style={
                                 [
                                   {},
@@ -1467,8 +1433,6 @@ exports[`SelectBottomSheet should render SelectBottomSheet when visible true 1`]
                               testID="tickbox"
                             />
                             <Text
-                              accessibilityLabel="label"
-                              accessible={true}
                               style={
                                 [
                                   {

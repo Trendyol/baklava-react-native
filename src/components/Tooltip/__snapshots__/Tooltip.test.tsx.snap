@@ -2,7 +2,6 @@
 
 exports[`Tooltip should render bottom correctly 1`] = `
 <View
-  accessibilityLabel="tooltip-trigger-test"
   accessibilityState={
     {
       "busy": undefined,
@@ -38,8 +37,7 @@ exports[`Tooltip should render bottom correctly 1`] = `
   testID="tooltip-trigger-test"
 >
   <View
-    accessibilityLabel="tooltip-child-wrapper-test"
-    accessible={true}
+    accessible={false}
     onLayout={[Function]}
     style={
       [
@@ -49,7 +47,6 @@ exports[`Tooltip should render bottom correctly 1`] = `
     testID="tooltip-child-wrapper-test"
   >
     <Text
-      accessible={false}
       style={
         [
           {
@@ -69,7 +66,6 @@ exports[`Tooltip should render bottom correctly 1`] = `
 
 exports[`Tooltip should render top correctly 1`] = `
 <View
-  accessibilityLabel="tooltip-trigger-test"
   accessibilityState={
     {
       "busy": undefined,
@@ -105,8 +101,7 @@ exports[`Tooltip should render top correctly 1`] = `
   testID="tooltip-trigger-test"
 >
   <View
-    accessibilityLabel="tooltip-child-wrapper-test"
-    accessible={true}
+    accessible={false}
     onLayout={[Function]}
     style={
       [
@@ -116,7 +111,6 @@ exports[`Tooltip should render top correctly 1`] = `
     testID="tooltip-child-wrapper-test"
   >
     <Text
-      accessible={false}
       style={
         [
           {

@@ -1,11 +1,6 @@
 import { VariantProps } from '@ergenekonyigit/restyle';
 import React from 'react';
-import {
-  Animated,
-  ColorValue,
-  Easing,
-  TextProps as RNTextProps,
-} from 'react-native';
+import { Animated, ColorValue, Easing } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import theme, { Theme } from '../../theme';
 
@@ -44,24 +39,7 @@ const Spinner = ({
     };
   }, [rotation]);
 
-  const testProps = React.useMemo(() => {
-    const result: RNTextProps = {
-      accessible: false,
-      accessibilityLabel: undefined,
-      testID: undefined,
-    };
-
-    if (!(testID || accessibilityLabel)) {
-      return result;
-    }
-
-    result.accessible = accessible ?? true;
-    result.accessibilityLabel = accessibilityLabel ?? testID;
-    result.testID = testID ?? accessibilityLabel;
-
-    return result;
-  }, [testID, accessibilityLabel, accessible]);
-
+  // accessibilityLabel'a burada dokunulmaz; ayri prop olarak gecirilir.
   const animatedStyle = React.useMemo(() => {
     return {
       transform: [
@@ -83,7 +61,9 @@ const Spinner = ({
       viewBox="0 0 48 48"
       fill="#FFFFFF"
       xmlns="http://www.w3.org/2000/svg"
-      {...testProps}>
+      accessibilityLabel={accessibilityLabel}
+      testID={testID}
+      accessible={accessible ?? Boolean(accessibilityLabel)}>
       <Path
         opacity={0.3}
         d="M48 24c0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0s24 10.745 24 24zM7.2 24c0 9.278 7.522 16.8 16.8 16.8S40.8 33.278 40.8 24 33.278 7.2 24 7.2 7.2 14.722 7.2 24z"

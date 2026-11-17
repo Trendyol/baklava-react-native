@@ -93,7 +93,6 @@ const Tooltip = React.forwardRef<TooltipRef, TooltipProps>(
     return (
       <TouchableOpacity
         testID={`tooltip-trigger-${id}`}
-        accessibilityLabel={`tooltip-trigger-${id}`}
         disabled={!pressable}
         onPress={openTooltip}
         style={wrapperStyle}>

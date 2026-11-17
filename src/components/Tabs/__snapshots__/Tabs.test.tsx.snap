@@ -2,8 +2,7 @@
 
 exports[`Tabs should render Tabs correctly 1`] = `
 <View
-  accessibilityLabel="tabsBox"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -14,8 +13,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
   testID="tabsBox"
 >
   <View
-    accessibilityLabel="tabsListBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -24,7 +22,6 @@ exports[`Tabs should render Tabs correctly 1`] = `
     testID="tabsListBox"
   >
     <RCTScrollView
-      accessibilityLabel="tabsFlatList"
       contentContainerStyle={
         {
           "flexGrow": 1,
@@ -38,6 +35,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
             value="tab1"
           />,
           <ForwardRef
+            accessible={false}
             alignSelf="center"
             backgroundColor="neutralLighter"
             flex={1}
@@ -119,8 +117,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel="tabOptionBox"
-              accessible={true}
+              accessible={false}
               style={
                 [
                   {
@@ -144,8 +141,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
                 }
               >
                 <View
-                  accessibilityLabel="tabTitleBox"
-                  accessible={true}
+                  accessible={false}
                   style={
                     [
                       {},
@@ -154,8 +150,6 @@ exports[`Tabs should render Tabs correctly 1`] = `
                   testID="tabTitleBox"
                 >
                   <Text
-                    accessibilityLabel="tabTitle"
-                    accessible={true}
                     ellipsizeMode="tail"
                     numberOfLines={1}
                     style={
@@ -269,8 +263,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
             }
           >
             <View
-              accessibilityLabel="tabOptionBox"
-              accessible={true}
+              accessible={false}
               style={
                 [
                   {
@@ -294,8 +287,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
                 }
               >
                 <View
-                  accessibilityLabel="tabTitleBox"
-                  accessible={true}
+                  accessible={false}
                   style={
                     [
                       {},
@@ -304,8 +296,6 @@ exports[`Tabs should render Tabs correctly 1`] = `
                   testID="tabTitleBox"
                 >
                   <Text
-                    accessibilityLabel="tabTitle"
-                    accessible={true}
                     ellipsizeMode="tail"
                     numberOfLines={1}
                     style={
@@ -332,8 +322,7 @@ exports[`Tabs should render Tabs correctly 1`] = `
     </RCTScrollView>
   </View>
   <View
-    accessibilityLabel="tabsContentBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -342,7 +331,6 @@ exports[`Tabs should render Tabs correctly 1`] = `
     testID="tabsContentBox"
   >
     <Text
-      accessible={false}
       style={
         [
           {

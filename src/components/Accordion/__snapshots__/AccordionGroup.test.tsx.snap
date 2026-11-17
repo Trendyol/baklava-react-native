@@ -2,8 +2,7 @@
 
 exports[`AccordionGroup should render accordion group correctly 1`] = `
 <View
-  accessibilityLabel="accordion-group"
-  accessible={true}
+  accessible={false}
   style={
     [
       {},
@@ -12,8 +11,7 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
   testID="accordion-group"
 >
   <View
-    accessibilityLabel="accordion"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -30,7 +28,6 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
     testID="accordion"
   >
     <View
-      accessibilityLabel="accordion-header"
       accessibilityState={
         {
           "busy": undefined,
@@ -75,7 +72,6 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
       testID="accordion-header"
     >
       <RNSVGSvgView
-        accessibilityLabel="accordion-header-icon"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -148,8 +144,6 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
         }
       >
         <Text
-          accessibilityLabel="accordion-title"
-          accessible={true}
           style={
             [
               {
@@ -168,7 +162,6 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
         </Text>
       </View>
       <RNSVGSvgView
-        accessibilityLabel="accordion-chevron"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -233,8 +226,7 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="accordion"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -254,7 +246,6 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
     testID="accordion"
   >
     <View
-      accessibilityLabel="accordion-header"
       accessibilityState={
         {
           "busy": undefined,
@@ -299,7 +290,6 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
       testID="accordion-header"
     >
       <RNSVGSvgView
-        accessibilityLabel="accordion-header-icon"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}
@@ -372,8 +362,6 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
         }
       >
         <Text
-          accessibilityLabel="accordion-title"
-          accessible={true}
           style={
             [
               {
@@ -392,7 +380,6 @@ exports[`AccordionGroup should render accordion group correctly 1`] = `
         </Text>
       </View>
       <RNSVGSvgView
-        accessibilityLabel="accordion-chevron"
         align="xMidYMid"
         bbHeight={16}
         bbWidth={16}

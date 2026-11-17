@@ -7,15 +7,11 @@ import Box from '../Box/Box';
 type ActionBarProps = React.ComponentProps<typeof Box> & {
   children: React.ReactNode;
   disableSafeArea?: boolean;
-  testID?: string;
-  accessibilityLabel?: string;
 };
 
 const ActionBar = ({
   children,
   disableSafeArea = false,
-  testID,
-  accessibilityLabel,
   ...rest
 }: ActionBarProps) => {
   const insets = useSafeAreaInsets();
@@ -26,20 +22,8 @@ const ActionBar = ({
     paddingBottom: safeAreaPadding,
   };
 
-  const testProps = React.useMemo(() => {
-    const result: {
-      testID?: string;
-      accessibilityLabel?: string;
-    } = {};
-
-    if (testID || accessibilityLabel) {
-      result.testID = testID ?? accessibilityLabel;
-      result.accessibilityLabel = accessibilityLabel ?? testID;
-    }
-
-    return result;
-  }, [testID, accessibilityLabel]);
-
+  // testID ve accessibilityLabel dahil tum native prop'lar rest uzerinden
+  // Box'a, oradan da native view'a akar.
   return (
     <Portal>
       <Box
@@ -54,7 +38,6 @@ const ActionBar = ({
         shadowOpacity={0.15}
         shadowRadius={7.5}
         gap="m"
-        {...testProps}
         {...rest}>
         {children}
       </Box>

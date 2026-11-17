@@ -132,13 +132,7 @@ const Accordion = ({
   const accordionBorderRadius = rest.borderRadius ?? (fullWidth ? 'none' : 'l');
 
   const contentBody = (
-    <Box
-      px="m"
-      pt="none"
-      pb="m"
-      gap="m"
-      testID="accordion-content"
-      accessibilityLabel="accordion-content">
+    <Box px="m" pt="none" pb="m" gap="m" testID="accordion-content">
       {children}
     </Box>
   );
@@ -185,7 +179,6 @@ const Accordion = ({
   return (
     <Box
       testID="accordion"
-      accessibilityLabel="accordion"
       borderColor="neutralLighter"
       borderTopWidth={1}
       borderBottomWidth={1}
@@ -205,8 +198,7 @@ const Accordion = ({
         flexDirection="row"
         alignItems="center"
         gap="2xs"
-        testID="accordion-header"
-        accessibilityLabel="accordion-header">
+        testID="accordion-header">
         {headerIcon ? (
           <Icon
             name={headerIcon === true ? 'info' : headerIcon}

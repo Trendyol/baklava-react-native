@@ -16,7 +16,6 @@ exports[`Switch should render switch correctly 1`] = `
   }
 >
   <View
-    accessibilityLabel="switch"
     accessibilityState={
       {
         "busy": undefined,
@@ -34,7 +33,7 @@ exports[`Switch should render switch correctly 1`] = `
         "text": undefined,
       }
     }
-    accessible={true}
+    accessible={false}
     collapsable={false}
     focusable={true}
     onBlur={[Function]}
@@ -53,10 +52,9 @@ exports[`Switch should render switch correctly 1`] = `
         },
       ]
     }
-    testID="switch"
   >
     <View
-      accessibilityLabel="switch-outer-view"
+      accessible={false}
       backgroundColor="rgba(175, 187, 202, 1)"
       collapsable={false}
       style={
@@ -74,7 +72,7 @@ exports[`Switch should render switch correctly 1`] = `
       testID="switch-outer-view"
     >
       <View
-        accessibilityLabel="switch-inner-view"
+        accessible={false}
         backgroundColor="white"
         collapsable={false}
         style={

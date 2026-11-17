@@ -75,7 +75,6 @@ export const Overlay = () => {
   return (
     <TouchableWithoutFeedback
       onPress={close}
-      accessibilityLabel={`tooltip-overlay-wrapper-${id}`}
       testID={`tooltip-overlay-wrapper-${id}`}>
       <Box
         position="absolute"
@@ -94,7 +93,6 @@ export const Overlay = () => {
                   {/* hole */}
                   {overlayViewport && hole ? (
                     <Rect
-                      accessibilityLabel={`tooltip-hole-${id}`}
                       testID={`tooltip-hole-${id}`}
                       fill="#000"
                       ry={6}
@@ -116,7 +114,6 @@ export const Overlay = () => {
                 </Mask>
               </Defs>
               <Rect
-                accessibilityLabel={`tooltip-overlay-${id}`}
                 testID={`tooltip-overlay-${id}`}
                 width={Dimensions.get('screen').width}
                 height={Dimensions.get('screen').height}

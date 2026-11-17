@@ -76,7 +76,7 @@ describe('ActionBar', () => {
     expect(flattenStyle(actionBar.props.style).paddingBottom).toBe(0);
   });
 
-  test('should use testID as accessibilityLabel when accessibilityLabel is not provided', () => {
+  test('should not derive accessibilityLabel from testID', () => {
     // when
     const { getByTestId } = render(
       <ActionBar testID="actionBar">
@@ -86,25 +86,12 @@ describe('ActionBar', () => {
     const actionBar = getByTestId('actionBar');
 
     // then
+    // Baklava kendi erisilebilirlik metnini uretmez; testID yalnizca otomasyon
+    // icindir ve ekran okuyucuya etiket olarak sizdirilmaz.
     expect(actionBar.props.testID).toBe('actionBar');
-    expect(actionBar.props.accessibilityLabel).toBe('actionBar');
   });
 
-  test('should use accessibilityLabel as testID when testID is not provided', () => {
-    // when
-    const { getByTestId } = render(
-      <ActionBar accessibilityLabel="actionBarLabel">
-        <Text>Primary Button</Text>
-      </ActionBar>,
-    );
-    const actionBar = getByTestId('actionBarLabel');
-
-    // then
-    expect(actionBar.props.testID).toBe('actionBarLabel');
-    expect(actionBar.props.accessibilityLabel).toBe('actionBarLabel');
-  });
-
-  test('should keep both testID and accessibilityLabel when both are provided', () => {
+  test('should not turn accessibilityLabel into testID', () => {
     // when
     const { getByTestId } = render(
       <ActionBar testID="actionBar" accessibilityLabel="actionBarLabel">
@@ -115,7 +102,19 @@ describe('ActionBar', () => {
 
     // then
     expect(actionBar.props.testID).toBe('actionBar');
-    expect(actionBar.props.accessibilityLabel).toBe('actionBarLabel');
+  });
+
+  test('should keep testID when accessibilityLabel is also provided', () => {
+    // when
+    const { getByTestId } = render(
+      <ActionBar testID="actionBar" accessibilityLabel="actionBarLabel">
+        <Text>Primary Button</Text>
+      </ActionBar>,
+    );
+    const actionBar = getByTestId('actionBar');
+
+    // then
+    expect(actionBar.props.testID).toBe('actionBar');
   });
 
   test('should not set testID or accessibilityLabel when neither is provided', () => {

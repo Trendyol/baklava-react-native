@@ -2,8 +2,7 @@
 
 exports[`Badge should render Badge correctly  1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -21,8 +20,7 @@ exports[`Badge should render Badge correctly  1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -42,8 +40,6 @@ exports[`Badge should render Badge correctly  1`] = `
     testID="badgeBackground"
   />
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -72,8 +68,7 @@ exports[`Badge should render Badge correctly  1`] = `
 
 exports[`Badge should render badge correctly when custom badge 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -91,8 +86,7 @@ exports[`Badge should render badge correctly when custom badge 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -112,8 +106,6 @@ exports[`Badge should render badge correctly when custom badge 1`] = `
     testID="badgeBackground"
   />
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -142,8 +134,7 @@ exports[`Badge should render badge correctly when custom badge 1`] = `
 
 exports[`Badge should render badge correctly when default 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -161,8 +152,7 @@ exports[`Badge should render badge correctly when default 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -182,8 +172,6 @@ exports[`Badge should render badge correctly when default 1`] = `
     testID="badgeBackground"
   />
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -212,8 +200,7 @@ exports[`Badge should render badge correctly when default 1`] = `
 
 exports[`Badge should render badgeBackground correctly when default 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -231,8 +218,7 @@ exports[`Badge should render badgeBackground correctly when default 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -252,8 +238,6 @@ exports[`Badge should render badgeBackground correctly when default 1`] = `
     testID="badgeBackground"
   />
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -282,8 +266,7 @@ exports[`Badge should render badgeBackground correctly when default 1`] = `
 
 exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -301,8 +284,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -322,8 +304,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -336,7 +317,6 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -428,8 +408,6 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -458,8 +436,7 @@ exports[`Badge should render badgeIcon correctly when custom badge 1`] = `
 
 exports[`Badge should render badgeIcon correctly when danger 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -477,8 +454,7 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -498,8 +474,7 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -512,7 +487,6 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -576,8 +550,6 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -606,8 +578,7 @@ exports[`Badge should render badgeIcon correctly when danger 1`] = `
 
 exports[`Badge should render badgeIcon correctly when neutral 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -625,8 +596,7 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -646,8 +616,7 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -660,7 +629,6 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -724,8 +692,6 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -754,8 +720,7 @@ exports[`Badge should render badgeIcon correctly when neutral 1`] = `
 
 exports[`Badge should render badgeIcon correctly when success 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -773,8 +738,7 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -794,8 +758,7 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -808,7 +771,6 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -872,8 +834,6 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -902,8 +862,7 @@ exports[`Badge should render badgeIcon correctly when success 1`] = `
 
 exports[`Badge should render badgeIcon correctly when warning 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -921,8 +880,7 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -942,8 +900,7 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -956,7 +913,6 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1017,8 +973,6 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -1047,8 +1001,7 @@ exports[`Badge should render badgeIcon correctly when warning 1`] = `
 
 exports[`Badge should render badgeText correctly when custom badge 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -1066,8 +1019,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -1087,8 +1039,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1101,7 +1052,6 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1165,8 +1115,6 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -1195,8 +1143,7 @@ exports[`Badge should render badgeText correctly when custom badge 1`] = `
 
 exports[`Badge should render badgeText correctly when danger 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -1214,8 +1161,7 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -1235,8 +1181,7 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1249,7 +1194,6 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1313,8 +1257,6 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -1343,8 +1285,7 @@ exports[`Badge should render badgeText correctly when danger 1`] = `
 
 exports[`Badge should render badgeText correctly when default 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -1362,8 +1303,7 @@ exports[`Badge should render badgeText correctly when default 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -1383,8 +1323,7 @@ exports[`Badge should render badgeText correctly when default 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1397,7 +1336,6 @@ exports[`Badge should render badgeText correctly when default 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1461,8 +1399,6 @@ exports[`Badge should render badgeText correctly when default 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -1491,8 +1427,7 @@ exports[`Badge should render badgeText correctly when default 1`] = `
 
 exports[`Badge should render badgeText correctly when neutral 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -1510,8 +1445,7 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -1531,8 +1465,7 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1545,7 +1478,6 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1609,8 +1541,6 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -1639,8 +1569,7 @@ exports[`Badge should render badgeText correctly when neutral 1`] = `
 
 exports[`Badge should render badgeText correctly when success 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -1658,8 +1587,7 @@ exports[`Badge should render badgeText correctly when success 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -1679,8 +1607,7 @@ exports[`Badge should render badgeText correctly when success 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1693,7 +1620,6 @@ exports[`Badge should render badgeText correctly when success 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1757,8 +1683,6 @@ exports[`Badge should render badgeText correctly when success 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -1787,8 +1711,7 @@ exports[`Badge should render badgeText correctly when success 1`] = `
 
 exports[`Badge should render badgeText correctly when warning 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -1806,8 +1729,7 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -1827,8 +1749,7 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1841,7 +1762,6 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -1905,8 +1825,6 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -1935,8 +1853,7 @@ exports[`Badge should render badgeText correctly when warning 1`] = `
 
 exports[`Badge should render correctly only icon badge 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -1954,8 +1871,7 @@ exports[`Badge should render correctly only icon badge 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -1968,7 +1884,6 @@ exports[`Badge should render correctly only icon badge 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -2064,8 +1979,7 @@ exports[`Badge should render correctly only icon badge 1`] = `
 
 exports[`Badge should render correctly only text badge 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -2083,8 +1997,7 @@ exports[`Badge should render correctly only text badge 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -2104,8 +2017,7 @@ exports[`Badge should render correctly only text badge 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -2118,7 +2030,6 @@ exports[`Badge should render correctly only text badge 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -2179,8 +2090,6 @@ exports[`Badge should render correctly only text badge 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -2209,8 +2118,7 @@ exports[`Badge should render correctly only text badge 1`] = `
 
 exports[`Badge should render fontSize correctly when large 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -2228,8 +2136,7 @@ exports[`Badge should render fontSize correctly when large 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -2249,8 +2156,7 @@ exports[`Badge should render fontSize correctly when large 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -2263,7 +2169,6 @@ exports[`Badge should render fontSize correctly when large 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -2324,8 +2229,6 @@ exports[`Badge should render fontSize correctly when large 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -2354,8 +2257,7 @@ exports[`Badge should render fontSize correctly when large 1`] = `
 
 exports[`Badge should render fontSize correctly when medium 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -2373,8 +2275,7 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -2394,8 +2295,7 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -2408,7 +2308,6 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -2469,8 +2368,6 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -2499,8 +2396,7 @@ exports[`Badge should render fontSize correctly when medium 1`] = `
 
 exports[`Badge should render fontSize correctly when small 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -2518,8 +2414,7 @@ exports[`Badge should render fontSize correctly when small 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -2539,8 +2434,7 @@ exports[`Badge should render fontSize correctly when small 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -2553,7 +2447,6 @@ exports[`Badge should render fontSize correctly when small 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -2614,8 +2507,6 @@ exports[`Badge should render fontSize correctly when small 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {
@@ -2644,8 +2535,7 @@ exports[`Badge should render fontSize correctly when small 1`] = `
 
 exports[`Badge should render fontSize correctly when smallRegular 1`] = `
 <View
-  accessibilityLabel="badge"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -2663,8 +2553,7 @@ exports[`Badge should render fontSize correctly when smallRegular 1`] = `
   testID="badge"
 >
   <View
-    accessibilityLabel="badgeBackground"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -2684,8 +2573,7 @@ exports[`Badge should render fontSize correctly when smallRegular 1`] = `
     testID="badgeBackground"
   />
   <View
-    accessibilityLabel="badgeIconBox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -2698,7 +2586,6 @@ exports[`Badge should render fontSize correctly when smallRegular 1`] = `
     testID="badgeIconBox"
   >
     <RNSVGSvgView
-      accessibilityLabel="badgeIcon"
       align="xMidYMid"
       bbHeight={14}
       bbWidth={14}
@@ -2759,8 +2646,6 @@ exports[`Badge should render fontSize correctly when smallRegular 1`] = `
     </RNSVGSvgView>
   </View>
   <Text
-    accessibilityLabel="badgeText"
-    accessible={true}
     style={
       [
         {

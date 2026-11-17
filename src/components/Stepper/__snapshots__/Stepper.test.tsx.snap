@@ -2,8 +2,7 @@
 
 exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
 <View
-  accessibilityLabel="stepper"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -14,8 +13,7 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
   testID="stepper"
 >
   <View
-    accessibilityLabel="stepper-header"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -29,8 +27,6 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
     testID="stepper-header"
   >
     <Text
-      accessibilityLabel="stepper-stepLabelPrefix"
-      accessible={true}
       style={
         [
           {
@@ -59,8 +55,6 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
       }
     >
       <Text
-        accessibilityLabel="stepper-stepLabel"
-        accessible={true}
         style={
           [
             {
@@ -78,8 +72,6 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
         2
       </Text>
       <Text
-        accessibilityLabel="stepper-stepCount"
-        accessible={true}
         style={
           [
             {
@@ -108,8 +100,6 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
       }
     >
       <Text
-        accessibilityLabel="stepper-stepTitle"
-        accessible={true}
         style={
           [
             {
@@ -129,8 +119,7 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="stepper-bars"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -142,8 +131,7 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
     testID="stepper-bars"
   >
     <View
-      accessibilityLabel="stepper-bar-0"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -157,8 +145,7 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
       testID="stepper-bar-0"
     />
     <View
-      accessibilityLabel="stepper-bar-1"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -172,8 +159,7 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
       testID="stepper-bar-1"
     />
     <View
-      accessibilityLabel="stepper-bar-2"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -187,8 +173,7 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
       testID="stepper-bar-2"
     />
     <View
-      accessibilityLabel="stepper-bar-3"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -203,8 +188,7 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
     />
   </View>
   <View
-    accessibilityLabel="stepper-nextStep"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -218,8 +202,6 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
     testID="stepper-nextStep"
   >
     <Text
-      accessibilityLabel="stepper-nextStepLabel"
-      accessible={true}
       style={
         [
           {
@@ -237,8 +219,6 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
       :Next
     </Text>
     <Text
-      accessibilityLabel="stepper-nextStepTitle"
-      accessible={true}
       style={
         [
           {
@@ -261,8 +241,7 @@ exports[`Stepper RTL should render Stepper correctly in RTL 1`] = `
 
 exports[`Stepper should render Stepper correctly 1`] = `
 <View
-  accessibilityLabel="stepper"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -273,8 +252,7 @@ exports[`Stepper should render Stepper correctly 1`] = `
   testID="stepper"
 >
   <View
-    accessibilityLabel="stepper-header"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -288,8 +266,6 @@ exports[`Stepper should render Stepper correctly 1`] = `
     testID="stepper-header"
   >
     <Text
-      accessibilityLabel="stepper-stepLabelPrefix"
-      accessible={true}
       style={
         [
           {
@@ -318,8 +294,6 @@ exports[`Stepper should render Stepper correctly 1`] = `
       }
     >
       <Text
-        accessibilityLabel="stepper-stepLabel"
-        accessible={true}
         style={
           [
             {
@@ -337,8 +311,6 @@ exports[`Stepper should render Stepper correctly 1`] = `
         2
       </Text>
       <Text
-        accessibilityLabel="stepper-stepCount"
-        accessible={true}
         style={
           [
             {
@@ -367,8 +339,6 @@ exports[`Stepper should render Stepper correctly 1`] = `
       }
     >
       <Text
-        accessibilityLabel="stepper-stepTitle"
-        accessible={true}
         style={
           [
             {
@@ -388,8 +358,7 @@ exports[`Stepper should render Stepper correctly 1`] = `
     </View>
   </View>
   <View
-    accessibilityLabel="stepper-bars"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -401,8 +370,7 @@ exports[`Stepper should render Stepper correctly 1`] = `
     testID="stepper-bars"
   >
     <View
-      accessibilityLabel="stepper-bar-0"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -416,8 +384,7 @@ exports[`Stepper should render Stepper correctly 1`] = `
       testID="stepper-bar-0"
     />
     <View
-      accessibilityLabel="stepper-bar-1"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -431,8 +398,7 @@ exports[`Stepper should render Stepper correctly 1`] = `
       testID="stepper-bar-1"
     />
     <View
-      accessibilityLabel="stepper-bar-2"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -446,8 +412,7 @@ exports[`Stepper should render Stepper correctly 1`] = `
       testID="stepper-bar-2"
     />
     <View
-      accessibilityLabel="stepper-bar-3"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -462,8 +427,7 @@ exports[`Stepper should render Stepper correctly 1`] = `
     />
   </View>
   <View
-    accessibilityLabel="stepper-nextStep"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -477,8 +441,6 @@ exports[`Stepper should render Stepper correctly 1`] = `
     testID="stepper-nextStep"
   >
     <Text
-      accessibilityLabel="stepper-nextStepLabel"
-      accessible={true}
       style={
         [
           {
@@ -496,8 +458,6 @@ exports[`Stepper should render Stepper correctly 1`] = `
       Next:
     </Text>
     <Text
-      accessibilityLabel="stepper-nextStepTitle"
-      accessible={true}
       style={
         [
           {

@@ -90,7 +90,6 @@ const Toast: ToastType = React.memo(
         position="absolute"
         pointerEvents="box-none"
         testID="toast-wrapper"
-        accessibilityLabel="toast-wrapper"
         width="100%"
         px="xl"
         bottom={0}

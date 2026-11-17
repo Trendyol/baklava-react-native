@@ -27,8 +27,7 @@ const YearItem = React.memo<{
       onSelect(year);
     }}
     style={styles.yearItem}
-    testID={`${testID}-year-${year}`}
-    accessibilityLabel={`${testID}-year-${year}`}>
+    testID={`${testID}-year-${year}`}>
     <Box
       flex={1}
       mb="2xs"

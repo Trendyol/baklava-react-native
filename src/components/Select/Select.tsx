@@ -370,7 +370,6 @@ const Select = forwardRef<SelectHandles, SelectProps>(
             px="m"
             height={inputHeight}
             zIndex="layer_0"
-            accessibilityLabel={`${testID}-box`}
             testID={`${testID}-box`}>
             <Box
               flex={1}
@@ -423,7 +422,6 @@ const Select = forwardRef<SelectHandles, SelectProps>(
                 size="xs"
                 color={iconColor}
                 testID={`${testID}-icon`}
-                accessibilityLabel={`${testID}-icon`}
               />
             </Box>
           </Box>

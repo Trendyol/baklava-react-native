@@ -15,8 +15,6 @@ type ImageProps = React.ComponentProps<typeof RNImage> & {
   source: ImageSourcePropType;
   fallbackSource?: ImageSourcePropType;
   onErrorImage?: ImageSourcePropType;
-  testID?: string;
-  accessibilityLabel?: string;
   borderRadius?: number;
   style?: any;
 };
@@ -29,7 +27,6 @@ const Image = ({
   fallbackSource,
   onErrorImage,
   testID = 'image',
-  accessibilityLabel = 'image',
   borderRadius = 0,
   style,
   onLoad,
@@ -73,7 +70,7 @@ const Image = ({
       borderColor={bordered ? 'neutralLighter' : 'transparent'}
       testID={`${testID}-box`}
       style={{ borderRadius, overflow: 'hidden' }}
-      accessibilityLabel={`${accessibilityLabel}-box`}>
+      accessible={false}>
       <RNImage
         style={{
           height: bordered ? height - 2 : height,
@@ -84,7 +81,6 @@ const Image = ({
         }}
         source={resolvedSource}
         testID={testID}
-        accessibilityLabel={accessibilityLabel}
         onLoad={handleLoad}
         onError={handleError}
         {...rest}

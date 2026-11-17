@@ -19,8 +19,7 @@ const PickerButton = React.memo<{
   <TouchableOpacity
     onPress={onPress}
     style={styles.touchableOpacity}
-    testID={testID}
-    accessibilityLabel={testID}>
+    testID={testID}>
     <Box
       py="2xs"
       px="xl"
@@ -39,10 +38,7 @@ const NavigationButton = React.memo<{
   onPress: () => void;
   testID: string;
 }>(({ iconName, onPress, testID }) => (
-  <TouchableOpacity
-    onPress={onPress}
-    testID={testID}
-    accessibilityLabel={testID}>
+  <TouchableOpacity onPress={onPress} testID={testID}>
     <Box p="xs">
       <Icon size="m" name={iconName} />
     </Box>

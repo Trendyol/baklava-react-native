@@ -19,7 +19,6 @@ export type PaginationProps = {
 };
 
 type NavigationButtonProps = {
-  accessibilityLabel: string;
   disabled: boolean;
   iconName:
     | 'arrow-left'
@@ -39,14 +38,12 @@ const textColor = paginationTheme.textColor as keyof Theme['colors'];
 const disabledColor = paginationTheme.disabledColor as keyof Theme['colors'];
 
 const NavigationButton = ({
-  accessibilityLabel,
   disabled,
   iconName,
   onPress,
   testID,
 }: NavigationButtonProps) => (
   <Pressable
-    accessibilityLabel={accessibilityLabel}
     accessibilityRole="button"
     accessibilityState={{ disabled }}
     disabled={disabled}
@@ -99,7 +96,6 @@ const Pagination = ({
       <Box flexDirection="row">
         {hasJumper ? (
           <NavigationButton
-            accessibilityLabel="Go to first page"
             disabled={isFirstPage}
             iconName="double-arrow-left"
             onPress={() => handlePageChange(1)}
@@ -108,7 +104,6 @@ const Pagination = ({
         ) : null}
 
         <NavigationButton
-          accessibilityLabel="Go to previous page"
           disabled={isFirstPage}
           iconName="arrow-left"
           onPress={() => handlePageChange(normalizedCurrentPage - 1)}
@@ -144,7 +139,6 @@ const Pagination = ({
 
           return (
             <Pressable
-              accessibilityLabel={`Page ${item}`}
               accessibilityRole="button"
               accessibilityState={{ selected: isSelected }}
               disabled={isSelected}
@@ -168,7 +162,6 @@ const Pagination = ({
 
       <Box flexDirection="row">
         <NavigationButton
-          accessibilityLabel="Go to next page"
           disabled={isLastPage}
           iconName="arrow-right"
           onPress={() => handlePageChange(normalizedCurrentPage + 1)}
@@ -177,7 +170,6 @@ const Pagination = ({
 
         {hasJumper ? (
           <NavigationButton
-            accessibilityLabel="Go to last page"
             disabled={isLastPage}
             iconName="double-arrow-right"
             onPress={() => handlePageChange(normalizedTotalPages)}

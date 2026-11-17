@@ -128,7 +128,6 @@ const ListItem = ({
         height={IMAGE_HEIGHT}
         borderRadius={IMAGE_RADIUS}
         testID={`${testID}-image`}
-        accessibilityLabel={`${testID}-image`}
       />
       {imageBadge != null && imageBadge !== '' ? (
         <Box
@@ -149,12 +148,7 @@ const ListItem = ({
   ) : null;
 
   const contentColumn = (
-    <Box
-      flex={1}
-      shrink
-      gap="2xs"
-      testID={`${testID}-content`}
-      accessibilityLabel={`${testID}-content`}>
+    <Box flex={1} shrink gap="2xs" testID={`${testID}-content`}>
       {title ? (
         <Text
           variant="subtitle3Medium"
@@ -170,7 +164,6 @@ const ListItem = ({
   return (
     <Box
       testID={testID}
-      accessibilityLabel={testID}
       backgroundColor={selected ? 'primaryContrast' : 'neutralFull'}
       opacity={disabled ? 0.5 : 1}
       padding="m"
@@ -181,13 +174,7 @@ const ListItem = ({
         alignItems="flex-start"
         gap="m"
         testID={`${testID}-row`}>
-        {leading ? (
-          <Box
-            testID={`${testID}-leading`}
-            accessibilityLabel={`${testID}-leading`}>
-            {leading}
-          </Box>
-        ) : null}
+        {leading ? <Box testID={`${testID}-leading`}>{leading}</Box> : null}
 
         {imageNode ? (
           hasImagePress ? (
@@ -195,8 +182,7 @@ const ListItem = ({
               onPress={handleImagePress}
               disabled={disabled}
               testID={`${testID}-image-pressable`}
-              accessibilityRole="imagebutton"
-              accessibilityLabel={`${testID}-image-pressable`}>
+              accessibilityRole="imagebutton">
               {imageNode}
             </Pressable>
           ) : (
@@ -210,8 +196,7 @@ const ListItem = ({
             disabled={disabled}
             style={styles.flex}
             testID={`${testID}-body-pressable`}
-            accessibilityRole="button"
-            accessibilityLabel={`${testID}-body-pressable`}>
+            accessibilityRole="button">
             {contentColumn}
           </Pressable>
         ) : (
@@ -225,8 +210,7 @@ const ListItem = ({
               disabled={disabled}
               hitSlop={8}
               testID={`${testID}-action-pressable`}
-              accessibilityRole="button"
-              accessibilityLabel={`${testID}-action-pressable`}>
+              accessibilityRole="button">
               <Box
                 width={32}
                 height={32}
@@ -249,20 +233,10 @@ const ListItem = ({
         ) : null}
       </Box>
 
-      {footer ? (
-        <Box
-          testID={`${testID}-footer`}
-          accessibilityLabel={`${testID}-footer`}>
-          {footer}
-        </Box>
-      ) : null}
+      {footer ? <Box testID={`${testID}-footer`}>{footer}</Box> : null}
 
       {collapsible && isExpanded && collapseContent ? (
-        <Box
-          testID={`${testID}-collapse-content`}
-          accessibilityLabel={`${testID}-collapse-content`}>
-          {collapseContent}
-        </Box>
+        <Box testID={`${testID}-collapse-content`}>{collapseContent}</Box>
       ) : null}
 
       {showCollapseButton ? (
@@ -271,8 +245,7 @@ const ListItem = ({
           disabled={disabled}
           testID={`${testID}-collapse-toggle`}
           accessibilityRole="button"
-          accessibilityState={{ expanded: isExpanded }}
-          accessibilityLabel={`${testID}-collapse-toggle`}>
+          accessibilityState={{ expanded: isExpanded }}>
           <Box
             backgroundColor={
               collapseButtonVariant === 'filled'

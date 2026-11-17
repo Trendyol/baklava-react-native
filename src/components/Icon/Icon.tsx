@@ -44,6 +44,9 @@ const Icon = ({
     primaryName,
   );
 
+  // Icon hicbir erisilebilirlik prop'una dokunmaz. accessibilityLabel,
+  // accessible ve accessibilityRole rest uzerinden native'e oldugu gibi gecer.
+  // Dekoratif isaretleme (accessible={false}) cagiran tarafin sorumlulugundadir.
   return (
     <TheIcon
       {...rest}
@@ -57,7 +60,6 @@ const Icon = ({
           : style
       }
       testID={testID}
-      accessibilityLabel={testID}
     />
   );
 };

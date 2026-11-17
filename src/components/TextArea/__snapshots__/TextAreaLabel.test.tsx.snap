@@ -2,8 +2,7 @@
 
 exports[`TextArea Label should render fixed label correctly 1`] = `
 <View
-  accessibilityLabel="fixed-label-box"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -15,8 +14,6 @@ exports[`TextArea Label should render fixed label correctly 1`] = `
   testID="fixed-label-box"
 >
   <Text
-    accessibilityLabel="fixed-label"
-    accessible={true}
     style={
       [
         {
@@ -38,8 +35,7 @@ exports[`TextArea Label should render fixed label correctly 1`] = `
 
 exports[`TextArea Label should render fixed label with optional correctly 1`] = `
 <View
-  accessibilityLabel="fixed-label-box"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -51,8 +47,6 @@ exports[`TextArea Label should render fixed label with optional correctly 1`] = 
   testID="fixed-label-box"
 >
   <Text
-    accessibilityLabel="fixed-label"
-    accessible={true}
     style={
       [
         {
@@ -80,8 +74,7 @@ exports[`TextArea Label should render outlined label correctly 1`] = `
   pointerEvents="none"
 >
   <View
-    accessibilityLabel="outlined-label-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {
@@ -107,8 +100,7 @@ exports[`TextArea Label should render outlined label with optional correctly 1`]
   pointerEvents="none"
 >
   <View
-    accessibilityLabel="outlined-label-box"
-    accessible={true}
+    accessible={false}
     style={
       [
         {

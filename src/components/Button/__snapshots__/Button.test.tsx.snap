@@ -61,8 +61,6 @@ exports[`Button should render button correctly 1`] = `
     }
   >
     <Text
-      accessibilityLabel="button-text"
-      accessible={true}
       style={
         [
           {

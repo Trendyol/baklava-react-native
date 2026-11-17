@@ -272,14 +272,10 @@ const Input = forwardRef<TextInputHandles, InputProps>(
           backgroundColor={disabled ? 'neutralLightest' : 'neutralFull'}
           px="m"
           zIndex="layer_0"
-          accessibilityLabel={`${testID}-box`}
           testID={`${testID}-box`}>
           {leadingText && !disabled ? (
             <Box mr="2xs">
-              <Text
-                color="neutralDark"
-                variant="subtitle2Medium"
-                accessibilityLabel="input-leading-text">
+              <Text color="neutralDark" variant="subtitle2Medium">
                 {leadingText}
               </Text>
             </Box>
@@ -300,17 +296,13 @@ const Input = forwardRef<TextInputHandles, InputProps>(
             value={value}
             disabled={disabled}
             editable={!disabled}
-            accessibilityLabel={testID}
             testID={testID}
             textAlign={isRTL ? 'right' : 'left'}
             fontFamily={fontFamily}
           />
           {trailingText ? (
             <Box ml="m" mr={icon ? 'm' : 'none'}>
-              <Text
-                color="neutralDark"
-                variant="subtitle2Medium"
-                accessibilityLabel="input-trailing-text">
+              <Text color="neutralDark" variant="subtitle2Medium">
                 {trailingText}
               </Text>
             </Box>

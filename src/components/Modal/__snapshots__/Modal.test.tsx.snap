@@ -6,8 +6,7 @@ exports[`Modal should not render Modal when visible true without children 1`] = 
 
 exports[`Modal should render Modal when visible true with children 1`] = `
 <View
-  accessibilityLabel="modal-wrapper"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -24,7 +23,6 @@ exports[`Modal should render Modal when visible true with children 1`] = `
   testID="modal-wrapper"
 >
   <View
-    accessibilityLabel="modal-overlay"
     collapsable={false}
     onResponderRelease={[Function]}
     onStartShouldSetResponder={[Function]}
@@ -42,7 +40,6 @@ exports[`Modal should render Modal when visible true with children 1`] = `
     testID="modal-overlay"
   />
   <View
-    accessibilityLabel="modal"
     accessible={true}
     style={
       [
@@ -59,8 +56,7 @@ exports[`Modal should render Modal when visible true with children 1`] = `
     testID="modal"
   >
     <View
-      accessibilityLabel="modal-header"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -84,8 +80,6 @@ exports[`Modal should render Modal when visible true with children 1`] = `
         }
       >
         <Text
-          accessibilityLabel="modal-title"
-          accessible={true}
           numberOfLines={2}
           style={
             [
@@ -105,7 +99,6 @@ exports[`Modal should render Modal when visible true with children 1`] = `
         </Text>
       </View>
       <View
-        accessibilityLabel="modal-close"
         accessibilityState={
           {
             "busy": undefined,
@@ -161,7 +154,6 @@ exports[`Modal should render Modal when visible true with children 1`] = `
           }
         >
           <RNSVGSvgView
-            accessibilityLabel="icon"
             align="xMidYMid"
             bbHeight={14}
             bbWidth={14}
@@ -227,15 +219,12 @@ exports[`Modal should render Modal when visible true with children 1`] = `
       </View>
     </View>
     <RCTScrollView
-      accessibilityLabel="modal-body"
       bounces={false}
       showsVerticalScrollIndicator={true}
       testID="modal-body"
     >
       <View>
         <Text
-          accessibilityLabel="lorem-text"
-          accessible={true}
           style={
             [
               {
@@ -258,8 +247,7 @@ exports[`Modal should render Modal when visible true with children 1`] = `
 
 exports[`Modal should render Modal without header 1`] = `
 <View
-  accessibilityLabel="modal-wrapper"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -276,7 +264,6 @@ exports[`Modal should render Modal without header 1`] = `
   testID="modal-wrapper"
 >
   <View
-    accessibilityLabel="modal-overlay"
     collapsable={false}
     onResponderRelease={[Function]}
     onStartShouldSetResponder={[Function]}
@@ -294,7 +281,6 @@ exports[`Modal should render Modal without header 1`] = `
     testID="modal-overlay"
   />
   <View
-    accessibilityLabel="modal"
     accessible={true}
     style={
       [
@@ -311,15 +297,12 @@ exports[`Modal should render Modal without header 1`] = `
     testID="modal"
   >
     <RCTScrollView
-      accessibilityLabel="modal-body"
       bounces={false}
       showsVerticalScrollIndicator={true}
       testID="modal-body"
     >
       <View>
         <Text
-          accessibilityLabel="lorem-text"
-          accessible={true}
           style={
             [
               {

@@ -43,38 +43,19 @@ export type TextProps = RNTextProps &
   };
 
 const Text = ({
-  testID,
-  accessibilityLabel,
-  accessible,
   truncate = false,
   numberOfLines,
   ellipsizeMode,
   ...rest
 }: TextProps) => {
+  // testID, accessible ve accessibilityLabel dahil tum native prop'lar rest
+  // uzerinden akar. useRestyle yalnizca stil prop'larini ayiklar; kalanlar
+  // cleanProps ile RNText'e gecer. Metin icerigi zaten okunur.
   const props = useRestyle(restyleFunctions, rest);
-
-  const testProps = React.useMemo(() => {
-    const result: RNTextProps = {
-      accessible: false,
-      accessibilityLabel: undefined,
-      testID: undefined,
-    };
-
-    if (!(testID || accessibilityLabel)) {
-      return result;
-    }
-
-    result.accessible = accessible ?? true;
-    result.accessibilityLabel = accessibilityLabel ?? testID;
-    result.testID = testID ?? accessibilityLabel;
-
-    return result;
-  }, [testID, accessibilityLabel, accessible]);
 
   return (
     <RNText
       {...props}
-      {...testProps}
       numberOfLines={numberOfLines ?? (truncate ? 1 : undefined)}
       ellipsizeMode={ellipsizeMode ?? (truncate ? 'tail' : undefined)}
       style={truncate ? [props.style, truncateStyle] : props.style}

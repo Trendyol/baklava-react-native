@@ -2,8 +2,7 @@
 
 exports[`ActionBar should render ActionBar correctly 1`] = `
 <View
-  accessibilityLabel="actionBar"
-  accessible={true}
+  accessible={false}
   style={
     [
       {
@@ -38,7 +37,6 @@ exports[`ActionBar should render ActionBar correctly 1`] = `
   testID="actionBar"
 >
   <Text
-    accessible={false}
     style={
       [
         {

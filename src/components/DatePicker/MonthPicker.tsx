@@ -30,8 +30,7 @@ const MonthItem = React.memo<{
           onSelect(idx);
         }}
         style={styles.monthItem}
-        testID={`${testID}-month-${idx + 1}`}
-        accessibilityLabel={`${testID}-month-${idx + 1}`}>
+        testID={`${testID}-month-${idx + 1}`}>
         <Box
           flex={1}
           mb="2xs"

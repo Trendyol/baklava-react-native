@@ -64,7 +64,6 @@ const DayItem = React.memo<{
             onSelectDate(date);
           }}
           testID={`${testID}-datepicker-day-${date.timestamp}`}
-          accessibilityLabel={`${testID}-datepicker-day-${date.timestamp}`}
           style={styles.dayItemTouchableOpacity}>
           {children}
           <Box
@@ -79,8 +78,7 @@ const DayItem = React.memo<{
             <Text
               variant="subtitle03Regular"
               color={textColor}
-              testID={`${testID}-datepicker-day-${date.timestamp}-text`}
-              accessibilityLabel={`${testID}-datepicker-day-${date.timestamp}-text`}>
+              testID={`${testID}-datepicker-day-${date.timestamp}-text`}>
               {date.day}
             </Text>
           </Box>
@@ -101,8 +99,7 @@ const WeekHeader = React.memo<{
           textAlign="center"
           variant="subtitle03Regular"
           color="neutralDark"
-          testID={`${testID}-datepicker-header-${dateIndex}-text`}
-          accessibilityLabel={`${testID}-datepicker-header-${dateIndex}-text`}>
+          testID={`${testID}-datepicker-header-${dateIndex}-text`}>
           {dayName}
         </Text>
       </Box>

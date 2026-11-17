@@ -38,8 +38,7 @@ exports[`RadioButton should render RadioButton correctly when disable, selected 
   }
 >
   <View
-    accessibilityLabel="selectbox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -100,8 +99,7 @@ exports[`RadioButton should render RadioButton correctly when disable, selected 
   }
 >
   <View
-    accessibilityLabel="selectbox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -122,8 +120,7 @@ exports[`RadioButton should render RadioButton correctly when disable, selected 
     testID="selectbox"
   >
     <View
-      accessibilityLabel="bullet"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
@@ -178,8 +175,7 @@ exports[`RadioButton should render RadioButton correctly when selected is false 
   }
 >
   <View
-    accessibilityLabel="selectbox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -240,8 +236,7 @@ exports[`RadioButton should render RadioButton correctly when selected is true 1
   }
 >
   <View
-    accessibilityLabel="selectbox"
-    accessible={true}
+    accessible={false}
     style={
       [
         {},
@@ -262,8 +257,7 @@ exports[`RadioButton should render RadioButton correctly when selected is true 1
     testID="selectbox"
   >
     <View
-      accessibilityLabel="bullet"
-      accessible={true}
+      accessible={false}
       style={
         [
           {
