@@ -2,14 +2,16 @@
 // source=src/components/ProgressIndicator/ProgressIndicator.tsx
 // component=ProgressIndicator
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
 const showHelper = instance.getBoolean('Helper Text');
 const showIcon = instance.getBoolean('Icon');
 const showLabel = instance.getBoolean('Label');
 const showPercentage = instance.getBoolean('Percentage');
-const label = instance.findText('Label').textContent;
-const helperText = instance.findText('Optional helper text').textContent;
+const label = findText(instance, 'Label');
+const helperText = findText(instance, 'Optional helper text');
 const variant = instance.getEnum('Status', {
   'In Progress': 'inProgress',
   Success: 'success',

@@ -2,10 +2,12 @@
 // source=src/components/RadioButton/RadioButton.tsx
 // component=RadioButton
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
 const showLabel = instance.getBoolean('Label');
-const label = instance.findText('Label').textContent;
+const label = findText(instance, 'Label');
 const selected = instance.getEnum('Selected', {
   True: true,
   False: false,

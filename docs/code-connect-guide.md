@@ -206,10 +206,22 @@ Eski rehberdeki `? Create figma.config.json?` sorusu kalktı. Dosyayı **repo k�
 ```json
 {
   "compilerOptions": {
-    "types": ["@figma/code-connect/figma-types"]
+    "types": [
+      "react-native",
+      "jest",
+      "@figma/code-connect/figma-types-no-require"
+    ]
   }
 }
 ```
+
+- `types` alanını **tamamen değiştirmek** gerekir: `@react-native/typescript-config` tabanı
+  `["react-native", "jest"]` verir, liste override edildiği için bu ikisini de yazın.
+- `figma-types` yerine **`figma-types-no-require`** kullanın: projede `@types/node`
+  bulunduğu için `figma-types`'ın global `require` tanımı Node'un `NodeRequire` tipini ezer.
+- Figma template API'si katman bulunamadığında throw etmek yerine `ErrorHandle` döner;
+  bu yüzden `code-connect/template-helpers.ts` içindeki `findText` / `getEnum`
+  yardımcılarını kullanın (`instance.findText('X').textContent` tip hatası verir).
 
 ### Adım 4: Eşleştirme dosyası üretin
 

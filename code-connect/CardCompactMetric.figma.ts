@@ -2,6 +2,8 @@
 // source=src/components/Card/CardCompactMetric.tsx
 // component=CardCompactMetric
 import figma from 'figma';
+import { findText, getEnum } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
 const layout = instance.getEnum('Layout', {
@@ -19,8 +21,8 @@ const layout = instance.getEnum('Layout', {
 let example;
 
 if (layout === 'metric') {
-  const label = instance.findInstance('Value').findText('Text').textContent;
-  const value = instance.findInstance('Quantity').findText('Text').textContent;
+  const label = findText(instance.findInstance('Value'), 'Text');
+  const value = findText(instance.findInstance('Quantity'), 'Text');
   const showArrow = instance.getBoolean('Show Arrow');
   example = figma.code`
     <CardCompactMetric
@@ -31,8 +33,8 @@ if (layout === 'metric') {
     />
   `;
 } else if (layout === 'metric-icon') {
-  const label = instance.findInstance('Value').findText('Text').textContent;
-  const value = instance.findInstance('Label').findText('Text').textContent;
+  const label = findText(instance.findInstance('Value'), 'Text');
+  const value = findText(instance.findInstance('Label'), 'Text');
   const showArrow = instance.getBoolean('Show Arrow');
   example = figma.code`
     <CardCompactMetric
@@ -42,14 +44,12 @@ if (layout === 'metric') {
     />
   `;
 } else if (layout === 'metric-trend') {
-  const label = instance.findInstance('Value').findText('Text').textContent;
-  const value = instance
-    .findInstance('Metric Value')
-    .findText('Text').textContent;
+  const label = findText(instance.findInstance('Value'), 'Text');
+  const value = findText(instance.findInstance('Metric Value'), 'Text');
   const showArrow = instance.getBoolean('Show Arrow');
   const trend = instance.findInstance('_metric_');
-  const trendValue = trend.findText('%2.1').textContent;
-  const trendDirection = trend.getEnum('Type', {
+  const trendValue = findText(trend, '%2.1');
+  const trendDirection = getEnum(trend, 'Type', {
     Increase: 'up',
     Decrease: 'down',
     Stable: 'stable',

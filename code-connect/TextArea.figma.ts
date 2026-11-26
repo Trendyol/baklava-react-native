@@ -2,6 +2,8 @@
 // source=src/components/TextArea/TextArea.tsx
 // component=TextArea
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
 const showLabel = instance.getEnum('Label', {
@@ -14,8 +16,8 @@ const labelFixed = instance.getEnum('Label', {
   False: false,
   Inline: false,
 });
-const label = instance.findText('ARAMA TÜRÜ').textContent;
-const value = instance.findText('Tarihe Göre Arama').textContent;
+const label = findText(instance, 'ARAMA TÜRÜ');
+const value = findText(instance, 'Tarihe Göre Arama');
 const showHelp = instance.getBoolean('Helper Text');
 const showCounter = instance.getBoolean('Character Counter');
 const error = instance.getEnum('State', {

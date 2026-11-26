@@ -2,9 +2,11 @@
 // source=src/components/Button/Button.tsx
 // component=Button
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
-const label = instance.findText('TEXT').textContent;
+const label = findText(instance, 'TEXT');
 const kind = instance.getEnum('Kind', {
   Default: 'default',
   Neutral: 'neutral',

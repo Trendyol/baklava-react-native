@@ -2,10 +2,12 @@
 // source=src/components/Modal/Modal.tsx
 // component=Modal
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
 const showTitle = instance.getBoolean('Title');
-const title = instance.findText('Title').textContent;
+const title = findText(instance, 'Title');
 const closable = instance.getBoolean('Close Button');
 const slot = instance.getSlot('Slot');
 const btn1 = instance.getBoolean('Button 1')

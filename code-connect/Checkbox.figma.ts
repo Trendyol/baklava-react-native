@@ -2,12 +2,14 @@
 // source=src/components/Checkbox/Checkbox.tsx
 // component=Checkbox
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
 const showLabel = instance.getBoolean('Label');
 const showHelp = instance.getBoolean('Help Text');
-const label = instance.findText('Label_text').textContent;
-const helperText = instance.findText('Helper text').textContent;
+const label = findText(instance, 'Label_text');
+const helperText = findText(instance, 'Helper text');
 const checked = instance.getEnum('State', {
   Default: false,
   Selected: true,
