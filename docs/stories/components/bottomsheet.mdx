@@ -115,6 +115,12 @@ Type: `number`, Default value: `1000`
 
 Type: `Function`
 
+### onRequestClose
+
+Called when the Android hardware back press arrives while the sheet is visible. It takes precedence over `closeButtonAction`, which it replaces; it is not subject to `wrongPressThresholdMs`. Leave it out to close through `closeButtonAction`. Either way the press is consumed, so the navigator does not pop a screen and the app does not exit. Android only.
+
+Type: `Function`
+
 ### closeButtonLabel (required)
 
 Type: `string`

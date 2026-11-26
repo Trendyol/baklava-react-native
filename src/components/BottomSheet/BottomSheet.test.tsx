@@ -1,4 +1,5 @@
 import React from 'react';
+import { BackHandler } from 'react-native';
 import { fireEvent, render } from '../../test-utils';
 import BottomSheet from './BottomSheet';
 import Text from '../Text/Text';
@@ -100,5 +101,38 @@ describe('BottomSheet', () => {
     expect(queryByTestId('modal-header-label').children[0]).toEqual(
       'Base Title',
     );
+  });
+
+  test('should close on android hardware back', () => {
+    const mockCloseButtonAction = jest.fn();
+    let handler: (() => boolean | null | undefined) | undefined;
+    jest.spyOn(BackHandler, 'addEventListener').mockImplementation(((
+      _eventName: string,
+      callback: any,
+    ) => {
+      handler = callback;
+      return { remove: jest.fn() } as any;
+    }) as any);
+
+    render(
+      <BottomSheet
+        testID="modal"
+        visible={true}
+        title="Base Title"
+        closeButtonLabel="Close"
+        selectButtonLabel="Select"
+        closeButtonAction={mockCloseButtonAction}>
+        <Text>Base Content</Text>
+      </BottomSheet>,
+    );
+
+    // when
+    const handled = handler?.();
+
+    // then
+    expect(mockCloseButtonAction).toBeCalledTimes(1);
+    expect(handled).toBe(true);
+
+    jest.restoreAllMocks();
   });
 });

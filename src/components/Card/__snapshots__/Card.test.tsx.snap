@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render a vertical card correctly 1`] = `
+<View
+  accessibilityLabel="card"
+  accessible={true}
+  style={
+    [
+      {
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 8,
+        "overflow": "hidden",
+      },
+    ]
+  }
+  testID="card"
+>
+  <View
+    accessible={false}
+    style={
+      [
+        {
+          "paddingHorizontal": 16,
+          "paddingTop": 16,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="card-image-wrapper"
+      accessible={true}
+      style={
+        [
+          {
+            "aspectRatio": 1.2101167315175096,
+            "backgroundColor": "#F1F2F7",
+            "borderRadius": 4,
+            "overflow": "hidden",
+          },
+        ]
+      }
+      testID="card-image-wrapper"
+    >
+      <Image
+        accessibilityLabel="card-image"
+        resizeMode="cover"
+        source={
+          {
+            "uri": "https://example.com/card-image.png",
+          }
+        }
+        style={
+          {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+        testID="card-image"
+      />
+    </View>
+  </View>
+  <View
+    accessible={false}
+    style={
+      [
+        {
+          "gap": 16,
+          "padding": 16,
+        },
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="card-content"
+      accessible={true}
+      style={
+        [
+          {
+            "gap": 8,
+          },
+        ]
+      }
+      testID="card-content"
+    >
+      <Text
+        accessibilityLabel="card-description"
+        accessible={true}
+        style={
+          [
+            {
+              "color": "#273142",
+              "fontFamily": "Rubik-Regular",
+              "fontSize": 14,
+              "fontWeight": "400",
+              "lineHeight": 16,
+              "textAlign": "left",
+            },
+          ]
+        }
+        testID="card-description"
+      >
+        Description
+      </Text>
+      <View
+        accessibilityLabel="card-badge"
+        accessible={true}
+        style={
+          [
+            {
+              "alignSelf": "flex-start",
+            },
+          ]
+        }
+        testID="card-badge"
+      >
+        <View
+          accessibilityLabel="badge"
+          accessible={true}
+          style={
+            [
+              {
+                "alignItems": "center",
+                "alignSelf": "flex-start",
+                "borderRadius": 2,
+                "flexDirection": "row",
+                "justifyContent": "center",
+              },
+              {
+                "backgroundColor": undefined,
+              },
+            ]
+          }
+          testID="badge"
+        >
+          <View
+            accessibilityLabel="badgeBackground"
+            accessible={true}
+            style={
+              [
+                {},
+                [
+                  {
+                    "backgroundColor": "#FEF2E8",
+                    "bottom": 0,
+                    "color": "#F27A1A",
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                ],
+              ]
+            }
+            testID="badgeBackground"
+          />
+          <Text
+            accessibilityLabel="badgeText"
+            accessible={true}
+            style={
+              [
+                {
+                  "color": "#F27A1A",
+                  "fontFamily": "Rubik-Regular",
+                  "fontSize": 14,
+                  "textAlign": "left",
+                },
+                [
+                  {
+                    "fontFamily": "Rubik-Medium",
+                    "fontSize": 12,
+                    "fontWeight": "500",
+                    "paddingHorizontal": 4,
+                    "paddingVertical": 4,
+                  },
+                ],
+              ]
+            }
+            testID="badgeText"
+          >
+            Badge
+          </Text>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityLabel="card-actions"
+      accessible={true}
+      style={
+        [
+          {
+            "gap": 16,
+          },
+        ]
+      }
+      testID="card-actions"
+    >
+      <View
+        accessibilityState={
+          {
+            "busy": undefined,
+            "checked": undefined,
+            "disabled": false,
+            "expanded": undefined,
+            "selected": undefined,
+          }
+        }
+        accessibilityValue={
+          {
+            "max": undefined,
+            "min": undefined,
+            "now": undefined,
+            "text": undefined,
+          }
+        }
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          [
+            {},
+          ]
+        }
+      >
+        <View
+          accessible={false}
+          color="white"
+          style={
+            [
+              {},
+              [
+                {
+                  "alignItems": "center",
+                  "alignSelf": "flex-start",
+                  "backgroundColor": "#F27A1A",
+                  "borderColor": "#F27A1A",
+                  "borderRadius": 6,
+                  "borderWidth": 1,
+                  "flexDirection": "row",
+                  "height": 40,
+                  "justifyContent": "center",
+                  "paddingHorizontal": 24,
+                },
+              ],
+            ]
+          }
+        >
+          <Text
+            accessibilityLabel="button-text"
+            accessible={true}
+            style={
+              [
+                {
+                  "color": "#FFFFFF",
+                  "fontFamily": "Rubik-Medium",
+                  "fontSize": 14,
+                  "fontWeight": "500",
+                  "lineHeight": 16,
+                  "marginLeft": 0,
+                  "textAlign": "left",
+                },
+              ]
+            }
+            testID="button-text"
+          >
+            Button
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

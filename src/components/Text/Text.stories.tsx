@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
-import Text from './Text';
 import Box from '../Box/Box';
+import Text from './Text';
 import theme from '../../theme';
 
 const variantList = Object.keys(theme.textVariants);
@@ -241,7 +241,7 @@ export const Truncate: Story = {
           <Text variant="body2" truncate>
             {longText}
           </Text>
-          <Text variant="subtitle4Bold" pl="3xs">
+          <Text variant="subtitle04Bold" pl="3xs">
             99 TL
           </Text>
         </Box>

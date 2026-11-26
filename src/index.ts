@@ -9,6 +9,8 @@ export { default as Badge } from './components/Badge/Badge';
 export { default as BottomSheet } from './components/BottomSheet/BottomSheet';
 export { default as Box } from './components/Box/Box';
 export { default as Button } from './components/Button/Button';
+export { default as Card } from './components/Card/Card';
+export { default as CardCompactMetric } from './components/Card/CardCompactMetric';
 export { default as Checkbox } from './components/Checkbox/Checkbox';
 export { default as FlagIcon } from './components/FlagIcon/FlagIcon';
 export { default as Icon } from './components/Icon/Icon';
@@ -48,6 +50,12 @@ export type {
   ListItemCollapseButtonVisibility,
 } from './components/ListItem/types';
 export type { TooltipRef } from './components/Tooltip/types';
+export type { CardProps, CardType, CardVariant } from './components/Card/types';
+export type {
+  CardCompactMetricDirection,
+  CardCompactMetricProps,
+  CardCompactMetricTrend,
+} from './components/Card/CardCompactMetric';
 export type {
   StepperProps,
   StepperStepState,
