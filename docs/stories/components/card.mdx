@@ -1,0 +1,489 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import CardBasic from '../assets/card/CardBasic.png';
+import CardVerticalHorizontal from '../assets/card/CardVerticalHorizontal.png';
+import CardIconPlaceholderCompact from '../assets/card/CardIconPlaceholderCompact.png';
+import CardSurfaceTypes from '../assets/card/CardSurfaceTypes.png';
+import CardHeader from '../assets/card/CardHeader.png';
+import CardCompact from '../assets/card/CardCompact.png';
+import CardSalesSummary from '../assets/card/CardSalesSummary.png';
+import CardCompactMetricImage from '../assets/card/CardCompactMetric.png';
+import CardDashboard from '../assets/card/CardDashboard.png';
+
+<Meta
+  title="Components/Card"
+  parameters={{
+    viewMode: 'docs',
+    previewTabs: {
+      canvas: {
+        hidden: true,
+      },
+    },
+  }}
+/>
+
+# Card
+
+Card groups related media, information and actions into one scannable unit. It is a
+mobile content container with **five layouts** and **four surface treatments**
+(20 combinations).
+
+* Choose the content layout first (`variant`), then the surface (`type`).
+* Surface treatments are **not** hover, pressed, selected or disabled states.
+* Free content areas accept any React children (image, badge, buttons, charts…).
+* At most two direct actions are recommended.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={CardBasic} width="250" alt="CardBasic" />
+  <img src={CardVerticalHorizontal} width="250" alt="CardVerticalHorizontal" />
+  <img
+    src={CardIconPlaceholderCompact}
+    width="250"
+    alt="CardIconPlaceholderCompact"
+  />
+  <img src={CardSurfaceTypes} width="250" alt="CardSurfaceTypes" />
+  <img src={CardHeader} width="250" alt="CardHeader" />
+  <img src={CardCompact} width="250" alt="CardCompact" />
+  <img src={CardDashboard} width="250" alt="CardDashboard" />
+</div>
+
+<br/>
+<br/>
+
+## Anatomy
+
+| Region | Property | Notes |
+| --- | --- | --- |
+| Media | `image` | Above the copy in `vertical`, leading 96 × 48 media in `horizontal`. |
+| Header | `header`, `title`, `headerSlot` | Optional region with a title and a trailing slot. Hidden by default. |
+| Description | `description` | Supporting text below the header. |
+| Badge | `badge` | Optional metadata below the description. |
+| Actions | `actions` | Optional action group. Vertical stack with a 16 px gap. |
+| Body slot | `children` | Flexible slot; the only body of the `placeholder` layout. |
+| Compact content | `compactContent` | Content swap of the `compact` layout. |
+
+<br />
+
+## Layouts
+
+| Layout | Use when |
+| --- | --- |
+| `vertical` | Prominent media above supporting copy and actions. |
+| `horizontal` | A compact media-led row with a trailing arrow. |
+| `icon` | A 64 × 64 leading slot with supporting copy and actions. |
+| `placeholder` | Flexible content slot; the optional header is off by default. |
+| `compact` | Dense metric content using a swappable `compactContent` node. |
+
+## Surface types
+
+| Type | Background | Border | Shadow |
+| --- | --- | --- | --- |
+| `default` | `neutralFull` | — | — |
+| `stroke` | `neutralFull` | `borderColor`, 1 px inside | — |
+| `gray` | `neutralLightest` | — | — |
+| `elevated` | `neutralFull` | — | 0 4 20, 10% black |
+
+`icon` + `elevated` has no shadow in the source design; the component follows the
+same rule.
+
+<br />
+
+## Usage
+
+```jsx
+<Card
+  image={item.image}
+  title="Lorem ipsum dolor sit amet consectetur"
+  headerSlot={
+    <>
+      <Badge text="Badge" />
+      <Icon name="more-vertical" size="s" color="contentPrimary" />
+    </>
+  }
+  description="Description"
+  badge={<Badge text="Badge" />}
+  actions={
+    <>
+      <Button label="Button" size="s" filled onPress={onPrimary} />
+      <Button
+        label="Button"
+        size="s"
+        filled
+        variant="secondary"
+        onPress={onSecondary}
+      />
+    </>
+  }
+/>
+```
+
+```jsx
+// Horizontal row with a trailing arrow and whole-card interaction
+<Card
+  variant="horizontal"
+  image={item.image}
+  title={item.title}
+  description={item.description}
+  onPress={onOpenDetail}
+/>
+```
+
+```jsx
+// Placeholder: flexible body, header off by default
+<Card variant="placeholder" title="Reklam Performansım" headerSlot={<Badge text="Son 7 gün" />}>
+  <Text variant="body2">Free content slot.</Text>
+</Card>
+```
+
+```jsx
+// Compact metric content (8 px inset, 4 px inner gap)
+<Card
+  variant="compact"
+  compactContent={
+    <Box alignItems="center" gap="3xs">
+      <Text variant="body3" color="contentPrimary">
+        Bekleyen Siparişler
+      </Text>
+      <Box flexDirection="row" alignItems="center" gap="3xs">
+        <Text variant="subtitle2Medium" color="primaryKey">
+          3 adet
+        </Text>
+        <Icon name="arrow-right" size="2xs" color="primaryKey" />
+      </Box>
+    </Box>
+  }
+/>
+```
+
+<br />
+
+## Example composition — Satış Özeti
+
+The source sample uses a plain `Box` surface (white, 8 px radius, 16 px padding)
+that hosts four compact metric `Card`s. The header and the payment row are Box
+compositions; the metric tiles are real Card instances with `variant="compact"`,
+`type="gray"`. Their height is content-driven (Metric Trend = 76 px:
+14 + 4 + 24 + 4 + 14 + 8 × 2 padding). The example passes `height={76}` only to
+keep the four grid tiles equal, because the last tile has no trend.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={CardSalesSummary} width="250" alt="CardSalesSummary" />
+</div>
+
+```jsx
+<Box borderRadius="l" backgroundColor="neutralFull" padding="m" gap="m">
+  <Box flexDirection="row" justifyContent="space-between" alignItems="center">
+    <Text variant="subtitle2Medium">Satış Özeti</Text>
+    <Box flexDirection="row" alignItems="center" gap="3xs">
+      <Icon name="live-monitor" size="s" color="primaryKey" />
+      <Text variant="body2" color="primaryKey">
+        Canlı Performansım
+      </Text>
+      <Icon name="arrow-right" size="s" color="primaryKey" />
+    </Box>
+  </Box>
+
+  <Box gap="2xs">
+    <Box flexDirection="row" gap="2xs">
+      {metrics.map(metric => (
+        <Box key={metric.label} flex={1}>
+          <Card
+            variant="compact"
+            type="gray"
+            height={76}
+            compactContent={<MetricTrend {...metric} />}
+          />
+        </Box>
+      ))}
+    </Box>
+  </Box>
+
+  <Box
+    flexDirection="row"
+    alignItems="center"
+    gap="2xs"
+    padding="2xs"
+    borderRadius="l"
+    backgroundColor="neutralLightest">
+    <Icon name="money_bag" size="l" color="successKey" />
+    <Text variant="body3">
+      Vadeni beklemeden{' '}
+      <Text variant="body3" color="primaryKey" style={{ textDecorationLine: 'underline' }}>
+        186.158,00₺
+      </Text>{' '}
+      erken ödeme alabilirsin.
+    </Text>
+  </Box>
+</Box>
+```
+
+<br />
+
+## Props
+
+#### variant
+
+Type: `'vertical' | 'horizontal' | 'icon' | 'placeholder' | 'compact'`
+
+Default: `'vertical'`
+
+Content layout of the card.
+
+#### type
+
+Type: `'default' | 'stroke' | 'gray' | 'elevated'`
+
+Default: `'default'`
+
+Surface treatment of the card. It does not describe an interaction state.
+
+#### header
+
+Type: `boolean`
+
+Default: `true` when `title` or `headerSlot` is provided, otherwise `false`.
+
+Shows the header region. Pass `header={false}` to hide it explicitly — the source
+design hides the header by default.
+
+#### title
+
+Type: `React.ReactNode`
+
+Title of the header region. Rendered with `subtitle3Medium` and truncated to one
+line.
+
+#### headerSlot
+
+Type: `React.ReactNode`
+
+Trailing content of the header region, for example a `Badge` and a more icon.
+
+#### description
+
+Type: `React.ReactNode`
+
+Supporting text below the header (`body2`). Omit it to hide the area.
+
+#### badge
+
+Type: `React.ReactNode`
+
+Metadata below the description. Pass a `Badge` node; omit it to hide the area.
+
+#### actions
+
+Type: `React.ReactNode`
+
+Action group below the content. Rendered for `vertical` and `icon` layouts only.
+Buttons are stacked vertically with a 16 px gap; use `filled` buttons to match the
+source design (full width).
+
+#### image
+
+Type: `ImageSourcePropType | React.ReactNode`
+
+Media of `vertical` and `horizontal`. Accepts a remote URL, a bundled asset
+(`require(...)`), an image source object or any React node.
+
+#### icon
+
+Type: `React.ReactNode`
+
+Leading 64 × 64 media of the `icon` layout. The slot has a neutral placeholder
+surface and centers its content.
+
+#### showArrow
+
+Type: `boolean`
+
+Default: `true`
+
+Shows the trailing arrow of the `horizontal` layout.
+
+#### compactContent
+
+Type: `React.ReactNode`
+
+Content swap of the `compact` layout. The card provides the 8 px inset and centers
+the content; the node provides the label, value, trend and arrow.
+
+#### children
+
+Type: `React.ReactNode`
+
+Flexible body slot. Used as the only body of `placeholder` and appended to the
+content column of the other layouts.
+
+#### onPress
+
+Type: `() => void`
+
+Makes the whole card pressable. Use it only for one clear destination or a
+selection task; nested buttons keep their own press handler.
+
+#### disabled
+
+Type: `boolean`
+
+Default: `false`
+
+Blocks `onPress` and applies the library disabled opacity (0.5). The source design
+does not define a disabled surface.
+
+#### testID
+
+Type: `string`
+
+Default: `'card'`
+
+Test id of the root element. Inner regions use `${testID}-header`, `${testID}-title`,
+`${testID}-description`, `${testID}-badge`, `${testID}-actions`, `${testID}-image`,
+`${testID}-icon`, `${testID}-arrow`, `${testID}-content` and `${testID}-pressable`.
+
+<br />
+
+## CardCompactMetric
+
+Optional metric content atom for the `compact` layout. It has no surface, so it
+can be used inside `compactContent` or in any custom container. `Card` works
+without it; keep using `compactContent` for any other content.
+
+The structure is fixed (label, value, optional trend, optional arrow); size and
+color vary through token props, not free styles.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+  }}>
+  <img src={CardCompactMetricImage} width="250" alt="CardCompactMetric" />
+</div>
+
+```jsx
+<Card
+  variant="compact"
+  compactContent={
+    <CardCompactMetric
+      label="Bugünkü Satış"
+      value="68.875₺"
+      arrow="value"
+      trend={{ value: '%29.35', direction: 'up' }}
+    />
+  }
+/>
+```
+
+#### label
+
+Type: `React.ReactNode`
+
+Metric label (`body3`).
+
+#### value
+
+Type: `React.ReactNode`
+
+Metric value. `size="s"` renders `subtitle2Medium` (16 / 20), `size="m"` renders
+`subtitle1Medium` (20 / 24).
+
+#### size
+
+Type: `'s' | 'm'`
+
+Default: `'s'`
+
+Value text size.
+
+#### valueColor
+
+Type: theme color token
+
+Default: `'contentPrimary'`
+
+Value color. Pass a token such as `'primaryKey'` for the brand emphasis.
+
+#### arrow
+
+Type: `false | 'label' | 'value'`
+
+Default: `false`
+
+Arrow placement. The source design uses `value` for Metric and `label` for Metric
+Trend.
+
+#### trend
+
+Type: `{ value: React.ReactNode; direction?: 'up' | 'down' }`
+
+Optional trend row below the value. `up` (default) uses `successKey`, `down`
+uses `dangerKey`, together with the `metric-status-up` / `metric-status-down`
+icon.
+
+#### testID
+
+Type: `string`
+
+Default: `'card-compact-metric'`
+
+Test id of the root element. Inner regions use `${testID}-label`, `${testID}-value`,
+`${testID}-arrow`, `${testID}-trend`, `${testID}-trend-value` and
+`${testID}-trend-icon`.
+
+<br />
+
+## Measurements
+
+Values describe the source examples (343 px wide) and are not fixed responsive
+limits. Content and slot changes can alter the height.
+
+| Token | Value |
+| --- | --- |
+| Shared width | 343 px (source) |
+| Corner radius | 8 px → `borderRadii.l` |
+| Body inset / action gap | 16 px → `spacing.m` |
+| Header gap / content gap | 8 px → `spacing.2xs` |
+| Compact content inset | 8 px; inner gap 4 px → `spacing.2xs` / `spacing.3xs` |
+| Vertical media | 311 × 257 px (≈ 1.21 aspect ratio, 4 px radius) |
+| Horizontal media | 96 × 48 px (4 px radius) |
+| Icon slot | 64 × 64 px |
+| Placeholder min height | 200 px (grows with content) |
+| Compact min height | 54 px (content-driven; `stroke` adds 2 px) |
+
+## Typography
+
+| Region | Variant | Source |
+| --- | --- | --- |
+| Title | `subtitle3Medium` | Rubik Medium 14 / 16 |
+| Description | `body2` | Rubik Regular 14 / 16 |
+| Badge | `Badge` (`medium`) | Rubik Medium 12 / 14 |
+| Compact label | `body3` | Rubik Regular 12 / 14 |
+| Compact metric | `subtitle2Medium` | Rubik Medium 16 / 20 |
+
+<br />
+
+## Usage guidance
+
+**Recommended**
+
+* Use `gray` on white surfaces.
+* Keep direct actions to a maximum of two.
+* Use whole-card interaction (`onPress`) only for one clear destination or a
+  selection task.
+* Keep hierarchy consistent within a list or grid.
+
+**Before handoff**
+
+* Replace sample copy and artwork in product designs.
+* Define interaction and accessibility behavior for the product context; the
+  visual variants alone do not establish it.

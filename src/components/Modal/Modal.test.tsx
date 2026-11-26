@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated } from 'react-native';
+import { Animated, BackHandler } from 'react-native';
 import { fireEvent, render } from '../../test-utils';
 import Text from '../Text/Text';
 import Modal from './Modal';
@@ -346,5 +346,185 @@ describe('Modal', () => {
 
     // then
     expect(title.props.numberOfLines).toBe(2);
+  });
+
+  describe('android hardware back', () => {
+    const mockBackHandler = () => {
+      let handler: (() => boolean | null | undefined) | undefined;
+      const remove = jest.fn();
+      const spy = jest
+        .spyOn(BackHandler, 'addEventListener')
+        .mockImplementation(((_eventName: string, callback: any) => {
+          handler = callback;
+          return { remove } as any;
+        }) as any);
+
+      return {
+        spy,
+        remove,
+        press: () => handler?.(),
+        registered: () => handler !== undefined,
+      };
+    };
+
+    afterEach(() => {
+      jest.restoreAllMocks();
+    });
+
+    test('should close through the close button path and swallow the press', () => {
+      const mockCloseButtonAction = jest.fn();
+      const back = mockBackHandler();
+      render(
+        <Modal
+          testID="modal"
+          visible={true}
+          closable={true}
+          title="test title"
+          closeButtonAction={mockCloseButtonAction}>
+          <Text testID="lorem-text">Lorem ipsum dolor</Text>
+        </Modal>,
+      );
+
+      // when
+      const handled = back.press();
+
+      // then
+      expect(mockCloseButtonAction).toBeCalledTimes(1);
+      expect(handled).toBe(true);
+    });
+
+    test('should prefer onRequestClose over the close button path', () => {
+      const mockCloseButtonAction = jest.fn();
+      const mockOnRequestClose = jest.fn();
+      const back = mockBackHandler();
+      render(
+        <Modal
+          testID="modal"
+          visible={true}
+          title="test title"
+          closeButtonAction={mockCloseButtonAction}
+          onRequestClose={mockOnRequestClose}>
+          <Text testID="lorem-text">Lorem ipsum dolor</Text>
+        </Modal>,
+      );
+
+      // when
+      const handled = back.press();
+
+      // then
+      expect(mockOnRequestClose).toBeCalledTimes(1);
+      expect(mockCloseButtonAction).not.toBeCalled();
+      expect(handled).toBe(true);
+    });
+
+    test('should swallow the press without closing when closable false', () => {
+      const mockCloseButtonAction = jest.fn();
+      const back = mockBackHandler();
+      render(
+        <Modal
+          testID="modal"
+          visible={true}
+          closable={false}
+          title="test title"
+          closeButtonAction={mockCloseButtonAction}>
+          <Text testID="lorem-text">Lorem ipsum dolor</Text>
+        </Modal>,
+      );
+
+      // when
+      const handled = back.press();
+
+      // then
+      expect(mockCloseButtonAction).not.toBeCalled();
+      expect(handled).toBe(true);
+    });
+
+    test('should not subscribe while hidden and unsubscribe when hidden again', () => {
+      const back = mockBackHandler();
+      const { rerender } = render(
+        <Modal testID="modal" visible={true} title="test title">
+          <Text testID="lorem-text">Lorem ipsum dolor</Text>
+        </Modal>,
+      );
+
+      // then
+      expect(back.registered()).toBe(true);
+
+      // when
+      rerender(
+        <Modal testID="modal" visible={false} title="test title">
+          <Text testID="lorem-text">Lorem ipsum dolor</Text>
+        </Modal>,
+      );
+
+      // then
+      expect(back.remove).toBeCalled();
+    });
+
+    test('should not subscribe while hidden', () => {
+      const back = mockBackHandler();
+      render(
+        <Modal testID="modal" visible={false} title="test title">
+          <Text testID="lorem-text">Lorem ipsum dolor</Text>
+        </Modal>,
+      );
+
+      // then
+      expect(back.spy).not.toBeCalled();
+    });
+
+    test('should close through onRequestClose even when closable false', () => {
+      const mockCloseButtonAction = jest.fn();
+      const mockOnRequestClose = jest.fn();
+      const back = mockBackHandler();
+      render(
+        <Modal
+          testID="modal"
+          visible={true}
+          closable={false}
+          title="test title"
+          closeButtonAction={mockCloseButtonAction}
+          onRequestClose={mockOnRequestClose}>
+          <Text testID="lorem-text">Lorem ipsum dolor</Text>
+        </Modal>,
+      );
+
+      // when
+      const handled = back.press();
+
+      // then
+      expect(mockOnRequestClose).toBeCalledTimes(1);
+      expect(mockCloseButtonAction).not.toBeCalled();
+      expect(handled).toBe(true);
+    });
+
+    test('should not subscribe without children', () => {
+      const back = mockBackHandler();
+      render(<Modal testID="modal" visible={true} title="test title" />);
+
+      // then
+      expect(back.spy).not.toBeCalled();
+    });
+
+    test('should ignore the wrong press threshold', () => {
+      jest.useFakeTimers('modern').setSystemTime(17);
+      const mockCloseButtonAction = jest.fn();
+      const back = mockBackHandler();
+      render(
+        <Modal
+          testID="modal"
+          visible={true}
+          closeButtonAction={mockCloseButtonAction}>
+          <Text testID="lorem-text">Lorem ipsum dolor</Text>
+        </Modal>,
+      );
+
+      // when
+      back.press();
+
+      // then
+      expect(mockCloseButtonAction).toBeCalledTimes(1);
+      jest.useRealTimers();
+    });
   });
 });

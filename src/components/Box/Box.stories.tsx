@@ -23,7 +23,7 @@ export const Basic: Story = {
   },
   render: args => (
     <>
-      <Text p="2xs" variant="subtitle1Bold">
+      <Text p="2xs" variant="subtitle01Bold">
         Box
       </Text>
       <Box {...args} />
@@ -34,7 +34,7 @@ export const Basic: Story = {
 export const Shrink: Story = {
   render: () => (
     <>
-      <Text p="2xs" variant="subtitle1Bold">
+      <Text p="2xs" variant="subtitle01Bold">
         Box Shrink
       </Text>
 
@@ -53,7 +53,7 @@ export const Shrink: Story = {
               {longText}
             </Text>
           </Box>
-          <Text variant="subtitle4Bold" pl="3xs">
+          <Text variant="subtitle04Bold" pl="3xs">
             99 TL
           </Text>
         </Box>
@@ -72,7 +72,7 @@ export const Shrink: Story = {
               {longText}
             </Text>
           </Box>
-          <Text variant="subtitle4Bold" pl="3xs">
+          <Text variant="subtitle04Bold" pl="3xs">
             99 TL
           </Text>
         </Box>

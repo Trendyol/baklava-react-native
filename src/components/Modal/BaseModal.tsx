@@ -1,5 +1,5 @@
 import Box, { BoxProps } from '../Box/Box';
-import { Animated, ScrollView, StyleSheet } from 'react-native';
+import { Animated, BackHandler, ScrollView, StyleSheet } from 'react-native';
 import { Portal } from '@gorhom/portal';
 import React, { PropsWithChildren } from 'react';
 import theme from '../../theme';
@@ -16,6 +16,7 @@ export type BaseModalProps = A11yProps &
     visible: boolean;
     closable?: boolean;
     closeButtonAction?: () => void;
+    onRequestClose?: () => void;
     duration?: number;
     justifyContent?: 'flex-start' | 'flex-end' | 'center';
     wrongPressThresholdMs?: number;
@@ -41,6 +42,7 @@ const BaseModal = ({
   closable = true,
   wrongPressThresholdMs = 1000, // 1 second
   closeButtonAction,
+  onRequestClose,
   borderBottomStartRadius,
   borderBottomEndRadius,
 }: BaseModalProps) => {
@@ -59,12 +61,46 @@ const BaseModal = ({
     }
   }, [anim, duration, visible]);
 
-  const close = React.useCallback(() => {
-    const threshold = preventWrongPressToClose.current + wrongPressThresholdMs;
-    if (closable && threshold < Date.now()) {
+  const dismiss = React.useCallback(() => {
+    if (closable) {
       closeButtonAction?.();
     }
-  }, [closable, closeButtonAction, wrongPressThresholdMs]);
+  }, [closable, closeButtonAction]);
+
+  const close = React.useCallback(() => {
+    const threshold = preventWrongPressToClose.current + wrongPressThresholdMs;
+    if (threshold < Date.now()) {
+      dismiss();
+    }
+  }, [dismiss, wrongPressThresholdMs]);
+
+  const hasChildren = Boolean(children);
+
+  React.useEffect(() => {
+    if (!visible || !hasChildren) {
+      return;
+    }
+
+    // The modal renders through a portal, so no native window consumes the
+    // Android hardware back press. Without this listener the press reaches
+    // the navigator (one screen back) or the activity (the app exits).
+    const subscription = BackHandler.addEventListener(
+      'hardwareBackPress',
+      () => {
+        if (onRequestClose) {
+          onRequestClose();
+        } else {
+          // No wrong-press threshold here: pressing back is deliberate, and
+          // an immediate press after opening must still close the modal.
+          dismiss();
+        }
+
+        return true;
+      },
+    );
+
+    return () => subscription.remove();
+  }, [dismiss, hasChildren, onRequestClose, visible]);
 
   const testProps = React.useMemo(() => {
     return {
