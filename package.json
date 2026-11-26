@@ -56,6 +56,7 @@
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
     "@commitlint/prompt-cli": "17.1.2",
+    "@figma/code-connect": "^2.1.0",
     "@gorhom/bottom-sheet": "^5.1.2",
     "@react-native-async-storage/async-storage": "^2.1.0",
     "@react-native-community/cli": "15.0.1",
