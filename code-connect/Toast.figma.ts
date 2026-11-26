@@ -2,6 +2,8 @@
 // source=src/components/Toast/Toast.tsx
 // component=Toast
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
 const variant = instance.getEnum('Type', {
@@ -10,7 +12,7 @@ const variant = instance.getEnum('Type', {
   Error: 'error',
   Warning: 'warning',
 });
-const text = instance.findText('Default').textContent;
+const text = findText(instance, 'Default');
 
 export default {
   example: figma.code`

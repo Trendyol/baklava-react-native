@@ -2,9 +2,11 @@
 // source=src/components/TextLink/TextLink.tsx
 // component=TextLink
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
-const children = instance.findText('Link').textContent;
+const children = findText(instance, 'Link');
 const isPressed = instance.getEnum('Hover', {
   True: true,
   False: false,

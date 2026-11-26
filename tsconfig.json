@@ -1,4 +1,11 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "types": [
+      "react-native",
+      "jest",
+      "@figma/code-connect/figma-types-no-require"
+    ]
+  },
   "exclude": ["lib", "storybook-static", ".rnstorybook", "docs"]
 }

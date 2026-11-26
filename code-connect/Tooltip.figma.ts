@@ -2,9 +2,11 @@
 // source=src/components/Tooltip/Tooltip.tsx
 // component=Tooltip
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
-const content = instance.findText('Tooltip').textContent;
+const content = findText(instance, 'Tooltip');
 const position = instance.getEnum('Position', {
   Top: 'top',
   Bottom: 'bottom',

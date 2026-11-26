@@ -2,13 +2,15 @@
 // source=src/components/Stepper/Stepper.tsx
 // component=Stepper
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
 const showNext = instance.getBoolean('Next step');
-const stepTitle = instance.findText('Step Title').textContent;
-const nextTitle = instance.findText('Next Step Title').textContent;
-const stepLabelPrefix = instance.findText('Step Number').textContent;
-const nextStepLabelPrefix = instance.findText('Next Step Label').textContent;
+const stepTitle = findText(instance, 'Step Title');
+const nextTitle = findText(instance, 'Next Step Title');
+const stepLabelPrefix = findText(instance, 'Step Number');
+const nextStepLabelPrefix = findText(instance, 'Next Step Label');
 
 export default {
   example: figma.code`

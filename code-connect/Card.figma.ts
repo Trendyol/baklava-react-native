@@ -2,6 +2,8 @@
 // source=src/components/Card/Card.tsx
 // component=Card
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
 const variant = instance.getEnum('Variant', {
@@ -25,11 +27,10 @@ const showBadge = instance.getBoolean('Badge');
 const showActions = instance.getBoolean('Button');
 const showImage = instance.getBoolean('Show Image');
 
-const title =
-  variant !== 'compact' ? instance.findText('Title').textContent : undefined;
+const title = variant !== 'compact' ? findText(instance, 'Title') : undefined;
 const description =
   variant === 'vertical' || variant === 'horizontal' || variant === 'icon'
-    ? instance.findText('Description', { traverseInstances: true }).textContent
+    ? findText(instance, 'Description', { traverseInstances: true })
     : undefined;
 const placeholderSlot = instance.getSlot('Slot Content');
 const placeholderContent =

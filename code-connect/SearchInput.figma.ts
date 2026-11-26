@@ -2,9 +2,11 @@
 // source=src/components/SearchInput/SearchInput.tsx
 // component=SearchInput
 import figma from 'figma';
+import { findText } from './template-helpers';
+
 const instance = figma.selectedInstance;
 
-const placeholder = instance.findText('Tarihe Göre Arama').textContent;
+const placeholder = findText(instance, 'Tarihe Göre Arama');
 const size = instance.getEnum('Size', {
   Small: 'small',
   Medium: 'medium',
