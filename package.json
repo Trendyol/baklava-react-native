@@ -37,7 +37,7 @@
     "build-storybook-docs": "storybook build -c docs/.storybook",
     "storybook-generate": "sb-rn-get-stories -c .rnstorybook",
     "build": "bob build",
-    "pod": "cd ios; pod install; cd ..;",
+    "pod": "cd ios; bundle exec pod install; cd ..;",
     "prepare": "npm run storybook-generate && bob build && husky install",
     "icons:generate": "node scripts/generate-icons.mjs",
     "icons:check": "npm run icons:generate && ! git status --porcelain -- src/icons src/flag-icons src/components/Icon/list.ts | grep ."

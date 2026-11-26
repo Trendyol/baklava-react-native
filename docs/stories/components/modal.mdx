@@ -122,6 +122,12 @@ Type: `number`, Default value: `1000`
 
 Type: `Function` 
 
+### onRequestClose
+
+Called when the Android hardware back press arrives while the modal is visible. It takes precedence over `closeButtonAction` and over `closable`, and it is not subject to `wrongPressThresholdMs` — pressing back is deliberate, so an immediate press after opening still closes the modal. Leave it out to close through `closeButtonAction` when `closable` is true; either way the press is consumed, so the navigator does not pop a screen and the app does not exit. Android only.
+
+Type: `Function`
+
 ### actionButtonProps 
 
 Type: <a href="/docs/components-button--page" title="title">ButtonProps</a> 
